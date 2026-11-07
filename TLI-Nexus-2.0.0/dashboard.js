@@ -388,7 +388,7 @@ async function renderFarming(){
   $('farm-table').innerHTML=sessions.slice().sort((a,b)=>(b.startedAt||0)-(a.startedAt||0)).map(x=>{const net=(Number(x.lootValueFe)||0)-(Number(x.costsFe)||0),h=Number(x.durationSec)||0,rate=h>0?net/(h/3600):null;const profile=data.characterProfiles.find(p=>p.id===x.profileId);return `<tr><td>${date(x.startedAt)}</td><td>${esc(x.strategy||x.area||'Сессия')}<small>${esc(profile?.name||x.player||'Профиль не привязан')}</small></td><td>${duration(h)}</td><td>${money(x.lootValueFe)}</td><td>${money(x.costsFe)}</td><td class="${net>=0?'positive':'negative'}">${money(net)}</td><td>${rate===null?'—':`${number(rate,1)} FE/ч`}</td></tr>`;}).join('')||'<tr><td colspan="7" class="empty">История фарма пока пуста.</td></tr>';
 }
 function renderTactics(){const q=$('tactic-search').value.toLowerCase();const rows=data.tactics.filter(x=>`${x.title} ${x.category} ${x.context} ${x.body}`.toLowerCase().includes(q)).slice().reverse();$('tactic-count').textContent=data.tactics.length;$('tactic-list').className='stack-list';$('tactic-list').innerHTML=rows.map(x=>`<article class="tactic-card"><div class="tactic-head"><div><b>${esc(x.title)}</b><small>${esc(x.category)} · ${esc(x.context||'без контекста')} · ${date(x.updatedAt)}</small></div><div class="row-actions"><button data-tactic-edit="${x.id}">Изменить</button><button data-tactic-delete="${x.id}">Удалить</button></div></div><p>${esc(x.body).replace(/\n/g,'<br>')}</p></article>`).join('')||'<div class="empty">Нет подходящих заметок.</div>';}
-function renderSettings(){const s=data.settings||{};$('set-mode').value=s.overlayMode||'compact';$('set-opacity').value=s.overlayOpacity??94;$('opacity-label').textContent=`${$('set-opacity').value}%`;$('set-scale').value=s.overlayScale??100;$('scale-label').textContent=`${$('set-scale').value}%`;$('set-top').checked=s.alwaysOnTop!==false;$('set-clickthrough').checked=s.clickThrough===true;$('set-hotkeys').checked=s.hotkeysEnabled!==false;$('set-auto-create-profiles').checked=s.autoCreateDetectedProfiles!==false;$('set-notifications').checked=s.notificationsEnabled!==false;$('set-threshold').value=s.notificationThresholdFe??20;$('set-sound').checked=s.soundEnabled!==false;$('set-volume').value=s.soundVolume??45;$('volume-label').textContent=`${$('set-volume').value}%`;}
+function renderSettings(){const s=data.settings||{};$('set-mode').value=s.overlayMode||'compact';$('set-opacity').value=s.overlayOpacity??94;$('opacity-label').textContent=`${$('set-opacity').value}%`;$('set-scale').value=s.overlayScale??100;$('scale-label').textContent=`${$('set-scale').value}%`;$('set-top').checked=s.alwaysOnTop!==false;$('set-clickthrough').checked=s.clickThrough===true;$('set-hotkeys').checked=s.hotkeysEnabled!==false;$('set-auto-create-profiles').checked=s.autoCreateDetectedProfiles!==false;$('set-notifications').checked=s.notificationsEnabled!==false;$('set-threshold').value=s.notificationThresholdFe??20;$('set-sound').checked=s.soundEnabled!==false;$('set-volume').value=s.soundVolume??45;$('volume-label').textContent=`${$('set-volume').value}%`;renderTlidbAutoControls({autoSyncEnabled:s.tlidbAutoSyncEnabled!==false,syncIntervalHours:s.tlidbSyncIntervalHours??24});}
 function renderPage(){renderConnection();switch(activePage){case'overview':renderOverview();break;case'characters':renderCharacters();break;case'loot':renderLoot();break;case'items':if(!$('item-search').value&&!displayedItems.length)void searchCatalog('');else renderItemCards();break;case'economy':renderEconomy();break;case'builds':renderBuilds();break;case'analyzer':renderAnalyzer();break;case'farming':void renderFarming();break;case'tactics':renderTactics();break;case'settings':renderSettings();break;}}
 function openModal(html){$('modal-content').innerHTML=html;$('modal').classList.remove('hidden');}
 function closeModal(){$('modal').classList.add('hidden');$('modal-content').innerHTML='';}
@@ -451,26 +451,40 @@ $('game-resource-import').onclick=async()=>{
     if(result.canceled)return;
     await refreshGameResourceStatus();
 
+function renderTlidbAutoControls(result={}) {
+  const settings=data.settings||{};
+  const enabled=typeof result.autoSyncEnabled==='boolean'?result.autoSyncEnabled:settings.tlidbAutoSyncEnabled!==false;
+  const interval=Number(result.syncIntervalHours||settings.tlidbSyncIntervalHours)||24;
+  $('tlidb-auto-sync').checked=enabled;
+  $('tlidb-sync-interval').value=String(interval);
+  $('tlidb-sync-interval').disabled=!enabled;
+  let message=enabled?`Автообновление включено · раз в ${interval} ч. При устаревшем кэше обновление начнётся после запуска приложения.`:'Автообновление выключено · база будет обновляться только вручную.';
+  if(result.lastFullSyncAt)message+=' Последняя полная синхронизация: '+date(result.lastFullSyncAt)+'.';
+  if(result.lastError)message+=' Последняя ошибка: '+String(result.lastError).slice(0,240);
+  $('tlidb-auto-status').textContent=message;
+}
 async function refreshTlidbStatus(){
   try{
     const result=await window.nexus.getTlidbCatalogStatus();
+    renderTlidbAutoControls(result);
     const badge=$('tlidb-badge');
     const status=$('tlidb-status');
     const details=$('tlidb-details');
     if(!result?.imported){
       badge.textContent='Не загружена';
       status.textContent='Локальный кэш TLIDB ещё не создан.';
-      details.textContent='Нажми «Загрузить / обновить TLIDB», чтобы получить таблицы аффиксов по страницам экипировки.';
+      details.textContent='Nexus загрузит базовые аффиксы, коррозию и крафтовые таблицы по 38 страницам экипировки при запуске или по кнопке.';
       return;
     }
     const summary=result.summary||{};
     badge.textContent=(summary.pagesFailed||0)>0?'Загружена частично':'Загружена';
     status.textContent='Источник: TLIDB · обновлено '+date(result.syncedAt)+' · версия сезона/патча не подтверждена';
-    details.textContent='Страниц: '+number(summary.pagesImported||0,0)+' / '+number(summary.pagesRequested||0,0)+' · строк аффиксов: '+number(summary.affixRows||0,0)+' · ошибок: '+number(summary.pagesFailed||0,0);
+    details.textContent='Страниц обновлено: '+number(summary.pagesImported||0,0)+' / '+number(summary.pagesRequested||0,0)+' · строк аффиксов: '+number(summary.affixRows||0,0)+' · ошибок: '+number(summary.pagesFailed||0,0)+' · старых страниц сохранено: '+number(summary.retainedPages||0,0);
     if(result.failedPages?.length){
       details.textContent+=' · Ошибки: '+result.failedPages.slice(0,3).map(x=>x.slug+': '+x.reason).join('; ');
     }
   }catch(error){
+    renderTlidbAutoControls({lastError:error.message||String(error)});
     $('tlidb-status').textContent='Не удалось прочитать кэш TLIDB: '+(error.message||error);
   }
 }
@@ -509,9 +523,10 @@ $('tlidb-sync').onclick=async()=>{
     toast('Ошибка загрузки TLIDB: '+(error.message||error));
   }finally{
     button.disabled=false;
-    button.textContent='Загрузить / обновить TLIDB (38 страниц)';
+    button.textContent='Загрузить / обновить сейчас (38 страниц)';
   }
 };
+$('tlidb-auto-sync').onchange=()=>{$('tlidb-sync-interval').disabled=!$('tlidb-auto-sync').checked;};
 $('tlidb-search-button').onclick=()=>void searchTlidbCatalog();
 $('tlidb-search').addEventListener('keydown',e=>{if(e.key==='Enter')void searchTlidbCatalog();});
 $('tlidb-results').addEventListener('click',e=>{
@@ -523,6 +538,18 @@ $('tlidb-results').addEventListener('click',e=>{
   }
 });
 refreshTlidbStatus();
+window.nexus.onTlidbUpdate((payload)=>{
+  void refreshTlidbStatus();
+  if(payload?.automatic&&payload?.error){
+    toast('Автообновление TLIDB не удалось: '+payload.error);
+    return;
+  }
+  if(payload?.automatic&&payload?.status?.imported){
+    const summary=payload.status.summary||{};
+    toast('TLIDB автоматически обновлена · '+number(summary.affixRows||0,0)+' записей · страниц: '+number(summary.pagesImported||0,0));
+    if($('tlidb-search').value.trim())void searchTlidbCatalog();
+  }
+});
     const s=result.status?.summary||{};
     if((s.affixDefinitions||0)===0&&(s.itemDefinitions||0)===0){
       toast('Экспорт прочитан, но таблицы предметов/аффиксов не найдены. UI-ресурсы не считаются базой характеристик.');
@@ -540,7 +567,7 @@ refreshGameResourceStatus();
 
 $('settings-choose-log').onclick=$('choose-log').onclick;$('settings-auto-log').onclick=$('auto-log').onclick;$('open-data-folder').onclick=async()=>{try{await window.nexus.openDataFolder();toast('Открыта папка данных Nexus');}catch(e){toast(e.message||String(e));}};
 $('set-opacity').oninput=()=>$('opacity-label').textContent=`${$('set-opacity').value}%`;$('set-scale').oninput=()=>$('scale-label').textContent=`${$('set-scale').value}%`;$('set-volume').oninput=()=>$('volume-label').textContent=`${$('set-volume').value}%`;
-$('apply-settings').onclick=async()=>{const settings={overlayMode:$('set-mode').value,overlayOpacity:Number($('set-opacity').value),overlayScale:Number($('set-scale').value),alwaysOnTop:$('set-top').checked,clickThrough:$('set-clickthrough').checked,hotkeysEnabled:$('set-hotkeys').checked,autoCreateDetectedProfiles:$('set-auto-create-profiles').checked,notificationsEnabled:$('set-notifications').checked,notificationThresholdFe:Number($('set-threshold').value)||0,soundEnabled:$('set-sound').checked,soundVolume:Number($('set-volume').value)};data.settings={...data.settings,...settings};await window.nexus.updateSettings(settings);await saveData();toast('Настройки применены');};
+$('apply-settings').onclick=async()=>{const settings={overlayMode:$('set-mode').value,overlayOpacity:Number($('set-opacity').value),overlayScale:Number($('set-scale').value),alwaysOnTop:$('set-top').checked,clickThrough:$('set-clickthrough').checked,hotkeysEnabled:$('set-hotkeys').checked,autoCreateDetectedProfiles:$('set-auto-create-profiles').checked,notificationsEnabled:$('set-notifications').checked,notificationThresholdFe:Number($('set-threshold').value)||0,soundEnabled:$('set-sound').checked,soundVolume:Number($('set-volume').value),tlidbAutoSyncEnabled:$('tlidb-auto-sync').checked,tlidbSyncIntervalHours:Number($('tlidb-sync-interval').value)||24};data.settings={...data.settings,...settings};await window.nexus.updateSettings(settings);await saveData();await refreshTlidbStatus();toast('Настройки применены');};
 $('test-sound').onclick=()=>{try{const C=window.AudioContext||window.webkitAudioContext,ctx=new C();ctx.resume();[660,880,1175].forEach((f,i)=>{const o=ctx.createOscillator(),g=ctx.createGain();o.frequency.value=f;o.connect(g);g.connect(ctx.destination);g.gain.setValueAtTime(.0001,ctx.currentTime+i*.13);g.gain.exponentialRampToValueAtTime(.055,ctx.currentTime+i*.13+.02);g.gain.exponentialRampToValueAtTime(.0001,ctx.currentTime+i*.13+.18);o.start(ctx.currentTime+i*.13);o.stop(ctx.currentTime+i*.13+.2);});toast('Проверочный сигнал воспроизведён');}catch{toast('Браузер не разрешил воспроизвести звук');}};
 $('item-search').addEventListener('input',()=>{clearTimeout(itemQueryTimer);const q=$('item-search').value;itemQueryTimer=setTimeout(()=>searchCatalog(q),180);});
 $('item-results').addEventListener('click',async e=>{const b=e.target.closest('[data-watch-id]');if(!b)return;const id=Number(b.dataset.watchId);if(data.priceWatch.some(x=>Number(x.itemId)===id))return toast('Предмет уже отслеживается');data.priceWatch.push({itemId:id,name:b.dataset.watchName,targetFe:0,createdAt:Date.now()});await saveData();toast('Предмет добавлен в отслеживание');});
