@@ -246,7 +246,7 @@ export class LiveService {
       priceWatchStatus: this.getPriceWatchStatus(),
       messageCount: this.messageCount, byAction: this.byAction, lastMessage: this.lastMessage,
       startedAt: this.startedAt, gameEndedAt: this.gameEndedAt, lastEventAt: this.lastEventAt,
-      currentMap, lastMap, mapRuns: mapState.history, mapsCompleted: mapState.completedCount,
+      currentMap, lastMap, mapRuns: mapState.history.map(summarizeMap), mapsCompleted: mapState.completedCount,
       recent: this.items.slice(0, 12), error: this.lastError,
       candidates: this.candidates.slice(0, 12), tailer, rawLines: this.rawLines.slice(0, 10),
       categoryCounts: this.categoryCounts, socketStartLines: this.socketStartLines,
