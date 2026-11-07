@@ -177,13 +177,23 @@ test('closing Nexus does not falsely end a game process that is still running', 
   assert.equal(published.currentMap.drops, 3);
 });
 
-test('a missing previous process expires its persisted session candidate exactly once', () => {
+test('a missing previous process expires its persisted session after three consecutive scans', async () => {
   const expired = [];
   const row = { sessionKey: 'game-run:1000', startedAt: 1000, gameProcessId: 4321 };
-  const service = new LiveService({ resumeSession: row, onResumeExpired: (value) => expired.push(value) });
-  assert.equal(service.expireResumeSessionCandidate(), true);
-  assert.equal(service.expireResumeSessionCandidate(), false);
-  assert.equal(expired.length, 1);
-  assert.equal(expired[0].sessionKey, row.sessionKey);
-  service.stop();
+  const service = new LiveService({
+    resumeSession: row,
+    onResumeExpired: (value) => expired.push(value),
+    findGameProcessImpl: async () => ({ running: false, pid: null, exe: null }),
+  });
+  try {
+    await service.scan();
+    await service.scan();
+    assert.equal(expired.length, 0, 'one or two missed samples do not close the saved run');
+    await service.scan();
+    assert.equal(expired.length, 1);
+    assert.equal(expired[0].sessionKey, row.sessionKey);
+    assert.equal(service.resumeSessionCandidate, null);
+  } finally {
+    service.stop();
+  }
 });
