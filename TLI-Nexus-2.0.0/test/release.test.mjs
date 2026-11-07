@@ -89,6 +89,8 @@ test('desktop release uses local Electron files, sandboxed renderers and no loca
   const main = fs.readFileSync(path.join(root, 'electron-main.mjs'), 'utf8');
   const overlay = fs.readFileSync(path.join(root, 'overlay.html'), 'utf8');
   const dashboard = fs.readFileSync(path.join(root, 'dashboard.html'), 'utf8');
+  const main = fs.readFileSync(path.join(root, 'electron-main.mjs'), 'utf8');
+  const ui = fs.readFileSync(path.join(root, 'dashboard.js'), 'utf8');
   assert.match(main, /\.loadFile\(/);
   assert.doesNotMatch(main, /\.loadURL\(/);
   assert.match(main, /sandbox:\s*true/);
