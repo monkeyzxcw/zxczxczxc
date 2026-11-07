@@ -73,11 +73,9 @@ function rowContainers(node, pathParts = [], out = []) {
       for (const [rowName, row] of entries.slice(0, MAX_ROWS_PER_TABLE)) {
         if (isRecord(row)) out.push({ rowName, row, path: [...pathParts, key, rowName].join('.') });
       }
-    } else {
-      const nested = scalar(value);
-      if (isRecord(nested) || Array.isArray(nested)) {
-        rowContainers(nested, [...pathParts, key], out);
-      }
+    } else if (isRecord(value) || Array.isArray(value)) {
+      // JSON arrays represent multiple exports/objects; do not collapse to the last entry.
+      rowContainers(value, [...pathParts, key], out);
     }
   }
   return out;
@@ -277,7 +275,10 @@ export function scanGameResourceFolder(rootPath, options = {}) {
       if (extension === '.json') {
         text = fs.readFileSync(filePath, 'utf8');
         try { doc = JSON.parse(text); }
-        catch { failedJson++; }
+        catch {
+          // FModel may export the Unreal INI DefaultGame config with a .json suffix.
+          if (!/DefaultGame\.json$/i.test(relativePath)) failedJson++;
+        }
         scannedJson++;
       } else {
         text = readTextResource(filePath, MAX_FILE_BYTES);
