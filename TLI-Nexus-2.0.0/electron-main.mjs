@@ -316,6 +316,9 @@ function persistAutoSession(state) {
   row.feGained = Number(state.feGained) || 0;
   row.itemCount = Number(state.drops) || 0;
   row.pickupEvents = Number(state.pickupEvents) || 0;
+  row.lootTotals = (state.lootSummary || []).map((item) => ({
+    itemId: Number(item.id), count: Number(item.count) || 0,
+  })).filter((item) => Number.isSafeInteger(item.itemId) && item.itemId > 0 && item.count > 0);
   row.gameProcessId = Number(state.gameProcessId) || null;
   row.gameProcessStartedAt = Number(state.gameProcessStartedAt) || null;
   row.mapsCompleted = Number(state.mapsCompleted) || 0;
@@ -469,7 +472,16 @@ app.whenReady().then(() => {
     contents.on('will-navigate', (event) => { event.preventDefault(); });
   });
   loadData();
-  live = new LiveService({ onUpdate: publish, manualLogFile: loadData().settings.manualLogFile || null, userDataDir: app.getPath('userData') });
+  const resumableRun = appData.farmingSessions
+    .filter((row) => row.source === 'live' && !row.endedAt && Number(row.gameProcessId) > 0)
+    .sort((a, b) => Number(b.startedAt) - Number(a.startedAt))[0] || null;
+  previousSessionKey = resumableRun?.sessionKey || null;
+  live = new LiveService({
+    onUpdate: publish,
+    manualLogFile: appData.settings.manualLogFile || null,
+    userDataDir: app.getPath('userData'),
+    resumeSession: resumableRun,
+  });
   live.setNotificationPreferences({ enabled: appData.settings.notificationsEnabled, soundEnabled: appData.settings.soundEnabled, thresholdFe: appData.settings.notificationThresholdFe });
   live.setPriceWatch(appData.priceWatch);
   createOverlay();
