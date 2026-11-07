@@ -193,7 +193,7 @@ function countCategory(line) {
 }
 
 export class LiveService {
-  constructor({ onUpdate = () => {}, pollMs = 2000, manualLogFile = null, userDataDir = null } = {}) {
+  constructor({ onUpdate = () => {}, pollMs = 2000, manualLogFile = null, userDataDir = null, resumeSession = null } = {}) {
     this.onUpdate = onUpdate; this.pollMs = pollMs; this.timer = null; this.tailer = null; this.ingestor = null;
     this.game = false; this.gameExe = null; this.gameProcessId = null; this.gameProcessStartedAt = null;
     this.logFile = null; this.logSource = 'auto'; this.manualLogFile = manualLogFile;
@@ -212,6 +212,7 @@ export class LiveService {
     this.priceHistory = new PriceHistoryStore({ filePath: userDataDir ? path.join(userDataDir, 'price-history.json') : null });
     this.priceWatchRules = []; this.priceAlertState = new Map(); this.priceAlertLastAt = new Map();
     this.exchangePriceTracker = new ExchangePriceTracker();
+    this.resumeSessionCandidate = resumeSession && typeof resumeSession === 'object' ? { ...resumeSession } : null;
     this.notificationPreferences = { enabled: true, soundEnabled: true, thresholdFe: 20 };
     this.notificationSeq = 0; this.lastNotification = null;
     this.communityPriceFeed = new CommunityPriceFeed({ cachePath: userDataDir ? path.join(userDataDir, 'community-prices.json') : null, onUpdate: (status) => {
@@ -370,12 +371,15 @@ export class LiveService {
             // Same UE_game.log path may be reused by a fast game restart.
             this.detach(); this.logFile = null;
           }
+          const resumed = !this.game && !processChanged &&
+            this.restorePersistedSession(this.resumeSessionCandidate, proc);
           this.game = true;
-          this.gameProcessId = proc.pid || null;
-          this.gameProcessStartedAt = Number(proc.processStartedAt) || null;
-          this.resetSession();
+          this.gameProcessId = proc.pid || this.gameProcessId || null;
+          this.gameProcessStartedAt = Number(proc.processStartedAt) || this.gameProcessStartedAt || null;
+          if (!resumed) this.resetSession();
+          this.resumeSessionCandidate = null;
           // A manually selected UE log may have been attached before the game
-          // process started. Reseed its inventory slots after creating the run.
+          // process started. Reseed its inventory slots after creating/resuming the run.
           if (this.manualLogFile && fs.existsSync(this.manualLogFile)) {
             await this.attach(this.manualLogFile, 'manual');
           }
@@ -413,6 +417,39 @@ export class LiveService {
       this.emit();
     } catch (error) { this.lastError = String(error.message || error); this.emit(); }
     finally { this.busy = false; }
+  }
+
+  restorePersistedSession(row, processInfo = {}) {
+    if (!row || Number(row.startedAt) <= 0 || Number(row.gameProcessId) <= 0 ||
+        Number(processInfo.pid) !== Number(row.gameProcessId)) return false;
+
+    const savedProcessStart = Number(row.gameProcessStartedAt) || null;
+    const currentProcessStart = Number(processInfo.processStartedAt) || null;
+    if (savedProcessStart && currentProcessStart && savedProcessStart !== currentProcessStart) return false;
+
+    this.startedAt = Number(row.startedAt);
+    this.gameEndedAt = null;
+    this.game = true;
+    this.gameProcessId = Number(processInfo.pid);
+    this.gameProcessStartedAt = currentProcessStart || savedProcessStart;
+    this.gameMissingScans = 0;
+    this.player = row.player || null;
+    this.playerSource = row.player ? 'history' : null;
+    this.area = row.area || null;
+    this.totalDrops = Number(row.itemCount) || 0;
+    this.pickupEvents = Number(row.pickupEvents) || 0;
+    this.feGained = Number(row.feGained) || 0;
+    this.lootTotals = new Map((Array.isArray(row.lootTotals) ? row.lootTotals : [])
+      .filter((item) => Number.isSafeInteger(Number(item.itemId)) && Number(item.count) > 0)
+      .map((item) => [Number(item.itemId), Number(item.count)]));
+    this.gameMapTracker.restore({
+      current: row.currentMap || null,
+      last: row.lastMap || null,
+      history: Array.isArray(row.mapRuns) ? row.mapRuns : [],
+      completedCount: Number(row.mapsCompleted) || 0,
+    });
+    this.resumeSessionCandidate = null;
+    return true;
   }
 
   resetLogContext() {
