@@ -474,10 +474,16 @@ export class LiveService {
           mapZone: gameSeed.state.currentArea.mapZone, asset: gameSeed.state.currentArea.asset,
           levelType: gameSeed.state.currentArea.levelType, source: 'LevelMgr' };
         this.areaPhase = 'entered'; this.pendingArea = null;
-        if (gameSeed.state.currentArea.asset) {
+        const areaEnteredAt = Number(gameSeed.state.currentArea.enteredAt) || null;
+        // When Nexus starts after the game, the last LevelMgr entry in an
+        // existing log can belong to the previous client run. Do not attach
+        // that old map to the freshly-started game-wide session.
+        const areaBelongsToThisRun = !this.game || !this.startedAt || !areaEnteredAt ||
+          areaEnteredAt >= this.startedAt - 120_000;
+        if (gameSeed.state.currentArea.asset && areaBelongsToThisRun) {
           this.gameMapTracker.enterArea(
             { ...gameSeed.state.currentArea, area: gameSeed.state.currentArea.name },
-            Number(gameSeed.state.currentArea.enteredAt) || Date.now(),
+            areaEnteredAt || Date.now(),
           );
         }
       }
