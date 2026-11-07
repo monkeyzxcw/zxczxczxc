@@ -63,7 +63,9 @@ function rowContainers(node, pathParts = [], out = []) {
 
   for (const [key, raw] of Object.entries(node)) {
     const normalized = normalizeKey(key);
-    const value = scalar(raw);
+    // Preserve every DataTable row; duplicate scalar leaves are resolved
+    // separately by scalar(), but RowMap/Rows arrays are actual collections.
+    const value = raw;
     if (TABLE_CONTAINER_KEYS.has(normalized) && (Array.isArray(value) || isRecord(value))) {
       const entries = Array.isArray(value)
         ? value.map((row, index) => [String(index), row])
@@ -71,8 +73,11 @@ function rowContainers(node, pathParts = [], out = []) {
       for (const [rowName, row] of entries.slice(0, MAX_ROWS_PER_TABLE)) {
         if (isRecord(row)) out.push({ rowName, row, path: [...pathParts, key, rowName].join('.') });
       }
-    } else if (isRecord(value) || Array.isArray(value)) {
-      rowContainers(value, [...pathParts, key], out);
+    } else {
+      const nested = scalar(value);
+      if (isRecord(nested) || Array.isArray(nested)) {
+        rowContainers(nested, [...pathParts, key], out);
+      }
     }
   }
   return out;
