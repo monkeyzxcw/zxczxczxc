@@ -42,22 +42,28 @@ async function findGameProcess() {
   if (process.platform === 'win32') {
     try {
       const names = GAME_NAMES.map((name) => `'${name}'`).join(',');
-      const script = `$names=@(${names}); $p=Get-CimInstance Win32_Process | Where-Object { $names -icontains $_.Name }; $p | Select-Object -First 1 -ExpandProperty ExecutablePath`;
+      const script = `$names=@(${names}); $p=Get-CimInstance Win32_Process | Where-Object { $names -icontains $_.Name } | Select-Object -First 1; if($p){ [pscustomobject]@{ exe=$p.ExecutablePath; pid=$p.ProcessId; createdAt=$p.CreationDate.ToUniversalTime().ToString('o') } | ConvertTo-Json -Compress }`;
       const { stdout } = await execFileAsync('powershell.exe', ['-NoProfile','-NonInteractive','-Command',script], { windowsHide: true, timeout: 3500 });
-      const exe = stdout.trim().split(/\r?\n/).filter(Boolean)[0];
-      if (exe) return { running: true, exe };
+      const row = JSON.parse(stdout.trim());
+      if (Number(row?.pid) > 0) return {
+        running: true, exe: row.exe || null, pid: Number(row.pid),
+        processStartedAt: Date.parse(row.createdAt) || null,
+      };
     } catch {}
     try {
       const { stdout } = await execFileAsync('tasklist.exe', ['/FO','CSV','/NH'], { windowsHide: true, timeout: 2500 });
       const line = stdout.split(/\r?\n/).find((s) => GAME_NAMES.some((n) => s.toLowerCase().includes(n.toLowerCase())));
-      if (line) return { running: true, exe: null };
+      const match = /^"([^"]+)","(\d+)"/.exec(line || '');
+      if (match) return { running: true, exe: null, pid: Number(match[2]), processStartedAt: null };
     } catch {}
-    return { running: false, exe: null };
+    return { running: false, exe: null, pid: null, processStartedAt: null };
   }
   try {
     const { stdout } = await execFileAsync('pgrep', ['-af', 'torchlight_infinite|UE_game|TorchlightInfinite'], { timeout: 1500 });
-    return { running: !!stdout.trim(), exe: null };
-  } catch { return { running: false, exe: null }; }
+    const line = stdout.split(/\r?\n/).find(Boolean);
+    const pid = Number(/^\s*(\d+)/.exec(line || '')?.[1]) || null;
+    return { running: !!pid, exe: null, pid, processStartedAt: null };
+  } catch { return { running: false, exe: null, pid: null, processStartedAt: null }; }
 }
 
 function logDirsFromExe(exe) {
@@ -189,7 +195,8 @@ function countCategory(line) {
 export class LiveService {
   constructor({ onUpdate = () => {}, pollMs = 2000, manualLogFile = null, userDataDir = null } = {}) {
     this.onUpdate = onUpdate; this.pollMs = pollMs; this.timer = null; this.tailer = null; this.ingestor = null;
-    this.game = false; this.gameExe = null; this.logFile = null; this.logSource = 'auto'; this.manualLogFile = manualLogFile;
+    this.game = false; this.gameExe = null; this.gameProcessId = null; this.gameProcessStartedAt = null;
+    this.logFile = null; this.logSource = 'auto'; this.manualLogFile = manualLogFile;
     this.items = []; this.totalDrops = 0; this.pickupEvents = 0; this.unrecognized = 0;
     this.startedAt = null; this.lastEventAt = null; this.player = null; this.playerSource = null; this.area = null; this.areaInfo = null;
     this.areaPhase = null; this.areaSignal = null; this.pendingArea = null;
@@ -233,7 +240,8 @@ export class LiveService {
     const priceStatus = { ...communityPricing, ...this.priceBook.status(), ownObservations: this.exchangePriceTracker.observations,
       unmatchedExchangeResponses: this.exchangePriceTracker.unmatched, lastExchangePrice: this.exchangePriceTracker.lastObservation };
     return {
-      gameRunning: this.game, gameExe: this.gameExe, connected: !!this.tailer, logFile: this.logFile,
+      gameRunning: this.game, gameExe: this.gameExe, gameProcessId: this.gameProcessId,
+      gameProcessStartedAt: this.gameProcessStartedAt, connected: !!this.tailer, logFile: this.logFile,
       logReadiness: deriveLogReadiness({ connected: !!this.tailer, startedAt: this.startedAt, liveMessages: this.messageCount, socketStarts: this.socketStartLines, liveGameEvents: this.gameLogLiveEvents }),
       logSource: this.logSource, manualLogFile: this.manualLogFile, player: this.player, playerSource: this.playerSource, area: this.area,
       areaInfo: this.areaInfo, areaPhase: this.areaPhase, areaSignal: this.areaSignal, pendingArea: this.pendingArea,
@@ -352,22 +360,30 @@ export class LiveService {
       this.gameExe = proc.exe || this.gameExe;
       if (proc.running) {
         this.gameMissingScans = 0;
-        if (!this.game) {
+        const processChanged = this.game && this.gameProcessId && proc.pid &&
+          Number(this.gameProcessId) !== Number(proc.pid);
+        if (!this.game || processChanged) {
           this.game = true;
+          this.gameProcessId = proc.pid || null;
+          this.gameProcessStartedAt = Number(proc.processStartedAt) || null;
           this.resetSession();
           // A manually selected UE log may have been attached before the game
           // process started. Reseed its inventory slots after creating the run.
           if (this.manualLogFile && fs.existsSync(this.manualLogFile)) {
             await this.attach(this.manualLogFile, 'manual');
           }
+        } else {
+          if (!this.gameProcessId && proc.pid) this.gameProcessId = proc.pid;
+          if (!this.gameProcessStartedAt && proc.processStartedAt) this.gameProcessStartedAt = proc.processStartedAt;
         }
       } else if (this.game) {
-        // Avoid treating one missed process-list sample as a full game restart.
+        // A brief process-list failure must not close the game-wide session.
         this.gameMissingScans += 1;
-        if (this.gameMissingScans >= 2) {
+        if (this.gameMissingScans >= 3) {
           this.game = false;
           this.gameEndedAt = Date.now();
           this.gameMapTracker.finishCurrentMap(this.gameEndedAt, 'game-stopped');
+          this.gameProcessId = null; this.gameProcessStartedAt = null;
           if (!this.manualLogFile) { this.detach(); this.lastError = null; this.emit(); return; }
         }
       }
