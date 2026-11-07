@@ -291,7 +291,9 @@ function persistLiveMetadata(state) {
 
 function persistAutoSession(state) {
   if (!appData || !state?.startedAt) return;
-  const key = `${state.player || 'unknown'}:${state.startedAt}`;
+  // A run is keyed only by the confirmed game-process start time.
+  // Player identity can arrive late or change on relog, but must not split one game session.
+  const key = `game-run:${Number(state.startedAt)}`;
   if (previousSessionKey && previousSessionKey !== key) {
     const existing = appData.farmingSessions.find((x) => x.source === 'live' && x.sessionKey === previousSessionKey);
     if (existing) existing.endedAt = Date.now();
