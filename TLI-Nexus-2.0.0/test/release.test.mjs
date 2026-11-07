@@ -89,8 +89,6 @@ test('desktop release uses local Electron files, sandboxed renderers and no loca
   const main = fs.readFileSync(path.join(root, 'electron-main.mjs'), 'utf8');
   const overlay = fs.readFileSync(path.join(root, 'overlay.html'), 'utf8');
   const dashboard = fs.readFileSync(path.join(root, 'dashboard.html'), 'utf8');
-  const main = fs.readFileSync(path.join(root, 'electron-main.mjs'), 'utf8');
-  const ui = fs.readFileSync(path.join(root, 'dashboard.js'), 'utf8');
   assert.match(main, /\.loadFile\(/);
   assert.doesNotMatch(main, /\.loadURL\(/);
   assert.match(main, /sandbox:\s*true/);
@@ -170,6 +168,8 @@ test('native topmost state is explicitly cleared when HUD is unpinned', () => {
 test('package version is 2.3.0 automatic TLIDB and map tracking release', () => {
   const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
   const pkg = JSON.parse(fs.readFileSync(path.join(root, 'package.json'), 'utf8'));
+  const main = fs.readFileSync(path.join(root, 'electron-main.mjs'), 'utf8');
+  const ui = fs.readFileSync(path.join(root, 'dashboard.js'), 'utf8');
   assert.equal(pkg.version, '2.3.0');
   assert.ok(pkg.build.files.includes('docs/RELEASE_NOTES_1.1.0.md'));
   assert.ok(pkg.build.files.includes('docs/RELEASE_NOTES_1.1.1.md'));
