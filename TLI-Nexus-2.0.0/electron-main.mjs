@@ -13,6 +13,7 @@ import { buildAnonymizedDiagnostic, buildCharacterReport } from './core/characte
 import { compareCharacterSnapshots } from './core/snapshotHistory.js';
 import { analyzeEquipment, compareEquipment } from './core/equipmentIntelligence.js';
 import { scanGameResourceFolder, resourceCatalogStatus } from './core/gameResourceCatalog.js';
+import { fetchTlidbCatalog, searchTlidbAffixes, tlidbCatalogStatus } from './core/tlidbCatalog.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const DEFAULTS = DEFAULT_APP_DATA;
@@ -43,6 +44,36 @@ function readGameResourceIndex() {
     gameResourceIndexMtime = 0;
     return null;
   }
+}
+const tlidbCatalogFile = () => userFile('tlidb-affix-catalog.json');
+let tlidbCatalogCache = null;
+let tlidbCatalogMtime = 0;
+function readTlidbCatalog() {
+  try {
+    const file = tlidbCatalogFile();
+    const stat = fs.statSync(file);
+    if (!tlidbCatalogCache || stat.mtimeMs !== tlidbCatalogMtime) {
+      tlidbCatalogCache = JSON.parse(fs.readFileSync(file, 'utf8'));
+      tlidbCatalogMtime = stat.mtimeMs;
+    }
+    return tlidbCatalogCache;
+  } catch {
+    tlidbCatalogCache = null;
+    tlidbCatalogMtime = 0;
+    return null;
+  }
+}
+function writeTlidbCatalog(index) {
+  const serialized = JSON.stringify(index, null, 2);
+  if (Buffer.byteLength(serialized, 'utf8') > 30 * 1024 * 1024) {
+    throw new Error('Кэш TLIDB превышает 30 МБ. Импорт прерван.');
+  }
+  fs.mkdirSync(path.dirname(tlidbCatalogFile()), { recursive: true });
+  const temp = tlidbCatalogFile() + '.tmp';
+  fs.writeFileSync(temp, serialized, 'utf8');
+  fs.renameSync(temp, tlidbCatalogFile());
+  tlidbCatalogCache = index;
+  tlidbCatalogMtime = fs.statSync(tlidbCatalogFile()).mtimeMs;
 }
 function mergeData(value) { return mergeAppData(value); }
 function loadData() {
@@ -455,6 +486,25 @@ app.whenReady().then(() => {
     gameResourceIndexMtime = fs.statSync(gameResourceIndexFile()).mtimeMs;
     return { canceled: false, status: resourceCatalogStatus(index), limitations: index.limitations };
   });
+  ipcMain.handle('tlidb:status', () => tlidbCatalogStatus(readTlidbCatalog()));
+  ipcMain.handle('tlidb:sync', async () => {
+    const index = await fetchTlidbCatalog();
+    if (!index.records.length) {
+      const reason = index.failedPages?.[0]?.reason || 'Не удалось прочитать таблицы аффиксов TLIDB.';
+      throw new Error('База TLIDB не обновлена: ' + reason);
+    }
+    writeTlidbCatalog(index);
+    return { status: tlidbCatalogStatus(index) };
+  });
+  ipcMain.handle('tlidb:search', (_event, query, options = {}) => searchTlidbAffixes(
+    readTlidbCatalog(),
+    String(query || '').slice(0, 120),
+    {
+      gearGroup: String(options?.gearGroup || '').slice(0, 80),
+      sourceKind: String(options?.sourceKind || '').slice(0, 40),
+      limit: Math.min(100, Math.max(1, Number(options?.limit) || 40)),
+    },
+  ));
   ipcMain.handle('items:search', (_event, query) => searchItems(query, 500));
   ipcMain.handle('equipment:analyze', (_event, items, priorities) => analyzeEquipment(Array.isArray(items) ? items.slice(0, 100) : [], priorities, readGameResourceIndex()));
   ipcMain.handle('equipment:compare', (_event, left, right, priorities) => compareEquipment(left, right, priorities, readGameResourceIndex()));
