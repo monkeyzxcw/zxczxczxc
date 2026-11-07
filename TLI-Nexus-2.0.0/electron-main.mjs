@@ -27,9 +27,22 @@ app.commandLine.appendSwitch('autoplay-policy', 'no-user-gesture-required');
 const userFile = (name) => path.join(app.getPath('userData'), name);
 const dataFile = () => userFile('nexus-data.json');
 const gameResourceIndexFile = () => userFile('game-resource-index.json');
+let gameResourceIndexCache = null;
+let gameResourceIndexMtime = 0;
 function readGameResourceIndex() {
-  try { return JSON.parse(fs.readFileSync(gameResourceIndexFile(), 'utf8')); }
-  catch { return null; }
+  try {
+    const file = gameResourceIndexFile();
+    const stat = fs.statSync(file);
+    if (!gameResourceIndexCache || stat.mtimeMs !== gameResourceIndexMtime) {
+      gameResourceIndexCache = JSON.parse(fs.readFileSync(file, 'utf8'));
+      gameResourceIndexMtime = stat.mtimeMs;
+    }
+    return gameResourceIndexCache;
+  } catch {
+    gameResourceIndexCache = null;
+    gameResourceIndexMtime = 0;
+    return null;
+  }
 }
 function mergeData(value) { return mergeAppData(value); }
 function loadData() {
@@ -438,6 +451,8 @@ app.whenReady().then(() => {
     const temp = gameResourceIndexFile() + '.tmp';
     fs.writeFileSync(temp, JSON.stringify(index, null, 2), 'utf8');
     fs.renameSync(temp, gameResourceIndexFile());
+    gameResourceIndexCache = index;
+    gameResourceIndexMtime = fs.statSync(gameResourceIndexFile()).mtimeMs;
     return { canceled: false, status: resourceCatalogStatus(index), limitations: index.limitations };
   });
   ipcMain.handle('items:search', (_event, query) => searchItems(query, 500));
