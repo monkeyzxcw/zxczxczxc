@@ -1,0 +1,393 @@
+import fs from 'node:fs';
+import path from 'node:path';
+
+const MAX_FILES = 50000;
+const MAX_FILE_BYTES = 20 * 1024 * 1024;
+const MAX_ROWS_PER_TABLE = 20000;
+const TABLE_CONTAINER_KEYS = new Set([
+  'rowmap', 'rows', 'datatablerows', 'rowdata', 'entries', 'datarows',
+]);
+const AFFIx_WORD = /affix|prefix|suffix|enchant|forge/i;
+const ITEM_WORD = /item|equip|equipment|gear/i;
+const LOCALIZATION_WORD = /localization|locres|stringtable|texttable|language/i;
+const EXPLICIT_ID_KEYS = new Set([
+  'id', 'affixid', 'baseaffixid', 'affixconfigid', 'affixbaseid',
+  'itemid', 'itembaseid', 'configbaseid', 'baseid',
+]);
+const normalizeKey = (value) => String(value || '').replace(/[^a-z0-9]/gi, '').toLowerCase();
+const clean = (value, max = 200) => String(value ?? '').replace(/[\r\n\0]/g, ' ').trim().slice(0, max);
+const isRecord = (value) => value !== null && typeof value === 'object' && !Array.isArray(value);
+const scalar = (value) => Array.isArray(value) ? value.at(-1) : value;
+
+function scalarMap(node) {
+  const result = [];
+  if (!isRecord(node)) return result;
+  for (const [key, raw] of Object.entries(node)) {
+    const value = scalar(raw);
+    if (typeof value === 'string' || typeof value === 'number' || typeof value === 'boolean') {
+      result.push({ key, value: clean(value, 300) });
+    }
+  }
+  return result;
+}
+
+function findNamed(node, names) {
+  if (!isRecord(node)) return null;
+  const wanted = new Set(names.map(normalizeKey));
+  for (const [key, raw] of Object.entries(node)) {
+    if (!wanted.has(normalizeKey(key))) continue;
+    const value = scalar(raw);
+    if (typeof value === 'string' || typeof value === 'number') return clean(value, 300);
+  }
+  return null;
+}
+
+function rowContainers(node, pathParts = [], out = []) {
+  if (Array.isArray(node)) {
+    node.forEach((value, index) => rowContainers(value, [...pathParts, String(index)], out));
+    return out;
+  }
+  if (!isRecord(node)) return out;
+
+  for (const [key, raw] of Object.entries(node)) {
+    const normalized = normalizeKey(key);
+    const value = scalar(raw);
+    if (TABLE_CONTAINER_KEYS.has(normalized) && (Array.isArray(value) || isRecord(value))) {
+      const entries = Array.isArray(value)
+        ? value.map((row, index) => [String(index), row])
+        : Object.entries(value);
+      for (const [rowName, row] of entries.slice(0, MAX_ROWS_PER_TABLE)) {
+        if (isRecord(row)) out.push({ rowName, row, path: [...pathParts, key, rowName].join('.') });
+      }
+    } else if (isRecord(value) || Array.isArray(value)) {
+      rowContainers(value, [...pathParts, key], out);
+    }
+  }
+  return out;
+}
+
+function walk(node, visit, pathParts = []) {
+  if (Array.isArray(node)) {
+    node.forEach((value, index) => walk(value, visit, [...pathParts, String(index)]));
+    return;
+  }
+  if (!isRecord(node)) return;
+  visit(node, pathParts);
+  for (const [key, value] of Object.entries(node)) walk(value, visit, [...pathParts, key]);
+}
+
+function referencedPaths(doc) {
+  const refs = new Set();
+  walk(doc, (node) => {
+    for (const [key, raw] of Object.entries(node)) {
+      const value = scalar(raw);
+      if (typeof value === 'string' && /^(?:\/Game\/|\/Script\/|\/Engine\/)/i.test(value)) {
+        refs.add(value.slice(0, 300));
+      }
+    }
+  });
+  return [...refs].slice(0, 500);
+}
+
+function getExportType(doc) {
+  const types = new Set();
+  walk(doc, (node) => {
+    for (const key of ['Type', 'Class', 'ClassName', 'ObjectClass']) {
+      const value = findNamed(node, [key]);
+      if (value) types.add(value);
+    }
+  });
+  return [...types].slice(0, 20);
+}
+
+function classifyResource(resourcePath, doc, exportTypes) {
+  const lower = resourcePath.toLowerCase();
+  const hasTableRows = rowContainers(doc).length > 0;
+  const isDataTable = hasTableRows || exportTypes.some((value) => /datatable/i.test(value));
+  if (LOCALIZATION_WORD.test(lower) || /\.locres$/i.test(resourcePath)) return 'localization-resource';
+  if (isDataTable) return 'data-table';
+  if (AFFIx_WORD.test(lower)) return 'affix-related-asset';
+  if (ITEM_WORD.test(lower)) return 'item-related-asset';
+  if (/blueprint|widget|umg/i.test(lower)) return 'blueprint-or-ui-asset';
+  return 'other-game-asset';
+}
+
+function extractRows(resourcePath, doc, kind) {
+  const tableRows = rowContainers(doc);
+  const itemRows = [];
+  const affixRows = [];
+  for (const entry of tableRows) {
+    const fields = scalarMap(entry.row);
+    const fieldKeys = new Set(fields.map((field) => normalizeKey(field.key)));
+    const idField = fields.find((field) => EXPLICIT_ID_KEYS.has(normalizeKey(field.key)));
+    const name = findNamed(entry.row, [
+      'Name', 'DisplayName', 'ItemName', 'EquipName', 'AffixName', 'NameKey',
+      'TextKey', 'DescKey', 'Title',
+    ]);
+    const id = idField ? idField.value : null;
+    const summary = {
+      id: id ? clean(id, 100) : null,
+      rowName: clean(entry.rowName, 120),
+      name,
+      sourcePath: resourcePath,
+      rowPath: entry.path,
+      fields: fields.slice(0, 100),
+    };
+
+    const rowLooksAffix = AFFIx_WORD.test(resourcePath) ||
+      [...fieldKeys].some((key) => ['affixid', 'baseaffixid', 'affixconfigid', 'affixbaseid'].includes(key));
+    const rowLooksItem = ITEM_WORD.test(resourcePath) ||
+      [...fieldKeys].some((key) => ['itemid', 'itembaseid', 'configbaseid', 'equipmentid', 'equipmentbaseid'].includes(key));
+
+    if (rowLooksAffix && id) {
+      summary.attributeRaw = findNamed(entry.row, [
+        'AttrType', 'AffixAttrType', 'AttributeType', 'AttributeId', 'AttrId',
+      ]);
+      summary.minRaw = findNamed(entry.row, ['Min', 'MinValue', 'ValueMin', 'MinRoll']);
+      summary.maxRaw = findNamed(entry.row, ['Max', 'MaxValue', 'ValueMax', 'MaxRoll']);
+      summary.tierRaw = findNamed(entry.row, ['Tier', 'AffixTier', 'Level', 'AffixLevel']);
+      affixRows.push(summary);
+    } else if (rowLooksItem && id) {
+      summary.slotRaw = findNamed(entry.row, ['EquipSlot', 'EquipmentSlot', 'WearSlot', 'Slot']);
+      summary.itemTypeRaw = findNamed(entry.row, ['ItemType', 'EquipType', 'EquipmentType', 'Type']);
+      itemRows.push(summary);
+    }
+  }
+  return { itemRows, affixRows, tableRowCount: tableRows.length };
+}
+
+function readTextResource(filePath, maxBytes) {
+  const stat = fs.statSync(filePath);
+  if (!stat.isFile() || stat.size > maxBytes) return null;
+  const buffer = fs.readFileSync(filePath);
+  if (buffer.includes(0)) return null;
+  const content = buffer.toString('utf8');
+  const printable = content.replace(/[\t\r\n -~]/g, '').length;
+  if (content.length && printable / content.length > 0.15) return null;
+  return content;
+}
+
+function listFiles(root, maxFiles, errors) {
+  const results = [];
+  const stack = [root];
+  while (stack.length && results.length < maxFiles) {
+    const current = stack.pop();
+    let entries;
+    try { entries = fs.readdirSync(current, { withFileTypes: true }); }
+    catch (error) { errors.push({ path: current, reason: clean(error.message, 200) }); continue; }
+
+    for (const entry of entries) {
+      if (results.length >= maxFiles) break;
+      const fullPath = path.join(current, entry.name);
+      if (entry.isSymbolicLink()) continue;
+      if (entry.isDirectory()) {
+        if (['node_modules', '.git', 'cache', 'saved', 'intermediate'].includes(entry.name.toLowerCase())) continue;
+        stack.push(fullPath);
+      } else if (entry.isFile()) {
+        const extension = path.extname(entry.name).toLowerCase();
+        if (extension === '.json' || extension === '.out' || extension === '.lua' || extension === '.txt' || extension === '.ini') {
+          results.push(fullPath);
+        }
+      }
+    }
+  }
+  return results;
+}
+
+function parseDefaultGameIni(content) {
+  const projectVersion = /^\s*ProjectVersion\s*=\s*(.+)$/mi.exec(content)?.[1]?.trim() || null;
+  const redirects = [];
+  const redirectPattern = /(?:StructRedirects|ClassRedirects)=\([^)]*OldName="([^"]+)"[^)]*NewName="([^"]+)"/g;
+  let match;
+  while ((match = redirectPattern.exec(content)) !== null) {
+    redirects.push({ oldName: match[1], newName: match[2] });
+  }
+  const names = new Set(redirects.map((row) => row.oldName));
+  const knownGameTypes = [
+    'GameEquipSlot', 'GameAffixBlackboard', 'AffixAttrType',
+    'GameCharAttribute', 'GameCharField',
+  ].filter((name) => names.has(name));
+  return { projectVersion, redirects, knownGameTypes };
+}
+
+/**
+ * Offline importer for FModel/Unreal text exports. It does not need network
+ * access and never executes game scripts or loads binary assets.
+ */
+export function scanGameResourceFolder(rootPath, options = {}) {
+  const root = path.resolve(String(rootPath || ''));
+  if (!root || !fs.existsSync(root) || !fs.statSync(root).isDirectory()) {
+    throw new Error('Выбранная папка игровых ресурсов не найдена.');
+  }
+
+  const errors = [];
+  const files = listFiles(root, Math.min(MAX_FILES, Number(options.maxFiles) || MAX_FILES), errors);
+  const manifest = [];
+  const itemDefinitions = [];
+  const affixDefinitions = [];
+  const tableSchemas = [];
+  const scriptHints = [];
+  const localizationHints = [];
+  const schemaEvidence = new Map();
+  let scannedJson = 0;
+  let skippedOversized = 0;
+  let failedJson = 0;
+  let defaultGameIni = null;
+
+  for (const filePath of files) {
+    const relativePath = path.relative(root, filePath).replace(/\\/g, '/');
+    const extension = path.extname(filePath).toLowerCase();
+    let doc = null;
+    let text = null;
+    try {
+      const stat = fs.statSync(filePath);
+      if (stat.size > MAX_FILE_BYTES) {
+        skippedOversized++;
+        continue;
+      }
+
+      if (extension === '.json') {
+        text = fs.readFileSync(filePath, 'utf8');
+        try { doc = JSON.parse(text); }
+        catch { failedJson++; }
+        scannedJson++;
+      } else {
+        text = readTextResource(filePath, MAX_FILE_BYTES);
+      }
+    } catch (error) {
+      errors.push({ path: relativePath, reason: clean(error.message, 200) });
+      continue;
+    }
+
+    if (relativePath.toLowerCase().endsWith('defaultgame.json') && text) {
+      defaultGameIni = parseDefaultGameIni(text);
+      for (const name of defaultGameIni.knownGameTypes) {
+        schemaEvidence.set(name, {
+          name,
+          sourcePath: relativePath,
+          evidence: 'CoreRedirects class/struct redirect',
+          verifiedAs: 'game type identifier, not an affix definition',
+        });
+      }
+    }
+
+    if (extension === '.out' || extension === '.lua') {
+      if (text && /affix|equip|item|forge/i.test(relativePath)) {
+        const symbols = [...new Set(
+          (text.match(/[A-Za-z_][A-Za-z0-9_]{2,80}/g) || [])
+            .filter((token) => /affix|equip|item|forge|attr|quality|rarity|slot/i.test(token)),
+        )].slice(0, 300);
+        scriptHints.push({ path: relativePath, bytes: fs.statSync(filePath).size, symbols });
+      }
+      continue;
+    }
+
+    if (!doc) {
+      if (extension === '.txt' && text && /affix|equip|item|forge/i.test(relativePath)) {
+        scriptHints.push({ path: relativePath, bytes: fs.statSync(filePath).size, symbols: [] });
+      }
+      continue;
+    }
+
+    const exportTypes = getExportType(doc);
+    const kind = classifyResource(relativePath, doc, exportTypes);
+    const refs = referencedPaths(doc);
+    const rowData = extractRows(relativePath, doc, kind);
+    const name = path.basename(filePath, extension);
+    const useful = kind !== 'other-game-asset' || rowData.tableRowCount > 0 ||
+      exportTypes.some((value) => /datatable|dataasset/i.test(value));
+    if (useful) {
+      manifest.push({
+        path: relativePath,
+        name,
+        kind,
+        exportTypes,
+        tableRowCount: rowData.tableRowCount,
+        references: refs.slice(0, 60),
+        bytes: fs.statSync(filePath).size,
+      });
+    }
+    itemDefinitions.push(...rowData.itemRows);
+    affixDefinitions.push(...rowData.affixRows);
+    if (rowData.tableRowCount) {
+      tableSchemas.push({
+        path: relativePath,
+        kind,
+        rowCount: rowData.tableRowCount,
+        exportTypes,
+        sampleRowNames: rowContainers(doc).slice(0, 12).map((row) => row.rowName),
+      });
+    }
+    if (kind === 'localization-resource') {
+      localizationHints.push({ path: relativePath, extension, bytes: fs.statSync(filePath).size });
+    }
+  }
+
+  const uniqueItems = new Map();
+  for (const row of itemDefinitions) uniqueItems.set([row.id, row.sourcePath, row.rowName].join('|'), row);
+  const uniqueAffixes = new Map();
+  for (const row of affixDefinitions) uniqueAffixes.set([row.id, row.sourcePath, row.rowName].join('|'), row);
+
+  const result = {
+    schemaVersion: 1,
+    importedAt: Date.now(),
+    rootLabel: path.basename(root),
+    sourceMeta: {
+      projectVersion: defaultGameIni?.projectVersion || null,
+      defaultGameIniFound: Boolean(defaultGameIni),
+      knownGameTypes: defaultGameIni?.knownGameTypes || [],
+      redirectsFound: defaultGameIni?.redirects?.length || 0,
+    },
+    summary: {
+      filesDiscovered: files.length,
+      jsonFilesScanned: scannedJson,
+      usefulAssets: manifest.length,
+      dataTables: tableSchemas.length,
+      dataTableRows: tableSchemas.reduce((sum, row) => sum + row.rowCount, 0),
+      itemDefinitions: uniqueItems.size,
+      affixDefinitions: uniqueAffixes.size,
+      scriptHints: scriptHints.length,
+      localizationHints: localizationHints.length,
+      failedJson,
+      skippedOversized,
+      errors: errors.length,
+    },
+    schemaEvidence: [...schemaEvidence.values()],
+    itemDefinitions: [...uniqueItems.values()].slice(0, 15000),
+    affixDefinitions: [...uniqueAffixes.values()].slice(0, 15000),
+    tableSchemas: tableSchemas.slice(0, 2000),
+    assetManifest: manifest.slice(0, 10000),
+    scriptHints: scriptHints.slice(0, 2000),
+    localizationHints: localizationHints.slice(0, 1000),
+    errors: errors.slice(0, 200),
+    limitations: [
+      'UI Blueprint экспорт содержит структуру интерфейса и ссылки, но сам по себе не является таблицей игровых роллов.',
+      'Только подтверждённые DataTable/RowMap/Rows записи добавляются в определения предметов и аффиксов.',
+      'Неизвестные числовые enum и AttrType сохраняются как исходные значения; их смысл не угадывается.',
+      'Бинарные .uasset, .pak и .locres не открываются и не исполняются этим импортёром.',
+      'FModel .out/.lua читаются только как обычный текст, когда кодировка и содержимое позволяют безопасный текстовый разбор.',
+    ],
+  };
+
+  return result;
+}
+
+export function resourceCatalogStatus(index) {
+  if (!index || typeof index !== 'object') {
+    return {
+      imported: false,
+      label: 'Игровые ресурсы ещё не импортированы',
+      summary: null,
+      knownGameTypes: [],
+    };
+  }
+  return {
+    imported: true,
+    label: 'Локальные ресурсы импортированы',
+    importedAt: Number(index.importedAt) || null,
+    rootLabel: clean(index.rootLabel, 100),
+    summary: { ...(index.summary || {}) },
+    knownGameTypes: [...(index.sourceMeta?.knownGameTypes || [])],
+    projectVersion: index.sourceMeta?.projectVersion || null,
+  };
+}
