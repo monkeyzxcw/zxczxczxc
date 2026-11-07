@@ -103,3 +103,12 @@
 .tlidb-result-meta{display:flex;gap:5px 9px;flex-wrap:wrap;color:#b5bfd4;font-size:8px}
 .tlidb-result .btn{white-space:nowrap;padding:6px 9px;font-size:8px}
 @media(max-width:760px){.tlidb-search-controls{grid-template-columns:1fr}.tlidb-result{grid-template-columns:1fr}.tlidb-result .btn{justify-self:start}}
+
+.tlidb-auto-controls{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin:13px 0 5px;padding:11px 12px;border:1px solid #2a3044;background:#101521;border-radius:8px}
+.tlidb-auto-controls .checkbox-label{color:#c4c8d7;font-size:9px;line-height:1.5}
+.tlidb-auto-controls .checkbox-label input{accent-color:#9b80e6}
+.tlidb-interval-label{display:flex;align-items:center;gap:8px;color:#9da4b8;font-size:9px}
+.tlidb-interval-label select{min-width:150px;border:1px solid #32374d;background:#0c101b;border-radius:6px;padding:8px 10px;color:#e4e7f2;font-size:9px}
+.tlidb-interval-label select:disabled{opacity:.45}
+#tlidb-auto-status{margin-top:6px;line-height:1.6}
+@media(max-width:900px){.tlidb-auto-controls{align-items:flex-start;flex-direction:column}.tlidb-interval-label{width:100%;justify-content:space-between}.tlidb-interval-label select{flex:1}}
