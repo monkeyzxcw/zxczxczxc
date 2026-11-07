@@ -106,6 +106,7 @@ function normalizeItem(item, index = 0) {
         value: cleanText(field.value, 100),
         path: cleanText(field.path, 240) || null,
         affixId,
+        attributeRaw: cleanText(affix.attributeRaw, 100) || null,
       };
       values.push(value);
       affixValues.push(value);
@@ -295,7 +296,9 @@ export function analyzeEquipment(itemsInput, prioritiesInput = [], resourceIndex
       slotRaw: row.slotRaw,
       value: row.value,
       affixId: row.affixId,
+      attributeRaw: row.attributeRaw || null,
       catalogAffix: row.affixId ? indexes.affixes.get(String(row.affixId)) || null : null,
+      catalogAttribute: row.attributeRaw ? indexes.attributes.get(String(row.attributeRaw)) || null : null,
     })),
   }));
 
