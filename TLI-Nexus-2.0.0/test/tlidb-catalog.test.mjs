@@ -4,6 +4,7 @@ import {
   TLIDB_GEAR_PAGES,
   extractModifierRanges,
   fetchTlidbCatalog,
+  mergeTlidbCatalog,
   getTlidbPageUrl,
   parseTlidbGearPage,
   searchTlidbAffixes,
@@ -108,6 +109,56 @@ test('TLIDB sync fetches only allowlisted pages and records source/version limit
   assert.ok(result.limitations.some((line) => /internal game/i.test(line)));
   assert.equal(tlidbCatalogStatus(result).imported, true);
   await assert.rejects(fetchTlidbCatalog({ slugs: ['https://attacker.test'], fetchImpl: async () => { throw new Error('should not run'); } }), /Недопустимая/);
+});
+
+test('partial TLIDB refresh retains cached rows for pages that failed', () => {
+  const oldA = parseTlidbGearPage('STR_Boots', samplePage, 1000);
+  const oldB = parseTlidbGearPage('DEX_Boots', samplePage, 1000);
+  const existing = {
+    schemaVersion: 1,
+    source: 'TLIDB',
+    syncedAt: 1000,
+    pages: [oldA.page, oldB.page],
+    records: [...oldA.records, ...oldB.records],
+    summary: { pagesRequested: 2, pagesImported: 2, pagesFailed: 0, affixRows: 8, gearGroups: 1 },
+    limitations: [],
+    lastFullSyncAt: 1000,
+  };
+  const fresh = parseTlidbGearPage('STR_Boots', samplePage.replace('+(54–74)', '+(60–80)'), 2000);
+  const incoming = {
+    schemaVersion: 1,
+    source: 'TLIDB',
+    syncedAt: 2000,
+    pages: [fresh.page],
+    failedPages: [{ slug: 'DEX_Boots', reason: 'temporary error' }],
+    records: fresh.records,
+    summary: { pagesRequested: 2, pagesImported: 1, pagesFailed: 1, affixRows: 4, gearGroups: 1 },
+    limitations: [],
+  };
+
+  const merged = mergeTlidbCatalog(existing, incoming);
+  assert.equal(merged.records.length, 8);
+  assert.equal(merged.records.find((row) => row.sourcePage === 'STR_Boots').modifierRaw, '+(60–80) Max Life');
+  assert.equal(merged.records.find((row) => row.sourcePage === 'DEX_Boots').modifierRaw, '+(54–74) Max Life');
+  assert.equal(merged.summary.retainedPages, 1);
+  assert.equal(merged.lastFullSyncAt, 1000);
+  assert.equal(merged.lastSuccessfulSyncAt, 2000);
+});
+
+test('TLIDB rate limiting marks remaining pages as skipped instead of dropping them', async () => {
+  const result = await fetchTlidbCatalog({
+    slugs: ['STR_Boots', 'DEX_Boots', 'INT_Boots'],
+    sleepImpl: async () => {},
+    fetchImpl: async (url) => ({
+      ok: false,
+      status: 429,
+      url,
+      text: async () => '',
+    }),
+  });
+  assert.equal(result.summary.pagesFailed, 3);
+  assert.deepEqual(result.failedPages.map((page) => page.slug), ['STR_Boots', 'DEX_Boots', 'INT_Boots']);
+  assert.match(result.failedPages[1].reason, /Пропущено/);
 });
 
 test('TLIDB sync rejects off-domain redirects and records the failed page', async () => {
