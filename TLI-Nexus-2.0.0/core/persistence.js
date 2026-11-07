@@ -58,6 +58,10 @@ export function mergeRendererUpdate(currentValue, rendererValue) {
       feGained: Number(liveRow.feGained) || 0,
       itemCount: Number(liveRow.itemCount) || 0,
       pickupEvents: Number(liveRow.pickupEvents) || 0,
+      mapsCompleted: Number(liveRow.mapsCompleted) || 0,
+      mapRuns: Array.isArray(liveRow.mapRuns) ? liveRow.mapRuns : (rendererRow.mapRuns || []),
+      currentMap: liveRow.currentMap || null,
+      lastMap: liveRow.lastMap || rendererRow.lastMap || null,
       // Costs and strategy are user-entered fields, so keep the renderer's edit.
       costsFe: Number(rendererRow.costsFe ?? liveRow.costsFe) || 0,
       strategy: rendererRow.strategy || liveRow.strategy,
