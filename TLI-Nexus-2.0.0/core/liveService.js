@@ -193,7 +193,7 @@ function countCategory(line) {
 }
 
 export class LiveService {
-  constructor({ onUpdate = () => {}, pollMs = 2000, manualLogFile = null, userDataDir = null, resumeSession = null } = {}) {
+  constructor({ onUpdate = () => {}, pollMs = 2000, manualLogFile = null, userDataDir = null, resumeSession = null, onResumeExpired = () => {} } = {}) {
     this.onUpdate = onUpdate; this.pollMs = pollMs; this.timer = null; this.tailer = null; this.ingestor = null;
     this.game = false; this.gameExe = null; this.gameProcessId = null; this.gameProcessStartedAt = null;
     this.logFile = null; this.logSource = 'auto'; this.manualLogFile = manualLogFile;
@@ -213,6 +213,7 @@ export class LiveService {
     this.priceWatchRules = []; this.priceAlertState = new Map(); this.priceAlertLastAt = new Map();
     this.exchangePriceTracker = new ExchangePriceTracker();
     this.resumeSessionCandidate = resumeSession && typeof resumeSession === 'object' ? { ...resumeSession } : null;
+    this.resumeMissingScans = 0; this.onResumeExpired = onResumeExpired;
     this.notificationPreferences = { enabled: true, soundEnabled: true, thresholdFe: 20 };
     this.notificationSeq = 0; this.lastNotification = null;
     this.communityPriceFeed = new CommunityPriceFeed({ cachePath: userDataDir ? path.join(userDataDir, 'community-prices.json') : null, onUpdate: (status) => {
@@ -361,6 +362,7 @@ export class LiveService {
       this.gameExe = proc.exe || this.gameExe;
       if (proc.running) {
         this.gameMissingScans = 0;
+        this.resumeMissingScans = 0;
         const processChanged = this.game && (
           (this.gameProcessId && proc.pid && Number(this.gameProcessId) !== Number(proc.pid)) ||
           (this.gameProcessStartedAt && proc.processStartedAt &&
@@ -396,6 +398,15 @@ export class LiveService {
           this.gameMapTracker.finishCurrentMap(this.gameEndedAt, 'game-stopped');
           this.gameProcessId = null; this.gameProcessStartedAt = null;
           if (!this.manualLogFile) { this.detach(); this.lastError = null; this.emit(); return; }
+        }
+      } else if (this.resumeSessionCandidate) {
+        // The game may have been closed while Nexus was not running. Expire
+        // the persisted open row only after several independent process scans.
+        this.resumeMissingScans += 1;
+        if (this.resumeMissingScans >= 3) {
+          const expired = this.resumeSessionCandidate;
+          this.resumeSessionCandidate = null;
+          this.onResumeExpired(expired);
         }
       }
       if (this.manualLogFile) {
@@ -738,12 +749,9 @@ export class LiveService {
   }
   stop() {
     clearInterval(this.timer); this.timer = null;
-    if (this.game && !this.gameEndedAt) {
-      this.gameEndedAt = Date.now();
-      this.gameMapTracker.finishCurrentMap(this.gameEndedAt, 'app-stopped');
-      this.game = false;
-      this.emit();
-    }
+    // Closing Nexus is not the same as closing Torchlight. Persist the open
+    // game run and active map so a later Nexus launch can resume the same PID.
+    if (this.game && !this.gameEndedAt) this.emit();
     this.detach(); this.communityPriceFeed.stop();
   }
 }
