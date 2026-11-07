@@ -8,7 +8,7 @@ const TABLE_CONTAINER_KEYS = new Set([
   'rowmap', 'rows', 'datatablerows', 'rowdata', 'entries', 'datarows',
 ]);
 const AFFIx_WORD = /affix|prefix|suffix|enchant|forge/i;
-const ENUM_TABLE_WORD = /affixattrtype|gamecharattribute|gamecharfield|gameequipslot|equiprarity|equipquality|itemrarity|itemquality|raritytype|qualitytype/i;
+const ENUM_TABLE_WORD = /affixattrtype|gamecharattribute|gamecharfield|gameequipslot|equipmentslot|equipslot|equiprarity|equipquality|itemrarity|itemquality|raritytype|qualitytype|equipmentrarity|equipmentquality/i;
 const ITEM_WORD = /item|equip|equipment|gear/i;
 const LOCALIZATION_WORD = /localization|locres|stringtable|texttable|language/i;
 const EXPLICIT_ID_KEYS = new Set([
