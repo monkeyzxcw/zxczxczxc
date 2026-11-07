@@ -1,0 +1,958 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_GuildNewsItem",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'GuildNewsItem_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildNewsItem.4"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_Event_bIsSelected",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_Event_bIsExpanded",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "Function",
+    "Name": "BP_OnItemSelectionChanged",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'GuildNewsItem_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildNewsItem.4"
+    },
+    "SuperStruct": {
+      "ObjectName": "Function'UserListEntry:BP_OnItemSelectionChanged'",
+      "ObjectPath": "/Script/UMG"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "bIsSelected",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "BP_OnItemExpansionChanged",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'GuildNewsItem_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildNewsItem.4"
+    },
+    "SuperStruct": {
+      "ObjectName": "Function'UserListEntry:BP_OnItemExpansionChanged'",
+      "ObjectPath": "/Script/UMG"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "bIsExpanded",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "BP_OnEntryReleased",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'GuildNewsItem_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildNewsItem.4"
+    },
+    "SuperStruct": {
+      "ObjectName": "Function'UserListEntry:BP_OnEntryReleased'",
+      "ObjectPath": "/Script/UMG"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "GuildNewsItem_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Package": "UE_game/Content/BluePrint/UI/Guild/Item/GuildNewsItem",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'GuildNewsItem_C:WidgetTree'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildNewsItem.27"
+      },
+      "bClassRequiresNativeTick": true,
+      "UberGraphFunction": {
+        "ObjectName": "Function'GuildNewsItem_C:ExecuteUbergraph_GuildNewsItem'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildNewsItem.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'UIListViewItem'",
+      "ObjectPath": "/Script/UE_game"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'GuildNewsItem_C:BP_OnEntryReleased'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildNewsItem.3"
+      },
+      {
+        "ObjectName": "Function'GuildNewsItem_C:BP_OnItemExpansionChanged'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildNewsItem.2"
+      },
+      {
+        "ObjectName": "Function'GuildNewsItem_C:BP_OnItemSelectionChanged'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildNewsItem.1"
+      },
+      {
+        "ObjectName": "Function'GuildNewsItem_C:ExecuteUbergraph_GuildNewsItem'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildNewsItem.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "AvatarItem",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'AvatarItem_C'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Common/Avatar/AvatarItem.0"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "HeadBtn",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIButton'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "NewsText",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIRichTextBlock'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SelectImg",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "UIImage_100",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_GuildNewsItem": {
+        "ObjectName": "Function'GuildNewsItem_C:ExecuteUbergraph_GuildNewsItem'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildNewsItem.0"
+      },
+      "BP_OnItemSelectionChanged": {
+        "ObjectName": "Function'GuildNewsItem_C:BP_OnItemSelectionChanged'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildNewsItem.1"
+      },
+      "BP_OnItemExpansionChanged": {
+        "ObjectName": "Function'GuildNewsItem_C:BP_OnItemExpansionChanged'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildNewsItem.2"
+      },
+      "BP_OnEntryReleased": {
+        "ObjectName": "Function'GuildNewsItem_C:BP_OnEntryReleased'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildNewsItem.3"
+      }
+    },
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "Interfaces": [
+      {
+        "Class": {
+          "ObjectName": "Class'UserListEntry'",
+          "ObjectPath": "/Script/UMG"
+        },
+        "PointerProperty": null,
+        "PointerOffset": 0,
+        "bImplementedByK2": true
+      }
+    ],
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "GuildNewsItem_C'Default__GuildNewsItem_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildNewsItem.5"
+    }
+  },
+  {
+    "Type": "GuildNewsItem_C",
+    "Name": "Default__GuildNewsItem_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'UE_game/Content/BluePrint/UI/Guild/Item/GuildNewsItem.GuildNewsItem_C'",
+    "Package": "UE_game/Content/BluePrint/UI/Guild/Item/GuildNewsItem",
+    "Properties": {
+      "UberGraphFrame": {},
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "AvatarItem_C",
+    "Name": "AvatarItem",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'UE_game/Content/BluePrint/UI/Common/Avatar/AvatarItem.AvatarItem_C'",
+    "Outer": {
+      "ObjectName": "WidgetTree'GuildNewsItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildNewsItem.27"
+    },
+    "Template": {
+      "ObjectName": "AvatarItem_C'Default__AvatarItem_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Common/Avatar/AvatarItem.1"
+    },
+    "Properties": {
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'GuildNewsItem_C:WidgetTree.CanvasPanel_56.CanvasPanelSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildNewsItem.18"
+      },
+      "RenderTransform": {
+        "Scale": {
+          "X": 0.4,
+          "Y": 0.4
+        }
+      }
+    }
+  },
+  {
+    "Type": "ButtonSlot",
+    "Name": "ButtonSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ButtonSlot'",
+    "Outer": {
+      "ObjectName": "UIButton'GuildNewsItem_C:WidgetTree.HeadBtn'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildNewsItem.22"
+    },
+    "Properties": {
+      "Padding": {
+        "Left": 0.0,
+        "Top": 0.0,
+        "Right": 0.0,
+        "Bottom": 0.0
+      },
+      "HorizontalAlignment": "HAlign_Fill",
+      "VerticalAlignment": "VAlign_Fill",
+      "Parent": {
+        "ObjectName": "UIButton'GuildNewsItem_C:WidgetTree.HeadBtn'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildNewsItem.22"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'GuildNewsItem_C:WidgetTree.CanvasPanel_56'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildNewsItem.11"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_123",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'GuildNewsItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildNewsItem.27"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'GuildNewsItem_C:WidgetTree.CanvasPanel_123.CanvasPanelSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildNewsItem.12"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_34",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'GuildNewsItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildNewsItem.27"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'GuildNewsItem_C:WidgetTree.CanvasPanel_34.CanvasPanelSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildNewsItem.13"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'GuildNewsItem_C:WidgetTree.CanvasPanel_34.CanvasPanelSlot_2'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildNewsItem.14"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'GuildNewsItem_C:WidgetTree.CanvasPanel_34.CanvasPanelSlot_6'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildNewsItem.15"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'GuildNewsItem_C:WidgetTree.CanvasPanel_123.CanvasPanelSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildNewsItem.12"
+      },
+      "Clipping": "EWidgetClipping::ClipToBounds"
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_49",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'GuildNewsItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildNewsItem.27"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'GuildNewsItem_C:WidgetTree.CanvasPanel_49.CanvasPanelSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildNewsItem.16"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'GuildNewsItem_C:WidgetTree.CanvasPanel_49.CanvasPanelSlot_3'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildNewsItem.17"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'GuildNewsItem_C:WidgetTree.HorizontalBox_90.HorizontalBoxSlot_3'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildNewsItem.21"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_56",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'GuildNewsItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildNewsItem.27"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'GuildNewsItem_C:WidgetTree.CanvasPanel_56.CanvasPanelSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildNewsItem.18"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "ButtonSlot'GuildNewsItem_C:WidgetTree.HeadBtn.ButtonSlot_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildNewsItem.7"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'GuildNewsItem_C:WidgetTree.CanvasPanel_123'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildNewsItem.8"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 192.0,
+          "Bottom": 57.6
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'GuildNewsItem_C:WidgetTree.CanvasPanel_123'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildNewsItem.8"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'GuildNewsItem_C:WidgetTree.CanvasPanel_34'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildNewsItem.9"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'GuildNewsItem_C:WidgetTree.CanvasPanel_34'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildNewsItem.9"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 192.0,
+          "Bottom": 57.6
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 1.0
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 1.0
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'GuildNewsItem_C:WidgetTree.CanvasPanel_34'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildNewsItem.9"
+      },
+      "Content": {
+        "ObjectName": "UIImage'GuildNewsItem_C:WidgetTree.UIImage_100'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildNewsItem.24"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'GuildNewsItem_C:WidgetTree.CanvasPanel_34'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildNewsItem.9"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": -11.5199995,
+          "Top": -3.84,
+          "Right": 192.0,
+          "Bottom": 130.56
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 1.0,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 1.0,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 1.0,
+          "Y": 0.5
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'GuildNewsItem_C:WidgetTree.CanvasPanel_34'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildNewsItem.9"
+      },
+      "Content": {
+        "ObjectName": "UIShrinkTextBlock'GuildNewsItem_C:WidgetTree.TimeText'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildNewsItem.26"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_6",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'GuildNewsItem_C:WidgetTree.CanvasPanel_34'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildNewsItem.9"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 192.0,
+          "Bottom": 57.6
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.0,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.0,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.0,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'GuildNewsItem_C:WidgetTree.CanvasPanel_34'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildNewsItem.9"
+      },
+      "Content": {
+        "ObjectName": "HorizontalBox'GuildNewsItem_C:WidgetTree.HorizontalBox_90'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildNewsItem.19"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'GuildNewsItem_C:WidgetTree.CanvasPanel_49'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildNewsItem.10"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 172.8,
+          "Bottom": 172.8
+        }
+      },
+      "ZOrder": 1,
+      "Parent": {
+        "ObjectName": "CanvasPanel'GuildNewsItem_C:WidgetTree.CanvasPanel_49'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildNewsItem.10"
+      },
+      "Content": {
+        "ObjectName": "UIButton'GuildNewsItem_C:WidgetTree.HeadBtn'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildNewsItem.22"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'GuildNewsItem_C:WidgetTree.CanvasPanel_49'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildNewsItem.10"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 172.8,
+          "Bottom": 172.8
+        }
+      },
+      "ZOrder": 2,
+      "Parent": {
+        "ObjectName": "CanvasPanel'GuildNewsItem_C:WidgetTree.CanvasPanel_49'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildNewsItem.10"
+      },
+      "Content": {
+        "ObjectName": "UIImage'GuildNewsItem_C:WidgetTree.SelectImg'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildNewsItem.23"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'GuildNewsItem_C:WidgetTree.CanvasPanel_56'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildNewsItem.11"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 491.52,
+          "Bottom": 491.52
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'GuildNewsItem_C:WidgetTree.CanvasPanel_56'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildNewsItem.11"
+      },
+      "Content": {
+        "ObjectName": "AvatarItem_C'GuildNewsItem_C:WidgetTree.AvatarItem'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildNewsItem.6"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "HorizontalBox_90",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'GuildNewsItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildNewsItem.27"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HorizontalBoxSlot'GuildNewsItem_C:WidgetTree.HorizontalBox_90.HorizontalBoxSlot_3'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildNewsItem.21"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'GuildNewsItem_C:WidgetTree.HorizontalBox_90.HorizontalBoxSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildNewsItem.20"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'GuildNewsItem_C:WidgetTree.CanvasPanel_34.CanvasPanelSlot_6'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildNewsItem.15"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'GuildNewsItem_C:WidgetTree.HorizontalBox_90'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildNewsItem.19"
+    },
+    "Properties": {
+      "Padding": {
+        "Top": 19.199999
+      },
+      "HorizontalAlignment": "HAlign_Left",
+      "VerticalAlignment": "VAlign_Top",
+      "Parent": {
+        "ObjectName": "HorizontalBox'GuildNewsItem_C:WidgetTree.HorizontalBox_90'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildNewsItem.19"
+      },
+      "Content": {
+        "ObjectName": "UIRichTextBlock'GuildNewsItem_C:WidgetTree.NewsText'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildNewsItem.25"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'GuildNewsItem_C:WidgetTree.HorizontalBox_90'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildNewsItem.19"
+    },
+    "Properties": {
+      "Padding": {
+        "Left": 19.199999,
+        "Top": 19.199999,
+        "Right": 19.199999,
+        "Bottom": 19.199999
+      },
+      "HorizontalAlignment": "HAlign_Left",
+      "VerticalAlignment": "VAlign_Top",
+      "Parent": {
+        "ObjectName": "HorizontalBox'GuildNewsItem_C:WidgetTree.HorizontalBox_90'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildNewsItem.19"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'GuildNewsItem_C:WidgetTree.CanvasPanel_49'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildNewsItem.10"
+      }
+    }
+  },
+  {
+    "Type": "UIButton",
+    "Name": "HeadBtn",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIButton'",
+    "Outer": {
+      "ObjectName": "WidgetTree'GuildNewsItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildNewsItem.27"
+    },
+    "Properties": {
+      "IconImage": {
+        "ImageSize": {
+          "X": 61.44,
+          "Y": 61.44
+        }
+      },
+      "WidgetStyle": {
+        "Normal": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          }
+        },
+        "Hovered": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          }
+        },
+        "Pressed": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          }
+        }
+      },
+      "BackgroundColor": {
+        "R": 1.0,
+        "G": 1.0,
+        "B": 1.0,
+        "A": 0.0,
+        "Hex": "FFFFFF"
+      },
+      "Slots": [
+        {
+          "ObjectName": "ButtonSlot'GuildNewsItem_C:WidgetTree.HeadBtn.ButtonSlot_2'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildNewsItem.7"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'GuildNewsItem_C:WidgetTree.CanvasPanel_49.CanvasPanelSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildNewsItem.16"
+      }
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "SelectImg",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'GuildNewsItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildNewsItem.27"
+    },
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 61.44,
+          "Y": 61.44
+        }
+      },
+      "ColorAndOpacity": {
+        "R": 1.0,
+        "G": 1.0,
+        "B": 1.0,
+        "A": 0.0,
+        "Hex": "FFFFFF"
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'GuildNewsItem_C:WidgetTree.CanvasPanel_49.CanvasPanelSlot_3'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildNewsItem.17"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "UIImage_100",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'GuildNewsItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildNewsItem.27"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/TexturesAtlas/Guild/Atlas/UI_Guild_02Mline_Sprite.UI_Guild_02Mline_Sprite",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 979.19995,
+          "Y": 3.84
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'GuildNewsItem_C:WidgetTree.CanvasPanel_34.CanvasPanelSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildNewsItem.13"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "UIRichTextBlock",
+    "Name": "NewsText",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIRichTextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'GuildNewsItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildNewsItem.27"
+    },
+    "Properties": {
+      "CurrStyleId": 2459,
+      "ShrinkSize": {
+        "X": 122.88,
+        "Y": 122.88
+      },
+      "ForceUseMainFont": true,
+      "Text": {
+        "Namespace": "",
+        "Key": "871CBBBE4CF76DAC9C3E39892AE74685",
+        "SourceString": "<RichText Id=\"2461\">nil</><RichText Id=\"2462\">操作者名称62</><RichText Id=\"2462\">将</><RichText Id=\"2462\">被操作者名称11</><RichText Id=\"2461\">的职位调整为</><RichText Id=\"2461\">nil</>",
+        "LocalizedString": "<RichText Id=\"2461\">nil</><RichText Id=\"2462\">操作者名称62</><RichText Id=\"2462\">将</><RichText Id=\"2462\">被操作者名称11</><RichText Id=\"2461\">的职位调整为</><RichText Id=\"2461\">nil</>"
+      },
+      "MinDesiredWidth": 576.0,
+      "WrappingPolicy": "ETextWrappingPolicy::AllowPerCharacterWrapping",
+      "AutoWrapText": true,
+      "WrapTextAt": 576.0,
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'GuildNewsItem_C:WidgetTree.HorizontalBox_90.HorizontalBoxSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildNewsItem.20"
+      }
+    }
+  },
+  {
+    "Type": "UIShrinkTextBlock",
+    "Name": "TimeText",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIShrinkTextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'GuildNewsItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildNewsItem.27"
+    },
+    "Properties": {
+      "TextVerticalAlignment": "VAlign_Top",
+      "CurrStyleId": 2465,
+      "TextContent": {
+        "Namespace": "",
+        "Key": "091806514B39624F873D6CA1309ECEBF",
+        "SourceString": "xx小时前",
+        "LocalizedString": "xx小时前"
+      },
+      "ShrinkSize": {
+        "X": 192.0,
+        "Y": 122.88
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'GuildNewsItem_C:WidgetTree.CanvasPanel_34.CanvasPanelSlot_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildNewsItem.14"
+      }
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetTree'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'GuildNewsItem_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildNewsItem.4"
+    },
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "CanvasPanel'GuildNewsItem_C:WidgetTree.CanvasPanel_123'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildNewsItem.8"
+      }
+    }
+  }
+]

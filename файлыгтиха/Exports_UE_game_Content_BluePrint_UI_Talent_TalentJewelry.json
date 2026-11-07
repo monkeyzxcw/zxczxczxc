@@ -1,0 +1,4354 @@
+[
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "TalentJewelry_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Package": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'TalentJewelry_C:WidgetTree'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.114"
+      },
+      "bClassRequiresNativeTick": true,
+      "Animations": [
+        {
+          "ObjectName": "WidgetAnimation'TalentJewelry_C:SildeIn_INST'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.110"
+        }
+      ]
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'UIUserWidget'",
+      "ObjectPath": "/Script/UE_game"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "SildeIn",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Transient | RepSkip",
+        "PropertyClass": {
+          "ObjectName": "Class'WidgetAnimation'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "BackButton",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIButton'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "BackGround3",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "BackGround3_1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "BagSwitcher",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'WidgetSwitcher'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "BtnCloseTips",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIButton'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "BtnTipClose",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIButton'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CancelBtn",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIButton'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CloseButton1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIButton'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CloseButton2",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIButton'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ConfirmBtn",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIButton'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "FilterGoodsItem",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'FilterGoodsItemV2_C'",
+          "ObjectPath": "UE_game/Content/Art/UIV2/Common/Widget/CommonOther/BluePrint/FilterGoodsItemV2.3"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ItemIcon",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'GoodBaseIconWrapV2_C'",
+          "ObjectPath": "UE_game/Content/Art/UIV2/AuctionHouseV2/BluePrint/GoodBase/GoodBaseIconWrapV2.0"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "RareBg",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "TextGoldInfo",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIRichTextBlock'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "UIImage",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "UIImage_1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "UIImage_52",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "UUIImage_Jewelry_Bg_SidePanel_Title",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "UUIImage_Jewelry_Bg_SidePanel_Title_1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      }
+    ],
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "TalentJewelry_C'Default__TalentJewelry_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.1"
+    }
+  },
+  {
+    "Type": "TalentJewelry_C",
+    "Name": "Default__TalentJewelry_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'UE_game/Content/BluePrint/UI/Talent/TalentJewelry.TalentJewelry_C'",
+    "Package": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry",
+    "Properties": {
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "ButtonSlot",
+    "Name": "ButtonSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ButtonSlot'",
+    "Outer": {
+      "ObjectName": "UIButton'TalentJewelry_C:WidgetTree.CancelBtn'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.80"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "UIButton'TalentJewelry_C:WidgetTree.CancelBtn'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.80"
+      },
+      "Content": {
+        "ObjectName": "UIShrinkTextBlock'TalentJewelry_C:WidgetTree.UIShrinkTextBlock'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.102"
+      }
+    }
+  },
+  {
+    "Type": "ButtonSlot",
+    "Name": "ButtonSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ButtonSlot'",
+    "Outer": {
+      "ObjectName": "UIButton'TalentJewelry_C:WidgetTree.ConfirmBtn'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.83"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "UIButton'TalentJewelry_C:WidgetTree.ConfirmBtn'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.83"
+      },
+      "Content": {
+        "ObjectName": "UIShrinkTextBlock'TalentJewelry_C:WidgetTree.UIShrinkTextBlock_78'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.104"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "BgPanel",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'TalentJewelry_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.114"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'TalentJewelry_C:WidgetTree.BgPanel.CanvasPanelSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.13"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'TalentJewelry_C:WidgetTree.ItemDetailPannel.CanvasPanelSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.24"
+      },
+      "Visibility": "ESlateVisibility::Visible"
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_110",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'TalentJewelry_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.114"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'TalentJewelry_C:WidgetTree.CanvasPanel_110.CanvasPanelSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.14"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'TalentJewelry_C:WidgetTree.CanvasPanel_110.CanvasPanelSlot_3'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.15"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'TalentJewelry_C:WidgetTree.BaseAffixPannel.HorizontalBoxSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.48"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_161",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'TalentJewelry_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.114"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'TalentJewelry_C:WidgetTree.CanvasPanel_161.CanvasPanelSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.16"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'TalentJewelry_C:WidgetTree.CanvasPanel_161.CanvasPanelSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.17"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'TalentJewelry_C:WidgetTree.ExtraAffixPannel.HorizontalBoxSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.49"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_71",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'TalentJewelry_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.114"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'TalentJewelry_C:WidgetTree.CanvasPanel_71.CanvasPanelSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.18"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'TalentJewelry_C:WidgetTree.CanvasPanel_71.CanvasPanelSlot_3'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.21"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'TalentJewelry_C:WidgetTree.CanvasPanel_71.CanvasPanelSlot_4'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.22"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'TalentJewelry_C:WidgetTree.CanvasPanel_71.CanvasPanelSlot_2'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.20"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'TalentJewelry_C:WidgetTree.CanvasPanel_71.CanvasPanelSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.19"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'TalentJewelry_C:WidgetTree.GoldJewelryPannel.HorizontalBoxSlot_3'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.50"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "FullView",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'TalentJewelry_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.114"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'TalentJewelry_C:WidgetTree.FullView.CanvasPanelSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.23"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "ItemDetailPannel",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'TalentJewelry_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.114"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'TalentJewelry_C:WidgetTree.ItemDetailPannel.CanvasPanelSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.24"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'TalentJewelry_C:WidgetTree.ItemDetailPannel.CanvasPanelSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.25"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'TalentJewelry_C:WidgetTree.ItemDetailPannel.CanvasPanelSlot_5'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.27"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'TalentJewelry_C:WidgetTree.ItemDetailPannel.CanvasPanelSlot_6'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.28"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'TalentJewelry_C:WidgetTree.ItemDetailPannel.CanvasPanelSlot_7'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.29"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'TalentJewelry_C:WidgetTree.ItemDetailPannel.CanvasPanelSlot_3'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.26"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "WidgetSwitcherSlot'TalentJewelry_C:WidgetTree.BagSwitcher.WidgetSwitcherSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.113"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "JewelryBagPanel",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'TalentJewelry_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.114"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'TalentJewelry_C:WidgetTree.JewelryBagPanel.CanvasPanelSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.31"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'TalentJewelry_C:WidgetTree.JewelryBagPanel.CanvasPanelSlot_7'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.36"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'TalentJewelry_C:WidgetTree.JewelryBagPanel.CanvasPanelSlot_3'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.34"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'TalentJewelry_C:WidgetTree.JewelryBagPanel.CanvasPanelSlot_11'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.32"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'TalentJewelry_C:WidgetTree.JewelryBagPanel.CanvasPanelSlot_2'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.33"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'TalentJewelry_C:WidgetTree.JewelryBagPanel.CanvasPanelSlot_6'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.35"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'TalentJewelry_C:WidgetTree.JewelryBagPanel.CanvasPanelSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.30"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "WidgetSwitcherSlot'TalentJewelry_C:WidgetTree.BagSwitcher.WidgetSwitcherSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.112"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "JewelryDetail",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'TalentJewelry_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.114"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'TalentJewelry_C:WidgetTree.JewelryDetail.CanvasPanelSlot_4'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.38"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'TalentJewelry_C:WidgetTree.JewelryDetail.CanvasPanelSlot_17'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.37"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'TalentJewelry_C:WidgetTree.JewelryDetail.CanvasPanelSlot_5'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.39"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'TalentJewelry_C:WidgetTree.ItemDetailPannel.CanvasPanelSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.25"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "TipPannel",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'TalentJewelry_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.114"
+    },
+    "Properties": {
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'TalentJewelry_C:WidgetTree.JewelryBagPanel.CanvasPanelSlot_6'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.35"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'TalentJewelry_C:WidgetTree.BgPanel'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.4"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": -400.0,
+          "Right": -200.0,
+          "Bottom": 0.0
+        },
+        "Anchors": {
+          "Maximum": {
+            "X": 1.0,
+            "Y": 1.0
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'TalentJewelry_C:WidgetTree.BgPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.4"
+      },
+      "Content": {
+        "ObjectName": "UIImage'TalentJewelry_C:WidgetTree.BackGround3'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.84"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'TalentJewelry_C:WidgetTree.CanvasPanel_110'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.5"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 2.780962,
+          "Right": 585.44,
+          "Bottom": 50.0
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'TalentJewelry_C:WidgetTree.CanvasPanel_110'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.5"
+      },
+      "Content": {
+        "ObjectName": "UIImage'TalentJewelry_C:WidgetTree.UUIImage_Jewelry_Bg_SidePanel_Title_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.91"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'TalentJewelry_C:WidgetTree.CanvasPanel_110'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.5"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 2.80186,
+          "Right": 192.0,
+          "Bottom": 57.6
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'TalentJewelry_C:WidgetTree.CanvasPanel_110'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.5"
+      },
+      "Content": {
+        "ObjectName": "UIShrinkTextBlock'TalentJewelry_C:WidgetTree.AffixTitle'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.96"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'TalentJewelry_C:WidgetTree.CanvasPanel_161'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.6"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 3.504533,
+          "Right": 582.83997,
+          "Bottom": 50.0
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'TalentJewelry_C:WidgetTree.CanvasPanel_161'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.6"
+      },
+      "Content": {
+        "ObjectName": "UIImage'TalentJewelry_C:WidgetTree.UUIImage_Jewelry_Bg_SidePanel_Title'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.90"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'TalentJewelry_C:WidgetTree.CanvasPanel_161'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.6"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 5.374104,
+          "Right": 541.4727,
+          "Bottom": 50.0
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'TalentJewelry_C:WidgetTree.CanvasPanel_161'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.6"
+      },
+      "Content": {
+        "ObjectName": "UIShrinkTextBlock'TalentJewelry_C:WidgetTree.UIShrinkTextBlock_71'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.103"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'TalentJewelry_C:WidgetTree.CanvasPanel_71'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.7"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 0.0
+        },
+        "Anchors": {
+          "Maximum": {
+            "X": 1.0,
+            "Y": 1.0
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.0
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'TalentJewelry_C:WidgetTree.CanvasPanel_71'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.7"
+      },
+      "Content": {
+        "ObjectName": "UIImage'TalentJewelry_C:WidgetTree.UIImage_52'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.89"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'TalentJewelry_C:WidgetTree.CanvasPanel_71'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.7"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 7.2533336,
+          "Top": 83.65698,
+          "Right": 497.63693,
+          "Bottom": 170.03943
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.0
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.0
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.0
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'TalentJewelry_C:WidgetTree.CanvasPanel_71'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.7"
+      },
+      "Content": {
+        "ObjectName": "UIRichTextBlock'TalentJewelry_C:WidgetTree.TextGoldInfo'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.92"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'TalentJewelry_C:WidgetTree.CanvasPanel_71'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.7"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 10.0,
+          "Top": 8.942934,
+          "Right": 350.0,
+          "Bottom": 45.82857
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.0
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.0
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.0
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'TalentJewelry_C:WidgetTree.CanvasPanel_71'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.7"
+      },
+      "Content": {
+        "ObjectName": "UIShrinkTextBlock'TalentJewelry_C:WidgetTree.TextGlodTitle'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.101"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'TalentJewelry_C:WidgetTree.CanvasPanel_71'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.7"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 29.771954,
+          "Top": -165.54483,
+          "Right": 651.8765,
+          "Bottom": 324.0
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 1.0,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 1.0,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 1.0,
+          "Y": 0.0
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'TalentJewelry_C:WidgetTree.CanvasPanel_71'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.7"
+      },
+      "Content": {
+        "ObjectName": "UIImage'TalentJewelry_C:WidgetTree.UIImage'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.87"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_4",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'TalentJewelry_C:WidgetTree.CanvasPanel_71'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.7"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 12.742857,
+          "Top": 10.979057,
+          "Right": 586.74286,
+          "Bottom": 44.0
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.0
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.0
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.0
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'TalentJewelry_C:WidgetTree.CanvasPanel_71'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.7"
+      },
+      "Content": {
+        "ObjectName": "UIImage'TalentJewelry_C:WidgetTree.UIImage_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.88"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'TalentJewelry_C:WidgetTree.FullView'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.8"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": -861.1477,
+          "Right": 857.6001,
+          "Bottom": 0.0
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 1.0,
+            "Y": 0.0
+          },
+          "Maximum": {
+            "X": 1.0,
+            "Y": 1.0
+          }
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'TalentJewelry_C:WidgetTree.FullView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.8"
+      },
+      "Content": {
+        "ObjectName": "WidgetSwitcher'TalentJewelry_C:WidgetTree.BagSwitcher'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.111"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'TalentJewelry_C:WidgetTree.ItemDetailPannel'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.9"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "Anchors": {
+          "Maximum": {
+            "X": 1.0,
+            "Y": 1.0
+          }
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'TalentJewelry_C:WidgetTree.ItemDetailPannel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.9"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'TalentJewelry_C:WidgetTree.BgPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.4"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'TalentJewelry_C:WidgetTree.ItemDetailPannel'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.9"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": -51.7511,
+          "Top": 3.8533936,
+          "Right": 8.841309,
+          "Bottom": 5.746582
+        },
+        "Anchors": {
+          "Maximum": {
+            "X": 1.0,
+            "Y": 1.0
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'TalentJewelry_C:WidgetTree.ItemDetailPannel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.9"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'TalentJewelry_C:WidgetTree.JewelryDetail'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.11"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'TalentJewelry_C:WidgetTree.ItemDetailPannel'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.9"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": -118.502754,
+          "Top": 52.20218,
+          "Right": 60.0,
+          "Bottom": 60.0
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 1.0,
+            "Y": 0.0
+          },
+          "Maximum": {
+            "X": 1.0,
+            "Y": 0.0
+          }
+        }
+      },
+      "ZOrder": 3,
+      "Parent": {
+        "ObjectName": "CanvasPanel'TalentJewelry_C:WidgetTree.ItemDetailPannel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.9"
+      },
+      "Content": {
+        "ObjectName": "UIButton'TalentJewelry_C:WidgetTree.CloseButton2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.82"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_5",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'TalentJewelry_C:WidgetTree.ItemDetailPannel'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.9"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 256.61163,
+          "Top": -135.0,
+          "Right": 276.0,
+          "Bottom": 84.0
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 1.0
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 1.0
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.0
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'TalentJewelry_C:WidgetTree.ItemDetailPannel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.9"
+      },
+      "Content": {
+        "ObjectName": "UIButton'TalentJewelry_C:WidgetTree.ConfirmBtn'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.83"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_6",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'TalentJewelry_C:WidgetTree.ItemDetailPannel'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.9"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": -40.623657,
+          "Top": -135.0,
+          "Right": 276.0,
+          "Bottom": 84.0
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 1.0
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 1.0
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.0
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'TalentJewelry_C:WidgetTree.ItemDetailPannel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.9"
+      },
+      "Content": {
+        "ObjectName": "UIButton'TalentJewelry_C:WidgetTree.CancelBtn'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.80"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_7",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'TalentJewelry_C:WidgetTree.ItemDetailPannel'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.9"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 113.00043,
+          "Top": -221.35486,
+          "Right": 571.0,
+          "Bottom": 75.0
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 1.0
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 1.0
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.0
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'TalentJewelry_C:WidgetTree.ItemDetailPannel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.9"
+      },
+      "Content": {
+        "ObjectName": "UIShrinkTextBlock'TalentJewelry_C:WidgetTree.RemindInfo'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.100"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'TalentJewelry_C:WidgetTree.JewelryBagPanel'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.10"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": -126.04603,
+          "Top": 52.20218,
+          "Right": 60.0,
+          "Bottom": 60.0
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 1.0,
+            "Y": 0.0
+          },
+          "Maximum": {
+            "X": 1.0,
+            "Y": 0.0
+          }
+        }
+      },
+      "ZOrder": 3,
+      "Parent": {
+        "ObjectName": "CanvasPanel'TalentJewelry_C:WidgetTree.JewelryBagPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.10"
+      },
+      "Content": {
+        "ObjectName": "UIButton'TalentJewelry_C:WidgetTree.CloseButton1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.81"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'TalentJewelry_C:WidgetTree.JewelryBagPanel'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.10"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "Anchors": {
+          "Maximum": {
+            "X": 1.0,
+            "Y": 1.0
+          }
+        }
+      },
+      "ZOrder": 1,
+      "Parent": {
+        "ObjectName": "CanvasPanel'TalentJewelry_C:WidgetTree.JewelryBagPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.10"
+      },
+      "Content": {
+        "ObjectName": "UIButton'TalentJewelry_C:WidgetTree.BtnCloseTips'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.78"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_11",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'TalentJewelry_C:WidgetTree.JewelryBagPanel'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.10"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": -400.0,
+          "Right": -200.0,
+          "Bottom": 0.0
+        },
+        "Anchors": {
+          "Maximum": {
+            "X": 1.0,
+            "Y": 1.0
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'TalentJewelry_C:WidgetTree.JewelryBagPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.10"
+      },
+      "Content": {
+        "ObjectName": "UIImage'TalentJewelry_C:WidgetTree.BackGround3_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.85"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'TalentJewelry_C:WidgetTree.JewelryBagPanel'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.10"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": -5105.689,
+          "Top": -724.48,
+          "Right": 428.80002,
+          "Bottom": -724.48
+        },
+        "Anchors": {
+          "Maximum": {
+            "X": 1.0,
+            "Y": 1.0
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "ZOrder": 3,
+      "Parent": {
+        "ObjectName": "CanvasPanel'TalentJewelry_C:WidgetTree.JewelryBagPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.10"
+      },
+      "Content": {
+        "ObjectName": "UIButton'TalentJewelry_C:WidgetTree.BtnTipClose'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.79"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'TalentJewelry_C:WidgetTree.JewelryBagPanel'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.10"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": -857.60004,
+          "Top": 193.55429,
+          "Right": 877.6,
+          "Bottom": 18.962963
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 1.0,
+            "Y": 0.0
+          },
+          "Maximum": {
+            "X": 1.0,
+            "Y": 1.0
+          }
+        }
+      },
+      "ZOrder": 5,
+      "Parent": {
+        "ObjectName": "CanvasPanel'TalentJewelry_C:WidgetTree.JewelryBagPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.10"
+      },
+      "Content": {
+        "ObjectName": "FilterGoodsItemV2_C'TalentJewelry_C:WidgetTree.FilterGoodsItem'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.40"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_6",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'TalentJewelry_C:WidgetTree.JewelryBagPanel'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.10"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": -1429.5554,
+          "Top": -384.11108,
+          "Right": 533.50397,
+          "Bottom": 586.93115
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 1.0,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 1.0,
+            "Y": 0.5
+          }
+        }
+      },
+      "ZOrder": 4,
+      "Parent": {
+        "ObjectName": "CanvasPanel'TalentJewelry_C:WidgetTree.JewelryBagPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.10"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'TalentJewelry_C:WidgetTree.TipPannel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.12"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_7",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'TalentJewelry_C:WidgetTree.JewelryBagPanel'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.10"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 10.489471,
+          "Top": 166.78833,
+          "Right": 682.24,
+          "Bottom": 75.9264
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.0
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.0
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "ZOrder": 2,
+      "Parent": {
+        "ObjectName": "CanvasPanel'TalentJewelry_C:WidgetTree.JewelryBagPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.10"
+      },
+      "Content": {
+        "ObjectName": "UIShrinkTextBlock'TalentJewelry_C:WidgetTree.C_SelecteEquipRem'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.97"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_17",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'TalentJewelry_C:WidgetTree.JewelryDetail'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.11"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": -254.04718,
+          "Top": 809.0104,
+          "Right": 699.39355,
+          "Bottom": 822.3209
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.0
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.0
+          }
+        },
+        "Alignment": {
+          "X": 0.0,
+          "Y": 0.5
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'TalentJewelry_C:WidgetTree.JewelryDetail'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.11"
+      },
+      "Content": {
+        "ObjectName": "VerticalBox'TalentJewelry_C:WidgetTree.VerticalBox_65'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.106"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_4",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'TalentJewelry_C:WidgetTree.JewelryDetail'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.11"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 99.41432,
+          "Top": 264.55273,
+          "Right": 701.95624,
+          "Bottom": 248.53947
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.0
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.0
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'TalentJewelry_C:WidgetTree.JewelryDetail'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.11"
+      },
+      "Content": {
+        "ObjectName": "HorizontalBox'TalentJewelry_C:WidgetTree.HorizontalBox_346'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.45"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_5",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'TalentJewelry_C:WidgetTree.JewelryDetail'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.11"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": -61.570797,
+          "Top": 185.62071,
+          "Right": 48.0,
+          "Bottom": 48.0
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.0
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.0
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "ZOrder": 2,
+      "Parent": {
+        "ObjectName": "CanvasPanel'TalentJewelry_C:WidgetTree.JewelryDetail'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.11"
+      },
+      "Content": {
+        "ObjectName": "UIButton'TalentJewelry_C:WidgetTree.BackButton'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.77"
+      }
+    }
+  },
+  {
+    "Type": "FilterGoodsItemV2_C",
+    "Name": "FilterGoodsItem",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'UE_game/Content/Art/UIV2/Common/Widget/CommonOther/BluePrint/FilterGoodsItemV2.FilterGoodsItemV2_C'",
+    "Outer": {
+      "ObjectName": "WidgetTree'TalentJewelry_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.114"
+    },
+    "Template": {
+      "ObjectName": "FilterGoodsItemV2_C'Default__FilterGoodsItemV2_C'",
+      "ObjectPath": "UE_game/Content/Art/UIV2/Common/Widget/CommonOther/BluePrint/FilterGoodsItemV2.4"
+    },
+    "Properties": {
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'TalentJewelry_C:WidgetTree.JewelryBagPanel.CanvasPanelSlot_3'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.34"
+      }
+    }
+  },
+  {
+    "Type": "GoodBaseIconWrapV2_C",
+    "Name": "ItemIcon",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'UE_game/Content/Art/UIV2/AuctionHouseV2/BluePrint/GoodBase/GoodBaseIconWrapV2.GoodBaseIconWrapV2_C'",
+    "Outer": {
+      "ObjectName": "WidgetTree'TalentJewelry_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.114"
+    },
+    "Template": {
+      "ObjectName": "GoodBaseIconWrapV2_C'Default__GoodBaseIconWrapV2_C'",
+      "ObjectPath": "UE_game/Content/Art/UIV2/AuctionHouseV2/BluePrint/GoodBase/GoodBaseIconWrapV2.1"
+    },
+    "Properties": {
+      "Slot": {
+        "ObjectName": "SizeBoxSlot'TalentJewelry_C:WidgetTree.SizeBox_93.SizeBoxSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.76"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "BaseAffixPannel",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'TalentJewelry_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.114"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HorizontalBoxSlot'TalentJewelry_C:WidgetTree.BaseAffixPannel.HorizontalBoxSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.48"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "ScrollBoxSlot'TalentJewelry_C:WidgetTree.UIScrollBox_91.ScrollBoxSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.65"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "ExtraAffixPannel",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'TalentJewelry_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.114"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HorizontalBoxSlot'TalentJewelry_C:WidgetTree.ExtraAffixPannel.HorizontalBoxSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.49"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "ScrollBoxSlot'TalentJewelry_C:WidgetTree.UIScrollBox_91.ScrollBoxSlot_3'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.67"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "GoldJewelryPannel",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'TalentJewelry_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.114"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HorizontalBoxSlot'TalentJewelry_C:WidgetTree.GoldJewelryPannel.HorizontalBoxSlot_3'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.50"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "ScrollBoxSlot'TalentJewelry_C:WidgetTree.UIScrollBox_91.ScrollBoxSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.64"
+      },
+      "Visibility": "ESlateVisibility::Collapsed"
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "HorizontalBox_346",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'TalentJewelry_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.114"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HorizontalBoxSlot'TalentJewelry_C:WidgetTree.HorizontalBox_346.HorizontalBoxSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.51"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'TalentJewelry_C:WidgetTree.HorizontalBox_346.HorizontalBoxSlot_3'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.52"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'TalentJewelry_C:WidgetTree.JewelryDetail.CanvasPanelSlot_4'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.38"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "HorizontalBox_409",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'TalentJewelry_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.114"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HorizontalBoxSlot'TalentJewelry_C:WidgetTree.HorizontalBox_409.HorizontalBoxSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.53"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'TalentJewelry_C:WidgetTree.VerticalBox_175.VerticalBoxSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.107"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "HorizontalBox_461",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'TalentJewelry_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.114"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HorizontalBoxSlot'TalentJewelry_C:WidgetTree.HorizontalBox_461.HorizontalBoxSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.54"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'TalentJewelry_C:WidgetTree.VerticalBox_175.VerticalBoxSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.108"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'TalentJewelry_C:WidgetTree.BaseAffixPannel'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.42"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "HorizontalBox'TalentJewelry_C:WidgetTree.BaseAffixPannel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.42"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'TalentJewelry_C:WidgetTree.CanvasPanel_110'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.5"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'TalentJewelry_C:WidgetTree.ExtraAffixPannel'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.43"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "HorizontalBox'TalentJewelry_C:WidgetTree.ExtraAffixPannel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.43"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'TalentJewelry_C:WidgetTree.CanvasPanel_161'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.6"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'TalentJewelry_C:WidgetTree.GoldJewelryPannel'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.44"
+    },
+    "Properties": {
+      "Size": {
+        "SizeRule": "ESlateSizeRule::Fill"
+      },
+      "Parent": {
+        "ObjectName": "HorizontalBox'TalentJewelry_C:WidgetTree.GoldJewelryPannel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.44"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'TalentJewelry_C:WidgetTree.CanvasPanel_71'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.7"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'TalentJewelry_C:WidgetTree.HorizontalBox_346'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.45"
+    },
+    "Properties": {
+      "Padding": {
+        "Left": 57.6
+      },
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "HorizontalBox'TalentJewelry_C:WidgetTree.HorizontalBox_346'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.45"
+      },
+      "Content": {
+        "ObjectName": "SizeBox'TalentJewelry_C:WidgetTree.SizeBox_93'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.72"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'TalentJewelry_C:WidgetTree.HorizontalBox_346'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.45"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "HorizontalBox'TalentJewelry_C:WidgetTree.HorizontalBox_346'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.45"
+      },
+      "Content": {
+        "ObjectName": "Overlay'TalentJewelry_C:WidgetTree.Overlay_49'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.61"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'TalentJewelry_C:WidgetTree.HorizontalBox_409'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.46"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "HorizontalBox'TalentJewelry_C:WidgetTree.HorizontalBox_409'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.46"
+      },
+      "Content": {
+        "ObjectName": "UIShrinkTextBlock'TalentJewelry_C:WidgetTree.JewelryName'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.99"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'TalentJewelry_C:WidgetTree.HorizontalBox_461'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.47"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "HorizontalBox'TalentJewelry_C:WidgetTree.HorizontalBox_461'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.47"
+      },
+      "Content": {
+        "ObjectName": "UIShrinkTextBlock'TalentJewelry_C:WidgetTree.JewelryLevel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.98"
+      }
+    }
+  },
+  {
+    "Type": "MovieScene",
+    "Name": "SildeIn",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene'",
+    "Outer": {
+      "ObjectName": "WidgetAnimation'TalentJewelry_C:SildeIn_INST'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.110"
+    },
+    "Properties": {
+      "Possessables": [
+        {
+          "Tags": [],
+          "Guid": "D8B98207-46F5A83F-46D047B5-BDF220B3",
+          "Name": "BagSwitcher",
+          "PossessedObjectClass": {
+            "ObjectName": "Class'WidgetSwitcher'",
+            "ObjectPath": "/Script/UMG"
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        },
+        {
+          "Tags": [],
+          "Guid": "D9543FF4-455515B8-338D8882-6570ED85",
+          "Name": "CloseButton",
+          "PossessedObjectClass": {
+            "ObjectName": "Class'UIButton'",
+            "ObjectPath": "/Script/UE_game"
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        }
+      ],
+      "ObjectBindings": [
+        {
+          "ObjectGuid": "D8B98207-46F5A83F-46D047B5-BDF220B3",
+          "BindingName": "BagSwitcher",
+          "Tracks": [
+            {
+              "ObjectName": "MovieScene2DTransformTrack'TalentJewelry_C:SildeIn_INST.SildeIn.MovieScene2DTransformTrack_0'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.57"
+            }
+          ]
+        },
+        {
+          "ObjectGuid": "D9543FF4-455515B8-338D8882-6570ED85",
+          "BindingName": "CloseButton",
+          "Tracks": []
+        }
+      ],
+      "PlaybackRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 30001
+            }
+          }
+        }
+      },
+      "DisplayRate": {
+        "Numerator": 20
+      },
+      "Signature": "3B02AFCC-49850A1B-B8475C90-02EC4798"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformSection",
+    "Name": "MovieScene2DTransformSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene2DTransformSection'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformTrack'TalentJewelry_C:SildeIn_INST.SildeIn.MovieScene2DTransformTrack_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.57"
+    },
+    "Properties": {
+      "Translation": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 30000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 890.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Translation[1]": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Rotation": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Scale": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          }
+        ],
+        "Values": [
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Scale[1]": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          }
+        ],
+        "Values": [
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Shear": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Shear[1]": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'TalentJewelry_C:SildeIn_INST.SildeIn.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0.EaseInFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.58"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'TalentJewelry_C:SildeIn_INST.SildeIn.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0.EaseOutFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.59"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 30000
+            }
+          }
+        }
+      },
+      "Signature": "9BB3640B-407A4C06-37E850B6-A69B941F"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformTrack",
+    "Name": "MovieScene2DTransformTrack_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene2DTransformTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'TalentJewelry_C:SildeIn_INST.SildeIn'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.55"
+    },
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderTransform",
+        "PropertyPath": "RenderTransform",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieScene2DTransformSection'TalentJewelry_C:SildeIn_INST.SildeIn.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.56"
+        }
+      ],
+      "EvaluationFieldGuid": "F6840FDC-48266841-E552BE9D-15A2E231",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieScene2DTransformSection'TalentJewelry_C:SildeIn_INST.SildeIn.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.56"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 30000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "F6840FDC-48266841-E552BE9D-15A2E231"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformSection'TalentJewelry_C:SildeIn_INST.SildeIn.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.56"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformSection'TalentJewelry_C:SildeIn_INST.SildeIn.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.56"
+    }
+  },
+  {
+    "Type": "MovieSceneCompiledData",
+    "Name": "CompiledData",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneCompiledData'",
+    "Outer": {
+      "ObjectName": "WidgetAnimation'TalentJewelry_C:SildeIn_INST'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.110"
+    },
+    "Properties": {
+      "EntityComponentField": {
+        "PersistentEntityTree": {
+          "SerializedData": {
+            "Data": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 1,
+                  "Capacity": 1
+                }
+              ],
+              "Items": [
+                {
+                  "EntityIndex": 0,
+                  "MetaDataIndex": -1
+                }
+              ]
+            },
+            "RootNode": {
+              "Range": {
+                "LowerBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                },
+                "UpperBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                }
+              },
+              "Parent": {
+                "ChildrenHandle": {
+                  "EntryIndex": -1
+                },
+                "Index": -1
+              },
+              "ChildrenID": {
+                "EntryIndex": 0
+              },
+              "DataID": {
+                "EntryIndex": -1
+              }
+            },
+            "ChildNodes": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 1,
+                  "Capacity": 1
+                }
+              ],
+              "Items": [
+                {
+                  "Range": {
+                    "LowerBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 0
+                      }
+                    },
+                    "UpperBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 30000
+                      }
+                    }
+                  },
+                  "Parent": {
+                    "ChildrenHandle": {
+                      "EntryIndex": -1
+                    },
+                    "Index": 0
+                  },
+                  "ChildrenID": {
+                    "EntryIndex": -1
+                  },
+                  "DataID": {
+                    "EntryIndex": 0
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "Entities": [
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieScene2DTransformSection'TalentJewelry_C:SildeIn_INST.SildeIn.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0'",
+                "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.56"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 0
+          }
+        ],
+        "SharedMetaData": [
+          {
+            "ObjectBindingID": "D8B98207-46F5A83F-46D047B5-BDF220B3"
+          }
+        ]
+      },
+      "CompiledSignature": "06637336-4908A334-6AC1CFB3-0CD7579B",
+      "CompilerVersion": "7D4B9809-2FAC4A6B-964ECF72-D8279EF8",
+      "AccumulatedMask": {
+        "bEntityComponentField": true
+      },
+      "AllocatedMask": {
+        "bEntityComponentField": true
+      }
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "Overlay_49",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Overlay'",
+    "Outer": {
+      "ObjectName": "WidgetTree'TalentJewelry_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.114"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlaySlot'TalentJewelry_C:WidgetTree.Overlay_49.OverlaySlot_2'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.63"
+        },
+        {
+          "ObjectName": "OverlaySlot'TalentJewelry_C:WidgetTree.Overlay_49.OverlaySlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.62"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'TalentJewelry_C:WidgetTree.HorizontalBox_346.HorizontalBoxSlot_3'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.52"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'TalentJewelry_C:WidgetTree.Overlay_49'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.61"
+    },
+    "Properties": {
+      "Padding": {
+        "Left": 20.0
+      },
+      "HorizontalAlignment": "HAlign_Fill",
+      "VerticalAlignment": "VAlign_Fill",
+      "Parent": {
+        "ObjectName": "Overlay'TalentJewelry_C:WidgetTree.Overlay_49'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.61"
+      },
+      "Content": {
+        "ObjectName": "VerticalBox'TalentJewelry_C:WidgetTree.VerticalBox_175'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.105"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'TalentJewelry_C:WidgetTree.Overlay_49'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.61"
+    },
+    "Properties": {
+      "Padding": {
+        "Left": -20.0
+      },
+      "HorizontalAlignment": "HAlign_Fill",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "Overlay'TalentJewelry_C:WidgetTree.Overlay_49'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.61"
+      },
+      "Content": {
+        "ObjectName": "UIImage'TalentJewelry_C:WidgetTree.RareBg'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.86"
+      }
+    }
+  },
+  {
+    "Type": "ScrollBoxSlot",
+    "Name": "ScrollBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ScrollBoxSlot'",
+    "Outer": {
+      "ObjectName": "UIScrollBox'TalentJewelry_C:WidgetTree.UIScrollBox_91'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.95"
+    },
+    "Properties": {
+      "Padding": {
+        "Top": 25.0,
+        "Bottom": -10.0
+      },
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "UIScrollBox'TalentJewelry_C:WidgetTree.UIScrollBox_91'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.95"
+      },
+      "Content": {
+        "ObjectName": "HorizontalBox'TalentJewelry_C:WidgetTree.GoldJewelryPannel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.44"
+      }
+    }
+  },
+  {
+    "Type": "ScrollBoxSlot",
+    "Name": "ScrollBoxSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ScrollBoxSlot'",
+    "Outer": {
+      "ObjectName": "UIScrollBox'TalentJewelry_C:WidgetTree.UIScrollBox_91'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.95"
+    },
+    "Properties": {
+      "Padding": {
+        "Left": 70.0,
+        "Top": 40.0
+      },
+      "Parent": {
+        "ObjectName": "UIScrollBox'TalentJewelry_C:WidgetTree.UIScrollBox_91'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.95"
+      },
+      "Content": {
+        "ObjectName": "HorizontalBox'TalentJewelry_C:WidgetTree.BaseAffixPannel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.42"
+      }
+    }
+  },
+  {
+    "Type": "ScrollBoxSlot",
+    "Name": "ScrollBoxSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ScrollBoxSlot'",
+    "Outer": {
+      "ObjectName": "UIScrollBox'TalentJewelry_C:WidgetTree.UIScrollBox_91'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.95"
+    },
+    "Properties": {
+      "Padding": {
+        "Left": 20.0
+      },
+      "HorizontalAlignment": "HAlign_Center",
+      "Parent": {
+        "ObjectName": "UIScrollBox'TalentJewelry_C:WidgetTree.UIScrollBox_91'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.95"
+      },
+      "Content": {
+        "ObjectName": "SizeBox'TalentJewelry_C:WidgetTree.BaseAffixBox'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.69"
+      }
+    }
+  },
+  {
+    "Type": "ScrollBoxSlot",
+    "Name": "ScrollBoxSlot_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ScrollBoxSlot'",
+    "Outer": {
+      "ObjectName": "UIScrollBox'TalentJewelry_C:WidgetTree.UIScrollBox_91'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.95"
+    },
+    "Properties": {
+      "Padding": {
+        "Left": 70.0,
+        "Top": 25.0
+      },
+      "Parent": {
+        "ObjectName": "UIScrollBox'TalentJewelry_C:WidgetTree.UIScrollBox_91'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.95"
+      },
+      "Content": {
+        "ObjectName": "HorizontalBox'TalentJewelry_C:WidgetTree.ExtraAffixPannel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.43"
+      }
+    }
+  },
+  {
+    "Type": "ScrollBoxSlot",
+    "Name": "ScrollBoxSlot_4",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ScrollBoxSlot'",
+    "Outer": {
+      "ObjectName": "UIScrollBox'TalentJewelry_C:WidgetTree.UIScrollBox_91'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.95"
+    },
+    "Properties": {
+      "Padding": {
+        "Left": 20.0
+      },
+      "HorizontalAlignment": "HAlign_Center",
+      "Parent": {
+        "ObjectName": "UIScrollBox'TalentJewelry_C:WidgetTree.UIScrollBox_91'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.95"
+      },
+      "Content": {
+        "ObjectName": "SizeBox'TalentJewelry_C:WidgetTree.ExtraAffixBox'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.70"
+      }
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "BaseAffixBox",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'TalentJewelry_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.114"
+    },
+    "Properties": {
+      "WidthOverride": 570.9043,
+      "HeightOverride": 241.06004,
+      "bOverride_WidthOverride": true,
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot'TalentJewelry_C:WidgetTree.BaseAffixBox.SizeBoxSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.73"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "ScrollBoxSlot'TalentJewelry_C:WidgetTree.UIScrollBox_91.ScrollBoxSlot_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.66"
+      }
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "ExtraAffixBox",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'TalentJewelry_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.114"
+    },
+    "Properties": {
+      "WidthOverride": 566.90643,
+      "HeightOverride": 495.627,
+      "bOverride_WidthOverride": true,
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot'TalentJewelry_C:WidgetTree.ExtraAffixBox.SizeBoxSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.74"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "ScrollBoxSlot'TalentJewelry_C:WidgetTree.UIScrollBox_91.ScrollBoxSlot_4'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.68"
+      }
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SizeBox_106",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'TalentJewelry_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.114"
+    },
+    "Properties": {
+      "HeightOverride": 800.0,
+      "bOverride_HeightOverride": true,
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot'TalentJewelry_C:WidgetTree.SizeBox_106.SizeBoxSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.75"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'TalentJewelry_C:WidgetTree.VerticalBox_65.VerticalBoxSlot_5'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.109"
+      }
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SizeBox_93",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'TalentJewelry_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.114"
+    },
+    "Properties": {
+      "WidthOverride": 167.43188,
+      "HeightOverride": 225.6822,
+      "bOverride_WidthOverride": true,
+      "bOverride_HeightOverride": true,
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot'TalentJewelry_C:WidgetTree.SizeBox_93.SizeBoxSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.76"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'TalentJewelry_C:WidgetTree.HorizontalBox_346.HorizontalBoxSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.51"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBoxSlot'",
+    "Outer": {
+      "ObjectName": "SizeBox'TalentJewelry_C:WidgetTree.BaseAffixBox'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.69"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "SizeBox'TalentJewelry_C:WidgetTree.BaseAffixBox'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.69"
+      },
+      "Content": {
+        "ObjectName": "UIScrollBox'TalentJewelry_C:WidgetTree.BaseScrollBox'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.94"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBoxSlot'",
+    "Outer": {
+      "ObjectName": "SizeBox'TalentJewelry_C:WidgetTree.ExtraAffixBox'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.70"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "SizeBox'TalentJewelry_C:WidgetTree.ExtraAffixBox'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.70"
+      },
+      "Content": {
+        "ObjectName": "UIScrollBox'TalentJewelry_C:WidgetTree.AffixScrollBox'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.93"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBoxSlot'",
+    "Outer": {
+      "ObjectName": "SizeBox'TalentJewelry_C:WidgetTree.SizeBox_106'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.71"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "SizeBox'TalentJewelry_C:WidgetTree.SizeBox_106'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.71"
+      },
+      "Content": {
+        "ObjectName": "UIScrollBox'TalentJewelry_C:WidgetTree.UIScrollBox_91'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.95"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBoxSlot'",
+    "Outer": {
+      "ObjectName": "SizeBox'TalentJewelry_C:WidgetTree.SizeBox_93'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.72"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "SizeBox'TalentJewelry_C:WidgetTree.SizeBox_93'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.72"
+      },
+      "Content": {
+        "ObjectName": "GoodBaseIconWrapV2_C'TalentJewelry_C:WidgetTree.ItemIcon'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.41"
+      }
+    }
+  },
+  {
+    "Type": "UIButton",
+    "Name": "BackButton",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIButton'",
+    "Outer": {
+      "ObjectName": "WidgetTree'TalentJewelry_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.114"
+    },
+    "Properties": {
+      "WidgetStyle": {
+        "Normal": {
+          "ImageSize": {
+            "X": 48.0,
+            "Y": 48.0
+          },
+          "ResourceObject": {
+            "ObjectName": "PaperSprite'UI_Btn_Talent_JewelryV2_ChangeItem_Normal_Sprite'",
+            "ObjectPath": "UE_game/Content/Art/UIV2/TalentV2/UI/TexturesAtlas/AtlasJewelry/UI_Btn_Talent_JewelryV2_ChangeItem_Normal_Sprite.1"
+          },
+          "DrawAs": "ESlateBrushDrawType::Image"
+        },
+        "Hovered": {
+          "ImageSize": {
+            "X": 48.0,
+            "Y": 48.0
+          },
+          "ResourceObject": {
+            "ObjectName": "PaperSprite'UI_Btn_Talent_JewelryV2_ChangeItem_Normal_Sprite'",
+            "ObjectPath": "UE_game/Content/Art/UIV2/TalentV2/UI/TexturesAtlas/AtlasJewelry/UI_Btn_Talent_JewelryV2_ChangeItem_Normal_Sprite.1"
+          },
+          "DrawAs": "ESlateBrushDrawType::Image"
+        },
+        "Pressed": {
+          "ImageSize": {
+            "X": 48.0,
+            "Y": 48.0
+          },
+          "ResourceObject": {
+            "ObjectName": "PaperSprite'UI_Btn_Talent_JewelryV2_ChangeItem_Normal_Sprite'",
+            "ObjectPath": "UE_game/Content/Art/UIV2/TalentV2/UI/TexturesAtlas/AtlasJewelry/UI_Btn_Talent_JewelryV2_ChangeItem_Normal_Sprite.1"
+          },
+          "DrawAs": "ESlateBrushDrawType::Image"
+        },
+        "NormalPadding": {
+          "Left": 0.0,
+          "Top": 0.0,
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "PressedPadding": {
+          "Left": 0.0,
+          "Top": 0.0,
+          "Right": 0.0,
+          "Bottom": 0.0
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'TalentJewelry_C:WidgetTree.JewelryDetail.CanvasPanelSlot_5'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.39"
+      }
+    }
+  },
+  {
+    "Type": "UIButton",
+    "Name": "BtnCloseTips",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIButton'",
+    "Outer": {
+      "ObjectName": "WidgetTree'TalentJewelry_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.114"
+    },
+    "Properties": {
+      "bIsTransparent": true,
+      "IconImage": {
+        "ImageSize": {
+          "X": 61.44,
+          "Y": 61.44
+        }
+      },
+      "WidgetStyle": {
+        "Normal": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          },
+          "DrawAs": "ESlateBrushDrawType::NoDrawType"
+        },
+        "Hovered": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          },
+          "DrawAs": "ESlateBrushDrawType::NoDrawType"
+        },
+        "Pressed": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          },
+          "DrawAs": "ESlateBrushDrawType::NoDrawType"
+        },
+        "NormalPadding": {
+          "Left": 0.0,
+          "Top": 0.0,
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "PressedPadding": {
+          "Left": 0.0,
+          "Top": 0.0,
+          "Right": 0.0,
+          "Bottom": 0.0
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'TalentJewelry_C:WidgetTree.JewelryBagPanel.CanvasPanelSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.31"
+      }
+    }
+  },
+  {
+    "Type": "UIButton",
+    "Name": "BtnTipClose",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIButton'",
+    "Outer": {
+      "ObjectName": "WidgetTree'TalentJewelry_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.114"
+    },
+    "Properties": {
+      "bIsTransparent": true,
+      "IconImage": {
+        "ImageSize": {
+          "X": 61.44,
+          "Y": 61.44
+        }
+      },
+      "WidgetStyle": {
+        "Normal": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          },
+          "DrawAs": "ESlateBrushDrawType::NoDrawType"
+        },
+        "Hovered": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          },
+          "DrawAs": "ESlateBrushDrawType::NoDrawType"
+        },
+        "Pressed": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          },
+          "DrawAs": "ESlateBrushDrawType::NoDrawType"
+        },
+        "NormalPadding": {
+          "Left": 0.0,
+          "Top": 0.0,
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "PressedPadding": {
+          "Left": 0.0,
+          "Top": 0.0,
+          "Right": 0.0,
+          "Bottom": 0.0
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'TalentJewelry_C:WidgetTree.JewelryBagPanel.CanvasPanelSlot_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.33"
+      },
+      "Visibility": "ESlateVisibility::Collapsed"
+    }
+  },
+  {
+    "Type": "UIButton",
+    "Name": "CancelBtn",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIButton'",
+    "Outer": {
+      "ObjectName": "WidgetTree'TalentJewelry_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.114"
+    },
+    "Properties": {
+      "CurrStyleId": 1319,
+      "CurrTextKey": "Func_Common_Cancle",
+      "IconImage": {
+        "ImageSize": {
+          "X": 61.44,
+          "Y": 61.44
+        }
+      },
+      "WidgetStyle": {
+        "Normal": {
+          "ImageSize": {
+            "X": 276.0,
+            "Y": 84.0
+          },
+          "Margin": {
+            "Left": 0.0,
+            "Top": 0.0,
+            "Right": 0.0,
+            "Bottom": 0.0
+          },
+          "ResourceObject": {
+            "ObjectName": "PaperSprite'UI_Btn_Talent_JewelryV2_SidePane_Normal_Sprite'",
+            "ObjectPath": "UE_game/Content/Art/UIV2/TalentV2/UI/TexturesAtlas/AtlasJewelry/UI_Btn_Talent_JewelryV2_SidePane_Normal_Sprite.1"
+          },
+          "ResourceName": "None",
+          "DrawAs": "ESlateBrushDrawType::Image",
+          "ImageType": "ESlateBrushImageType::NoImage"
+        },
+        "Hovered": {
+          "ImageSize": {
+            "X": 276.0,
+            "Y": 84.0
+          },
+          "Margin": {
+            "Left": 0.0,
+            "Top": 0.0,
+            "Right": 0.0,
+            "Bottom": 0.0
+          },
+          "ResourceObject": {
+            "ObjectName": "PaperSprite'UI_Btn_Talent_JewelryV2_SidePane_Normal_Sprite'",
+            "ObjectPath": "UE_game/Content/Art/UIV2/TalentV2/UI/TexturesAtlas/AtlasJewelry/UI_Btn_Talent_JewelryV2_SidePane_Normal_Sprite.1"
+          },
+          "ResourceName": "None",
+          "DrawAs": "ESlateBrushDrawType::Image",
+          "ImageType": "ESlateBrushImageType::NoImage"
+        },
+        "Pressed": {
+          "ImageSize": {
+            "X": 276.0,
+            "Y": 84.0
+          },
+          "Margin": {
+            "Left": 0.0,
+            "Top": 0.0,
+            "Right": 0.0,
+            "Bottom": 0.0
+          },
+          "ResourceObject": {
+            "ObjectName": "PaperSprite'UI_Btn_Talent_JewelryV2_SidePane_Normal_Sprite'",
+            "ObjectPath": "UE_game/Content/Art/UIV2/TalentV2/UI/TexturesAtlas/AtlasJewelry/UI_Btn_Talent_JewelryV2_SidePane_Normal_Sprite.1"
+          },
+          "ResourceName": "None",
+          "DrawAs": "ESlateBrushDrawType::Image",
+          "ImageType": "ESlateBrushImageType::NoImage"
+        },
+        "NormalPadding": {
+          "Left": 0.0,
+          "Top": 0.0,
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "PressedPadding": {
+          "Left": 0.0,
+          "Top": 0.0,
+          "Right": 0.0,
+          "Bottom": 0.0
+        }
+      },
+      "Slots": [
+        {
+          "ObjectName": "ButtonSlot'TalentJewelry_C:WidgetTree.CancelBtn.ButtonSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.2"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'TalentJewelry_C:WidgetTree.ItemDetailPannel.CanvasPanelSlot_6'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.28"
+      }
+    }
+  },
+  {
+    "Type": "UIButton",
+    "Name": "CloseButton1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIButton'",
+    "Outer": {
+      "ObjectName": "WidgetTree'TalentJewelry_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.114"
+    },
+    "Properties": {
+      "IconImage": {
+        "ImageSize": {
+          "X": 61.44,
+          "Y": 61.44
+        }
+      },
+      "WidgetStyle": {
+        "Normal": {
+          "ImageSize": {
+            "X": 60.0,
+            "Y": 60.0
+          },
+          "Margin": {
+            "Left": 0.0,
+            "Top": 0.0,
+            "Right": 0.0,
+            "Bottom": 0.0
+          },
+          "ResourceObject": {
+            "ObjectName": "PaperSprite'UI_Btn_Talent_JewelryV2_SidePane_Close_Normal_Sprite'",
+            "ObjectPath": "UE_game/Content/Art/UIV2/TalentV2/UI/TexturesAtlas/AtlasJewelry/UI_Btn_Talent_JewelryV2_SidePane_Close_Normal_Sprite.1"
+          },
+          "ResourceName": "None",
+          "DrawAs": "ESlateBrushDrawType::Image",
+          "ImageType": "ESlateBrushImageType::NoImage"
+        },
+        "Hovered": {
+          "ImageSize": {
+            "X": 60.0,
+            "Y": 60.0
+          },
+          "Margin": {
+            "Left": 0.0,
+            "Top": 0.0,
+            "Right": 0.0,
+            "Bottom": 0.0
+          },
+          "ResourceObject": {
+            "ObjectName": "PaperSprite'UI_Btn_Talent_JewelryV2_SidePane_Close_Normal_Sprite'",
+            "ObjectPath": "UE_game/Content/Art/UIV2/TalentV2/UI/TexturesAtlas/AtlasJewelry/UI_Btn_Talent_JewelryV2_SidePane_Close_Normal_Sprite.1"
+          },
+          "ResourceName": "None",
+          "DrawAs": "ESlateBrushDrawType::Image",
+          "ImageType": "ESlateBrushImageType::NoImage"
+        },
+        "Pressed": {
+          "ImageSize": {
+            "X": 60.0,
+            "Y": 60.0
+          },
+          "Margin": {
+            "Left": 0.0,
+            "Top": 0.0,
+            "Right": 0.0,
+            "Bottom": 0.0
+          },
+          "ResourceObject": {
+            "ObjectName": "PaperSprite'UI_Btn_Talent_JewelryV2_SidePane_Close_Normal_Sprite'",
+            "ObjectPath": "UE_game/Content/Art/UIV2/TalentV2/UI/TexturesAtlas/AtlasJewelry/UI_Btn_Talent_JewelryV2_SidePane_Close_Normal_Sprite.1"
+          },
+          "ResourceName": "None",
+          "DrawAs": "ESlateBrushDrawType::Image",
+          "ImageType": "ESlateBrushImageType::NoImage"
+        },
+        "NormalPadding": {
+          "Left": 0.0,
+          "Top": 0.0,
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "PressedPadding": {
+          "Left": 0.0,
+          "Top": 0.0,
+          "Right": 0.0,
+          "Bottom": 0.0
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'TalentJewelry_C:WidgetTree.JewelryBagPanel.CanvasPanelSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.30"
+      }
+    }
+  },
+  {
+    "Type": "UIButton",
+    "Name": "CloseButton2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIButton'",
+    "Outer": {
+      "ObjectName": "WidgetTree'TalentJewelry_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.114"
+    },
+    "Properties": {
+      "IconImage": {
+        "ImageSize": {
+          "X": 61.44,
+          "Y": 61.44
+        }
+      },
+      "WidgetStyle": {
+        "Normal": {
+          "ImageSize": {
+            "X": 60.0,
+            "Y": 60.0
+          },
+          "Margin": {
+            "Left": 0.0,
+            "Top": 0.0,
+            "Right": 0.0,
+            "Bottom": 0.0
+          },
+          "ResourceObject": {
+            "ObjectName": "PaperSprite'UI_Btn_Talent_JewelryV2_SidePane_Close_Normal_Sprite'",
+            "ObjectPath": "UE_game/Content/Art/UIV2/TalentV2/UI/TexturesAtlas/AtlasJewelry/UI_Btn_Talent_JewelryV2_SidePane_Close_Normal_Sprite.1"
+          },
+          "ResourceName": "None",
+          "DrawAs": "ESlateBrushDrawType::Image",
+          "ImageType": "ESlateBrushImageType::NoImage"
+        },
+        "Hovered": {
+          "ImageSize": {
+            "X": 60.0,
+            "Y": 60.0
+          },
+          "Margin": {
+            "Left": 0.0,
+            "Top": 0.0,
+            "Right": 0.0,
+            "Bottom": 0.0
+          },
+          "ResourceObject": {
+            "ObjectName": "PaperSprite'UI_Btn_Talent_JewelryV2_SidePane_Close_Normal_Sprite'",
+            "ObjectPath": "UE_game/Content/Art/UIV2/TalentV2/UI/TexturesAtlas/AtlasJewelry/UI_Btn_Talent_JewelryV2_SidePane_Close_Normal_Sprite.1"
+          },
+          "ResourceName": "None",
+          "DrawAs": "ESlateBrushDrawType::Image",
+          "ImageType": "ESlateBrushImageType::NoImage"
+        },
+        "Pressed": {
+          "ImageSize": {
+            "X": 60.0,
+            "Y": 60.0
+          },
+          "Margin": {
+            "Left": 0.0,
+            "Top": 0.0,
+            "Right": 0.0,
+            "Bottom": 0.0
+          },
+          "ResourceObject": {
+            "ObjectName": "PaperSprite'UI_Btn_Talent_JewelryV2_SidePane_Close_Normal_Sprite'",
+            "ObjectPath": "UE_game/Content/Art/UIV2/TalentV2/UI/TexturesAtlas/AtlasJewelry/UI_Btn_Talent_JewelryV2_SidePane_Close_Normal_Sprite.1"
+          },
+          "ResourceName": "None",
+          "DrawAs": "ESlateBrushDrawType::Image",
+          "ImageType": "ESlateBrushImageType::NoImage"
+        },
+        "NormalPadding": {
+          "Left": 0.0,
+          "Top": 0.0,
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "PressedPadding": {
+          "Left": 0.0,
+          "Top": 0.0,
+          "Right": 0.0,
+          "Bottom": 0.0
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'TalentJewelry_C:WidgetTree.ItemDetailPannel.CanvasPanelSlot_3'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.26"
+      }
+    }
+  },
+  {
+    "Type": "UIButton",
+    "Name": "ConfirmBtn",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIButton'",
+    "Outer": {
+      "ObjectName": "WidgetTree'TalentJewelry_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.114"
+    },
+    "Properties": {
+      "CurrTextKey": "Func_Common_Confirm",
+      "IconImage": {
+        "ImageSize": {
+          "X": 61.44,
+          "Y": 61.44
+        }
+      },
+      "WidgetStyle": {
+        "Normal": {
+          "ImageSize": {
+            "X": 276.0,
+            "Y": 84.0
+          },
+          "Margin": {
+            "Left": 0.0,
+            "Top": 0.0,
+            "Right": 0.0,
+            "Bottom": 0.0
+          },
+          "ResourceObject": {
+            "ObjectName": "PaperSprite'UI_Btn_Talent_JewelryV2_SidePane_Normal_Sprite'",
+            "ObjectPath": "UE_game/Content/Art/UIV2/TalentV2/UI/TexturesAtlas/AtlasJewelry/UI_Btn_Talent_JewelryV2_SidePane_Normal_Sprite.1"
+          },
+          "ResourceName": "None",
+          "DrawAs": "ESlateBrushDrawType::Image",
+          "ImageType": "ESlateBrushImageType::NoImage"
+        },
+        "Hovered": {
+          "ImageSize": {
+            "X": 276.0,
+            "Y": 84.0
+          },
+          "Margin": {
+            "Left": 0.0,
+            "Top": 0.0,
+            "Right": 0.0,
+            "Bottom": 0.0
+          },
+          "ResourceObject": {
+            "ObjectName": "PaperSprite'UI_Btn_Talent_JewelryV2_SidePane_Normal_Sprite'",
+            "ObjectPath": "UE_game/Content/Art/UIV2/TalentV2/UI/TexturesAtlas/AtlasJewelry/UI_Btn_Talent_JewelryV2_SidePane_Normal_Sprite.1"
+          },
+          "ResourceName": "None",
+          "DrawAs": "ESlateBrushDrawType::Image",
+          "ImageType": "ESlateBrushImageType::NoImage"
+        },
+        "Pressed": {
+          "ImageSize": {
+            "X": 276.0,
+            "Y": 84.0
+          },
+          "Margin": {
+            "Left": 0.0,
+            "Top": 0.0,
+            "Right": 0.0,
+            "Bottom": 0.0
+          },
+          "ResourceObject": {
+            "ObjectName": "PaperSprite'UI_Btn_Talent_JewelryV2_SidePane_Normal_Sprite'",
+            "ObjectPath": "UE_game/Content/Art/UIV2/TalentV2/UI/TexturesAtlas/AtlasJewelry/UI_Btn_Talent_JewelryV2_SidePane_Normal_Sprite.1"
+          },
+          "ResourceName": "None",
+          "DrawAs": "ESlateBrushDrawType::Image",
+          "ImageType": "ESlateBrushImageType::NoImage"
+        },
+        "NormalPadding": {
+          "Left": 0.0,
+          "Top": 0.0,
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "PressedPadding": {
+          "Left": 0.0,
+          "Top": 0.0,
+          "Right": 0.0,
+          "Bottom": 0.0
+        }
+      },
+      "Slots": [
+        {
+          "ObjectName": "ButtonSlot'TalentJewelry_C:WidgetTree.ConfirmBtn.ButtonSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.3"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'TalentJewelry_C:WidgetTree.ItemDetailPannel.CanvasPanelSlot_5'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.27"
+      }
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "BackGround3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'TalentJewelry_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.114"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UIV2/TalentV2/UI/Textures/NoAtlasJewelry/UI_Img_Talent_JewelryV2_SidePane_Bg.UI_Img_Talent_JewelryV2_SidePane_Bg",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 1211.0,
+          "Y": 20.0
+        },
+        "Margin": {
+          "Left": 0.9,
+          "Top": 0.1,
+          "Right": 0.1,
+          "Bottom": 0.1
+        },
+        "DrawAs": "ESlateBrushDrawType::Box"
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'TalentJewelry_C:WidgetTree.BgPanel.CanvasPanelSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.13"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "BackGround3_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'TalentJewelry_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.114"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UIV2/TalentV2/UI/Textures/NoAtlasJewelry/UI_Img_Talent_JewelryV2_SidePane_Bg.UI_Img_Talent_JewelryV2_SidePane_Bg",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 1211.0,
+          "Y": 20.0
+        },
+        "Margin": {
+          "Left": 0.9,
+          "Top": 0.1,
+          "Right": 0.1,
+          "Bottom": 0.1
+        },
+        "DrawAs": "ESlateBrushDrawType::Box"
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'TalentJewelry_C:WidgetTree.JewelryBagPanel.CanvasPanelSlot_11'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.32"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "RareBg",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'TalentJewelry_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.114"
+    },
+    "Properties": {
+      "IsBanHduiResize": true,
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UIV2/TalentV2/UI/Textures/NoAtlasJewelry/UI_Img_Talent_JewelryV2_SidePane_Quality_White.UI_Img_Talent_JewelryV2_SidePane_Quality_White",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 455.95724,
+          "Y": 209.66382
+        }
+      },
+      "Slot": {
+        "ObjectName": "OverlaySlot'TalentJewelry_C:WidgetTree.Overlay_49.OverlaySlot_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.63"
+      }
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "UIImage",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'TalentJewelry_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.114"
+    },
+    "Properties": {
+      "IsBanHduiResize": true,
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UIV2/TalentV2/UI/Textures/NoAtlasJewelry/UI_Img_Talent_JewelryV2_Special_Bg03.UI_Img_Talent_JewelryV2_Special_Bg03",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 617.0,
+          "Y": 324.0
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'TalentJewelry_C:WidgetTree.CanvasPanel_71.CanvasPanelSlot_3'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.21"
+      }
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "UIImage_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'TalentJewelry_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.114"
+    },
+    "Properties": {
+      "IsBanHduiResize": true,
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UIV2/TalentV2/UI/Textures/NoAtlasJewelry/UI_Img_Talent_JewelryV2_Special_Bg02.UI_Img_Talent_JewelryV2_Special_Bg02",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 552.0,
+          "Y": 44.0
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'TalentJewelry_C:WidgetTree.CanvasPanel_71.CanvasPanelSlot_4'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.22"
+      }
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "UIImage_52",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'TalentJewelry_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.114"
+    },
+    "Properties": {
+      "IsBanHduiResize": true,
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UIV2/TalentV2/UI/Textures/NoAtlasJewelry/UI_Img_Talent_JewelryV2_Special_Effect01.UI_Img_Talent_JewelryV2_Special_Effect01",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 624.0,
+          "Y": 244.0
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'TalentJewelry_C:WidgetTree.CanvasPanel_71.CanvasPanelSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.18"
+      }
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "UUIImage_Jewelry_Bg_SidePanel_Title",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'TalentJewelry_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.114"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UIV2/TalentV2/UI/Textures/NoAtlasJewelry/UI_Img_Talent_JewelryV2_SidePane_Title_Bg.UI_Img_Talent_JewelryV2_SidePane_Title_Bg",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 564.0,
+          "Y": 52.0
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'TalentJewelry_C:WidgetTree.CanvasPanel_161.CanvasPanelSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.16"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "UUIImage_Jewelry_Bg_SidePanel_Title_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'TalentJewelry_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.114"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UIV2/TalentV2/UI/Textures/NoAtlasJewelry/UI_Img_Talent_JewelryV2_SidePane_Title_Bg.UI_Img_Talent_JewelryV2_SidePane_Title_Bg",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 564.0,
+          "Y": 52.0
+        },
+        "DrawAs": "ESlateBrushDrawType::Box"
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'TalentJewelry_C:WidgetTree.CanvasPanel_110.CanvasPanelSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.14"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "UIRichTextBlock",
+    "Name": "TextGoldInfo",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIRichTextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'TalentJewelry_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.114"
+    },
+    "Properties": {
+      "CurrStyleId": 0,
+      "IsShrink": true,
+      "ShrinkSize": {
+        "X": 490.0,
+        "Y": 160.0
+      },
+      "ColorAndOpacity": {
+        "SpecifiedColor": {
+          "R": 0.462088,
+          "G": 0.327787,
+          "B": 0.152932,
+          "A": 1.0,
+          "Hex": "B59B6D"
+        }
+      },
+      "FontInfo": {
+        "FontObject": {
+          "ObjectName": "Font'UI_Font_Light'",
+          "ObjectPath": "UE_game/Content/Art/UI/Fonts/UI_Font_Light.0"
+        },
+        "Size": 26
+      },
+      "Text": {
+        "Namespace": "",
+        "Key": "1C9EB92C459C2749F528E4BEFCEE42C3",
+        "SourceString": "<RichText>Test</>",
+        "LocalizedString": "<RichText>Test</>"
+      },
+      "Justification": "ETextJustify::Center",
+      "WrapTextAt": 520.0,
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'TalentJewelry_C:WidgetTree.CanvasPanel_71.CanvasPanelSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.19"
+      }
+    }
+  },
+  {
+    "Type": "UIScrollBox",
+    "Name": "AffixScrollBox",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIScrollBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'TalentJewelry_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.114"
+    },
+    "Properties": {
+      "Slot": {
+        "ObjectName": "SizeBoxSlot'TalentJewelry_C:WidgetTree.ExtraAffixBox.SizeBoxSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.74"
+      }
+    }
+  },
+  {
+    "Type": "UIScrollBox",
+    "Name": "BaseScrollBox",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIScrollBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'TalentJewelry_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.114"
+    },
+    "Properties": {
+      "Slot": {
+        "ObjectName": "SizeBoxSlot'TalentJewelry_C:WidgetTree.BaseAffixBox.SizeBoxSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.73"
+      }
+    }
+  },
+  {
+    "Type": "UIScrollBox",
+    "Name": "UIScrollBox_91",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIScrollBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'TalentJewelry_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.114"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "ScrollBoxSlot'TalentJewelry_C:WidgetTree.UIScrollBox_91.ScrollBoxSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.64"
+        },
+        {
+          "ObjectName": "ScrollBoxSlot'TalentJewelry_C:WidgetTree.UIScrollBox_91.ScrollBoxSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.65"
+        },
+        {
+          "ObjectName": "ScrollBoxSlot'TalentJewelry_C:WidgetTree.UIScrollBox_91.ScrollBoxSlot_2'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.66"
+        },
+        {
+          "ObjectName": "ScrollBoxSlot'TalentJewelry_C:WidgetTree.UIScrollBox_91.ScrollBoxSlot_3'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.67"
+        },
+        {
+          "ObjectName": "ScrollBoxSlot'TalentJewelry_C:WidgetTree.UIScrollBox_91.ScrollBoxSlot_4'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.68"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "SizeBoxSlot'TalentJewelry_C:WidgetTree.SizeBox_106.SizeBoxSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.75"
+      }
+    }
+  },
+  {
+    "Type": "UIShrinkTextBlock",
+    "Name": "AffixTitle",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIShrinkTextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'TalentJewelry_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.114"
+    },
+    "Properties": {
+      "TextHAlignment": "HAlign_Left",
+      "CurrTextKey": "Func_PrismS12_Text06",
+      "TextContent": {
+        "Namespace": "",
+        "Key": "2504131140565E979DD9DBB78397A14C",
+        "SourceString": "基础效果",
+        "LocalizedString": "基础效果"
+      },
+      "ShrinkSize": {
+        "X": 135.0,
+        "Y": 32.0
+      },
+      "TextHJustification": "ETextJustify::Left",
+      "FontInfo": {
+        "FontObject": {
+          "ObjectName": "Font'UI_Font_Light'",
+          "ObjectPath": "UE_game/Content/Art/UI/Fonts/UI_Font_Light.0"
+        },
+        "Size": 26
+      },
+      "ColorAndOpacity": {
+        "SpecifiedColor": {
+          "R": 0.3,
+          "G": 0.3,
+          "B": 0.3,
+          "A": 1.0,
+          "Hex": "959595"
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'TalentJewelry_C:WidgetTree.CanvasPanel_110.CanvasPanelSlot_3'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.15"
+      }
+    }
+  },
+  {
+    "Type": "UIShrinkTextBlock",
+    "Name": "C_SelecteEquipRem",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIShrinkTextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'TalentJewelry_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.114"
+    },
+    "Properties": {
+      "TextHAlignment": "HAlign_Left",
+      "CurrTextKey": "Func_PrismS12_Text02",
+      "TextContent": {
+        "Namespace": "",
+        "Key": "299A3383427FF8908F8767A823BE5BB6",
+        "SourceString": "请选择要安装的珠宝",
+        "LocalizedString": "请选择要安装的珠宝"
+      },
+      "ShrinkSize": {
+        "X": 650.0,
+        "Y": 75.0
+      },
+      "TextHJustification": "ETextJustify::Left",
+      "FontInfo": {
+        "FontObject": {
+          "ObjectName": "Font'UI_Font_Light'",
+          "ObjectPath": "UE_game/Content/Art/UI/Fonts/UI_Font_Light.0"
+        },
+        "Size": 26
+      },
+      "ColorAndOpacity": {
+        "SpecifiedColor": {
+          "R": 0.73791,
+          "G": 0.73791,
+          "B": 0.73791,
+          "A": 1.0,
+          "Hex": "DFDFDF"
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'TalentJewelry_C:WidgetTree.JewelryBagPanel.CanvasPanelSlot_7'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.36"
+      }
+    }
+  },
+  {
+    "Type": "UIShrinkTextBlock",
+    "Name": "JewelryLevel",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIShrinkTextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'TalentJewelry_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.114"
+    },
+    "Properties": {
+      "TextContent": {
+        "Namespace": "",
+        "Key": "2D44C9804F7BDBFF92E231B072FA47F2",
+        "SourceString": "等级60",
+        "LocalizedString": "等级60"
+      },
+      "ShrinkSize": {
+        "X": 122.0,
+        "Y": 32.0
+      },
+      "TextHJustification": "ETextJustify::Left",
+      "FontInfo": {
+        "FontObject": {
+          "ObjectName": "Font'UI_Font_Light'",
+          "ObjectPath": "UE_game/Content/Art/UI/Fonts/UI_Font_Light.0"
+        },
+        "Size": 26
+      },
+      "ColorAndOpacity": {
+        "SpecifiedColor": {
+          "R": 0.445201,
+          "G": 0.445201,
+          "B": 0.445201,
+          "A": 1.0,
+          "Hex": "B2B2B2"
+        }
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'TalentJewelry_C:WidgetTree.HorizontalBox_461.HorizontalBoxSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.54"
+      }
+    }
+  },
+  {
+    "Type": "UIShrinkTextBlock",
+    "Name": "JewelryName",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIShrinkTextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'TalentJewelry_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.114"
+    },
+    "Properties": {
+      "TextContent": {
+        "Namespace": "",
+        "Key": "BB46DA4E45A5727DA8A53FA27D7180F3",
+        "SourceString": "珠宝名称珠宝名称珠宝名称珠\r\n宝名称",
+        "LocalizedString": "珠宝名称珠宝名称珠宝名称珠\r\n宝名称"
+      },
+      "ShrinkSize": {
+        "X": 463.91412,
+        "Y": 149.20787
+      },
+      "TextHJustification": "ETextJustify::Left",
+      "FontInfo": {
+        "FontObject": {
+          "ObjectName": "Font'UI_Font_Light'",
+          "ObjectPath": "UE_game/Content/Art/UI/Fonts/UI_Font_Light.0"
+        },
+        "Size": 26
+      },
+      "ColorAndOpacity": {
+        "SpecifiedColor": {
+          "R": 0.73791,
+          "G": 0.73791,
+          "B": 0.73791,
+          "A": 1.0,
+          "Hex": "DFDFDF"
+        }
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'TalentJewelry_C:WidgetTree.HorizontalBox_409.HorizontalBoxSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.53"
+      }
+    }
+  },
+  {
+    "Type": "UIShrinkTextBlock",
+    "Name": "RemindInfo",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIShrinkTextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'TalentJewelry_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.114"
+    },
+    "Properties": {
+      "TextContent": {
+        "Namespace": "",
+        "Key": "12B4A86746632E04AB1A8890E572963C",
+        "SourceString": "Test",
+        "LocalizedString": "Test"
+      },
+      "ShrinkSize": {
+        "X": 571.0,
+        "Y": 75.0
+      },
+      "FontInfo": {
+        "FontObject": {
+          "ObjectName": "Font'UI_Font_Light'",
+          "ObjectPath": "UE_game/Content/Art/UI/Fonts/UI_Font_Light.0"
+        },
+        "Size": 26
+      },
+      "ColorAndOpacity": {
+        "SpecifiedColor": {
+          "R": 0.814854,
+          "G": 0.084878,
+          "B": 0.084878,
+          "A": 1.0,
+          "Hex": "E95252"
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'TalentJewelry_C:WidgetTree.ItemDetailPannel.CanvasPanelSlot_7'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.29"
+      }
+    }
+  },
+  {
+    "Type": "UIShrinkTextBlock",
+    "Name": "TextGlodTitle",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIShrinkTextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'TalentJewelry_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.114"
+    },
+    "Properties": {
+      "CurrTextKey": "Func_PrismS12_Text55",
+      "ShrinkSize": {
+        "X": 300.0,
+        "Y": 50.0
+      },
+      "FontInfo": {
+        "FontObject": {
+          "ObjectName": "Font'UI_Font_Light'",
+          "ObjectPath": "UE_game/Content/Art/UI/Fonts/UI_Font_Light.0"
+        },
+        "Size": 26
+      },
+      "ColorAndOpacity": {
+        "SpecifiedColor": {
+          "R": 0.6172,
+          "G": 0.6172,
+          "B": 0.6172,
+          "A": 1.0,
+          "Hex": "CECECE"
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'TalentJewelry_C:WidgetTree.CanvasPanel_71.CanvasPanelSlot_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.20"
+      }
+    }
+  },
+  {
+    "Type": "UIShrinkTextBlock",
+    "Name": "UIShrinkTextBlock",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIShrinkTextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'TalentJewelry_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.114"
+    },
+    "Properties": {
+      "CurrTextKey": "Func_Common_Cancle",
+      "ShrinkSize": {
+        "X": 68.0,
+        "Y": 33.0
+      },
+      "FontInfo": {
+        "FontObject": {
+          "ObjectName": "Font'UI_Font_Light'",
+          "ObjectPath": "UE_game/Content/Art/UI/Fonts/UI_Font_Light.0"
+        },
+        "Size": 26
+      },
+      "ColorAndOpacity": {
+        "SpecifiedColor": {
+          "R": 1.0,
+          "G": 1.0,
+          "B": 1.0,
+          "A": 1.0,
+          "Hex": "FFFFFF"
+        }
+      },
+      "Slot": {
+        "ObjectName": "ButtonSlot'TalentJewelry_C:WidgetTree.CancelBtn.ButtonSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.2"
+      }
+    }
+  },
+  {
+    "Type": "UIShrinkTextBlock",
+    "Name": "UIShrinkTextBlock_71",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIShrinkTextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'TalentJewelry_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.114"
+    },
+    "Properties": {
+      "TextHAlignment": "HAlign_Left",
+      "CurrTextKey": "Func_PrismS12_Text07",
+      "TextContent": {
+        "Namespace": "",
+        "Key": "3D7F681D495852F47A87B5AE50C6984D",
+        "SourceString": "解密词缀效果",
+        "LocalizedString": "解密词缀效果"
+      },
+      "ShrinkSize": {
+        "X": 135.0,
+        "Y": 32.0
+      },
+      "TextHJustification": "ETextJustify::Left",
+      "FontInfo": {
+        "FontObject": {
+          "ObjectName": "Font'UI_Font_Light'",
+          "ObjectPath": "UE_game/Content/Art/UI/Fonts/UI_Font_Light.0"
+        },
+        "Size": 26
+      },
+      "ColorAndOpacity": {
+        "SpecifiedColor": {
+          "R": 0.3,
+          "G": 0.3,
+          "B": 0.3,
+          "A": 1.0,
+          "Hex": "959595"
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'TalentJewelry_C:WidgetTree.CanvasPanel_161.CanvasPanelSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.17"
+      }
+    }
+  },
+  {
+    "Type": "UIShrinkTextBlock",
+    "Name": "UIShrinkTextBlock_78",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIShrinkTextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'TalentJewelry_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.114"
+    },
+    "Properties": {
+      "CurrTextKey": "Func_Common_Confirm",
+      "ShrinkSize": {
+        "X": 68.0,
+        "Y": 33.0
+      },
+      "FontInfo": {
+        "FontObject": {
+          "ObjectName": "Font'UI_Font_Light'",
+          "ObjectPath": "UE_game/Content/Art/UI/Fonts/UI_Font_Light.0"
+        },
+        "Size": 26
+      },
+      "ColorAndOpacity": {
+        "SpecifiedColor": {
+          "R": 1.0,
+          "G": 1.0,
+          "B": 1.0,
+          "A": 1.0,
+          "Hex": "FFFFFF"
+        }
+      },
+      "Slot": {
+        "ObjectName": "ButtonSlot'TalentJewelry_C:WidgetTree.ConfirmBtn.ButtonSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.3"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBox",
+    "Name": "VerticalBox_175",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'TalentJewelry_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.114"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "VerticalBoxSlot'TalentJewelry_C:WidgetTree.VerticalBox_175.VerticalBoxSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.107"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot'TalentJewelry_C:WidgetTree.VerticalBox_175.VerticalBoxSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.108"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "OverlaySlot'TalentJewelry_C:WidgetTree.Overlay_49.OverlaySlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.62"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBox",
+    "Name": "VerticalBox_65",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'TalentJewelry_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.114"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "VerticalBoxSlot'TalentJewelry_C:WidgetTree.VerticalBox_65.VerticalBoxSlot_5'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.109"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'TalentJewelry_C:WidgetTree.JewelryDetail.CanvasPanelSlot_17'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.37"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Outer": {
+      "ObjectName": "VerticalBox'TalentJewelry_C:WidgetTree.VerticalBox_175'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.105"
+    },
+    "Properties": {
+      "Padding": {
+        "Top": 28.8
+      },
+      "Parent": {
+        "ObjectName": "VerticalBox'TalentJewelry_C:WidgetTree.VerticalBox_175'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.105"
+      },
+      "Content": {
+        "ObjectName": "HorizontalBox'TalentJewelry_C:WidgetTree.HorizontalBox_409'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.46"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Outer": {
+      "ObjectName": "VerticalBox'TalentJewelry_C:WidgetTree.VerticalBox_175'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.105"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "VerticalBox'TalentJewelry_C:WidgetTree.VerticalBox_175'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.105"
+      },
+      "Content": {
+        "ObjectName": "HorizontalBox'TalentJewelry_C:WidgetTree.HorizontalBox_461'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.47"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_5",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Outer": {
+      "ObjectName": "VerticalBox'TalentJewelry_C:WidgetTree.VerticalBox_65'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.106"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "VerticalBox'TalentJewelry_C:WidgetTree.VerticalBox_65'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.106"
+      },
+      "Content": {
+        "ObjectName": "SizeBox'TalentJewelry_C:WidgetTree.SizeBox_106'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.71"
+      }
+    }
+  },
+  {
+    "Type": "WidgetAnimation",
+    "Name": "SildeIn_INST",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetAnimation'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'TalentJewelry_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.0"
+    },
+    "Properties": {
+      "MovieScene": {
+        "ObjectName": "MovieScene'TalentJewelry_C:SildeIn_INST.SildeIn'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.55"
+      },
+      "AnimationBindings": [
+        {
+          "WidgetName": "BagSwitcher",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "D8B98207-46F5A83F-46D047B5-BDF220B3",
+          "bIsRootWidget": false
+        },
+        {
+          "WidgetName": "CloseButton",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "D9543FF4-455515B8-338D8882-6570ED85",
+          "bIsRootWidget": false
+        }
+      ],
+      "DisplayLabel": "SildeIn",
+      "CompiledData": {
+        "ObjectName": "MovieSceneCompiledData'TalentJewelry_C:SildeIn_INST.CompiledData'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.60"
+      },
+      "Signature": "06637336-4908A334-6AC1CFB3-0CD7579B"
+    }
+  },
+  {
+    "Type": "WidgetSwitcher",
+    "Name": "BagSwitcher",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetSwitcher'",
+    "Outer": {
+      "ObjectName": "WidgetTree'TalentJewelry_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.114"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "WidgetSwitcherSlot'TalentJewelry_C:WidgetTree.BagSwitcher.WidgetSwitcherSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.112"
+        },
+        {
+          "ObjectName": "WidgetSwitcherSlot'TalentJewelry_C:WidgetTree.BagSwitcher.WidgetSwitcherSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.113"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'TalentJewelry_C:WidgetTree.FullView.CanvasPanelSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.23"
+      }
+    }
+  },
+  {
+    "Type": "WidgetSwitcherSlot",
+    "Name": "WidgetSwitcherSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetSwitcherSlot'",
+    "Outer": {
+      "ObjectName": "WidgetSwitcher'TalentJewelry_C:WidgetTree.BagSwitcher'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.111"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "WidgetSwitcher'TalentJewelry_C:WidgetTree.BagSwitcher'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.111"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'TalentJewelry_C:WidgetTree.JewelryBagPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.10"
+      }
+    }
+  },
+  {
+    "Type": "WidgetSwitcherSlot",
+    "Name": "WidgetSwitcherSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetSwitcherSlot'",
+    "Outer": {
+      "ObjectName": "WidgetSwitcher'TalentJewelry_C:WidgetTree.BagSwitcher'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.111"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "WidgetSwitcher'TalentJewelry_C:WidgetTree.BagSwitcher'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.111"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'TalentJewelry_C:WidgetTree.ItemDetailPannel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.9"
+      }
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetTree'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'TalentJewelry_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.0"
+    },
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "CanvasPanel'TalentJewelry_C:WidgetTree.FullView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentJewelry.8"
+      }
+    }
+  }
+]

@@ -1,0 +1,258 @@
+[
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "ManualItemListView_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Package": "UE_game/Content/BluePrint/UI/HelpManualV2/Item/ManualItemListView",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'ManualItemListView_C:WidgetTree'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Item/ManualItemListView.9"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'UserWidget'",
+      "ObjectPath": "/Script/UMG"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "ListView",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIListView'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "RuleSwitcher",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'WidgetSwitcher'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SimpleListView",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIListView'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      }
+    ],
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "ManualItemListView_C'Default__ManualItemListView_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Item/ManualItemListView.1"
+    }
+  },
+  {
+    "Type": "ManualItemListView_C",
+    "Name": "Default__ManualItemListView_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'UE_game/Content/BluePrint/UI/HelpManualV2/Item/ManualItemListView.ManualItemListView_C'",
+    "Package": "UE_game/Content/BluePrint/UI/HelpManualV2/Item/ManualItemListView",
+    "Properties": {
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'ManualItemListView_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Item/ManualItemListView.9"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'ManualItemListView_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Item/ManualItemListView.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'ManualItemListView_C:WidgetTree.CanvasPanel_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Item/ManualItemListView.2"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "Anchors": {
+          "Maximum": {
+            "X": 1.0,
+            "Y": 1.0
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'ManualItemListView_C:WidgetTree.CanvasPanel_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Item/ManualItemListView.2"
+      },
+      "Content": {
+        "ObjectName": "WidgetSwitcher'ManualItemListView_C:WidgetTree.RuleSwitcher'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Item/ManualItemListView.6"
+      }
+    }
+  },
+  {
+    "Type": "UIListView",
+    "Name": "ListView",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIListView'",
+    "Outer": {
+      "ObjectName": "WidgetTree'ManualItemListView_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Item/ManualItemListView.9"
+    },
+    "Properties": {
+      "EntrySpacing": 19.2,
+      "EntryWidgetClass": {
+        "ObjectName": "WidgetBlueprintGeneratedClass'ManualItemListItem_C'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Item/ManualItemListItem.0"
+      },
+      "Slot": {
+        "ObjectName": "WidgetSwitcherSlot'ManualItemListView_C:WidgetTree.RuleSwitcher.WidgetSwitcherSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Item/ManualItemListView.8"
+      }
+    }
+  },
+  {
+    "Type": "UIListView",
+    "Name": "SimpleListView",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIListView'",
+    "Outer": {
+      "ObjectName": "WidgetTree'ManualItemListView_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Item/ManualItemListView.9"
+    },
+    "Properties": {
+      "EntrySpacing": 34.56,
+      "EntryWidgetClass": {
+        "ObjectName": "WidgetBlueprintGeneratedClass'ManualItemSimpleListItem_C'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Item/ManualItemSimpleListItem.0"
+      },
+      "Slot": {
+        "ObjectName": "WidgetSwitcherSlot'ManualItemListView_C:WidgetTree.RuleSwitcher.WidgetSwitcherSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Item/ManualItemListView.7"
+      }
+    }
+  },
+  {
+    "Type": "WidgetSwitcher",
+    "Name": "RuleSwitcher",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetSwitcher'",
+    "Outer": {
+      "ObjectName": "WidgetTree'ManualItemListView_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Item/ManualItemListView.9"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "WidgetSwitcherSlot'ManualItemListView_C:WidgetTree.RuleSwitcher.WidgetSwitcherSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Item/ManualItemListView.7"
+        },
+        {
+          "ObjectName": "WidgetSwitcherSlot'ManualItemListView_C:WidgetTree.RuleSwitcher.WidgetSwitcherSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Item/ManualItemListView.8"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'ManualItemListView_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Item/ManualItemListView.3"
+      }
+    }
+  },
+  {
+    "Type": "WidgetSwitcherSlot",
+    "Name": "WidgetSwitcherSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetSwitcherSlot'",
+    "Outer": {
+      "ObjectName": "WidgetSwitcher'ManualItemListView_C:WidgetTree.RuleSwitcher'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Item/ManualItemListView.6"
+    },
+    "Properties": {
+      "Padding": {
+        "Bottom": 9.599999
+      },
+      "Parent": {
+        "ObjectName": "WidgetSwitcher'ManualItemListView_C:WidgetTree.RuleSwitcher'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Item/ManualItemListView.6"
+      },
+      "Content": {
+        "ObjectName": "UIListView'ManualItemListView_C:WidgetTree.SimpleListView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Item/ManualItemListView.5"
+      }
+    }
+  },
+  {
+    "Type": "WidgetSwitcherSlot",
+    "Name": "WidgetSwitcherSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetSwitcherSlot'",
+    "Outer": {
+      "ObjectName": "WidgetSwitcher'ManualItemListView_C:WidgetTree.RuleSwitcher'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Item/ManualItemListView.6"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Left",
+      "Parent": {
+        "ObjectName": "WidgetSwitcher'ManualItemListView_C:WidgetTree.RuleSwitcher'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Item/ManualItemListView.6"
+      },
+      "Content": {
+        "ObjectName": "UIListView'ManualItemListView_C:WidgetTree.ListView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Item/ManualItemListView.4"
+      }
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetTree'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'ManualItemListView_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Item/ManualItemListView.0"
+    },
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "CanvasPanel'ManualItemListView_C:WidgetTree.CanvasPanel_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Item/ManualItemListView.2"
+      }
+    }
+  }
+]

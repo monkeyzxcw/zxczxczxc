@@ -1,0 +1,583 @@
+[
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "RewardBoxListItem_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Package": "UE_game/Content/BluePrint/UI/Reward/RewardBoxListItem",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'RewardBoxListItem_C:WidgetTree'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardBoxListItem.21"
+      },
+      "bClassRequiresNativeTick": true
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'UIListViewItem'",
+      "ObjectPath": "/Script/UE_game"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "RewardBoxListItemView_1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'RewardBoxListItemView_C'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardBoxListItemView.0"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "RewardBoxListItemView_2",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'RewardBoxListItemView_C'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardBoxListItemView.0"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "RewardBoxListItemView_3",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'RewardBoxListItemView_C'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardBoxListItemView.0"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "RewardBoxListItemView_4",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'RewardBoxListItemView_C'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardBoxListItemView.0"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "RewardBoxListItemView_5",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'RewardBoxListItemView_C'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardBoxListItemView.0"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "RewardBoxListItemView_6",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'RewardBoxListItemView_C'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardBoxListItemView.0"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ListViewItemData",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'UIListViewItemData_C'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Common/ListView/UIListViewItemData.1"
+        }
+      }
+    ],
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "RewardBoxListItem_C'Default__RewardBoxListItem_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardBoxListItem.1"
+    }
+  },
+  {
+    "Type": "RewardBoxListItem_C",
+    "Name": "Default__RewardBoxListItem_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'UE_game/Content/BluePrint/UI/Reward/RewardBoxListItem.RewardBoxListItem_C'",
+    "Package": "UE_game/Content/BluePrint/UI/Reward/RewardBoxListItem",
+    "Properties": {
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "FullView",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'RewardBoxListItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardBoxListItem.21"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'RewardBoxListItem_C:WidgetTree.FullView.CanvasPanelSlot_2'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardBoxListItem.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'RewardBoxListItem_C:WidgetTree.FullView'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardBoxListItem.2"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 192.0,
+          "Bottom": 57.6
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'RewardBoxListItem_C:WidgetTree.FullView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardBoxListItem.2"
+      },
+      "Content": {
+        "ObjectName": "VerticalBox'RewardBoxListItem_C:WidgetTree.VerticalBox_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardBoxListItem.18"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "HBox",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'RewardBoxListItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardBoxListItem.21"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HorizontalBoxSlot'RewardBoxListItem_C:WidgetTree.HBox.HorizontalBoxSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardBoxListItem.5"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'RewardBoxListItem_C:WidgetTree.HBox.HorizontalBoxSlot_6'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardBoxListItem.8"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'RewardBoxListItem_C:WidgetTree.HBox.HorizontalBoxSlot_7'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardBoxListItem.9"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'RewardBoxListItem_C:WidgetTree.HBox.HorizontalBoxSlot_8'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardBoxListItem.10"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'RewardBoxListItem_C:WidgetTree.HBox.HorizontalBoxSlot_12'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardBoxListItem.6"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'RewardBoxListItem_C:WidgetTree.HBox.HorizontalBoxSlot_14'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardBoxListItem.7"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'RewardBoxListItem_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardBoxListItem.19"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'RewardBoxListItem_C:WidgetTree.HBox'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardBoxListItem.4"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Left",
+      "Parent": {
+        "ObjectName": "HorizontalBox'RewardBoxListItem_C:WidgetTree.HBox'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardBoxListItem.4"
+      },
+      "Content": {
+        "ObjectName": "RewardBoxListItemView_C'RewardBoxListItem_C:WidgetTree.RewardBoxListItemView_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardBoxListItem.11"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_12",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'RewardBoxListItem_C:WidgetTree.HBox'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardBoxListItem.4"
+    },
+    "Properties": {
+      "Padding": {
+        "Left": 71.04
+      },
+      "HorizontalAlignment": "HAlign_Left",
+      "Parent": {
+        "ObjectName": "HorizontalBox'RewardBoxListItem_C:WidgetTree.HBox'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardBoxListItem.4"
+      },
+      "Content": {
+        "ObjectName": "RewardBoxListItemView_C'RewardBoxListItem_C:WidgetTree.RewardBoxListItemView_5'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardBoxListItem.15"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_14",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'RewardBoxListItem_C:WidgetTree.HBox'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardBoxListItem.4"
+    },
+    "Properties": {
+      "Padding": {
+        "Left": 71.04
+      },
+      "HorizontalAlignment": "HAlign_Left",
+      "Parent": {
+        "ObjectName": "HorizontalBox'RewardBoxListItem_C:WidgetTree.HBox'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardBoxListItem.4"
+      },
+      "Content": {
+        "ObjectName": "RewardBoxListItemView_C'RewardBoxListItem_C:WidgetTree.RewardBoxListItemView_6'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardBoxListItem.16"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_6",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'RewardBoxListItem_C:WidgetTree.HBox'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardBoxListItem.4"
+    },
+    "Properties": {
+      "Padding": {
+        "Left": 71.04
+      },
+      "HorizontalAlignment": "HAlign_Left",
+      "Parent": {
+        "ObjectName": "HorizontalBox'RewardBoxListItem_C:WidgetTree.HBox'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardBoxListItem.4"
+      },
+      "Content": {
+        "ObjectName": "RewardBoxListItemView_C'RewardBoxListItem_C:WidgetTree.RewardBoxListItemView_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardBoxListItem.12"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_7",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'RewardBoxListItem_C:WidgetTree.HBox'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardBoxListItem.4"
+    },
+    "Properties": {
+      "Padding": {
+        "Left": 71.04
+      },
+      "HorizontalAlignment": "HAlign_Left",
+      "Parent": {
+        "ObjectName": "HorizontalBox'RewardBoxListItem_C:WidgetTree.HBox'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardBoxListItem.4"
+      },
+      "Content": {
+        "ObjectName": "RewardBoxListItemView_C'RewardBoxListItem_C:WidgetTree.RewardBoxListItemView_3'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardBoxListItem.13"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_8",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'RewardBoxListItem_C:WidgetTree.HBox'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardBoxListItem.4"
+    },
+    "Properties": {
+      "Padding": {
+        "Left": 71.04
+      },
+      "HorizontalAlignment": "HAlign_Left",
+      "Parent": {
+        "ObjectName": "HorizontalBox'RewardBoxListItem_C:WidgetTree.HBox'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardBoxListItem.4"
+      },
+      "Content": {
+        "ObjectName": "RewardBoxListItemView_C'RewardBoxListItem_C:WidgetTree.RewardBoxListItemView_4'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardBoxListItem.14"
+      }
+    }
+  },
+  {
+    "Type": "RewardBoxListItemView_C",
+    "Name": "RewardBoxListItemView_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'UE_game/Content/BluePrint/UI/Reward/RewardBoxListItemView.RewardBoxListItemView_C'",
+    "Outer": {
+      "ObjectName": "WidgetTree'RewardBoxListItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardBoxListItem.21"
+    },
+    "Template": {
+      "ObjectName": "RewardBoxListItemView_C'Default__RewardBoxListItemView_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardBoxListItemView.1"
+    },
+    "Properties": {
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'RewardBoxListItem_C:WidgetTree.HBox.HorizontalBoxSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardBoxListItem.5"
+      }
+    }
+  },
+  {
+    "Type": "RewardBoxListItemView_C",
+    "Name": "RewardBoxListItemView_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'UE_game/Content/BluePrint/UI/Reward/RewardBoxListItemView.RewardBoxListItemView_C'",
+    "Outer": {
+      "ObjectName": "WidgetTree'RewardBoxListItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardBoxListItem.21"
+    },
+    "Template": {
+      "ObjectName": "RewardBoxListItemView_C'Default__RewardBoxListItemView_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardBoxListItemView.1"
+    },
+    "Properties": {
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'RewardBoxListItem_C:WidgetTree.HBox.HorizontalBoxSlot_6'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardBoxListItem.8"
+      }
+    }
+  },
+  {
+    "Type": "RewardBoxListItemView_C",
+    "Name": "RewardBoxListItemView_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'UE_game/Content/BluePrint/UI/Reward/RewardBoxListItemView.RewardBoxListItemView_C'",
+    "Outer": {
+      "ObjectName": "WidgetTree'RewardBoxListItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardBoxListItem.21"
+    },
+    "Template": {
+      "ObjectName": "RewardBoxListItemView_C'Default__RewardBoxListItemView_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardBoxListItemView.1"
+    },
+    "Properties": {
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'RewardBoxListItem_C:WidgetTree.HBox.HorizontalBoxSlot_7'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardBoxListItem.9"
+      }
+    }
+  },
+  {
+    "Type": "RewardBoxListItemView_C",
+    "Name": "RewardBoxListItemView_4",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'UE_game/Content/BluePrint/UI/Reward/RewardBoxListItemView.RewardBoxListItemView_C'",
+    "Outer": {
+      "ObjectName": "WidgetTree'RewardBoxListItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardBoxListItem.21"
+    },
+    "Template": {
+      "ObjectName": "RewardBoxListItemView_C'Default__RewardBoxListItemView_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardBoxListItemView.1"
+    },
+    "Properties": {
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'RewardBoxListItem_C:WidgetTree.HBox.HorizontalBoxSlot_8'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardBoxListItem.10"
+      }
+    }
+  },
+  {
+    "Type": "RewardBoxListItemView_C",
+    "Name": "RewardBoxListItemView_5",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'UE_game/Content/BluePrint/UI/Reward/RewardBoxListItemView.RewardBoxListItemView_C'",
+    "Outer": {
+      "ObjectName": "WidgetTree'RewardBoxListItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardBoxListItem.21"
+    },
+    "Template": {
+      "ObjectName": "RewardBoxListItemView_C'Default__RewardBoxListItemView_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardBoxListItemView.1"
+    },
+    "Properties": {
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'RewardBoxListItem_C:WidgetTree.HBox.HorizontalBoxSlot_12'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardBoxListItem.6"
+      }
+    }
+  },
+  {
+    "Type": "RewardBoxListItemView_C",
+    "Name": "RewardBoxListItemView_6",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'UE_game/Content/BluePrint/UI/Reward/RewardBoxListItemView.RewardBoxListItemView_C'",
+    "Outer": {
+      "ObjectName": "WidgetTree'RewardBoxListItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardBoxListItem.21"
+    },
+    "Template": {
+      "ObjectName": "RewardBoxListItemView_C'Default__RewardBoxListItemView_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardBoxListItemView.1"
+    },
+    "Properties": {
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'RewardBoxListItem_C:WidgetTree.HBox.HorizontalBoxSlot_14'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardBoxListItem.7"
+      }
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "Space",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'RewardBoxListItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardBoxListItem.21"
+    },
+    "Properties": {
+      "HeightOverride": 38.4,
+      "bOverride_HeightOverride": true,
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'RewardBoxListItem_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardBoxListItem.20"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBox",
+    "Name": "VerticalBox_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'RewardBoxListItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardBoxListItem.21"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "VerticalBoxSlot'RewardBoxListItem_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardBoxListItem.19"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot'RewardBoxListItem_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardBoxListItem.20"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'RewardBoxListItem_C:WidgetTree.FullView.CanvasPanelSlot_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardBoxListItem.3"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Outer": {
+      "ObjectName": "VerticalBox'RewardBoxListItem_C:WidgetTree.VerticalBox_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardBoxListItem.18"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "VerticalBox'RewardBoxListItem_C:WidgetTree.VerticalBox_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardBoxListItem.18"
+      },
+      "Content": {
+        "ObjectName": "HorizontalBox'RewardBoxListItem_C:WidgetTree.HBox'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardBoxListItem.4"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Outer": {
+      "ObjectName": "VerticalBox'RewardBoxListItem_C:WidgetTree.VerticalBox_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardBoxListItem.18"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "VerticalBox'RewardBoxListItem_C:WidgetTree.VerticalBox_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardBoxListItem.18"
+      },
+      "Content": {
+        "ObjectName": "SizeBox'RewardBoxListItem_C:WidgetTree.Space'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardBoxListItem.17"
+      }
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetTree'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'RewardBoxListItem_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardBoxListItem.0"
+    },
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "CanvasPanel'RewardBoxListItem_C:WidgetTree.FullView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardBoxListItem.2"
+      }
+    }
+  }
+]

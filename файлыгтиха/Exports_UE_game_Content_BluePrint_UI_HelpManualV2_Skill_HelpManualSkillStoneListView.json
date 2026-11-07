@@ -1,0 +1,256 @@
+[
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "HelpManualSkillStoneListView_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Package": "UE_game/Content/BluePrint/UI/HelpManualV2/Skill/HelpManualSkillStoneListView",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'HelpManualSkillStoneListView_C:WidgetTree'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Skill/HelpManualSkillStoneListView.9"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'UserWidget'",
+      "ObjectPath": "/Script/UMG"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "DetailSkillStoneListView",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIListView'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ListViewSwitcher",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'WidgetSwitcher'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SimpleSkillStoneListView",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIListView'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      }
+    ],
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "HelpManualSkillStoneListView_C'Default__HelpManualSkillStoneListView_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Skill/HelpManualSkillStoneListView.1"
+    }
+  },
+  {
+    "Type": "HelpManualSkillStoneListView_C",
+    "Name": "Default__HelpManualSkillStoneListView_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'UE_game/Content/BluePrint/UI/HelpManualV2/Skill/HelpManualSkillStoneListView.HelpManualSkillStoneListView_C'",
+    "Package": "UE_game/Content/BluePrint/UI/HelpManualV2/Skill/HelpManualSkillStoneListView",
+    "Properties": {
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'HelpManualSkillStoneListView_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Skill/HelpManualSkillStoneListView.9"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'HelpManualSkillStoneListView_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Skill/HelpManualSkillStoneListView.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'HelpManualSkillStoneListView_C:WidgetTree.CanvasPanel_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Skill/HelpManualSkillStoneListView.2"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 1843.2,
+          "Bottom": 1075.2
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'HelpManualSkillStoneListView_C:WidgetTree.CanvasPanel_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Skill/HelpManualSkillStoneListView.2"
+      },
+      "Content": {
+        "ObjectName": "WidgetSwitcher'HelpManualSkillStoneListView_C:WidgetTree.ListViewSwitcher'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Skill/HelpManualSkillStoneListView.6"
+      }
+    }
+  },
+  {
+    "Type": "UIListView",
+    "Name": "DetailSkillStoneListView",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIListView'",
+    "Outer": {
+      "ObjectName": "WidgetTree'HelpManualSkillStoneListView_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Skill/HelpManualSkillStoneListView.9"
+    },
+    "Properties": {
+      "EntryWidgetClass": {
+        "ObjectName": "WidgetBlueprintGeneratedClass'HelpManualDetailSkillStoneUnit_C'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Skill/HelpManualDetailSkillStoneUnit.0"
+      },
+      "Slot": {
+        "ObjectName": "WidgetSwitcherSlot'HelpManualSkillStoneListView_C:WidgetTree.ListViewSwitcher.WidgetSwitcherSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Skill/HelpManualSkillStoneListView.8"
+      }
+    }
+  },
+  {
+    "Type": "UIListView",
+    "Name": "SimpleSkillStoneListView",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIListView'",
+    "Outer": {
+      "ObjectName": "WidgetTree'HelpManualSkillStoneListView_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Skill/HelpManualSkillStoneListView.9"
+    },
+    "Properties": {
+      "EntryWidgetClass": {
+        "ObjectName": "WidgetBlueprintGeneratedClass'HelpManualSimpleSkillStoneListViewItem_C'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Skill/HelpManualSimpleSkillStoneListViewItem.0"
+      },
+      "Slot": {
+        "ObjectName": "WidgetSwitcherSlot'HelpManualSkillStoneListView_C:WidgetTree.ListViewSwitcher.WidgetSwitcherSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Skill/HelpManualSkillStoneListView.7"
+      }
+    }
+  },
+  {
+    "Type": "WidgetSwitcher",
+    "Name": "ListViewSwitcher",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetSwitcher'",
+    "Outer": {
+      "ObjectName": "WidgetTree'HelpManualSkillStoneListView_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Skill/HelpManualSkillStoneListView.9"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "WidgetSwitcherSlot'HelpManualSkillStoneListView_C:WidgetTree.ListViewSwitcher.WidgetSwitcherSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Skill/HelpManualSkillStoneListView.7"
+        },
+        {
+          "ObjectName": "WidgetSwitcherSlot'HelpManualSkillStoneListView_C:WidgetTree.ListViewSwitcher.WidgetSwitcherSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Skill/HelpManualSkillStoneListView.8"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'HelpManualSkillStoneListView_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Skill/HelpManualSkillStoneListView.3"
+      }
+    }
+  },
+  {
+    "Type": "WidgetSwitcherSlot",
+    "Name": "WidgetSwitcherSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetSwitcherSlot'",
+    "Outer": {
+      "ObjectName": "WidgetSwitcher'HelpManualSkillStoneListView_C:WidgetTree.ListViewSwitcher'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Skill/HelpManualSkillStoneListView.6"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "WidgetSwitcher'HelpManualSkillStoneListView_C:WidgetTree.ListViewSwitcher'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Skill/HelpManualSkillStoneListView.6"
+      },
+      "Content": {
+        "ObjectName": "UIListView'HelpManualSkillStoneListView_C:WidgetTree.SimpleSkillStoneListView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Skill/HelpManualSkillStoneListView.5"
+      }
+    }
+  },
+  {
+    "Type": "WidgetSwitcherSlot",
+    "Name": "WidgetSwitcherSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetSwitcherSlot'",
+    "Outer": {
+      "ObjectName": "WidgetSwitcher'HelpManualSkillStoneListView_C:WidgetTree.ListViewSwitcher'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Skill/HelpManualSkillStoneListView.6"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "WidgetSwitcher'HelpManualSkillStoneListView_C:WidgetTree.ListViewSwitcher'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Skill/HelpManualSkillStoneListView.6"
+      },
+      "Content": {
+        "ObjectName": "UIListView'HelpManualSkillStoneListView_C:WidgetTree.DetailSkillStoneListView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Skill/HelpManualSkillStoneListView.4"
+      }
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetTree'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'HelpManualSkillStoneListView_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Skill/HelpManualSkillStoneListView.0"
+    },
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "CanvasPanel'HelpManualSkillStoneListView_C:WidgetTree.CanvasPanel_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Skill/HelpManualSkillStoneListView.2"
+      }
+    }
+  }
+]

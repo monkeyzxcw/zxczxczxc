@@ -1,0 +1,1668 @@
+[
+  {
+    "Type": "Function",
+    "Name": "PlayShake",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'TalentTitle_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentTitle.1"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_PlayAnimation_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'UMGSequencePlayer'",
+          "ObjectPath": "/Script/UMG"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "TalentTitle_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Package": "UE_game/Content/BluePrint/UI/Talent/TalentTitle",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'TalentTitle_C:WidgetTree'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentTitle.28"
+      },
+      "Animations": [
+        {
+          "ObjectName": "WidgetAnimation'TalentTitle_C:Shake_INST'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentTitle.27"
+        },
+        {
+          "ObjectName": "WidgetAnimation'TalentTitle_C:OpenTalentTitle_INST'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentTitle.26"
+        }
+      ]
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'UserWidget'",
+      "ObjectPath": "/Script/UMG"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'TalentTitle_C:PlayShake'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentTitle.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "OpenTalentTitle",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Transient | RepSkip",
+        "PropertyClass": {
+          "ObjectName": "Class'WidgetAnimation'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Shake",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Transient | RepSkip",
+        "PropertyClass": {
+          "ObjectName": "Class'WidgetAnimation'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "RepentBtn",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIButton'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "TalentBtn",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIButton'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      }
+    ],
+    "FuncMap": {
+      "PlayShake": {
+        "ObjectName": "Function'TalentTitle_C:PlayShake'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentTitle.0"
+      }
+    },
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "TalentTitle_C'Default__TalentTitle_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentTitle.2"
+    }
+  },
+  {
+    "Type": "TalentTitle_C",
+    "Name": "Default__TalentTitle_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'UE_game/Content/BluePrint/UI/Talent/TalentTitle.TalentTitle_C'",
+    "Package": "UE_game/Content/BluePrint/UI/Talent/TalentTitle",
+    "Properties": {
+      "Priority": 1,
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'TalentTitle_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentTitle.28"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'TalentTitle_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_2'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentTitle.5"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_91",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'TalentTitle_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentTitle.28"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'TalentTitle_C:WidgetTree.CanvasPanel_91.CanvasPanelSlot_2'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentTitle.8"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'TalentTitle_C:WidgetTree.CanvasPanel_91.CanvasPanelSlot_16'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentTitle.7"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'TalentTitle_C:WidgetTree.CanvasPanel_91.CanvasPanelSlot_9'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentTitle.9"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'TalentTitle_C:WidgetTree.CanvasPanel_91.CanvasPanelSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentTitle.6"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'TalentTitle_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentTitle.5"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'TalentTitle_C:WidgetTree.CanvasPanel_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentTitle.3"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 174.71487,
+          "Top": -8.32,
+          "Right": 654.04456,
+          "Bottom": 60.16005
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'TalentTitle_C:WidgetTree.CanvasPanel_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentTitle.3"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'TalentTitle_C:WidgetTree.CanvasPanel_91'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentTitle.4"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'TalentTitle_C:WidgetTree.CanvasPanel_91'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentTitle.4"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": -70.77771,
+          "Top": -30.080025,
+          "Right": 56.0,
+          "Bottom": 56.0
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 1.0,
+          "Y": 0.0
+        }
+      },
+      "ZOrder": 3,
+      "Parent": {
+        "ObjectName": "CanvasPanel'TalentTitle_C:WidgetTree.CanvasPanel_91'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentTitle.4"
+      },
+      "Content": {
+        "ObjectName": "UIButton'TalentTitle_C:WidgetTree.RepentBtn'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentTitle.22"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_16",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'TalentTitle_C:WidgetTree.CanvasPanel_91'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentTitle.4"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": -17.777721,
+          "Top": -2.0800247,
+          "Right": -2571.323,
+          "Bottom": 1356.288
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "ZOrder": 1,
+      "Parent": {
+        "ObjectName": "CanvasPanel'TalentTitle_C:WidgetTree.CanvasPanel_91'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentTitle.4"
+      },
+      "Content": {
+        "ObjectName": "UITextBlock'TalentTitle_C:WidgetTree.RepentNum'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentTitle.24"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'TalentTitle_C:WidgetTree.CanvasPanel_91'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentTitle.4"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": -267.52002,
+          "Top": -30.080025,
+          "Right": 56.0,
+          "Bottom": 56.0
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 1.0,
+          "Y": 0.0
+        }
+      },
+      "ZOrder": 3,
+      "Parent": {
+        "ObjectName": "CanvasPanel'TalentTitle_C:WidgetTree.CanvasPanel_91'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentTitle.4"
+      },
+      "Content": {
+        "ObjectName": "UIButton'TalentTitle_C:WidgetTree.TalentBtn'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentTitle.23"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_9",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'TalentTitle_C:WidgetTree.CanvasPanel_91'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentTitle.4"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": -207.27281,
+          "Top": -2.0800247,
+          "Right": -1893.2676,
+          "Bottom": 1340.7179
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "ZOrder": 1,
+      "Parent": {
+        "ObjectName": "CanvasPanel'TalentTitle_C:WidgetTree.CanvasPanel_91'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentTitle.4"
+      },
+      "Content": {
+        "ObjectName": "UITextBlock'TalentTitle_C:WidgetTree.TalentNum'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentTitle.25"
+      }
+    }
+  },
+  {
+    "Type": "MovieScene",
+    "Name": "OpenTalentTitle",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene'",
+    "Outer": {
+      "ObjectName": "WidgetAnimation'TalentTitle_C:OpenTalentTitle_INST'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentTitle.26"
+    },
+    "Properties": {
+      "Possessables": [
+        {
+          "Tags": [],
+          "Guid": "EA0555E9-42326272-40BFDEB8-820AA7D8",
+          "Name": "CanvasPanel_91",
+          "PossessedObjectClass": {
+            "ObjectName": "Class'CanvasPanel'",
+            "ObjectPath": "/Script/UMG"
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        }
+      ],
+      "ObjectBindings": [
+        {
+          "ObjectGuid": "EA0555E9-42326272-40BFDEB8-820AA7D8",
+          "BindingName": "CanvasPanel_91",
+          "Tracks": [
+            {
+              "ObjectName": "MovieScene2DTransformTrack'TalentTitle_C:OpenTalentTitle_INST.OpenTalentTitle.MovieScene2DTransformTrack_0'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentTitle.14"
+            }
+          ]
+        }
+      ],
+      "PlaybackRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 24001
+            }
+          }
+        }
+      },
+      "DisplayRate": {
+        "Numerator": 30
+      },
+      "Signature": "0A3B2390-468E53C7-078EBBBB-9C9DFBED"
+    }
+  },
+  {
+    "Type": "MovieScene",
+    "Name": "Shake",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene'",
+    "Outer": {
+      "ObjectName": "WidgetAnimation'TalentTitle_C:Shake_INST'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentTitle.27"
+    },
+    "Properties": {
+      "Possessables": [
+        {
+          "Tags": [],
+          "Guid": "685C4C63-4B8AA282-DD2DE992-266B0434",
+          "Name": "RootView",
+          "PossessedObjectClass": {
+            "ObjectName": "Class'Overlay'",
+            "ObjectPath": "/Script/UMG"
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        }
+      ],
+      "ObjectBindings": [
+        {
+          "ObjectGuid": "685C4C63-4B8AA282-DD2DE992-266B0434",
+          "BindingName": "RootView",
+          "Tracks": [
+            {
+              "ObjectName": "MovieScene2DTransformTrack'TalentTitle_C:Shake_INST.Shake.MovieScene2DTransformTrack_0'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentTitle.15"
+            }
+          ]
+        }
+      ],
+      "PlaybackRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 60001
+            }
+          }
+        }
+      },
+      "DisplayRate": {
+        "Numerator": 30
+      },
+      "Signature": "BE72B174-41759E80-435C2B95-22E2AE51"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformSection",
+    "Name": "MovieScene2DTransformSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene2DTransformSection'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformTrack'TalentTitle_C:OpenTalentTitle_INST.OpenTalentTitle.MovieScene2DTransformTrack_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentTitle.14"
+    },
+    "Properties": {
+      "Translation": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 24000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Translation[1]": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 24000
+          }
+        ],
+        "Values": [
+          {
+            "Value": -166.0,
+            "Tangent": {
+              "ArriveTangent": 0.00829351,
+              "LeaveTangent": 0.00829351,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 1
+          },
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'TalentTitle_C:OpenTalentTitle_INST.OpenTalentTitle.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0.EaseInFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentTitle.16"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'TalentTitle_C:OpenTalentTitle_INST.OpenTalentTitle.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0.EaseOutFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentTitle.17"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 24000
+            }
+          }
+        }
+      },
+      "Signature": "73B4E143-45E9E0D0-C9EFE181-7FD1EDAC"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformSection",
+    "Name": "MovieScene2DTransformSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene2DTransformSection'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformTrack'TalentTitle_C:Shake_INST.Shake.MovieScene2DTransformTrack_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentTitle.15"
+    },
+    "Properties": {
+      "Translation": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 2000
+          },
+          {
+            "Value": 6000
+          },
+          {
+            "Value": 8000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 12.0,
+            "Tangent": {
+              "ArriveTangent": -0.00125,
+              "LeaveTangent": -0.00125,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": -20.0,
+            "Tangent": {
+              "ArriveTangent": -0.001,
+              "LeaveTangent": -0.001,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Translation[1]": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 2000
+          },
+          {
+            "Value": 6000
+          },
+          {
+            "Value": 8000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": -12.0,
+            "Tangent": {
+              "ArriveTangent": 0.00125,
+              "LeaveTangent": 0.00125,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 20.0,
+            "Tangent": {
+              "ArriveTangent": 0.00075,
+              "LeaveTangent": 0.00075,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Rotation": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Scale": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          }
+        ],
+        "Values": [
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Scale[1]": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          }
+        ],
+        "Values": [
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Shear": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Shear[1]": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'TalentTitle_C:Shake_INST.Shake.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0.EaseInFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentTitle.18"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'TalentTitle_C:Shake_INST.Shake.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0.EaseOutFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentTitle.19"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 60000
+            }
+          }
+        }
+      },
+      "Signature": "F19FFC09-43936EE2-037F2D8C-E6C6BD18"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformTrack",
+    "Name": "MovieScene2DTransformTrack_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene2DTransformTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'TalentTitle_C:OpenTalentTitle_INST.OpenTalentTitle'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentTitle.10"
+    },
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderTransform",
+        "PropertyPath": "RenderTransform",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieScene2DTransformSection'TalentTitle_C:OpenTalentTitle_INST.OpenTalentTitle.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentTitle.12"
+        }
+      ],
+      "EvaluationFieldGuid": "008E68C8-42CF4D60-68283FA1-E87E08E3",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieScene2DTransformSection'TalentTitle_C:OpenTalentTitle_INST.OpenTalentTitle.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentTitle.12"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 24000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "008E68C8-42CF4D60-68283FA1-E87E08E3"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformTrack",
+    "Name": "MovieScene2DTransformTrack_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene2DTransformTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'TalentTitle_C:Shake_INST.Shake'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentTitle.11"
+    },
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderTransform",
+        "PropertyPath": "RenderTransform",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieScene2DTransformSection'TalentTitle_C:Shake_INST.Shake.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentTitle.13"
+        }
+      ],
+      "EvaluationFieldGuid": "F6D2CC8C-4B77CFE6-A9744FAD-840737EF",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieScene2DTransformSection'TalentTitle_C:Shake_INST.Shake.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentTitle.13"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 60000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "F6D2CC8C-4B77CFE6-A9744FAD-840737EF"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformSection'TalentTitle_C:OpenTalentTitle_INST.OpenTalentTitle.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentTitle.12"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformSection'TalentTitle_C:OpenTalentTitle_INST.OpenTalentTitle.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentTitle.12"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformSection'TalentTitle_C:Shake_INST.Shake.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentTitle.13"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformSection'TalentTitle_C:Shake_INST.Shake.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentTitle.13"
+    }
+  },
+  {
+    "Type": "MovieSceneCompiledData",
+    "Name": "CompiledData",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneCompiledData'",
+    "Outer": {
+      "ObjectName": "WidgetAnimation'TalentTitle_C:OpenTalentTitle_INST'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentTitle.26"
+    },
+    "Properties": {
+      "EntityComponentField": {
+        "PersistentEntityTree": {
+          "SerializedData": {
+            "Data": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 1,
+                  "Capacity": 1
+                }
+              ],
+              "Items": [
+                {
+                  "EntityIndex": 0,
+                  "MetaDataIndex": -1
+                }
+              ]
+            },
+            "RootNode": {
+              "Range": {
+                "LowerBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                },
+                "UpperBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                }
+              },
+              "Parent": {
+                "ChildrenHandle": {
+                  "EntryIndex": -1
+                },
+                "Index": -1
+              },
+              "ChildrenID": {
+                "EntryIndex": 0
+              },
+              "DataID": {
+                "EntryIndex": -1
+              }
+            },
+            "ChildNodes": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 1,
+                  "Capacity": 1
+                }
+              ],
+              "Items": [
+                {
+                  "Range": {
+                    "LowerBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 0
+                      }
+                    },
+                    "UpperBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 24000
+                      }
+                    }
+                  },
+                  "Parent": {
+                    "ChildrenHandle": {
+                      "EntryIndex": -1
+                    },
+                    "Index": 0
+                  },
+                  "ChildrenID": {
+                    "EntryIndex": -1
+                  },
+                  "DataID": {
+                    "EntryIndex": 0
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "Entities": [
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieScene2DTransformSection'TalentTitle_C:OpenTalentTitle_INST.OpenTalentTitle.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0'",
+                "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentTitle.12"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 0
+          }
+        ],
+        "SharedMetaData": [
+          {
+            "ObjectBindingID": "EA0555E9-42326272-40BFDEB8-820AA7D8"
+          }
+        ]
+      },
+      "CompiledSignature": "9FCB1781-4E6D35E0-7128B5BC-5F7FF72D",
+      "CompilerVersion": "7D4B9809-2FAC4A6B-964ECF72-D8279EF8",
+      "AccumulatedMask": {
+        "bEntityComponentField": true
+      },
+      "AllocatedMask": {
+        "bEntityComponentField": true
+      }
+    }
+  },
+  {
+    "Type": "MovieSceneCompiledData",
+    "Name": "CompiledData",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneCompiledData'",
+    "Outer": {
+      "ObjectName": "WidgetAnimation'TalentTitle_C:Shake_INST'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentTitle.27"
+    },
+    "Properties": {
+      "EntityComponentField": {
+        "PersistentEntityTree": {
+          "SerializedData": {
+            "Data": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 1,
+                  "Capacity": 1
+                }
+              ],
+              "Items": [
+                {
+                  "EntityIndex": 0,
+                  "MetaDataIndex": -1
+                }
+              ]
+            },
+            "RootNode": {
+              "Range": {
+                "LowerBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                },
+                "UpperBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                }
+              },
+              "Parent": {
+                "ChildrenHandle": {
+                  "EntryIndex": -1
+                },
+                "Index": -1
+              },
+              "ChildrenID": {
+                "EntryIndex": 0
+              },
+              "DataID": {
+                "EntryIndex": -1
+              }
+            },
+            "ChildNodes": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 1,
+                  "Capacity": 1
+                }
+              ],
+              "Items": [
+                {
+                  "Range": {
+                    "LowerBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 0
+                      }
+                    },
+                    "UpperBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 60000
+                      }
+                    }
+                  },
+                  "Parent": {
+                    "ChildrenHandle": {
+                      "EntryIndex": -1
+                    },
+                    "Index": 0
+                  },
+                  "ChildrenID": {
+                    "EntryIndex": -1
+                  },
+                  "DataID": {
+                    "EntryIndex": 0
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "Entities": [
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieScene2DTransformSection'TalentTitle_C:Shake_INST.Shake.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0'",
+                "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentTitle.13"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 0
+          }
+        ],
+        "SharedMetaData": [
+          {
+            "ObjectBindingID": "685C4C63-4B8AA282-DD2DE992-266B0434"
+          }
+        ]
+      },
+      "CompiledSignature": "088A5D6A-428F20B7-09D6AEB5-941B889D",
+      "CompilerVersion": "7D4B9809-2FAC4A6B-964ECF72-D8279EF8",
+      "AccumulatedMask": {
+        "bEntityComponentField": true
+      },
+      "AllocatedMask": {
+        "bEntityComponentField": true
+      }
+    }
+  },
+  {
+    "Type": "UIButton",
+    "Name": "RepentBtn",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIButton'",
+    "Outer": {
+      "ObjectName": "WidgetTree'TalentTitle_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentTitle.28"
+    },
+    "Properties": {
+      "IconImage": {
+        "ImageSize": {
+          "X": 61.44,
+          "Y": 61.44
+        }
+      },
+      "WidgetStyle": {
+        "Normal": {
+          "ImageSize": {
+            "X": 256.0,
+            "Y": 256.0
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'UI_Goods_Return_0_Icon_128'",
+            "ObjectPath": "UE_game/Content/Art/UI/Textures/Common/Icon/Item/128/UI_Goods_Return_0_Icon_128.0"
+          },
+          "DrawAs": "ESlateBrushDrawType::Image"
+        },
+        "Hovered": {
+          "ImageSize": {
+            "X": 256.0,
+            "Y": 256.0
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'UI_Goods_Return_0_Icon_128'",
+            "ObjectPath": "UE_game/Content/Art/UI/Textures/Common/Icon/Item/128/UI_Goods_Return_0_Icon_128.0"
+          },
+          "DrawAs": "ESlateBrushDrawType::Image"
+        },
+        "Pressed": {
+          "ImageSize": {
+            "X": 256.0,
+            "Y": 256.0
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'UI_Goods_Return_0_Icon_128'",
+            "ObjectPath": "UE_game/Content/Art/UI/Textures/Common/Icon/Item/128/UI_Goods_Return_0_Icon_128.0"
+          },
+          "DrawAs": "ESlateBrushDrawType::Image"
+        },
+        "NormalPadding": {
+          "Left": 0.0,
+          "Top": 0.0,
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "PressedPadding": {
+          "Left": 0.0,
+          "Top": 0.0,
+          "Right": 0.0,
+          "Bottom": 0.0
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'TalentTitle_C:WidgetTree.CanvasPanel_91.CanvasPanelSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentTitle.6"
+      }
+    }
+  },
+  {
+    "Type": "UIButton",
+    "Name": "TalentBtn",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIButton'",
+    "Outer": {
+      "ObjectName": "WidgetTree'TalentTitle_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentTitle.28"
+    },
+    "Properties": {
+      "IconImage": {
+        "ImageSize": {
+          "X": 61.44,
+          "Y": 61.44
+        }
+      },
+      "WidgetStyle": {
+        "Normal": {
+          "ImageSize": {
+            "X": 256.0,
+            "Y": 256.0
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'UI_Goods_talent_0_Icon_128'",
+            "ObjectPath": "UE_game/Content/Art/UI/Textures/Common/Icon/Item/128/UI_Goods_talent_0_Icon_128.0"
+          },
+          "DrawAs": "ESlateBrushDrawType::Image"
+        },
+        "Hovered": {
+          "ImageSize": {
+            "X": 256.0,
+            "Y": 256.0
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'UI_Goods_talent_0_Icon_128'",
+            "ObjectPath": "UE_game/Content/Art/UI/Textures/Common/Icon/Item/128/UI_Goods_talent_0_Icon_128.0"
+          },
+          "DrawAs": "ESlateBrushDrawType::Image"
+        },
+        "Pressed": {
+          "ImageSize": {
+            "X": 256.0,
+            "Y": 256.0
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'UI_Goods_talent_0_Icon_128'",
+            "ObjectPath": "UE_game/Content/Art/UI/Textures/Common/Icon/Item/128/UI_Goods_talent_0_Icon_128.0"
+          },
+          "DrawAs": "ESlateBrushDrawType::Image"
+        },
+        "NormalPadding": {
+          "Left": 0.0,
+          "Top": 0.0,
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "PressedPadding": {
+          "Left": 0.0,
+          "Top": 0.0,
+          "Right": 0.0,
+          "Bottom": 0.0
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'TalentTitle_C:WidgetTree.CanvasPanel_91.CanvasPanelSlot_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentTitle.8"
+      }
+    }
+  },
+  {
+    "Type": "UITextBlock",
+    "Name": "RepentNum",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UITextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'TalentTitle_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentTitle.28"
+    },
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "4B36F38B4162454AF2D6F38AD1AE7869",
+        "SourceString": "78589",
+        "LocalizedString": "78589"
+      },
+      "ColorAndOpacity": {
+        "SpecifiedColor": {
+          "R": 0.617186,
+          "G": 0.617186,
+          "B": 0.617186,
+          "A": 1.0,
+          "Hex": "CECECE"
+        }
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'UI_Font_Bold'",
+          "ObjectPath": "UE_game/Content/Art/UI/Fonts/UI_Font_Bold.0"
+        },
+        "TypefaceFontName": "None",
+        "Size": 26
+      },
+      "VerticalJustification": "ETextVerticalJustify::Center",
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'TalentTitle_C:WidgetTree.CanvasPanel_91.CanvasPanelSlot_16'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentTitle.7"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "UITextBlock",
+    "Name": "TalentNum",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UITextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'TalentTitle_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentTitle.28"
+    },
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "64E982EA4A2DE60F7DA1F9B0FD9801CD",
+        "SourceString": "78589",
+        "LocalizedString": "78589"
+      },
+      "ColorAndOpacity": {
+        "SpecifiedColor": {
+          "R": 0.617186,
+          "G": 0.617186,
+          "B": 0.617186,
+          "A": 1.0,
+          "Hex": "CECECE"
+        }
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'UI_Font_Bold'",
+          "ObjectPath": "UE_game/Content/Art/UI/Fonts/UI_Font_Bold.0"
+        },
+        "TypefaceFontName": "None",
+        "Size": 26
+      },
+      "VerticalJustification": "ETextVerticalJustify::Center",
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'TalentTitle_C:WidgetTree.CanvasPanel_91.CanvasPanelSlot_9'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentTitle.9"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "WidgetAnimation",
+    "Name": "OpenTalentTitle_INST",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetAnimation'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'TalentTitle_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentTitle.1"
+    },
+    "Properties": {
+      "MovieScene": {
+        "ObjectName": "MovieScene'TalentTitle_C:OpenTalentTitle_INST.OpenTalentTitle'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentTitle.10"
+      },
+      "AnimationBindings": [
+        {
+          "WidgetName": "CanvasPanel_91",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "EA0555E9-42326272-40BFDEB8-820AA7D8",
+          "bIsRootWidget": false
+        }
+      ],
+      "DisplayLabel": "OpenTalentTitle",
+      "CompiledData": {
+        "ObjectName": "MovieSceneCompiledData'TalentTitle_C:OpenTalentTitle_INST.CompiledData'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentTitle.20"
+      },
+      "Signature": "9FCB1781-4E6D35E0-7128B5BC-5F7FF72D"
+    }
+  },
+  {
+    "Type": "WidgetAnimation",
+    "Name": "Shake_INST",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetAnimation'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'TalentTitle_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentTitle.1"
+    },
+    "Properties": {
+      "MovieScene": {
+        "ObjectName": "MovieScene'TalentTitle_C:Shake_INST.Shake'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentTitle.11"
+      },
+      "AnimationBindings": [
+        {
+          "WidgetName": "RootView",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "685C4C63-4B8AA282-DD2DE992-266B0434",
+          "bIsRootWidget": false
+        }
+      ],
+      "CompiledData": {
+        "ObjectName": "MovieSceneCompiledData'TalentTitle_C:Shake_INST.CompiledData'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentTitle.21"
+      },
+      "Signature": "088A5D6A-428F20B7-09D6AEB5-941B889D"
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetTree'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'TalentTitle_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentTitle.1"
+    },
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "CanvasPanel'TalentTitle_C:WidgetTree.CanvasPanel_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Talent/TalentTitle.3"
+      }
+    }
+  }
+]

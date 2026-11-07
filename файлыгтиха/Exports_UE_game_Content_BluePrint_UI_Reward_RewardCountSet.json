@@ -1,0 +1,1152 @@
+[
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "RewardCountSet_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Package": "UE_game/Content/BluePrint/UI/Reward/RewardCountSet",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'RewardCountSet_C:WidgetTree'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardCountSet.27"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'UserWidget'",
+      "ObjectPath": "/Script/UMG"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "UIButton_Add",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Button'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "UIButton_Max",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Button'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "UIButton_Min",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Button'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "UIButton_Sub",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Button'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "UIImage_Num_Bg",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "UITextBlock_Num",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIEditText'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      }
+    ],
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "RewardCountSet_C'Default__RewardCountSet_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardCountSet.1"
+    }
+  },
+  {
+    "Type": "RewardCountSet_C",
+    "Name": "Default__RewardCountSet_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'UE_game/Content/BluePrint/UI/Reward/RewardCountSet.RewardCountSet_C'",
+    "Package": "UE_game/Content/BluePrint/UI/Reward/RewardCountSet",
+    "Properties": {
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "Button",
+    "Name": "UIButton_Add",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Button'",
+    "Outer": {
+      "ObjectName": "WidgetTree'RewardCountSet_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardCountSet.27"
+    },
+    "Properties": {
+      "WidgetStyle": {
+        "Normal": {
+          "ImageSize": {
+            "X": 33.0,
+            "Y": 33.0
+          },
+          "ResourceObject": {
+            "ObjectName": "PaperSprite'UI_Btn_Reward_Jiachangtai_Sprite'",
+            "ObjectPath": "UE_game/Content/Art/UIV2/Reward/UI/TexturesAtlas/Atlas/UI_Btn_Reward_Jiachangtai_Sprite.1"
+          },
+          "DrawAs": "ESlateBrushDrawType::Image"
+        },
+        "Hovered": {
+          "ImageSize": {
+            "X": 33.0,
+            "Y": 33.0
+          },
+          "ResourceObject": {
+            "ObjectName": "PaperSprite'UI_Btn_Reward_Jiaxuanting_Sprite'",
+            "ObjectPath": "UE_game/Content/Art/UIV2/Reward/UI/TexturesAtlas/Atlas/UI_Btn_Reward_Jiaxuanting_Sprite.1"
+          },
+          "DrawAs": "ESlateBrushDrawType::Image"
+        },
+        "Pressed": {
+          "ImageSize": {
+            "X": 33.0,
+            "Y": 33.0
+          },
+          "ResourceObject": {
+            "ObjectName": "PaperSprite'UI_Btn_Reward_Jiachangtai_Sprite'",
+            "ObjectPath": "UE_game/Content/Art/UIV2/Reward/UI/TexturesAtlas/Atlas/UI_Btn_Reward_Jiachangtai_Sprite.1"
+          },
+          "DrawAs": "ESlateBrushDrawType::Image"
+        },
+        "Disabled": {
+          "ImageSize": {
+            "X": 33.0,
+            "Y": 33.0
+          },
+          "ResourceObject": {
+            "ObjectName": "PaperSprite'UI_Btn_Reward_Jiajingzhi_Sprite'",
+            "ObjectPath": "UE_game/Content/Art/UIV2/Reward/UI/TexturesAtlas/Atlas/UI_Btn_Reward_Jiajingzhi_Sprite.1"
+          },
+          "DrawAs": "ESlateBrushDrawType::Image"
+        }
+      },
+      "ClickMethod": "EButtonClickMethod::PreciseClick",
+      "TouchMethod": "EButtonTouchMethod::PreciseTap",
+      "PressMethod": "EButtonPressMethod::ButtonRelease",
+      "IsFocusable": false,
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'RewardCountSet_C:WidgetTree.NumberPanel.CanvasPanelSlot_24'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardCountSet.18"
+      }
+    }
+  },
+  {
+    "Type": "Button",
+    "Name": "UIButton_Max",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Button'",
+    "Outer": {
+      "ObjectName": "WidgetTree'RewardCountSet_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardCountSet.27"
+    },
+    "Properties": {
+      "WidgetStyle": {
+        "Normal": {
+          "ImageSize": {
+            "X": 124.0,
+            "Y": 33.0
+          },
+          "ResourceObject": {
+            "ObjectName": "PaperSprite'UI_Btn_Reward_Maxchangtai_Sprite'",
+            "ObjectPath": "UE_game/Content/Art/UIV2/Reward/UI/TexturesAtlas/Atlas/UI_Btn_Reward_Maxchangtai_Sprite.1"
+          },
+          "DrawAs": "ESlateBrushDrawType::Image"
+        },
+        "Hovered": {
+          "ImageSize": {
+            "X": 124.0,
+            "Y": 33.0
+          },
+          "ResourceObject": {
+            "ObjectName": "PaperSprite'UI_Btn_Reward_Maxxuanting_Sprite'",
+            "ObjectPath": "UE_game/Content/Art/UIV2/Reward/UI/TexturesAtlas/Atlas/UI_Btn_Reward_Maxxuanting_Sprite.1"
+          },
+          "DrawAs": "ESlateBrushDrawType::Image"
+        },
+        "Pressed": {
+          "ImageSize": {
+            "X": 124.0,
+            "Y": 33.0
+          },
+          "ResourceObject": {
+            "ObjectName": "PaperSprite'UI_Btn_Reward_Maxchangtai_Sprite'",
+            "ObjectPath": "UE_game/Content/Art/UIV2/Reward/UI/TexturesAtlas/Atlas/UI_Btn_Reward_Maxchangtai_Sprite.1"
+          },
+          "DrawAs": "ESlateBrushDrawType::Image"
+        },
+        "Disabled": {
+          "ImageSize": {
+            "X": 124.0,
+            "Y": 33.0
+          },
+          "ResourceObject": {
+            "ObjectName": "PaperSprite'UI_Btn_Reward_Maxjingzhi_Sprite'",
+            "ObjectPath": "UE_game/Content/Art/UIV2/Reward/UI/TexturesAtlas/Atlas/UI_Btn_Reward_Maxjingzhi_Sprite.1"
+          },
+          "DrawAs": "ESlateBrushDrawType::Image"
+        },
+        "NormalPadding": {
+          "Left": 0.0,
+          "Top": 0.0,
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "PressedPadding": {
+          "Left": 0.0,
+          "Top": 0.0,
+          "Right": 0.0,
+          "Bottom": 0.0
+        }
+      },
+      "ClickMethod": "EButtonClickMethod::PreciseClick",
+      "TouchMethod": "EButtonTouchMethod::PreciseTap",
+      "PressMethod": "EButtonPressMethod::ButtonRelease",
+      "IsFocusable": false,
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'RewardCountSet_C:WidgetTree.CanvasPanel_1.CanvasPanelSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardCountSet.12"
+      }
+    }
+  },
+  {
+    "Type": "Button",
+    "Name": "UIButton_Min",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Button'",
+    "Outer": {
+      "ObjectName": "WidgetTree'RewardCountSet_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardCountSet.27"
+    },
+    "Properties": {
+      "WidgetStyle": {
+        "Normal": {
+          "ImageSize": {
+            "X": 124.0,
+            "Y": 33.0
+          },
+          "ResourceObject": {
+            "ObjectName": "PaperSprite'UI_Btn_Reward_Maxchangtai_Sprite'",
+            "ObjectPath": "UE_game/Content/Art/UIV2/Reward/UI/TexturesAtlas/Atlas/UI_Btn_Reward_Maxchangtai_Sprite.1"
+          },
+          "DrawAs": "ESlateBrushDrawType::Image"
+        },
+        "Hovered": {
+          "ImageSize": {
+            "X": 124.0,
+            "Y": 33.0
+          },
+          "Margin": {
+            "Left": 0.125,
+            "Top": 0.125,
+            "Right": 0.125,
+            "Bottom": 0.125
+          },
+          "ResourceObject": {
+            "ObjectName": "PaperSprite'UI_Btn_Reward_Maxxuanting_Sprite'",
+            "ObjectPath": "UE_game/Content/Art/UIV2/Reward/UI/TexturesAtlas/Atlas/UI_Btn_Reward_Maxxuanting_Sprite.1"
+          },
+          "DrawAs": "ESlateBrushDrawType::Image"
+        },
+        "Pressed": {
+          "ImageSize": {
+            "X": 124.0,
+            "Y": 33.0
+          },
+          "ResourceObject": {
+            "ObjectName": "PaperSprite'UI_Btn_Reward_Maxchangtai_Sprite'",
+            "ObjectPath": "UE_game/Content/Art/UIV2/Reward/UI/TexturesAtlas/Atlas/UI_Btn_Reward_Maxchangtai_Sprite.1"
+          },
+          "DrawAs": "ESlateBrushDrawType::Image"
+        },
+        "Disabled": {
+          "ImageSize": {
+            "X": 124.0,
+            "Y": 33.0
+          },
+          "ResourceObject": {
+            "ObjectName": "PaperSprite'UI_Btn_Reward_Maxjingzhi_Sprite'",
+            "ObjectPath": "UE_game/Content/Art/UIV2/Reward/UI/TexturesAtlas/Atlas/UI_Btn_Reward_Maxjingzhi_Sprite.1"
+          },
+          "DrawAs": "ESlateBrushDrawType::Image"
+        },
+        "NormalPadding": {
+          "Left": 0.0,
+          "Top": 0.0,
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "PressedPadding": {
+          "Left": 0.0,
+          "Top": 0.0,
+          "Right": 0.0,
+          "Bottom": 0.0
+        }
+      },
+      "ClickMethod": "EButtonClickMethod::PreciseClick",
+      "TouchMethod": "EButtonTouchMethod::PreciseTap",
+      "PressMethod": "EButtonPressMethod::ButtonRelease",
+      "IsFocusable": false,
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'RewardCountSet_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardCountSet.10"
+      }
+    }
+  },
+  {
+    "Type": "Button",
+    "Name": "UIButton_Sub",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Button'",
+    "Outer": {
+      "ObjectName": "WidgetTree'RewardCountSet_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardCountSet.27"
+    },
+    "Properties": {
+      "WidgetStyle": {
+        "Normal": {
+          "ImageSize": {
+            "X": 33.0,
+            "Y": 33.0
+          },
+          "ResourceObject": {
+            "ObjectName": "PaperSprite'UI_Btn_Reward_Jianchangtai_Sprite'",
+            "ObjectPath": "UE_game/Content/Art/UIV2/Reward/UI/TexturesAtlas/Atlas/UI_Btn_Reward_Jianchangtai_Sprite.1"
+          },
+          "DrawAs": "ESlateBrushDrawType::Image"
+        },
+        "Hovered": {
+          "ImageSize": {
+            "X": 33.0,
+            "Y": 33.0
+          },
+          "ResourceObject": {
+            "ObjectName": "PaperSprite'UI_Btn_Reward_Jianxuanting_Sprite'",
+            "ObjectPath": "UE_game/Content/Art/UIV2/Reward/UI/TexturesAtlas/Atlas/UI_Btn_Reward_Jianxuanting_Sprite.1"
+          },
+          "DrawAs": "ESlateBrushDrawType::Image"
+        },
+        "Pressed": {
+          "ImageSize": {
+            "X": 33.0,
+            "Y": 33.0
+          },
+          "ResourceObject": {
+            "ObjectName": "PaperSprite'UI_Btn_Reward_Jianchangtai_Sprite'",
+            "ObjectPath": "UE_game/Content/Art/UIV2/Reward/UI/TexturesAtlas/Atlas/UI_Btn_Reward_Jianchangtai_Sprite.1"
+          },
+          "DrawAs": "ESlateBrushDrawType::Image"
+        },
+        "Disabled": {
+          "ImageSize": {
+            "X": 33.0,
+            "Y": 33.0
+          },
+          "ResourceObject": {
+            "ObjectName": "PaperSprite'UI_Btn_Reward_Jianjingzhi_Sprite'",
+            "ObjectPath": "UE_game/Content/Art/UIV2/Reward/UI/TexturesAtlas/Atlas/UI_Btn_Reward_Jianjingzhi_Sprite.1"
+          },
+          "DrawAs": "ESlateBrushDrawType::Image"
+        }
+      },
+      "ClickMethod": "EButtonClickMethod::PreciseClick",
+      "TouchMethod": "EButtonTouchMethod::PreciseTap",
+      "PressMethod": "EButtonPressMethod::ButtonRelease",
+      "IsFocusable": false,
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'RewardCountSet_C:WidgetTree.NumberPanel.CanvasPanelSlot_10'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardCountSet.16"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'RewardCountSet_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardCountSet.27"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'RewardCountSet_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardCountSet.10"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'RewardCountSet_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_2'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardCountSet.11"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'RewardCountSet_C:WidgetTree.NumberPanel.CanvasPanelSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardCountSet.15"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'RewardCountSet_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardCountSet.27"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'RewardCountSet_C:WidgetTree.CanvasPanel_1.CanvasPanelSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardCountSet.12"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'RewardCountSet_C:WidgetTree.CanvasPanel_1.CanvasPanelSlot_2'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardCountSet.13"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'RewardCountSet_C:WidgetTree.NumberPanel.CanvasPanelSlot_19'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardCountSet.17"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "NumberPanel",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'RewardCountSet_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardCountSet.27"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'RewardCountSet_C:WidgetTree.NumberPanel.CanvasPanelSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardCountSet.14"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'RewardCountSet_C:WidgetTree.NumberPanel.CanvasPanelSlot_3'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardCountSet.19"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'RewardCountSet_C:WidgetTree.NumberPanel.CanvasPanelSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardCountSet.15"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'RewardCountSet_C:WidgetTree.NumberPanel.CanvasPanelSlot_10'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardCountSet.16"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'RewardCountSet_C:WidgetTree.NumberPanel.CanvasPanelSlot_24'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardCountSet.18"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'RewardCountSet_C:WidgetTree.NumberPanel.CanvasPanelSlot_19'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardCountSet.17"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "OverlaySlot'RewardCountSet_C:WidgetTree.FullViewBox.OverlaySlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardCountSet.22"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "RootView",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'RewardCountSet_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardCountSet.27"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'RewardCountSet_C:WidgetTree.RootView.CanvasPanelSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardCountSet.20"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'RewardCountSet_C:WidgetTree.CanvasPanel_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardCountSet.6"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "Anchors": {
+          "Maximum": {
+            "X": 1.0,
+            "Y": 1.0
+          }
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'RewardCountSet_C:WidgetTree.CanvasPanel_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardCountSet.6"
+      },
+      "Content": {
+        "ObjectName": "Button'RewardCountSet_C:WidgetTree.UIButton_Min'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardCountSet.4"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'RewardCountSet_C:WidgetTree.CanvasPanel_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardCountSet.6"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 247.0,
+          "Bottom": 65.0
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "ZOrder": 1,
+      "Parent": {
+        "ObjectName": "CanvasPanel'RewardCountSet_C:WidgetTree.CanvasPanel_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardCountSet.6"
+      },
+      "Content": {
+        "ObjectName": "UIShrinkTextBlock'RewardCountSet_C:WidgetTree.MinText'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardCountSet.26"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'RewardCountSet_C:WidgetTree.CanvasPanel_1'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardCountSet.7"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "Anchors": {
+          "Maximum": {
+            "X": 1.0,
+            "Y": 1.0
+          }
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'RewardCountSet_C:WidgetTree.CanvasPanel_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardCountSet.7"
+      },
+      "Content": {
+        "ObjectName": "Button'RewardCountSet_C:WidgetTree.UIButton_Max'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardCountSet.3"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'RewardCountSet_C:WidgetTree.CanvasPanel_1'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardCountSet.7"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 247.0,
+          "Bottom": 65.0
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'RewardCountSet_C:WidgetTree.CanvasPanel_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardCountSet.7"
+      },
+      "Content": {
+        "ObjectName": "UIShrinkTextBlock'RewardCountSet_C:WidgetTree.MaxText'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardCountSet.25"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'RewardCountSet_C:WidgetTree.NumberPanel'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardCountSet.8"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 192.0,
+          "Bottom": 57.6
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'RewardCountSet_C:WidgetTree.NumberPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardCountSet.8"
+      },
+      "Content": {
+        "ObjectName": "UIImage'RewardCountSet_C:WidgetTree.UIImage_Num_Bg'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardCountSet.24"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'RewardCountSet_C:WidgetTree.NumberPanel'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardCountSet.8"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": -105.0,
+          "Right": 247.0,
+          "Bottom": 65.0
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.0,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.0,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 1.0,
+          "Y": 0.5
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'RewardCountSet_C:WidgetTree.NumberPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardCountSet.8"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'RewardCountSet_C:WidgetTree.CanvasPanel_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardCountSet.6"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_10",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'RewardCountSet_C:WidgetTree.NumberPanel'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardCountSet.8"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": -14.0,
+          "Right": 65.0,
+          "Bottom": 65.0
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.0,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.0,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 1.0,
+          "Y": 0.5
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'RewardCountSet_C:WidgetTree.NumberPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardCountSet.8"
+      },
+      "Content": {
+        "ObjectName": "Button'RewardCountSet_C:WidgetTree.UIButton_Sub'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardCountSet.5"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_19",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'RewardCountSet_C:WidgetTree.NumberPanel'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardCountSet.8"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 105.0,
+          "Right": 247.0,
+          "Bottom": 65.0
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 1.0,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 1.0,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.0,
+          "Y": 0.5
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'RewardCountSet_C:WidgetTree.NumberPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardCountSet.8"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'RewardCountSet_C:WidgetTree.CanvasPanel_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardCountSet.7"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_24",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'RewardCountSet_C:WidgetTree.NumberPanel'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardCountSet.8"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 14.0,
+          "Right": 65.0,
+          "Bottom": 65.0
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 1.0,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 1.0,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.0,
+          "Y": 0.5
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'RewardCountSet_C:WidgetTree.NumberPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardCountSet.8"
+      },
+      "Content": {
+        "ObjectName": "Button'RewardCountSet_C:WidgetTree.UIButton_Add'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardCountSet.2"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'RewardCountSet_C:WidgetTree.NumberPanel'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardCountSet.8"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 714.0,
+          "Bottom": 78.0
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'RewardCountSet_C:WidgetTree.NumberPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardCountSet.8"
+      },
+      "Content": {
+        "ObjectName": "UIEditText'RewardCountSet_C:WidgetTree.UITextBlock_Num'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardCountSet.23"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'RewardCountSet_C:WidgetTree.RootView'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardCountSet.9"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 714.0,
+          "Bottom": 78.0
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'RewardCountSet_C:WidgetTree.RootView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardCountSet.9"
+      },
+      "Content": {
+        "ObjectName": "Overlay'RewardCountSet_C:WidgetTree.FullViewBox'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardCountSet.21"
+      }
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "FullViewBox",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Overlay'",
+    "Outer": {
+      "ObjectName": "WidgetTree'RewardCountSet_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardCountSet.27"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlaySlot'RewardCountSet_C:WidgetTree.FullViewBox.OverlaySlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardCountSet.22"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'RewardCountSet_C:WidgetTree.RootView.CanvasPanelSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardCountSet.20"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'RewardCountSet_C:WidgetTree.FullViewBox'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardCountSet.21"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "Overlay'RewardCountSet_C:WidgetTree.FullViewBox'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardCountSet.21"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'RewardCountSet_C:WidgetTree.NumberPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardCountSet.8"
+      }
+    }
+  },
+  {
+    "Type": "UIEditText",
+    "Name": "UITextBlock_Num",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIEditText'",
+    "Outer": {
+      "ObjectName": "WidgetTree'RewardCountSet_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardCountSet.27"
+    },
+    "Properties": {
+      "ForceUseMainFont": false,
+      "Text": {
+        "Namespace": "",
+        "Key": "FB2AB7E746947F5396756CBF3CD46E3B",
+        "SourceString": "99999",
+        "LocalizedString": "99999"
+      },
+      "WidgetStyle": {
+        "Font": {
+          "FontObject": {
+            "ObjectName": "Font'UI_Font_Light_ZH'",
+            "ObjectPath": "UE_game/Content/Art/UI/Fonts/UI_Font_Light_ZH.0"
+          },
+          "Size": 34
+        }
+      },
+      "Justification": "ETextJustify::Center",
+      "VerticalJustification": "ETextVerticalJustify::Center",
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'RewardCountSet_C:WidgetTree.NumberPanel.CanvasPanelSlot_3'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardCountSet.19"
+      }
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "UIImage_Num_Bg",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'RewardCountSet_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardCountSet.27"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UIV2/Reward/UI/TexturesAtlas/Atlas/UI_Img_Reward_Tanchuangshuru_Sprite.UI_Img_Reward_Tanchuangshuru_Sprite",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 714.0,
+          "Y": 78.0
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'RewardCountSet_C:WidgetTree.NumberPanel.CanvasPanelSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardCountSet.14"
+      }
+    }
+  },
+  {
+    "Type": "UIShrinkTextBlock",
+    "Name": "MaxText",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIShrinkTextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'RewardCountSet_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardCountSet.27"
+    },
+    "Properties": {
+      "CurrTextKey": "Func_Common_Max",
+      "TextContent": {
+        "Namespace": "",
+        "Key": "017EDFC049C2F66593703D8DC6025639",
+        "SourceString": "MAX",
+        "LocalizedString": "MAX"
+      },
+      "ShrinkSize": {
+        "X": 247.0,
+        "Y": 65.0
+      },
+      "TextHJustification": "ETextJustify::Left",
+      "FontInfo": {
+        "FontObject": {
+          "ObjectName": "Font'UI_Font_Light'",
+          "ObjectPath": "UE_game/Content/Art/UI/Fonts/UI_Font_Light.0"
+        },
+        "Size": 32
+      },
+      "ColorAndOpacity": {
+        "SpecifiedColor": {
+          "R": 1.0,
+          "G": 1.0,
+          "B": 1.0,
+          "A": 1.0,
+          "Hex": "FFFFFF"
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'RewardCountSet_C:WidgetTree.CanvasPanel_1.CanvasPanelSlot_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardCountSet.13"
+      }
+    }
+  },
+  {
+    "Type": "UIShrinkTextBlock",
+    "Name": "MinText",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIShrinkTextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'RewardCountSet_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardCountSet.27"
+    },
+    "Properties": {
+      "CurrTextKey": "Func_Common_Min",
+      "TextContent": {
+        "Namespace": "",
+        "Key": "FF693DD94221D17D5A394F939AA95747",
+        "SourceString": "MIN",
+        "LocalizedString": "MIN"
+      },
+      "IsShrink": false,
+      "ShrinkSize": {
+        "X": 247.0,
+        "Y": 65.0
+      },
+      "TextHJustification": "ETextJustify::Left",
+      "FontInfo": {
+        "FontObject": {
+          "ObjectName": "Font'UI_Font_Light'",
+          "ObjectPath": "UE_game/Content/Art/UI/Fonts/UI_Font_Light.0"
+        },
+        "Size": 32
+      },
+      "ColorAndOpacity": {
+        "SpecifiedColor": {
+          "R": 1.0,
+          "G": 1.0,
+          "B": 1.0,
+          "A": 1.0,
+          "Hex": "FFFFFF"
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'RewardCountSet_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardCountSet.11"
+      }
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetTree'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'RewardCountSet_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardCountSet.0"
+    },
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "CanvasPanel'RewardCountSet_C:WidgetTree.RootView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardCountSet.9"
+      }
+    }
+  }
+]

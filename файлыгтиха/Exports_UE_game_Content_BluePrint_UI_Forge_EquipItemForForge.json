@@ -1,0 +1,5396 @@
+[
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "EquipItemForForge_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Package": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'EquipItemForForge_C:WidgetTree'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.87"
+      },
+      "Animations": [
+        {
+          "ObjectName": "WidgetAnimation'EquipItemForForge_C:PutInAnim_INST'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.80"
+        },
+        {
+          "ObjectName": "WidgetAnimation'EquipItemForForge_C:AddAnim_INST'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.79"
+        }
+      ]
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'UserWidget'",
+      "ObjectPath": "/Script/UMG"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "AddAnim",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Transient | RepSkip",
+        "PropertyClass": {
+          "ObjectName": "Class'WidgetAnimation'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "PutInAnim",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Transient | RepSkip",
+        "PropertyClass": {
+          "ObjectName": "Class'WidgetAnimation'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "AddClickBtn",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIButton'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "AddImage",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "C_ImagePanel",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'CanvasPanel'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "C_ReplaceableImage",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Fx01",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Fx01_1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "FxSwitcher",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'WidgetSwitcher'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "GamePadBtn",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIButton'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "GoodBaseIcon",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'GoodBaseIcon_C'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Common/GoodsItem/GoodBaseIcon.1"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ModeSwitcher",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'WidgetSwitcher'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "NewResult03_1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SelectImg",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "BindedKey",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "Enum": {
+          "ObjectName": "Enum'EUIGamepadKey'",
+          "ObjectPath": "/Script/UE_game"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      }
+    ],
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "EquipItemForForge_C'Default__EquipItemForForge_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.1"
+    }
+  },
+  {
+    "Type": "EquipItemForForge_C",
+    "Name": "Default__EquipItemForForge_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.EquipItemForForge_C'",
+    "Package": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge",
+    "Properties": {
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "C_ImagePanel",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipItemForForge_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.87"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'EquipItemForForge_C:WidgetTree.C_ImagePanel.CanvasPanelSlot_2'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.9"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'EquipItemForForge_C:WidgetTree.CanvasPanel_54.CanvasPanelSlot_5'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.19"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CandleCombineFx",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipItemForForge_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.87"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'EquipItemForForge_C:WidgetTree.CandleCombineFx.CanvasPanelSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.10"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'EquipItemForForge_C:WidgetTree.CandleCombineFx.CanvasPanelSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.11"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "WidgetSwitcherSlot'EquipItemForForge_C:WidgetTree.FxSwitcher.WidgetSwitcherSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.83"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipItemForForge_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.87"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'EquipItemForForge_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.12"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_35",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipItemForForge_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.87"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'EquipItemForForge_C:WidgetTree.CanvasPanel_35.CanvasPanelSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.13"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'EquipItemForForge_C:WidgetTree.CanvasPanel_35.CanvasPanelSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.14"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "WidgetSwitcherSlot'EquipItemForForge_C:WidgetTree.ModeSwitcher.WidgetSwitcherSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.86"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_54",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipItemForForge_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.87"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'EquipItemForForge_C:WidgetTree.CanvasPanel_54.CanvasPanelSlot_5'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.19"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'EquipItemForForge_C:WidgetTree.CanvasPanel_54.CanvasPanelSlot_2'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.16"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'EquipItemForForge_C:WidgetTree.CanvasPanel_54.CanvasPanelSlot_3'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.17"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'EquipItemForForge_C:WidgetTree.CanvasPanel_54.CanvasPanelSlot_4'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.18"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'EquipItemForForge_C:WidgetTree.CanvasPanel_54.CanvasPanelSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.15"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "WidgetSwitcherSlot'EquipItemForForge_C:WidgetTree.ModeSwitcher.WidgetSwitcherSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.85"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_98",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipItemForForge_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.87"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'EquipItemForForge_C:WidgetTree.CanvasPanel_98.CanvasPanelSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.20"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'EquipItemForForge_C:WidgetTree.CanvasPanel_98.CanvasPanelSlot_2'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.21"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "SizeBoxSlot'EquipItemForForge_C:WidgetTree.SizeBox_16.SizeBoxSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.69"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "DreamMakeFx",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipItemForForge_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.87"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'EquipItemForForge_C:WidgetTree.DreamMakeFx.CanvasPanelSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.22"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "WidgetSwitcherSlot'EquipItemForForge_C:WidgetTree.FxSwitcher.WidgetSwitcherSlot_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.84"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'EquipItemForForge_C:WidgetTree.C_ImagePanel'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.2"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 192.0,
+          "Bottom": 57.6
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'EquipItemForForge_C:WidgetTree.C_ImagePanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.2"
+      },
+      "Content": {
+        "ObjectName": "GoodBaseIcon_C'EquipItemForForge_C:WidgetTree.GoodBaseIcon'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.23"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'EquipItemForForge_C:WidgetTree.CandleCombineFx'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.3"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 307.19998,
+          "Bottom": 307.19998
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'EquipItemForForge_C:WidgetTree.CandleCombineFx'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.3"
+      },
+      "Content": {
+        "ObjectName": "UIImage'EquipItemForForge_C:WidgetTree.Fx01'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.74"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'EquipItemForForge_C:WidgetTree.CandleCombineFx'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.3"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 403.0843,
+          "Bottom": 393.28592
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "ZOrder": 11,
+      "Parent": {
+        "ObjectName": "CanvasPanel'EquipItemForForge_C:WidgetTree.CandleCombineFx'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.3"
+      },
+      "Content": {
+        "ObjectName": "UIImage'EquipItemForForge_C:WidgetTree.NewResult03_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.76"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'EquipItemForForge_C:WidgetTree.CanvasPanel_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.4"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 188.15999,
+          "Bottom": 188.15999
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'EquipItemForForge_C:WidgetTree.CanvasPanel_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.4"
+      },
+      "Content": {
+        "ObjectName": "SizeBox'EquipItemForForge_C:WidgetTree.SizeBox_16'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.68"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'EquipItemForForge_C:WidgetTree.CanvasPanel_35'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.5"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 192.0,
+          "Bottom": 57.6
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'EquipItemForForge_C:WidgetTree.CanvasPanel_35'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.5"
+      },
+      "Content": {
+        "ObjectName": "UIImage'EquipItemForForge_C:WidgetTree.AddImage'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.72"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'EquipItemForForge_C:WidgetTree.CanvasPanel_35'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.5"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "Anchors": {
+          "Maximum": {
+            "X": 1.0,
+            "Y": 1.0
+          }
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'EquipItemForForge_C:WidgetTree.CanvasPanel_35'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.5"
+      },
+      "Content": {
+        "ObjectName": "UIButton'EquipItemForForge_C:WidgetTree.AddClickBtn'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.70"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'EquipItemForForge_C:WidgetTree.CanvasPanel_54'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.6"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Top": 108.432526,
+          "Right": 0.96,
+          "Bottom": 0.96
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'EquipItemForForge_C:WidgetTree.CanvasPanel_54'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.6"
+      },
+      "Content": {
+        "ObjectName": "UIButton'EquipItemForForge_C:WidgetTree.GamePadBtn'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.71"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'EquipItemForForge_C:WidgetTree.CanvasPanel_54'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.6"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 192.0,
+          "Bottom": 57.6
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 1.0
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 1.0
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 1.0
+        }
+      },
+      "bAutoSize": true,
+      "ZOrder": 2,
+      "Parent": {
+        "ObjectName": "CanvasPanel'EquipItemForForge_C:WidgetTree.CanvasPanel_54'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.6"
+      },
+      "Content": {
+        "ObjectName": "UITextBlock'EquipItemForForge_C:WidgetTree.C_NumberText'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.78"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'EquipItemForForge_C:WidgetTree.CanvasPanel_54'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.6"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 19.199999,
+          "Top": 19.199999,
+          "Right": 192.0,
+          "Bottom": 57.6
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "Maximum": {
+            "X": 1.0,
+            "Y": 1.0
+          }
+        },
+        "Alignment": {
+          "X": 1.0,
+          "Y": 1.0
+        }
+      },
+      "bAutoSize": true,
+      "ZOrder": 3,
+      "Parent": {
+        "ObjectName": "CanvasPanel'EquipItemForForge_C:WidgetTree.CanvasPanel_54'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.6"
+      },
+      "Content": {
+        "ObjectName": "UIImage'EquipItemForForge_C:WidgetTree.C_ReplaceableImage'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.73"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_4",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'EquipItemForForge_C:WidgetTree.CanvasPanel_54'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.6"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 188.15999,
+          "Bottom": 188.15999
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'EquipItemForForge_C:WidgetTree.CanvasPanel_54'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.6"
+      },
+      "Content": {
+        "ObjectName": "WidgetSwitcher'EquipItemForForge_C:WidgetTree.FxSwitcher'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.81"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_5",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'EquipItemForForge_C:WidgetTree.CanvasPanel_54'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.6"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "Anchors": {
+          "Maximum": {
+            "X": 1.0,
+            "Y": 1.0
+          }
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'EquipItemForForge_C:WidgetTree.CanvasPanel_54'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.6"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'EquipItemForForge_C:WidgetTree.C_ImagePanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.2"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'EquipItemForForge_C:WidgetTree.CanvasPanel_98'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.7"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "Anchors": {
+          "Maximum": {
+            "X": 1.0,
+            "Y": 1.0
+          }
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'EquipItemForForge_C:WidgetTree.CanvasPanel_98'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.7"
+      },
+      "Content": {
+        "ObjectName": "WidgetSwitcher'EquipItemForForge_C:WidgetTree.ModeSwitcher'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.82"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'EquipItemForForge_C:WidgetTree.CanvasPanel_98'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.7"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 192.0,
+          "Bottom": 57.6
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "ZOrder": 10,
+      "Parent": {
+        "ObjectName": "CanvasPanel'EquipItemForForge_C:WidgetTree.CanvasPanel_98'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.7"
+      },
+      "Content": {
+        "ObjectName": "UIImage'EquipItemForForge_C:WidgetTree.SelectImg'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.77"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'EquipItemForForge_C:WidgetTree.DreamMakeFx'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.8"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 307.19998,
+          "Bottom": 307.19998
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'EquipItemForForge_C:WidgetTree.DreamMakeFx'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.8"
+      },
+      "Content": {
+        "ObjectName": "UIImage'EquipItemForForge_C:WidgetTree.Fx01_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.75"
+      }
+    }
+  },
+  {
+    "Type": "GoodBaseIcon_C",
+    "Name": "GoodBaseIcon",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'UE_game/Content/BluePrint/UI/Common/GoodsItem/GoodBaseIcon.GoodBaseIcon_C'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipItemForForge_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.87"
+    },
+    "Template": {
+      "ObjectName": "GoodBaseIcon_C'Default__GoodBaseIcon_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Common/GoodsItem/GoodBaseIcon.2"
+    },
+    "Properties": {
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'EquipItemForForge_C:WidgetTree.C_ImagePanel.CanvasPanelSlot_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.9"
+      }
+    }
+  },
+  {
+    "Type": "MovieScene",
+    "Name": "AddAnim",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene'",
+    "Outer": {
+      "ObjectName": "WidgetAnimation'EquipItemForForge_C:AddAnim_INST'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.79"
+    },
+    "Properties": {
+      "Possessables": [
+        {
+          "Tags": [],
+          "Guid": "AAE227F7-4AD1E12B-E6B4279E-208D19FD",
+          "Name": "Fx01",
+          "PossessedObjectClass": {
+            "ObjectName": "Class'UIImage'",
+            "ObjectPath": "/Script/UE_game"
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        },
+        {
+          "Tags": [],
+          "Guid": "75E8423E-4547DDF7-56146995-AC661737",
+          "Name": "NewResult03_1",
+          "PossessedObjectClass": {
+            "ObjectName": "Class'UIImage'",
+            "ObjectPath": "/Script/UE_game"
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        }
+      ],
+      "ObjectBindings": [
+        {
+          "ObjectGuid": "AAE227F7-4AD1E12B-E6B4279E-208D19FD",
+          "BindingName": "Fx01",
+          "Tracks": [
+            {
+              "ObjectName": "MovieSceneFloatTrack'EquipItemForForge_C:AddAnim_INST.AddAnim.MovieSceneFloatTrack_0'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.61"
+            },
+            {
+              "ObjectName": "MovieScene2DTransformTrack'EquipItemForForge_C:AddAnim_INST.AddAnim.MovieScene2DTransformTrack_1'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.32"
+            }
+          ]
+        },
+        {
+          "ObjectGuid": "75E8423E-4547DDF7-56146995-AC661737",
+          "BindingName": "NewResult03_1",
+          "Tracks": [
+            {
+              "ObjectName": "MovieSceneFloatTrack'EquipItemForForge_C:AddAnim_INST.AddAnim.MovieSceneFloatTrack_1'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.62"
+            },
+            {
+              "ObjectName": "MovieSceneWidgetMaterialTrack'EquipItemForForge_C:AddAnim_INST.AddAnim.MovieSceneWidgetMaterialTrack_0'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.66"
+            },
+            {
+              "ObjectName": "MovieScene2DTransformTrack'EquipItemForForge_C:AddAnim_INST.AddAnim.MovieScene2DTransformTrack_0'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.31"
+            }
+          ]
+        }
+      ],
+      "PlaybackRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 32000
+            }
+          }
+        }
+      },
+      "DisplayRate": {
+        "Numerator": 30
+      },
+      "Signature": "623DBD42-4FEE92B1-51A12AAF-B04E4D96"
+    }
+  },
+  {
+    "Type": "MovieScene",
+    "Name": "PutInAnim",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene'",
+    "Outer": {
+      "ObjectName": "WidgetAnimation'EquipItemForForge_C:PutInAnim_INST'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.80"
+    },
+    "Properties": {
+      "Possessables": [
+        {
+          "Tags": [],
+          "Guid": "AE956950-496927FE-7DD96EAD-8D702FC4",
+          "Name": "C_ClickButton",
+          "PossessedObjectClass": {
+            "ObjectName": "Class'UIButton'",
+            "ObjectPath": "/Script/UE_game"
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        },
+        {
+          "Tags": [],
+          "Guid": "E9F69DF1-471893BB-75738290-65F2324D",
+          "Name": "Fx01",
+          "PossessedObjectClass": {
+            "ObjectName": "Class'UIImage'",
+            "ObjectPath": "/Script/UE_game"
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        },
+        {
+          "Tags": [],
+          "Guid": "6379D547-43CE002B-C4657196-2BF16AF1",
+          "Name": "Fx01_1",
+          "PossessedObjectClass": {
+            "ObjectName": "Class'UIImage'",
+            "ObjectPath": "/Script/UE_game"
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        }
+      ],
+      "ObjectBindings": [
+        {
+          "ObjectGuid": "AE956950-496927FE-7DD96EAD-8D702FC4",
+          "BindingName": "C_ClickButton",
+          "Tracks": [
+            {
+              "ObjectName": "MovieScene2DTransformTrack'EquipItemForForge_C:PutInAnim_INST.PutInAnim.MovieScene2DTransformTrack_0'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.33"
+            }
+          ]
+        },
+        {
+          "ObjectGuid": "E9F69DF1-471893BB-75738290-65F2324D",
+          "BindingName": "Fx01",
+          "Tracks": [
+            {
+              "ObjectName": "MovieSceneFloatTrack'EquipItemForForge_C:PutInAnim_INST.PutInAnim.MovieSceneFloatTrack_0'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.63"
+            },
+            {
+              "ObjectName": "MovieScene2DTransformTrack'EquipItemForForge_C:PutInAnim_INST.PutInAnim.MovieScene2DTransformTrack_1'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.34"
+            }
+          ]
+        },
+        {
+          "ObjectGuid": "6379D547-43CE002B-C4657196-2BF16AF1",
+          "BindingName": "Fx01_1",
+          "Tracks": [
+            {
+              "ObjectName": "MovieScene2DTransformTrack'EquipItemForForge_C:PutInAnim_INST.PutInAnim.MovieScene2DTransformTrack_2'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.35"
+            },
+            {
+              "ObjectName": "MovieSceneWidgetMaterialTrack'EquipItemForForge_C:PutInAnim_INST.PutInAnim.MovieSceneWidgetMaterialTrack_0'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.67"
+            }
+          ]
+        }
+      ],
+      "PlaybackRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 32000
+            }
+          }
+        }
+      },
+      "DisplayRate": {
+        "Numerator": 30
+      },
+      "Signature": "A557EA42-42F8928E-77D5CCB7-C778A2B3"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformSection",
+    "Name": "MovieScene2DTransformSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene2DTransformSection'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformTrack'EquipItemForForge_C:AddAnim_INST.AddAnim.MovieScene2DTransformTrack_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.31"
+    },
+    "Properties": {
+      "Translation": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 2000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Translation[1]": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 2000
+          },
+          {
+            "Value": 30000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": -0.001685037,
+              "LeaveTangent": -0.001685037,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 1
+          },
+          {
+            "Value": -40.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Scale": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 30000
+          },
+          {
+            "Value": 32000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Scale[1]": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 2000
+          },
+          {
+            "Value": 30000
+          },
+          {
+            "Value": 32000
+          }
+        ],
+        "Values": [
+          {
+            "Value": -1.0,
+            "Tangent": {
+              "ArriveTangent": -4.1625382E-05,
+              "LeaveTangent": -4.1625382E-05,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 1
+          },
+          {
+            "Value": -1.45,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'EquipItemForForge_C:AddAnim_INST.AddAnim.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0.EaseInFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.36"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'EquipItemForForge_C:AddAnim_INST.AddAnim.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0.EaseOutFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.37"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 32000
+            }
+          }
+        }
+      },
+      "Signature": "B93209B8-4099158D-B359D780-1C6C9658"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformSection",
+    "Name": "MovieScene2DTransformSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene2DTransformSection'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformTrack'EquipItemForForge_C:AddAnim_INST.AddAnim.MovieScene2DTransformTrack_1'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.32"
+    },
+    "Properties": {
+      "Scale": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 30000
+          },
+          {
+            "Value": 32000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Scale[1]": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 30000
+          },
+          {
+            "Value": 32000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'EquipItemForForge_C:AddAnim_INST.AddAnim.MovieScene2DTransformTrack_1.MovieScene2DTransformSection_0.EaseInFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.38"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'EquipItemForForge_C:AddAnim_INST.AddAnim.MovieScene2DTransformTrack_1.MovieScene2DTransformSection_0.EaseOutFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.39"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 32000
+            }
+          }
+        }
+      },
+      "Signature": "AF1AC36B-4C83EF3E-6E238383-9F87A12D"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformSection",
+    "Name": "MovieScene2DTransformSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene2DTransformSection'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformTrack'EquipItemForForge_C:PutInAnim_INST.PutInAnim.MovieScene2DTransformTrack_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.33"
+    },
+    "Properties": {
+      "Scale": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 10000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 1.7,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Scale[1]": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 10000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 1.7,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'EquipItemForForge_C:PutInAnim_INST.PutInAnim.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0.EaseInFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.46"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'EquipItemForForge_C:PutInAnim_INST.PutInAnim.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0.EaseOutFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.47"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 31999
+            }
+          }
+        }
+      },
+      "Signature": "F3BF7538-47534A49-22B8859B-22A4B4E1"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformSection",
+    "Name": "MovieScene2DTransformSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene2DTransformSection'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformTrack'EquipItemForForge_C:PutInAnim_INST.PutInAnim.MovieScene2DTransformTrack_1'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.34"
+    },
+    "Properties": {
+      "Scale": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 28000
+          },
+          {
+            "Value": 30000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Scale[1]": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 28000
+          },
+          {
+            "Value": 30000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'EquipItemForForge_C:PutInAnim_INST.PutInAnim.MovieScene2DTransformTrack_1.MovieScene2DTransformSection_0.EaseInFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.48"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'EquipItemForForge_C:PutInAnim_INST.PutInAnim.MovieScene2DTransformTrack_1.MovieScene2DTransformSection_0.EaseOutFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.49"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 32000
+            }
+          }
+        }
+      },
+      "Signature": "09B96060-4F7AE113-6D4DEAB9-68A35F4A"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformSection",
+    "Name": "MovieScene2DTransformSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene2DTransformSection'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformTrack'EquipItemForForge_C:PutInAnim_INST.PutInAnim.MovieScene2DTransformTrack_2'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.35"
+    },
+    "Properties": {
+      "Scale": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 8000
+          },
+          {
+            "Value": 30000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 1.0500001,
+            "Tangent": {
+              "ArriveTangent": 4.726543E-05,
+              "LeaveTangent": 4.726543E-05,
+              "ArriveTangentWeight": 0.27673343,
+              "LeaveTangentWeight": 0.27673343,
+              "TangentWeightMode": 3
+            },
+            "InterpMode": 2,
+            "TangentMode": 1
+          },
+          {
+            "Value": 1.4000001,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Scale[1]": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 8000
+          },
+          {
+            "Value": 30000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 1.0500001,
+            "Tangent": {
+              "ArriveTangent": 4.726543E-05,
+              "LeaveTangent": 4.726543E-05,
+              "ArriveTangentWeight": 0.27673343,
+              "LeaveTangentWeight": 0.27673343,
+              "TangentWeightMode": 3
+            },
+            "InterpMode": 2,
+            "TangentMode": 1
+          },
+          {
+            "Value": 1.4000001,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'EquipItemForForge_C:PutInAnim_INST.PutInAnim.MovieScene2DTransformTrack_2.MovieScene2DTransformSection_0.EaseInFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.50"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'EquipItemForForge_C:PutInAnim_INST.PutInAnim.MovieScene2DTransformTrack_2.MovieScene2DTransformSection_0.EaseOutFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.51"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 32000
+            }
+          }
+        }
+      },
+      "Signature": "85A2AC81-41E57E65-A3E8A2A1-76D8A860"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformTrack",
+    "Name": "MovieScene2DTransformTrack_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene2DTransformTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'EquipItemForForge_C:AddAnim_INST.AddAnim'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.24"
+    },
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderTransform",
+        "PropertyPath": "RenderTransform",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieScene2DTransformSection'EquipItemForForge_C:AddAnim_INST.AddAnim.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.26"
+        }
+      ],
+      "EvaluationFieldGuid": "23B970AB-4ACF00A9-5BC1F796-183DF892",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieScene2DTransformSection'EquipItemForForge_C:AddAnim_INST.AddAnim.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.26"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 32000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "23B970AB-4ACF00A9-5BC1F796-183DF892"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformTrack",
+    "Name": "MovieScene2DTransformTrack_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene2DTransformTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'EquipItemForForge_C:AddAnim_INST.AddAnim'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.24"
+    },
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderTransform",
+        "PropertyPath": "RenderTransform",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieScene2DTransformSection'EquipItemForForge_C:AddAnim_INST.AddAnim.MovieScene2DTransformTrack_1.MovieScene2DTransformSection_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.27"
+        }
+      ],
+      "EvaluationFieldGuid": "5CF4A58B-404C7399-621BBAB0-644B2775",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieScene2DTransformSection'EquipItemForForge_C:AddAnim_INST.AddAnim.MovieScene2DTransformTrack_1.MovieScene2DTransformSection_0'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.27"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 32000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "5CF4A58B-404C7399-621BBAB0-644B2775"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformTrack",
+    "Name": "MovieScene2DTransformTrack_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene2DTransformTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'EquipItemForForge_C:PutInAnim_INST.PutInAnim'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.25"
+    },
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderTransform",
+        "PropertyPath": "RenderTransform",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieScene2DTransformSection'EquipItemForForge_C:PutInAnim_INST.PutInAnim.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.28"
+        }
+      ],
+      "EvaluationFieldGuid": "10C686FC-4D90A94C-9E2E2F92-7D868C91",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieScene2DTransformSection'EquipItemForForge_C:PutInAnim_INST.PutInAnim.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.28"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Exclusive",
+                "Value": {
+                  "Value": 31999
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "10C686FC-4D90A94C-9E2E2F92-7D868C91"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformTrack",
+    "Name": "MovieScene2DTransformTrack_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene2DTransformTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'EquipItemForForge_C:PutInAnim_INST.PutInAnim'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.25"
+    },
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderTransform",
+        "PropertyPath": "RenderTransform",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieScene2DTransformSection'EquipItemForForge_C:PutInAnim_INST.PutInAnim.MovieScene2DTransformTrack_1.MovieScene2DTransformSection_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.29"
+        }
+      ],
+      "EvaluationFieldGuid": "F35282A2-46F79532-DE0984AF-5D2BC74D",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieScene2DTransformSection'EquipItemForForge_C:PutInAnim_INST.PutInAnim.MovieScene2DTransformTrack_1.MovieScene2DTransformSection_0'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.29"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Exclusive",
+                "Value": {
+                  "Value": 32000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "F35282A2-46F79532-DE0984AF-5D2BC74D"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformTrack",
+    "Name": "MovieScene2DTransformTrack_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene2DTransformTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'EquipItemForForge_C:PutInAnim_INST.PutInAnim'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.25"
+    },
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderTransform",
+        "PropertyPath": "RenderTransform",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieScene2DTransformSection'EquipItemForForge_C:PutInAnim_INST.PutInAnim.MovieScene2DTransformTrack_2.MovieScene2DTransformSection_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.30"
+        }
+      ],
+      "EvaluationFieldGuid": "166BA693-48C3B031-15A583B0-72FA3C5D",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieScene2DTransformSection'EquipItemForForge_C:PutInAnim_INST.PutInAnim.MovieScene2DTransformTrack_2.MovieScene2DTransformSection_0'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.30"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Exclusive",
+                "Value": {
+                  "Value": 32000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "166BA693-48C3B031-15A583B0-72FA3C5D"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformSection'EquipItemForForge_C:AddAnim_INST.AddAnim.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.26"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformSection'EquipItemForForge_C:AddAnim_INST.AddAnim.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.26"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformSection'EquipItemForForge_C:AddAnim_INST.AddAnim.MovieScene2DTransformTrack_1.MovieScene2DTransformSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.27"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformSection'EquipItemForForge_C:AddAnim_INST.AddAnim.MovieScene2DTransformTrack_1.MovieScene2DTransformSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.27"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatSection'EquipItemForForge_C:AddAnim_INST.AddAnim.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.58"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatSection'EquipItemForForge_C:AddAnim_INST.AddAnim.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.58"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatSection'EquipItemForForge_C:AddAnim_INST.AddAnim.MovieSceneFloatTrack_1.MovieSceneFloatSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.59"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatSection'EquipItemForForge_C:AddAnim_INST.AddAnim.MovieSceneFloatTrack_1.MovieSceneFloatSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.59"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneParameterSection'EquipItemForForge_C:AddAnim_INST.AddAnim.MovieSceneWidgetMaterialTrack_0.MovieSceneParameterSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.64"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneParameterSection'EquipItemForForge_C:AddAnim_INST.AddAnim.MovieSceneWidgetMaterialTrack_0.MovieSceneParameterSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.64"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformSection'EquipItemForForge_C:PutInAnim_INST.PutInAnim.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.28"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformSection'EquipItemForForge_C:PutInAnim_INST.PutInAnim.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.28"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformSection'EquipItemForForge_C:PutInAnim_INST.PutInAnim.MovieScene2DTransformTrack_1.MovieScene2DTransformSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.29"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformSection'EquipItemForForge_C:PutInAnim_INST.PutInAnim.MovieScene2DTransformTrack_1.MovieScene2DTransformSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.29"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformSection'EquipItemForForge_C:PutInAnim_INST.PutInAnim.MovieScene2DTransformTrack_2.MovieScene2DTransformSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.30"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformSection'EquipItemForForge_C:PutInAnim_INST.PutInAnim.MovieScene2DTransformTrack_2.MovieScene2DTransformSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.30"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatSection'EquipItemForForge_C:PutInAnim_INST.PutInAnim.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.60"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatSection'EquipItemForForge_C:PutInAnim_INST.PutInAnim.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.60"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneParameterSection'EquipItemForForge_C:PutInAnim_INST.PutInAnim.MovieSceneWidgetMaterialTrack_0.MovieSceneParameterSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.65"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneParameterSection'EquipItemForForge_C:PutInAnim_INST.PutInAnim.MovieSceneWidgetMaterialTrack_0.MovieSceneParameterSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.65"
+    }
+  },
+  {
+    "Type": "MovieSceneCompiledData",
+    "Name": "CompiledData",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneCompiledData'",
+    "Outer": {
+      "ObjectName": "WidgetAnimation'EquipItemForForge_C:AddAnim_INST'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.79"
+    },
+    "Properties": {
+      "EvaluationTemplate": {
+        "Tracks": [
+          {
+            "Key": {
+              "Value": 0
+            },
+            "Value": {
+              "ObjectBindingID": "75E8423E-4547DDF7-56146995-AC661737",
+              "EvaluationPriority": 1000,
+              "EvaluationMethod": "EEvaluationMethod::Static",
+              "SourceTrack": {
+                "ObjectName": "MovieSceneWidgetMaterialTrack'EquipItemForForge_C:AddAnim_INST.AddAnim.MovieSceneWidgetMaterialTrack_0'",
+                "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.66"
+              },
+              "ChildTemplates": [
+                {
+                  "TypeName": "/Script/UMG.MovieSceneWidgetMaterialSectionTemplate",
+                  "Data": {
+                    "BrushPropertyNamePath": [
+                      "Brush"
+                    ],
+                    "Scalars": [
+                      {
+                        "ParameterName": "TransV_3",
+                        "ParameterCurve": {
+                          "PreInfinityExtrap": "RCCE_Constant",
+                          "PostInfinityExtrap": "RCCE_Constant",
+                          "Times": [
+                            {
+                              "Value": 2000
+                            },
+                            {
+                              "Value": 30000
+                            }
+                          ],
+                          "Values": [
+                            {
+                              "Value": 0.0,
+                              "Tangent": {
+                                "ArriveTangent": -2.2991091E-05,
+                                "LeaveTangent": -2.2991091E-05,
+                                "ArriveTangentWeight": 0.0,
+                                "LeaveTangentWeight": 0.0,
+                                "TangentWeightMode": 0
+                              },
+                              "InterpMode": 2,
+                              "TangentMode": 1
+                            },
+                            {
+                              "Value": -0.29999998,
+                              "Tangent": {
+                                "ArriveTangent": 0.0,
+                                "LeaveTangent": 0.0,
+                                "ArriveTangentWeight": 0.0,
+                                "LeaveTangentWeight": 0.0,
+                                "TangentWeightMode": 0
+                              },
+                              "InterpMode": 2,
+                              "TangentMode": 0
+                            }
+                          ],
+                          "DefaultValue": 0.0,
+                          "bHasDefaultValue": false,
+                          "TickResolution": {
+                            "Numerator": 60000,
+                            "Denominator": 1
+                          },
+                          "bShowCurve": false,
+                          "StructFallback": null
+                        }
+                      },
+                      {
+                        "ParameterName": "TransV_4",
+                        "ParameterCurve": {
+                          "PreInfinityExtrap": "RCCE_Constant",
+                          "PostInfinityExtrap": "RCCE_Constant",
+                          "Times": [
+                            {
+                              "Value": 2000
+                            },
+                            {
+                              "Value": 30000
+                            }
+                          ],
+                          "Values": [
+                            {
+                              "Value": 0.5,
+                              "Tangent": {
+                                "ArriveTangent": -1.7605053E-05,
+                                "LeaveTangent": -1.7605053E-05,
+                                "ArriveTangentWeight": 0.0,
+                                "LeaveTangentWeight": 0.0,
+                                "TangentWeightMode": 0
+                              },
+                              "InterpMode": 2,
+                              "TangentMode": 1
+                            },
+                            {
+                              "Value": 0.3,
+                              "Tangent": {
+                                "ArriveTangent": 0.0,
+                                "LeaveTangent": 0.0,
+                                "ArriveTangentWeight": 0.0,
+                                "LeaveTangentWeight": 0.0,
+                                "TangentWeightMode": 0
+                              },
+                              "InterpMode": 2,
+                              "TangentMode": 0
+                            }
+                          ],
+                          "DefaultValue": 0.0,
+                          "bHasDefaultValue": false,
+                          "TickResolution": {
+                            "Numerator": 60000,
+                            "Denominator": 1
+                          },
+                          "bShowCurve": false,
+                          "StructFallback": null
+                        }
+                      }
+                    ],
+                    "Bools": [],
+                    "Vector2Ds": [],
+                    "Vectors": [],
+                    "Colors": [],
+                    "Transforms": [],
+                    "CompletionMode": "EMovieSceneCompletionMode::KeepState",
+                    "SourceSectionPtr": {
+                      "ObjectName": "MovieSceneParameterSection'EquipItemForForge_C:AddAnim_INST.AddAnim.MovieSceneWidgetMaterialTrack_0.MovieSceneParameterSection_0'",
+                      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.64"
+                    }
+                  }
+                }
+              ],
+              "TrackTemplate": {
+                "TypeName": "",
+                "Data": null
+              },
+              "EvaluationGroup": "None",
+              "bEvaluateInPreroll": false,
+              "bEvaluateInPostroll": false,
+              "bTearDownPriority": false
+            }
+          }
+        ],
+        "TemplateLedger": {
+          "LastTrackIdentifier": {
+            "Value": 0
+          },
+          "TrackSignatureToTrackIdentifier": [
+            {
+              "Key": "418595FF-40C61CA4-C8C7158E-A8D30E45",
+              "Value": {
+                "Value": 0
+              }
+            }
+          ]
+        }
+      },
+      "EntityComponentField": {
+        "PersistentEntityTree": {
+          "SerializedData": {
+            "Data": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 4,
+                  "Capacity": 4
+                },
+                {
+                  "StartIndex": 4,
+                  "Size": 2,
+                  "Capacity": 2
+                }
+              ],
+              "Items": [
+                {
+                  "EntityIndex": 0,
+                  "MetaDataIndex": -1
+                },
+                {
+                  "EntityIndex": 1,
+                  "MetaDataIndex": -1
+                },
+                {
+                  "EntityIndex": 2,
+                  "MetaDataIndex": -1
+                },
+                {
+                  "EntityIndex": 3,
+                  "MetaDataIndex": -1
+                },
+                {
+                  "EntityIndex": 1,
+                  "MetaDataIndex": -1
+                },
+                {
+                  "EntityIndex": 3,
+                  "MetaDataIndex": -1
+                }
+              ]
+            },
+            "RootNode": {
+              "Range": {
+                "LowerBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                },
+                "UpperBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                }
+              },
+              "Parent": {
+                "ChildrenHandle": {
+                  "EntryIndex": -1
+                },
+                "Index": -1
+              },
+              "ChildrenID": {
+                "EntryIndex": 0
+              },
+              "DataID": {
+                "EntryIndex": -1
+              }
+            },
+            "ChildNodes": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 2,
+                  "Capacity": 2
+                }
+              ],
+              "Items": [
+                {
+                  "Range": {
+                    "LowerBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 0
+                      }
+                    },
+                    "UpperBound": {
+                      "Type": 0,
+                      "Value": {
+                        "Value": 32000
+                      }
+                    }
+                  },
+                  "Parent": {
+                    "ChildrenHandle": {
+                      "EntryIndex": -1
+                    },
+                    "Index": 0
+                  },
+                  "ChildrenID": {
+                    "EntryIndex": -1
+                  },
+                  "DataID": {
+                    "EntryIndex": 0
+                  }
+                },
+                {
+                  "Range": {
+                    "LowerBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 32000
+                      }
+                    },
+                    "UpperBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 32000
+                      }
+                    }
+                  },
+                  "Parent": {
+                    "ChildrenHandle": {
+                      "EntryIndex": -1
+                    },
+                    "Index": 0
+                  },
+                  "ChildrenID": {
+                    "EntryIndex": -1
+                  },
+                  "DataID": {
+                    "EntryIndex": 1
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "Entities": [
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieSceneFloatSection'EquipItemForForge_C:AddAnim_INST.AddAnim.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+                "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.58"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 0
+          },
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieScene2DTransformSection'EquipItemForForge_C:AddAnim_INST.AddAnim.MovieScene2DTransformTrack_1.MovieScene2DTransformSection_0'",
+                "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.27"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 1
+          },
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieSceneFloatSection'EquipItemForForge_C:AddAnim_INST.AddAnim.MovieSceneFloatTrack_1.MovieSceneFloatSection_0'",
+                "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.59"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 2
+          },
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieScene2DTransformSection'EquipItemForForge_C:AddAnim_INST.AddAnim.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0'",
+                "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.26"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 3
+          }
+        ],
+        "SharedMetaData": [
+          {
+            "ObjectBindingID": "AAE227F7-4AD1E12B-E6B4279E-208D19FD"
+          },
+          {
+            "ObjectBindingID": "AAE227F7-4AD1E12B-E6B4279E-208D19FD"
+          },
+          {
+            "ObjectBindingID": "75E8423E-4547DDF7-56146995-AC661737"
+          },
+          {
+            "ObjectBindingID": "75E8423E-4547DDF7-56146995-AC661737"
+          }
+        ]
+      },
+      "TrackTemplateField": {
+        "Ranges": [
+          {
+            "Value": {
+              "LowerBound": {
+                "Type": 2,
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": 0,
+                "Value": {
+                  "Value": 0
+                }
+              }
+            }
+          },
+          {
+            "Value": {
+              "LowerBound": {
+                "Type": 1,
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": 0,
+                "Value": {
+                  "Value": 32000
+                }
+              }
+            }
+          },
+          {
+            "Value": {
+              "LowerBound": {
+                "Type": 1,
+                "Value": {
+                  "Value": 32000
+                }
+              },
+              "UpperBound": {
+                "Type": 2,
+                "Value": {
+                  "Value": 0
+                }
+              }
+            }
+          }
+        ],
+        "Groups": [
+          {
+            "LUTIndices": [],
+            "TrackLUT": [],
+            "SectionLUT": []
+          },
+          {
+            "LUTIndices": [
+              {
+                "NumInitPtrs": 0,
+                "NumEvalPtrs": 1
+              }
+            ],
+            "TrackLUT": [
+              {
+                "TrackPtr": {
+                  "SequenceID": {
+                    "Value": 0
+                  },
+                  "TrackIdentifier": {
+                    "Value": 0
+                  }
+                },
+                "NumChildren": 1
+              }
+            ],
+            "SectionLUT": [
+              {
+                "ChildIndex": 0,
+                "Flags": "ESectionEvaluationFlags::None",
+                "ForcedTime": {
+                  "Value": -2147483648
+                }
+              }
+            ]
+          },
+          {
+            "LUTIndices": [],
+            "TrackLUT": [],
+            "SectionLUT": []
+          }
+        ],
+        "MetaData": [
+          {
+            "ActiveSequences": [
+              {
+                "Value": 0
+              }
+            ],
+            "ActiveEntities": []
+          },
+          {
+            "ActiveSequences": [
+              {
+                "Value": 0
+              }
+            ],
+            "ActiveEntities": [
+              {
+                "Key": {
+                  "SequenceID": {
+                    "Value": 0
+                  },
+                  "TrackIdentifier": {
+                    "Value": 0
+                  },
+                  "SectionIndex": 0
+                },
+                "SetupIndex": 0,
+                "TearDownIndex": 65535
+              }
+            ]
+          },
+          {
+            "ActiveSequences": [
+              {
+                "Value": 0
+              }
+            ],
+            "ActiveEntities": []
+          }
+        ]
+      },
+      "CompiledSignature": "8DF7CE72-4D48215A-A954B5BA-0DB861DA",
+      "CompilerVersion": "7D4B9809-2FAC4A6B-964ECF72-D8279EF8",
+      "AccumulatedMask": {
+        "bEvaluationTemplate": true,
+        "bEvaluationTemplateField": true,
+        "bEntityComponentField": true
+      },
+      "AllocatedMask": {
+        "bEvaluationTemplate": true,
+        "bEvaluationTemplateField": true,
+        "bEntityComponentField": true
+      }
+    }
+  },
+  {
+    "Type": "MovieSceneCompiledData",
+    "Name": "CompiledData",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneCompiledData'",
+    "Outer": {
+      "ObjectName": "WidgetAnimation'EquipItemForForge_C:PutInAnim_INST'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.80"
+    },
+    "Properties": {
+      "EvaluationTemplate": {
+        "Tracks": [
+          {
+            "Key": {
+              "Value": 0
+            },
+            "Value": {
+              "ObjectBindingID": "6379D547-43CE002B-C4657196-2BF16AF1",
+              "EvaluationPriority": 1000,
+              "EvaluationMethod": "EEvaluationMethod::Static",
+              "SourceTrack": {
+                "ObjectName": "MovieSceneWidgetMaterialTrack'EquipItemForForge_C:PutInAnim_INST.PutInAnim.MovieSceneWidgetMaterialTrack_0'",
+                "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.67"
+              },
+              "ChildTemplates": [
+                {
+                  "TypeName": "/Script/UMG.MovieSceneWidgetMaterialSectionTemplate",
+                  "Data": {
+                    "BrushPropertyNamePath": [
+                      "Brush"
+                    ],
+                    "Scalars": [
+                      {
+                        "ParameterName": "AlpahValue",
+                        "ParameterCurve": {
+                          "PreInfinityExtrap": "RCCE_Constant",
+                          "PostInfinityExtrap": "RCCE_Constant",
+                          "Times": [
+                            {
+                              "Value": 6000
+                            },
+                            {
+                              "Value": 8000
+                            },
+                            {
+                              "Value": 30000
+                            }
+                          ],
+                          "Values": [
+                            {
+                              "Value": 0.0,
+                              "Tangent": {
+                                "ArriveTangent": 0.0,
+                                "LeaveTangent": 0.0,
+                                "ArriveTangentWeight": 0.0,
+                                "LeaveTangentWeight": 0.0,
+                                "TangentWeightMode": 0
+                              },
+                              "InterpMode": 2,
+                              "TangentMode": 0
+                            },
+                            {
+                              "Value": 1.0,
+                              "Tangent": {
+                                "ArriveTangent": -0.0001139724,
+                                "LeaveTangent": -0.0001139724,
+                                "ArriveTangentWeight": 0.0,
+                                "LeaveTangentWeight": 0.0,
+                                "TangentWeightMode": 0
+                              },
+                              "InterpMode": 2,
+                              "TangentMode": 1
+                            },
+                            {
+                              "Value": 0.0,
+                              "Tangent": {
+                                "ArriveTangent": 0.0,
+                                "LeaveTangent": 0.0,
+                                "ArriveTangentWeight": 0.0,
+                                "LeaveTangentWeight": 0.0,
+                                "TangentWeightMode": 0
+                              },
+                              "InterpMode": 2,
+                              "TangentMode": 0
+                            }
+                          ],
+                          "DefaultValue": 0.0,
+                          "bHasDefaultValue": false,
+                          "TickResolution": {
+                            "Numerator": 60000,
+                            "Denominator": 1
+                          },
+                          "bShowCurve": false,
+                          "StructFallback": null
+                        }
+                      }
+                    ],
+                    "Bools": [],
+                    "Vector2Ds": [],
+                    "Vectors": [],
+                    "Colors": [
+                      {
+                        "ParameterName": "WaveTexUV",
+                        "RedCurve": {
+                          "PreInfinityExtrap": "RCCE_Constant",
+                          "PostInfinityExtrap": "RCCE_Constant",
+                          "Times": [
+                            {
+                              "Value": 8000
+                            }
+                          ],
+                          "Values": [
+                            {
+                              "Value": 2.0,
+                              "Tangent": {
+                                "ArriveTangent": 0.0,
+                                "LeaveTangent": 0.0,
+                                "ArriveTangentWeight": 0.0,
+                                "LeaveTangentWeight": 0.0,
+                                "TangentWeightMode": 0
+                              },
+                              "InterpMode": 2,
+                              "TangentMode": 0
+                            }
+                          ],
+                          "DefaultValue": 0.0,
+                          "bHasDefaultValue": false,
+                          "TickResolution": {
+                            "Numerator": 60000,
+                            "Denominator": 1
+                          },
+                          "bShowCurve": false,
+                          "StructFallback": null
+                        },
+                        "GreenCurve": {
+                          "PreInfinityExtrap": "RCCE_Constant",
+                          "PostInfinityExtrap": "RCCE_Constant",
+                          "Times": [
+                            {
+                              "Value": 8000
+                            }
+                          ],
+                          "Values": [
+                            {
+                              "Value": 0.7,
+                              "Tangent": {
+                                "ArriveTangent": 0.0,
+                                "LeaveTangent": 0.0,
+                                "ArriveTangentWeight": 0.0,
+                                "LeaveTangentWeight": 0.0,
+                                "TangentWeightMode": 0
+                              },
+                              "InterpMode": 2,
+                              "TangentMode": 0
+                            }
+                          ],
+                          "DefaultValue": 0.0,
+                          "bHasDefaultValue": false,
+                          "TickResolution": {
+                            "Numerator": 60000,
+                            "Denominator": 1
+                          },
+                          "bShowCurve": false,
+                          "StructFallback": null
+                        },
+                        "BlueCurve": {
+                          "PreInfinityExtrap": "RCCE_Constant",
+                          "PostInfinityExtrap": "RCCE_Constant",
+                          "Times": [
+                            {
+                              "Value": 8000
+                            },
+                            {
+                              "Value": 30000
+                            }
+                          ],
+                          "Values": [
+                            {
+                              "Value": 0.087500006,
+                              "Tangent": {
+                                "ArriveTangent": 0.00015550328,
+                                "LeaveTangent": 0.00015550328,
+                                "ArriveTangentWeight": 0.274095,
+                                "LeaveTangentWeight": 0.274095,
+                                "TangentWeightMode": 3
+                              },
+                              "InterpMode": 2,
+                              "TangentMode": 1
+                            },
+                            {
+                              "Value": 0.41,
+                              "Tangent": {
+                                "ArriveTangent": 0.0,
+                                "LeaveTangent": 0.0,
+                                "ArriveTangentWeight": 0.0,
+                                "LeaveTangentWeight": 0.0,
+                                "TangentWeightMode": 0
+                              },
+                              "InterpMode": 2,
+                              "TangentMode": 0
+                            }
+                          ],
+                          "DefaultValue": 0.0,
+                          "bHasDefaultValue": false,
+                          "TickResolution": {
+                            "Numerator": 60000,
+                            "Denominator": 1
+                          },
+                          "bShowCurve": false,
+                          "StructFallback": null
+                        },
+                        "AlphaCurve": {
+                          "PreInfinityExtrap": "RCCE_Constant",
+                          "PostInfinityExtrap": "RCCE_Constant",
+                          "Times": [
+                            {
+                              "Value": 8000
+                            },
+                            {
+                              "Value": 30000
+                            }
+                          ],
+                          "Values": [
+                            {
+                              "Value": 0.08749999,
+                              "Tangent": {
+                                "ArriveTangent": -4.8624875E-05,
+                                "LeaveTangent": -4.8624875E-05,
+                                "ArriveTangentWeight": 0.11666587,
+                                "LeaveTangentWeight": 0.11666587,
+                                "TangentWeightMode": 3
+                              },
+                              "InterpMode": 2,
+                              "TangentMode": 1
+                            },
+                            {
+                              "Value": -0.024999995,
+                              "Tangent": {
+                                "ArriveTangent": 0.0,
+                                "LeaveTangent": 0.0,
+                                "ArriveTangentWeight": 0.0,
+                                "LeaveTangentWeight": 0.0,
+                                "TangentWeightMode": 0
+                              },
+                              "InterpMode": 2,
+                              "TangentMode": 0
+                            }
+                          ],
+                          "DefaultValue": 0.0,
+                          "bHasDefaultValue": false,
+                          "TickResolution": {
+                            "Numerator": 60000,
+                            "Denominator": 1
+                          },
+                          "bShowCurve": false,
+                          "StructFallback": null
+                        }
+                      },
+                      {
+                        "ParameterName": "AlpahTexUV",
+                        "RedCurve": {
+                          "PreInfinityExtrap": "RCCE_Constant",
+                          "PostInfinityExtrap": "RCCE_Constant",
+                          "Times": [
+                            {
+                              "Value": 8000
+                            }
+                          ],
+                          "Values": [
+                            {
+                              "Value": 0.5,
+                              "Tangent": {
+                                "ArriveTangent": 0.0,
+                                "LeaveTangent": 0.0,
+                                "ArriveTangentWeight": 0.0,
+                                "LeaveTangentWeight": 0.0,
+                                "TangentWeightMode": 0
+                              },
+                              "InterpMode": 2,
+                              "TangentMode": 0
+                            }
+                          ],
+                          "DefaultValue": 0.0,
+                          "bHasDefaultValue": false,
+                          "TickResolution": {
+                            "Numerator": 60000,
+                            "Denominator": 1
+                          },
+                          "bShowCurve": false,
+                          "StructFallback": null
+                        },
+                        "GreenCurve": {
+                          "PreInfinityExtrap": "RCCE_Constant",
+                          "PostInfinityExtrap": "RCCE_Constant",
+                          "Times": [
+                            {
+                              "Value": 8000
+                            }
+                          ],
+                          "Values": [
+                            {
+                              "Value": 0.2,
+                              "Tangent": {
+                                "ArriveTangent": 0.0,
+                                "LeaveTangent": 0.0,
+                                "ArriveTangentWeight": 0.0,
+                                "LeaveTangentWeight": 0.0,
+                                "TangentWeightMode": 0
+                              },
+                              "InterpMode": 2,
+                              "TangentMode": 0
+                            }
+                          ],
+                          "DefaultValue": 0.0,
+                          "bHasDefaultValue": false,
+                          "TickResolution": {
+                            "Numerator": 60000,
+                            "Denominator": 1
+                          },
+                          "bShowCurve": false,
+                          "StructFallback": null
+                        },
+                        "BlueCurve": {
+                          "PreInfinityExtrap": "RCCE_Constant",
+                          "PostInfinityExtrap": "RCCE_Constant",
+                          "Times": [
+                            {
+                              "Value": 8000
+                            }
+                          ],
+                          "Values": [
+                            {
+                              "Value": 0.0,
+                              "Tangent": {
+                                "ArriveTangent": 0.0,
+                                "LeaveTangent": 0.0,
+                                "ArriveTangentWeight": 0.0,
+                                "LeaveTangentWeight": 0.0,
+                                "TangentWeightMode": 0
+                              },
+                              "InterpMode": 2,
+                              "TangentMode": 0
+                            }
+                          ],
+                          "DefaultValue": 0.0,
+                          "bHasDefaultValue": false,
+                          "TickResolution": {
+                            "Numerator": 60000,
+                            "Denominator": 1
+                          },
+                          "bShowCurve": false,
+                          "StructFallback": null
+                        },
+                        "AlphaCurve": {
+                          "PreInfinityExtrap": "RCCE_Constant",
+                          "PostInfinityExtrap": "RCCE_Constant",
+                          "Times": [
+                            {
+                              "Value": 8000
+                            },
+                            {
+                              "Value": 30000
+                            }
+                          ],
+                          "Values": [
+                            {
+                              "Value": 0.36714098,
+                              "Tangent": {
+                                "ArriveTangent": 0.0,
+                                "LeaveTangent": 0.0,
+                                "ArriveTangentWeight": 0.0,
+                                "LeaveTangentWeight": 0.0,
+                                "TangentWeightMode": 0
+                              },
+                              "InterpMode": 2,
+                              "TangentMode": 0
+                            },
+                            {
+                              "Value": 0.237141,
+                              "Tangent": {
+                                "ArriveTangent": 0.0,
+                                "LeaveTangent": 0.0,
+                                "ArriveTangentWeight": 0.0,
+                                "LeaveTangentWeight": 0.0,
+                                "TangentWeightMode": 0
+                              },
+                              "InterpMode": 2,
+                              "TangentMode": 0
+                            }
+                          ],
+                          "DefaultValue": 0.0,
+                          "bHasDefaultValue": false,
+                          "TickResolution": {
+                            "Numerator": 60000,
+                            "Denominator": 1
+                          },
+                          "bShowCurve": false,
+                          "StructFallback": null
+                        }
+                      }
+                    ],
+                    "Transforms": [],
+                    "CompletionMode": "EMovieSceneCompletionMode::KeepState",
+                    "SourceSectionPtr": {
+                      "ObjectName": "MovieSceneParameterSection'EquipItemForForge_C:PutInAnim_INST.PutInAnim.MovieSceneWidgetMaterialTrack_0.MovieSceneParameterSection_0'",
+                      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.65"
+                    }
+                  }
+                }
+              ],
+              "TrackTemplate": {
+                "TypeName": "",
+                "Data": null
+              },
+              "EvaluationGroup": "None",
+              "bEvaluateInPreroll": false,
+              "bEvaluateInPostroll": false,
+              "bTearDownPriority": false
+            }
+          }
+        ],
+        "TemplateLedger": {
+          "LastTrackIdentifier": {
+            "Value": 0
+          },
+          "TrackSignatureToTrackIdentifier": [
+            {
+              "Key": "08C0666E-46410DCE-214BF5BE-767229A5",
+              "Value": {
+                "Value": 0
+              }
+            }
+          ]
+        }
+      },
+      "EntityComponentField": {
+        "PersistentEntityTree": {
+          "SerializedData": {
+            "Data": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 4,
+                  "Capacity": 4
+                },
+                {
+                  "StartIndex": 4,
+                  "Size": 2,
+                  "Capacity": 2
+                }
+              ],
+              "Items": [
+                {
+                  "EntityIndex": 0,
+                  "MetaDataIndex": -1
+                },
+                {
+                  "EntityIndex": 1,
+                  "MetaDataIndex": -1
+                },
+                {
+                  "EntityIndex": 2,
+                  "MetaDataIndex": -1
+                },
+                {
+                  "EntityIndex": 3,
+                  "MetaDataIndex": -1
+                },
+                {
+                  "EntityIndex": 2,
+                  "MetaDataIndex": -1
+                },
+                {
+                  "EntityIndex": 3,
+                  "MetaDataIndex": -1
+                }
+              ]
+            },
+            "RootNode": {
+              "Range": {
+                "LowerBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                },
+                "UpperBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                }
+              },
+              "Parent": {
+                "ChildrenHandle": {
+                  "EntryIndex": -1
+                },
+                "Index": -1
+              },
+              "ChildrenID": {
+                "EntryIndex": 0
+              },
+              "DataID": {
+                "EntryIndex": -1
+              }
+            },
+            "ChildNodes": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 2,
+                  "Capacity": 2
+                }
+              ],
+              "Items": [
+                {
+                  "Range": {
+                    "LowerBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 0
+                      }
+                    },
+                    "UpperBound": {
+                      "Type": 0,
+                      "Value": {
+                        "Value": 31999
+                      }
+                    }
+                  },
+                  "Parent": {
+                    "ChildrenHandle": {
+                      "EntryIndex": -1
+                    },
+                    "Index": 0
+                  },
+                  "ChildrenID": {
+                    "EntryIndex": -1
+                  },
+                  "DataID": {
+                    "EntryIndex": 0
+                  }
+                },
+                {
+                  "Range": {
+                    "LowerBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 31999
+                      }
+                    },
+                    "UpperBound": {
+                      "Type": 0,
+                      "Value": {
+                        "Value": 32000
+                      }
+                    }
+                  },
+                  "Parent": {
+                    "ChildrenHandle": {
+                      "EntryIndex": -1
+                    },
+                    "Index": 0
+                  },
+                  "ChildrenID": {
+                    "EntryIndex": -1
+                  },
+                  "DataID": {
+                    "EntryIndex": 1
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "Entities": [
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieScene2DTransformSection'EquipItemForForge_C:PutInAnim_INST.PutInAnim.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0'",
+                "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.28"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 0
+          },
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieSceneFloatSection'EquipItemForForge_C:PutInAnim_INST.PutInAnim.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+                "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.60"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 1
+          },
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieScene2DTransformSection'EquipItemForForge_C:PutInAnim_INST.PutInAnim.MovieScene2DTransformTrack_1.MovieScene2DTransformSection_0'",
+                "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.29"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 2
+          },
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieScene2DTransformSection'EquipItemForForge_C:PutInAnim_INST.PutInAnim.MovieScene2DTransformTrack_2.MovieScene2DTransformSection_0'",
+                "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.30"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 3
+          }
+        ],
+        "SharedMetaData": [
+          {
+            "ObjectBindingID": "AE956950-496927FE-7DD96EAD-8D702FC4"
+          },
+          {
+            "ObjectBindingID": "E9F69DF1-471893BB-75738290-65F2324D"
+          },
+          {
+            "ObjectBindingID": "E9F69DF1-471893BB-75738290-65F2324D"
+          },
+          {
+            "ObjectBindingID": "6379D547-43CE002B-C4657196-2BF16AF1"
+          }
+        ]
+      },
+      "TrackTemplateField": {
+        "Ranges": [
+          {
+            "Value": {
+              "LowerBound": {
+                "Type": 2,
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": 0,
+                "Value": {
+                  "Value": 0
+                }
+              }
+            }
+          },
+          {
+            "Value": {
+              "LowerBound": {
+                "Type": 1,
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": 0,
+                "Value": {
+                  "Value": 32000
+                }
+              }
+            }
+          },
+          {
+            "Value": {
+              "LowerBound": {
+                "Type": 1,
+                "Value": {
+                  "Value": 32000
+                }
+              },
+              "UpperBound": {
+                "Type": 2,
+                "Value": {
+                  "Value": 0
+                }
+              }
+            }
+          }
+        ],
+        "Groups": [
+          {
+            "LUTIndices": [],
+            "TrackLUT": [],
+            "SectionLUT": []
+          },
+          {
+            "LUTIndices": [
+              {
+                "NumInitPtrs": 0,
+                "NumEvalPtrs": 1
+              }
+            ],
+            "TrackLUT": [
+              {
+                "TrackPtr": {
+                  "SequenceID": {
+                    "Value": 0
+                  },
+                  "TrackIdentifier": {
+                    "Value": 0
+                  }
+                },
+                "NumChildren": 1
+              }
+            ],
+            "SectionLUT": [
+              {
+                "ChildIndex": 0,
+                "Flags": "ESectionEvaluationFlags::None",
+                "ForcedTime": {
+                  "Value": -2147483648
+                }
+              }
+            ]
+          },
+          {
+            "LUTIndices": [],
+            "TrackLUT": [],
+            "SectionLUT": []
+          }
+        ],
+        "MetaData": [
+          {
+            "ActiveSequences": [
+              {
+                "Value": 0
+              }
+            ],
+            "ActiveEntities": []
+          },
+          {
+            "ActiveSequences": [
+              {
+                "Value": 0
+              }
+            ],
+            "ActiveEntities": [
+              {
+                "Key": {
+                  "SequenceID": {
+                    "Value": 0
+                  },
+                  "TrackIdentifier": {
+                    "Value": 0
+                  },
+                  "SectionIndex": 0
+                },
+                "SetupIndex": 0,
+                "TearDownIndex": 65535
+              }
+            ]
+          },
+          {
+            "ActiveSequences": [
+              {
+                "Value": 0
+              }
+            ],
+            "ActiveEntities": []
+          }
+        ]
+      },
+      "CompiledSignature": "085EA638-4563F61A-D7BC69B8-030F8E2F",
+      "CompilerVersion": "7D4B9809-2FAC4A6B-964ECF72-D8279EF8",
+      "AccumulatedMask": {
+        "bEvaluationTemplate": true,
+        "bEvaluationTemplateField": true,
+        "bEntityComponentField": true
+      },
+      "AllocatedMask": {
+        "bEvaluationTemplate": true,
+        "bEvaluationTemplateField": true,
+        "bEntityComponentField": true
+      }
+    }
+  },
+  {
+    "Type": "MovieSceneFloatSection",
+    "Name": "MovieSceneFloatSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneFloatSection'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatTrack'EquipItemForForge_C:AddAnim_INST.AddAnim.MovieSceneFloatTrack_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.61"
+    },
+    "Properties": {
+      "FloatCurve": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 4000
+          },
+          {
+            "Value": 30000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'EquipItemForForge_C:AddAnim_INST.AddAnim.MovieSceneFloatTrack_0.MovieSceneFloatSection_0.EaseInFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.40"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'EquipItemForForge_C:AddAnim_INST.AddAnim.MovieSceneFloatTrack_0.MovieSceneFloatSection_0.EaseOutFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.41"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 32000
+            }
+          }
+        }
+      },
+      "Signature": "EFDBCBB6-422C9764-0B72EFB9-4BDDCF5E"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatSection",
+    "Name": "MovieSceneFloatSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneFloatSection'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatTrack'EquipItemForForge_C:AddAnim_INST.AddAnim.MovieSceneFloatTrack_1'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.62"
+    },
+    "Properties": {
+      "FloatCurve": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 2000
+          },
+          {
+            "Value": 30000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'EquipItemForForge_C:AddAnim_INST.AddAnim.MovieSceneFloatTrack_1.MovieSceneFloatSection_0.EaseInFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.42"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'EquipItemForForge_C:AddAnim_INST.AddAnim.MovieSceneFloatTrack_1.MovieSceneFloatSection_0.EaseOutFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.43"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 32000
+            }
+          }
+        }
+      },
+      "Signature": "2E686BDF-46159DD9-EE2FBB9E-1334B9E2"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatSection",
+    "Name": "MovieSceneFloatSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneFloatSection'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatTrack'EquipItemForForge_C:PutInAnim_INST.PutInAnim.MovieSceneFloatTrack_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.63"
+    },
+    "Properties": {
+      "FloatCurve": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 6000
+          },
+          {
+            "Value": 10000
+          },
+          {
+            "Value": 28000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'EquipItemForForge_C:PutInAnim_INST.PutInAnim.MovieSceneFloatTrack_0.MovieSceneFloatSection_0.EaseInFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.52"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'EquipItemForForge_C:PutInAnim_INST.PutInAnim.MovieSceneFloatTrack_0.MovieSceneFloatSection_0.EaseOutFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.53"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 31999
+            }
+          }
+        }
+      },
+      "Signature": "73CBD0EF-4EC406CA-8E23329C-6794D2BC"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatTrack",
+    "Name": "MovieSceneFloatTrack_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneFloatTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'EquipItemForForge_C:AddAnim_INST.AddAnim'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.24"
+    },
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderOpacity",
+        "PropertyPath": "RenderOpacity",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneFloatSection'EquipItemForForge_C:AddAnim_INST.AddAnim.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.58"
+        }
+      ],
+      "EvaluationFieldGuid": "921A67F7-47332040-30AC2DAB-798D6C5B",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneFloatSection'EquipItemForForge_C:AddAnim_INST.AddAnim.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.58"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Exclusive",
+                "Value": {
+                  "Value": 32000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "921A67F7-47332040-30AC2DAB-798D6C5B"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatTrack",
+    "Name": "MovieSceneFloatTrack_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneFloatTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'EquipItemForForge_C:AddAnim_INST.AddAnim'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.24"
+    },
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderOpacity",
+        "PropertyPath": "RenderOpacity",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneFloatSection'EquipItemForForge_C:AddAnim_INST.AddAnim.MovieSceneFloatTrack_1.MovieSceneFloatSection_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.59"
+        }
+      ],
+      "EvaluationFieldGuid": "2D346DEE-4522D382-17442392-EF3FC2DB",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneFloatSection'EquipItemForForge_C:AddAnim_INST.AddAnim.MovieSceneFloatTrack_1.MovieSceneFloatSection_0'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.59"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Exclusive",
+                "Value": {
+                  "Value": 32000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "2D346DEE-4522D382-17442392-EF3FC2DB"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatTrack",
+    "Name": "MovieSceneFloatTrack_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneFloatTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'EquipItemForForge_C:PutInAnim_INST.PutInAnim'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.25"
+    },
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderOpacity",
+        "PropertyPath": "RenderOpacity",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneFloatSection'EquipItemForForge_C:PutInAnim_INST.PutInAnim.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.60"
+        }
+      ],
+      "EvaluationFieldGuid": "33F52B95-4A0ACBE2-8AE3C3BB-A7A3B5F5",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneFloatSection'EquipItemForForge_C:PutInAnim_INST.PutInAnim.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.60"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Exclusive",
+                "Value": {
+                  "Value": 31999
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "33F52B95-4A0ACBE2-8AE3C3BB-A7A3B5F5"
+    }
+  },
+  {
+    "Type": "MovieSceneParameterSection",
+    "Name": "MovieSceneParameterSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneParameterSection'",
+    "Outer": {
+      "ObjectName": "MovieSceneWidgetMaterialTrack'EquipItemForForge_C:AddAnim_INST.AddAnim.MovieSceneWidgetMaterialTrack_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.66"
+    },
+    "Properties": {
+      "ScalarParameterNamesAndCurves": [
+        {
+          "ParameterName": "TransV_3",
+          "ParameterCurve": {
+            "PreInfinityExtrap": "RCCE_Constant",
+            "PostInfinityExtrap": "RCCE_Constant",
+            "Times": [
+              {
+                "Value": 2000
+              },
+              {
+                "Value": 30000
+              }
+            ],
+            "Values": [
+              {
+                "Value": 0.0,
+                "Tangent": {
+                  "ArriveTangent": -2.2991091E-05,
+                  "LeaveTangent": -2.2991091E-05,
+                  "ArriveTangentWeight": 0.0,
+                  "LeaveTangentWeight": 0.0,
+                  "TangentWeightMode": 0
+                },
+                "InterpMode": 2,
+                "TangentMode": 1
+              },
+              {
+                "Value": -0.29999998,
+                "Tangent": {
+                  "ArriveTangent": 0.0,
+                  "LeaveTangent": 0.0,
+                  "ArriveTangentWeight": 0.0,
+                  "LeaveTangentWeight": 0.0,
+                  "TangentWeightMode": 0
+                },
+                "InterpMode": 2,
+                "TangentMode": 0
+              }
+            ],
+            "DefaultValue": 0.0,
+            "bHasDefaultValue": false,
+            "TickResolution": {
+              "Numerator": 60000,
+              "Denominator": 1
+            },
+            "bShowCurve": false,
+            "StructFallback": null
+          }
+        },
+        {
+          "ParameterName": "TransV_4",
+          "ParameterCurve": {
+            "PreInfinityExtrap": "RCCE_Constant",
+            "PostInfinityExtrap": "RCCE_Constant",
+            "Times": [
+              {
+                "Value": 2000
+              },
+              {
+                "Value": 30000
+              }
+            ],
+            "Values": [
+              {
+                "Value": 0.5,
+                "Tangent": {
+                  "ArriveTangent": -1.7605053E-05,
+                  "LeaveTangent": -1.7605053E-05,
+                  "ArriveTangentWeight": 0.0,
+                  "LeaveTangentWeight": 0.0,
+                  "TangentWeightMode": 0
+                },
+                "InterpMode": 2,
+                "TangentMode": 1
+              },
+              {
+                "Value": 0.3,
+                "Tangent": {
+                  "ArriveTangent": 0.0,
+                  "LeaveTangent": 0.0,
+                  "ArriveTangentWeight": 0.0,
+                  "LeaveTangentWeight": 0.0,
+                  "TangentWeightMode": 0
+                },
+                "InterpMode": 2,
+                "TangentMode": 0
+              }
+            ],
+            "DefaultValue": 0.0,
+            "bHasDefaultValue": false,
+            "TickResolution": {
+              "Numerator": 60000,
+              "Denominator": 1
+            },
+            "bShowCurve": false,
+            "StructFallback": null
+          }
+        }
+      ],
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'EquipItemForForge_C:AddAnim_INST.AddAnim.MovieSceneWidgetMaterialTrack_0.MovieSceneParameterSection_0.EaseInFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.44"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'EquipItemForForge_C:AddAnim_INST.AddAnim.MovieSceneWidgetMaterialTrack_0.MovieSceneParameterSection_0.EaseOutFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.45"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 32000
+            }
+          }
+        }
+      },
+      "Signature": "EDA7EA5F-43782B83-BCCA21AE-5F565C1A"
+    }
+  },
+  {
+    "Type": "MovieSceneParameterSection",
+    "Name": "MovieSceneParameterSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneParameterSection'",
+    "Outer": {
+      "ObjectName": "MovieSceneWidgetMaterialTrack'EquipItemForForge_C:PutInAnim_INST.PutInAnim.MovieSceneWidgetMaterialTrack_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.67"
+    },
+    "Properties": {
+      "ScalarParameterNamesAndCurves": [
+        {
+          "ParameterName": "AlpahValue",
+          "ParameterCurve": {
+            "PreInfinityExtrap": "RCCE_Constant",
+            "PostInfinityExtrap": "RCCE_Constant",
+            "Times": [
+              {
+                "Value": 6000
+              },
+              {
+                "Value": 8000
+              },
+              {
+                "Value": 30000
+              }
+            ],
+            "Values": [
+              {
+                "Value": 0.0,
+                "Tangent": {
+                  "ArriveTangent": 0.0,
+                  "LeaveTangent": 0.0,
+                  "ArriveTangentWeight": 0.0,
+                  "LeaveTangentWeight": 0.0,
+                  "TangentWeightMode": 0
+                },
+                "InterpMode": 2,
+                "TangentMode": 0
+              },
+              {
+                "Value": 1.0,
+                "Tangent": {
+                  "ArriveTangent": -0.0001139724,
+                  "LeaveTangent": -0.0001139724,
+                  "ArriveTangentWeight": 0.0,
+                  "LeaveTangentWeight": 0.0,
+                  "TangentWeightMode": 0
+                },
+                "InterpMode": 2,
+                "TangentMode": 1
+              },
+              {
+                "Value": 0.0,
+                "Tangent": {
+                  "ArriveTangent": 0.0,
+                  "LeaveTangent": 0.0,
+                  "ArriveTangentWeight": 0.0,
+                  "LeaveTangentWeight": 0.0,
+                  "TangentWeightMode": 0
+                },
+                "InterpMode": 2,
+                "TangentMode": 0
+              }
+            ],
+            "DefaultValue": 0.0,
+            "bHasDefaultValue": false,
+            "TickResolution": {
+              "Numerator": 60000,
+              "Denominator": 1
+            },
+            "bShowCurve": false,
+            "StructFallback": null
+          }
+        }
+      ],
+      "ColorParameterNamesAndCurves": [
+        {
+          "ParameterName": "WaveTexUV",
+          "RedCurve": {
+            "PreInfinityExtrap": "RCCE_Constant",
+            "PostInfinityExtrap": "RCCE_Constant",
+            "Times": [
+              {
+                "Value": 8000
+              }
+            ],
+            "Values": [
+              {
+                "Value": 2.0,
+                "Tangent": {
+                  "ArriveTangent": 0.0,
+                  "LeaveTangent": 0.0,
+                  "ArriveTangentWeight": 0.0,
+                  "LeaveTangentWeight": 0.0,
+                  "TangentWeightMode": 0
+                },
+                "InterpMode": 2,
+                "TangentMode": 0
+              }
+            ],
+            "DefaultValue": 0.0,
+            "bHasDefaultValue": false,
+            "TickResolution": {
+              "Numerator": 60000,
+              "Denominator": 1
+            },
+            "bShowCurve": false,
+            "StructFallback": null
+          },
+          "GreenCurve": {
+            "PreInfinityExtrap": "RCCE_Constant",
+            "PostInfinityExtrap": "RCCE_Constant",
+            "Times": [
+              {
+                "Value": 8000
+              }
+            ],
+            "Values": [
+              {
+                "Value": 0.7,
+                "Tangent": {
+                  "ArriveTangent": 0.0,
+                  "LeaveTangent": 0.0,
+                  "ArriveTangentWeight": 0.0,
+                  "LeaveTangentWeight": 0.0,
+                  "TangentWeightMode": 0
+                },
+                "InterpMode": 2,
+                "TangentMode": 0
+              }
+            ],
+            "DefaultValue": 0.0,
+            "bHasDefaultValue": false,
+            "TickResolution": {
+              "Numerator": 60000,
+              "Denominator": 1
+            },
+            "bShowCurve": false,
+            "StructFallback": null
+          },
+          "BlueCurve": {
+            "PreInfinityExtrap": "RCCE_Constant",
+            "PostInfinityExtrap": "RCCE_Constant",
+            "Times": [
+              {
+                "Value": 8000
+              },
+              {
+                "Value": 30000
+              }
+            ],
+            "Values": [
+              {
+                "Value": 0.087500006,
+                "Tangent": {
+                  "ArriveTangent": 0.00015550328,
+                  "LeaveTangent": 0.00015550328,
+                  "ArriveTangentWeight": 0.274095,
+                  "LeaveTangentWeight": 0.274095,
+                  "TangentWeightMode": 3
+                },
+                "InterpMode": 2,
+                "TangentMode": 1
+              },
+              {
+                "Value": 0.41,
+                "Tangent": {
+                  "ArriveTangent": 0.0,
+                  "LeaveTangent": 0.0,
+                  "ArriveTangentWeight": 0.0,
+                  "LeaveTangentWeight": 0.0,
+                  "TangentWeightMode": 0
+                },
+                "InterpMode": 2,
+                "TangentMode": 0
+              }
+            ],
+            "DefaultValue": 0.0,
+            "bHasDefaultValue": false,
+            "TickResolution": {
+              "Numerator": 60000,
+              "Denominator": 1
+            },
+            "bShowCurve": false,
+            "StructFallback": null
+          },
+          "AlphaCurve": {
+            "PreInfinityExtrap": "RCCE_Constant",
+            "PostInfinityExtrap": "RCCE_Constant",
+            "Times": [
+              {
+                "Value": 8000
+              },
+              {
+                "Value": 30000
+              }
+            ],
+            "Values": [
+              {
+                "Value": 0.08749999,
+                "Tangent": {
+                  "ArriveTangent": -4.8624875E-05,
+                  "LeaveTangent": -4.8624875E-05,
+                  "ArriveTangentWeight": 0.11666587,
+                  "LeaveTangentWeight": 0.11666587,
+                  "TangentWeightMode": 3
+                },
+                "InterpMode": 2,
+                "TangentMode": 1
+              },
+              {
+                "Value": -0.024999995,
+                "Tangent": {
+                  "ArriveTangent": 0.0,
+                  "LeaveTangent": 0.0,
+                  "ArriveTangentWeight": 0.0,
+                  "LeaveTangentWeight": 0.0,
+                  "TangentWeightMode": 0
+                },
+                "InterpMode": 2,
+                "TangentMode": 0
+              }
+            ],
+            "DefaultValue": 0.0,
+            "bHasDefaultValue": false,
+            "TickResolution": {
+              "Numerator": 60000,
+              "Denominator": 1
+            },
+            "bShowCurve": false,
+            "StructFallback": null
+          }
+        },
+        {
+          "ParameterName": "AlpahTexUV",
+          "RedCurve": {
+            "PreInfinityExtrap": "RCCE_Constant",
+            "PostInfinityExtrap": "RCCE_Constant",
+            "Times": [
+              {
+                "Value": 8000
+              }
+            ],
+            "Values": [
+              {
+                "Value": 0.5,
+                "Tangent": {
+                  "ArriveTangent": 0.0,
+                  "LeaveTangent": 0.0,
+                  "ArriveTangentWeight": 0.0,
+                  "LeaveTangentWeight": 0.0,
+                  "TangentWeightMode": 0
+                },
+                "InterpMode": 2,
+                "TangentMode": 0
+              }
+            ],
+            "DefaultValue": 0.0,
+            "bHasDefaultValue": false,
+            "TickResolution": {
+              "Numerator": 60000,
+              "Denominator": 1
+            },
+            "bShowCurve": false,
+            "StructFallback": null
+          },
+          "GreenCurve": {
+            "PreInfinityExtrap": "RCCE_Constant",
+            "PostInfinityExtrap": "RCCE_Constant",
+            "Times": [
+              {
+                "Value": 8000
+              }
+            ],
+            "Values": [
+              {
+                "Value": 0.2,
+                "Tangent": {
+                  "ArriveTangent": 0.0,
+                  "LeaveTangent": 0.0,
+                  "ArriveTangentWeight": 0.0,
+                  "LeaveTangentWeight": 0.0,
+                  "TangentWeightMode": 0
+                },
+                "InterpMode": 2,
+                "TangentMode": 0
+              }
+            ],
+            "DefaultValue": 0.0,
+            "bHasDefaultValue": false,
+            "TickResolution": {
+              "Numerator": 60000,
+              "Denominator": 1
+            },
+            "bShowCurve": false,
+            "StructFallback": null
+          },
+          "BlueCurve": {
+            "PreInfinityExtrap": "RCCE_Constant",
+            "PostInfinityExtrap": "RCCE_Constant",
+            "Times": [
+              {
+                "Value": 8000
+              }
+            ],
+            "Values": [
+              {
+                "Value": 0.0,
+                "Tangent": {
+                  "ArriveTangent": 0.0,
+                  "LeaveTangent": 0.0,
+                  "ArriveTangentWeight": 0.0,
+                  "LeaveTangentWeight": 0.0,
+                  "TangentWeightMode": 0
+                },
+                "InterpMode": 2,
+                "TangentMode": 0
+              }
+            ],
+            "DefaultValue": 0.0,
+            "bHasDefaultValue": false,
+            "TickResolution": {
+              "Numerator": 60000,
+              "Denominator": 1
+            },
+            "bShowCurve": false,
+            "StructFallback": null
+          },
+          "AlphaCurve": {
+            "PreInfinityExtrap": "RCCE_Constant",
+            "PostInfinityExtrap": "RCCE_Constant",
+            "Times": [
+              {
+                "Value": 8000
+              },
+              {
+                "Value": 30000
+              }
+            ],
+            "Values": [
+              {
+                "Value": 0.36714098,
+                "Tangent": {
+                  "ArriveTangent": 0.0,
+                  "LeaveTangent": 0.0,
+                  "ArriveTangentWeight": 0.0,
+                  "LeaveTangentWeight": 0.0,
+                  "TangentWeightMode": 0
+                },
+                "InterpMode": 2,
+                "TangentMode": 0
+              },
+              {
+                "Value": 0.237141,
+                "Tangent": {
+                  "ArriveTangent": 0.0,
+                  "LeaveTangent": 0.0,
+                  "ArriveTangentWeight": 0.0,
+                  "LeaveTangentWeight": 0.0,
+                  "TangentWeightMode": 0
+                },
+                "InterpMode": 2,
+                "TangentMode": 0
+              }
+            ],
+            "DefaultValue": 0.0,
+            "bHasDefaultValue": false,
+            "TickResolution": {
+              "Numerator": 60000,
+              "Denominator": 1
+            },
+            "bShowCurve": false,
+            "StructFallback": null
+          }
+        }
+      ],
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'EquipItemForForge_C:PutInAnim_INST.PutInAnim.MovieSceneWidgetMaterialTrack_0.MovieSceneParameterSection_0.EaseInFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.54"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'EquipItemForForge_C:PutInAnim_INST.PutInAnim.MovieSceneWidgetMaterialTrack_0.MovieSceneParameterSection_0.EaseOutFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.55"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 32000
+            }
+          }
+        }
+      },
+      "Signature": "4BB8B8B7-4CE6685B-BCCFA080-5E3AA056"
+    }
+  },
+  {
+    "Type": "MovieSceneWidgetMaterialTrack",
+    "Name": "MovieSceneWidgetMaterialTrack_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneWidgetMaterialTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'EquipItemForForge_C:AddAnim_INST.AddAnim'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.24"
+    },
+    "Properties": {
+      "BrushPropertyNamePath": [
+        "Brush"
+      ],
+      "TrackName": "Brush",
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneParameterSection'EquipItemForForge_C:AddAnim_INST.AddAnim.MovieSceneWidgetMaterialTrack_0.MovieSceneParameterSection_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.64"
+        }
+      ],
+      "EvaluationFieldGuid": "418595FF-40C61CA4-C8C7158E-A8D30E45",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneParameterSection'EquipItemForForge_C:AddAnim_INST.AddAnim.MovieSceneWidgetMaterialTrack_0.MovieSceneParameterSection_0'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.64"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Exclusive",
+                "Value": {
+                  "Value": 32000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "418595FF-40C61CA4-C8C7158E-A8D30E45"
+    }
+  },
+  {
+    "Type": "MovieSceneWidgetMaterialTrack",
+    "Name": "MovieSceneWidgetMaterialTrack_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneWidgetMaterialTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'EquipItemForForge_C:PutInAnim_INST.PutInAnim'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.25"
+    },
+    "Properties": {
+      "BrushPropertyNamePath": [
+        "Brush"
+      ],
+      "TrackName": "Brush",
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneParameterSection'EquipItemForForge_C:PutInAnim_INST.PutInAnim.MovieSceneWidgetMaterialTrack_0.MovieSceneParameterSection_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.65"
+        }
+      ],
+      "EvaluationFieldGuid": "08C0666E-46410DCE-214BF5BE-767229A5",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneParameterSection'EquipItemForForge_C:PutInAnim_INST.PutInAnim.MovieSceneWidgetMaterialTrack_0.MovieSceneParameterSection_0'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.65"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Exclusive",
+                "Value": {
+                  "Value": 32000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "08C0666E-46410DCE-214BF5BE-767229A5"
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SizeBox_16",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipItemForForge_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.87"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot'EquipItemForForge_C:WidgetTree.SizeBox_16.SizeBoxSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.69"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'EquipItemForForge_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.12"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBoxSlot'",
+    "Outer": {
+      "ObjectName": "SizeBox'EquipItemForForge_C:WidgetTree.SizeBox_16'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.68"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "SizeBox'EquipItemForForge_C:WidgetTree.SizeBox_16'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.68"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'EquipItemForForge_C:WidgetTree.CanvasPanel_98'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.7"
+      }
+    }
+  },
+  {
+    "Type": "UIButton",
+    "Name": "AddClickBtn",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIButton'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipItemForForge_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.87"
+    },
+    "Properties": {
+      "IconImage": {
+        "ImageSize": {
+          "X": 61.44,
+          "Y": 61.44
+        }
+      },
+      "WidgetStyle": {
+        "Normal": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          },
+          "DrawAs": "ESlateBrushDrawType::NoDrawType"
+        },
+        "Hovered": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          },
+          "DrawAs": "ESlateBrushDrawType::NoDrawType"
+        },
+        "Pressed": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          },
+          "DrawAs": "ESlateBrushDrawType::NoDrawType"
+        },
+        "NormalPadding": {
+          "Left": 0.0,
+          "Top": 0.0,
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "PressedPadding": {
+          "Left": 0.0,
+          "Top": 0.0,
+          "Right": 0.0,
+          "Bottom": 0.0
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'EquipItemForForge_C:WidgetTree.CanvasPanel_35.CanvasPanelSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.14"
+      }
+    }
+  },
+  {
+    "Type": "UIButton",
+    "Name": "GamePadBtn",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIButton'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipItemForForge_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.87"
+    },
+    "Properties": {
+      "IconImage": {
+        "ImageSize": {
+          "X": 61.44,
+          "Y": 61.44
+        }
+      },
+      "WidgetStyle": {
+        "Normal": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          },
+          "DrawAs": "ESlateBrushDrawType::NoDrawType"
+        },
+        "Hovered": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          },
+          "DrawAs": "ESlateBrushDrawType::NoDrawType"
+        },
+        "Pressed": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          },
+          "DrawAs": "ESlateBrushDrawType::NoDrawType"
+        },
+        "NormalPadding": {
+          "Left": 0.0,
+          "Top": 0.0,
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "PressedPadding": {
+          "Left": 0.0,
+          "Top": 0.0,
+          "Right": 0.0,
+          "Bottom": 0.0
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'EquipItemForForge_C:WidgetTree.CanvasPanel_54.CanvasPanelSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.15"
+      }
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "AddImage",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipItemForForge_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.87"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/TexturesAtlas/TalentBlockS7/Atlas/UI_TalentBlockS7_Btn_Add_Sprite.UI_TalentBlockS7_Btn_Add_Sprite",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 188.15999,
+          "Y": 188.15999
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'EquipItemForForge_C:WidgetTree.CanvasPanel_35.CanvasPanelSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.13"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "C_ReplaceableImage",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipItemForForge_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.87"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/Textures/Forge/NoAtlas/UI_Forge_AffixIcon03.UI_Forge_AffixIcon03",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 72.96,
+          "Y": 76.799995
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'EquipItemForForge_C:WidgetTree.CanvasPanel_54.CanvasPanelSlot_3'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.17"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "Fx01",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipItemForForge_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.87"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/UIEffect/UIMaterial/Inst/Fx/Icon/UI_MI_Icon08.UI_MI_Icon08",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 61.44,
+          "Y": 61.44
+        }
+      },
+      "ColorAndOpacity": {
+        "R": 0.140704,
+        "G": 1.0,
+        "B": 0.561667,
+        "A": 1.0,
+        "Hex": "69FFC6"
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'EquipItemForForge_C:WidgetTree.CandleCombineFx.CanvasPanelSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.10"
+      },
+      "RenderTransform": {
+        "Scale": {
+          "X": 0.0,
+          "Y": 0.0
+        }
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible",
+      "RenderOpacity": 0.0
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "Fx01_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipItemForForge_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.87"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/UIEffect/UIMaterial/Inst/DreamMake/UI_MI_DreamMake65.UI_MI_DreamMake65",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 61.44,
+          "Y": 61.44
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'EquipItemForForge_C:WidgetTree.DreamMakeFx.CanvasPanelSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.22"
+      },
+      "RenderTransform": {
+        "Scale": {
+          "X": 0.0,
+          "Y": 0.0
+        }
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "NewResult03_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipItemForForge_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.87"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/UIEffect/UIMaterial/Inst/CandleCombine/UI_MI_CandleCombine01.UI_MI_CandleCombine01",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 184.31999,
+          "Y": 184.31999
+        },
+        "Margin": {
+          "Left": 0.5,
+          "Top": 0.5,
+          "Right": 0.5,
+          "Bottom": 0.5
+        }
+      },
+      "ColorAndOpacity": {
+        "R": 0.0,
+        "G": 1.0,
+        "B": 0.148474,
+        "A": 1.0,
+        "Hex": "00FF6B"
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'EquipItemForForge_C:WidgetTree.CandleCombineFx.CanvasPanelSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.11"
+      },
+      "RenderTransform": {
+        "Scale": {
+          "X": 1.0,
+          "Y": -1.0
+        }
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible",
+      "RenderOpacity": 0.0
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "SelectImg",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipItemForForge_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.87"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/TexturesAtlas/TalentBlockS7/Atlas/UI_TalentBlockS7_Img_Select02_Sprite.UI_TalentBlockS7_Img_Select02_Sprite",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 245.76,
+          "Y": 245.76
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'EquipItemForForge_C:WidgetTree.CanvasPanel_98.CanvasPanelSlot_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.21"
+      },
+      "Visibility": "ESlateVisibility::Collapsed"
+    }
+  },
+  {
+    "Type": "UITextBlock",
+    "Name": "C_NumberText",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UITextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipItemForForge_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.87"
+    },
+    "Properties": {
+      "CurrStyleId": 1652,
+      "Text": {
+        "Namespace": "",
+        "Key": "691B559E4DBD322B777B8E8D3E0EDF8D",
+        "SourceString": "99/1",
+        "LocalizedString": "99/1"
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'EquipItemForForge_C:WidgetTree.CanvasPanel_54.CanvasPanelSlot_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.16"
+      },
+      "Visibility": "ESlateVisibility::Collapsed"
+    }
+  },
+  {
+    "Type": "WidgetAnimation",
+    "Name": "AddAnim_INST",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetAnimation'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'EquipItemForForge_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.0"
+    },
+    "Properties": {
+      "MovieScene": {
+        "ObjectName": "MovieScene'EquipItemForForge_C:AddAnim_INST.AddAnim'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.24"
+      },
+      "AnimationBindings": [
+        {
+          "WidgetName": "Fx01",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "AAE227F7-4AD1E12B-E6B4279E-208D19FD",
+          "bIsRootWidget": false
+        },
+        {
+          "WidgetName": "NewResult03_1",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "75E8423E-4547DDF7-56146995-AC661737",
+          "bIsRootWidget": false
+        }
+      ],
+      "DisplayLabel": "AddAnim",
+      "CompiledData": {
+        "ObjectName": "MovieSceneCompiledData'EquipItemForForge_C:AddAnim_INST.CompiledData'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.56"
+      },
+      "Signature": "8DF7CE72-4D48215A-A954B5BA-0DB861DA"
+    }
+  },
+  {
+    "Type": "WidgetAnimation",
+    "Name": "PutInAnim_INST",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetAnimation'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'EquipItemForForge_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.0"
+    },
+    "Properties": {
+      "MovieScene": {
+        "ObjectName": "MovieScene'EquipItemForForge_C:PutInAnim_INST.PutInAnim'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.25"
+      },
+      "AnimationBindings": [
+        {
+          "WidgetName": "C_ClickButton",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "AE956950-496927FE-7DD96EAD-8D702FC4",
+          "bIsRootWidget": false
+        },
+        {
+          "WidgetName": "Fx01",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "E9F69DF1-471893BB-75738290-65F2324D",
+          "bIsRootWidget": false
+        },
+        {
+          "WidgetName": "Fx01_1",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "6379D547-43CE002B-C4657196-2BF16AF1",
+          "bIsRootWidget": false
+        }
+      ],
+      "DisplayLabel": "PutInAnim",
+      "CompiledData": {
+        "ObjectName": "MovieSceneCompiledData'EquipItemForForge_C:PutInAnim_INST.CompiledData'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.57"
+      },
+      "Signature": "085EA638-4563F61A-D7BC69B8-030F8E2F"
+    }
+  },
+  {
+    "Type": "WidgetSwitcher",
+    "Name": "FxSwitcher",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetSwitcher'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipItemForForge_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.87"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "WidgetSwitcherSlot'EquipItemForForge_C:WidgetTree.FxSwitcher.WidgetSwitcherSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.83"
+        },
+        {
+          "ObjectName": "WidgetSwitcherSlot'EquipItemForForge_C:WidgetTree.FxSwitcher.WidgetSwitcherSlot_2'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.84"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'EquipItemForForge_C:WidgetTree.CanvasPanel_54.CanvasPanelSlot_4'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.18"
+      }
+    }
+  },
+  {
+    "Type": "WidgetSwitcher",
+    "Name": "ModeSwitcher",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetSwitcher'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipItemForForge_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.87"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "WidgetSwitcherSlot'EquipItemForForge_C:WidgetTree.ModeSwitcher.WidgetSwitcherSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.85"
+        },
+        {
+          "ObjectName": "WidgetSwitcherSlot'EquipItemForForge_C:WidgetTree.ModeSwitcher.WidgetSwitcherSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.86"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'EquipItemForForge_C:WidgetTree.CanvasPanel_98.CanvasPanelSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.20"
+      }
+    }
+  },
+  {
+    "Type": "WidgetSwitcherSlot",
+    "Name": "WidgetSwitcherSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetSwitcherSlot'",
+    "Outer": {
+      "ObjectName": "WidgetSwitcher'EquipItemForForge_C:WidgetTree.FxSwitcher'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.81"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "WidgetSwitcher'EquipItemForForge_C:WidgetTree.FxSwitcher'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.81"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'EquipItemForForge_C:WidgetTree.CandleCombineFx'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.3"
+      }
+    }
+  },
+  {
+    "Type": "WidgetSwitcherSlot",
+    "Name": "WidgetSwitcherSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetSwitcherSlot'",
+    "Outer": {
+      "ObjectName": "WidgetSwitcher'EquipItemForForge_C:WidgetTree.FxSwitcher'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.81"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "WidgetSwitcher'EquipItemForForge_C:WidgetTree.FxSwitcher'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.81"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'EquipItemForForge_C:WidgetTree.DreamMakeFx'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.8"
+      }
+    }
+  },
+  {
+    "Type": "WidgetSwitcherSlot",
+    "Name": "WidgetSwitcherSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetSwitcherSlot'",
+    "Outer": {
+      "ObjectName": "WidgetSwitcher'EquipItemForForge_C:WidgetTree.ModeSwitcher'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.82"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "WidgetSwitcher'EquipItemForForge_C:WidgetTree.ModeSwitcher'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.82"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'EquipItemForForge_C:WidgetTree.CanvasPanel_54'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.6"
+      }
+    }
+  },
+  {
+    "Type": "WidgetSwitcherSlot",
+    "Name": "WidgetSwitcherSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetSwitcherSlot'",
+    "Outer": {
+      "ObjectName": "WidgetSwitcher'EquipItemForForge_C:WidgetTree.ModeSwitcher'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.82"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "WidgetSwitcher'EquipItemForForge_C:WidgetTree.ModeSwitcher'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.82"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'EquipItemForForge_C:WidgetTree.CanvasPanel_35'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.5"
+      }
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetTree'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'EquipItemForForge_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.0"
+    },
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "CanvasPanel'EquipItemForForge_C:WidgetTree.CanvasPanel_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/EquipItemForForge.4"
+      }
+    }
+  }
+]

@@ -1,0 +1,2157 @@
+[
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "TaskRewardItemCell_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Package": "UE_game/Content/BluePrint/UI/Reward/TaskRewardItemCell",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'TaskRewardItemCell_C:WidgetTree'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/TaskRewardItemCell.38"
+      },
+      "Animations": [
+        {
+          "ObjectName": "WidgetAnimation'TaskRewardItemCell_C:TaskRewardItemCellAnim_INST'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/TaskRewardItemCell.37"
+        }
+      ]
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'UserWidget'",
+      "ObjectPath": "/Script/UMG"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "TaskRewardItemCellAnim",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Transient | RepSkip",
+        "PropertyClass": {
+          "ObjectName": "Class'WidgetAnimation'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "GoodBaseIcon",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'GoodBaseIcon_C'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Common/GoodsItem/GoodBaseIcon.1"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ShadowFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "UIImage_1_fx",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "UIImage_1_fx_1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      }
+    ],
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "TaskRewardItemCell_C'Default__TaskRewardItemCell_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/TaskRewardItemCell.1"
+    }
+  },
+  {
+    "Type": "TaskRewardItemCell_C",
+    "Name": "Default__TaskRewardItemCell_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'UE_game/Content/BluePrint/UI/Reward/TaskRewardItemCell.TaskRewardItemCell_C'",
+    "Package": "UE_game/Content/BluePrint/UI/Reward/TaskRewardItemCell",
+    "Properties": {
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'TaskRewardItemCell_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/TaskRewardItemCell.38"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'TaskRewardItemCell_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_10'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/TaskRewardItemCell.4"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'TaskRewardItemCell_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/TaskRewardItemCell.38"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'TaskRewardItemCell_C:WidgetTree.CanvasPanel_1.CanvasPanelSlot_4'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/TaskRewardItemCell.8"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'TaskRewardItemCell_C:WidgetTree.CanvasPanel_1.CanvasPanelSlot_2'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/TaskRewardItemCell.7"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'TaskRewardItemCell_C:WidgetTree.CanvasPanel_1.CanvasPanelSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/TaskRewardItemCell.5"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'TaskRewardItemCell_C:WidgetTree.CanvasPanel_1.CanvasPanelSlot_5'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/TaskRewardItemCell.9"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'TaskRewardItemCell_C:WidgetTree.CanvasPanel_1.CanvasPanelSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/TaskRewardItemCell.6"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "SizeBoxSlot'TaskRewardItemCell_C:WidgetTree.SizeBox_1.SizeBoxSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/TaskRewardItemCell.32"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_10",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'TaskRewardItemCell_C:WidgetTree.CanvasPanel_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/TaskRewardItemCell.2"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 192.0,
+          "Bottom": 57.6
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'TaskRewardItemCell_C:WidgetTree.CanvasPanel_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/TaskRewardItemCell.2"
+      },
+      "Content": {
+        "ObjectName": "SizeBox'TaskRewardItemCell_C:WidgetTree.SizeBox_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/TaskRewardItemCell.30"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'TaskRewardItemCell_C:WidgetTree.CanvasPanel_1'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/TaskRewardItemCell.3"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 192.0,
+          "Bottom": 57.6
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.0,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.0,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.0,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'TaskRewardItemCell_C:WidgetTree.CanvasPanel_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/TaskRewardItemCell.3"
+      },
+      "Content": {
+        "ObjectName": "SizeBox'TaskRewardItemCell_C:WidgetTree.SizeBox_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/TaskRewardItemCell.29"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'TaskRewardItemCell_C:WidgetTree.CanvasPanel_1'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/TaskRewardItemCell.3"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 15.36,
+          "Top": 28.8,
+          "Right": 192.0,
+          "Bottom": 57.6
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.0,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.0,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.0,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'TaskRewardItemCell_C:WidgetTree.CanvasPanel_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/TaskRewardItemCell.3"
+      },
+      "Content": {
+        "ObjectName": "UIImage'TaskRewardItemCell_C:WidgetTree.ShadowFrame'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/TaskRewardItemCell.33"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'TaskRewardItemCell_C:WidgetTree.CanvasPanel_1'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/TaskRewardItemCell.3"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 192.0,
+          "Bottom": 57.6
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.0,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.0,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.0,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "ZOrder": 1,
+      "Parent": {
+        "ObjectName": "CanvasPanel'TaskRewardItemCell_C:WidgetTree.CanvasPanel_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/TaskRewardItemCell.3"
+      },
+      "Content": {
+        "ObjectName": "UIImage'TaskRewardItemCell_C:WidgetTree.UIImage_1_fx_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/TaskRewardItemCell.35"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_4",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'TaskRewardItemCell_C:WidgetTree.CanvasPanel_1'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/TaskRewardItemCell.3"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 192.0,
+          "Bottom": 57.6
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.0,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.0,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.0,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "ZOrder": 1,
+      "Parent": {
+        "ObjectName": "CanvasPanel'TaskRewardItemCell_C:WidgetTree.CanvasPanel_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/TaskRewardItemCell.3"
+      },
+      "Content": {
+        "ObjectName": "UIImage'TaskRewardItemCell_C:WidgetTree.UIImage_1_fx'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/TaskRewardItemCell.34"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_5",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'TaskRewardItemCell_C:WidgetTree.CanvasPanel_1'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/TaskRewardItemCell.3"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 76.799995,
+          "Top": 117.119995,
+          "Right": 172.8,
+          "Bottom": 53.76
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.0,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.0,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'TaskRewardItemCell_C:WidgetTree.CanvasPanel_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/TaskRewardItemCell.3"
+      },
+      "Content": {
+        "ObjectName": "UIShrinkTextBlock'TaskRewardItemCell_C:WidgetTree.Name'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/TaskRewardItemCell.36"
+      }
+    }
+  },
+  {
+    "Type": "GoodBaseIcon_C",
+    "Name": "GoodBaseIcon",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'UE_game/Content/BluePrint/UI/Common/GoodsItem/GoodBaseIcon.GoodBaseIcon_C'",
+    "Outer": {
+      "ObjectName": "WidgetTree'TaskRewardItemCell_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/TaskRewardItemCell.38"
+    },
+    "Template": {
+      "ObjectName": "GoodBaseIcon_C'Default__GoodBaseIcon_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Common/GoodsItem/GoodBaseIcon.2"
+    },
+    "Properties": {
+      "Slot": {
+        "ObjectName": "SizeBoxSlot'TaskRewardItemCell_C:WidgetTree.SizeBox_0.SizeBoxSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/TaskRewardItemCell.31"
+      },
+      "RenderTransform": {
+        "Scale": {
+          "X": 0.8,
+          "Y": 0.8
+        }
+      }
+    }
+  },
+  {
+    "Type": "MovieScene",
+    "Name": "TaskRewardItemCellAnim",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene'",
+    "Outer": {
+      "ObjectName": "WidgetAnimation'TaskRewardItemCell_C:TaskRewardItemCellAnim_INST'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/TaskRewardItemCell.37"
+    },
+    "Properties": {
+      "Possessables": [
+        {
+          "Tags": [],
+          "Guid": "A2566C8A-41709E70-4D011A93-79DF59FD",
+          "Name": "UIImage_1_fx",
+          "PossessedObjectClass": {
+            "ObjectName": "Class'UIImage'",
+            "ObjectPath": "/Script/UE_game"
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        },
+        {
+          "Tags": [],
+          "Guid": "9E599751-4207666C-CA70C09A-FB84CC97",
+          "Name": "SizeBox_1",
+          "PossessedObjectClass": {
+            "ObjectName": "Class'SizeBox'",
+            "ObjectPath": "/Script/UMG"
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        },
+        {
+          "Tags": [],
+          "Guid": "0338A2AA-46E97958-4EF959AE-7C80FFAF",
+          "Name": "UIImage_1_fx_1",
+          "PossessedObjectClass": {
+            "ObjectName": "Class'UIImage'",
+            "ObjectPath": "/Script/UE_game"
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        }
+      ],
+      "ObjectBindings": [
+        {
+          "ObjectGuid": "A2566C8A-41709E70-4D011A93-79DF59FD",
+          "BindingName": "ShadowFrame_1",
+          "Tracks": [
+            {
+              "ObjectName": "MovieSceneWidgetMaterialTrack'TaskRewardItemCell_C:TaskRewardItemCellAnim_INST.TaskRewardItemCellAnim.MovieSceneWidgetMaterialTrack_0'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/TaskRewardItemCell.28"
+            },
+            {
+              "ObjectName": "MovieSceneFloatTrack'TaskRewardItemCell_C:TaskRewardItemCellAnim_INST.TaskRewardItemCellAnim.MovieSceneFloatTrack_0'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/TaskRewardItemCell.24"
+            }
+          ]
+        },
+        {
+          "ObjectGuid": "9E599751-4207666C-CA70C09A-FB84CC97",
+          "BindingName": "SizeBox_1",
+          "Tracks": [
+            {
+              "ObjectName": "MovieSceneFloatTrack'TaskRewardItemCell_C:TaskRewardItemCellAnim_INST.TaskRewardItemCellAnim.MovieSceneFloatTrack_1'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/TaskRewardItemCell.25"
+            }
+          ]
+        },
+        {
+          "ObjectGuid": "0338A2AA-46E97958-4EF959AE-7C80FFAF",
+          "BindingName": "UIImage_1_fx_1",
+          "Tracks": [
+            {
+              "ObjectName": "MovieSceneFloatTrack'TaskRewardItemCell_C:TaskRewardItemCellAnim_INST.TaskRewardItemCellAnim.MovieSceneFloatTrack_2'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/TaskRewardItemCell.26"
+            }
+          ]
+        }
+      ],
+      "PlaybackRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 30000
+            }
+          }
+        }
+      },
+      "DisplayRate": {
+        "Numerator": 30
+      },
+      "Signature": "0CF48DEC-4FA03208-2D7E10A3-9F995741"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatSection'TaskRewardItemCell_C:TaskRewardItemCellAnim_INST.TaskRewardItemCellAnim.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/TaskRewardItemCell.21"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatSection'TaskRewardItemCell_C:TaskRewardItemCellAnim_INST.TaskRewardItemCellAnim.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/TaskRewardItemCell.21"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatSection'TaskRewardItemCell_C:TaskRewardItemCellAnim_INST.TaskRewardItemCellAnim.MovieSceneFloatTrack_1.MovieSceneFloatSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/TaskRewardItemCell.22"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatSection'TaskRewardItemCell_C:TaskRewardItemCellAnim_INST.TaskRewardItemCellAnim.MovieSceneFloatTrack_1.MovieSceneFloatSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/TaskRewardItemCell.22"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatSection'TaskRewardItemCell_C:TaskRewardItemCellAnim_INST.TaskRewardItemCellAnim.MovieSceneFloatTrack_2.MovieSceneFloatSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/TaskRewardItemCell.23"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatSection'TaskRewardItemCell_C:TaskRewardItemCellAnim_INST.TaskRewardItemCellAnim.MovieSceneFloatTrack_2.MovieSceneFloatSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/TaskRewardItemCell.23"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneParameterSection'TaskRewardItemCell_C:TaskRewardItemCellAnim_INST.TaskRewardItemCellAnim.MovieSceneWidgetMaterialTrack_0.MovieSceneParameterSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/TaskRewardItemCell.27"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneParameterSection'TaskRewardItemCell_C:TaskRewardItemCellAnim_INST.TaskRewardItemCellAnim.MovieSceneWidgetMaterialTrack_0.MovieSceneParameterSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/TaskRewardItemCell.27"
+    }
+  },
+  {
+    "Type": "MovieSceneCompiledData",
+    "Name": "CompiledData",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneCompiledData'",
+    "Outer": {
+      "ObjectName": "WidgetAnimation'TaskRewardItemCell_C:TaskRewardItemCellAnim_INST'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/TaskRewardItemCell.37"
+    },
+    "Properties": {
+      "EvaluationTemplate": {
+        "Tracks": [
+          {
+            "Key": {
+              "Value": 0
+            },
+            "Value": {
+              "ObjectBindingID": "A2566C8A-41709E70-4D011A93-79DF59FD",
+              "EvaluationPriority": 1000,
+              "EvaluationMethod": "EEvaluationMethod::Static",
+              "SourceTrack": {
+                "ObjectName": "MovieSceneWidgetMaterialTrack'TaskRewardItemCell_C:TaskRewardItemCellAnim_INST.TaskRewardItemCellAnim.MovieSceneWidgetMaterialTrack_0'",
+                "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/TaskRewardItemCell.28"
+              },
+              "ChildTemplates": [
+                {
+                  "TypeName": "/Script/UMG.MovieSceneWidgetMaterialSectionTemplate",
+                  "Data": {
+                    "BrushPropertyNamePath": [
+                      "Brush"
+                    ],
+                    "Scalars": [],
+                    "Bools": [],
+                    "Vector2Ds": [],
+                    "Vectors": [],
+                    "Colors": [
+                      {
+                        "ParameterName": "UVOffestTranslation",
+                        "RedCurve": {
+                          "PreInfinityExtrap": "RCCE_Constant",
+                          "PostInfinityExtrap": "RCCE_Constant",
+                          "Times": [
+                            {
+                              "Value": 0
+                            },
+                            {
+                              "Value": 30000
+                            }
+                          ],
+                          "Values": [
+                            {
+                              "Value": 0.707618,
+                              "Tangent": {
+                                "ArriveTangent": -0.0065945904,
+                                "LeaveTangent": -0.0065945904,
+                                "ArriveTangentWeight": 0.60847867,
+                                "LeaveTangentWeight": 0.60847867,
+                                "TangentWeightMode": 3
+                              },
+                              "InterpMode": 2,
+                              "TangentMode": 1
+                            },
+                            {
+                              "Value": -0.223358,
+                              "Tangent": {
+                                "ArriveTangent": 0.0,
+                                "LeaveTangent": 0.0,
+                                "ArriveTangentWeight": 0.0,
+                                "LeaveTangentWeight": 0.0,
+                                "TangentWeightMode": 0
+                              },
+                              "InterpMode": 2,
+                              "TangentMode": 0
+                            }
+                          ],
+                          "DefaultValue": 0.0,
+                          "bHasDefaultValue": false,
+                          "TickResolution": {
+                            "Numerator": 60000,
+                            "Denominator": 1
+                          },
+                          "bShowCurve": false,
+                          "StructFallback": null
+                        },
+                        "GreenCurve": {
+                          "PreInfinityExtrap": "RCCE_Constant",
+                          "PostInfinityExtrap": "RCCE_Constant",
+                          "Times": [
+                            {
+                              "Value": 0
+                            }
+                          ],
+                          "Values": [
+                            {
+                              "Value": 0.0,
+                              "Tangent": {
+                                "ArriveTangent": 0.0,
+                                "LeaveTangent": 0.0,
+                                "ArriveTangentWeight": 0.0,
+                                "LeaveTangentWeight": 0.0,
+                                "TangentWeightMode": 0
+                              },
+                              "InterpMode": 2,
+                              "TangentMode": 0
+                            }
+                          ],
+                          "DefaultValue": 0.0,
+                          "bHasDefaultValue": false,
+                          "TickResolution": {
+                            "Numerator": 60000,
+                            "Denominator": 1
+                          },
+                          "bShowCurve": false,
+                          "StructFallback": null
+                        },
+                        "BlueCurve": {
+                          "PreInfinityExtrap": "RCCE_Constant",
+                          "PostInfinityExtrap": "RCCE_Constant",
+                          "Times": [
+                            {
+                              "Value": 0
+                            }
+                          ],
+                          "Values": [
+                            {
+                              "Value": 0.0,
+                              "Tangent": {
+                                "ArriveTangent": 0.0,
+                                "LeaveTangent": 0.0,
+                                "ArriveTangentWeight": 0.0,
+                                "LeaveTangentWeight": 0.0,
+                                "TangentWeightMode": 0
+                              },
+                              "InterpMode": 2,
+                              "TangentMode": 0
+                            }
+                          ],
+                          "DefaultValue": 0.0,
+                          "bHasDefaultValue": false,
+                          "TickResolution": {
+                            "Numerator": 60000,
+                            "Denominator": 1
+                          },
+                          "bShowCurve": false,
+                          "StructFallback": null
+                        },
+                        "AlphaCurve": {
+                          "PreInfinityExtrap": "RCCE_Constant",
+                          "PostInfinityExtrap": "RCCE_Constant",
+                          "Times": [
+                            {
+                              "Value": 0
+                            }
+                          ],
+                          "Values": [
+                            {
+                              "Value": 0.0,
+                              "Tangent": {
+                                "ArriveTangent": 0.0,
+                                "LeaveTangent": 0.0,
+                                "ArriveTangentWeight": 0.0,
+                                "LeaveTangentWeight": 0.0,
+                                "TangentWeightMode": 0
+                              },
+                              "InterpMode": 2,
+                              "TangentMode": 0
+                            }
+                          ],
+                          "DefaultValue": 0.0,
+                          "bHasDefaultValue": false,
+                          "TickResolution": {
+                            "Numerator": 60000,
+                            "Denominator": 1
+                          },
+                          "bShowCurve": false,
+                          "StructFallback": null
+                        }
+                      }
+                    ],
+                    "Transforms": [],
+                    "CompletionMode": "EMovieSceneCompletionMode::KeepState",
+                    "SourceSectionPtr": {
+                      "ObjectName": "MovieSceneParameterSection'TaskRewardItemCell_C:TaskRewardItemCellAnim_INST.TaskRewardItemCellAnim.MovieSceneWidgetMaterialTrack_0.MovieSceneParameterSection_0'",
+                      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/TaskRewardItemCell.27"
+                    }
+                  }
+                }
+              ],
+              "TrackTemplate": {
+                "TypeName": "",
+                "Data": null
+              },
+              "EvaluationGroup": "None",
+              "bEvaluateInPreroll": false,
+              "bEvaluateInPostroll": false,
+              "bTearDownPriority": false
+            }
+          }
+        ],
+        "TemplateLedger": {
+          "LastTrackIdentifier": {
+            "Value": 0
+          },
+          "TrackSignatureToTrackIdentifier": [
+            {
+              "Key": "338FCE75-45640859-6E5A708D-561F053A",
+              "Value": {
+                "Value": 0
+              }
+            }
+          ]
+        }
+      },
+      "EntityComponentField": {
+        "PersistentEntityTree": {
+          "SerializedData": {
+            "Data": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 3,
+                  "Capacity": 3
+                },
+                {
+                  "StartIndex": 3,
+                  "Size": 2,
+                  "Capacity": 2
+                },
+                {
+                  "StartIndex": 5,
+                  "Size": 1,
+                  "Capacity": 1
+                }
+              ],
+              "Items": [
+                {
+                  "EntityIndex": 0,
+                  "MetaDataIndex": -1
+                },
+                {
+                  "EntityIndex": 1,
+                  "MetaDataIndex": -1
+                },
+                {
+                  "EntityIndex": 2,
+                  "MetaDataIndex": -1
+                },
+                {
+                  "EntityIndex": 1,
+                  "MetaDataIndex": -1
+                },
+                {
+                  "EntityIndex": 2,
+                  "MetaDataIndex": -1
+                },
+                {
+                  "EntityIndex": 2,
+                  "MetaDataIndex": -1
+                }
+              ]
+            },
+            "RootNode": {
+              "Range": {
+                "LowerBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                },
+                "UpperBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                }
+              },
+              "Parent": {
+                "ChildrenHandle": {
+                  "EntryIndex": -1
+                },
+                "Index": -1
+              },
+              "ChildrenID": {
+                "EntryIndex": 0
+              },
+              "DataID": {
+                "EntryIndex": -1
+              }
+            },
+            "ChildNodes": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 3,
+                  "Capacity": 3
+                }
+              ],
+              "Items": [
+                {
+                  "Range": {
+                    "LowerBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 0
+                      }
+                    },
+                    "UpperBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 29999
+                      }
+                    }
+                  },
+                  "Parent": {
+                    "ChildrenHandle": {
+                      "EntryIndex": -1
+                    },
+                    "Index": 0
+                  },
+                  "ChildrenID": {
+                    "EntryIndex": -1
+                  },
+                  "DataID": {
+                    "EntryIndex": 0
+                  }
+                },
+                {
+                  "Range": {
+                    "LowerBound": {
+                      "Type": 0,
+                      "Value": {
+                        "Value": 29999
+                      }
+                    },
+                    "UpperBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 30000
+                      }
+                    }
+                  },
+                  "Parent": {
+                    "ChildrenHandle": {
+                      "EntryIndex": -1
+                    },
+                    "Index": 0
+                  },
+                  "ChildrenID": {
+                    "EntryIndex": -1
+                  },
+                  "DataID": {
+                    "EntryIndex": 1
+                  }
+                },
+                {
+                  "Range": {
+                    "LowerBound": {
+                      "Type": 0,
+                      "Value": {
+                        "Value": 30000
+                      }
+                    },
+                    "UpperBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 30001
+                      }
+                    }
+                  },
+                  "Parent": {
+                    "ChildrenHandle": {
+                      "EntryIndex": -1
+                    },
+                    "Index": 0
+                  },
+                  "ChildrenID": {
+                    "EntryIndex": -1
+                  },
+                  "DataID": {
+                    "EntryIndex": 2
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "Entities": [
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieSceneFloatSection'TaskRewardItemCell_C:TaskRewardItemCellAnim_INST.TaskRewardItemCellAnim.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+                "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/TaskRewardItemCell.21"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 0
+          },
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieSceneFloatSection'TaskRewardItemCell_C:TaskRewardItemCellAnim_INST.TaskRewardItemCellAnim.MovieSceneFloatTrack_1.MovieSceneFloatSection_0'",
+                "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/TaskRewardItemCell.22"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 1
+          },
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieSceneFloatSection'TaskRewardItemCell_C:TaskRewardItemCellAnim_INST.TaskRewardItemCellAnim.MovieSceneFloatTrack_2.MovieSceneFloatSection_0'",
+                "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/TaskRewardItemCell.23"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 2
+          }
+        ],
+        "SharedMetaData": [
+          {
+            "ObjectBindingID": "A2566C8A-41709E70-4D011A93-79DF59FD"
+          },
+          {
+            "ObjectBindingID": "9E599751-4207666C-CA70C09A-FB84CC97"
+          },
+          {
+            "ObjectBindingID": "0338A2AA-46E97958-4EF959AE-7C80FFAF"
+          }
+        ]
+      },
+      "TrackTemplateField": {
+        "Ranges": [
+          {
+            "Value": {
+              "LowerBound": {
+                "Type": 2,
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": 0,
+                "Value": {
+                  "Value": 0
+                }
+              }
+            }
+          },
+          {
+            "Value": {
+              "LowerBound": {
+                "Type": 1,
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": 0,
+                "Value": {
+                  "Value": 30000
+                }
+              }
+            }
+          },
+          {
+            "Value": {
+              "LowerBound": {
+                "Type": 1,
+                "Value": {
+                  "Value": 30000
+                }
+              },
+              "UpperBound": {
+                "Type": 2,
+                "Value": {
+                  "Value": 0
+                }
+              }
+            }
+          }
+        ],
+        "Groups": [
+          {
+            "LUTIndices": [],
+            "TrackLUT": [],
+            "SectionLUT": []
+          },
+          {
+            "LUTIndices": [
+              {
+                "NumInitPtrs": 0,
+                "NumEvalPtrs": 1
+              }
+            ],
+            "TrackLUT": [
+              {
+                "TrackPtr": {
+                  "SequenceID": {
+                    "Value": 0
+                  },
+                  "TrackIdentifier": {
+                    "Value": 0
+                  }
+                },
+                "NumChildren": 1
+              }
+            ],
+            "SectionLUT": [
+              {
+                "ChildIndex": 0,
+                "Flags": "ESectionEvaluationFlags::None",
+                "ForcedTime": {
+                  "Value": -2147483648
+                }
+              }
+            ]
+          },
+          {
+            "LUTIndices": [],
+            "TrackLUT": [],
+            "SectionLUT": []
+          }
+        ],
+        "MetaData": [
+          {
+            "ActiveSequences": [
+              {
+                "Value": 0
+              }
+            ],
+            "ActiveEntities": []
+          },
+          {
+            "ActiveSequences": [
+              {
+                "Value": 0
+              }
+            ],
+            "ActiveEntities": [
+              {
+                "Key": {
+                  "SequenceID": {
+                    "Value": 0
+                  },
+                  "TrackIdentifier": {
+                    "Value": 0
+                  },
+                  "SectionIndex": 0
+                },
+                "SetupIndex": 0,
+                "TearDownIndex": 65535
+              }
+            ]
+          },
+          {
+            "ActiveSequences": [
+              {
+                "Value": 0
+              }
+            ],
+            "ActiveEntities": []
+          }
+        ]
+      },
+      "CompiledSignature": "F8B78E6B-47FED99F-F815299D-1E30CB75",
+      "CompilerVersion": "7D4B9809-2FAC4A6B-964ECF72-D8279EF8",
+      "AccumulatedMask": {
+        "bEvaluationTemplate": true,
+        "bEvaluationTemplateField": true,
+        "bEntityComponentField": true
+      },
+      "AllocatedMask": {
+        "bEvaluationTemplate": true,
+        "bEvaluationTemplateField": true,
+        "bEntityComponentField": true
+      }
+    }
+  },
+  {
+    "Type": "MovieSceneFloatSection",
+    "Name": "MovieSceneFloatSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneFloatSection'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatTrack'TaskRewardItemCell_C:TaskRewardItemCellAnim_INST.TaskRewardItemCellAnim.MovieSceneFloatTrack_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/TaskRewardItemCell.24"
+    },
+    "Properties": {
+      "FloatCurve": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 8000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.025428656,
+              "LeaveTangent": 0.025428656,
+              "ArriveTangentWeight": 0.782093,
+              "LeaveTangentWeight": 0.782093,
+              "TangentWeightMode": 3
+            },
+            "InterpMode": 2,
+            "TangentMode": 1
+          },
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'TaskRewardItemCell_C:TaskRewardItemCellAnim_INST.TaskRewardItemCellAnim.MovieSceneFloatTrack_0.MovieSceneFloatSection_0.EaseInFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/TaskRewardItemCell.12"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'TaskRewardItemCell_C:TaskRewardItemCellAnim_INST.TaskRewardItemCellAnim.MovieSceneFloatTrack_0.MovieSceneFloatSection_0.EaseOutFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/TaskRewardItemCell.13"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 29999
+            }
+          }
+        }
+      },
+      "Signature": "B7D7C7FE-401873AF-CD3EEAB7-63736BEE"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatSection",
+    "Name": "MovieSceneFloatSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneFloatSection'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatTrack'TaskRewardItemCell_C:TaskRewardItemCellAnim_INST.TaskRewardItemCellAnim.MovieSceneFloatTrack_1'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/TaskRewardItemCell.25"
+    },
+    "Properties": {
+      "FloatCurve": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 10000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.061839264,
+              "LeaveTangentWeight": 0.061839264,
+              "TangentWeightMode": 3
+            },
+            "InterpMode": 2,
+            "TangentMode": 1
+          },
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'TaskRewardItemCell_C:TaskRewardItemCellAnim_INST.TaskRewardItemCellAnim.MovieSceneFloatTrack_1.MovieSceneFloatSection_0.EaseInFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/TaskRewardItemCell.14"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'TaskRewardItemCell_C:TaskRewardItemCellAnim_INST.TaskRewardItemCellAnim.MovieSceneFloatTrack_1.MovieSceneFloatSection_0.EaseOutFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/TaskRewardItemCell.15"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 30000
+            }
+          }
+        }
+      },
+      "Signature": "2082CE40-403389D1-6428DEAC-4137C4A1"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatSection",
+    "Name": "MovieSceneFloatSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneFloatSection'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatTrack'TaskRewardItemCell_C:TaskRewardItemCellAnim_INST.TaskRewardItemCellAnim.MovieSceneFloatTrack_2'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/TaskRewardItemCell.26"
+    },
+    "Properties": {
+      "FloatCurve": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 8000
+          },
+          {
+            "Value": 28000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.008666838,
+              "LeaveTangent": 0.008666838,
+              "ArriveTangentWeight": 0.38165963,
+              "LeaveTangentWeight": 0.38165963,
+              "TangentWeightMode": 3
+            },
+            "InterpMode": 2,
+            "TangentMode": 1
+          },
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": -0.00027763128,
+              "LeaveTangent": -0.00027763128,
+              "ArriveTangentWeight": 0.3062978,
+              "LeaveTangentWeight": 0.3062978,
+              "TangentWeightMode": 3
+            },
+            "InterpMode": 2,
+            "TangentMode": 1
+          },
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": -0.0,
+              "LeaveTangent": -0.0,
+              "ArriveTangentWeight": 0.1953442,
+              "LeaveTangentWeight": 0.1953442,
+              "TangentWeightMode": 3
+            },
+            "InterpMode": 2,
+            "TangentMode": 1
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'TaskRewardItemCell_C:TaskRewardItemCellAnim_INST.TaskRewardItemCellAnim.MovieSceneFloatTrack_2.MovieSceneFloatSection_0.EaseInFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/TaskRewardItemCell.16"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'TaskRewardItemCell_C:TaskRewardItemCellAnim_INST.TaskRewardItemCellAnim.MovieSceneFloatTrack_2.MovieSceneFloatSection_0.EaseOutFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/TaskRewardItemCell.17"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 30001
+            }
+          }
+        }
+      },
+      "Signature": "3F09B641-44227D7B-706C3D81-400FC170"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatTrack",
+    "Name": "MovieSceneFloatTrack_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneFloatTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'TaskRewardItemCell_C:TaskRewardItemCellAnim_INST.TaskRewardItemCellAnim'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/TaskRewardItemCell.11"
+    },
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderOpacity",
+        "PropertyPath": "RenderOpacity",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneFloatSection'TaskRewardItemCell_C:TaskRewardItemCellAnim_INST.TaskRewardItemCellAnim.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/TaskRewardItemCell.21"
+        }
+      ],
+      "EvaluationFieldGuid": "F90C4A87-4349D0E8-B4C05198-8BF6921D",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneFloatSection'TaskRewardItemCell_C:TaskRewardItemCellAnim_INST.TaskRewardItemCellAnim.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/TaskRewardItemCell.21"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 29999
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "F90C4A87-4349D0E8-B4C05198-8BF6921D"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatTrack",
+    "Name": "MovieSceneFloatTrack_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneFloatTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'TaskRewardItemCell_C:TaskRewardItemCellAnim_INST.TaskRewardItemCellAnim'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/TaskRewardItemCell.11"
+    },
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderOpacity",
+        "PropertyPath": "RenderOpacity",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneFloatSection'TaskRewardItemCell_C:TaskRewardItemCellAnim_INST.TaskRewardItemCellAnim.MovieSceneFloatTrack_1.MovieSceneFloatSection_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/TaskRewardItemCell.22"
+        }
+      ],
+      "EvaluationFieldGuid": "19DF4343-4588EE47-8DC90D8B-C3F51828",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneFloatSection'TaskRewardItemCell_C:TaskRewardItemCellAnim_INST.TaskRewardItemCellAnim.MovieSceneFloatTrack_1.MovieSceneFloatSection_0'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/TaskRewardItemCell.22"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 30000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "19DF4343-4588EE47-8DC90D8B-C3F51828"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatTrack",
+    "Name": "MovieSceneFloatTrack_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneFloatTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'TaskRewardItemCell_C:TaskRewardItemCellAnim_INST.TaskRewardItemCellAnim'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/TaskRewardItemCell.11"
+    },
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderOpacity",
+        "PropertyPath": "RenderOpacity",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneFloatSection'TaskRewardItemCell_C:TaskRewardItemCellAnim_INST.TaskRewardItemCellAnim.MovieSceneFloatTrack_2.MovieSceneFloatSection_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/TaskRewardItemCell.23"
+        }
+      ],
+      "EvaluationFieldGuid": "23F90A3C-42FFF5D6-6C907FB8-FA4222DD",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneFloatSection'TaskRewardItemCell_C:TaskRewardItemCellAnim_INST.TaskRewardItemCellAnim.MovieSceneFloatTrack_2.MovieSceneFloatSection_0'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/TaskRewardItemCell.23"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 30001
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "23F90A3C-42FFF5D6-6C907FB8-FA4222DD"
+    }
+  },
+  {
+    "Type": "MovieSceneParameterSection",
+    "Name": "MovieSceneParameterSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneParameterSection'",
+    "Outer": {
+      "ObjectName": "MovieSceneWidgetMaterialTrack'TaskRewardItemCell_C:TaskRewardItemCellAnim_INST.TaskRewardItemCellAnim.MovieSceneWidgetMaterialTrack_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/TaskRewardItemCell.28"
+    },
+    "Properties": {
+      "ColorParameterNamesAndCurves": [
+        {
+          "ParameterName": "UVOffestTranslation",
+          "RedCurve": {
+            "PreInfinityExtrap": "RCCE_Constant",
+            "PostInfinityExtrap": "RCCE_Constant",
+            "Times": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 30000
+              }
+            ],
+            "Values": [
+              {
+                "Value": 0.707618,
+                "Tangent": {
+                  "ArriveTangent": -0.0065945904,
+                  "LeaveTangent": -0.0065945904,
+                  "ArriveTangentWeight": 0.60847867,
+                  "LeaveTangentWeight": 0.60847867,
+                  "TangentWeightMode": 3
+                },
+                "InterpMode": 2,
+                "TangentMode": 1
+              },
+              {
+                "Value": -0.223358,
+                "Tangent": {
+                  "ArriveTangent": 0.0,
+                  "LeaveTangent": 0.0,
+                  "ArriveTangentWeight": 0.0,
+                  "LeaveTangentWeight": 0.0,
+                  "TangentWeightMode": 0
+                },
+                "InterpMode": 2,
+                "TangentMode": 0
+              }
+            ],
+            "DefaultValue": 0.0,
+            "bHasDefaultValue": false,
+            "TickResolution": {
+              "Numerator": 60000,
+              "Denominator": 1
+            },
+            "bShowCurve": false,
+            "StructFallback": null
+          },
+          "GreenCurve": {
+            "PreInfinityExtrap": "RCCE_Constant",
+            "PostInfinityExtrap": "RCCE_Constant",
+            "Times": [
+              {
+                "Value": 0
+              }
+            ],
+            "Values": [
+              {
+                "Value": 0.0,
+                "Tangent": {
+                  "ArriveTangent": 0.0,
+                  "LeaveTangent": 0.0,
+                  "ArriveTangentWeight": 0.0,
+                  "LeaveTangentWeight": 0.0,
+                  "TangentWeightMode": 0
+                },
+                "InterpMode": 2,
+                "TangentMode": 0
+              }
+            ],
+            "DefaultValue": 0.0,
+            "bHasDefaultValue": false,
+            "TickResolution": {
+              "Numerator": 60000,
+              "Denominator": 1
+            },
+            "bShowCurve": false,
+            "StructFallback": null
+          },
+          "BlueCurve": {
+            "PreInfinityExtrap": "RCCE_Constant",
+            "PostInfinityExtrap": "RCCE_Constant",
+            "Times": [
+              {
+                "Value": 0
+              }
+            ],
+            "Values": [
+              {
+                "Value": 0.0,
+                "Tangent": {
+                  "ArriveTangent": 0.0,
+                  "LeaveTangent": 0.0,
+                  "ArriveTangentWeight": 0.0,
+                  "LeaveTangentWeight": 0.0,
+                  "TangentWeightMode": 0
+                },
+                "InterpMode": 2,
+                "TangentMode": 0
+              }
+            ],
+            "DefaultValue": 0.0,
+            "bHasDefaultValue": false,
+            "TickResolution": {
+              "Numerator": 60000,
+              "Denominator": 1
+            },
+            "bShowCurve": false,
+            "StructFallback": null
+          },
+          "AlphaCurve": {
+            "PreInfinityExtrap": "RCCE_Constant",
+            "PostInfinityExtrap": "RCCE_Constant",
+            "Times": [
+              {
+                "Value": 0
+              }
+            ],
+            "Values": [
+              {
+                "Value": 0.0,
+                "Tangent": {
+                  "ArriveTangent": 0.0,
+                  "LeaveTangent": 0.0,
+                  "ArriveTangentWeight": 0.0,
+                  "LeaveTangentWeight": 0.0,
+                  "TangentWeightMode": 0
+                },
+                "InterpMode": 2,
+                "TangentMode": 0
+              }
+            ],
+            "DefaultValue": 0.0,
+            "bHasDefaultValue": false,
+            "TickResolution": {
+              "Numerator": 60000,
+              "Denominator": 1
+            },
+            "bShowCurve": false,
+            "StructFallback": null
+          }
+        }
+      ],
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'TaskRewardItemCell_C:TaskRewardItemCellAnim_INST.TaskRewardItemCellAnim.MovieSceneWidgetMaterialTrack_0.MovieSceneParameterSection_0.EaseInFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/TaskRewardItemCell.18"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'TaskRewardItemCell_C:TaskRewardItemCellAnim_INST.TaskRewardItemCellAnim.MovieSceneWidgetMaterialTrack_0.MovieSceneParameterSection_0.EaseOutFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/TaskRewardItemCell.19"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 30000
+            }
+          }
+        }
+      },
+      "Signature": "2B7CBFA3-4A5340CA-32806CAF-5E8ADAC9"
+    }
+  },
+  {
+    "Type": "MovieSceneWidgetMaterialTrack",
+    "Name": "MovieSceneWidgetMaterialTrack_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneWidgetMaterialTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'TaskRewardItemCell_C:TaskRewardItemCellAnim_INST.TaskRewardItemCellAnim'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/TaskRewardItemCell.11"
+    },
+    "Properties": {
+      "BrushPropertyNamePath": [
+        "Brush"
+      ],
+      "TrackName": "Brush",
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneParameterSection'TaskRewardItemCell_C:TaskRewardItemCellAnim_INST.TaskRewardItemCellAnim.MovieSceneWidgetMaterialTrack_0.MovieSceneParameterSection_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/TaskRewardItemCell.27"
+        }
+      ],
+      "EvaluationFieldGuid": "338FCE75-45640859-6E5A708D-561F053A",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneParameterSection'TaskRewardItemCell_C:TaskRewardItemCellAnim_INST.TaskRewardItemCellAnim.MovieSceneWidgetMaterialTrack_0.MovieSceneParameterSection_0'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/TaskRewardItemCell.27"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Exclusive",
+                "Value": {
+                  "Value": 30000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "338FCE75-45640859-6E5A708D-561F053A"
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SizeBox_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'TaskRewardItemCell_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/TaskRewardItemCell.38"
+    },
+    "Properties": {
+      "WidthOverride": 153.6,
+      "HeightOverride": 153.6,
+      "bOverride_WidthOverride": true,
+      "bOverride_HeightOverride": true,
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot'TaskRewardItemCell_C:WidgetTree.SizeBox_0.SizeBoxSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/TaskRewardItemCell.31"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'TaskRewardItemCell_C:WidgetTree.CanvasPanel_1.CanvasPanelSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/TaskRewardItemCell.5"
+      }
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SizeBox_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'TaskRewardItemCell_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/TaskRewardItemCell.38"
+    },
+    "Properties": {
+      "WidthOverride": 168.96,
+      "HeightOverride": 230.4,
+      "bOverride_WidthOverride": true,
+      "bOverride_HeightOverride": true,
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot'TaskRewardItemCell_C:WidgetTree.SizeBox_1.SizeBoxSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/TaskRewardItemCell.32"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'TaskRewardItemCell_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_10'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/TaskRewardItemCell.4"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBoxSlot'",
+    "Outer": {
+      "ObjectName": "SizeBox'TaskRewardItemCell_C:WidgetTree.SizeBox_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/TaskRewardItemCell.29"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "SizeBox'TaskRewardItemCell_C:WidgetTree.SizeBox_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/TaskRewardItemCell.29"
+      },
+      "Content": {
+        "ObjectName": "GoodBaseIcon_C'TaskRewardItemCell_C:WidgetTree.GoodBaseIcon'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/TaskRewardItemCell.10"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBoxSlot'",
+    "Outer": {
+      "ObjectName": "SizeBox'TaskRewardItemCell_C:WidgetTree.SizeBox_1'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/TaskRewardItemCell.30"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Left",
+      "VerticalAlignment": "VAlign_Top",
+      "Parent": {
+        "ObjectName": "SizeBox'TaskRewardItemCell_C:WidgetTree.SizeBox_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/TaskRewardItemCell.30"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'TaskRewardItemCell_C:WidgetTree.CanvasPanel_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/TaskRewardItemCell.3"
+      }
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "ShadowFrame",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'TaskRewardItemCell_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/TaskRewardItemCell.38"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/TexturesAtlas/Reward/Atlas/UI_Reward_Touying_Sprite.UI_Reward_Touying_Sprite",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 168.95999,
+          "Y": 165.12
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'TaskRewardItemCell_C:WidgetTree.CanvasPanel_1.CanvasPanelSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/TaskRewardItemCell.6"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "UIImage_1_fx",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'TaskRewardItemCell_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/TaskRewardItemCell.38"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/UIEffect/UIMaterial/Inst/Achievement/UI_MI_Achievement01.UI_MI_Achievement01",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 153.59999,
+          "Y": 153.59999
+        },
+        "TintColor": {
+          "SpecifiedColor": {
+            "R": 1.0,
+            "G": 0.32993,
+            "B": 0.0,
+            "A": 1.0,
+            "Hex": "FF9C00"
+          }
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'TaskRewardItemCell_C:WidgetTree.CanvasPanel_1.CanvasPanelSlot_4'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/TaskRewardItemCell.8"
+      },
+      "RenderTransform": {
+        "Scale": {
+          "X": 1.3,
+          "Y": 1.3
+        }
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible",
+      "RenderOpacity": 0.0
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "UIImage_1_fx_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'TaskRewardItemCell_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/TaskRewardItemCell.38"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/UIEffect/UIMaterial/Inst/Effects/UI_MI_Synthetic_fx10.UI_MI_Synthetic_fx10",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 153.59999,
+          "Y": 153.59999
+        },
+        "TintColor": {
+          "SpecifiedColor": {
+            "R": 1.0,
+            "G": 0.32993,
+            "B": 0.0,
+            "A": 1.0,
+            "Hex": "FF9C00"
+          }
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'TaskRewardItemCell_C:WidgetTree.CanvasPanel_1.CanvasPanelSlot_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/TaskRewardItemCell.7"
+      },
+      "RenderTransform": {
+        "Scale": {
+          "X": 1.3,
+          "Y": 1.3
+        }
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible",
+      "RenderOpacity": 0.0
+    }
+  },
+  {
+    "Type": "UIShrinkTextBlock",
+    "Name": "Name",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIShrinkTextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'TaskRewardItemCell_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/TaskRewardItemCell.38"
+    },
+    "Properties": {
+      "CurrStyleId": 1428,
+      "TextContent": {
+        "Namespace": "",
+        "Key": "386FA8B74391EFD0FADADDA4AE460290",
+        "SourceString": "文本块",
+        "LocalizedString": "文本块"
+      },
+      "ShrinkSize": {
+        "X": 172.8,
+        "Y": 53.76
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'TaskRewardItemCell_C:WidgetTree.CanvasPanel_1.CanvasPanelSlot_5'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/TaskRewardItemCell.9"
+      }
+    }
+  },
+  {
+    "Type": "WidgetAnimation",
+    "Name": "TaskRewardItemCellAnim_INST",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetAnimation'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'TaskRewardItemCell_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/TaskRewardItemCell.0"
+    },
+    "Properties": {
+      "MovieScene": {
+        "ObjectName": "MovieScene'TaskRewardItemCell_C:TaskRewardItemCellAnim_INST.TaskRewardItemCellAnim'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/TaskRewardItemCell.11"
+      },
+      "AnimationBindings": [
+        {
+          "WidgetName": "UIImage_1_fx",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "A2566C8A-41709E70-4D011A93-79DF59FD",
+          "bIsRootWidget": false
+        },
+        {
+          "WidgetName": "SizeBox_1",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "9E599751-4207666C-CA70C09A-FB84CC97",
+          "bIsRootWidget": false
+        },
+        {
+          "WidgetName": "UIImage_1_fx_1",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "0338A2AA-46E97958-4EF959AE-7C80FFAF",
+          "bIsRootWidget": false
+        }
+      ],
+      "DisplayLabel": "TaskRewardItemCellAnim",
+      "CompiledData": {
+        "ObjectName": "MovieSceneCompiledData'TaskRewardItemCell_C:TaskRewardItemCellAnim_INST.CompiledData'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/TaskRewardItemCell.20"
+      },
+      "Signature": "F8B78E6B-47FED99F-F815299D-1E30CB75"
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetTree'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'TaskRewardItemCell_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/TaskRewardItemCell.0"
+    },
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "CanvasPanel'TaskRewardItemCell_C:WidgetTree.CanvasPanel_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/TaskRewardItemCell.2"
+      }
+    }
+  }
+]

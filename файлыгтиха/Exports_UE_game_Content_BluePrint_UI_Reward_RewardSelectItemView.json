@@ -1,0 +1,3631 @@
+[
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "RewardSelectItemView_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Package": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'RewardSelectItemView_C:WidgetTree'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.72"
+      },
+      "Animations": [
+        {
+          "ObjectName": "WidgetAnimation'RewardSelectItemView_C:RewardSelectItemView_Select_INST'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.68"
+        }
+      ]
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'UserWidget'",
+      "ObjectPath": "/Script/UMG"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "RewardSelectItemView_Select",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Transient | RepSkip",
+        "PropertyClass": {
+          "ObjectName": "Class'WidgetAnimation'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "GoodSmallBaseItem",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'GoodSmallBaseItem_C'",
+          "ObjectPath": "UE_game/Content/Art/UIV2/Common/Widget/ComGoodsItem/BluePrint/GoodSmallBaseItem.0"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "GoodSmallBaseItemPre",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'GoodSmallBaseItem_C'",
+          "ObjectPath": "UE_game/Content/Art/UIV2/Common/Widget/ComGoodsItem/BluePrint/GoodSmallBaseItem.0"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ItemSwitcher",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'WidgetSwitcher'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SelectButton",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIButton'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "UIImage_89",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "UIImage_206",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "UnSelectedFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      }
+    ],
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "RewardSelectItemView_C'Default__RewardSelectItemView_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.1"
+    }
+  },
+  {
+    "Type": "RewardSelectItemView_C",
+    "Name": "Default__RewardSelectItemView_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.RewardSelectItemView_C'",
+    "Package": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView",
+    "Properties": {
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'RewardSelectItemView_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.72"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'RewardSelectItemView_C:WidgetTree.CanvasPanel.CanvasPanelSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.6"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "SizeBoxSlot'RewardSelectItemView_C:WidgetTree.SizeBox.SizeBoxSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.61"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'RewardSelectItemView_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.72"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'RewardSelectItemView_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_31'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.7"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'RewardSelectItemView_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.72"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'RewardSelectItemView_C:WidgetTree.CanvasPanel_2.CanvasPanelSlot_10'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.8"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'RewardSelectItemView_C:WidgetTree.CanvasPanel_2.CanvasPanelSlot_6'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.12"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'RewardSelectItemView_C:WidgetTree.CanvasPanel_2.CanvasPanelSlot_4'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.10"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'RewardSelectItemView_C:WidgetTree.CanvasPanel_2.CanvasPanelSlot_5'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.11"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'RewardSelectItemView_C:WidgetTree.CanvasPanel_2.CanvasPanelSlot_2'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.9"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "SizeBoxSlot'RewardSelectItemView_C:WidgetTree.SizeBox_4.SizeBoxSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.62"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "SelectedFrame",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'RewardSelectItemView_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.72"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'RewardSelectItemView_C:WidgetTree.SelectedFrame.CanvasPanelSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.13"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'RewardSelectItemView_C:WidgetTree.SelectedFrame.CanvasPanelSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.14"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'RewardSelectItemView_C:WidgetTree.CanvasPanel_2.CanvasPanelSlot_5'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.11"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'RewardSelectItemView_C:WidgetTree.CanvasPanel'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.2"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 136.0,
+          "Bottom": 200.0
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'RewardSelectItemView_C:WidgetTree.CanvasPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.2"
+      },
+      "Content": {
+        "ObjectName": "GoodSmallBaseItem_C'RewardSelectItemView_C:WidgetTree.GoodSmallBaseItemPre'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.16"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_31",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'RewardSelectItemView_C:WidgetTree.CanvasPanel_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.3"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'RewardSelectItemView_C:WidgetTree.CanvasPanel_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.3"
+      },
+      "Content": {
+        "ObjectName": "WidgetSwitcher'RewardSelectItemView_C:WidgetTree.ItemSwitcher'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.69"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_10",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'RewardSelectItemView_C:WidgetTree.CanvasPanel_2'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.4"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 136.0,
+          "Bottom": 90.0
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 1.0
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 1.0
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.0
+        }
+      },
+      "ZOrder": 1,
+      "Parent": {
+        "ObjectName": "CanvasPanel'RewardSelectItemView_C:WidgetTree.CanvasPanel_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.4"
+      },
+      "Content": {
+        "ObjectName": "UIButton'RewardSelectItemView_C:WidgetTree.SelectButton'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.63"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'RewardSelectItemView_C:WidgetTree.CanvasPanel_2'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.4"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Top": 80.0,
+          "Right": 192.0,
+          "Bottom": 57.6
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "ZOrder": 1,
+      "Parent": {
+        "ObjectName": "CanvasPanel'RewardSelectItemView_C:WidgetTree.CanvasPanel_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.4"
+      },
+      "Content": {
+        "ObjectName": "UIShrinkTextBlock'RewardSelectItemView_C:WidgetTree.UIShrinkTextBlock_Haved'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.67"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_4",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'RewardSelectItemView_C:WidgetTree.CanvasPanel_2'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.4"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Top": 17.0,
+          "Right": 192.0,
+          "Bottom": 57.6
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 1.0
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 1.0
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.0
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'RewardSelectItemView_C:WidgetTree.CanvasPanel_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.4"
+      },
+      "Content": {
+        "ObjectName": "UIImage'RewardSelectItemView_C:WidgetTree.UnSelectedFrame'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.66"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_5",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'RewardSelectItemView_C:WidgetTree.CanvasPanel_2'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.4"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 136.0,
+          "Bottom": 200.0
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'RewardSelectItemView_C:WidgetTree.CanvasPanel_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.4"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'RewardSelectItemView_C:WidgetTree.SelectedFrame'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.5"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_6",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'RewardSelectItemView_C:WidgetTree.CanvasPanel_2'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.4"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Top": -100.0,
+          "Right": 136.0,
+          "Bottom": 200.0
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.0
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'RewardSelectItemView_C:WidgetTree.CanvasPanel_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.4"
+      },
+      "Content": {
+        "ObjectName": "GoodSmallBaseItem_C'RewardSelectItemView_C:WidgetTree.GoodSmallBaseItem'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.15"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'RewardSelectItemView_C:WidgetTree.SelectedFrame'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.5"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'RewardSelectItemView_C:WidgetTree.SelectedFrame'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.5"
+      },
+      "Content": {
+        "ObjectName": "UIImage'RewardSelectItemView_C:WidgetTree.UIImage_89'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.65"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'RewardSelectItemView_C:WidgetTree.SelectedFrame'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.5"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Top": 17.0
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 1.0
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 1.0
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.0
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'RewardSelectItemView_C:WidgetTree.SelectedFrame'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.5"
+      },
+      "Content": {
+        "ObjectName": "UIImage'RewardSelectItemView_C:WidgetTree.UIImage_206'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.64"
+      }
+    }
+  },
+  {
+    "Type": "GoodSmallBaseItem_C",
+    "Name": "GoodSmallBaseItem",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'UE_game/Content/Art/UIV2/Common/Widget/ComGoodsItem/BluePrint/GoodSmallBaseItem.GoodSmallBaseItem_C'",
+    "Outer": {
+      "ObjectName": "WidgetTree'RewardSelectItemView_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.72"
+    },
+    "Template": {
+      "ObjectName": "GoodSmallBaseItem_C'Default__GoodSmallBaseItem_C'",
+      "ObjectPath": "UE_game/Content/Art/UIV2/Common/Widget/ComGoodsItem/BluePrint/GoodSmallBaseItem.1"
+    },
+    "Properties": {
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'RewardSelectItemView_C:WidgetTree.CanvasPanel_2.CanvasPanelSlot_6'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.12"
+      }
+    }
+  },
+  {
+    "Type": "GoodSmallBaseItem_C",
+    "Name": "GoodSmallBaseItemPre",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'UE_game/Content/Art/UIV2/Common/Widget/ComGoodsItem/BluePrint/GoodSmallBaseItem.GoodSmallBaseItem_C'",
+    "Outer": {
+      "ObjectName": "WidgetTree'RewardSelectItemView_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.72"
+    },
+    "Template": {
+      "ObjectName": "GoodSmallBaseItem_C'Default__GoodSmallBaseItem_C'",
+      "ObjectPath": "UE_game/Content/Art/UIV2/Common/Widget/ComGoodsItem/BluePrint/GoodSmallBaseItem.1"
+    },
+    "Properties": {
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'RewardSelectItemView_C:WidgetTree.CanvasPanel.CanvasPanelSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.6"
+      }
+    }
+  },
+  {
+    "Type": "MovieScene",
+    "Name": "RewardSelectItemView_Select",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene'",
+    "Outer": {
+      "ObjectName": "WidgetAnimation'RewardSelectItemView_C:RewardSelectItemView_Select_INST'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.68"
+    },
+    "Properties": {
+      "Possessables": [
+        {
+          "Tags": [],
+          "Guid": "E0BEA375-407F35B2-BBBDE4AB-E31C4291",
+          "Name": "SelectedFrame_Fx",
+          "PossessedObjectClass": {
+            "ObjectName": "Class'CanvasPanel'",
+            "ObjectPath": "/Script/UMG"
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        },
+        {
+          "Tags": [],
+          "Guid": "CD0B74AE-4C06798A-19ADDA8A-C2720138",
+          "Name": "UIImage_1",
+          "PossessedObjectClass": {
+            "ObjectName": "Class'UIImage'",
+            "ObjectPath": "/Script/UE_game"
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        },
+        {
+          "Tags": [],
+          "Guid": "8FC183BC-4B77ED65-D3B65783-282830C2",
+          "Name": "UIImage_bg",
+          "PossessedObjectClass": {
+            "ObjectName": "Class'UIImage'",
+            "ObjectPath": "/Script/UE_game"
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        },
+        {
+          "Tags": [],
+          "Guid": "B5728568-4CF6FC70-69CDE187-69B80C4E",
+          "Name": "UIImage_yuan",
+          "PossessedObjectClass": {
+            "ObjectName": "Class'UIImage'",
+            "ObjectPath": "/Script/UE_game"
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        },
+        {
+          "Tags": [],
+          "Guid": "2E961854-47DD3FDC-AF41C582-330362BD",
+          "Name": "UIParticleEmitter_164",
+          "PossessedObjectClass": {
+            "ObjectName": "Class'UIParticleEmitter'",
+            "ObjectPath": "/Script/UIParticle"
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        },
+        {
+          "Tags": [],
+          "Guid": "CFC9A81D-4AEE35FC-6B2C2AB2-7A1DE9B1",
+          "Name": "CanvasPanelSlot_3",
+          "PossessedObjectClass": {
+            "ObjectName": "Class'CanvasPanelSlot'",
+            "ObjectPath": "/Script/UMG"
+          },
+          "ParentGuid": "4CC9F382-4B9770E7-BB0EA4BC-B6DAEC8B"
+        },
+        {
+          "Tags": [],
+          "Guid": "4CC9F382-4B9770E7-BB0EA4BC-B6DAEC8B",
+          "Name": "GoodBaseIcon",
+          "PossessedObjectClass": {
+            "ObjectName": "WidgetBlueprintGeneratedClass'GoodBaseIcon_C'",
+            "ObjectPath": "UE_game/Content/BluePrint/UI/Common/GoodsItem/GoodBaseIcon.1"
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        },
+        {
+          "Tags": [],
+          "Guid": "296BED83-40EE00D9-F3B8B8BF-5D6D9F03",
+          "Name": "UIImage_bg_Glow",
+          "PossessedObjectClass": {
+            "ObjectName": "Class'UIImage'",
+            "ObjectPath": "/Script/UE_game"
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        }
+      ],
+      "ObjectBindings": [
+        {
+          "ObjectGuid": "E0BEA375-407F35B2-BBBDE4AB-E31C4291",
+          "BindingName": "SelectedFrame_Fx",
+          "Tracks": [
+            {
+              "ObjectName": "MovieSceneFloatTrack'RewardSelectItemView_C:RewardSelectItemView_Select_INST.RewardSelectItemView_Select.MovieSceneFloatTrack_4'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.55"
+            }
+          ]
+        },
+        {
+          "ObjectGuid": "CD0B74AE-4C06798A-19ADDA8A-C2720138",
+          "BindingName": "UIImage_1",
+          "Tracks": [
+            {
+              "ObjectName": "MovieSceneFloatTrack'RewardSelectItemView_C:RewardSelectItemView_Select_INST.RewardSelectItemView_Select.MovieSceneFloatTrack_5'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.56"
+            },
+            {
+              "ObjectName": "MovieScene2DTransformTrack'RewardSelectItemView_C:RewardSelectItemView_Select_INST.RewardSelectItemView_Select.MovieScene2DTransformTrack_3'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.23"
+            }
+          ]
+        },
+        {
+          "ObjectGuid": "8FC183BC-4B77ED65-D3B65783-282830C2",
+          "BindingName": "UIImage_bg",
+          "Tracks": [
+            {
+              "ObjectName": "MovieSceneFloatTrack'RewardSelectItemView_C:RewardSelectItemView_Select_INST.RewardSelectItemView_Select.MovieSceneFloatTrack_6'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.57"
+            },
+            {
+              "ObjectName": "MovieScene2DTransformTrack'RewardSelectItemView_C:RewardSelectItemView_Select_INST.RewardSelectItemView_Select.MovieScene2DTransformTrack_5'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.24"
+            }
+          ]
+        },
+        {
+          "ObjectGuid": "B5728568-4CF6FC70-69CDE187-69B80C4E",
+          "BindingName": "UIImage",
+          "Tracks": [
+            {
+              "ObjectName": "MovieSceneFloatTrack'RewardSelectItemView_C:RewardSelectItemView_Select_INST.RewardSelectItemView_Select.MovieSceneFloatTrack_7'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.58"
+            },
+            {
+              "ObjectName": "MovieScene2DTransformTrack'RewardSelectItemView_C:RewardSelectItemView_Select_INST.RewardSelectItemView_Select.MovieScene2DTransformTrack_7'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.25"
+            }
+          ]
+        },
+        {
+          "ObjectGuid": "2E961854-47DD3FDC-AF41C582-330362BD",
+          "BindingName": "UIParticleEmitter_164",
+          "Tracks": [
+            {
+              "ObjectName": "MovieSceneBoolTrack'RewardSelectItemView_C:RewardSelectItemView_Select_INST.RewardSelectItemView_Select.MovieSceneBoolTrack_1'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.27"
+            }
+          ]
+        },
+        {
+          "ObjectGuid": "CFC9A81D-4AEE35FC-6B2C2AB2-7A1DE9B1",
+          "BindingName": "CanvasPanelSlot_3",
+          "Tracks": []
+        },
+        {
+          "ObjectGuid": "4CC9F382-4B9770E7-BB0EA4BC-B6DAEC8B",
+          "BindingName": "GoodBaseIcon",
+          "Tracks": []
+        },
+        {
+          "ObjectGuid": "296BED83-40EE00D9-F3B8B8BF-5D6D9F03",
+          "BindingName": "UIImage_bg_Glow",
+          "Tracks": [
+            {
+              "ObjectName": "MovieSceneFloatTrack'RewardSelectItemView_C:RewardSelectItemView_Select_INST.RewardSelectItemView_Select.MovieSceneFloatTrack_0'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.54"
+            },
+            {
+              "ObjectName": "MovieScene2DTransformTrack'RewardSelectItemView_C:RewardSelectItemView_Select_INST.RewardSelectItemView_Select.MovieScene2DTransformTrack_1'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.22"
+            }
+          ]
+        }
+      ],
+      "PlaybackRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 40001
+            }
+          }
+        }
+      },
+      "DisplayRate": {
+        "Numerator": 30
+      },
+      "Signature": "D4024F3C-4EFCFCA3-921E48A5-F5746BE1"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformSection",
+    "Name": "MovieScene2DTransformSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene2DTransformSection'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformTrack'RewardSelectItemView_C:RewardSelectItemView_Select_INST.RewardSelectItemView_Select.MovieScene2DTransformTrack_1'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.22"
+    },
+    "Properties": {
+      "TransformMask": {
+        "Mask": 27
+      },
+      "Rotation": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 29999
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Scale": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 15999
+          }
+        ],
+        "Values": [
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Scale[1]": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 16000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 6.774358E-05,
+              "LeaveTangent": 6.774358E-05,
+              "ArriveTangentWeight": 0.8282309,
+              "LeaveTangentWeight": 0.8282309,
+              "TangentWeightMode": 3
+            },
+            "InterpMode": 2,
+            "TangentMode": 1
+          },
+          {
+            "Value": 1.8,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Shear": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 29999
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Shear[1]": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 29999
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'RewardSelectItemView_C:RewardSelectItemView_Select_INST.RewardSelectItemView_Select.MovieScene2DTransformTrack_1.MovieScene2DTransformSection_0.EaseInFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.28"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'RewardSelectItemView_C:RewardSelectItemView_Select_INST.RewardSelectItemView_Select.MovieScene2DTransformTrack_1.MovieScene2DTransformSection_0.EaseOutFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.29"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 39999
+            }
+          }
+        }
+      },
+      "Signature": "BC0D6AD5-4B10C11A-01F3AD9B-B75D38B4"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformSection",
+    "Name": "MovieScene2DTransformSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene2DTransformSection'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformTrack'RewardSelectItemView_C:RewardSelectItemView_Select_INST.RewardSelectItemView_Select.MovieScene2DTransformTrack_3'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.23"
+    },
+    "Properties": {
+      "Scale": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 4000
+          },
+          {
+            "Value": 14000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.6,
+            "Tangent": {
+              "ArriveTangent": 0.00557272,
+              "LeaveTangent": 0.00557272,
+              "ArriveTangentWeight": 0.3220433,
+              "LeaveTangentWeight": 0.3220433,
+              "TangentWeightMode": 3
+            },
+            "InterpMode": 2,
+            "TangentMode": 1
+          },
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Scale[1]": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 4000
+          },
+          {
+            "Value": 14000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.6,
+            "Tangent": {
+              "ArriveTangent": 0.00557272,
+              "LeaveTangent": 0.00557272,
+              "ArriveTangentWeight": 0.3220433,
+              "LeaveTangentWeight": 0.3220433,
+              "TangentWeightMode": 3
+            },
+            "InterpMode": 2,
+            "TangentMode": 1
+          },
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'RewardSelectItemView_C:RewardSelectItemView_Select_INST.RewardSelectItemView_Select.MovieScene2DTransformTrack_3.MovieScene2DTransformSection_0.EaseInFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.30"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'RewardSelectItemView_C:RewardSelectItemView_Select_INST.RewardSelectItemView_Select.MovieScene2DTransformTrack_3.MovieScene2DTransformSection_0.EaseOutFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.31"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 39999
+            }
+          }
+        }
+      },
+      "Signature": "03899B34-45D5A754-7A2609A0-F6A9DD83"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformSection",
+    "Name": "MovieScene2DTransformSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene2DTransformSection'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformTrack'RewardSelectItemView_C:RewardSelectItemView_Select_INST.RewardSelectItemView_Select.MovieScene2DTransformTrack_5'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.24"
+    },
+    "Properties": {
+      "TransformMask": {
+        "Mask": 27
+      },
+      "Rotation": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 29999
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Scale": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 15999
+          }
+        ],
+        "Values": [
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Scale[1]": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 15999
+          }
+        ],
+        "Values": [
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Shear": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 29999
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Shear[1]": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 29999
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'RewardSelectItemView_C:RewardSelectItemView_Select_INST.RewardSelectItemView_Select.MovieScene2DTransformTrack_5.MovieScene2DTransformSection_0.EaseInFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.32"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'RewardSelectItemView_C:RewardSelectItemView_Select_INST.RewardSelectItemView_Select.MovieScene2DTransformTrack_5.MovieScene2DTransformSection_0.EaseOutFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.33"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 39999
+            }
+          }
+        }
+      },
+      "Signature": "70760D10-454E738B-EBC09480-BE7B4DCB"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformSection",
+    "Name": "MovieScene2DTransformSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene2DTransformSection'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformTrack'RewardSelectItemView_C:RewardSelectItemView_Select_INST.RewardSelectItemView_Select.MovieScene2DTransformTrack_7'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.25"
+    },
+    "Properties": {
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'RewardSelectItemView_C:RewardSelectItemView_Select_INST.RewardSelectItemView_Select.MovieScene2DTransformTrack_7.MovieScene2DTransformSection_0.EaseInFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.34"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'RewardSelectItemView_C:RewardSelectItemView_Select_INST.RewardSelectItemView_Select.MovieScene2DTransformTrack_7.MovieScene2DTransformSection_0.EaseOutFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.35"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 40000
+            }
+          }
+        }
+      },
+      "Signature": "B3B50A58-49D0E0D7-744D9693-0E107AAE"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformTrack",
+    "Name": "MovieScene2DTransformTrack_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene2DTransformTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'RewardSelectItemView_C:RewardSelectItemView_Select_INST.RewardSelectItemView_Select'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.17"
+    },
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderTransform",
+        "PropertyPath": "RenderTransform",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieScene2DTransformSection'RewardSelectItemView_C:RewardSelectItemView_Select_INST.RewardSelectItemView_Select.MovieScene2DTransformTrack_1.MovieScene2DTransformSection_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.18"
+        }
+      ],
+      "EvaluationFieldGuid": "626C809C-4ADD100B-F5E0698B-F67D44DA",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieScene2DTransformSection'RewardSelectItemView_C:RewardSelectItemView_Select_INST.RewardSelectItemView_Select.MovieScene2DTransformTrack_1.MovieScene2DTransformSection_0'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.18"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Exclusive",
+                "Value": {
+                  "Value": 39999
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "626C809C-4ADD100B-F5E0698B-F67D44DA"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformTrack",
+    "Name": "MovieScene2DTransformTrack_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene2DTransformTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'RewardSelectItemView_C:RewardSelectItemView_Select_INST.RewardSelectItemView_Select'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.17"
+    },
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderTransform",
+        "PropertyPath": "RenderTransform",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieScene2DTransformSection'RewardSelectItemView_C:RewardSelectItemView_Select_INST.RewardSelectItemView_Select.MovieScene2DTransformTrack_3.MovieScene2DTransformSection_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.19"
+        }
+      ],
+      "EvaluationFieldGuid": "1E432DD1-4476DD85-1DAE3DBB-637AD1E4",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieScene2DTransformSection'RewardSelectItemView_C:RewardSelectItemView_Select_INST.RewardSelectItemView_Select.MovieScene2DTransformTrack_3.MovieScene2DTransformSection_0'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.19"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Exclusive",
+                "Value": {
+                  "Value": 39999
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "1E432DD1-4476DD85-1DAE3DBB-637AD1E4"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformTrack",
+    "Name": "MovieScene2DTransformTrack_5",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene2DTransformTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'RewardSelectItemView_C:RewardSelectItemView_Select_INST.RewardSelectItemView_Select'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.17"
+    },
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderTransform",
+        "PropertyPath": "RenderTransform",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieScene2DTransformSection'RewardSelectItemView_C:RewardSelectItemView_Select_INST.RewardSelectItemView_Select.MovieScene2DTransformTrack_5.MovieScene2DTransformSection_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.20"
+        }
+      ],
+      "EvaluationFieldGuid": "80BF957D-401309FE-10FD048A-C155EE2A",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieScene2DTransformSection'RewardSelectItemView_C:RewardSelectItemView_Select_INST.RewardSelectItemView_Select.MovieScene2DTransformTrack_5.MovieScene2DTransformSection_0'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.20"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Exclusive",
+                "Value": {
+                  "Value": 39999
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "80BF957D-401309FE-10FD048A-C155EE2A"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformTrack",
+    "Name": "MovieScene2DTransformTrack_7",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene2DTransformTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'RewardSelectItemView_C:RewardSelectItemView_Select_INST.RewardSelectItemView_Select'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.17"
+    },
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderTransform",
+        "PropertyPath": "RenderTransform",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieScene2DTransformSection'RewardSelectItemView_C:RewardSelectItemView_Select_INST.RewardSelectItemView_Select.MovieScene2DTransformTrack_7.MovieScene2DTransformSection_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.21"
+        }
+      ],
+      "EvaluationFieldGuid": "4287FB7B-4C5D0A23-530DC4A6-796B318F",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieScene2DTransformSection'RewardSelectItemView_C:RewardSelectItemView_Select_INST.RewardSelectItemView_Select.MovieScene2DTransformTrack_7.MovieScene2DTransformSection_0'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.21"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Exclusive",
+                "Value": {
+                  "Value": 40000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "4287FB7B-4C5D0A23-530DC4A6-796B318F"
+    }
+  },
+  {
+    "Type": "MovieSceneBoolSection",
+    "Name": "MovieSceneBoolSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBoolSection'",
+    "Outer": {
+      "ObjectName": "MovieSceneBoolTrack'RewardSelectItemView_C:RewardSelectItemView_Select_INST.RewardSelectItemView_Select.MovieSceneBoolTrack_1'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.27"
+    },
+    "Properties": {
+      "BoolCurve": {
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 6000
+          }
+        ],
+        "Values": [
+          false,
+          true
+        ]
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'RewardSelectItemView_C:RewardSelectItemView_Select_INST.RewardSelectItemView_Select.MovieSceneBoolTrack_1.MovieSceneBoolSection_0.EaseInFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.36"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'RewardSelectItemView_C:RewardSelectItemView_Select_INST.RewardSelectItemView_Select.MovieSceneBoolTrack_1.MovieSceneBoolSection_0.EaseOutFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.37"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 40000
+            }
+          }
+        }
+      },
+      "Signature": "A4B3932F-452A4900-36A4DB85-00BF8A14"
+    }
+  },
+  {
+    "Type": "MovieSceneBoolTrack",
+    "Name": "MovieSceneBoolTrack_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBoolTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'RewardSelectItemView_C:RewardSelectItemView_Select_INST.RewardSelectItemView_Select'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.17"
+    },
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "bPlayParticle",
+        "PropertyPath": "bPlayParticle",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneBoolSection'RewardSelectItemView_C:RewardSelectItemView_Select_INST.RewardSelectItemView_Select.MovieSceneBoolTrack_1.MovieSceneBoolSection_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.26"
+        }
+      ],
+      "EvaluationFieldGuid": "7FF34A95-496CA74B-A771A681-975501B5",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneBoolSection'RewardSelectItemView_C:RewardSelectItemView_Select_INST.RewardSelectItemView_Select.MovieSceneBoolTrack_1.MovieSceneBoolSection_0'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.26"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Exclusive",
+                "Value": {
+                  "Value": 40000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "7FF34A95-496CA74B-A771A681-975501B5"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformSection'RewardSelectItemView_C:RewardSelectItemView_Select_INST.RewardSelectItemView_Select.MovieScene2DTransformTrack_1.MovieScene2DTransformSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.18"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformSection'RewardSelectItemView_C:RewardSelectItemView_Select_INST.RewardSelectItemView_Select.MovieScene2DTransformTrack_1.MovieScene2DTransformSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.18"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformSection'RewardSelectItemView_C:RewardSelectItemView_Select_INST.RewardSelectItemView_Select.MovieScene2DTransformTrack_3.MovieScene2DTransformSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.19"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformSection'RewardSelectItemView_C:RewardSelectItemView_Select_INST.RewardSelectItemView_Select.MovieScene2DTransformTrack_3.MovieScene2DTransformSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.19"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformSection'RewardSelectItemView_C:RewardSelectItemView_Select_INST.RewardSelectItemView_Select.MovieScene2DTransformTrack_5.MovieScene2DTransformSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.20"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformSection'RewardSelectItemView_C:RewardSelectItemView_Select_INST.RewardSelectItemView_Select.MovieScene2DTransformTrack_5.MovieScene2DTransformSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.20"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformSection'RewardSelectItemView_C:RewardSelectItemView_Select_INST.RewardSelectItemView_Select.MovieScene2DTransformTrack_7.MovieScene2DTransformSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.21"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformSection'RewardSelectItemView_C:RewardSelectItemView_Select_INST.RewardSelectItemView_Select.MovieScene2DTransformTrack_7.MovieScene2DTransformSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.21"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneBoolSection'RewardSelectItemView_C:RewardSelectItemView_Select_INST.RewardSelectItemView_Select.MovieSceneBoolTrack_1.MovieSceneBoolSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.26"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneBoolSection'RewardSelectItemView_C:RewardSelectItemView_Select_INST.RewardSelectItemView_Select.MovieSceneBoolTrack_1.MovieSceneBoolSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.26"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatSection'RewardSelectItemView_C:RewardSelectItemView_Select_INST.RewardSelectItemView_Select.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.49"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatSection'RewardSelectItemView_C:RewardSelectItemView_Select_INST.RewardSelectItemView_Select.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.49"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatSection'RewardSelectItemView_C:RewardSelectItemView_Select_INST.RewardSelectItemView_Select.MovieSceneFloatTrack_4.MovieSceneFloatSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.50"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatSection'RewardSelectItemView_C:RewardSelectItemView_Select_INST.RewardSelectItemView_Select.MovieSceneFloatTrack_4.MovieSceneFloatSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.50"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatSection'RewardSelectItemView_C:RewardSelectItemView_Select_INST.RewardSelectItemView_Select.MovieSceneFloatTrack_5.MovieSceneFloatSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.51"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatSection'RewardSelectItemView_C:RewardSelectItemView_Select_INST.RewardSelectItemView_Select.MovieSceneFloatTrack_5.MovieSceneFloatSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.51"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatSection'RewardSelectItemView_C:RewardSelectItemView_Select_INST.RewardSelectItemView_Select.MovieSceneFloatTrack_6.MovieSceneFloatSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.52"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatSection'RewardSelectItemView_C:RewardSelectItemView_Select_INST.RewardSelectItemView_Select.MovieSceneFloatTrack_6.MovieSceneFloatSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.52"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatSection'RewardSelectItemView_C:RewardSelectItemView_Select_INST.RewardSelectItemView_Select.MovieSceneFloatTrack_7.MovieSceneFloatSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.53"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatSection'RewardSelectItemView_C:RewardSelectItemView_Select_INST.RewardSelectItemView_Select.MovieSceneFloatTrack_7.MovieSceneFloatSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.53"
+    }
+  },
+  {
+    "Type": "MovieSceneCompiledData",
+    "Name": "CompiledData",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneCompiledData'",
+    "Outer": {
+      "ObjectName": "WidgetAnimation'RewardSelectItemView_C:RewardSelectItemView_Select_INST'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.68"
+    },
+    "Properties": {
+      "EvaluationTemplate": {
+        "Tracks": [
+          {
+            "Key": {
+              "Value": 0
+            },
+            "Value": {
+              "ObjectBindingID": "2E961854-47DD3FDC-AF41C582-330362BD",
+              "EvaluationPriority": 1000,
+              "EvaluationMethod": "EEvaluationMethod::Static",
+              "SourceTrack": {
+                "ObjectName": "MovieSceneBoolTrack'RewardSelectItemView_C:RewardSelectItemView_Select_INST.RewardSelectItemView_Select.MovieSceneBoolTrack_1'",
+                "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.27"
+              },
+              "ChildTemplates": [
+                {
+                  "TypeName": "/Script/MovieSceneTracks.MovieSceneBoolPropertySectionTemplate",
+                  "Data": {
+                    "BoolCurve": {
+                      "Times": [
+                        {
+                          "Value": 0
+                        },
+                        {
+                          "Value": 6000
+                        }
+                      ],
+                      "DefaultValue": false,
+                      "bHasDefaultValue": false,
+                      "Values": [
+                        false,
+                        true
+                      ]
+                    },
+                    "PropertyData": {
+                      "PropertyName": "PlayParticle",
+                      "PropertyPath": "bPlayParticle"
+                    },
+                    "CompletionMode": "EMovieSceneCompletionMode::KeepState",
+                    "SourceSectionPtr": {
+                      "ObjectName": "MovieSceneBoolSection'RewardSelectItemView_C:RewardSelectItemView_Select_INST.RewardSelectItemView_Select.MovieSceneBoolTrack_1.MovieSceneBoolSection_0'",
+                      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.26"
+                    }
+                  }
+                }
+              ],
+              "TrackTemplate": {
+                "TypeName": "",
+                "Data": null
+              },
+              "EvaluationGroup": "None",
+              "bEvaluateInPreroll": false,
+              "bEvaluateInPostroll": false,
+              "bTearDownPriority": false
+            }
+          }
+        ],
+        "TemplateLedger": {
+          "LastTrackIdentifier": {
+            "Value": 0
+          },
+          "TrackSignatureToTrackIdentifier": [
+            {
+              "Key": "7FF34A95-496CA74B-A771A681-975501B5",
+              "Value": {
+                "Value": 0
+              }
+            }
+          ]
+        }
+      },
+      "EntityComponentField": {
+        "PersistentEntityTree": {
+          "SerializedData": {
+            "Data": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 9,
+                  "Capacity": 9
+                },
+                {
+                  "StartIndex": 9,
+                  "Size": 4,
+                  "Capacity": 4
+                },
+                {
+                  "StartIndex": 13,
+                  "Size": 1,
+                  "Capacity": 1
+                }
+              ],
+              "Items": [
+                {
+                  "EntityIndex": 0,
+                  "MetaDataIndex": -1
+                },
+                {
+                  "EntityIndex": 1,
+                  "MetaDataIndex": -1
+                },
+                {
+                  "EntityIndex": 2,
+                  "MetaDataIndex": -1
+                },
+                {
+                  "EntityIndex": 3,
+                  "MetaDataIndex": -1
+                },
+                {
+                  "EntityIndex": 4,
+                  "MetaDataIndex": -1
+                },
+                {
+                  "EntityIndex": 5,
+                  "MetaDataIndex": -1
+                },
+                {
+                  "EntityIndex": 6,
+                  "MetaDataIndex": -1
+                },
+                {
+                  "EntityIndex": 7,
+                  "MetaDataIndex": -1
+                },
+                {
+                  "EntityIndex": 8,
+                  "MetaDataIndex": -1
+                },
+                {
+                  "EntityIndex": 1,
+                  "MetaDataIndex": -1
+                },
+                {
+                  "EntityIndex": 5,
+                  "MetaDataIndex": -1
+                },
+                {
+                  "EntityIndex": 6,
+                  "MetaDataIndex": -1
+                },
+                {
+                  "EntityIndex": 7,
+                  "MetaDataIndex": -1
+                },
+                {
+                  "EntityIndex": 7,
+                  "MetaDataIndex": -1
+                }
+              ]
+            },
+            "RootNode": {
+              "Range": {
+                "LowerBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                },
+                "UpperBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                }
+              },
+              "Parent": {
+                "ChildrenHandle": {
+                  "EntryIndex": -1
+                },
+                "Index": -1
+              },
+              "ChildrenID": {
+                "EntryIndex": 0
+              },
+              "DataID": {
+                "EntryIndex": -1
+              }
+            },
+            "ChildNodes": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 3,
+                  "Capacity": 3
+                }
+              ],
+              "Items": [
+                {
+                  "Range": {
+                    "LowerBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 0
+                      }
+                    },
+                    "UpperBound": {
+                      "Type": 0,
+                      "Value": {
+                        "Value": 39999
+                      }
+                    }
+                  },
+                  "Parent": {
+                    "ChildrenHandle": {
+                      "EntryIndex": -1
+                    },
+                    "Index": 0
+                  },
+                  "ChildrenID": {
+                    "EntryIndex": -1
+                  },
+                  "DataID": {
+                    "EntryIndex": 0
+                  }
+                },
+                {
+                  "Range": {
+                    "LowerBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 39999
+                      }
+                    },
+                    "UpperBound": {
+                      "Type": 0,
+                      "Value": {
+                        "Value": 40000
+                      }
+                    }
+                  },
+                  "Parent": {
+                    "ChildrenHandle": {
+                      "EntryIndex": -1
+                    },
+                    "Index": 0
+                  },
+                  "ChildrenID": {
+                    "EntryIndex": -1
+                  },
+                  "DataID": {
+                    "EntryIndex": 1
+                  }
+                },
+                {
+                  "Range": {
+                    "LowerBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 40000
+                      }
+                    },
+                    "UpperBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 40000
+                      }
+                    }
+                  },
+                  "Parent": {
+                    "ChildrenHandle": {
+                      "EntryIndex": -1
+                    },
+                    "Index": 0
+                  },
+                  "ChildrenID": {
+                    "EntryIndex": -1
+                  },
+                  "DataID": {
+                    "EntryIndex": 2
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "Entities": [
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieSceneFloatSection'RewardSelectItemView_C:RewardSelectItemView_Select_INST.RewardSelectItemView_Select.MovieSceneFloatTrack_4.MovieSceneFloatSection_0'",
+                "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.50"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 0
+          },
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieSceneFloatSection'RewardSelectItemView_C:RewardSelectItemView_Select_INST.RewardSelectItemView_Select.MovieSceneFloatTrack_5.MovieSceneFloatSection_0'",
+                "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.51"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 1
+          },
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieScene2DTransformSection'RewardSelectItemView_C:RewardSelectItemView_Select_INST.RewardSelectItemView_Select.MovieScene2DTransformTrack_3.MovieScene2DTransformSection_0'",
+                "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.19"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 2
+          },
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieSceneFloatSection'RewardSelectItemView_C:RewardSelectItemView_Select_INST.RewardSelectItemView_Select.MovieSceneFloatTrack_6.MovieSceneFloatSection_0'",
+                "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.52"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 3
+          },
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieScene2DTransformSection'RewardSelectItemView_C:RewardSelectItemView_Select_INST.RewardSelectItemView_Select.MovieScene2DTransformTrack_5.MovieScene2DTransformSection_0'",
+                "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.20"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 4
+          },
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieSceneFloatSection'RewardSelectItemView_C:RewardSelectItemView_Select_INST.RewardSelectItemView_Select.MovieSceneFloatTrack_7.MovieSceneFloatSection_0'",
+                "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.53"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 5
+          },
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieScene2DTransformSection'RewardSelectItemView_C:RewardSelectItemView_Select_INST.RewardSelectItemView_Select.MovieScene2DTransformTrack_7.MovieScene2DTransformSection_0'",
+                "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.21"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 6
+          },
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieSceneFloatSection'RewardSelectItemView_C:RewardSelectItemView_Select_INST.RewardSelectItemView_Select.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+                "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.49"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 7
+          },
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieScene2DTransformSection'RewardSelectItemView_C:RewardSelectItemView_Select_INST.RewardSelectItemView_Select.MovieScene2DTransformTrack_1.MovieScene2DTransformSection_0'",
+                "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.18"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 8
+          }
+        ],
+        "SharedMetaData": [
+          {
+            "ObjectBindingID": "E0BEA375-407F35B2-BBBDE4AB-E31C4291"
+          },
+          {
+            "ObjectBindingID": "CD0B74AE-4C06798A-19ADDA8A-C2720138"
+          },
+          {
+            "ObjectBindingID": "CD0B74AE-4C06798A-19ADDA8A-C2720138"
+          },
+          {
+            "ObjectBindingID": "8FC183BC-4B77ED65-D3B65783-282830C2"
+          },
+          {
+            "ObjectBindingID": "8FC183BC-4B77ED65-D3B65783-282830C2"
+          },
+          {
+            "ObjectBindingID": "B5728568-4CF6FC70-69CDE187-69B80C4E"
+          },
+          {
+            "ObjectBindingID": "B5728568-4CF6FC70-69CDE187-69B80C4E"
+          },
+          {
+            "ObjectBindingID": "296BED83-40EE00D9-F3B8B8BF-5D6D9F03"
+          },
+          {
+            "ObjectBindingID": "296BED83-40EE00D9-F3B8B8BF-5D6D9F03"
+          }
+        ]
+      },
+      "TrackTemplateField": {
+        "Ranges": [
+          {
+            "Value": {
+              "LowerBound": {
+                "Type": 2,
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": 0,
+                "Value": {
+                  "Value": 0
+                }
+              }
+            }
+          },
+          {
+            "Value": {
+              "LowerBound": {
+                "Type": 1,
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": 0,
+                "Value": {
+                  "Value": 40000
+                }
+              }
+            }
+          },
+          {
+            "Value": {
+              "LowerBound": {
+                "Type": 1,
+                "Value": {
+                  "Value": 40000
+                }
+              },
+              "UpperBound": {
+                "Type": 2,
+                "Value": {
+                  "Value": 0
+                }
+              }
+            }
+          }
+        ],
+        "Groups": [
+          {
+            "LUTIndices": [],
+            "TrackLUT": [],
+            "SectionLUT": []
+          },
+          {
+            "LUTIndices": [
+              {
+                "NumInitPtrs": 0,
+                "NumEvalPtrs": 1
+              }
+            ],
+            "TrackLUT": [
+              {
+                "TrackPtr": {
+                  "SequenceID": {
+                    "Value": 0
+                  },
+                  "TrackIdentifier": {
+                    "Value": 0
+                  }
+                },
+                "NumChildren": 1
+              }
+            ],
+            "SectionLUT": [
+              {
+                "ChildIndex": 0,
+                "Flags": "ESectionEvaluationFlags::None",
+                "ForcedTime": {
+                  "Value": -2147483648
+                }
+              }
+            ]
+          },
+          {
+            "LUTIndices": [],
+            "TrackLUT": [],
+            "SectionLUT": []
+          }
+        ],
+        "MetaData": [
+          {
+            "ActiveSequences": [
+              {
+                "Value": 0
+              }
+            ],
+            "ActiveEntities": []
+          },
+          {
+            "ActiveSequences": [
+              {
+                "Value": 0
+              }
+            ],
+            "ActiveEntities": [
+              {
+                "Key": {
+                  "SequenceID": {
+                    "Value": 0
+                  },
+                  "TrackIdentifier": {
+                    "Value": 0
+                  },
+                  "SectionIndex": 0
+                },
+                "SetupIndex": 0,
+                "TearDownIndex": 65535
+              }
+            ]
+          },
+          {
+            "ActiveSequences": [
+              {
+                "Value": 0
+              }
+            ],
+            "ActiveEntities": []
+          }
+        ]
+      },
+      "CompiledSignature": "F69F5EAE-44CBCC3F-0BBD6B9D-3A091426",
+      "CompilerVersion": "7D4B9809-2FAC4A6B-964ECF72-D8279EF8",
+      "AccumulatedMask": {
+        "bEvaluationTemplate": true,
+        "bEvaluationTemplateField": true,
+        "bEntityComponentField": true
+      },
+      "AllocatedMask": {
+        "bEvaluationTemplate": true,
+        "bEvaluationTemplateField": true,
+        "bEntityComponentField": true
+      }
+    }
+  },
+  {
+    "Type": "MovieSceneFloatSection",
+    "Name": "MovieSceneFloatSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneFloatSection'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatTrack'RewardSelectItemView_C:RewardSelectItemView_Select_INST.RewardSelectItemView_Select.MovieSceneFloatTrack_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.54"
+    },
+    "Properties": {
+      "FloatCurve": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 6000
+          },
+          {
+            "Value": 38000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.013398668,
+              "LeaveTangent": 0.013398668,
+              "ArriveTangentWeight": 0.824189,
+              "LeaveTangentWeight": 0.824189,
+              "TangentWeightMode": 3
+            },
+            "InterpMode": 2,
+            "TangentMode": 1
+          },
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": -0.0016748339,
+              "LeaveTangent": -0.0016748339,
+              "ArriveTangentWeight": 0.24932939,
+              "LeaveTangentWeight": 0.24932939,
+              "TangentWeightMode": 3
+            },
+            "InterpMode": 2,
+            "TangentMode": 1
+          },
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 6.822508E-12,
+              "LeaveTangent": 6.822508E-12,
+              "ArriveTangentWeight": 0.29121572,
+              "LeaveTangentWeight": 0.29121572,
+              "TangentWeightMode": 3
+            },
+            "InterpMode": 2,
+            "TangentMode": 1
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'RewardSelectItemView_C:RewardSelectItemView_Select_INST.RewardSelectItemView_Select.MovieSceneFloatTrack_0.MovieSceneFloatSection_0.EaseInFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.38"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'RewardSelectItemView_C:RewardSelectItemView_Select_INST.RewardSelectItemView_Select.MovieSceneFloatTrack_0.MovieSceneFloatSection_0.EaseOutFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.39"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 40000
+            }
+          }
+        }
+      },
+      "Signature": "ADEB67AB-444421F4-6F7DD9AA-96DFEEDA"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatSection",
+    "Name": "MovieSceneFloatSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneFloatSection'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatTrack'RewardSelectItemView_C:RewardSelectItemView_Select_INST.RewardSelectItemView_Select.MovieSceneFloatTrack_4'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.55"
+    },
+    "Properties": {
+      "FloatCurve": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 20000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'RewardSelectItemView_C:RewardSelectItemView_Select_INST.RewardSelectItemView_Select.MovieSceneFloatTrack_4.MovieSceneFloatSection_0.EaseInFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.40"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'RewardSelectItemView_C:RewardSelectItemView_Select_INST.RewardSelectItemView_Select.MovieSceneFloatTrack_4.MovieSceneFloatSection_0.EaseOutFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.41"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 39999
+            }
+          }
+        }
+      },
+      "Signature": "DD422F20-432418C6-1DBE8DAB-28C0F4C1"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatSection",
+    "Name": "MovieSceneFloatSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneFloatSection'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatTrack'RewardSelectItemView_C:RewardSelectItemView_Select_INST.RewardSelectItemView_Select.MovieSceneFloatTrack_5'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.56"
+    },
+    "Properties": {
+      "FloatCurve": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 4000
+          },
+          {
+            "Value": 13998
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.017164,
+              "LeaveTangent": 0.017164,
+              "ArriveTangentWeight": 0.783927,
+              "LeaveTangentWeight": 0.783927,
+              "TangentWeightMode": 3
+            },
+            "InterpMode": 2,
+            "TangentMode": 1
+          },
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'RewardSelectItemView_C:RewardSelectItemView_Select_INST.RewardSelectItemView_Select.MovieSceneFloatTrack_5.MovieSceneFloatSection_0.EaseInFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.42"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'RewardSelectItemView_C:RewardSelectItemView_Select_INST.RewardSelectItemView_Select.MovieSceneFloatTrack_5.MovieSceneFloatSection_0.EaseOutFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.43"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 40000
+            }
+          }
+        }
+      },
+      "Signature": "4DB5C38E-473BD693-3FC0CC86-4D745BDE"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatSection",
+    "Name": "MovieSceneFloatSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneFloatSection'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatTrack'RewardSelectItemView_C:RewardSelectItemView_Select_INST.RewardSelectItemView_Select.MovieSceneFloatTrack_6'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.57"
+    },
+    "Properties": {
+      "FloatCurve": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 15999
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.010829671,
+              "LeaveTangent": 0.010829671,
+              "ArriveTangentWeight": 0.6661355,
+              "LeaveTangentWeight": 0.6661355,
+              "TangentWeightMode": 3
+            },
+            "InterpMode": 2,
+            "TangentMode": 1
+          },
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'RewardSelectItemView_C:RewardSelectItemView_Select_INST.RewardSelectItemView_Select.MovieSceneFloatTrack_6.MovieSceneFloatSection_0.EaseInFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.44"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'RewardSelectItemView_C:RewardSelectItemView_Select_INST.RewardSelectItemView_Select.MovieSceneFloatTrack_6.MovieSceneFloatSection_0.EaseOutFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.45"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 39999
+            }
+          }
+        }
+      },
+      "Signature": "09E023F7-46A86210-827715B4-BDFE0AE1"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatSection",
+    "Name": "MovieSceneFloatSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneFloatSection'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatTrack'RewardSelectItemView_C:RewardSelectItemView_Select_INST.RewardSelectItemView_Select.MovieSceneFloatTrack_7'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.58"
+    },
+    "Properties": {
+      "FloatCurve": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 10001
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'RewardSelectItemView_C:RewardSelectItemView_Select_INST.RewardSelectItemView_Select.MovieSceneFloatTrack_7.MovieSceneFloatSection_0.EaseInFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.46"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'RewardSelectItemView_C:RewardSelectItemView_Select_INST.RewardSelectItemView_Select.MovieSceneFloatTrack_7.MovieSceneFloatSection_0.EaseOutFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.47"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 40000
+            }
+          }
+        }
+      },
+      "Signature": "8DC35A62-4E16A2F5-1400A392-FD5F25CC"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatTrack",
+    "Name": "MovieSceneFloatTrack_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneFloatTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'RewardSelectItemView_C:RewardSelectItemView_Select_INST.RewardSelectItemView_Select'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.17"
+    },
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderOpacity",
+        "PropertyPath": "RenderOpacity",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneFloatSection'RewardSelectItemView_C:RewardSelectItemView_Select_INST.RewardSelectItemView_Select.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.49"
+        }
+      ],
+      "EvaluationFieldGuid": "1B18A22B-40A27B3B-93F8D78F-6A344387",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneFloatSection'RewardSelectItemView_C:RewardSelectItemView_Select_INST.RewardSelectItemView_Select.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.49"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 40000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "1B18A22B-40A27B3B-93F8D78F-6A344387"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatTrack",
+    "Name": "MovieSceneFloatTrack_4",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneFloatTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'RewardSelectItemView_C:RewardSelectItemView_Select_INST.RewardSelectItemView_Select'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.17"
+    },
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderOpacity",
+        "PropertyPath": "RenderOpacity",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneFloatSection'RewardSelectItemView_C:RewardSelectItemView_Select_INST.RewardSelectItemView_Select.MovieSceneFloatTrack_4.MovieSceneFloatSection_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.50"
+        }
+      ],
+      "EvaluationFieldGuid": "56C4BB39-45DF2B46-B1F7C6BA-240E1199",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneFloatSection'RewardSelectItemView_C:RewardSelectItemView_Select_INST.RewardSelectItemView_Select.MovieSceneFloatTrack_4.MovieSceneFloatSection_0'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.50"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Exclusive",
+                "Value": {
+                  "Value": 39999
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "56C4BB39-45DF2B46-B1F7C6BA-240E1199"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatTrack",
+    "Name": "MovieSceneFloatTrack_5",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneFloatTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'RewardSelectItemView_C:RewardSelectItemView_Select_INST.RewardSelectItemView_Select'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.17"
+    },
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderOpacity",
+        "PropertyPath": "RenderOpacity",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneFloatSection'RewardSelectItemView_C:RewardSelectItemView_Select_INST.RewardSelectItemView_Select.MovieSceneFloatTrack_5.MovieSceneFloatSection_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.51"
+        }
+      ],
+      "EvaluationFieldGuid": "82F7863B-4CB50C4D-8BFC9A91-39A14792",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneFloatSection'RewardSelectItemView_C:RewardSelectItemView_Select_INST.RewardSelectItemView_Select.MovieSceneFloatTrack_5.MovieSceneFloatSection_0'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.51"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Exclusive",
+                "Value": {
+                  "Value": 40000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "82F7863B-4CB50C4D-8BFC9A91-39A14792"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatTrack",
+    "Name": "MovieSceneFloatTrack_6",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneFloatTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'RewardSelectItemView_C:RewardSelectItemView_Select_INST.RewardSelectItemView_Select'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.17"
+    },
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderOpacity",
+        "PropertyPath": "RenderOpacity",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneFloatSection'RewardSelectItemView_C:RewardSelectItemView_Select_INST.RewardSelectItemView_Select.MovieSceneFloatTrack_6.MovieSceneFloatSection_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.52"
+        }
+      ],
+      "EvaluationFieldGuid": "AB032B54-413A8533-41E108A5-B50A63D7",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneFloatSection'RewardSelectItemView_C:RewardSelectItemView_Select_INST.RewardSelectItemView_Select.MovieSceneFloatTrack_6.MovieSceneFloatSection_0'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.52"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Exclusive",
+                "Value": {
+                  "Value": 39999
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "AB032B54-413A8533-41E108A5-B50A63D7"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatTrack",
+    "Name": "MovieSceneFloatTrack_7",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneFloatTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'RewardSelectItemView_C:RewardSelectItemView_Select_INST.RewardSelectItemView_Select'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.17"
+    },
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderOpacity",
+        "PropertyPath": "RenderOpacity",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneFloatSection'RewardSelectItemView_C:RewardSelectItemView_Select_INST.RewardSelectItemView_Select.MovieSceneFloatTrack_7.MovieSceneFloatSection_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.53"
+        }
+      ],
+      "EvaluationFieldGuid": "E08D58F1-4C0AD757-81DE2289-81A9F52D",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneFloatSection'RewardSelectItemView_C:RewardSelectItemView_Select_INST.RewardSelectItemView_Select.MovieSceneFloatTrack_7.MovieSceneFloatSection_0'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.53"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Exclusive",
+                "Value": {
+                  "Value": 40000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "E08D58F1-4C0AD757-81DE2289-81A9F52D"
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SizeBox",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'RewardSelectItemView_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.72"
+    },
+    "Properties": {
+      "WidthOverride": 136.0,
+      "HeightOverride": 290.0,
+      "bOverride_WidthOverride": true,
+      "bOverride_HeightOverride": true,
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot'RewardSelectItemView_C:WidgetTree.SizeBox.SizeBoxSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.61"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "WidgetSwitcherSlot'RewardSelectItemView_C:WidgetTree.ItemSwitcher.WidgetSwitcherSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.71"
+      }
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SizeBox_4",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'RewardSelectItemView_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.72"
+    },
+    "Properties": {
+      "WidthOverride": 136.0,
+      "HeightOverride": 290.0,
+      "bOverride_WidthOverride": true,
+      "bOverride_HeightOverride": true,
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot'RewardSelectItemView_C:WidgetTree.SizeBox_4.SizeBoxSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.62"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "WidgetSwitcherSlot'RewardSelectItemView_C:WidgetTree.ItemSwitcher.WidgetSwitcherSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.70"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBoxSlot'",
+    "Outer": {
+      "ObjectName": "SizeBox'RewardSelectItemView_C:WidgetTree.SizeBox'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.59"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "SizeBox'RewardSelectItemView_C:WidgetTree.SizeBox'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.59"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'RewardSelectItemView_C:WidgetTree.CanvasPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.2"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBoxSlot'",
+    "Outer": {
+      "ObjectName": "SizeBox'RewardSelectItemView_C:WidgetTree.SizeBox_4'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.60"
+    },
+    "Properties": {
+      "Padding": {
+        "Bottom": 90.0
+      },
+      "Parent": {
+        "ObjectName": "SizeBox'RewardSelectItemView_C:WidgetTree.SizeBox_4'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.60"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'RewardSelectItemView_C:WidgetTree.CanvasPanel_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.4"
+      }
+    }
+  },
+  {
+    "Type": "UIButton",
+    "Name": "SelectButton",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIButton'",
+    "Outer": {
+      "ObjectName": "WidgetTree'RewardSelectItemView_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.72"
+    },
+    "Properties": {
+      "IconImage": {
+        "ImageSize": {
+          "X": 61.44,
+          "Y": 61.44
+        }
+      },
+      "BindedNavigation": "EUIGamepadNavigation::EMainBoth",
+      "NavigationWrap": 7,
+      "BindedGroup": 2,
+      "bShowKeyIndicator": false,
+      "WidgetStyle": {
+        "Normal": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          },
+          "DrawAs": "ESlateBrushDrawType::NoDrawType"
+        },
+        "Hovered": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          },
+          "DrawAs": "ESlateBrushDrawType::NoDrawType"
+        },
+        "Pressed": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          },
+          "DrawAs": "ESlateBrushDrawType::NoDrawType"
+        },
+        "NormalPadding": {
+          "Left": 0.0,
+          "Top": 0.0,
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "PressedPadding": {
+          "Left": 0.0,
+          "Top": 0.0,
+          "Right": 0.0,
+          "Bottom": 0.0
+        }
+      },
+      "ClickMethod": "EButtonClickMethod::PreciseClick",
+      "TouchMethod": "EButtonTouchMethod::PreciseTap",
+      "PressMethod": "EButtonPressMethod::ButtonRelease",
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'RewardSelectItemView_C:WidgetTree.CanvasPanel_2.CanvasPanelSlot_10'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.8"
+      }
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "UIImage_206",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'RewardSelectItemView_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.72"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UIV2/Reward/UI/TexturesAtlas/Atlas/UI_Btn_Reward_Guoxuan_Sprite.UI_Btn_Reward_Guoxuan_Sprite",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 47.0,
+          "Y": 47.0
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'RewardSelectItemView_C:WidgetTree.SelectedFrame.CanvasPanelSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.14"
+      }
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "UIImage_89",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'RewardSelectItemView_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.72"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UIV2/Reward/UI/TexturesAtlas/Atlas/UI_Btn_Reward_Xuanzhongkuang_Sprite.UI_Btn_Reward_Xuanzhongkuang_Sprite",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 182.0,
+          "Y": 246.0
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'RewardSelectItemView_C:WidgetTree.SelectedFrame.CanvasPanelSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.13"
+      }
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "UnSelectedFrame",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'RewardSelectItemView_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.72"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UIV2/Reward/UI/TexturesAtlas/Atlas/UI_Btn_Reward_Weiuanzhongkuang_Sprite.UI_Btn_Reward_Weiuanzhongkuang_Sprite",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 47.0,
+          "Y": 47.0
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'RewardSelectItemView_C:WidgetTree.CanvasPanel_2.CanvasPanelSlot_4'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.10"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "UIShrinkTextBlock",
+    "Name": "UIShrinkTextBlock_Haved",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIShrinkTextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'RewardSelectItemView_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.72"
+    },
+    "Properties": {
+      "CurrTextKey": "Func_Common_AlreadyHave",
+      "ShrinkSize": {
+        "X": 192.0,
+        "Y": 57.6
+      },
+      "FontInfo": {
+        "FontObject": {
+          "ObjectName": "Font'UI_Font_Light_ZH'",
+          "ObjectPath": "UE_game/Content/Art/UI/Fonts/UI_Font_Light_ZH.0"
+        },
+        "TypefaceFontName": "Font_0",
+        "Size": 26,
+        "LetterSpacing": -50
+      },
+      "ColorAndOpacity": {
+        "SpecifiedColor": {
+          "R": 1.0,
+          "G": 1.0,
+          "B": 1.0,
+          "A": 1.0,
+          "Hex": "FFFFFF"
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'RewardSelectItemView_C:WidgetTree.CanvasPanel_2.CanvasPanelSlot_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.9"
+      }
+    }
+  },
+  {
+    "Type": "WidgetAnimation",
+    "Name": "RewardSelectItemView_Select_INST",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetAnimation'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'RewardSelectItemView_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.0"
+    },
+    "Properties": {
+      "MovieScene": {
+        "ObjectName": "MovieScene'RewardSelectItemView_C:RewardSelectItemView_Select_INST.RewardSelectItemView_Select'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.17"
+      },
+      "AnimationBindings": [
+        {
+          "WidgetName": "SelectedFrame_Fx",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "E0BEA375-407F35B2-BBBDE4AB-E31C4291",
+          "bIsRootWidget": false
+        },
+        {
+          "WidgetName": "UIImage_1",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "CD0B74AE-4C06798A-19ADDA8A-C2720138",
+          "bIsRootWidget": false
+        },
+        {
+          "WidgetName": "UIImage_bg",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "8FC183BC-4B77ED65-D3B65783-282830C2",
+          "bIsRootWidget": false
+        },
+        {
+          "WidgetName": "UIParticleEmitter_164",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "2E961854-47DD3FDC-AF41C582-330362BD",
+          "bIsRootWidget": false
+        },
+        {
+          "WidgetName": "GoodBaseIcon",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "4CC9F382-4B9770E7-BB0EA4BC-B6DAEC8B",
+          "bIsRootWidget": false
+        },
+        {
+          "WidgetName": "GoodBaseIcon",
+          "SlotWidgetName": "CanvasPanelSlot_3",
+          "AnimationGuid": "CFC9A81D-4AEE35FC-6B2C2AB2-7A1DE9B1",
+          "bIsRootWidget": false
+        },
+        {
+          "WidgetName": "UIImage_yuan",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "B5728568-4CF6FC70-69CDE187-69B80C4E",
+          "bIsRootWidget": false
+        },
+        {
+          "WidgetName": "UIImage_bg_Glow",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "296BED83-40EE00D9-F3B8B8BF-5D6D9F03",
+          "bIsRootWidget": false
+        }
+      ],
+      "DisplayLabel": "RewardSelectItemView_Select",
+      "CompiledData": {
+        "ObjectName": "MovieSceneCompiledData'RewardSelectItemView_C:RewardSelectItemView_Select_INST.CompiledData'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.48"
+      },
+      "Signature": "F69F5EAE-44CBCC3F-0BBD6B9D-3A091426"
+    }
+  },
+  {
+    "Type": "WidgetSwitcher",
+    "Name": "ItemSwitcher",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetSwitcher'",
+    "Outer": {
+      "ObjectName": "WidgetTree'RewardSelectItemView_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.72"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "WidgetSwitcherSlot'RewardSelectItemView_C:WidgetTree.ItemSwitcher.WidgetSwitcherSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.70"
+        },
+        {
+          "ObjectName": "WidgetSwitcherSlot'RewardSelectItemView_C:WidgetTree.ItemSwitcher.WidgetSwitcherSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.71"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'RewardSelectItemView_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_31'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.7"
+      }
+    }
+  },
+  {
+    "Type": "WidgetSwitcherSlot",
+    "Name": "WidgetSwitcherSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetSwitcherSlot'",
+    "Outer": {
+      "ObjectName": "WidgetSwitcher'RewardSelectItemView_C:WidgetTree.ItemSwitcher'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.69"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "WidgetSwitcher'RewardSelectItemView_C:WidgetTree.ItemSwitcher'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.69"
+      },
+      "Content": {
+        "ObjectName": "SizeBox'RewardSelectItemView_C:WidgetTree.SizeBox_4'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.60"
+      }
+    }
+  },
+  {
+    "Type": "WidgetSwitcherSlot",
+    "Name": "WidgetSwitcherSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetSwitcherSlot'",
+    "Outer": {
+      "ObjectName": "WidgetSwitcher'RewardSelectItemView_C:WidgetTree.ItemSwitcher'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.69"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "WidgetSwitcher'RewardSelectItemView_C:WidgetTree.ItemSwitcher'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.69"
+      },
+      "Content": {
+        "ObjectName": "SizeBox'RewardSelectItemView_C:WidgetTree.SizeBox'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.59"
+      }
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetTree'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'RewardSelectItemView_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.0"
+    },
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "CanvasPanel'RewardSelectItemView_C:WidgetTree.CanvasPanel_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Reward/RewardSelectItemView.3"
+      }
+    }
+  }
+]

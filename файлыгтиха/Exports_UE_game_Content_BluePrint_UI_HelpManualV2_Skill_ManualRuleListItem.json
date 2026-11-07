@@ -1,0 +1,941 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_ManualRuleListItem",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'ManualRuleListItem_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Skill/ManualRuleListItem.4"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_Event_bIsSelected",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_Event_bIsExpanded",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "Function",
+    "Name": "BP_OnItemSelectionChanged",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'ManualRuleListItem_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Skill/ManualRuleListItem.4"
+    },
+    "SuperStruct": {
+      "ObjectName": "Function'UserListEntry:BP_OnItemSelectionChanged'",
+      "ObjectPath": "/Script/UMG"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "bIsSelected",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "BP_OnItemExpansionChanged",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'ManualRuleListItem_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Skill/ManualRuleListItem.4"
+    },
+    "SuperStruct": {
+      "ObjectName": "Function'UserListEntry:BP_OnItemExpansionChanged'",
+      "ObjectPath": "/Script/UMG"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "bIsExpanded",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "BP_OnEntryReleased",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'ManualRuleListItem_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Skill/ManualRuleListItem.4"
+    },
+    "SuperStruct": {
+      "ObjectName": "Function'UserListEntry:BP_OnEntryReleased'",
+      "ObjectPath": "/Script/UMG"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "ManualRuleListItem_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Package": "UE_game/Content/BluePrint/UI/HelpManualV2/Skill/ManualRuleListItem",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'ManualRuleListItem_C:WidgetTree'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Skill/ManualRuleListItem.25"
+      },
+      "bClassRequiresNativeTick": true,
+      "UberGraphFunction": {
+        "ObjectName": "Function'ManualRuleListItem_C:ExecuteUbergraph_ManualRuleListItem'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Skill/ManualRuleListItem.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'UIListViewItem'",
+      "ObjectPath": "/Script/UE_game"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'ManualRuleListItem_C:BP_OnEntryReleased'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Skill/ManualRuleListItem.3"
+      },
+      {
+        "ObjectName": "Function'ManualRuleListItem_C:BP_OnItemExpansionChanged'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Skill/ManualRuleListItem.2"
+      },
+      {
+        "ObjectName": "Function'ManualRuleListItem_C:BP_OnItemSelectionChanged'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Skill/ManualRuleListItem.1"
+      },
+      {
+        "ObjectName": "Function'ManualRuleListItem_C:ExecuteUbergraph_ManualRuleListItem'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Skill/ManualRuleListItem.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "BigJumpBtn",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIButton'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "DesText",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIRichTextBlock'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ItemBg",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "JumpBtn",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIButton'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "UIImage_128",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_ManualRuleListItem": {
+        "ObjectName": "Function'ManualRuleListItem_C:ExecuteUbergraph_ManualRuleListItem'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Skill/ManualRuleListItem.0"
+      },
+      "BP_OnItemSelectionChanged": {
+        "ObjectName": "Function'ManualRuleListItem_C:BP_OnItemSelectionChanged'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Skill/ManualRuleListItem.1"
+      },
+      "BP_OnItemExpansionChanged": {
+        "ObjectName": "Function'ManualRuleListItem_C:BP_OnItemExpansionChanged'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Skill/ManualRuleListItem.2"
+      },
+      "BP_OnEntryReleased": {
+        "ObjectName": "Function'ManualRuleListItem_C:BP_OnEntryReleased'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Skill/ManualRuleListItem.3"
+      }
+    },
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "Interfaces": [
+      {
+        "Class": {
+          "ObjectName": "Class'UserListEntry'",
+          "ObjectPath": "/Script/UMG"
+        },
+        "PointerProperty": null,
+        "PointerOffset": 0,
+        "bImplementedByK2": true
+      }
+    ],
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "ManualRuleListItem_C'Default__ManualRuleListItem_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Skill/ManualRuleListItem.5"
+    }
+  },
+  {
+    "Type": "ManualRuleListItem_C",
+    "Name": "Default__ManualRuleListItem_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'UE_game/Content/BluePrint/UI/HelpManualV2/Skill/ManualRuleListItem.ManualRuleListItem_C'",
+    "Package": "UE_game/Content/BluePrint/UI/HelpManualV2/Skill/ManualRuleListItem",
+    "Properties": {
+      "UberGraphFrame": {},
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "ButtonSlot",
+    "Name": "ButtonSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ButtonSlot'",
+    "Outer": {
+      "ObjectName": "UIButton'ManualRuleListItem_C:WidgetTree.BigJumpBtn'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Skill/ManualRuleListItem.15"
+    },
+    "Properties": {
+      "Padding": {
+        "Left": 0.0,
+        "Top": 0.0,
+        "Right": 0.0,
+        "Bottom": 0.0
+      },
+      "HorizontalAlignment": "HAlign_Fill",
+      "VerticalAlignment": "VAlign_Fill",
+      "Parent": {
+        "ObjectName": "UIButton'ManualRuleListItem_C:WidgetTree.BigJumpBtn'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Skill/ManualRuleListItem.15"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'ManualRuleListItem_C:WidgetTree.CanvasPanel_531'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Skill/ManualRuleListItem.9"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_155",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'ManualRuleListItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Skill/ManualRuleListItem.25"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'ManualRuleListItem_C:WidgetTree.CanvasPanel_155.CanvasPanelSlot_33'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Skill/ManualRuleListItem.10"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_197",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'ManualRuleListItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Skill/ManualRuleListItem.25"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'ManualRuleListItem_C:WidgetTree.CanvasPanel_197.CanvasPanelSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Skill/ManualRuleListItem.11"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'ManualRuleListItem_C:WidgetTree.CanvasPanel_155.CanvasPanelSlot_33'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Skill/ManualRuleListItem.10"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_531",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'ManualRuleListItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Skill/ManualRuleListItem.25"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'ManualRuleListItem_C:WidgetTree.CanvasPanel_531.CanvasPanelSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Skill/ManualRuleListItem.12"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'ManualRuleListItem_C:WidgetTree.CanvasPanel_531.CanvasPanelSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Skill/ManualRuleListItem.13"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'ManualRuleListItem_C:WidgetTree.CanvasPanel_531.CanvasPanelSlot_2'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Skill/ManualRuleListItem.14"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "ButtonSlot'ManualRuleListItem_C:WidgetTree.BigJumpBtn.ButtonSlot_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Skill/ManualRuleListItem.6"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_33",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'ManualRuleListItem_C:WidgetTree.CanvasPanel_155'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Skill/ManualRuleListItem.7"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 1843.2,
+          "Bottom": 230.4
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'ManualRuleListItem_C:WidgetTree.CanvasPanel_155'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Skill/ManualRuleListItem.7"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'ManualRuleListItem_C:WidgetTree.CanvasPanel_197'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Skill/ManualRuleListItem.8"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'ManualRuleListItem_C:WidgetTree.CanvasPanel_197'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Skill/ManualRuleListItem.8"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 1785.6,
+          "Bottom": 296.832
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'ManualRuleListItem_C:WidgetTree.CanvasPanel_197'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Skill/ManualRuleListItem.8"
+      },
+      "Content": {
+        "ObjectName": "UIButton'ManualRuleListItem_C:WidgetTree.BigJumpBtn'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Skill/ManualRuleListItem.15"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'ManualRuleListItem_C:WidgetTree.CanvasPanel_531'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Skill/ManualRuleListItem.9"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "Anchors": {
+          "Maximum": {
+            "X": 1.0,
+            "Y": 1.0
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'ManualRuleListItem_C:WidgetTree.CanvasPanel_531'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Skill/ManualRuleListItem.9"
+      },
+      "Content": {
+        "ObjectName": "UIImage'ManualRuleListItem_C:WidgetTree.ItemBg'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Skill/ManualRuleListItem.17"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'ManualRuleListItem_C:WidgetTree.CanvasPanel_531'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Skill/ManualRuleListItem.9"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 735.36,
+          "Top": 30.72,
+          "Right": 135.68,
+          "Bottom": 57.6
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.0
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.0
+          }
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'ManualRuleListItem_C:WidgetTree.CanvasPanel_531'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Skill/ManualRuleListItem.9"
+      },
+      "Content": {
+        "ObjectName": "UIButton'ManualRuleListItem_C:WidgetTree.JumpBtn'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Skill/ManualRuleListItem.16"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'ManualRuleListItem_C:WidgetTree.CanvasPanel_531'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Skill/ManualRuleListItem.9"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": -84.479996,
+          "Right": 192.0,
+          "Bottom": 57.6
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.0
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.0
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.0
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'ManualRuleListItem_C:WidgetTree.CanvasPanel_531'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Skill/ManualRuleListItem.9"
+      },
+      "Content": {
+        "ObjectName": "VerticalBox'ManualRuleListItem_C:WidgetTree.VerticalBox_396'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Skill/ManualRuleListItem.21"
+      }
+    }
+  },
+  {
+    "Type": "UIButton",
+    "Name": "BigJumpBtn",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIButton'",
+    "Outer": {
+      "ObjectName": "WidgetTree'ManualRuleListItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Skill/ManualRuleListItem.25"
+    },
+    "Properties": {
+      "bCustomizeChildrenLayout": true,
+      "IconImage": {
+        "ImageSize": {
+          "X": 61.44,
+          "Y": 61.44
+        }
+      },
+      "WidgetStyle": {
+        "Normal": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          }
+        },
+        "Hovered": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          }
+        },
+        "Pressed": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          }
+        }
+      },
+      "BackgroundColor": {
+        "R": 1.0,
+        "G": 1.0,
+        "B": 1.0,
+        "A": 0.0,
+        "Hex": "FFFFFF"
+      },
+      "ClickMethod": "EButtonClickMethod::PreciseClick",
+      "TouchMethod": "EButtonTouchMethod::PreciseTap",
+      "Slots": [
+        {
+          "ObjectName": "ButtonSlot'ManualRuleListItem_C:WidgetTree.BigJumpBtn.ButtonSlot_2'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Skill/ManualRuleListItem.6"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'ManualRuleListItem_C:WidgetTree.CanvasPanel_197.CanvasPanelSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Skill/ManualRuleListItem.11"
+      }
+    }
+  },
+  {
+    "Type": "UIButton",
+    "Name": "JumpBtn",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIButton'",
+    "Outer": {
+      "ObjectName": "WidgetTree'ManualRuleListItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Skill/ManualRuleListItem.25"
+    },
+    "Properties": {
+      "IconImage": {
+        "ImageSize": {
+          "X": 61.44,
+          "Y": 61.44
+        }
+      },
+      "WidgetStyle": {
+        "Normal": {
+          "ImageSize": {
+            "X": 130.56,
+            "Y": 84.479996
+          },
+          "ResourceObject": {
+            "ObjectName": "PaperSprite'UI_Manual_LiebiaoSou02_Sprite'",
+            "ObjectPath": "UE_game/Content/Art/UI/TexturesAtlas/Manual/Atlas/UI_Manual_LiebiaoSou02_Sprite.1"
+          }
+        },
+        "Hovered": {
+          "ImageSize": {
+            "X": 130.56,
+            "Y": 84.479996
+          },
+          "ResourceObject": {
+            "ObjectName": "PaperSprite'UI_Manual_LiebiaoSou02_Sprite'",
+            "ObjectPath": "UE_game/Content/Art/UI/TexturesAtlas/Manual/Atlas/UI_Manual_LiebiaoSou02_Sprite.1"
+          }
+        },
+        "Pressed": {
+          "ImageSize": {
+            "X": 130.56,
+            "Y": 84.479996
+          },
+          "ResourceObject": {
+            "ObjectName": "PaperSprite'UI_Manual_LiebiaoSou02_Sprite'",
+            "ObjectPath": "UE_game/Content/Art/UI/TexturesAtlas/Manual/Atlas/UI_Manual_LiebiaoSou02_Sprite.1"
+          }
+        },
+        "Disabled": {
+          "ImageSize": {
+            "X": 68.0,
+            "Y": 44.0
+          },
+          "ResourceObject": {
+            "ObjectName": "PaperSprite'UI_Manual_LiebiaoSou02_Sprite'",
+            "ObjectPath": "UE_game/Content/Art/UI/TexturesAtlas/Manual/Atlas/UI_Manual_LiebiaoSou02_Sprite.1"
+          }
+        },
+        "NormalPadding": {
+          "Left": 0.0,
+          "Top": 0.0,
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "PressedPadding": {
+          "Left": 0.0,
+          "Top": 0.0,
+          "Right": 0.0,
+          "Bottom": 0.0
+        }
+      },
+      "ClickMethod": "EButtonClickMethod::PreciseClick",
+      "TouchMethod": "EButtonTouchMethod::PreciseTap",
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'ManualRuleListItem_C:WidgetTree.CanvasPanel_531.CanvasPanelSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Skill/ManualRuleListItem.13"
+      }
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "ItemBg",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'ManualRuleListItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Skill/ManualRuleListItem.25"
+    },
+    "Properties": {
+      "CurrStyleId": 5771,
+      "Brush": {
+        "ImageSize": {
+          "X": 61.44,
+          "Y": 61.44
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'ManualRuleListItem_C:WidgetTree.CanvasPanel_531.CanvasPanelSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Skill/ManualRuleListItem.12"
+      },
+      "Visibility": "ESlateVisibility::HitTestInvisible"
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "UIImage_128",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'ManualRuleListItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Skill/ManualRuleListItem.25"
+    },
+    "Properties": {
+      "CurrStyleId": 5772,
+      "Brush": {
+        "ImageSize": {
+          "X": 61.44,
+          "Y": 61.44
+        }
+      },
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'ManualRuleListItem_C:WidgetTree.VerticalBox_396.VerticalBoxSlot_4'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Skill/ManualRuleListItem.23"
+      }
+    }
+  },
+  {
+    "Type": "UIRichTextBlock",
+    "Name": "DesText",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIRichTextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'ManualRuleListItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Skill/ManualRuleListItem.25"
+    },
+    "Properties": {
+      "CurrStyleId": 3012,
+      "ShrinkSize": {
+        "X": 122.88,
+        "Y": 122.88
+      },
+      "Text": {
+        "Namespace": "",
+        "Key": "3771B44E447CB799441E1B84F1C1A9C1",
+        "SourceString": "<RichText> 释放该技能跳跃至 围内的敌人造成130武器攻击伤害</>",
+        "LocalizedString": "<RichText> 释放该技能跳跃至 围内的敌人造成130武器攻击伤害</>"
+      },
+      "MinDesiredWidth": 1536.0,
+      "WrappingPolicy": "ETextWrappingPolicy::AllowPerCharacterWrapping",
+      "AutoWrapText": true,
+      "WrapTextAt": 1536.0,
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'ManualRuleListItem_C:WidgetTree.VerticalBox_396.VerticalBoxSlot_5'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Skill/ManualRuleListItem.24"
+      }
+    }
+  },
+  {
+    "Type": "UIShrinkTextBlock",
+    "Name": "NameText",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIShrinkTextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'ManualRuleListItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Skill/ManualRuleListItem.25"
+    },
+    "Properties": {
+      "TextHAlignment": "HAlign_Left",
+      "CurrStyleId": 2551,
+      "TextContent": {
+        "Namespace": "",
+        "Key": "38C598564054A072C47BA1958A4DC7DF",
+        "SourceString": "NameText 跃击",
+        "LocalizedString": "NameText 跃击"
+      },
+      "ShrinkSize": {
+        "X": 1536.0,
+        "Y": 92.159996
+      },
+      "TextHJustification": "ETextJustify::Left",
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'ManualRuleListItem_C:WidgetTree.VerticalBox_396.VerticalBoxSlot_3'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Skill/ManualRuleListItem.22"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBox",
+    "Name": "VerticalBox_396",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'ManualRuleListItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Skill/ManualRuleListItem.25"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "VerticalBoxSlot'ManualRuleListItem_C:WidgetTree.VerticalBox_396.VerticalBoxSlot_3'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Skill/ManualRuleListItem.22"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot'ManualRuleListItem_C:WidgetTree.VerticalBox_396.VerticalBoxSlot_4'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Skill/ManualRuleListItem.23"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot'ManualRuleListItem_C:WidgetTree.VerticalBox_396.VerticalBoxSlot_5'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Skill/ManualRuleListItem.24"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'ManualRuleListItem_C:WidgetTree.CanvasPanel_531.CanvasPanelSlot_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Skill/ManualRuleListItem.14"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Outer": {
+      "ObjectName": "VerticalBox'ManualRuleListItem_C:WidgetTree.VerticalBox_396'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Skill/ManualRuleListItem.21"
+    },
+    "Properties": {
+      "Padding": {
+        "Left": 28.8,
+        "Top": 34.559998
+      },
+      "Parent": {
+        "ObjectName": "VerticalBox'ManualRuleListItem_C:WidgetTree.VerticalBox_396'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Skill/ManualRuleListItem.21"
+      },
+      "Content": {
+        "ObjectName": "UIShrinkTextBlock'ManualRuleListItem_C:WidgetTree.NameText'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Skill/ManualRuleListItem.20"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_4",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Outer": {
+      "ObjectName": "VerticalBox'ManualRuleListItem_C:WidgetTree.VerticalBox_396'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Skill/ManualRuleListItem.21"
+    },
+    "Properties": {
+      "Padding": {
+        "Left": 28.8,
+        "Top": 23.039999
+      },
+      "Parent": {
+        "ObjectName": "VerticalBox'ManualRuleListItem_C:WidgetTree.VerticalBox_396'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Skill/ManualRuleListItem.21"
+      },
+      "Content": {
+        "ObjectName": "UIImage'ManualRuleListItem_C:WidgetTree.UIImage_128'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Skill/ManualRuleListItem.18"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_5",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Outer": {
+      "ObjectName": "VerticalBox'ManualRuleListItem_C:WidgetTree.VerticalBox_396'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Skill/ManualRuleListItem.21"
+    },
+    "Properties": {
+      "Padding": {
+        "Left": 28.8,
+        "Top": 19.199999,
+        "Bottom": 19.199999
+      },
+      "Parent": {
+        "ObjectName": "VerticalBox'ManualRuleListItem_C:WidgetTree.VerticalBox_396'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Skill/ManualRuleListItem.21"
+      },
+      "Content": {
+        "ObjectName": "UIRichTextBlock'ManualRuleListItem_C:WidgetTree.DesText'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Skill/ManualRuleListItem.19"
+      }
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetTree'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'ManualRuleListItem_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Skill/ManualRuleListItem.4"
+    },
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "CanvasPanel'ManualRuleListItem_C:WidgetTree.CanvasPanel_155'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Skill/ManualRuleListItem.7"
+      }
+    }
+  }
+]

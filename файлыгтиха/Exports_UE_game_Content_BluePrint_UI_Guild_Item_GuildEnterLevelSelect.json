@@ -1,0 +1,396 @@
+[
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "GuildEnterLevelSelect_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Package": "UE_game/Content/BluePrint/UI/Guild/Item/GuildEnterLevelSelect",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'GuildEnterLevelSelect_C:WidgetTree'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildEnterLevelSelect.9"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'UserWidget'",
+      "ObjectPath": "/Script/UMG"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "SelectLevelAdd",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIButton'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SelectLevelSub",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIButton'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      }
+    ],
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "GuildEnterLevelSelect_C'Default__GuildEnterLevelSelect_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildEnterLevelSelect.1"
+    }
+  },
+  {
+    "Type": "GuildEnterLevelSelect_C",
+    "Name": "Default__GuildEnterLevelSelect_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'UE_game/Content/BluePrint/UI/Guild/Item/GuildEnterLevelSelect.GuildEnterLevelSelect_C'",
+    "Package": "UE_game/Content/BluePrint/UI/Guild/Item/GuildEnterLevelSelect",
+    "Properties": {
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'GuildEnterLevelSelect_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildEnterLevelSelect.9"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'GuildEnterLevelSelect_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_3'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildEnterLevelSelect.4"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'GuildEnterLevelSelect_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildEnterLevelSelect.3"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'GuildEnterLevelSelect_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_4'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildEnterLevelSelect.5"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'GuildEnterLevelSelect_C:WidgetTree.CanvasPanel_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildEnterLevelSelect.2"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 192.0,
+          "Bottom": 96.0
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'GuildEnterLevelSelect_C:WidgetTree.CanvasPanel_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildEnterLevelSelect.2"
+      },
+      "Content": {
+        "ObjectName": "UIShrinkTextBlock'GuildEnterLevelSelect_C:WidgetTree.LevelText'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildEnterLevelSelect.8"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'GuildEnterLevelSelect_C:WidgetTree.CanvasPanel_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildEnterLevelSelect.2"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": -135.36,
+          "Right": 192.0,
+          "Bottom": 57.6
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'GuildEnterLevelSelect_C:WidgetTree.CanvasPanel_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildEnterLevelSelect.2"
+      },
+      "Content": {
+        "ObjectName": "UIButton'GuildEnterLevelSelect_C:WidgetTree.SelectLevelSub'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildEnterLevelSelect.7"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_4",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'GuildEnterLevelSelect_C:WidgetTree.CanvasPanel_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildEnterLevelSelect.2"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 141.12,
+          "Right": 192.0,
+          "Bottom": 57.6
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'GuildEnterLevelSelect_C:WidgetTree.CanvasPanel_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildEnterLevelSelect.2"
+      },
+      "Content": {
+        "ObjectName": "UIButton'GuildEnterLevelSelect_C:WidgetTree.SelectLevelAdd'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildEnterLevelSelect.6"
+      }
+    }
+  },
+  {
+    "Type": "UIButton",
+    "Name": "SelectLevelAdd",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIButton'",
+    "Outer": {
+      "ObjectName": "WidgetTree'GuildEnterLevelSelect_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildEnterLevelSelect.9"
+    },
+    "Properties": {
+      "IconImage": {
+        "ImageSize": {
+          "X": 61.44,
+          "Y": 61.44
+        }
+      },
+      "WidgetStyle": {
+        "Normal": {
+          "ImageSize": {
+            "X": 48.0,
+            "Y": 61.44
+          },
+          "ResourceObject": {
+            "ObjectName": "PaperSprite'UI_Guild_BTnext_Sprite'",
+            "ObjectPath": "UE_game/Content/Art/UI/TexturesAtlas/Guild/Atlas/UI_Guild_BTnext_Sprite.1"
+          }
+        },
+        "Hovered": {
+          "ImageSize": {
+            "X": 48.0,
+            "Y": 61.44
+          },
+          "ResourceObject": {
+            "ObjectName": "PaperSprite'UI_Guild_BTnext_Sprite'",
+            "ObjectPath": "UE_game/Content/Art/UI/TexturesAtlas/Guild/Atlas/UI_Guild_BTnext_Sprite.1"
+          }
+        },
+        "Pressed": {
+          "ImageSize": {
+            "X": 48.0,
+            "Y": 61.44
+          },
+          "ResourceObject": {
+            "ObjectName": "PaperSprite'UI_Guild_BTnext_Sprite'",
+            "ObjectPath": "UE_game/Content/Art/UI/TexturesAtlas/Guild/Atlas/UI_Guild_BTnext_Sprite.1"
+          }
+        },
+        "NormalPadding": {
+          "Left": 0.0,
+          "Top": 0.0,
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "PressedPadding": {
+          "Left": 0.0,
+          "Top": 0.0,
+          "Right": 0.0,
+          "Bottom": 0.0
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'GuildEnterLevelSelect_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_4'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildEnterLevelSelect.5"
+      }
+    }
+  },
+  {
+    "Type": "UIButton",
+    "Name": "SelectLevelSub",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIButton'",
+    "Outer": {
+      "ObjectName": "WidgetTree'GuildEnterLevelSelect_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildEnterLevelSelect.9"
+    },
+    "Properties": {
+      "IconImage": {
+        "ImageSize": {
+          "X": 61.44,
+          "Y": 61.44
+        }
+      },
+      "WidgetStyle": {
+        "Normal": {
+          "ImageSize": {
+            "X": 48.0,
+            "Y": 61.44
+          },
+          "ResourceObject": {
+            "ObjectName": "PaperSprite'UI_Guild_BTnext_Sprite'",
+            "ObjectPath": "UE_game/Content/Art/UI/TexturesAtlas/Guild/Atlas/UI_Guild_BTnext_Sprite.1"
+          }
+        },
+        "Hovered": {
+          "ImageSize": {
+            "X": 48.0,
+            "Y": 61.44
+          },
+          "ResourceObject": {
+            "ObjectName": "PaperSprite'UI_Guild_BTnext_Sprite'",
+            "ObjectPath": "UE_game/Content/Art/UI/TexturesAtlas/Guild/Atlas/UI_Guild_BTnext_Sprite.1"
+          }
+        },
+        "Pressed": {
+          "ImageSize": {
+            "X": 48.0,
+            "Y": 61.44
+          },
+          "ResourceObject": {
+            "ObjectName": "PaperSprite'UI_Guild_BTnext_Sprite'",
+            "ObjectPath": "UE_game/Content/Art/UI/TexturesAtlas/Guild/Atlas/UI_Guild_BTnext_Sprite.1"
+          }
+        },
+        "NormalPadding": {
+          "Left": 0.0,
+          "Top": 0.0,
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "PressedPadding": {
+          "Left": 0.0,
+          "Top": 0.0,
+          "Right": 0.0,
+          "Bottom": 0.0
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'GuildEnterLevelSelect_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_3'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildEnterLevelSelect.4"
+      },
+      "RenderTransform": {
+        "Scale": {
+          "X": -1.0,
+          "Y": 1.0
+        }
+      }
+    }
+  },
+  {
+    "Type": "UIShrinkTextBlock",
+    "Name": "LevelText",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIShrinkTextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'GuildEnterLevelSelect_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildEnterLevelSelect.9"
+    },
+    "Properties": {
+      "CurrStyleId": 2438,
+      "TextContent": {
+        "Namespace": "",
+        "Key": "0AD4538A46B2ED15CACF2DA8AD82974B",
+        "SourceString": "0级",
+        "LocalizedString": "0级"
+      },
+      "ShrinkSize": {
+        "X": 122.88,
+        "Y": 122.88
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'GuildEnterLevelSelect_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildEnterLevelSelect.3"
+      }
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetTree'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'GuildEnterLevelSelect_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildEnterLevelSelect.0"
+    },
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "CanvasPanel'GuildEnterLevelSelect_C:WidgetTree.CanvasPanel_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildEnterLevelSelect.2"
+      }
+    }
+  }
+]

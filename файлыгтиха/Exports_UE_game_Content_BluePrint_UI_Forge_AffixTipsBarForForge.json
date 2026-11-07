@@ -1,0 +1,5405 @@
+[
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "AffixTipsBarForForge_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Package": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'AffixTipsBarForForge_C:WidgetTree'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.120"
+      },
+      "Animations": [
+        {
+          "ObjectName": "WidgetAnimation'AffixTipsBarForForge_C:NewAnim_INST'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.108"
+        },
+        {
+          "ObjectName": "WidgetAnimation'AffixTipsBarForForge_C:DisappearedAnim_INST'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.107"
+        },
+        {
+          "ObjectName": "WidgetAnimation'AffixTipsBarForForge_C:T0UpgradeAnim_INST'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.109"
+        }
+      ]
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'UserWidget'",
+      "ObjectPath": "/Script/UMG"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "T0UpgradeAnim",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Transient | RepSkip",
+        "PropertyClass": {
+          "ObjectName": "Class'WidgetAnimation'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "DisappearedAnim",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Transient | RepSkip",
+        "PropertyClass": {
+          "ObjectName": "Class'WidgetAnimation'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "NewAnim",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Transient | RepSkip",
+        "PropertyClass": {
+          "ObjectName": "Class'WidgetAnimation'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "C_BackgroundImage",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "C_Context",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIRichTextBlock'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "C_GradeImage",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "C_GradeSwitcher",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'WidgetSwitcher'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "C_ImageUpgrade",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "C_LockedBackground",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "C_ReminderSwitcher",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'WidgetSwitcher'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Fx01",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Fx01_1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Fx01_2",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Fx01_3",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "FxSwitcher",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'WidgetSwitcher'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "UIImage_67",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "UIImage_77",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "UIImage_103",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "UIImage_159",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "UIParticleEmitter_93",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIParticleEmitter'",
+          "ObjectPath": "/Script/UIParticle"
+        }
+      }
+    ],
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "AffixTipsBarForForge_C'Default__AffixTipsBarForForge_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.1"
+    }
+  },
+  {
+    "Type": "AffixTipsBarForForge_C",
+    "Name": "Default__AffixTipsBarForForge_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.AffixTipsBarForForge_C'",
+    "Package": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge",
+    "Properties": {
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'AffixTipsBarForForge_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.120"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'AffixTipsBarForForge_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_9'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.6"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "NoT1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'AffixTipsBarForForge_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.120"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'AffixTipsBarForForge_C:WidgetTree.NoT1.CanvasPanelSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.7"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "WidgetSwitcherSlot'AffixTipsBarForForge_C:WidgetTree.FxSwitcher.WidgetSwitcherSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.117"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "T0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'AffixTipsBarForForge_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.120"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'AffixTipsBarForForge_C:WidgetTree.T0.CanvasPanelSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.8"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "WidgetSwitcherSlot'AffixTipsBarForForge_C:WidgetTree.FxSwitcher.WidgetSwitcherSlot_3'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.119"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "T1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'AffixTipsBarForForge_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.120"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'AffixTipsBarForForge_C:WidgetTree.T1.CanvasPanelSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.9"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'AffixTipsBarForForge_C:WidgetTree.T1.CanvasPanelSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.10"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'AffixTipsBarForForge_C:WidgetTree.T1.CanvasPanelSlot_2'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.11"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "WidgetSwitcherSlot'AffixTipsBarForForge_C:WidgetTree.FxSwitcher.WidgetSwitcherSlot_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.118"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_9",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'AffixTipsBarForForge_C:WidgetTree.CanvasPanel_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.2"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 192.0,
+          "Bottom": 57.6
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'AffixTipsBarForForge_C:WidgetTree.CanvasPanel_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.2"
+      },
+      "Content": {
+        "ObjectName": "SizeBox'AffixTipsBarForForge_C:WidgetTree.SizeBox_57'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.85"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'AffixTipsBarForForge_C:WidgetTree.NoT1'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.3"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "Anchors": {
+          "Maximum": {
+            "X": 1.0,
+            "Y": 1.0
+          }
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'AffixTipsBarForForge_C:WidgetTree.NoT1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.3"
+      },
+      "Content": {
+        "ObjectName": "UIImage'AffixTipsBarForForge_C:WidgetTree.Fx01_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.98"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'AffixTipsBarForForge_C:WidgetTree.T0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.4"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "Anchors": {
+          "Maximum": {
+            "X": 1.0,
+            "Y": 1.0
+          }
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'AffixTipsBarForForge_C:WidgetTree.T0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.4"
+      },
+      "Content": {
+        "ObjectName": "UIImage'AffixTipsBarForForge_C:WidgetTree.Fx01_3'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.99"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'AffixTipsBarForForge_C:WidgetTree.T1'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.5"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "Anchors": {
+          "Maximum": {
+            "X": 1.0,
+            "Y": 1.0
+          }
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'AffixTipsBarForForge_C:WidgetTree.T1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.5"
+      },
+      "Content": {
+        "ObjectName": "UIImage'AffixTipsBarForForge_C:WidgetTree.Fx01'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.96"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'AffixTipsBarForForge_C:WidgetTree.T1'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.5"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "Anchors": {
+          "Maximum": {
+            "X": 1.0,
+            "Y": 1.0
+          }
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'AffixTipsBarForForge_C:WidgetTree.T1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.5"
+      },
+      "Content": {
+        "ObjectName": "UIImage'AffixTipsBarForForge_C:WidgetTree.Fx01_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.97"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'AffixTipsBarForForge_C:WidgetTree.T1'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.5"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 192.0,
+          "Bottom": 57.6
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'AffixTipsBarForForge_C:WidgetTree.T1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.5"
+      },
+      "Content": {
+        "ObjectName": "UIParticleEmitter'AffixTipsBarForForge_C:WidgetTree.UIParticleEmitter_93'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.104"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "C_ContentBox",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'AffixTipsBarForForge_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.120"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HorizontalBoxSlot'AffixTipsBarForForge_C:WidgetTree.C_ContentBox.HorizontalBoxSlot_5'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.14"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'AffixTipsBarForForge_C:WidgetTree.C_ContentBox.HorizontalBoxSlot_6'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.15"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'AffixTipsBarForForge_C:WidgetTree.C_ContentBox.HorizontalBoxSlot_2'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.13"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "OverlaySlot'AffixTipsBarForForge_C:WidgetTree.Overlay_117.OverlaySlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.77"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'AffixTipsBarForForge_C:WidgetTree.C_ContentBox'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.12"
+    },
+    "Properties": {
+      "Size": {
+        "Value": 39.0,
+        "SizeRule": "ESlateSizeRule::Fill"
+      },
+      "Parent": {
+        "ObjectName": "HorizontalBox'AffixTipsBarForForge_C:WidgetTree.C_ContentBox'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.12"
+      },
+      "Content": {
+        "ObjectName": "SizeBox'AffixTipsBarForForge_C:WidgetTree.SizeBox_243'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.84"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_5",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'AffixTipsBarForForge_C:WidgetTree.C_ContentBox'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.12"
+    },
+    "Properties": {
+      "Size": {
+        "Value": 40.0,
+        "SizeRule": "ESlateSizeRule::Fill"
+      },
+      "Parent": {
+        "ObjectName": "HorizontalBox'AffixTipsBarForForge_C:WidgetTree.C_ContentBox'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.12"
+      },
+      "Content": {
+        "ObjectName": "SizeBox'AffixTipsBarForForge_C:WidgetTree.SizeBox_97'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.86"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_6",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'AffixTipsBarForForge_C:WidgetTree.C_ContentBox'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.12"
+    },
+    "Properties": {
+      "Size": {
+        "Value": 285.0,
+        "SizeRule": "ESlateSizeRule::Fill"
+      },
+      "Parent": {
+        "ObjectName": "HorizontalBox'AffixTipsBarForForge_C:WidgetTree.C_ContentBox'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.12"
+      },
+      "Content": {
+        "ObjectName": "SizeBox'AffixTipsBarForForge_C:WidgetTree.SizeBox_168'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.83"
+      }
+    }
+  },
+  {
+    "Type": "MovieScene",
+    "Name": "DisappearedAnim",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene'",
+    "Outer": {
+      "ObjectName": "WidgetAnimation'AffixTipsBarForForge_C:DisappearedAnim_INST'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.107"
+    },
+    "Properties": {
+      "Possessables": [
+        {
+          "Tags": [],
+          "Guid": "5306C2E2-41F50CC5-7760CF9A-76730ECF",
+          "Name": "Fx01",
+          "PossessedObjectClass": {
+            "ObjectName": "Class'UIImage'",
+            "ObjectPath": "/Script/UE_game"
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        },
+        {
+          "Tags": [],
+          "Guid": "53D622B3-4C24DC26-4143D0B8-FA5947D0",
+          "Name": "Fx01_2",
+          "PossessedObjectClass": {
+            "ObjectName": "Class'UIImage'",
+            "ObjectPath": "/Script/UE_game"
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        }
+      ],
+      "ObjectBindings": [
+        {
+          "ObjectGuid": "5306C2E2-41F50CC5-7760CF9A-76730ECF",
+          "BindingName": "Fx01",
+          "Tracks": [
+            {
+              "ObjectName": "MovieScene2DTransformTrack'AffixTipsBarForForge_C:DisappearedAnim_INST.DisappearedAnim.MovieScene2DTransformTrack_0'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.24"
+            },
+            {
+              "ObjectName": "MovieSceneFloatTrack'AffixTipsBarForForge_C:DisappearedAnim_INST.DisappearedAnim.MovieSceneFloatTrack_0'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.64"
+            }
+          ]
+        },
+        {
+          "ObjectGuid": "53D622B3-4C24DC26-4143D0B8-FA5947D0",
+          "BindingName": "Fx01_2",
+          "Tracks": [
+            {
+              "ObjectName": "MovieScene2DTransformTrack'AffixTipsBarForForge_C:DisappearedAnim_INST.DisappearedAnim.MovieScene2DTransformTrack_1'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.25"
+            },
+            {
+              "ObjectName": "MovieSceneFloatTrack'AffixTipsBarForForge_C:DisappearedAnim_INST.DisappearedAnim.MovieSceneFloatTrack_1'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.65"
+            }
+          ]
+        }
+      ],
+      "PlaybackRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 14001
+            }
+          }
+        }
+      },
+      "DisplayRate": {
+        "Numerator": 30
+      },
+      "Signature": "C1DE18E3-4B3F57B5-1E5A358E-B1CA9BEA"
+    }
+  },
+  {
+    "Type": "MovieScene",
+    "Name": "NewAnim",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene'",
+    "Outer": {
+      "ObjectName": "WidgetAnimation'AffixTipsBarForForge_C:NewAnim_INST'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.108"
+    },
+    "Properties": {
+      "Possessables": [
+        {
+          "Tags": [],
+          "Guid": "D02F60EE-463690BF-F66BE896-16DC939B",
+          "Name": "Fx01",
+          "PossessedObjectClass": {
+            "ObjectName": "Class'UIImage'",
+            "ObjectPath": "/Script/UE_game"
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        },
+        {
+          "Tags": [],
+          "Guid": "85D264AC-421B8B66-E0D70D84-DCBB67C5",
+          "Name": "Fx01_1",
+          "PossessedObjectClass": {
+            "ObjectName": "Class'UIImage'",
+            "ObjectPath": "/Script/UE_game"
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        },
+        {
+          "Tags": [],
+          "Guid": "8B753923-470440BB-1DF6B791-62B886B6",
+          "Name": "UIParticleEmitter_93",
+          "PossessedObjectClass": {
+            "ObjectName": "Class'UIParticleEmitter'",
+            "ObjectPath": "/Script/UIParticle"
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        },
+        {
+          "Tags": [],
+          "Guid": "A5353A86-4F1CCD65-78DC0BA4-06A20D37",
+          "Name": "Fx01_2",
+          "PossessedObjectClass": {
+            "ObjectName": "Class'UIImage'",
+            "ObjectPath": "/Script/UE_game"
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        }
+      ],
+      "ObjectBindings": [
+        {
+          "ObjectGuid": "D02F60EE-463690BF-F66BE896-16DC939B",
+          "BindingName": "UIImage_154",
+          "Tracks": [
+            {
+              "ObjectName": "MovieScene2DTransformTrack'AffixTipsBarForForge_C:NewAnim_INST.NewAnim.MovieScene2DTransformTrack_0'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.26"
+            },
+            {
+              "ObjectName": "MovieSceneFloatTrack'AffixTipsBarForForge_C:NewAnim_INST.NewAnim.MovieSceneFloatTrack_1'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.67"
+            }
+          ]
+        },
+        {
+          "ObjectGuid": "85D264AC-421B8B66-E0D70D84-DCBB67C5",
+          "BindingName": "Fx01_1",
+          "Tracks": [
+            {
+              "ObjectName": "MovieScene2DTransformTrack'AffixTipsBarForForge_C:NewAnim_INST.NewAnim.MovieScene2DTransformTrack_1'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.27"
+            },
+            {
+              "ObjectName": "MovieSceneFloatTrack'AffixTipsBarForForge_C:NewAnim_INST.NewAnim.MovieSceneFloatTrack_0'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.66"
+            }
+          ]
+        },
+        {
+          "ObjectGuid": "8B753923-470440BB-1DF6B791-62B886B6",
+          "BindingName": "UIParticleEmitter_93",
+          "Tracks": [
+            {
+              "ObjectName": "MovieSceneBoolTrack'AffixTipsBarForForge_C:NewAnim_INST.NewAnim.MovieSceneBoolTrack_0'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.30"
+            }
+          ]
+        },
+        {
+          "ObjectGuid": "A5353A86-4F1CCD65-78DC0BA4-06A20D37",
+          "BindingName": "Fx01_2",
+          "Tracks": [
+            {
+              "ObjectName": "MovieScene2DTransformTrack'AffixTipsBarForForge_C:NewAnim_INST.NewAnim.MovieScene2DTransformTrack_2'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.28"
+            },
+            {
+              "ObjectName": "MovieSceneFloatTrack'AffixTipsBarForForge_C:NewAnim_INST.NewAnim.MovieSceneFloatTrack_2'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.68"
+            }
+          ]
+        }
+      ],
+      "PlaybackRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 26000
+            }
+          }
+        }
+      },
+      "DisplayRate": {
+        "Numerator": 30
+      },
+      "Signature": "4801C107-431C58FC-22325195-159C4CDB"
+    }
+  },
+  {
+    "Type": "MovieScene",
+    "Name": "T0UpgradeAnim",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene'",
+    "Outer": {
+      "ObjectName": "WidgetAnimation'AffixTipsBarForForge_C:T0UpgradeAnim_INST'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.109"
+    },
+    "Properties": {
+      "Possessables": [
+        {
+          "Tags": [],
+          "Guid": "2BDBC4E3-4333371A-D9EFDB8C-1E0F98D2",
+          "Name": "Fx01",
+          "PossessedObjectClass": {
+            "ObjectName": "Class'UIImage'",
+            "ObjectPath": "/Script/UE_game"
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        }
+      ],
+      "ObjectBindings": [
+        {
+          "ObjectGuid": "2BDBC4E3-4333371A-D9EFDB8C-1E0F98D2",
+          "BindingName": "UIImage_154",
+          "Tracks": [
+            {
+              "ObjectName": "MovieSceneFloatTrack'AffixTipsBarForForge_C:T0UpgradeAnim_INST.T0UpgradeAnim.MovieSceneFloatTrack_1'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.69"
+            }
+          ]
+        }
+      ],
+      "PlaybackRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 60001
+            }
+          }
+        }
+      },
+      "DisplayRate": {
+        "Numerator": 30
+      },
+      "Signature": "AE75FD28-41CDE61D-C8172EB4-A3F6DCF7"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformSection",
+    "Name": "MovieScene2DTransformSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene2DTransformSection'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformTrack'AffixTipsBarForForge_C:DisappearedAnim_INST.DisappearedAnim.MovieScene2DTransformTrack_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.24"
+    },
+    "Properties": {
+      "Scale": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 10000
+          },
+          {
+            "Value": 12000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 1.3,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Scale[1]": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 10000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'AffixTipsBarForForge_C:DisappearedAnim_INST.DisappearedAnim.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0.EaseInFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.31"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'AffixTipsBarForForge_C:DisappearedAnim_INST.DisappearedAnim.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0.EaseOutFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.32"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 14000
+            }
+          }
+        }
+      },
+      "Signature": "A3A17EB2-4D497261-CECEE39C-CA4EB241"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformSection",
+    "Name": "MovieScene2DTransformSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene2DTransformSection'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformTrack'AffixTipsBarForForge_C:DisappearedAnim_INST.DisappearedAnim.MovieScene2DTransformTrack_1'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.25"
+    },
+    "Properties": {
+      "Scale": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 8000
+          },
+          {
+            "Value": 10000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 1.3,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Scale[1]": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 2000
+          },
+          {
+            "Value": 8000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'AffixTipsBarForForge_C:DisappearedAnim_INST.DisappearedAnim.MovieScene2DTransformTrack_1.MovieScene2DTransformSection_0.EaseInFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.33"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'AffixTipsBarForForge_C:DisappearedAnim_INST.DisappearedAnim.MovieScene2DTransformTrack_1.MovieScene2DTransformSection_0.EaseOutFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.34"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 14000
+            }
+          }
+        }
+      },
+      "Signature": "47D96F16-476AB181-D182E087-8403FC60"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformSection",
+    "Name": "MovieScene2DTransformSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene2DTransformSection'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformTrack'AffixTipsBarForForge_C:NewAnim_INST.NewAnim.MovieScene2DTransformTrack_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.26"
+    },
+    "Properties": {
+      "Scale": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 2000
+          },
+          {
+            "Value": 22000
+          },
+          {
+            "Value": 24000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 1.947417,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.3,
+            "Tangent": {
+              "ArriveTangent": -0.000121713565,
+              "LeaveTangent": -0.000121713565,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 1,
+            "TangentMode": 0
+          },
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Scale[1]": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 2000
+          },
+          {
+            "Value": 22000
+          },
+          {
+            "Value": 24000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 1,
+            "TangentMode": 0
+          },
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'AffixTipsBarForForge_C:NewAnim_INST.NewAnim.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0.EaseInFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.39"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'AffixTipsBarForForge_C:NewAnim_INST.NewAnim.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0.EaseOutFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.40"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 25999
+            }
+          }
+        }
+      },
+      "Signature": "5E1115DE-493228F4-E378B888-FB15FF43"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformSection",
+    "Name": "MovieScene2DTransformSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene2DTransformSection'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformTrack'AffixTipsBarForForge_C:NewAnim_INST.NewAnim.MovieScene2DTransformTrack_1'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.27"
+    },
+    "Properties": {
+      "Translation": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 20000
+          }
+        ],
+        "Values": [
+          {
+            "Value": -575.00006,
+            "Tangent": {
+              "ArriveTangent": 0.03335893,
+              "LeaveTangent": 0.03335893,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 1
+          },
+          {
+            "Value": 274.99997,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Translation[1]": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Scale": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 22000
+          },
+          {
+            "Value": 24000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.4,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 1,
+            "TangentMode": 0
+          },
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Scale[1]": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 22000
+          },
+          {
+            "Value": 24000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 1,
+            "TangentMode": 0
+          },
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'AffixTipsBarForForge_C:NewAnim_INST.NewAnim.MovieScene2DTransformTrack_1.MovieScene2DTransformSection_0.EaseInFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.41"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'AffixTipsBarForForge_C:NewAnim_INST.NewAnim.MovieScene2DTransformTrack_1.MovieScene2DTransformSection_0.EaseOutFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.42"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 25999
+            }
+          }
+        }
+      },
+      "Signature": "0E30EC2C-4496CC5D-C0B0FB9B-346B4D26"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformSection",
+    "Name": "MovieScene2DTransformSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene2DTransformSection'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformTrack'AffixTipsBarForForge_C:NewAnim_INST.NewAnim.MovieScene2DTransformTrack_2'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.28"
+    },
+    "Properties": {
+      "Scale": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 4000
+          },
+          {
+            "Value": 18000
+          },
+          {
+            "Value": 24000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 1.3,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.3,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 1,
+            "TangentMode": 0
+          },
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Scale[1]": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 4000
+          },
+          {
+            "Value": 18000
+          },
+          {
+            "Value": 24000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 1,
+            "TangentMode": 0
+          },
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'AffixTipsBarForForge_C:NewAnim_INST.NewAnim.MovieScene2DTransformTrack_2.MovieScene2DTransformSection_0.EaseInFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.43"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'AffixTipsBarForForge_C:NewAnim_INST.NewAnim.MovieScene2DTransformTrack_2.MovieScene2DTransformSection_0.EaseOutFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.44"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 25999
+            }
+          }
+        }
+      },
+      "Signature": "39505B6A-47C624E0-18440F80-F39B4E24"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformTrack",
+    "Name": "MovieScene2DTransformTrack_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene2DTransformTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'AffixTipsBarForForge_C:DisappearedAnim_INST.DisappearedAnim'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.16"
+    },
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderTransform",
+        "PropertyPath": "RenderTransform",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieScene2DTransformSection'AffixTipsBarForForge_C:DisappearedAnim_INST.DisappearedAnim.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.19"
+        }
+      ],
+      "EvaluationFieldGuid": "023624D0-45FD312F-E10C1B9D-D985C10E",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieScene2DTransformSection'AffixTipsBarForForge_C:DisappearedAnim_INST.DisappearedAnim.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.19"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 14000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "023624D0-45FD312F-E10C1B9D-D985C10E"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformTrack",
+    "Name": "MovieScene2DTransformTrack_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene2DTransformTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'AffixTipsBarForForge_C:DisappearedAnim_INST.DisappearedAnim'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.16"
+    },
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderTransform",
+        "PropertyPath": "RenderTransform",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieScene2DTransformSection'AffixTipsBarForForge_C:DisappearedAnim_INST.DisappearedAnim.MovieScene2DTransformTrack_1.MovieScene2DTransformSection_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.20"
+        }
+      ],
+      "EvaluationFieldGuid": "BAEE5833-49D77810-09742BAF-724E98AB",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieScene2DTransformSection'AffixTipsBarForForge_C:DisappearedAnim_INST.DisappearedAnim.MovieScene2DTransformTrack_1.MovieScene2DTransformSection_0'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.20"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Exclusive",
+                "Value": {
+                  "Value": 14000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "BAEE5833-49D77810-09742BAF-724E98AB"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformTrack",
+    "Name": "MovieScene2DTransformTrack_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene2DTransformTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'AffixTipsBarForForge_C:NewAnim_INST.NewAnim'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.17"
+    },
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderTransform",
+        "PropertyPath": "RenderTransform",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieScene2DTransformSection'AffixTipsBarForForge_C:NewAnim_INST.NewAnim.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.21"
+        }
+      ],
+      "EvaluationFieldGuid": "9313AB95-48AA75C1-52DCE2A6-C842F1E0",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieScene2DTransformSection'AffixTipsBarForForge_C:NewAnim_INST.NewAnim.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.21"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Exclusive",
+                "Value": {
+                  "Value": 25999
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "9313AB95-48AA75C1-52DCE2A6-C842F1E0"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformTrack",
+    "Name": "MovieScene2DTransformTrack_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene2DTransformTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'AffixTipsBarForForge_C:NewAnim_INST.NewAnim'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.17"
+    },
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderTransform",
+        "PropertyPath": "RenderTransform",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieScene2DTransformSection'AffixTipsBarForForge_C:NewAnim_INST.NewAnim.MovieScene2DTransformTrack_1.MovieScene2DTransformSection_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.22"
+        }
+      ],
+      "EvaluationFieldGuid": "FADA35DD-402397A3-126B51AF-9C90549D",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieScene2DTransformSection'AffixTipsBarForForge_C:NewAnim_INST.NewAnim.MovieScene2DTransformTrack_1.MovieScene2DTransformSection_0'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.22"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Exclusive",
+                "Value": {
+                  "Value": 25999
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "FADA35DD-402397A3-126B51AF-9C90549D"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformTrack",
+    "Name": "MovieScene2DTransformTrack_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene2DTransformTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'AffixTipsBarForForge_C:NewAnim_INST.NewAnim'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.17"
+    },
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderTransform",
+        "PropertyPath": "RenderTransform",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieScene2DTransformSection'AffixTipsBarForForge_C:NewAnim_INST.NewAnim.MovieScene2DTransformTrack_2.MovieScene2DTransformSection_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.23"
+        }
+      ],
+      "EvaluationFieldGuid": "4A55396B-40569427-1A012389-62D67F47",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieScene2DTransformSection'AffixTipsBarForForge_C:NewAnim_INST.NewAnim.MovieScene2DTransformTrack_2.MovieScene2DTransformSection_0'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.23"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Exclusive",
+                "Value": {
+                  "Value": 25999
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "4A55396B-40569427-1A012389-62D67F47"
+    }
+  },
+  {
+    "Type": "MovieSceneBoolSection",
+    "Name": "MovieSceneBoolSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBoolSection'",
+    "Outer": {
+      "ObjectName": "MovieSceneBoolTrack'AffixTipsBarForForge_C:NewAnim_INST.NewAnim.MovieSceneBoolTrack_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.30"
+    },
+    "Properties": {
+      "BoolCurve": {
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 2000
+          },
+          {
+            "Value": 22000
+          }
+        ],
+        "Values": [
+          false,
+          true,
+          false
+        ]
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'AffixTipsBarForForge_C:NewAnim_INST.NewAnim.MovieSceneBoolTrack_0.MovieSceneBoolSection_0.EaseInFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.45"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'AffixTipsBarForForge_C:NewAnim_INST.NewAnim.MovieSceneBoolTrack_0.MovieSceneBoolSection_0.EaseOutFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.46"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 26000
+            }
+          }
+        }
+      },
+      "Signature": "FDD2509D-4B755B08-0E4BA4B9-15B90CC7"
+    }
+  },
+  {
+    "Type": "MovieSceneBoolTrack",
+    "Name": "MovieSceneBoolTrack_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBoolTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'AffixTipsBarForForge_C:NewAnim_INST.NewAnim'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.17"
+    },
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "bPlayParticle",
+        "PropertyPath": "bPlayParticle",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneBoolSection'AffixTipsBarForForge_C:NewAnim_INST.NewAnim.MovieSceneBoolTrack_0.MovieSceneBoolSection_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.29"
+        }
+      ],
+      "EvaluationFieldGuid": "C5BFA038-4092169E-E2133D8C-396E42D4",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneBoolSection'AffixTipsBarForForge_C:NewAnim_INST.NewAnim.MovieSceneBoolTrack_0.MovieSceneBoolSection_0'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.29"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Exclusive",
+                "Value": {
+                  "Value": 26000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "C5BFA038-4092169E-E2133D8C-396E42D4"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformSection'AffixTipsBarForForge_C:DisappearedAnim_INST.DisappearedAnim.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.19"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformSection'AffixTipsBarForForge_C:DisappearedAnim_INST.DisappearedAnim.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.19"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformSection'AffixTipsBarForForge_C:DisappearedAnim_INST.DisappearedAnim.MovieScene2DTransformTrack_1.MovieScene2DTransformSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.20"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformSection'AffixTipsBarForForge_C:DisappearedAnim_INST.DisappearedAnim.MovieScene2DTransformTrack_1.MovieScene2DTransformSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.20"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatSection'AffixTipsBarForForge_C:DisappearedAnim_INST.DisappearedAnim.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.58"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatSection'AffixTipsBarForForge_C:DisappearedAnim_INST.DisappearedAnim.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.58"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatSection'AffixTipsBarForForge_C:DisappearedAnim_INST.DisappearedAnim.MovieSceneFloatTrack_1.MovieSceneFloatSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.59"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatSection'AffixTipsBarForForge_C:DisappearedAnim_INST.DisappearedAnim.MovieSceneFloatTrack_1.MovieSceneFloatSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.59"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformSection'AffixTipsBarForForge_C:NewAnim_INST.NewAnim.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.21"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformSection'AffixTipsBarForForge_C:NewAnim_INST.NewAnim.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.21"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformSection'AffixTipsBarForForge_C:NewAnim_INST.NewAnim.MovieScene2DTransformTrack_1.MovieScene2DTransformSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.22"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformSection'AffixTipsBarForForge_C:NewAnim_INST.NewAnim.MovieScene2DTransformTrack_1.MovieScene2DTransformSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.22"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformSection'AffixTipsBarForForge_C:NewAnim_INST.NewAnim.MovieScene2DTransformTrack_2.MovieScene2DTransformSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.23"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformSection'AffixTipsBarForForge_C:NewAnim_INST.NewAnim.MovieScene2DTransformTrack_2.MovieScene2DTransformSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.23"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneBoolSection'AffixTipsBarForForge_C:NewAnim_INST.NewAnim.MovieSceneBoolTrack_0.MovieSceneBoolSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.29"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneBoolSection'AffixTipsBarForForge_C:NewAnim_INST.NewAnim.MovieSceneBoolTrack_0.MovieSceneBoolSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.29"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatSection'AffixTipsBarForForge_C:NewAnim_INST.NewAnim.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.60"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatSection'AffixTipsBarForForge_C:NewAnim_INST.NewAnim.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.60"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatSection'AffixTipsBarForForge_C:NewAnim_INST.NewAnim.MovieSceneFloatTrack_1.MovieSceneFloatSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.61"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatSection'AffixTipsBarForForge_C:NewAnim_INST.NewAnim.MovieSceneFloatTrack_1.MovieSceneFloatSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.61"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatSection'AffixTipsBarForForge_C:NewAnim_INST.NewAnim.MovieSceneFloatTrack_2.MovieSceneFloatSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.62"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatSection'AffixTipsBarForForge_C:NewAnim_INST.NewAnim.MovieSceneFloatTrack_2.MovieSceneFloatSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.62"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatSection'AffixTipsBarForForge_C:T0UpgradeAnim_INST.T0UpgradeAnim.MovieSceneFloatTrack_1.MovieSceneFloatSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.63"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatSection'AffixTipsBarForForge_C:T0UpgradeAnim_INST.T0UpgradeAnim.MovieSceneFloatTrack_1.MovieSceneFloatSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.63"
+    }
+  },
+  {
+    "Type": "MovieSceneCompiledData",
+    "Name": "CompiledData",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneCompiledData'",
+    "Outer": {
+      "ObjectName": "WidgetAnimation'AffixTipsBarForForge_C:DisappearedAnim_INST'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.107"
+    },
+    "Properties": {
+      "EntityComponentField": {
+        "PersistentEntityTree": {
+          "SerializedData": {
+            "Data": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 2,
+                  "Capacity": 2
+                },
+                {
+                  "StartIndex": 2,
+                  "Size": 2,
+                  "Capacity": 2
+                }
+              ],
+              "Items": [
+                {
+                  "EntityIndex": 0,
+                  "MetaDataIndex": -1
+                },
+                {
+                  "EntityIndex": 1,
+                  "MetaDataIndex": -1
+                },
+                {
+                  "EntityIndex": 2,
+                  "MetaDataIndex": -1
+                },
+                {
+                  "EntityIndex": 3,
+                  "MetaDataIndex": -1
+                }
+              ]
+            },
+            "RootNode": {
+              "Range": {
+                "LowerBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                },
+                "UpperBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                }
+              },
+              "Parent": {
+                "ChildrenHandle": {
+                  "EntryIndex": -1
+                },
+                "Index": -1
+              },
+              "ChildrenID": {
+                "EntryIndex": 0
+              },
+              "DataID": {
+                "EntryIndex": -1
+              }
+            },
+            "ChildNodes": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 1,
+                  "Capacity": 1
+                },
+                {
+                  "StartIndex": 1,
+                  "Size": 1,
+                  "Capacity": 1
+                }
+              ],
+              "Items": [
+                {
+                  "Range": {
+                    "LowerBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 0
+                      }
+                    },
+                    "UpperBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 14000
+                      }
+                    }
+                  },
+                  "Parent": {
+                    "ChildrenHandle": {
+                      "EntryIndex": -1
+                    },
+                    "Index": 0
+                  },
+                  "ChildrenID": {
+                    "EntryIndex": 1
+                  },
+                  "DataID": {
+                    "EntryIndex": 0
+                  }
+                },
+                {
+                  "Range": {
+                    "LowerBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 0
+                      }
+                    },
+                    "UpperBound": {
+                      "Type": 0,
+                      "Value": {
+                        "Value": 14000
+                      }
+                    }
+                  },
+                  "Parent": {
+                    "ChildrenHandle": {
+                      "EntryIndex": 0
+                    },
+                    "Index": 0
+                  },
+                  "ChildrenID": {
+                    "EntryIndex": -1
+                  },
+                  "DataID": {
+                    "EntryIndex": 1
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "Entities": [
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieScene2DTransformSection'AffixTipsBarForForge_C:DisappearedAnim_INST.DisappearedAnim.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0'",
+                "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.19"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 0
+          },
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieSceneFloatSection'AffixTipsBarForForge_C:DisappearedAnim_INST.DisappearedAnim.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+                "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.58"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 1
+          },
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieScene2DTransformSection'AffixTipsBarForForge_C:DisappearedAnim_INST.DisappearedAnim.MovieScene2DTransformTrack_1.MovieScene2DTransformSection_0'",
+                "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.20"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 2
+          },
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieSceneFloatSection'AffixTipsBarForForge_C:DisappearedAnim_INST.DisappearedAnim.MovieSceneFloatTrack_1.MovieSceneFloatSection_0'",
+                "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.59"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 3
+          }
+        ],
+        "SharedMetaData": [
+          {
+            "ObjectBindingID": "5306C2E2-41F50CC5-7760CF9A-76730ECF"
+          },
+          {
+            "ObjectBindingID": "5306C2E2-41F50CC5-7760CF9A-76730ECF"
+          },
+          {
+            "ObjectBindingID": "53D622B3-4C24DC26-4143D0B8-FA5947D0"
+          },
+          {
+            "ObjectBindingID": "53D622B3-4C24DC26-4143D0B8-FA5947D0"
+          }
+        ]
+      },
+      "CompiledSignature": "EDD84278-4A74E6D1-775827A3-6FE7AA81",
+      "CompilerVersion": "7D4B9809-2FAC4A6B-964ECF72-D8279EF8",
+      "AccumulatedMask": {
+        "bEntityComponentField": true
+      },
+      "AllocatedMask": {
+        "bEntityComponentField": true
+      }
+    }
+  },
+  {
+    "Type": "MovieSceneCompiledData",
+    "Name": "CompiledData",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneCompiledData'",
+    "Outer": {
+      "ObjectName": "WidgetAnimation'AffixTipsBarForForge_C:NewAnim_INST'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.108"
+    },
+    "Properties": {
+      "EvaluationTemplate": {
+        "Tracks": [
+          {
+            "Key": {
+              "Value": 0
+            },
+            "Value": {
+              "ObjectBindingID": "8B753923-470440BB-1DF6B791-62B886B6",
+              "EvaluationPriority": 1000,
+              "EvaluationMethod": "EEvaluationMethod::Static",
+              "SourceTrack": {
+                "ObjectName": "MovieSceneBoolTrack'AffixTipsBarForForge_C:NewAnim_INST.NewAnim.MovieSceneBoolTrack_0'",
+                "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.30"
+              },
+              "ChildTemplates": [
+                {
+                  "TypeName": "/Script/MovieSceneTracks.MovieSceneBoolPropertySectionTemplate",
+                  "Data": {
+                    "BoolCurve": {
+                      "Times": [
+                        {
+                          "Value": 0
+                        },
+                        {
+                          "Value": 2000
+                        },
+                        {
+                          "Value": 22000
+                        }
+                      ],
+                      "DefaultValue": false,
+                      "bHasDefaultValue": false,
+                      "Values": [
+                        false,
+                        true,
+                        false
+                      ]
+                    },
+                    "PropertyData": {
+                      "PropertyName": "PlayParticle",
+                      "PropertyPath": "bPlayParticle"
+                    },
+                    "CompletionMode": "EMovieSceneCompletionMode::KeepState",
+                    "SourceSectionPtr": {
+                      "ObjectName": "MovieSceneBoolSection'AffixTipsBarForForge_C:NewAnim_INST.NewAnim.MovieSceneBoolTrack_0.MovieSceneBoolSection_0'",
+                      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.29"
+                    }
+                  }
+                }
+              ],
+              "TrackTemplate": {
+                "TypeName": "",
+                "Data": null
+              },
+              "EvaluationGroup": "None",
+              "bEvaluateInPreroll": false,
+              "bEvaluateInPostroll": false,
+              "bTearDownPriority": false
+            }
+          }
+        ],
+        "TemplateLedger": {
+          "LastTrackIdentifier": {
+            "Value": 0
+          },
+          "TrackSignatureToTrackIdentifier": [
+            {
+              "Key": "C5BFA038-4092169E-E2133D8C-396E42D4",
+              "Value": {
+                "Value": 0
+              }
+            }
+          ]
+        }
+      },
+      "EntityComponentField": {
+        "PersistentEntityTree": {
+          "SerializedData": {
+            "Data": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 6,
+                  "Capacity": 6
+                },
+                {
+                  "StartIndex": 6,
+                  "Size": 1,
+                  "Capacity": 1
+                }
+              ],
+              "Items": [
+                {
+                  "EntityIndex": 0,
+                  "MetaDataIndex": -1
+                },
+                {
+                  "EntityIndex": 1,
+                  "MetaDataIndex": -1
+                },
+                {
+                  "EntityIndex": 2,
+                  "MetaDataIndex": -1
+                },
+                {
+                  "EntityIndex": 3,
+                  "MetaDataIndex": -1
+                },
+                {
+                  "EntityIndex": 4,
+                  "MetaDataIndex": -1
+                },
+                {
+                  "EntityIndex": 5,
+                  "MetaDataIndex": -1
+                },
+                {
+                  "EntityIndex": 1,
+                  "MetaDataIndex": -1
+                }
+              ]
+            },
+            "RootNode": {
+              "Range": {
+                "LowerBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                },
+                "UpperBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                }
+              },
+              "Parent": {
+                "ChildrenHandle": {
+                  "EntryIndex": -1
+                },
+                "Index": -1
+              },
+              "ChildrenID": {
+                "EntryIndex": 0
+              },
+              "DataID": {
+                "EntryIndex": -1
+              }
+            },
+            "ChildNodes": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 2,
+                  "Capacity": 2
+                }
+              ],
+              "Items": [
+                {
+                  "Range": {
+                    "LowerBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 0
+                      }
+                    },
+                    "UpperBound": {
+                      "Type": 0,
+                      "Value": {
+                        "Value": 25999
+                      }
+                    }
+                  },
+                  "Parent": {
+                    "ChildrenHandle": {
+                      "EntryIndex": -1
+                    },
+                    "Index": 0
+                  },
+                  "ChildrenID": {
+                    "EntryIndex": -1
+                  },
+                  "DataID": {
+                    "EntryIndex": 0
+                  }
+                },
+                {
+                  "Range": {
+                    "LowerBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 25999
+                      }
+                    },
+                    "UpperBound": {
+                      "Type": 0,
+                      "Value": {
+                        "Value": 26000
+                      }
+                    }
+                  },
+                  "Parent": {
+                    "ChildrenHandle": {
+                      "EntryIndex": -1
+                    },
+                    "Index": 0
+                  },
+                  "ChildrenID": {
+                    "EntryIndex": -1
+                  },
+                  "DataID": {
+                    "EntryIndex": 1
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "Entities": [
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieScene2DTransformSection'AffixTipsBarForForge_C:NewAnim_INST.NewAnim.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0'",
+                "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.21"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 0
+          },
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieSceneFloatSection'AffixTipsBarForForge_C:NewAnim_INST.NewAnim.MovieSceneFloatTrack_1.MovieSceneFloatSection_0'",
+                "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.61"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 1
+          },
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieScene2DTransformSection'AffixTipsBarForForge_C:NewAnim_INST.NewAnim.MovieScene2DTransformTrack_1.MovieScene2DTransformSection_0'",
+                "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.22"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 2
+          },
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieSceneFloatSection'AffixTipsBarForForge_C:NewAnim_INST.NewAnim.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+                "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.60"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 3
+          },
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieScene2DTransformSection'AffixTipsBarForForge_C:NewAnim_INST.NewAnim.MovieScene2DTransformTrack_2.MovieScene2DTransformSection_0'",
+                "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.23"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 4
+          },
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieSceneFloatSection'AffixTipsBarForForge_C:NewAnim_INST.NewAnim.MovieSceneFloatTrack_2.MovieSceneFloatSection_0'",
+                "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.62"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 5
+          }
+        ],
+        "SharedMetaData": [
+          {
+            "ObjectBindingID": "D02F60EE-463690BF-F66BE896-16DC939B"
+          },
+          {
+            "ObjectBindingID": "D02F60EE-463690BF-F66BE896-16DC939B"
+          },
+          {
+            "ObjectBindingID": "85D264AC-421B8B66-E0D70D84-DCBB67C5"
+          },
+          {
+            "ObjectBindingID": "85D264AC-421B8B66-E0D70D84-DCBB67C5"
+          },
+          {
+            "ObjectBindingID": "A5353A86-4F1CCD65-78DC0BA4-06A20D37"
+          },
+          {
+            "ObjectBindingID": "A5353A86-4F1CCD65-78DC0BA4-06A20D37"
+          }
+        ]
+      },
+      "TrackTemplateField": {
+        "Ranges": [
+          {
+            "Value": {
+              "LowerBound": {
+                "Type": 2,
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": 0,
+                "Value": {
+                  "Value": 0
+                }
+              }
+            }
+          },
+          {
+            "Value": {
+              "LowerBound": {
+                "Type": 1,
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": 0,
+                "Value": {
+                  "Value": 26000
+                }
+              }
+            }
+          },
+          {
+            "Value": {
+              "LowerBound": {
+                "Type": 1,
+                "Value": {
+                  "Value": 26000
+                }
+              },
+              "UpperBound": {
+                "Type": 2,
+                "Value": {
+                  "Value": 0
+                }
+              }
+            }
+          }
+        ],
+        "Groups": [
+          {
+            "LUTIndices": [],
+            "TrackLUT": [],
+            "SectionLUT": []
+          },
+          {
+            "LUTIndices": [
+              {
+                "NumInitPtrs": 0,
+                "NumEvalPtrs": 1
+              }
+            ],
+            "TrackLUT": [
+              {
+                "TrackPtr": {
+                  "SequenceID": {
+                    "Value": 0
+                  },
+                  "TrackIdentifier": {
+                    "Value": 0
+                  }
+                },
+                "NumChildren": 1
+              }
+            ],
+            "SectionLUT": [
+              {
+                "ChildIndex": 0,
+                "Flags": "ESectionEvaluationFlags::None",
+                "ForcedTime": {
+                  "Value": -2147483648
+                }
+              }
+            ]
+          },
+          {
+            "LUTIndices": [],
+            "TrackLUT": [],
+            "SectionLUT": []
+          }
+        ],
+        "MetaData": [
+          {
+            "ActiveSequences": [
+              {
+                "Value": 0
+              }
+            ],
+            "ActiveEntities": []
+          },
+          {
+            "ActiveSequences": [
+              {
+                "Value": 0
+              }
+            ],
+            "ActiveEntities": [
+              {
+                "Key": {
+                  "SequenceID": {
+                    "Value": 0
+                  },
+                  "TrackIdentifier": {
+                    "Value": 0
+                  },
+                  "SectionIndex": 0
+                },
+                "SetupIndex": 0,
+                "TearDownIndex": 65535
+              }
+            ]
+          },
+          {
+            "ActiveSequences": [
+              {
+                "Value": 0
+              }
+            ],
+            "ActiveEntities": []
+          }
+        ]
+      },
+      "CompiledSignature": "D1F37897-4CB02438-4EA055A8-6C9879F7",
+      "CompilerVersion": "7D4B9809-2FAC4A6B-964ECF72-D8279EF8",
+      "AccumulatedMask": {
+        "bEvaluationTemplate": true,
+        "bEvaluationTemplateField": true,
+        "bEntityComponentField": true
+      },
+      "AllocatedMask": {
+        "bEvaluationTemplate": true,
+        "bEvaluationTemplateField": true,
+        "bEntityComponentField": true
+      }
+    }
+  },
+  {
+    "Type": "MovieSceneCompiledData",
+    "Name": "CompiledData",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneCompiledData'",
+    "Outer": {
+      "ObjectName": "WidgetAnimation'AffixTipsBarForForge_C:T0UpgradeAnim_INST'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.109"
+    },
+    "Properties": {
+      "EntityComponentField": {
+        "PersistentEntityTree": {
+          "SerializedData": {
+            "Data": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 1,
+                  "Capacity": 1
+                }
+              ],
+              "Items": [
+                {
+                  "EntityIndex": 0,
+                  "MetaDataIndex": -1
+                }
+              ]
+            },
+            "RootNode": {
+              "Range": {
+                "LowerBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                },
+                "UpperBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                }
+              },
+              "Parent": {
+                "ChildrenHandle": {
+                  "EntryIndex": -1
+                },
+                "Index": -1
+              },
+              "ChildrenID": {
+                "EntryIndex": 0
+              },
+              "DataID": {
+                "EntryIndex": -1
+              }
+            },
+            "ChildNodes": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 1,
+                  "Capacity": 1
+                }
+              ],
+              "Items": [
+                {
+                  "Range": {
+                    "LowerBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 0
+                      }
+                    },
+                    "UpperBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 60000
+                      }
+                    }
+                  },
+                  "Parent": {
+                    "ChildrenHandle": {
+                      "EntryIndex": -1
+                    },
+                    "Index": 0
+                  },
+                  "ChildrenID": {
+                    "EntryIndex": -1
+                  },
+                  "DataID": {
+                    "EntryIndex": 0
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "Entities": [
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieSceneFloatSection'AffixTipsBarForForge_C:T0UpgradeAnim_INST.T0UpgradeAnim.MovieSceneFloatTrack_1.MovieSceneFloatSection_0'",
+                "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.63"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 0
+          }
+        ],
+        "SharedMetaData": [
+          {
+            "ObjectBindingID": "2BDBC4E3-4333371A-D9EFDB8C-1E0F98D2"
+          }
+        ]
+      },
+      "CompiledSignature": "F18B35BC-40E663A6-46B84D95-F540B74A",
+      "CompilerVersion": "7D4B9809-2FAC4A6B-964ECF72-D8279EF8",
+      "AccumulatedMask": {
+        "bEntityComponentField": true
+      },
+      "AllocatedMask": {
+        "bEntityComponentField": true
+      }
+    }
+  },
+  {
+    "Type": "MovieSceneFloatSection",
+    "Name": "MovieSceneFloatSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneFloatSection'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatTrack'AffixTipsBarForForge_C:DisappearedAnim_INST.DisappearedAnim.MovieSceneFloatTrack_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.64"
+    },
+    "Properties": {
+      "FloatCurve": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 10000
+          },
+          {
+            "Value": 12000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'AffixTipsBarForForge_C:DisappearedAnim_INST.DisappearedAnim.MovieSceneFloatTrack_0.MovieSceneFloatSection_0.EaseInFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.35"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'AffixTipsBarForForge_C:DisappearedAnim_INST.DisappearedAnim.MovieSceneFloatTrack_0.MovieSceneFloatSection_0.EaseOutFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.36"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 14000
+            }
+          }
+        }
+      },
+      "Signature": "E7C46DA1-4210FF3B-753539BD-38C75A0F"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatSection",
+    "Name": "MovieSceneFloatSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneFloatSection'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatTrack'AffixTipsBarForForge_C:DisappearedAnim_INST.DisappearedAnim.MovieSceneFloatTrack_1'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.65"
+    },
+    "Properties": {
+      "FloatCurve": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 8000
+          },
+          {
+            "Value": 10000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'AffixTipsBarForForge_C:DisappearedAnim_INST.DisappearedAnim.MovieSceneFloatTrack_1.MovieSceneFloatSection_0.EaseInFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.37"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'AffixTipsBarForForge_C:DisappearedAnim_INST.DisappearedAnim.MovieSceneFloatTrack_1.MovieSceneFloatSection_0.EaseOutFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.38"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 14000
+            }
+          }
+        }
+      },
+      "Signature": "F8EE3B60-4AB838BA-8D22DDAC-8443BF02"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatSection",
+    "Name": "MovieSceneFloatSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneFloatSection'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatTrack'AffixTipsBarForForge_C:NewAnim_INST.NewAnim.MovieSceneFloatTrack_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.66"
+    },
+    "Properties": {
+      "FloatCurve": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 2000
+          },
+          {
+            "Value": 20000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'AffixTipsBarForForge_C:NewAnim_INST.NewAnim.MovieSceneFloatTrack_0.MovieSceneFloatSection_0.EaseInFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.47"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'AffixTipsBarForForge_C:NewAnim_INST.NewAnim.MovieSceneFloatTrack_0.MovieSceneFloatSection_0.EaseOutFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.48"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 25999
+            }
+          }
+        }
+      },
+      "Signature": "9B2474B3-42BA43AD-F13BBC84-A6F0328C"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatSection",
+    "Name": "MovieSceneFloatSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneFloatSection'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatTrack'AffixTipsBarForForge_C:NewAnim_INST.NewAnim.MovieSceneFloatTrack_1'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.67"
+    },
+    "Properties": {
+      "FloatCurve": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 12000
+          },
+          {
+            "Value": 22000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'AffixTipsBarForForge_C:NewAnim_INST.NewAnim.MovieSceneFloatTrack_1.MovieSceneFloatSection_0.EaseInFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.49"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'AffixTipsBarForForge_C:NewAnim_INST.NewAnim.MovieSceneFloatTrack_1.MovieSceneFloatSection_0.EaseOutFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.50"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 26000
+            }
+          }
+        }
+      },
+      "Signature": "5F590A06-4618C64E-44152FA8-A892FA30"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatSection",
+    "Name": "MovieSceneFloatSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneFloatSection'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatTrack'AffixTipsBarForForge_C:NewAnim_INST.NewAnim.MovieSceneFloatTrack_2'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.68"
+    },
+    "Properties": {
+      "FloatCurve": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 4000
+          },
+          {
+            "Value": 18000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'AffixTipsBarForForge_C:NewAnim_INST.NewAnim.MovieSceneFloatTrack_2.MovieSceneFloatSection_0.EaseInFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.51"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'AffixTipsBarForForge_C:NewAnim_INST.NewAnim.MovieSceneFloatTrack_2.MovieSceneFloatSection_0.EaseOutFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.52"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 25999
+            }
+          }
+        }
+      },
+      "Signature": "33F4BFCF-4072DE06-B3130588-F007F4D9"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatSection",
+    "Name": "MovieSceneFloatSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneFloatSection'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatTrack'AffixTipsBarForForge_C:T0UpgradeAnim_INST.T0UpgradeAnim.MovieSceneFloatTrack_1'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.69"
+    },
+    "Properties": {
+      "FloatCurve": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 30000
+          },
+          {
+            "Value": 60000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.6,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 0.2,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 0.6,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'AffixTipsBarForForge_C:T0UpgradeAnim_INST.T0UpgradeAnim.MovieSceneFloatTrack_1.MovieSceneFloatSection_0.EaseInFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.53"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'AffixTipsBarForForge_C:T0UpgradeAnim_INST.T0UpgradeAnim.MovieSceneFloatTrack_1.MovieSceneFloatSection_0.EaseOutFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.54"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 60000
+            }
+          }
+        }
+      },
+      "Signature": "17EC621D-482D159E-F0C8A5AB-2FDB6E8C"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatTrack",
+    "Name": "MovieSceneFloatTrack_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneFloatTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'AffixTipsBarForForge_C:DisappearedAnim_INST.DisappearedAnim'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.16"
+    },
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderOpacity",
+        "PropertyPath": "RenderOpacity",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneFloatSection'AffixTipsBarForForge_C:DisappearedAnim_INST.DisappearedAnim.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.58"
+        }
+      ],
+      "EvaluationFieldGuid": "7ECF3F38-4C18B7B8-E7A1E9B4-EBCED84E",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneFloatSection'AffixTipsBarForForge_C:DisappearedAnim_INST.DisappearedAnim.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.58"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 14000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "7ECF3F38-4C18B7B8-E7A1E9B4-EBCED84E"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatTrack",
+    "Name": "MovieSceneFloatTrack_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneFloatTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'AffixTipsBarForForge_C:DisappearedAnim_INST.DisappearedAnim'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.16"
+    },
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderOpacity",
+        "PropertyPath": "RenderOpacity",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneFloatSection'AffixTipsBarForForge_C:DisappearedAnim_INST.DisappearedAnim.MovieSceneFloatTrack_1.MovieSceneFloatSection_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.59"
+        }
+      ],
+      "EvaluationFieldGuid": "5E817373-437D1BCC-13FC58B3-2F8A63DA",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneFloatSection'AffixTipsBarForForge_C:DisappearedAnim_INST.DisappearedAnim.MovieSceneFloatTrack_1.MovieSceneFloatSection_0'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.59"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Exclusive",
+                "Value": {
+                  "Value": 14000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "5E817373-437D1BCC-13FC58B3-2F8A63DA"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatTrack",
+    "Name": "MovieSceneFloatTrack_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneFloatTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'AffixTipsBarForForge_C:NewAnim_INST.NewAnim'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.17"
+    },
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderOpacity",
+        "PropertyPath": "RenderOpacity",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneFloatSection'AffixTipsBarForForge_C:NewAnim_INST.NewAnim.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.60"
+        }
+      ],
+      "EvaluationFieldGuid": "5B204D9C-4BCCA902-BF5385AB-53E75C3C",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneFloatSection'AffixTipsBarForForge_C:NewAnim_INST.NewAnim.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.60"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Exclusive",
+                "Value": {
+                  "Value": 25999
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "5B204D9C-4BCCA902-BF5385AB-53E75C3C"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatTrack",
+    "Name": "MovieSceneFloatTrack_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneFloatTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'AffixTipsBarForForge_C:NewAnim_INST.NewAnim'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.17"
+    },
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderOpacity",
+        "PropertyPath": "RenderOpacity",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneFloatSection'AffixTipsBarForForge_C:NewAnim_INST.NewAnim.MovieSceneFloatTrack_1.MovieSceneFloatSection_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.61"
+        }
+      ],
+      "EvaluationFieldGuid": "8DAE58FC-41E780FC-EB0D609E-81A7018A",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneFloatSection'AffixTipsBarForForge_C:NewAnim_INST.NewAnim.MovieSceneFloatTrack_1.MovieSceneFloatSection_0'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.61"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Exclusive",
+                "Value": {
+                  "Value": 26000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "8DAE58FC-41E780FC-EB0D609E-81A7018A"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatTrack",
+    "Name": "MovieSceneFloatTrack_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneFloatTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'AffixTipsBarForForge_C:NewAnim_INST.NewAnim'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.17"
+    },
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderOpacity",
+        "PropertyPath": "RenderOpacity",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneFloatSection'AffixTipsBarForForge_C:NewAnim_INST.NewAnim.MovieSceneFloatTrack_2.MovieSceneFloatSection_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.62"
+        }
+      ],
+      "EvaluationFieldGuid": "39FFE4B6-45111672-1E8877B3-986FDAFF",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneFloatSection'AffixTipsBarForForge_C:NewAnim_INST.NewAnim.MovieSceneFloatTrack_2.MovieSceneFloatSection_0'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.62"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Exclusive",
+                "Value": {
+                  "Value": 25999
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "39FFE4B6-45111672-1E8877B3-986FDAFF"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatTrack",
+    "Name": "MovieSceneFloatTrack_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneFloatTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'AffixTipsBarForForge_C:T0UpgradeAnim_INST.T0UpgradeAnim'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.18"
+    },
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderOpacity",
+        "PropertyPath": "RenderOpacity",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneFloatSection'AffixTipsBarForForge_C:T0UpgradeAnim_INST.T0UpgradeAnim.MovieSceneFloatTrack_1.MovieSceneFloatSection_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.63"
+        }
+      ],
+      "EvaluationFieldGuid": "9847C789-45D217B0-882F8D91-D936C91F",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneFloatSection'AffixTipsBarForForge_C:T0UpgradeAnim_INST.T0UpgradeAnim.MovieSceneFloatTrack_1.MovieSceneFloatSection_0'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.63"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 60000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "9847C789-45D217B0-882F8D91-D936C91F"
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "C_GradeOverlay",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Overlay'",
+    "Outer": {
+      "ObjectName": "WidgetTree'AffixTipsBarForForge_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.120"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlaySlot'AffixTipsBarForForge_C:WidgetTree.C_GradeOverlay.OverlaySlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.73"
+        },
+        {
+          "ObjectName": "OverlaySlot'AffixTipsBarForForge_C:WidgetTree.C_GradeOverlay.OverlaySlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.74"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "WidgetSwitcherSlot'AffixTipsBarForForge_C:WidgetTree.C_GradeSwitcher.WidgetSwitcherSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.113"
+      }
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "C_LockedEffectBox",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Overlay'",
+    "Outer": {
+      "ObjectName": "WidgetTree'AffixTipsBarForForge_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.120"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlaySlot'AffixTipsBarForForge_C:WidgetTree.C_LockedEffectBox.OverlaySlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.75"
+        },
+        {
+          "ObjectName": "OverlaySlot'AffixTipsBarForForge_C:WidgetTree.C_LockedEffectBox.OverlaySlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.76"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "SizeBoxSlot'AffixTipsBarForForge_C:WidgetTree.SizeBox_243.SizeBoxSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.89"
+      },
+      "RenderTransform": {
+        "Translation": {
+          "X": 1.92,
+          "Y": 0.96
+        }
+      }
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "Overlay_117",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Overlay'",
+    "Outer": {
+      "ObjectName": "WidgetTree'AffixTipsBarForForge_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.120"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlaySlot'AffixTipsBarForForge_C:WidgetTree.Overlay_117.OverlaySlot_3'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.79"
+        },
+        {
+          "ObjectName": "OverlaySlot'AffixTipsBarForForge_C:WidgetTree.Overlay_117.OverlaySlot_6'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.81"
+        },
+        {
+          "ObjectName": "OverlaySlot'AffixTipsBarForForge_C:WidgetTree.Overlay_117.OverlaySlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.78"
+        },
+        {
+          "ObjectName": "OverlaySlot'AffixTipsBarForForge_C:WidgetTree.Overlay_117.OverlaySlot_4'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.80"
+        },
+        {
+          "ObjectName": "OverlaySlot'AffixTipsBarForForge_C:WidgetTree.Overlay_117.OverlaySlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.77"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "SizeBoxSlot'AffixTipsBarForForge_C:WidgetTree.SizeBox_57.SizeBoxSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.90"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'AffixTipsBarForForge_C:WidgetTree.C_GradeOverlay'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.70"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Fill",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "Overlay'AffixTipsBarForForge_C:WidgetTree.C_GradeOverlay'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.70"
+      },
+      "Content": {
+        "ObjectName": "UIImage'AffixTipsBarForForge_C:WidgetTree.C_BackgroundImage'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.92"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'AffixTipsBarForForge_C:WidgetTree.C_GradeOverlay'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.70"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "Overlay'AffixTipsBarForForge_C:WidgetTree.C_GradeOverlay'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.70"
+      },
+      "Content": {
+        "ObjectName": "UITextBlock'AffixTipsBarForForge_C:WidgetTree.C_TGradeText'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.106"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'AffixTipsBarForForge_C:WidgetTree.C_LockedEffectBox'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.71"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Fill",
+      "VerticalAlignment": "VAlign_Fill",
+      "Parent": {
+        "ObjectName": "Overlay'AffixTipsBarForForge_C:WidgetTree.C_LockedEffectBox'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.71"
+      },
+      "Content": {
+        "ObjectName": "UIImage'AffixTipsBarForForge_C:WidgetTree.UIImage_67'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.102"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'AffixTipsBarForForge_C:WidgetTree.C_LockedEffectBox'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.71"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "Overlay'AffixTipsBarForForge_C:WidgetTree.C_LockedEffectBox'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.71"
+      },
+      "Content": {
+        "ObjectName": "UIImage'AffixTipsBarForForge_C:WidgetTree.UIImage_103'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.100"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'AffixTipsBarForForge_C:WidgetTree.Overlay_117'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.72"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Fill",
+      "VerticalAlignment": "VAlign_Fill",
+      "Parent": {
+        "ObjectName": "Overlay'AffixTipsBarForForge_C:WidgetTree.Overlay_117'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.72"
+      },
+      "Content": {
+        "ObjectName": "HorizontalBox'AffixTipsBarForForge_C:WidgetTree.C_ContentBox'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.12"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'AffixTipsBarForForge_C:WidgetTree.Overlay_117'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.72"
+    },
+    "Properties": {
+      "Padding": {
+        "Right": 9.599999
+      },
+      "HorizontalAlignment": "HAlign_Right",
+      "Parent": {
+        "ObjectName": "Overlay'AffixTipsBarForForge_C:WidgetTree.Overlay_117'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.72"
+      },
+      "Content": {
+        "ObjectName": "UIImage'AffixTipsBarForForge_C:WidgetTree.C_ImageUpgrade'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.94"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'AffixTipsBarForForge_C:WidgetTree.Overlay_117'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.72"
+    },
+    "Properties": {
+      "Padding": {
+        "Bottom": 1.92
+      },
+      "HorizontalAlignment": "HAlign_Fill",
+      "VerticalAlignment": "VAlign_Fill",
+      "Parent": {
+        "ObjectName": "Overlay'AffixTipsBarForForge_C:WidgetTree.Overlay_117'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.72"
+      },
+      "Content": {
+        "ObjectName": "UIImage'AffixTipsBarForForge_C:WidgetTree.C_LockedBackground'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.95"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_4",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'AffixTipsBarForForge_C:WidgetTree.Overlay_117'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.72"
+    },
+    "Properties": {
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "Overlay'AffixTipsBarForForge_C:WidgetTree.Overlay_117'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.72"
+      },
+      "Content": {
+        "ObjectName": "WidgetSwitcher'AffixTipsBarForForge_C:WidgetTree.C_ReminderSwitcher'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.111"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_6",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'AffixTipsBarForForge_C:WidgetTree.Overlay_117'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.72"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Fill",
+      "VerticalAlignment": "VAlign_Fill",
+      "Parent": {
+        "ObjectName": "Overlay'AffixTipsBarForForge_C:WidgetTree.Overlay_117'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.72"
+      },
+      "Content": {
+        "ObjectName": "WidgetSwitcher'AffixTipsBarForForge_C:WidgetTree.FxSwitcher'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.112"
+      }
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SizeBox_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'AffixTipsBarForForge_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.120"
+    },
+    "Properties": {
+      "WidthOverride": 38.4,
+      "HeightOverride": 38.4,
+      "bOverride_WidthOverride": true,
+      "bOverride_HeightOverride": true,
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot'AffixTipsBarForForge_C:WidgetTree.SizeBox_0.SizeBoxSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.87"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "WidgetSwitcherSlot'AffixTipsBarForForge_C:WidgetTree.C_GradeSwitcher.WidgetSwitcherSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.114"
+      },
+      "RenderTransform": {
+        "Translation": {
+          "X": 0.0,
+          "Y": -1.92
+        }
+      }
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SizeBox_168",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'AffixTipsBarForForge_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.120"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot'AffixTipsBarForForge_C:WidgetTree.SizeBox_168.SizeBoxSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.88"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'AffixTipsBarForForge_C:WidgetTree.C_ContentBox.HorizontalBoxSlot_6'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.15"
+      },
+      "Clipping": "EWidgetClipping::ClipToBounds"
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SizeBox_243",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'AffixTipsBarForForge_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.120"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot'AffixTipsBarForForge_C:WidgetTree.SizeBox_243.SizeBoxSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.89"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'AffixTipsBarForForge_C:WidgetTree.C_ContentBox.HorizontalBoxSlot_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.13"
+      }
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SizeBox_57",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'AffixTipsBarForForge_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.120"
+    },
+    "Properties": {
+      "WidthOverride": 691.2,
+      "MinDesiredHeight": 76.8,
+      "MaxDesiredHeight": 134.4,
+      "bOverride_WidthOverride": true,
+      "bOverride_MinDesiredHeight": true,
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot'AffixTipsBarForForge_C:WidgetTree.SizeBox_57.SizeBoxSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.90"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'AffixTipsBarForForge_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_9'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.6"
+      }
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SizeBox_97",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'AffixTipsBarForForge_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.120"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot'AffixTipsBarForForge_C:WidgetTree.SizeBox_97.SizeBoxSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.91"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'AffixTipsBarForForge_C:WidgetTree.C_ContentBox.HorizontalBoxSlot_5'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.14"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBoxSlot'",
+    "Outer": {
+      "ObjectName": "SizeBox'AffixTipsBarForForge_C:WidgetTree.SizeBox_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.82"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "SizeBox'AffixTipsBarForForge_C:WidgetTree.SizeBox_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.82"
+      },
+      "Content": {
+        "ObjectName": "UIImage'AffixTipsBarForForge_C:WidgetTree.C_GradeImage'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.93"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBoxSlot'",
+    "Outer": {
+      "ObjectName": "SizeBox'AffixTipsBarForForge_C:WidgetTree.SizeBox_168'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.83"
+    },
+    "Properties": {
+      "Padding": {
+        "Left": 9.599999,
+        "Top": 1.92,
+        "Bottom": 1.92
+      },
+      "HorizontalAlignment": "HAlign_Left",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "SizeBox'AffixTipsBarForForge_C:WidgetTree.SizeBox_168'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.83"
+      },
+      "Content": {
+        "ObjectName": "UIRichTextBlock'AffixTipsBarForForge_C:WidgetTree.C_Context'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.105"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBoxSlot'",
+    "Outer": {
+      "ObjectName": "SizeBox'AffixTipsBarForForge_C:WidgetTree.SizeBox_243'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.84"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "SizeBox'AffixTipsBarForForge_C:WidgetTree.SizeBox_243'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.84"
+      },
+      "Content": {
+        "ObjectName": "Overlay'AffixTipsBarForForge_C:WidgetTree.C_LockedEffectBox'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.71"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBoxSlot'",
+    "Outer": {
+      "ObjectName": "SizeBox'AffixTipsBarForForge_C:WidgetTree.SizeBox_57'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.85"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "SizeBox'AffixTipsBarForForge_C:WidgetTree.SizeBox_57'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.85"
+      },
+      "Content": {
+        "ObjectName": "Overlay'AffixTipsBarForForge_C:WidgetTree.Overlay_117'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.72"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBoxSlot'",
+    "Outer": {
+      "ObjectName": "SizeBox'AffixTipsBarForForge_C:WidgetTree.SizeBox_97'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.86"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "SizeBox'AffixTipsBarForForge_C:WidgetTree.SizeBox_97'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.86"
+      },
+      "Content": {
+        "ObjectName": "WidgetSwitcher'AffixTipsBarForForge_C:WidgetTree.C_GradeSwitcher'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.110"
+      }
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "C_BackgroundImage",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'AffixTipsBarForForge_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.120"
+    },
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 76.799995,
+          "Y": 46.079998
+        }
+      },
+      "Slot": {
+        "ObjectName": "OverlaySlot'AffixTipsBarForForge_C:WidgetTree.C_GradeOverlay.OverlaySlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.73"
+      }
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "C_GradeImage",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'AffixTipsBarForForge_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.120"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/TexturesAtlas/Forge/Atlas/UI_Forge_xiayiye_Sprite.UI_Forge_xiayiye_Sprite",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 30.72,
+          "Y": 30.72
+        }
+      },
+      "Slot": {
+        "ObjectName": "SizeBoxSlot'AffixTipsBarForForge_C:WidgetTree.SizeBox_0.SizeBoxSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.87"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "C_ImageUpgrade",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'AffixTipsBarForForge_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.120"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/TexturesAtlas/Forge/Atlas/UI_Forge_Upgrade_IconUp1_Sprite.UI_Forge_Upgrade_IconUp1_Sprite",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 61.44,
+          "Y": 69.119995
+        }
+      },
+      "Slot": {
+        "ObjectName": "OverlaySlot'AffixTipsBarForForge_C:WidgetTree.Overlay_117.OverlaySlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.78"
+      },
+      "Visibility": "ESlateVisibility::Collapsed"
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "C_LockedBackground",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'AffixTipsBarForForge_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.120"
+    },
+    "Properties": {
+      "CurrStyleId": 5170,
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/Textures/Forge/NoAtlas/UI_Forge_AffixGearBoard12.UI_Forge_AffixGearBoard12",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 756.48,
+          "Y": 541.44
+        }
+      },
+      "Slot": {
+        "ObjectName": "OverlaySlot'AffixTipsBarForForge_C:WidgetTree.Overlay_117.OverlaySlot_3'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.79"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "Fx01",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'AffixTipsBarForForge_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.120"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/UIEffect/UITexture/Fx/Mask/UI_T_Mask17.UI_T_Mask17",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 245.76,
+          "Y": 61.44
+        }
+      },
+      "ColorAndOpacity": {
+        "R": 1.0,
+        "G": 0.492313,
+        "B": 0.0,
+        "A": 1.0,
+        "Hex": "FFBA00"
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'AffixTipsBarForForge_C:WidgetTree.T1.CanvasPanelSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.9"
+      },
+      "RenderTransform": {
+        "Scale": {
+          "X": 1.3,
+          "Y": 1.0
+        }
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible",
+      "RenderOpacity": 0.0
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "Fx01_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'AffixTipsBarForForge_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.120"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/UIEffect/UITexture/Fx/Mask/UI_T_Mask19.UI_T_Mask19",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 245.76,
+          "Y": 61.44
+        }
+      },
+      "ColorAndOpacity": {
+        "R": 1.0,
+        "G": 0.806107,
+        "B": 0.0,
+        "A": 1.0,
+        "Hex": "FFE800"
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'AffixTipsBarForForge_C:WidgetTree.T1.CanvasPanelSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.10"
+      },
+      "RenderTransform": {
+        "Translation": {
+          "X": 123.140274,
+          "Y": 0.0
+        },
+        "Scale": {
+          "X": 0.4,
+          "Y": 1.0
+        },
+        "Shear": {
+          "X": 30.0,
+          "Y": 0.0
+        }
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible",
+      "RenderOpacity": 0.0
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "Fx01_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'AffixTipsBarForForge_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.120"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/UIEffect/UITexture/Fx/Mask/UI_T_Mask17.UI_T_Mask17",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 245.76,
+          "Y": 61.44
+        }
+      },
+      "ColorAndOpacity": {
+        "R": 0.0,
+        "G": 0.45051,
+        "B": 1.0,
+        "A": 1.0,
+        "Hex": "00B3FF"
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'AffixTipsBarForForge_C:WidgetTree.NoT1.CanvasPanelSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.7"
+      },
+      "RenderTransform": {
+        "Scale": {
+          "X": 1.3,
+          "Y": 1.0
+        }
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible",
+      "RenderOpacity": 0.0
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "Fx01_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'AffixTipsBarForForge_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.120"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/UIEffect/UITexture/Fx/Mask/UI_T_Mask17.UI_T_Mask17",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 245.76,
+          "Y": 61.44
+        }
+      },
+      "ColorAndOpacity": {
+        "R": 1.0,
+        "G": 0.103049,
+        "B": 0.0,
+        "A": 1.0,
+        "Hex": "FF5A00"
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'AffixTipsBarForForge_C:WidgetTree.T0.CanvasPanelSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.8"
+      },
+      "RenderTransform": {
+        "Scale": {
+          "X": 1.3,
+          "Y": 1.0
+        }
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible",
+      "RenderOpacity": 0.0
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "UIImage_103",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'AffixTipsBarForForge_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.120"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/TexturesAtlas/Forge/Atlas/UI_Forge_ICONlocked_Sprite.UI_Forge_ICONlocked_Sprite",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 38.399998,
+          "Y": 53.76
+        }
+      },
+      "Slot": {
+        "ObjectName": "OverlaySlot'AffixTipsBarForForge_C:WidgetTree.C_LockedEffectBox.OverlaySlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.76"
+      }
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "UIImage_159",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'AffixTipsBarForForge_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.120"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/TexturesAtlas/Forge/Atlas/UI_Forge_Image_Arrow07_Sprite.UI_Forge_Image_Arrow07_Sprite",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 107.52,
+          "Y": 69.119995
+        }
+      },
+      "Slot": {
+        "ObjectName": "WidgetSwitcherSlot'AffixTipsBarForForge_C:WidgetTree.C_ReminderSwitcher.WidgetSwitcherSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.116"
+      }
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "UIImage_67",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'AffixTipsBarForForge_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.120"
+    },
+    "Properties": {
+      "CurrStyleId": 5564,
+      "Brush": {
+        "ImageSize": {
+          "X": 61.44,
+          "Y": 61.44
+        }
+      },
+      "Slot": {
+        "ObjectName": "OverlaySlot'AffixTipsBarForForge_C:WidgetTree.C_LockedEffectBox.OverlaySlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.75"
+      }
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "UIImage_77",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'AffixTipsBarForForge_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.120"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/TexturesAtlas/Forge/Atlas/UI_Forge_Image_Arrow06_Sprite.UI_Forge_Image_Arrow06_Sprite",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 107.52,
+          "Y": 69.119995
+        }
+      },
+      "Slot": {
+        "ObjectName": "WidgetSwitcherSlot'AffixTipsBarForForge_C:WidgetTree.C_ReminderSwitcher.WidgetSwitcherSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.115"
+      }
+    }
+  },
+  {
+    "Type": "UIParticleEmitter",
+    "Name": "UIParticleEmitter_93",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIParticleEmitter'",
+    "Outer": {
+      "ObjectName": "WidgetTree'AffixTipsBarForForge_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.120"
+    },
+    "Properties": {
+      "Asset": {
+        "ObjectName": "UIParticleEmitterAsset'UI_P_Forge01'",
+        "ObjectPath": "UE_game/Content/Art/UI/UIEffect/UIParticle/Forge/UI_P_Forge01.0"
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'AffixTipsBarForForge_C:WidgetTree.T1.CanvasPanelSlot_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.11"
+      },
+      "RenderTransform": {
+        "Scale": {
+          "X": 1.92,
+          "Y": 1.92
+        }
+      }
+    }
+  },
+  {
+    "Type": "UIRichTextBlock",
+    "Name": "C_Context",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIRichTextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'AffixTipsBarForForge_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.120"
+    },
+    "Properties": {
+      "CurrStyleId": 1877,
+      "ShrinkSize": {
+        "X": 122.88,
+        "Y": 122.88
+      },
+      "WrapTextAt": 537.0,
+      "Slot": {
+        "ObjectName": "SizeBoxSlot'AffixTipsBarForForge_C:WidgetTree.SizeBox_168.SizeBoxSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.88"
+      }
+    }
+  },
+  {
+    "Type": "UITextBlock",
+    "Name": "C_TGradeText",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UITextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'AffixTipsBarForForge_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.120"
+    },
+    "Properties": {
+      "CurrStyleId": 1702,
+      "Text": {
+        "Namespace": "",
+        "Key": "B04D631F4DC58C70FA70348803FB4A53",
+        "SourceString": "T8",
+        "LocalizedString": "T8"
+      },
+      "Slot": {
+        "ObjectName": "OverlaySlot'AffixTipsBarForForge_C:WidgetTree.C_GradeOverlay.OverlaySlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.74"
+      },
+      "RenderTransform": {
+        "Translation": {
+          "X": 0.0,
+          "Y": 3.84
+        }
+      }
+    }
+  },
+  {
+    "Type": "WidgetAnimation",
+    "Name": "DisappearedAnim_INST",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetAnimation'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'AffixTipsBarForForge_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.0"
+    },
+    "Properties": {
+      "MovieScene": {
+        "ObjectName": "MovieScene'AffixTipsBarForForge_C:DisappearedAnim_INST.DisappearedAnim'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.16"
+      },
+      "AnimationBindings": [
+        {
+          "WidgetName": "Fx01",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "5306C2E2-41F50CC5-7760CF9A-76730ECF",
+          "bIsRootWidget": false
+        },
+        {
+          "WidgetName": "Fx01_2",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "53D622B3-4C24DC26-4143D0B8-FA5947D0",
+          "bIsRootWidget": false
+        }
+      ],
+      "DisplayLabel": "DisappearedAnim",
+      "CompiledData": {
+        "ObjectName": "MovieSceneCompiledData'AffixTipsBarForForge_C:DisappearedAnim_INST.CompiledData'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.55"
+      },
+      "Signature": "EDD84278-4A74E6D1-775827A3-6FE7AA81"
+    }
+  },
+  {
+    "Type": "WidgetAnimation",
+    "Name": "NewAnim_INST",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetAnimation'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'AffixTipsBarForForge_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.0"
+    },
+    "Properties": {
+      "MovieScene": {
+        "ObjectName": "MovieScene'AffixTipsBarForForge_C:NewAnim_INST.NewAnim'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.17"
+      },
+      "AnimationBindings": [
+        {
+          "WidgetName": "Fx01",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "D02F60EE-463690BF-F66BE896-16DC939B",
+          "bIsRootWidget": false
+        },
+        {
+          "WidgetName": "Fx01_1",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "85D264AC-421B8B66-E0D70D84-DCBB67C5",
+          "bIsRootWidget": false
+        },
+        {
+          "WidgetName": "UIParticleEmitter_93",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "8B753923-470440BB-1DF6B791-62B886B6",
+          "bIsRootWidget": false
+        },
+        {
+          "WidgetName": "Fx01_2",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "A5353A86-4F1CCD65-78DC0BA4-06A20D37",
+          "bIsRootWidget": false
+        }
+      ],
+      "DisplayLabel": "NewAnim",
+      "CompiledData": {
+        "ObjectName": "MovieSceneCompiledData'AffixTipsBarForForge_C:NewAnim_INST.CompiledData'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.56"
+      },
+      "Signature": "D1F37897-4CB02438-4EA055A8-6C9879F7"
+    }
+  },
+  {
+    "Type": "WidgetAnimation",
+    "Name": "T0UpgradeAnim_INST",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetAnimation'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'AffixTipsBarForForge_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.0"
+    },
+    "Properties": {
+      "MovieScene": {
+        "ObjectName": "MovieScene'AffixTipsBarForForge_C:T0UpgradeAnim_INST.T0UpgradeAnim'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.18"
+      },
+      "AnimationBindings": [
+        {
+          "WidgetName": "Fx01_3",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "2BDBC4E3-4333371A-D9EFDB8C-1E0F98D2",
+          "bIsRootWidget": false
+        }
+      ],
+      "DisplayLabel": "T0UpgradeAnim",
+      "CompiledData": {
+        "ObjectName": "MovieSceneCompiledData'AffixTipsBarForForge_C:T0UpgradeAnim_INST.CompiledData'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.57"
+      },
+      "Signature": "F18B35BC-40E663A6-46B84D95-F540B74A"
+    }
+  },
+  {
+    "Type": "WidgetSwitcher",
+    "Name": "C_GradeSwitcher",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetSwitcher'",
+    "Outer": {
+      "ObjectName": "WidgetTree'AffixTipsBarForForge_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.120"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "WidgetSwitcherSlot'AffixTipsBarForForge_C:WidgetTree.C_GradeSwitcher.WidgetSwitcherSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.113"
+        },
+        {
+          "ObjectName": "WidgetSwitcherSlot'AffixTipsBarForForge_C:WidgetTree.C_GradeSwitcher.WidgetSwitcherSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.114"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "SizeBoxSlot'AffixTipsBarForForge_C:WidgetTree.SizeBox_97.SizeBoxSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.91"
+      }
+    }
+  },
+  {
+    "Type": "WidgetSwitcher",
+    "Name": "C_ReminderSwitcher",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetSwitcher'",
+    "Outer": {
+      "ObjectName": "WidgetTree'AffixTipsBarForForge_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.120"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "WidgetSwitcherSlot'AffixTipsBarForForge_C:WidgetTree.C_ReminderSwitcher.WidgetSwitcherSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.115"
+        },
+        {
+          "ObjectName": "WidgetSwitcherSlot'AffixTipsBarForForge_C:WidgetTree.C_ReminderSwitcher.WidgetSwitcherSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.116"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "OverlaySlot'AffixTipsBarForForge_C:WidgetTree.Overlay_117.OverlaySlot_4'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.80"
+      },
+      "RenderTransform": {
+        "Translation": {
+          "X": -94.079994,
+          "Y": 0.0
+        }
+      }
+    }
+  },
+  {
+    "Type": "WidgetSwitcher",
+    "Name": "FxSwitcher",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetSwitcher'",
+    "Outer": {
+      "ObjectName": "WidgetTree'AffixTipsBarForForge_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.120"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "WidgetSwitcherSlot'AffixTipsBarForForge_C:WidgetTree.FxSwitcher.WidgetSwitcherSlot_2'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.118"
+        },
+        {
+          "ObjectName": "WidgetSwitcherSlot'AffixTipsBarForForge_C:WidgetTree.FxSwitcher.WidgetSwitcherSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.117"
+        },
+        {
+          "ObjectName": "WidgetSwitcherSlot'AffixTipsBarForForge_C:WidgetTree.FxSwitcher.WidgetSwitcherSlot_3'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.119"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "OverlaySlot'AffixTipsBarForForge_C:WidgetTree.Overlay_117.OverlaySlot_6'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.81"
+      }
+    }
+  },
+  {
+    "Type": "WidgetSwitcherSlot",
+    "Name": "WidgetSwitcherSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetSwitcherSlot'",
+    "Outer": {
+      "ObjectName": "WidgetSwitcher'AffixTipsBarForForge_C:WidgetTree.C_GradeSwitcher'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.110"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "WidgetSwitcher'AffixTipsBarForForge_C:WidgetTree.C_GradeSwitcher'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.110"
+      },
+      "Content": {
+        "ObjectName": "Overlay'AffixTipsBarForForge_C:WidgetTree.C_GradeOverlay'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.70"
+      }
+    }
+  },
+  {
+    "Type": "WidgetSwitcherSlot",
+    "Name": "WidgetSwitcherSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetSwitcherSlot'",
+    "Outer": {
+      "ObjectName": "WidgetSwitcher'AffixTipsBarForForge_C:WidgetTree.C_GradeSwitcher'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.110"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "WidgetSwitcher'AffixTipsBarForForge_C:WidgetTree.C_GradeSwitcher'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.110"
+      },
+      "Content": {
+        "ObjectName": "SizeBox'AffixTipsBarForForge_C:WidgetTree.SizeBox_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.82"
+      }
+    }
+  },
+  {
+    "Type": "WidgetSwitcherSlot",
+    "Name": "WidgetSwitcherSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetSwitcherSlot'",
+    "Outer": {
+      "ObjectName": "WidgetSwitcher'AffixTipsBarForForge_C:WidgetTree.C_ReminderSwitcher'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.111"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Left",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "WidgetSwitcher'AffixTipsBarForForge_C:WidgetTree.C_ReminderSwitcher'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.111"
+      },
+      "Content": {
+        "ObjectName": "UIImage'AffixTipsBarForForge_C:WidgetTree.UIImage_77'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.103"
+      }
+    }
+  },
+  {
+    "Type": "WidgetSwitcherSlot",
+    "Name": "WidgetSwitcherSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetSwitcherSlot'",
+    "Outer": {
+      "ObjectName": "WidgetSwitcher'AffixTipsBarForForge_C:WidgetTree.C_ReminderSwitcher'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.111"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "WidgetSwitcher'AffixTipsBarForForge_C:WidgetTree.C_ReminderSwitcher'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.111"
+      },
+      "Content": {
+        "ObjectName": "UIImage'AffixTipsBarForForge_C:WidgetTree.UIImage_159'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.101"
+      }
+    }
+  },
+  {
+    "Type": "WidgetSwitcherSlot",
+    "Name": "WidgetSwitcherSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetSwitcherSlot'",
+    "Outer": {
+      "ObjectName": "WidgetSwitcher'AffixTipsBarForForge_C:WidgetTree.FxSwitcher'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.112"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "WidgetSwitcher'AffixTipsBarForForge_C:WidgetTree.FxSwitcher'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.112"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'AffixTipsBarForForge_C:WidgetTree.NoT1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.3"
+      }
+    }
+  },
+  {
+    "Type": "WidgetSwitcherSlot",
+    "Name": "WidgetSwitcherSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetSwitcherSlot'",
+    "Outer": {
+      "ObjectName": "WidgetSwitcher'AffixTipsBarForForge_C:WidgetTree.FxSwitcher'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.112"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "WidgetSwitcher'AffixTipsBarForForge_C:WidgetTree.FxSwitcher'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.112"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'AffixTipsBarForForge_C:WidgetTree.T1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.5"
+      }
+    }
+  },
+  {
+    "Type": "WidgetSwitcherSlot",
+    "Name": "WidgetSwitcherSlot_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetSwitcherSlot'",
+    "Outer": {
+      "ObjectName": "WidgetSwitcher'AffixTipsBarForForge_C:WidgetTree.FxSwitcher'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.112"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "WidgetSwitcher'AffixTipsBarForForge_C:WidgetTree.FxSwitcher'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.112"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'AffixTipsBarForForge_C:WidgetTree.T0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.4"
+      }
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetTree'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'AffixTipsBarForForge_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.0"
+    },
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "CanvasPanel'AffixTipsBarForForge_C:WidgetTree.CanvasPanel_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Forge/AffixTipsBarForForge.2"
+      }
+    }
+  }
+]

@@ -1,0 +1,1908 @@
+[
+  {
+    "Type": "Function",
+    "Name": "PlayShake",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'SkillBagEquipItem_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.2"
+    },
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Get_Icon_bIsEnabled_0",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'SkillBagEquipItem_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.2"
+    },
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_BlueprintPure"
+  },
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "SkillBagEquipItem_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Package": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'SkillBagEquipItem_C:WidgetTree'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.51"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'UserWidget'",
+      "ObjectPath": "/Script/UMG"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'SkillBagEquipItem_C:Get_Icon_bIsEnabled_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.1"
+      },
+      {
+        "ObjectName": "Function'SkillBagEquipItem_C:PlayShake'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "AttributeIcon",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "BackImg",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "DamageIcon",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "EquipedIcon",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Icon",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "IconBack",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "LVTextBack",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "NewFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SelectFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ShaderImg",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "StoreIcon",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "TabBtn",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIButton'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      }
+    ],
+    "FuncMap": {
+      "PlayShake": {
+        "ObjectName": "Function'SkillBagEquipItem_C:PlayShake'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.0"
+      },
+      "Get_Icon_bIsEnabled_0": {
+        "ObjectName": "Function'SkillBagEquipItem_C:Get_Icon_bIsEnabled_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.1"
+      }
+    },
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "SkillBagEquipItem_C'Default__SkillBagEquipItem_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.3"
+    }
+  },
+  {
+    "Type": "SkillBagEquipItem_C",
+    "Name": "Default__SkillBagEquipItem_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.SkillBagEquipItem_C'",
+    "Package": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem",
+    "Properties": {
+      "Priority": 1,
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "ButtonSlot",
+    "Name": "ButtonSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ButtonSlot'",
+    "Outer": {
+      "ObjectName": "UIButton'SkillBagEquipItem_C:WidgetTree.TabBtn'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.34"
+    },
+    "Properties": {
+      "Padding": {
+        "Left": 0.0,
+        "Top": 0.0,
+        "Right": 0.0,
+        "Bottom": 0.0
+      },
+      "HorizontalAlignment": "HAlign_Fill",
+      "VerticalAlignment": "VAlign_Fill",
+      "Parent": {
+        "ObjectName": "UIButton'SkillBagEquipItem_C:WidgetTree.TabBtn'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.34"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'SkillBagEquipItem_C:WidgetTree.CanvasPanel_503'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.7"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "Back",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'SkillBagEquipItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.51"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'SkillBagEquipItem_C:WidgetTree.Back.CanvasPanelSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.12"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'SkillBagEquipItem_C:WidgetTree.CanvasPanel_503.CanvasPanelSlot_5'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.19"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "Back_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'SkillBagEquipItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.51"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'SkillBagEquipItem_C:WidgetTree.Back_1.CanvasPanelSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.13"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'SkillBagEquipItem_C:WidgetTree.Back_1.CanvasPanelSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.14"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'SkillBagEquipItem_C:WidgetTree.Back_1.CanvasPanelSlot_2'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.15"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'SkillBagEquipItem_C:WidgetTree.CanvasPanel_503.CanvasPanelSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.16"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_503",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'SkillBagEquipItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.51"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'SkillBagEquipItem_C:WidgetTree.CanvasPanel_503.CanvasPanelSlot_4'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.18"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'SkillBagEquipItem_C:WidgetTree.CanvasPanel_503.CanvasPanelSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.16"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'SkillBagEquipItem_C:WidgetTree.CanvasPanel_503.CanvasPanelSlot_5'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.19"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'SkillBagEquipItem_C:WidgetTree.CanvasPanel_503.CanvasPanelSlot_2'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.17"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "ButtonSlot'SkillBagEquipItem_C:WidgetTree.TabBtn.ButtonSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.4"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "FillView",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'SkillBagEquipItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.51"
+    },
+    "Properties": {
+      "bIsBatchChildren": true,
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'SkillBagEquipItem_C:WidgetTree.FillView.CanvasPanelSlot_26'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.23"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'SkillBagEquipItem_C:WidgetTree.FillView.CanvasPanelSlot_23'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.22"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'SkillBagEquipItem_C:WidgetTree.FillView.CanvasPanelSlot_2'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.21"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'SkillBagEquipItem_C:WidgetTree.FillView.CanvasPanelSlot_12'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.20"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'SkillBagEquipItem_C:WidgetTree.FillView.CanvasPanelSlot_5'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.24"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'SkillBagEquipItem_C:WidgetTree.FillView.CanvasPanelSlot_68'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.26"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'SkillBagEquipItem_C:WidgetTree.FillView.CanvasPanelSlot_6'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.25"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'SkillBagEquipItem_C:WidgetTree.FillView.CanvasPanelSlot_8'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.28"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'SkillBagEquipItem_C:WidgetTree.FillView.CanvasPanelSlot_7'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.27"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'SkillBagEquipItem_C:WidgetTree.CanvasPanel_503.CanvasPanelSlot_4'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.18"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "FullView",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'SkillBagEquipItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.51"
+    },
+    "Properties": {
+      "BatchChildredZOrders": [
+        0,
+        1,
+        2
+      ],
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'SkillBagEquipItem_C:WidgetTree.FullView.CanvasPanelSlot_10'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.29"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "LockTextPanel",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'SkillBagEquipItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.51"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'SkillBagEquipItem_C:WidgetTree.LockTextPanel.CanvasPanelSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.30"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'SkillBagEquipItem_C:WidgetTree.Back_1.CanvasPanelSlot_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.15"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "SelectLevelPanel",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'SkillBagEquipItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.51"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'SkillBagEquipItem_C:WidgetTree.SelectLevelPanel.CanvasPanelSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.31"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'SkillBagEquipItem_C:WidgetTree.SelectLevelPanel.CanvasPanelSlot_6'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.32"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'SkillBagEquipItem_C:WidgetTree.SelectLevelPanel.CanvasPanelSlot_7'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.33"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'SkillBagEquipItem_C:WidgetTree.CanvasPanel_503.CanvasPanelSlot_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.17"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'SkillBagEquipItem_C:WidgetTree.Back'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.5"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 278.4,
+          "Bottom": 211.25485
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "ZOrder": 3,
+      "Parent": {
+        "ObjectName": "CanvasPanel'SkillBagEquipItem_C:WidgetTree.Back'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.5"
+      },
+      "Content": {
+        "ObjectName": "UIImage'SkillBagEquipItem_C:WidgetTree.BackImg'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.36"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'SkillBagEquipItem_C:WidgetTree.Back_1'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.6"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 287.8795,
+          "Bottom": 290.2386
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "ZOrder": 7,
+      "Parent": {
+        "ObjectName": "CanvasPanel'SkillBagEquipItem_C:WidgetTree.Back_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.6"
+      },
+      "Content": {
+        "ObjectName": "UIImage'SkillBagEquipItem_C:WidgetTree.ShaderImg'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.44"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'SkillBagEquipItem_C:WidgetTree.Back_1'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.6"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 11.5199995,
+          "Top": -43.47037,
+          "Right": -228.62769,
+          "Bottom": -325.21844
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'SkillBagEquipItem_C:WidgetTree.Back_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.6"
+      },
+      "Content": {
+        "ObjectName": "UIImage'SkillBagEquipItem_C:WidgetTree.StoreIcon'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.45"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'SkillBagEquipItem_C:WidgetTree.Back_1'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.6"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "Anchors": {
+          "Maximum": {
+            "X": 1.0,
+            "Y": 1.0
+          }
+        }
+      },
+      "ZOrder": 8,
+      "Parent": {
+        "ObjectName": "CanvasPanel'SkillBagEquipItem_C:WidgetTree.Back_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.6"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'SkillBagEquipItem_C:WidgetTree.LockTextPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.10"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'SkillBagEquipItem_C:WidgetTree.CanvasPanel_503'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.7"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 53.959473,
+          "Top": -7.68,
+          "Right": 283.4037,
+          "Bottom": 312.62057
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'SkillBagEquipItem_C:WidgetTree.CanvasPanel_503'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.7"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'SkillBagEquipItem_C:WidgetTree.Back_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.6"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'SkillBagEquipItem_C:WidgetTree.CanvasPanel_503'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.7"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 54.386143,
+          "Top": -9.467451,
+          "Right": 284.25702,
+          "Bottom": 314.43393
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "ZOrder": 10,
+      "Parent": {
+        "ObjectName": "CanvasPanel'SkillBagEquipItem_C:WidgetTree.CanvasPanel_503'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.7"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'SkillBagEquipItem_C:WidgetTree.SelectLevelPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.11"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_4",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'SkillBagEquipItem_C:WidgetTree.CanvasPanel_503'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.7"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 53.959473,
+          "Top": -8.560784,
+          "Right": 283.4037,
+          "Bottom": 312.62057
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "ZOrder": 10,
+      "Parent": {
+        "ObjectName": "CanvasPanel'SkillBagEquipItem_C:WidgetTree.CanvasPanel_503'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.7"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'SkillBagEquipItem_C:WidgetTree.FillView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.8"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_5",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'SkillBagEquipItem_C:WidgetTree.CanvasPanel_503'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.7"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 53.959473,
+          "Top": -8.560784,
+          "Right": 283.4037,
+          "Bottom": 312.62057
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'SkillBagEquipItem_C:WidgetTree.CanvasPanel_503'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.7"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'SkillBagEquipItem_C:WidgetTree.Back'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.5"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_12",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'SkillBagEquipItem_C:WidgetTree.FillView'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.8"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 89.51327,
+          "Top": -181.8744,
+          "Right": 112.24275,
+          "Bottom": 34.819866
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        }
+      },
+      "bAutoSize": true,
+      "ZOrder": 3,
+      "Parent": {
+        "ObjectName": "CanvasPanel'SkillBagEquipItem_C:WidgetTree.FillView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.8"
+      },
+      "Content": {
+        "ObjectName": "UIImage'SkillBagEquipItem_C:WidgetTree.DamageIcon'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.37"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'SkillBagEquipItem_C:WidgetTree.FillView'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.8"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 44.708572,
+          "Top": 17.719145,
+          "Right": 47.40094,
+          "Bottom": -137.54456
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        }
+      },
+      "bAutoSize": true,
+      "ZOrder": 3,
+      "Parent": {
+        "ObjectName": "CanvasPanel'SkillBagEquipItem_C:WidgetTree.FillView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.8"
+      },
+      "Content": {
+        "ObjectName": "UIImage'SkillBagEquipItem_C:WidgetTree.AttributeIcon'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.35"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_23",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'SkillBagEquipItem_C:WidgetTree.FillView'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.8"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 11.5199995,
+          "Top": -32.914284,
+          "Right": 341.50348,
+          "Bottom": 349.70987
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "ZOrder": 1,
+      "Parent": {
+        "ObjectName": "CanvasPanel'SkillBagEquipItem_C:WidgetTree.FillView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.8"
+      },
+      "Content": {
+        "ObjectName": "UIImage'SkillBagEquipItem_C:WidgetTree.Icon'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.39"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_26",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'SkillBagEquipItem_C:WidgetTree.FillView'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.8"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'SkillBagEquipItem_C:WidgetTree.FillView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.8"
+      },
+      "Content": {
+        "ObjectName": "UIImage'SkillBagEquipItem_C:WidgetTree.SelectFrame'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.43"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_5",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'SkillBagEquipItem_C:WidgetTree.FillView'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.8"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": -40.038807,
+          "Top": -52.19879,
+          "Right": 118.01213,
+          "Bottom": 64.02984
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        }
+      },
+      "bAutoSize": true,
+      "ZOrder": 12,
+      "Parent": {
+        "ObjectName": "CanvasPanel'SkillBagEquipItem_C:WidgetTree.FillView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.8"
+      },
+      "Content": {
+        "ObjectName": "UITextBlock'SkillBagEquipItem_C:WidgetTree.EquipText'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.48"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_6",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'SkillBagEquipItem_C:WidgetTree.FillView'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.8"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 49.75513,
+          "Top": -132.90666,
+          "Right": -12.351143,
+          "Bottom": 40.310303
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        }
+      },
+      "bAutoSize": true,
+      "ZOrder": 1,
+      "Parent": {
+        "ObjectName": "CanvasPanel'SkillBagEquipItem_C:WidgetTree.FillView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.8"
+      },
+      "Content": {
+        "ObjectName": "UIImage'SkillBagEquipItem_C:WidgetTree.NewFrame'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.42"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_68",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'SkillBagEquipItem_C:WidgetTree.FillView'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.8"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Top": -84.548805,
+          "Right": 103.60979,
+          "Bottom": -14.214825
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.0
+        }
+      },
+      "bAutoSize": true,
+      "ZOrder": 11,
+      "Parent": {
+        "ObjectName": "CanvasPanel'SkillBagEquipItem_C:WidgetTree.FillView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.8"
+      },
+      "Content": {
+        "ObjectName": "UIImage'SkillBagEquipItem_C:WidgetTree.EquipedIcon'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.38"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_7",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'SkillBagEquipItem_C:WidgetTree.FillView'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.8"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 27.658504,
+          "Top": 11.933744,
+          "Right": 468.293,
+          "Bottom": 86.33535
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        }
+      },
+      "bAutoSize": true,
+      "ZOrder": 3,
+      "Parent": {
+        "ObjectName": "CanvasPanel'SkillBagEquipItem_C:WidgetTree.FillView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.8"
+      },
+      "Content": {
+        "ObjectName": "UITextBlock'SkillBagEquipItem_C:WidgetTree.NeedLevelText'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.49"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_8",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'SkillBagEquipItem_C:WidgetTree.FillView'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.8"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 31.31149,
+          "Top": 16.436367,
+          "Right": 172.23895,
+          "Bottom": 114.67014
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        }
+      },
+      "bAutoSize": true,
+      "ZOrder": 2,
+      "Parent": {
+        "ObjectName": "CanvasPanel'SkillBagEquipItem_C:WidgetTree.FillView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.8"
+      },
+      "Content": {
+        "ObjectName": "UIImage'SkillBagEquipItem_C:WidgetTree.IconBack'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.40"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_10",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'SkillBagEquipItem_C:WidgetTree.FullView'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.9"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 53.83273,
+          "Top": -8.560784,
+          "Right": 283.4037,
+          "Bottom": 312.62057
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "ZOrder": 13,
+      "Parent": {
+        "ObjectName": "CanvasPanel'SkillBagEquipItem_C:WidgetTree.FullView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.9"
+      },
+      "Content": {
+        "ObjectName": "UIButton'SkillBagEquipItem_C:WidgetTree.TabBtn'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.34"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'SkillBagEquipItem_C:WidgetTree.LockTextPanel'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.10"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 15.786667,
+          "Top": -19.013493,
+          "Right": 276.4038,
+          "Bottom": 91.06176
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "ZOrder": 8,
+      "Parent": {
+        "ObjectName": "CanvasPanel'SkillBagEquipItem_C:WidgetTree.LockTextPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.10"
+      },
+      "Content": {
+        "ObjectName": "UIShrinkTextBlock'SkillBagEquipItem_C:WidgetTree.LockText'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.46"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'SkillBagEquipItem_C:WidgetTree.SelectLevelPanel'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.11"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": -127.73235,
+          "Top": -159.04243,
+          "Right": 108.20556,
+          "Bottom": 45.147663
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        }
+      },
+      "ZOrder": 11,
+      "Parent": {
+        "ObjectName": "CanvasPanel'SkillBagEquipItem_C:WidgetTree.SelectLevelPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.11"
+      },
+      "Content": {
+        "ObjectName": "UITextBlock'SkillBagEquipItem_C:WidgetTree.SlevelText'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.50"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_6",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'SkillBagEquipItem_C:WidgetTree.SelectLevelPanel'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.11"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": -144.46825,
+          "Top": -124.22374,
+          "Right": 290.69714,
+          "Bottom": 252.12843
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'SkillBagEquipItem_C:WidgetTree.SelectLevelPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.11"
+      },
+      "Content": {
+        "ObjectName": "UIShrinkTextBlock'SkillBagEquipItem_C:WidgetTree.SelectName'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.47"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_7",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'SkillBagEquipItem_C:WidgetTree.SelectLevelPanel'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.11"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": -179.56082,
+          "Top": -182.74924,
+          "Right": 196.83806,
+          "Bottom": 76.40824
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        }
+      },
+      "bAutoSize": true,
+      "ZOrder": 1,
+      "Parent": {
+        "ObjectName": "CanvasPanel'SkillBagEquipItem_C:WidgetTree.SelectLevelPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.11"
+      },
+      "Content": {
+        "ObjectName": "UIImage'SkillBagEquipItem_C:WidgetTree.LVTextBack'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.41"
+      }
+    }
+  },
+  {
+    "Type": "UIButton",
+    "Name": "TabBtn",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIButton'",
+    "Outer": {
+      "ObjectName": "WidgetTree'SkillBagEquipItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.51"
+    },
+    "Properties": {
+      "IconImage": {
+        "ImageSize": {
+          "X": 61.44,
+          "Y": 61.44
+        }
+      },
+      "WidgetStyle": {
+        "Normal": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          },
+          "DrawAs": "ESlateBrushDrawType::NoDrawType"
+        },
+        "Hovered": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          },
+          "DrawAs": "ESlateBrushDrawType::NoDrawType"
+        },
+        "Pressed": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          },
+          "DrawAs": "ESlateBrushDrawType::NoDrawType"
+        },
+        "NormalPadding": {
+          "Left": 0.0,
+          "Top": 0.0,
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "PressedPadding": {
+          "Left": 0.0,
+          "Top": 0.0,
+          "Right": 0.0,
+          "Bottom": 0.0
+        }
+      },
+      "ClickMethod": "EButtonClickMethod::PreciseClick",
+      "TouchMethod": "EButtonTouchMethod::PreciseTap",
+      "Slots": [
+        {
+          "ObjectName": "ButtonSlot'SkillBagEquipItem_C:WidgetTree.TabBtn.ButtonSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.4"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'SkillBagEquipItem_C:WidgetTree.FullView.CanvasPanelSlot_10'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.29"
+      }
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "AttributeIcon",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'SkillBagEquipItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.51"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/TexturesAtlas/SkillStore/Atlas/UI_Skill_shuxing_Sprite.UI_Skill_shuxing_Sprite",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 36.48,
+          "Y": 36.48
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'SkillBagEquipItem_C:WidgetTree.FillView.CanvasPanelSlot_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.21"
+      }
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "BackImg",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'SkillBagEquipItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.51"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/TexturesAtlas/SkillStore/Atlas/UI_Skill_dakongdi_Sprite.UI_Skill_dakongdi_Sprite",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 309.12,
+          "Y": 295.68
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'SkillBagEquipItem_C:WidgetTree.Back.CanvasPanelSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.12"
+      }
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "DamageIcon",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'SkillBagEquipItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.51"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/TexturesAtlas/SkillStore/Atlas/UI_Skill_jiantou2_Sprite.UI_Skill_jiantou2_Sprite",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 115.2,
+          "Y": 115.2
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'SkillBagEquipItem_C:WidgetTree.FillView.CanvasPanelSlot_12'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.20"
+      }
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "EquipedIcon",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'SkillBagEquipItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.51"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/TexturesAtlas/SkillStore/Atlas/UI_Skill_yizhuangbei_Sprite.UI_Skill_yizhuangbei_Sprite",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 355.19998,
+          "Y": 107.52
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'SkillBagEquipItem_C:WidgetTree.FillView.CanvasPanelSlot_68'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.26"
+      },
+      "Visibility": "ESlateVisibility::Collapsed"
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "Icon",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'SkillBagEquipItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.51"
+    },
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 149.76,
+          "Y": 149.76
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'SkillBagEquipItem_C:WidgetTree.FillView.CanvasPanelSlot_23'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.22"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "IconBack",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'SkillBagEquipItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.51"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/TexturesAtlas/SkillStore/Atlas/UI_Skill_jiaobiao_Sprite.UI_Skill_jiaobiao_Sprite",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 76.799995,
+          "Y": 40.32
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'SkillBagEquipItem_C:WidgetTree.FillView.CanvasPanelSlot_8'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.28"
+      }
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "LVTextBack",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'SkillBagEquipItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.51"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/TexturesAtlas/SkillStore/Atlas/UI_SkillStore_dengji_Sprite.UI_SkillStore_dengji_Sprite",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 107.52,
+          "Y": 42.239998
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'SkillBagEquipItem_C:WidgetTree.SelectLevelPanel.CanvasPanelSlot_7'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.33"
+      }
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "NewFrame",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'SkillBagEquipItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.51"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/TexturesAtlas/SkillStore/Atlas/UI_SkillStore_new_Sprite.UI_SkillStore_new_Sprite",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 103.68,
+          "Y": 36.48
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'SkillBagEquipItem_C:WidgetTree.FillView.CanvasPanelSlot_6'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.25"
+      }
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "SelectFrame",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'SkillBagEquipItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.51"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/TexturesAtlas/SkillStore/Atlas/UI_Skill_dakongxuanzhong_Sprite.UI_Skill_dakongxuanzhong_Sprite",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 345.6,
+          "Y": 330.24
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'SkillBagEquipItem_C:WidgetTree.FillView.CanvasPanelSlot_26'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.23"
+      },
+      "Visibility": "ESlateVisibility::Collapsed"
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "ShaderImg",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'SkillBagEquipItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.51"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/TexturesAtlas/SkillStore/Atlas/UI_Skill_dakongdi_Sprite.UI_Skill_dakongdi_Sprite",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 309.12,
+          "Y": 295.68
+        }
+      },
+      "ColorAndOpacity": {
+        "R": 0.0,
+        "G": 0.0,
+        "B": 0.0,
+        "A": 1.0,
+        "Hex": "000000"
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'SkillBagEquipItem_C:WidgetTree.Back_1.CanvasPanelSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.13"
+      },
+      "Visibility": "ESlateVisibility::Collapsed",
+      "RenderOpacity": 0.3
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "StoreIcon",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'SkillBagEquipItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.51"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/TexturesAtlas/SkillStore/Atlas/UI_NewExSkill_dasuo_Sprite.UI_NewExSkill_dasuo_Sprite",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 82.56,
+          "Y": 96.0
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'SkillBagEquipItem_C:WidgetTree.Back_1.CanvasPanelSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.14"
+      },
+      "RenderTransform": {
+        "Scale": {
+          "X": 0.6,
+          "Y": 0.6
+        }
+      }
+    }
+  },
+  {
+    "Type": "UIShrinkTextBlock",
+    "Name": "LockText",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIShrinkTextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'SkillBagEquipItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.51"
+    },
+    "Properties": {
+      "CurrStyleId": 1658,
+      "TextContent": {
+        "Namespace": "",
+        "Key": "B2BF1FF74424B3A51FFC6BB9A995C86B",
+        "SourceString": "完成任务",
+        "LocalizedString": "完成任务"
+      },
+      "ShrinkSize": {
+        "X": 253.43999,
+        "Y": 103.68
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'SkillBagEquipItem_C:WidgetTree.LockTextPanel.CanvasPanelSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.30"
+      }
+    }
+  },
+  {
+    "Type": "UIShrinkTextBlock",
+    "Name": "SelectName",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIShrinkTextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'SkillBagEquipItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.51"
+    },
+    "Properties": {
+      "TextVerticalAlignment": "VAlign_Bottom",
+      "CurrStyleId": 1215,
+      "ShrinkSize": {
+        "X": 288.0,
+        "Y": 249.59999
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'SkillBagEquipItem_C:WidgetTree.SelectLevelPanel.CanvasPanelSlot_6'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.32"
+      }
+    }
+  },
+  {
+    "Type": "UITextBlock",
+    "Name": "EquipText",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UITextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'SkillBagEquipItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.51"
+    },
+    "Properties": {
+      "CurrStyleId": 1233,
+      "CurrTextKey": "Func_Detail_Cur_Equip",
+      "Text": {
+        "Namespace": "",
+        "Key": "3D6DF4EA41239BE62DC153A7982D7117",
+        "SourceString": "已装备",
+        "LocalizedString": "已装备"
+      },
+      "ColorAndOpacity": {
+        "SpecifiedColor": {
+          "R": 0.0,
+          "G": 0.0,
+          "B": 0.0,
+          "A": 1.0,
+          "Hex": "000000"
+        }
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'tl_main_Font'",
+          "ObjectPath": "UE_game/Content/Art/UI/Fonts/tl_main_Font.0"
+        },
+        "TypefaceFontName": "Default",
+        "Size": 22
+      },
+      "Justification": "ETextJustify::Center",
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'SkillBagEquipItem_C:WidgetTree.FillView.CanvasPanelSlot_5'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.24"
+      },
+      "RenderTransform": {
+        "Shear": {
+          "X": -10.0,
+          "Y": 0.0
+        }
+      },
+      "Visibility": "ESlateVisibility::Collapsed"
+    }
+  },
+  {
+    "Type": "UITextBlock",
+    "Name": "NeedLevelText",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UITextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'SkillBagEquipItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.51"
+    },
+    "Properties": {
+      "CurrStyleId": 1220,
+      "ColorAndOpacity": {
+        "SpecifiedColor": {
+          "R": 1.0,
+          "G": 0.039546236,
+          "B": 0.0,
+          "A": 1.0,
+          "Hex": "FF3800"
+        }
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'tl_main_Font'",
+          "ObjectPath": "UE_game/Content/Art/UI/Fonts/tl_main_Font.0"
+        },
+        "TypefaceFontName": "Default",
+        "Size": 22
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'SkillBagEquipItem_C:WidgetTree.FillView.CanvasPanelSlot_7'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.27"
+      },
+      "RenderTransform": {
+        "Shear": {
+          "X": -10.0,
+          "Y": 0.0
+        }
+      }
+    }
+  },
+  {
+    "Type": "UITextBlock",
+    "Name": "SlevelText",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UITextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'SkillBagEquipItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.51"
+    },
+    "Properties": {
+      "CurrStyleId": 1213,
+      "CurrTextKey": "0",
+      "Text": {
+        "Namespace": "",
+        "Key": "5A1EA0E6411CB3F644AA46857281A41C",
+        "SourceString": "LV 20",
+        "LocalizedString": "LV 20"
+      },
+      "Justification": "ETextJustify::Center",
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'SkillBagEquipItem_C:WidgetTree.SelectLevelPanel.CanvasPanelSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.31"
+      }
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetTree'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'SkillBagEquipItem_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.2"
+    },
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "CanvasPanel'SkillBagEquipItem_C:WidgetTree.FullView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillBagEquipItem.9"
+      }
+    }
+  }
+]

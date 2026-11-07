@@ -1,0 +1,150 @@
+[
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "DamageNumberText_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Package": "UE_game/Content/BluePrint/UI/Fight/FightSceneUI/DamageNumberText",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'DamageNumberText_C:WidgetTree'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Fight/FightSceneUI/DamageNumberText.5"
+      },
+      "bClassRequiresNativeTick": true
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'ETextToImagesWidget'",
+      "ObjectPath": "/Script/UE_game"
+    },
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "DamageNumberText_C'Default__DamageNumberText_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Fight/FightSceneUI/DamageNumberText.1"
+    }
+  },
+  {
+    "Type": "DamageNumberText_C",
+    "Name": "Default__DamageNumberText_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'UE_game/Content/BluePrint/UI/Fight/FightSceneUI/DamageNumberText.DamageNumberText_C'",
+    "Package": "UE_game/Content/BluePrint/UI/Fight/FightSceneUI/DamageNumberText",
+    "Properties": {
+      "Cfg_ResourceSets": [
+        {
+          "Key": "0",
+          "Value": {
+            "ObjectName": "BlueprintGeneratedClass'ResSet_Lang0_C'",
+            "ObjectPath": "UE_game/Content/BluePrint/Res/DamageNumber/ResSet_Lang0.0"
+          }
+        },
+        {
+          "Key": "1",
+          "Value": {
+            "ObjectName": "BlueprintGeneratedClass'ResSet_Lang1_C'",
+            "ObjectPath": "UE_game/Content/BluePrint/Res/DamageNumber/ResSet_Lang1.0"
+          }
+        }
+      ],
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'DamageNumberText_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Fight/FightSceneUI/DamageNumberText.5"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'DamageNumberText_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Fight/FightSceneUI/DamageNumberText.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'DamageNumberText_C:WidgetTree.CanvasPanel_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Fight/FightSceneUI/DamageNumberText.2"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 192.0,
+          "Bottom": 57.6
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'DamageNumberText_C:WidgetTree.CanvasPanel_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Fight/FightSceneUI/DamageNumberText.2"
+      },
+      "Content": {
+        "ObjectName": "ImageArray'DamageNumberText_C:WidgetTree.Line'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Fight/FightSceneUI/DamageNumberText.4"
+      }
+    }
+  },
+  {
+    "Type": "ImageArray",
+    "Name": "Line",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ImageArray'",
+    "Outer": {
+      "ObjectName": "WidgetTree'DamageNumberText_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Fight/FightSceneUI/DamageNumberText.5"
+    },
+    "Properties": {
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'DamageNumberText_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Fight/FightSceneUI/DamageNumberText.3"
+      },
+      "Visibility": "ESlateVisibility::HitTestInvisible"
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetTree'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'DamageNumberText_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Fight/FightSceneUI/DamageNumberText.0"
+    },
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "CanvasPanel'DamageNumberText_C:WidgetTree.CanvasPanel_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Fight/FightSceneUI/DamageNumberText.2"
+      }
+    }
+  }
+]

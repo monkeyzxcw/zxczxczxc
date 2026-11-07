@@ -1,0 +1,1174 @@
+[
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "EquipEnchantS10AffixListTab_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Package": "UE_game/Content/BluePrint/UI/EquipEnchantS10/AffixList/EquipEnchantS10AffixListTab",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'EquipEnchantS10AffixListTab_C:WidgetTree'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/AffixList/EquipEnchantS10AffixListTab.37"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'UserWidget'",
+      "ObjectPath": "/Script/UMG"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "AffixTypeIconSwitcher",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'WidgetSwitcher'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "AffixTypeImg",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ClickBtn",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIButton'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "RedDot",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'RedDot_C'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Common/RedDot/RedDot.0"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "UIGamepadIcon_77",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIGamepadIcon'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "UIImage",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "UIImage_51",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "UIImage_135",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      }
+    ],
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "EquipEnchantS10AffixListTab_C'Default__EquipEnchantS10AffixListTab_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/AffixList/EquipEnchantS10AffixListTab.1"
+    }
+  },
+  {
+    "Type": "EquipEnchantS10AffixListTab_C",
+    "Name": "Default__EquipEnchantS10AffixListTab_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'UE_game/Content/BluePrint/UI/EquipEnchantS10/AffixList/EquipEnchantS10AffixListTab.EquipEnchantS10AffixListTab_C'",
+    "Package": "UE_game/Content/BluePrint/UI/EquipEnchantS10/AffixList/EquipEnchantS10AffixListTab",
+    "Properties": {
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "ButtonSlot",
+    "Name": "ButtonSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ButtonSlot'",
+    "Outer": {
+      "ObjectName": "UIButton'EquipEnchantS10AffixListTab_C:WidgetTree.ClickBtn'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/AffixList/EquipEnchantS10AffixListTab.27"
+    },
+    "Properties": {
+      "Padding": {
+        "Left": 0.0,
+        "Top": 0.0,
+        "Right": 0.0,
+        "Bottom": 0.0
+      },
+      "HorizontalAlignment": "HAlign_Fill",
+      "VerticalAlignment": "VAlign_Fill",
+      "Parent": {
+        "ObjectName": "UIButton'EquipEnchantS10AffixListTab_C:WidgetTree.ClickBtn'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/AffixList/EquipEnchantS10AffixListTab.27"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'EquipEnchantS10AffixListTab_C:WidgetTree.CanvasPanel_188'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/AffixList/EquipEnchantS10AffixListTab.5"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipEnchantS10AffixListTab_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/AffixList/EquipEnchantS10AffixListTab.37"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'EquipEnchantS10AffixListTab_C:WidgetTree.CanvasPanel.CanvasPanelSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/AffixList/EquipEnchantS10AffixListTab.9"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "WidgetSwitcherSlot'EquipEnchantS10AffixListTab_C:WidgetTree.AffixTypeIconSwitcher.WidgetSwitcherSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/AffixList/EquipEnchantS10AffixListTab.36"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipEnchantS10AffixListTab_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/AffixList/EquipEnchantS10AffixListTab.37"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'EquipEnchantS10AffixListTab_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/AffixList/EquipEnchantS10AffixListTab.10"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_188",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipEnchantS10AffixListTab_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/AffixList/EquipEnchantS10AffixListTab.37"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'EquipEnchantS10AffixListTab_C:WidgetTree.CanvasPanel_188.CanvasPanelSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/AffixList/EquipEnchantS10AffixListTab.12"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'EquipEnchantS10AffixListTab_C:WidgetTree.CanvasPanel_188.CanvasPanelSlot_4'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/AffixList/EquipEnchantS10AffixListTab.14"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'EquipEnchantS10AffixListTab_C:WidgetTree.CanvasPanel_188.CanvasPanelSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/AffixList/EquipEnchantS10AffixListTab.11"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'EquipEnchantS10AffixListTab_C:WidgetTree.CanvasPanel_188.CanvasPanelSlot_3'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/AffixList/EquipEnchantS10AffixListTab.13"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "ButtonSlot'EquipEnchantS10AffixListTab_C:WidgetTree.ClickBtn.ButtonSlot_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/AffixList/EquipEnchantS10AffixListTab.2"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_66",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipEnchantS10AffixListTab_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/AffixList/EquipEnchantS10AffixListTab.37"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'EquipEnchantS10AffixListTab_C:WidgetTree.CanvasPanel_66.CanvasPanelSlot_3'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/AffixList/EquipEnchantS10AffixListTab.15"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'EquipEnchantS10AffixListTab_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/AffixList/EquipEnchantS10AffixListTab.10"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_94",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipEnchantS10AffixListTab_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/AffixList/EquipEnchantS10AffixListTab.37"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'EquipEnchantS10AffixListTab_C:WidgetTree.CanvasPanel_94.CanvasPanelSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/AffixList/EquipEnchantS10AffixListTab.16"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'EquipEnchantS10AffixListTab_C:WidgetTree.CanvasPanel_94.CanvasPanelSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/AffixList/EquipEnchantS10AffixListTab.17"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "WidgetSwitcherSlot'EquipEnchantS10AffixListTab_C:WidgetTree.AffixTypeIconSwitcher.WidgetSwitcherSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/AffixList/EquipEnchantS10AffixListTab.35"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "LockedPanel",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipEnchantS10AffixListTab_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/AffixList/EquipEnchantS10AffixListTab.37"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'EquipEnchantS10AffixListTab_C:WidgetTree.LockedPanel.CanvasPanelSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/AffixList/EquipEnchantS10AffixListTab.18"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'EquipEnchantS10AffixListTab_C:WidgetTree.CanvasPanel_188.CanvasPanelSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/AffixList/EquipEnchantS10AffixListTab.12"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'EquipEnchantS10AffixListTab_C:WidgetTree.CanvasPanel'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/AffixList/EquipEnchantS10AffixListTab.3"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 34.559998,
+          "Bottom": 42.239998
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'EquipEnchantS10AffixListTab_C:WidgetTree.CanvasPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/AffixList/EquipEnchantS10AffixListTab.3"
+      },
+      "Content": {
+        "ObjectName": "UIImage'EquipEnchantS10AffixListTab_C:WidgetTree.UIImage'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/AffixList/EquipEnchantS10AffixListTab.30"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'EquipEnchantS10AffixListTab_C:WidgetTree.CanvasPanel_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/AffixList/EquipEnchantS10AffixListTab.4"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 192.0,
+          "Bottom": 57.6
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'EquipEnchantS10AffixListTab_C:WidgetTree.CanvasPanel_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/AffixList/EquipEnchantS10AffixListTab.4"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'EquipEnchantS10AffixListTab_C:WidgetTree.CanvasPanel_66'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/AffixList/EquipEnchantS10AffixListTab.6"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'EquipEnchantS10AffixListTab_C:WidgetTree.CanvasPanel_188'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/AffixList/EquipEnchantS10AffixListTab.5"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 9.599999,
+          "Top": -9.599999,
+          "Right": 192.0,
+          "Bottom": 57.6
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 1.0,
+            "Y": 0.0
+          },
+          "Maximum": {
+            "X": 1.0,
+            "Y": 0.0
+          }
+        },
+        "Alignment": {
+          "X": 1.0,
+          "Y": 0.0
+        }
+      },
+      "bAutoSize": true,
+      "ZOrder": 1,
+      "Parent": {
+        "ObjectName": "CanvasPanel'EquipEnchantS10AffixListTab_C:WidgetTree.CanvasPanel_188'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/AffixList/EquipEnchantS10AffixListTab.5"
+      },
+      "Content": {
+        "ObjectName": "RedDot_C'EquipEnchantS10AffixListTab_C:WidgetTree.RedDot'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/AffixList/EquipEnchantS10AffixListTab.22"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'EquipEnchantS10AffixListTab_C:WidgetTree.CanvasPanel_188'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/AffixList/EquipEnchantS10AffixListTab.5"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "Anchors": {
+          "Maximum": {
+            "X": 1.0,
+            "Y": 1.0
+          }
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'EquipEnchantS10AffixListTab_C:WidgetTree.CanvasPanel_188'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/AffixList/EquipEnchantS10AffixListTab.5"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'EquipEnchantS10AffixListTab_C:WidgetTree.LockedPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/AffixList/EquipEnchantS10AffixListTab.8"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'EquipEnchantS10AffixListTab_C:WidgetTree.CanvasPanel_188'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/AffixList/EquipEnchantS10AffixListTab.5"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": -258.24,
+          "Right": 192.0,
+          "Bottom": 57.6
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'EquipEnchantS10AffixListTab_C:WidgetTree.CanvasPanel_188'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/AffixList/EquipEnchantS10AffixListTab.5"
+      },
+      "Content": {
+        "ObjectName": "UIGamepadIcon'EquipEnchantS10AffixListTab_C:WidgetTree.UIGamepadIcon_77'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/AffixList/EquipEnchantS10AffixListTab.28"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_4",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'EquipEnchantS10AffixListTab_C:WidgetTree.CanvasPanel_188'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/AffixList/EquipEnchantS10AffixListTab.5"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 192.0,
+          "Bottom": 57.6
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "ZOrder": 1,
+      "Parent": {
+        "ObjectName": "CanvasPanel'EquipEnchantS10AffixListTab_C:WidgetTree.CanvasPanel_188'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/AffixList/EquipEnchantS10AffixListTab.5"
+      },
+      "Content": {
+        "ObjectName": "HorizontalBox'EquipEnchantS10AffixListTab_C:WidgetTree.HorizontalBox_69'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/AffixList/EquipEnchantS10AffixListTab.19"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'EquipEnchantS10AffixListTab_C:WidgetTree.CanvasPanel_66'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/AffixList/EquipEnchantS10AffixListTab.6"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 408.96,
+          "Bottom": 120.96
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'EquipEnchantS10AffixListTab_C:WidgetTree.CanvasPanel_66'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/AffixList/EquipEnchantS10AffixListTab.6"
+      },
+      "Content": {
+        "ObjectName": "UIButton'EquipEnchantS10AffixListTab_C:WidgetTree.ClickBtn'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/AffixList/EquipEnchantS10AffixListTab.27"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'EquipEnchantS10AffixListTab_C:WidgetTree.CanvasPanel_94'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/AffixList/EquipEnchantS10AffixListTab.7"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 192.0,
+          "Bottom": 57.6
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'EquipEnchantS10AffixListTab_C:WidgetTree.CanvasPanel_94'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/AffixList/EquipEnchantS10AffixListTab.7"
+      },
+      "Content": {
+        "ObjectName": "UIImage'EquipEnchantS10AffixListTab_C:WidgetTree.UIImage_51'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/AffixList/EquipEnchantS10AffixListTab.32"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'EquipEnchantS10AffixListTab_C:WidgetTree.CanvasPanel_94'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/AffixList/EquipEnchantS10AffixListTab.7"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Top": 5.7599998,
+          "Right": 192.0,
+          "Bottom": 57.6
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "ZOrder": 1,
+      "Parent": {
+        "ObjectName": "CanvasPanel'EquipEnchantS10AffixListTab_C:WidgetTree.CanvasPanel_94'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/AffixList/EquipEnchantS10AffixListTab.7"
+      },
+      "Content": {
+        "ObjectName": "UIImage'EquipEnchantS10AffixListTab_C:WidgetTree.AffixTypeImg'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/AffixList/EquipEnchantS10AffixListTab.29"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'EquipEnchantS10AffixListTab_C:WidgetTree.LockedPanel'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/AffixList/EquipEnchantS10AffixListTab.8"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "Anchors": {
+          "Maximum": {
+            "X": 1.0,
+            "Y": 1.0
+          }
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'EquipEnchantS10AffixListTab_C:WidgetTree.LockedPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/AffixList/EquipEnchantS10AffixListTab.8"
+      },
+      "Content": {
+        "ObjectName": "UIImage'EquipEnchantS10AffixListTab_C:WidgetTree.UIImage_135'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/AffixList/EquipEnchantS10AffixListTab.31"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "HorizontalBox_69",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipEnchantS10AffixListTab_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/AffixList/EquipEnchantS10AffixListTab.37"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HorizontalBoxSlot'EquipEnchantS10AffixListTab_C:WidgetTree.HorizontalBox_69.HorizontalBoxSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/AffixList/EquipEnchantS10AffixListTab.20"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'EquipEnchantS10AffixListTab_C:WidgetTree.HorizontalBox_69.HorizontalBoxSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/AffixList/EquipEnchantS10AffixListTab.21"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'EquipEnchantS10AffixListTab_C:WidgetTree.CanvasPanel_188.CanvasPanelSlot_4'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/AffixList/EquipEnchantS10AffixListTab.14"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'EquipEnchantS10AffixListTab_C:WidgetTree.HorizontalBox_69'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/AffixList/EquipEnchantS10AffixListTab.19"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "HorizontalBox'EquipEnchantS10AffixListTab_C:WidgetTree.HorizontalBox_69'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/AffixList/EquipEnchantS10AffixListTab.19"
+      },
+      "Content": {
+        "ObjectName": "SizeBox'EquipEnchantS10AffixListTab_C:WidgetTree.AffixTypeBox'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/AffixList/EquipEnchantS10AffixListTab.23"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'EquipEnchantS10AffixListTab_C:WidgetTree.HorizontalBox_69'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/AffixList/EquipEnchantS10AffixListTab.19"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "HorizontalBox'EquipEnchantS10AffixListTab_C:WidgetTree.HorizontalBox_69'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/AffixList/EquipEnchantS10AffixListTab.19"
+      },
+      "Content": {
+        "ObjectName": "SizeBox'EquipEnchantS10AffixListTab_C:WidgetTree.SizeBox_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/AffixList/EquipEnchantS10AffixListTab.24"
+      }
+    }
+  },
+  {
+    "Type": "RedDot_C",
+    "Name": "RedDot",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'UE_game/Content/BluePrint/UI/Common/RedDot/RedDot.RedDot_C'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipEnchantS10AffixListTab_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/AffixList/EquipEnchantS10AffixListTab.37"
+    },
+    "Template": {
+      "ObjectName": "RedDot_C'Default__RedDot_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Common/RedDot/RedDot.1"
+    },
+    "Properties": {
+      "bDynamicRegistration": true,
+      "RedDotModule": "S10调香",
+      "PreviewStyle": "ERedDotPreViewImage::ERDPI_Red",
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'EquipEnchantS10AffixListTab_C:WidgetTree.CanvasPanel_188.CanvasPanelSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/AffixList/EquipEnchantS10AffixListTab.11"
+      },
+      "Visibility": "ESlateVisibility::Collapsed"
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "AffixTypeBox",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipEnchantS10AffixListTab_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/AffixList/EquipEnchantS10AffixListTab.37"
+    },
+    "Properties": {
+      "WidthOverride": 65.28,
+      "bOverride_WidthOverride": true,
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot'EquipEnchantS10AffixListTab_C:WidgetTree.AffixTypeBox.SizeBoxSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/AffixList/EquipEnchantS10AffixListTab.25"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'EquipEnchantS10AffixListTab_C:WidgetTree.HorizontalBox_69.HorizontalBoxSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/AffixList/EquipEnchantS10AffixListTab.20"
+      },
+      "Visibility": "ESlateVisibility::HitTestInvisible"
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SizeBox_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipEnchantS10AffixListTab_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/AffixList/EquipEnchantS10AffixListTab.37"
+    },
+    "Properties": {
+      "WidthOverride": 268.8,
+      "HeightOverride": 96.0,
+      "bOverride_WidthOverride": true,
+      "bOverride_HeightOverride": true,
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot'EquipEnchantS10AffixListTab_C:WidgetTree.SizeBox_0.SizeBoxSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/AffixList/EquipEnchantS10AffixListTab.26"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'EquipEnchantS10AffixListTab_C:WidgetTree.HorizontalBox_69.HorizontalBoxSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/AffixList/EquipEnchantS10AffixListTab.21"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBoxSlot'",
+    "Outer": {
+      "ObjectName": "SizeBox'EquipEnchantS10AffixListTab_C:WidgetTree.AffixTypeBox'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/AffixList/EquipEnchantS10AffixListTab.23"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "SizeBox'EquipEnchantS10AffixListTab_C:WidgetTree.AffixTypeBox'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/AffixList/EquipEnchantS10AffixListTab.23"
+      },
+      "Content": {
+        "ObjectName": "WidgetSwitcher'EquipEnchantS10AffixListTab_C:WidgetTree.AffixTypeIconSwitcher'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/AffixList/EquipEnchantS10AffixListTab.34"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBoxSlot'",
+    "Outer": {
+      "ObjectName": "SizeBox'EquipEnchantS10AffixListTab_C:WidgetTree.SizeBox_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/AffixList/EquipEnchantS10AffixListTab.24"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "SizeBox'EquipEnchantS10AffixListTab_C:WidgetTree.SizeBox_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/AffixList/EquipEnchantS10AffixListTab.24"
+      },
+      "Content": {
+        "ObjectName": "UIShrinkTextBlock'EquipEnchantS10AffixListTab_C:WidgetTree.TitleText'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/AffixList/EquipEnchantS10AffixListTab.33"
+      }
+    }
+  },
+  {
+    "Type": "UIButton",
+    "Name": "ClickBtn",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIButton'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipEnchantS10AffixListTab_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/AffixList/EquipEnchantS10AffixListTab.37"
+    },
+    "Properties": {
+      "CurButtonStyleId": 1385,
+      "CurrStyleId": 1008,
+      "CurrTextKey": "Func_AffixList_Prefix",
+      "IconImage": {
+        "ImageSize": {
+          "X": 61.44,
+          "Y": 61.44
+        }
+      },
+      "BindedNavigation": "EUIGamepadNavigation::ESub",
+      "bLoopNavigation": true,
+      "BindedGroup": 2,
+      "BindedKeyIndicator": {
+        "ObjectName": "UIGamepadIcon'EquipEnchantS10AffixListTab_C:WidgetTree.UIGamepadIcon_77'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/AffixList/EquipEnchantS10AffixListTab.28"
+      },
+      "WidgetStyle": {
+        "Normal": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          }
+        },
+        "Hovered": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          }
+        },
+        "Pressed": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          }
+        }
+      },
+      "Slots": [
+        {
+          "ObjectName": "ButtonSlot'EquipEnchantS10AffixListTab_C:WidgetTree.ClickBtn.ButtonSlot_2'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/AffixList/EquipEnchantS10AffixListTab.2"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'EquipEnchantS10AffixListTab_C:WidgetTree.CanvasPanel_66.CanvasPanelSlot_3'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/AffixList/EquipEnchantS10AffixListTab.15"
+      }
+    }
+  },
+  {
+    "Type": "UIGamepadIcon",
+    "Name": "UIGamepadIcon_77",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIGamepadIcon'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipEnchantS10AffixListTab_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/AffixList/EquipEnchantS10AffixListTab.37"
+    },
+    "Properties": {
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'EquipEnchantS10AffixListTab_C:WidgetTree.CanvasPanel_188.CanvasPanelSlot_3'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/AffixList/EquipEnchantS10AffixListTab.13"
+      }
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "AffixTypeImg",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipEnchantS10AffixListTab_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/AffixList/EquipEnchantS10AffixListTab.37"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/Textures/EquipEnchantS10/NoAtlas/UI_EquipEnchantS10_Icon_Affix_Red.UI_EquipEnchantS10_Icon_Affix_Red",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 49.92,
+          "Y": 46.079998
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'EquipEnchantS10AffixListTab_C:WidgetTree.CanvasPanel_94.CanvasPanelSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/AffixList/EquipEnchantS10AffixListTab.17"
+      }
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "UIImage",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipEnchantS10AffixListTab_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/AffixList/EquipEnchantS10AffixListTab.37"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/Textures/EquipEnchantS10/NoAtlas/UI_EquipEnchantS10_Icon_Affix_Lock.UI_EquipEnchantS10_Icon_Affix_Lock",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 34.559998,
+          "Y": 42.239998
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'EquipEnchantS10AffixListTab_C:WidgetTree.CanvasPanel.CanvasPanelSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/AffixList/EquipEnchantS10AffixListTab.9"
+      }
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "UIImage_135",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipEnchantS10AffixListTab_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/AffixList/EquipEnchantS10AffixListTab.37"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/TexturesAtlas/EquipEnchantS10/AtlasAffixList/UI_EquipEnchantS10_Affix05_Sprite.UI_EquipEnchantS10_Affix05_Sprite",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 96.0,
+          "Y": 96.0
+        },
+        "Margin": {
+          "Left": 0.5,
+          "Top": 0.5,
+          "Right": 0.5,
+          "Bottom": 0.5
+        },
+        "DrawAs": "ESlateBrushDrawType::Box"
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'EquipEnchantS10AffixListTab_C:WidgetTree.LockedPanel.CanvasPanelSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/AffixList/EquipEnchantS10AffixListTab.18"
+      },
+      "Visibility": "ESlateVisibility::HitTestInvisible"
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "UIImage_51",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipEnchantS10AffixListTab_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/AffixList/EquipEnchantS10AffixListTab.37"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/Textures/EquipEnchantS10/NoAtlas/UI_EquipEnchantS10_Icon_Affix_Bg.UI_EquipEnchantS10_Icon_Affix_Bg",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 65.28,
+          "Y": 65.28
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'EquipEnchantS10AffixListTab_C:WidgetTree.CanvasPanel_94.CanvasPanelSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/AffixList/EquipEnchantS10AffixListTab.16"
+      }
+    }
+  },
+  {
+    "Type": "UIShrinkTextBlock",
+    "Name": "TitleText",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIShrinkTextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipEnchantS10AffixListTab_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/AffixList/EquipEnchantS10AffixListTab.37"
+    },
+    "Properties": {
+      "CurrStyleId": 4243,
+      "CurrTextKey": "Func_TalentBlock_TalentType2",
+      "ShrinkSize": {
+        "X": 268.8,
+        "Y": 119.04
+      },
+      "Slot": {
+        "ObjectName": "SizeBoxSlot'EquipEnchantS10AffixListTab_C:WidgetTree.SizeBox_0.SizeBoxSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/AffixList/EquipEnchantS10AffixListTab.26"
+      }
+    }
+  },
+  {
+    "Type": "WidgetSwitcher",
+    "Name": "AffixTypeIconSwitcher",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetSwitcher'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipEnchantS10AffixListTab_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/AffixList/EquipEnchantS10AffixListTab.37"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "WidgetSwitcherSlot'EquipEnchantS10AffixListTab_C:WidgetTree.AffixTypeIconSwitcher.WidgetSwitcherSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/AffixList/EquipEnchantS10AffixListTab.35"
+        },
+        {
+          "ObjectName": "WidgetSwitcherSlot'EquipEnchantS10AffixListTab_C:WidgetTree.AffixTypeIconSwitcher.WidgetSwitcherSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/AffixList/EquipEnchantS10AffixListTab.36"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "SizeBoxSlot'EquipEnchantS10AffixListTab_C:WidgetTree.AffixTypeBox.SizeBoxSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/AffixList/EquipEnchantS10AffixListTab.25"
+      }
+    }
+  },
+  {
+    "Type": "WidgetSwitcherSlot",
+    "Name": "WidgetSwitcherSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetSwitcherSlot'",
+    "Outer": {
+      "ObjectName": "WidgetSwitcher'EquipEnchantS10AffixListTab_C:WidgetTree.AffixTypeIconSwitcher'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/AffixList/EquipEnchantS10AffixListTab.34"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "WidgetSwitcher'EquipEnchantS10AffixListTab_C:WidgetTree.AffixTypeIconSwitcher'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/AffixList/EquipEnchantS10AffixListTab.34"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'EquipEnchantS10AffixListTab_C:WidgetTree.CanvasPanel_94'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/AffixList/EquipEnchantS10AffixListTab.7"
+      }
+    }
+  },
+  {
+    "Type": "WidgetSwitcherSlot",
+    "Name": "WidgetSwitcherSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetSwitcherSlot'",
+    "Outer": {
+      "ObjectName": "WidgetSwitcher'EquipEnchantS10AffixListTab_C:WidgetTree.AffixTypeIconSwitcher'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/AffixList/EquipEnchantS10AffixListTab.34"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "WidgetSwitcher'EquipEnchantS10AffixListTab_C:WidgetTree.AffixTypeIconSwitcher'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/AffixList/EquipEnchantS10AffixListTab.34"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'EquipEnchantS10AffixListTab_C:WidgetTree.CanvasPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/AffixList/EquipEnchantS10AffixListTab.3"
+      }
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetTree'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'EquipEnchantS10AffixListTab_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/AffixList/EquipEnchantS10AffixListTab.0"
+    },
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "CanvasPanel'EquipEnchantS10AffixListTab_C:WidgetTree.CanvasPanel_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/AffixList/EquipEnchantS10AffixListTab.4"
+      }
+    }
+  }
+]

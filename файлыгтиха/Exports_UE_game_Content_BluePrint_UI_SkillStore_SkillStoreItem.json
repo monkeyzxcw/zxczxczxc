@@ -1,0 +1,5632 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_SkillStoreItem",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'SkillStoreItem_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.1"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "SkillStoreItem_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Package": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'SkillStoreItem_C:WidgetTree'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.117"
+      },
+      "Animations": [
+        {
+          "ObjectName": "WidgetAnimation'SkillStoreItem_C:CreatSkillStoreItem_INST'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.116"
+        }
+      ],
+      "UberGraphFunction": {
+        "ObjectName": "Function'SkillStoreItem_C:ExecuteUbergraph_SkillStoreItem'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'UserWidget'",
+      "ObjectPath": "/Script/UMG"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'SkillStoreItem_C:ExecuteUbergraph_SkillStoreItem'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CreatSkillStoreItem",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Transient | RepSkip",
+        "PropertyClass": {
+          "ObjectName": "Class'WidgetAnimation'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "AdviseBtn",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIButton'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CancelSearchBtn",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIButton'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CloseTip",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Button'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Defaltback1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Defaltback2",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Image_831",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Input",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIEditText'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "paixu1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Paixu2",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Paixubai1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "paixubai2",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SearchBtn",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIButton'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SkillCardBtn1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'TabSkillCardBtn_C'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/TabSkillCardBtn.3"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SkillCardBtn2",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'TabSkillCardBtn_C'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/TabSkillCardBtn.3"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SkillCardBtn3",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'TabSkillCardBtn_C'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/TabSkillCardBtn.3"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SortBtn1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIButton'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SortBtn2",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIButton'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "UIImage_152",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "UIImage_275",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "UIImage_348",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "UIImage_417",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "UIImage_dit02_1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "UIImage_dit02_2",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "UIImage_L03",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "UIImage_L04",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "UIImage_R04",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "UIImage_R05",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "NewVar_0",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_SkillStoreItem": {
+        "ObjectName": "Function'SkillStoreItem_C:ExecuteUbergraph_SkillStoreItem'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.0"
+      }
+    },
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "SkillStoreItem_C'Default__SkillStoreItem_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.2"
+    }
+  },
+  {
+    "Type": "SkillStoreItem_C",
+    "Name": "Default__SkillStoreItem_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.SkillStoreItem_C'",
+    "Package": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem",
+    "Properties": {
+      "UberGraphFrame": {},
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "Button",
+    "Name": "CloseTip",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Button'",
+    "Outer": {
+      "ObjectName": "WidgetTree'SkillStoreItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.117"
+    },
+    "Properties": {
+      "WidgetStyle": {
+        "Normal": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          }
+        },
+        "Hovered": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          }
+        },
+        "Pressed": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          }
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'SkillStoreItem_C:WidgetTree.GoodPanel.CanvasPanelSlot_3'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.49"
+      },
+      "RenderOpacity": 0.0
+    }
+  },
+  {
+    "Type": "ButtonSlot",
+    "Name": "ButtonSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ButtonSlot'",
+    "Outer": {
+      "ObjectName": "UIButton'SkillStoreItem_C:WidgetTree.AdviseBtn'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.88"
+    },
+    "Properties": {
+      "Padding": {
+        "Left": 11.5199995,
+        "Top": -9.599999,
+        "Right": 7.68,
+        "Bottom": 3.84
+      },
+      "HorizontalAlignment": "HAlign_Left",
+      "Parent": {
+        "ObjectName": "UIButton'SkillStoreItem_C:WidgetTree.AdviseBtn'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.88"
+      },
+      "Content": {
+        "ObjectName": "UITextBlock'SkillStoreItem_C:WidgetTree.UITextBlock_140'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.114"
+      }
+    }
+  },
+  {
+    "Type": "ButtonSlot",
+    "Name": "ButtonSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ButtonSlot'",
+    "Outer": {
+      "ObjectName": "UIButton'SkillStoreItem_C:WidgetTree.SortBtn1'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.91"
+    },
+    "Properties": {
+      "Padding": {
+        "Left": 0.0,
+        "Top": 0.0,
+        "Right": 0.0,
+        "Bottom": 0.0
+      },
+      "HorizontalAlignment": "HAlign_Fill",
+      "VerticalAlignment": "VAlign_Fill",
+      "Parent": {
+        "ObjectName": "UIButton'SkillStoreItem_C:WidgetTree.SortBtn1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.91"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'SkillStoreItem_C:WidgetTree.CanvasPanel_148'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.9"
+      }
+    }
+  },
+  {
+    "Type": "ButtonSlot",
+    "Name": "ButtonSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ButtonSlot'",
+    "Outer": {
+      "ObjectName": "UIButton'SkillStoreItem_C:WidgetTree.SortBtn2'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.92"
+    },
+    "Properties": {
+      "Padding": {
+        "Left": 0.0,
+        "Top": 0.0,
+        "Right": 0.0,
+        "Bottom": 0.0
+      },
+      "HorizontalAlignment": "HAlign_Fill",
+      "VerticalAlignment": "VAlign_Fill",
+      "Parent": {
+        "ObjectName": "UIButton'SkillStoreItem_C:WidgetTree.SortBtn2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.92"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'SkillStoreItem_C:WidgetTree.CanvasPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.7"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'SkillStoreItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.117"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'SkillStoreItem_C:WidgetTree.CanvasPanel.CanvasPanelSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.19"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'SkillStoreItem_C:WidgetTree.CanvasPanel.CanvasPanelSlot_7'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.20"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'SkillStoreItem_C:WidgetTree.CanvasPanel.CanvasPanelSlot_8'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.21"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'SkillStoreItem_C:WidgetTree.CanvasPanel.CanvasPanelSlot_9'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.22"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "ButtonSlot'SkillStoreItem_C:WidgetTree.SortBtn2.ButtonSlot_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.6"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'SkillStoreItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.117"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'SkillStoreItem_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.23"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'SkillStoreItem_C:WidgetTree.GoodPanel.CanvasPanelSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.46"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_148",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'SkillStoreItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.117"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'SkillStoreItem_C:WidgetTree.CanvasPanel_148.CanvasPanelSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.24"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'SkillStoreItem_C:WidgetTree.CanvasPanel_148.CanvasPanelSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.25"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'SkillStoreItem_C:WidgetTree.CanvasPanel_148.CanvasPanelSlot_2'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.26"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'SkillStoreItem_C:WidgetTree.CanvasPanel_148.CanvasPanelSlot_3'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.27"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "ButtonSlot'SkillStoreItem_C:WidgetTree.SortBtn1.ButtonSlot_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.5"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_313",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'SkillStoreItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.117"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'SkillStoreItem_C:WidgetTree.CanvasPanel_313.CanvasPanelSlot_4'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.28"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'SkillStoreItem_C:WidgetTree.CanvasPanel_313.CanvasPanelSlot_5'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.29"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'SkillStoreItem_C:WidgetTree.CanvasPanel_313.CanvasPanelSlot_6'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.30"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'SkillStoreItem_C:WidgetTree.FullView.CanvasPanelSlot_27'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.35"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "FullView",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'SkillStoreItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.117"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'SkillStoreItem_C:WidgetTree.FullView.CanvasPanelSlot_2'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.34"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'SkillStoreItem_C:WidgetTree.FullView.CanvasPanelSlot_3'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.36"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'SkillStoreItem_C:WidgetTree.FullView.CanvasPanelSlot_5'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.37"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'SkillStoreItem_C:WidgetTree.FullView.CanvasPanelSlot_8'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.40"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'SkillStoreItem_C:WidgetTree.FullView.CanvasPanelSlot_7'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.39"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'SkillStoreItem_C:WidgetTree.FullView.CanvasPanelSlot_6'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.38"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'SkillStoreItem_C:WidgetTree.FullView.CanvasPanelSlot_16'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.33"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'SkillStoreItem_C:WidgetTree.FullView.CanvasPanelSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.31"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'SkillStoreItem_C:WidgetTree.FullView.CanvasPanelSlot_27'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.35"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'SkillStoreItem_C:WidgetTree.FullView.CanvasPanelSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.32"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "FxBgLeftPanel",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'SkillStoreItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.117"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'SkillStoreItem_C:WidgetTree.FxBgLeftPanel.CanvasPanelSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.41"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'SkillStoreItem_C:WidgetTree.FxBgLeftPanel.CanvasPanelSlot_2'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.42"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'SkillStoreItem_C:WidgetTree.FullView.CanvasPanelSlot_5'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.37"
+      },
+      "RenderTransform": {
+        "Angle": 18.0
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "FxBgRightPanel",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'SkillStoreItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.117"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'SkillStoreItem_C:WidgetTree.FxBgRightPanel.CanvasPanelSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.43"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'SkillStoreItem_C:WidgetTree.FxBgRightPanel.CanvasPanelSlot_2'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.44"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'SkillStoreItem_C:WidgetTree.FullView.CanvasPanelSlot_8'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.40"
+      },
+      "RenderTransform": {
+        "Angle": 18.0
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "GoodPanel",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'SkillStoreItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.117"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'SkillStoreItem_C:WidgetTree.GoodPanel.CanvasPanelSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.46"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'SkillStoreItem_C:WidgetTree.GoodPanel.CanvasPanelSlot_5'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.50"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'SkillStoreItem_C:WidgetTree.GoodPanel.CanvasPanelSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.45"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'SkillStoreItem_C:WidgetTree.GoodPanel.CanvasPanelSlot_2'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.48"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'SkillStoreItem_C:WidgetTree.GoodPanel.CanvasPanelSlot_3'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.49"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'SkillStoreItem_C:WidgetTree.GoodPanel.CanvasPanelSlot_10'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.47"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'SkillStoreItem_C:WidgetTree.GoodPanel.CanvasPanelSlot_7'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.51"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'SkillStoreItem_C:WidgetTree.FullView.CanvasPanelSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.31"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "Sort1BtnPanel",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'SkillStoreItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.117"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'SkillStoreItem_C:WidgetTree.Sort1BtnPanel.CanvasPanelSlot_5'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.52"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'SkillStoreItem_C:WidgetTree.SortPanel.CanvasPanelSlot_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.55"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "Sort2BtnPanel",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'SkillStoreItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.117"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'SkillStoreItem_C:WidgetTree.Sort2BtnPanel.CanvasPanelSlot_5'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.53"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'SkillStoreItem_C:WidgetTree.SortPanel.CanvasPanelSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.54"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "SortPanel",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'SkillStoreItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.117"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'SkillStoreItem_C:WidgetTree.SortPanel.CanvasPanelSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.54"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'SkillStoreItem_C:WidgetTree.SortPanel.CanvasPanelSlot_2'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.55"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'SkillStoreItem_C:WidgetTree.FullView.CanvasPanelSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.32"
+      },
+      "Visibility": "ESlateVisibility::Collapsed"
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "ViewPanel",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'SkillStoreItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.117"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'SkillStoreItem_C:WidgetTree.ViewPanel.CanvasPanelSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.56"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'SkillStoreItem_C:WidgetTree.ViewPanel.CanvasPanelSlot_3'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.57"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'SkillStoreItem_C:WidgetTree.FullView.CanvasPanelSlot_16'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.33"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'SkillStoreItem_C:WidgetTree.CanvasPanel'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.7"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": -165.12,
+          "Top": -66.24,
+          "Right": 192.0,
+          "Bottom": 57.6
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'SkillStoreItem_C:WidgetTree.CanvasPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.7"
+      },
+      "Content": {
+        "ObjectName": "UIImage'SkillStoreItem_C:WidgetTree.Defaltback2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.95"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_7",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'SkillStoreItem_C:WidgetTree.CanvasPanel'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.7"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": -21.119999,
+          "Top": -2.8799999,
+          "Right": -3588.2808,
+          "Bottom": -340.66333
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "ZOrder": 4,
+      "Parent": {
+        "ObjectName": "CanvasPanel'SkillStoreItem_C:WidgetTree.CanvasPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.7"
+      },
+      "Content": {
+        "ObjectName": "UITextBlock'SkillStoreItem_C:WidgetTree.Text2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.113"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_8",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'SkillStoreItem_C:WidgetTree.CanvasPanel'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.7"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 63.359997,
+          "Top": -1.92,
+          "Right": 287.12512,
+          "Bottom": -30.890303
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.0,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "ZOrder": 3,
+      "Parent": {
+        "ObjectName": "CanvasPanel'SkillStoreItem_C:WidgetTree.CanvasPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.7"
+      },
+      "Content": {
+        "ObjectName": "UIImage'SkillStoreItem_C:WidgetTree.paixubai2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.100"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_9",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'SkillStoreItem_C:WidgetTree.CanvasPanel'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.7"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 63.359997,
+          "Top": -1.92,
+          "Right": 40.633682,
+          "Bottom": -16.981026
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.0,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "ZOrder": 1,
+      "Parent": {
+        "ObjectName": "CanvasPanel'SkillStoreItem_C:WidgetTree.CanvasPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.7"
+      },
+      "Content": {
+        "ObjectName": "UIImage'SkillStoreItem_C:WidgetTree.Paixu2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.98"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'SkillStoreItem_C:WidgetTree.CanvasPanel_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.8"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": -912.6401,
+          "Top": -463.4948,
+          "Right": 1840.64,
+          "Bottom": 938.2399
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.4789131,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.4789131,
+            "Y": 0.5
+          }
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'SkillStoreItem_C:WidgetTree.CanvasPanel_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.8"
+      },
+      "Content": {
+        "ObjectName": "UIScrollBox'SkillStoreItem_C:WidgetTree.ScrollView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.111"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'SkillStoreItem_C:WidgetTree.CanvasPanel_148'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.9"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": -165.12,
+          "Top": -66.24,
+          "Right": 192.0,
+          "Bottom": 57.6
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'SkillStoreItem_C:WidgetTree.CanvasPanel_148'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.9"
+      },
+      "Content": {
+        "ObjectName": "UIImage'SkillStoreItem_C:WidgetTree.Defaltback1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.94"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'SkillStoreItem_C:WidgetTree.CanvasPanel_148'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.9"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": -21.119999,
+          "Top": -2.8799999,
+          "Right": -3277.3203,
+          "Bottom": -149.41078
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "ZOrder": 3,
+      "Parent": {
+        "ObjectName": "CanvasPanel'SkillStoreItem_C:WidgetTree.CanvasPanel_148'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.9"
+      },
+      "Content": {
+        "ObjectName": "UITextBlock'SkillStoreItem_C:WidgetTree.Text1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.112"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'SkillStoreItem_C:WidgetTree.CanvasPanel_148'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.9"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 63.359997,
+          "Top": -1.92,
+          "Right": 610.9637,
+          "Bottom": -40.72494
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.0,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "ZOrder": 3,
+      "Parent": {
+        "ObjectName": "CanvasPanel'SkillStoreItem_C:WidgetTree.CanvasPanel_148'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.9"
+      },
+      "Content": {
+        "ObjectName": "UIImage'SkillStoreItem_C:WidgetTree.Paixubai1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.99"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'SkillStoreItem_C:WidgetTree.CanvasPanel_148'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.9"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 63.359997,
+          "Top": -1.92,
+          "Right": 188.4516,
+          "Bottom": -43.80405
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.0,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "ZOrder": 1,
+      "Parent": {
+        "ObjectName": "CanvasPanel'SkillStoreItem_C:WidgetTree.CanvasPanel_148'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.9"
+      },
+      "Content": {
+        "ObjectName": "UIImage'SkillStoreItem_C:WidgetTree.paixu1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.97"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_4",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'SkillStoreItem_C:WidgetTree.CanvasPanel_313'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.10"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": -238.08,
+          "Top": -82.176956,
+          "Right": -195.26785,
+          "Bottom": -597.44293
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.16584,
+            "Y": 0.2
+          },
+          "Maximum": {
+            "X": 0.16584,
+            "Y": 0.2
+          }
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'SkillStoreItem_C:WidgetTree.CanvasPanel_313'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.10"
+      },
+      "Content": {
+        "ObjectName": "TabSkillCardBtn_C'SkillStoreItem_C:WidgetTree.SkillCardBtn1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.85"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_5",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'SkillStoreItem_C:WidgetTree.CanvasPanel_313'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.10"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": -207.36,
+          "Top": -69.098145,
+          "Right": -195.26785,
+          "Bottom": -597.44293
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.156013,
+            "Y": 0.3
+          },
+          "Maximum": {
+            "X": 0.156013,
+            "Y": 0.3
+          }
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'SkillStoreItem_C:WidgetTree.CanvasPanel_313'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.10"
+      },
+      "Content": {
+        "ObjectName": "TabSkillCardBtn_C'SkillStoreItem_C:WidgetTree.SkillCardBtn2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.86"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_6",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'SkillStoreItem_C:WidgetTree.CanvasPanel_313'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.10"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": -218.87999,
+          "Top": -74.88,
+          "Right": -195.26785,
+          "Bottom": -597.44293
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.159698,
+            "Y": 0.413977
+          },
+          "Maximum": {
+            "X": 0.159698,
+            "Y": 0.413977
+          }
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'SkillStoreItem_C:WidgetTree.CanvasPanel_313'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.10"
+      },
+      "Content": {
+        "ObjectName": "TabSkillCardBtn_C'SkillStoreItem_C:WidgetTree.SkillCardBtn3'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.87"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'SkillStoreItem_C:WidgetTree.FullView'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.11"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 3143.288,
+          "Bottom": 1437.1111
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "ZOrder": 2,
+      "Parent": {
+        "ObjectName": "CanvasPanel'SkillStoreItem_C:WidgetTree.FullView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.11"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'SkillStoreItem_C:WidgetTree.GoodPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.14"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'SkillStoreItem_C:WidgetTree.FullView'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.11"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": -1559.0399,
+          "Top": -720.0,
+          "Right": 3118.0798,
+          "Bottom": 1440.0
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        }
+      },
+      "ZOrder": 2,
+      "Parent": {
+        "ObjectName": "CanvasPanel'SkillStoreItem_C:WidgetTree.FullView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.11"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'SkillStoreItem_C:WidgetTree.SortPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.17"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_16",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'SkillStoreItem_C:WidgetTree.FullView'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.11"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": -1559.0399,
+          "Top": -720.0,
+          "Right": 3118.0798,
+          "Bottom": 1440.0
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        }
+      },
+      "ZOrder": 1,
+      "Parent": {
+        "ObjectName": "CanvasPanel'SkillStoreItem_C:WidgetTree.FullView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.11"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'SkillStoreItem_C:WidgetTree.ViewPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.18"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'SkillStoreItem_C:WidgetTree.FullView'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.11"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 192.0,
+          "Bottom": 57.6
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'SkillStoreItem_C:WidgetTree.FullView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.11"
+      },
+      "Content": {
+        "ObjectName": "UIImage'SkillStoreItem_C:WidgetTree.UIImage_275'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.102"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_27",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'SkillStoreItem_C:WidgetTree.FullView'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.11"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": -1559.0399,
+          "Top": -720.0,
+          "Right": 3118.0798,
+          "Bottom": 1440.0
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        }
+      },
+      "ZOrder": 2,
+      "Parent": {
+        "ObjectName": "CanvasPanel'SkillStoreItem_C:WidgetTree.FullView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.11"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'SkillStoreItem_C:WidgetTree.CanvasPanel_313'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.10"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'SkillStoreItem_C:WidgetTree.FullView'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.11"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 192.0,
+          "Bottom": 57.6
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "Maximum": {
+            "X": 1.0,
+            "Y": 1.0
+          }
+        },
+        "Alignment": {
+          "X": 1.0,
+          "Y": 1.0
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'SkillStoreItem_C:WidgetTree.FullView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.11"
+      },
+      "Content": {
+        "ObjectName": "UIImage'SkillStoreItem_C:WidgetTree.UIImage_348'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.103"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_5",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'SkillStoreItem_C:WidgetTree.FullView'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.11"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 192.0,
+          "Bottom": 384.0
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'SkillStoreItem_C:WidgetTree.FullView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.11"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'SkillStoreItem_C:WidgetTree.FxBgLeftPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.12"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_6",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'SkillStoreItem_C:WidgetTree.FullView'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.11"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": -150.49812,
+          "Top": -113.549644,
+          "Right": 667.72797,
+          "Bottom": 1421.9404
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'SkillStoreItem_C:WidgetTree.FullView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.11"
+      },
+      "Content": {
+        "ObjectName": "UIImage'SkillStoreItem_C:WidgetTree.UIImage_dit02_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.106"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_7",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'SkillStoreItem_C:WidgetTree.FullView'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.11"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 139.4438,
+          "Top": 168.16443,
+          "Right": 667.72797,
+          "Bottom": 1421.9404
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "Maximum": {
+            "X": 1.0,
+            "Y": 1.0
+          }
+        },
+        "Alignment": {
+          "X": 1.0,
+          "Y": 1.0
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'SkillStoreItem_C:WidgetTree.FullView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.11"
+      },
+      "Content": {
+        "ObjectName": "UIImage'SkillStoreItem_C:WidgetTree.UIImage_dit02_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.105"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_8",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'SkillStoreItem_C:WidgetTree.FullView'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.11"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 192.0,
+          "Bottom": 384.0
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "Maximum": {
+            "X": 1.0,
+            "Y": 1.0
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'SkillStoreItem_C:WidgetTree.FullView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.11"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'SkillStoreItem_C:WidgetTree.FxBgRightPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.13"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'SkillStoreItem_C:WidgetTree.FxBgLeftPanel'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.12"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 418.1671,
+          "Top": 1357.1178,
+          "Right": 161.53934,
+          "Bottom": 924.2655
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "ZOrder": 1,
+      "Parent": {
+        "ObjectName": "CanvasPanel'SkillStoreItem_C:WidgetTree.FxBgLeftPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.12"
+      },
+      "Content": {
+        "ObjectName": "UIImage'SkillStoreItem_C:WidgetTree.UIImage_L03'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.107"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'SkillStoreItem_C:WidgetTree.FxBgLeftPanel'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.12"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 217.64421,
+          "Top": 335.1075,
+          "Right": 19.344025,
+          "Bottom": 1453.614
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "ZOrder": 1,
+      "Parent": {
+        "ObjectName": "CanvasPanel'SkillStoreItem_C:WidgetTree.FxBgLeftPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.12"
+      },
+      "Content": {
+        "ObjectName": "UIImage'SkillStoreItem_C:WidgetTree.UIImage_L04'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.108"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'SkillStoreItem_C:WidgetTree.FxBgRightPanel'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.13"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": -468.86124,
+          "Top": -1424.4902,
+          "Right": 244.78427,
+          "Bottom": 1240.7322
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "ZOrder": 1,
+      "Parent": {
+        "ObjectName": "CanvasPanel'SkillStoreItem_C:WidgetTree.FxBgRightPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.13"
+      },
+      "Content": {
+        "ObjectName": "UIImage'SkillStoreItem_C:WidgetTree.UIImage_R04'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.109"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'SkillStoreItem_C:WidgetTree.FxBgRightPanel'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.13"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": -643.5817,
+          "Top": -515.3298,
+          "Right": 19.344025,
+          "Bottom": 2691.2578
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "ZOrder": 1,
+      "Parent": {
+        "ObjectName": "CanvasPanel'SkillStoreItem_C:WidgetTree.FxBgRightPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.13"
+      },
+      "Content": {
+        "ObjectName": "UIImage'SkillStoreItem_C:WidgetTree.UIImage_R05'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.110"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'SkillStoreItem_C:WidgetTree.GoodPanel'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.14"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": -706.56,
+          "Top": 466.56,
+          "Right": 466.56,
+          "Bottom": 53.76
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'SkillStoreItem_C:WidgetTree.GoodPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.14"
+      },
+      "Content": {
+        "ObjectName": "UIEditText'SkillStoreItem_C:WidgetTree.Input'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.93"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'SkillStoreItem_C:WidgetTree.GoodPanel'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.14"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 839.64777,
+          "Top": 188.0727,
+          "Right": 517.2947,
+          "Bottom": 306.68875
+        },
+        "Anchors": {
+          "Maximum": {
+            "X": 1.0,
+            "Y": 1.0
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "ZOrder": 2,
+      "Parent": {
+        "ObjectName": "CanvasPanel'SkillStoreItem_C:WidgetTree.GoodPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.14"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'SkillStoreItem_C:WidgetTree.CanvasPanel_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.8"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_10",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'SkillStoreItem_C:WidgetTree.GoodPanel'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.14"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 1019.5337,
+          "Top": 336.93115,
+          "Right": 374.4,
+          "Bottom": 190.08
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        }
+      },
+      "ZOrder": 3,
+      "Parent": {
+        "ObjectName": "CanvasPanel'SkillStoreItem_C:WidgetTree.GoodPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.14"
+      },
+      "Content": {
+        "ObjectName": "UIButton'SkillStoreItem_C:WidgetTree.AdviseBtn'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.88"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'SkillStoreItem_C:WidgetTree.GoodPanel'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.14"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": -147.1756,
+          "Top": 456.69614,
+          "Right": 122.88,
+          "Bottom": 74.88
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'SkillStoreItem_C:WidgetTree.GoodPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.14"
+      },
+      "Content": {
+        "ObjectName": "UIButton'SkillStoreItem_C:WidgetTree.SearchBtn'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.90"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'SkillStoreItem_C:WidgetTree.GoodPanel'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.14"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "Anchors": {
+          "Maximum": {
+            "X": 1.0,
+            "Y": 1.0
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "ZOrder": 3,
+      "Parent": {
+        "ObjectName": "CanvasPanel'SkillStoreItem_C:WidgetTree.GoodPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.14"
+      },
+      "Content": {
+        "ObjectName": "Button'SkillStoreItem_C:WidgetTree.CloseTip'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.3"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_5",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'SkillStoreItem_C:WidgetTree.GoodPanel'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.14"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": -148.35875,
+          "Top": 458.4655,
+          "Right": -582.37836,
+          "Bottom": 70.51221
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'SkillStoreItem_C:WidgetTree.GoodPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.14"
+      },
+      "Content": {
+        "ObjectName": "UIImage'SkillStoreItem_C:WidgetTree.Image_831'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.96"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_7",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'SkillStoreItem_C:WidgetTree.GoodPanel'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.14"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": -233.99477,
+          "Top": 467.24045,
+          "Right": 67.2,
+          "Bottom": 53.76
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'SkillStoreItem_C:WidgetTree.GoodPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.14"
+      },
+      "Content": {
+        "ObjectName": "UIButton'SkillStoreItem_C:WidgetTree.CancelSearchBtn'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.89"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_5",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'SkillStoreItem_C:WidgetTree.Sort1BtnPanel'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.15"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": -165.12,
+          "Top": -66.24,
+          "Right": 330.24,
+          "Bottom": 132.48
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'SkillStoreItem_C:WidgetTree.Sort1BtnPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.15"
+      },
+      "Content": {
+        "ObjectName": "UIButton'SkillStoreItem_C:WidgetTree.SortBtn1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.91"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_5",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'SkillStoreItem_C:WidgetTree.Sort2BtnPanel'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.16"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": -165.12,
+          "Top": -66.24,
+          "Right": 330.24,
+          "Bottom": 132.48
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'SkillStoreItem_C:WidgetTree.Sort2BtnPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.16"
+      },
+      "Content": {
+        "ObjectName": "UIButton'SkillStoreItem_C:WidgetTree.SortBtn2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.92"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'SkillStoreItem_C:WidgetTree.SortPanel'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.17"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 727.2925,
+          "Top": -645.53326,
+          "Right": -1918.4867,
+          "Bottom": 64.05979
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'SkillStoreItem_C:WidgetTree.SortPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.17"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'SkillStoreItem_C:WidgetTree.Sort2BtnPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.16"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'SkillStoreItem_C:WidgetTree.SortPanel'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.17"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 375.68634,
+          "Top": -642.9732,
+          "Right": -5305.109,
+          "Bottom": -107.89533
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'SkillStoreItem_C:WidgetTree.SortPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.17"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'SkillStoreItem_C:WidgetTree.Sort1BtnPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.15"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'SkillStoreItem_C:WidgetTree.ViewPanel'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.18"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": -1312.9956,
+          "Top": -560.5977,
+          "Right": 472.17776,
+          "Bottom": 1107.0359
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'SkillStoreItem_C:WidgetTree.ViewPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.18"
+      },
+      "Content": {
+        "ObjectName": "UIImage'SkillStoreItem_C:WidgetTree.UIImage_152'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.101"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'SkillStoreItem_C:WidgetTree.ViewPanel'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.18"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": -862.90283,
+          "Top": -582.30853,
+          "Right": 2011.0629,
+          "Bottom": 1158.7656
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'SkillStoreItem_C:WidgetTree.ViewPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.18"
+      },
+      "Content": {
+        "ObjectName": "UIImage'SkillStoreItem_C:WidgetTree.UIImage_417'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.104"
+      }
+    }
+  },
+  {
+    "Type": "MovieScene",
+    "Name": "CreatSkillStoreItem",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene'",
+    "Outer": {
+      "ObjectName": "WidgetAnimation'SkillStoreItem_C:CreatSkillStoreItem_INST'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.116"
+    },
+    "Properties": {
+      "Possessables": [
+        {
+          "Tags": [],
+          "Guid": "962B0CBA-4A017A0E-D4CEE4AA-9E0D1018",
+          "Name": "UIImage_L03",
+          "PossessedObjectClass": {
+            "ObjectName": "Class'UIImage'",
+            "ObjectPath": "/Script/UE_game"
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        },
+        {
+          "Tags": [],
+          "Guid": "5B912D7D-4CD44EBF-4F6FE698-94F5206C",
+          "Name": "UIImage_L04",
+          "PossessedObjectClass": {
+            "ObjectName": "Class'UIImage'",
+            "ObjectPath": "/Script/UE_game"
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        },
+        {
+          "Tags": [],
+          "Guid": "961FC92B-44216BC3-5CB49890-8F219BC0",
+          "Name": "UIImage_R04",
+          "PossessedObjectClass": {
+            "ObjectName": "Class'UIImage'",
+            "ObjectPath": "/Script/UE_game"
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        },
+        {
+          "Tags": [],
+          "Guid": "7F36340C-45613F43-2F0D6297-ECD8D12B",
+          "Name": "UIImage_R05",
+          "PossessedObjectClass": {
+            "ObjectName": "Class'UIImage'",
+            "ObjectPath": "/Script/UE_game"
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        },
+        {
+          "Tags": [],
+          "Guid": "47466846-4C6F2259-C3911F8A-16F923E0",
+          "Name": "UIImage_dit02_1",
+          "PossessedObjectClass": {
+            "ObjectName": "Class'UIImage'",
+            "ObjectPath": "/Script/UE_game"
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        },
+        {
+          "Tags": [],
+          "Guid": "4A9AFD50-4F6F5EB3-5B7AF6B6-326B1B73",
+          "Name": "UIImage_dit02_1",
+          "PossessedObjectClass": {
+            "ObjectName": "Class'UIImage'",
+            "ObjectPath": "/Script/UE_game"
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        }
+      ],
+      "ObjectBindings": [
+        {
+          "ObjectGuid": "962B0CBA-4A017A0E-D4CEE4AA-9E0D1018",
+          "BindingName": "UIImage_L03",
+          "Tracks": [
+            {
+              "ObjectName": "MovieScene2DTransformTrack'SkillStoreItem_C:CreatSkillStoreItem_INST.CreatSkillStoreItem.MovieScene2DTransformTrack_12'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.63"
+            }
+          ]
+        },
+        {
+          "ObjectGuid": "5B912D7D-4CD44EBF-4F6FE698-94F5206C",
+          "BindingName": "UIImage_L04",
+          "Tracks": [
+            {
+              "ObjectName": "MovieScene2DTransformTrack'SkillStoreItem_C:CreatSkillStoreItem_INST.CreatSkillStoreItem.MovieScene2DTransformTrack_13'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.64"
+            }
+          ]
+        },
+        {
+          "ObjectGuid": "961FC92B-44216BC3-5CB49890-8F219BC0",
+          "BindingName": "UIImage_R04",
+          "Tracks": [
+            {
+              "ObjectName": "MovieScene2DTransformTrack'SkillStoreItem_C:CreatSkillStoreItem_INST.CreatSkillStoreItem.MovieScene2DTransformTrack_16'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.65"
+            }
+          ]
+        },
+        {
+          "ObjectGuid": "7F36340C-45613F43-2F0D6297-ECD8D12B",
+          "BindingName": "UIImage_R05",
+          "Tracks": [
+            {
+              "ObjectName": "MovieScene2DTransformTrack'SkillStoreItem_C:CreatSkillStoreItem_INST.CreatSkillStoreItem.MovieScene2DTransformTrack_18'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.66"
+            }
+          ]
+        },
+        {
+          "ObjectGuid": "47466846-4C6F2259-C3911F8A-16F923E0",
+          "BindingName": "UIImage_dit02_1",
+          "Tracks": [
+            {
+              "ObjectName": "MovieSceneFloatTrack'SkillStoreItem_C:CreatSkillStoreItem_INST.CreatSkillStoreItem.MovieSceneFloatTrack_0'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.82"
+            }
+          ]
+        },
+        {
+          "ObjectGuid": "4A9AFD50-4F6F5EB3-5B7AF6B6-326B1B73",
+          "BindingName": "UIImage_dit02_1",
+          "Tracks": [
+            {
+              "ObjectName": "MovieSceneFloatTrack'SkillStoreItem_C:CreatSkillStoreItem_INST.CreatSkillStoreItem.MovieSceneFloatTrack_1'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.83"
+            }
+          ]
+        }
+      ],
+      "PlaybackRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 26000
+            }
+          }
+        }
+      },
+      "DisplayRate": {
+        "Numerator": 30
+      },
+      "Signature": "696B43BA-426713FA-E5913D8B-B85765DD"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformSection",
+    "Name": "MovieScene2DTransformSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene2DTransformSection'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformTrack'SkillStoreItem_C:CreatSkillStoreItem_INST.CreatSkillStoreItem.MovieScene2DTransformTrack_12'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.63"
+    },
+    "Properties": {
+      "Translation": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 24000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Translation[1]": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 24000
+          }
+        ],
+        "Values": [
+          {
+            "Value": -3248.0,
+            "Tangent": {
+              "ArriveTangent": 0.14905053,
+              "LeaveTangent": 0.14905053,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 1
+          },
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Scale": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 24000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Scale[1]": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 24000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 2.3,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'SkillStoreItem_C:CreatSkillStoreItem_INST.CreatSkillStoreItem.MovieScene2DTransformTrack_12.MovieScene2DTransformSection_0.EaseInFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.67"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'SkillStoreItem_C:CreatSkillStoreItem_INST.CreatSkillStoreItem.MovieScene2DTransformTrack_12.MovieScene2DTransformSection_0.EaseOutFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.68"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 26000
+            }
+          }
+        }
+      },
+      "Signature": "E29899EB-4C8C26D0-22140D99-CE653D87"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformSection",
+    "Name": "MovieScene2DTransformSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene2DTransformSection'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformTrack'SkillStoreItem_C:CreatSkillStoreItem_INST.CreatSkillStoreItem.MovieScene2DTransformTrack_13'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.64"
+    },
+    "Properties": {
+      "Translation": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 24000
+          }
+        ],
+        "Values": [
+          {
+            "Value": -380.0,
+            "Tangent": {
+              "ArriveTangent": 0.01834029,
+              "LeaveTangent": 0.01834029,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 1
+          },
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Translation[1]": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 24000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Scale": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 24000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 5.0,
+            "Tangent": {
+              "ArriveTangent": -0.0003312509,
+              "LeaveTangent": -0.0003312509,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 1
+          },
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Scale[1]": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 24000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'SkillStoreItem_C:CreatSkillStoreItem_INST.CreatSkillStoreItem.MovieScene2DTransformTrack_13.MovieScene2DTransformSection_0.EaseInFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.69"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'SkillStoreItem_C:CreatSkillStoreItem_INST.CreatSkillStoreItem.MovieScene2DTransformTrack_13.MovieScene2DTransformSection_0.EaseOutFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.70"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 26000
+            }
+          }
+        }
+      },
+      "Signature": "71344AB2-40A10387-55A71D8E-B205A919"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformSection",
+    "Name": "MovieScene2DTransformSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene2DTransformSection'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformTrack'SkillStoreItem_C:CreatSkillStoreItem_INST.CreatSkillStoreItem.MovieScene2DTransformTrack_16'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.65"
+    },
+    "Properties": {
+      "Translation": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 24000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Translation[1]": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 24000
+          }
+        ],
+        "Values": [
+          {
+            "Value": -1999.9995,
+            "Tangent": {
+              "ArriveTangent": 0.09066428,
+              "LeaveTangent": 0.09066428,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 1
+          },
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Scale[1]": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 24000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'SkillStoreItem_C:CreatSkillStoreItem_INST.CreatSkillStoreItem.MovieScene2DTransformTrack_16.MovieScene2DTransformSection_0.EaseInFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.71"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'SkillStoreItem_C:CreatSkillStoreItem_INST.CreatSkillStoreItem.MovieScene2DTransformTrack_16.MovieScene2DTransformSection_0.EaseOutFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.72"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 26001
+            }
+          }
+        }
+      },
+      "Signature": "16B58E56-477B9649-702F95BD-31A3B1B1"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformSection",
+    "Name": "MovieScene2DTransformSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene2DTransformSection'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformTrack'SkillStoreItem_C:CreatSkillStoreItem_INST.CreatSkillStoreItem.MovieScene2DTransformTrack_18'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.66"
+    },
+    "Properties": {
+      "Translation": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 20000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Translation[1]": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 20000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 2325.2942,
+            "Tangent": {
+              "ArriveTangent": -0.14174859,
+              "LeaveTangent": -0.14174859,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 1
+          },
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Scale": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 20000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Scale[1]": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 20000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'SkillStoreItem_C:CreatSkillStoreItem_INST.CreatSkillStoreItem.MovieScene2DTransformTrack_18.MovieScene2DTransformSection_0.EaseInFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.73"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'SkillStoreItem_C:CreatSkillStoreItem_INST.CreatSkillStoreItem.MovieScene2DTransformTrack_18.MovieScene2DTransformSection_0.EaseOutFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.74"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 26000
+            }
+          }
+        }
+      },
+      "Signature": "A485A558-4B69F296-1DE44185-5395F40B"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformTrack",
+    "Name": "MovieScene2DTransformTrack_12",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene2DTransformTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'SkillStoreItem_C:CreatSkillStoreItem_INST.CreatSkillStoreItem'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.58"
+    },
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderTransform",
+        "PropertyPath": "RenderTransform",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieScene2DTransformSection'SkillStoreItem_C:CreatSkillStoreItem_INST.CreatSkillStoreItem.MovieScene2DTransformTrack_12.MovieScene2DTransformSection_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.59"
+        }
+      ],
+      "EvaluationFieldGuid": "37694BA4-44A3310A-DD277AAD-927FB63B",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieScene2DTransformSection'SkillStoreItem_C:CreatSkillStoreItem_INST.CreatSkillStoreItem.MovieScene2DTransformTrack_12.MovieScene2DTransformSection_0'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.59"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Exclusive",
+                "Value": {
+                  "Value": 26000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "37694BA4-44A3310A-DD277AAD-927FB63B"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformTrack",
+    "Name": "MovieScene2DTransformTrack_13",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene2DTransformTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'SkillStoreItem_C:CreatSkillStoreItem_INST.CreatSkillStoreItem'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.58"
+    },
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderTransform",
+        "PropertyPath": "RenderTransform",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieScene2DTransformSection'SkillStoreItem_C:CreatSkillStoreItem_INST.CreatSkillStoreItem.MovieScene2DTransformTrack_13.MovieScene2DTransformSection_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.60"
+        }
+      ],
+      "EvaluationFieldGuid": "C088270A-4D02018D-8E2386B0-13F2D400",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieScene2DTransformSection'SkillStoreItem_C:CreatSkillStoreItem_INST.CreatSkillStoreItem.MovieScene2DTransformTrack_13.MovieScene2DTransformSection_0'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.60"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Exclusive",
+                "Value": {
+                  "Value": 26000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "C088270A-4D02018D-8E2386B0-13F2D400"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformTrack",
+    "Name": "MovieScene2DTransformTrack_16",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene2DTransformTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'SkillStoreItem_C:CreatSkillStoreItem_INST.CreatSkillStoreItem'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.58"
+    },
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderTransform",
+        "PropertyPath": "RenderTransform",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieScene2DTransformSection'SkillStoreItem_C:CreatSkillStoreItem_INST.CreatSkillStoreItem.MovieScene2DTransformTrack_16.MovieScene2DTransformSection_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.61"
+        }
+      ],
+      "EvaluationFieldGuid": "EBBC606E-431CE89E-55C7789B-E4B1B054",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieScene2DTransformSection'SkillStoreItem_C:CreatSkillStoreItem_INST.CreatSkillStoreItem.MovieScene2DTransformTrack_16.MovieScene2DTransformSection_0'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.61"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Exclusive",
+                "Value": {
+                  "Value": 26001
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "EBBC606E-431CE89E-55C7789B-E4B1B054"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformTrack",
+    "Name": "MovieScene2DTransformTrack_18",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene2DTransformTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'SkillStoreItem_C:CreatSkillStoreItem_INST.CreatSkillStoreItem'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.58"
+    },
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderTransform",
+        "PropertyPath": "RenderTransform",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieScene2DTransformSection'SkillStoreItem_C:CreatSkillStoreItem_INST.CreatSkillStoreItem.MovieScene2DTransformTrack_18.MovieScene2DTransformSection_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.62"
+        }
+      ],
+      "EvaluationFieldGuid": "5A62215E-4D24F46B-0A929D8C-5624E8F5",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieScene2DTransformSection'SkillStoreItem_C:CreatSkillStoreItem_INST.CreatSkillStoreItem.MovieScene2DTransformTrack_18.MovieScene2DTransformSection_0'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.62"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Exclusive",
+                "Value": {
+                  "Value": 26000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "5A62215E-4D24F46B-0A929D8C-5624E8F5"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformSection'SkillStoreItem_C:CreatSkillStoreItem_INST.CreatSkillStoreItem.MovieScene2DTransformTrack_12.MovieScene2DTransformSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.59"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformSection'SkillStoreItem_C:CreatSkillStoreItem_INST.CreatSkillStoreItem.MovieScene2DTransformTrack_12.MovieScene2DTransformSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.59"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformSection'SkillStoreItem_C:CreatSkillStoreItem_INST.CreatSkillStoreItem.MovieScene2DTransformTrack_13.MovieScene2DTransformSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.60"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformSection'SkillStoreItem_C:CreatSkillStoreItem_INST.CreatSkillStoreItem.MovieScene2DTransformTrack_13.MovieScene2DTransformSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.60"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformSection'SkillStoreItem_C:CreatSkillStoreItem_INST.CreatSkillStoreItem.MovieScene2DTransformTrack_16.MovieScene2DTransformSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.61"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformSection'SkillStoreItem_C:CreatSkillStoreItem_INST.CreatSkillStoreItem.MovieScene2DTransformTrack_16.MovieScene2DTransformSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.61"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformSection'SkillStoreItem_C:CreatSkillStoreItem_INST.CreatSkillStoreItem.MovieScene2DTransformTrack_18.MovieScene2DTransformSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.62"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformSection'SkillStoreItem_C:CreatSkillStoreItem_INST.CreatSkillStoreItem.MovieScene2DTransformTrack_18.MovieScene2DTransformSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.62"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatSection'SkillStoreItem_C:CreatSkillStoreItem_INST.CreatSkillStoreItem.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.80"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatSection'SkillStoreItem_C:CreatSkillStoreItem_INST.CreatSkillStoreItem.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.80"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatSection'SkillStoreItem_C:CreatSkillStoreItem_INST.CreatSkillStoreItem.MovieSceneFloatTrack_1.MovieSceneFloatSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.81"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatSection'SkillStoreItem_C:CreatSkillStoreItem_INST.CreatSkillStoreItem.MovieSceneFloatTrack_1.MovieSceneFloatSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.81"
+    }
+  },
+  {
+    "Type": "MovieSceneCompiledData",
+    "Name": "CompiledData",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneCompiledData'",
+    "Outer": {
+      "ObjectName": "WidgetAnimation'SkillStoreItem_C:CreatSkillStoreItem_INST'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.116"
+    },
+    "Properties": {
+      "EntityComponentField": {
+        "PersistentEntityTree": {
+          "SerializedData": {
+            "Data": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 6,
+                  "Capacity": 6
+                },
+                {
+                  "StartIndex": 6,
+                  "Size": 3,
+                  "Capacity": 3
+                },
+                {
+                  "StartIndex": 9,
+                  "Size": 2,
+                  "Capacity": 2
+                }
+              ],
+              "Items": [
+                {
+                  "EntityIndex": 0,
+                  "MetaDataIndex": -1
+                },
+                {
+                  "EntityIndex": 1,
+                  "MetaDataIndex": -1
+                },
+                {
+                  "EntityIndex": 2,
+                  "MetaDataIndex": -1
+                },
+                {
+                  "EntityIndex": 3,
+                  "MetaDataIndex": -1
+                },
+                {
+                  "EntityIndex": 4,
+                  "MetaDataIndex": -1
+                },
+                {
+                  "EntityIndex": 5,
+                  "MetaDataIndex": -1
+                },
+                {
+                  "EntityIndex": 2,
+                  "MetaDataIndex": -1
+                },
+                {
+                  "EntityIndex": 4,
+                  "MetaDataIndex": -1
+                },
+                {
+                  "EntityIndex": 5,
+                  "MetaDataIndex": -1
+                },
+                {
+                  "EntityIndex": 4,
+                  "MetaDataIndex": -1
+                },
+                {
+                  "EntityIndex": 5,
+                  "MetaDataIndex": -1
+                }
+              ]
+            },
+            "RootNode": {
+              "Range": {
+                "LowerBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                },
+                "UpperBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                }
+              },
+              "Parent": {
+                "ChildrenHandle": {
+                  "EntryIndex": -1
+                },
+                "Index": -1
+              },
+              "ChildrenID": {
+                "EntryIndex": 0
+              },
+              "DataID": {
+                "EntryIndex": -1
+              }
+            },
+            "ChildNodes": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 3,
+                  "Capacity": 3
+                }
+              ],
+              "Items": [
+                {
+                  "Range": {
+                    "LowerBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 0
+                      }
+                    },
+                    "UpperBound": {
+                      "Type": 0,
+                      "Value": {
+                        "Value": 26000
+                      }
+                    }
+                  },
+                  "Parent": {
+                    "ChildrenHandle": {
+                      "EntryIndex": -1
+                    },
+                    "Index": 0
+                  },
+                  "ChildrenID": {
+                    "EntryIndex": -1
+                  },
+                  "DataID": {
+                    "EntryIndex": 0
+                  }
+                },
+                {
+                  "Range": {
+                    "LowerBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 26000
+                      }
+                    },
+                    "UpperBound": {
+                      "Type": 0,
+                      "Value": {
+                        "Value": 26001
+                      }
+                    }
+                  },
+                  "Parent": {
+                    "ChildrenHandle": {
+                      "EntryIndex": -1
+                    },
+                    "Index": 0
+                  },
+                  "ChildrenID": {
+                    "EntryIndex": -1
+                  },
+                  "DataID": {
+                    "EntryIndex": 1
+                  }
+                },
+                {
+                  "Range": {
+                    "LowerBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 26001
+                      }
+                    },
+                    "UpperBound": {
+                      "Type": 0,
+                      "Value": {
+                        "Value": 26002
+                      }
+                    }
+                  },
+                  "Parent": {
+                    "ChildrenHandle": {
+                      "EntryIndex": -1
+                    },
+                    "Index": 0
+                  },
+                  "ChildrenID": {
+                    "EntryIndex": -1
+                  },
+                  "DataID": {
+                    "EntryIndex": 2
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "Entities": [
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieScene2DTransformSection'SkillStoreItem_C:CreatSkillStoreItem_INST.CreatSkillStoreItem.MovieScene2DTransformTrack_12.MovieScene2DTransformSection_0'",
+                "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.59"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 0
+          },
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieScene2DTransformSection'SkillStoreItem_C:CreatSkillStoreItem_INST.CreatSkillStoreItem.MovieScene2DTransformTrack_13.MovieScene2DTransformSection_0'",
+                "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.60"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 1
+          },
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieScene2DTransformSection'SkillStoreItem_C:CreatSkillStoreItem_INST.CreatSkillStoreItem.MovieScene2DTransformTrack_16.MovieScene2DTransformSection_0'",
+                "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.61"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 2
+          },
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieScene2DTransformSection'SkillStoreItem_C:CreatSkillStoreItem_INST.CreatSkillStoreItem.MovieScene2DTransformTrack_18.MovieScene2DTransformSection_0'",
+                "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.62"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 3
+          },
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieSceneFloatSection'SkillStoreItem_C:CreatSkillStoreItem_INST.CreatSkillStoreItem.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+                "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.80"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 4
+          },
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieSceneFloatSection'SkillStoreItem_C:CreatSkillStoreItem_INST.CreatSkillStoreItem.MovieSceneFloatTrack_1.MovieSceneFloatSection_0'",
+                "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.81"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 5
+          }
+        ],
+        "SharedMetaData": [
+          {
+            "ObjectBindingID": "962B0CBA-4A017A0E-D4CEE4AA-9E0D1018"
+          },
+          {
+            "ObjectBindingID": "5B912D7D-4CD44EBF-4F6FE698-94F5206C"
+          },
+          {
+            "ObjectBindingID": "961FC92B-44216BC3-5CB49890-8F219BC0"
+          },
+          {
+            "ObjectBindingID": "7F36340C-45613F43-2F0D6297-ECD8D12B"
+          },
+          {
+            "ObjectBindingID": "47466846-4C6F2259-C3911F8A-16F923E0"
+          },
+          {
+            "ObjectBindingID": "4A9AFD50-4F6F5EB3-5B7AF6B6-326B1B73"
+          }
+        ]
+      },
+      "CompiledSignature": "10FCF5BC-4BF3C332-26DFFEB9-930B1961",
+      "CompilerVersion": "7D4B9809-2FAC4A6B-964ECF72-D8279EF8",
+      "AccumulatedMask": {
+        "bEntityComponentField": true
+      },
+      "AllocatedMask": {
+        "bEntityComponentField": true
+      }
+    }
+  },
+  {
+    "Type": "MovieSceneFloatSection",
+    "Name": "MovieSceneFloatSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneFloatSection'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatTrack'SkillStoreItem_C:CreatSkillStoreItem_INST.CreatSkillStoreItem.MovieSceneFloatTrack_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.82"
+    },
+    "Properties": {
+      "FloatCurve": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 24000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'SkillStoreItem_C:CreatSkillStoreItem_INST.CreatSkillStoreItem.MovieSceneFloatTrack_0.MovieSceneFloatSection_0.EaseInFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.75"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'SkillStoreItem_C:CreatSkillStoreItem_INST.CreatSkillStoreItem.MovieSceneFloatTrack_0.MovieSceneFloatSection_0.EaseOutFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.76"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 26002
+            }
+          }
+        }
+      },
+      "Signature": "762CEAD2-43AD3B38-83D10093-18B7B054"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatSection",
+    "Name": "MovieSceneFloatSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneFloatSection'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatTrack'SkillStoreItem_C:CreatSkillStoreItem_INST.CreatSkillStoreItem.MovieSceneFloatTrack_1'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.83"
+    },
+    "Properties": {
+      "FloatCurve": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 24000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'SkillStoreItem_C:CreatSkillStoreItem_INST.CreatSkillStoreItem.MovieSceneFloatTrack_1.MovieSceneFloatSection_0.EaseInFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.77"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'SkillStoreItem_C:CreatSkillStoreItem_INST.CreatSkillStoreItem.MovieSceneFloatTrack_1.MovieSceneFloatSection_0.EaseOutFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.78"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 26002
+            }
+          }
+        }
+      },
+      "Signature": "0AD4DC99-4FD7064D-07611DAA-F8E48E40"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatTrack",
+    "Name": "MovieSceneFloatTrack_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneFloatTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'SkillStoreItem_C:CreatSkillStoreItem_INST.CreatSkillStoreItem'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.58"
+    },
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderOpacity",
+        "PropertyPath": "RenderOpacity",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneFloatSection'SkillStoreItem_C:CreatSkillStoreItem_INST.CreatSkillStoreItem.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.80"
+        }
+      ],
+      "EvaluationFieldGuid": "31EB2423-4A1DC04D-528565B5-9E3673BB",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneFloatSection'SkillStoreItem_C:CreatSkillStoreItem_INST.CreatSkillStoreItem.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.80"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Exclusive",
+                "Value": {
+                  "Value": 26002
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "31EB2423-4A1DC04D-528565B5-9E3673BB"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatTrack",
+    "Name": "MovieSceneFloatTrack_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneFloatTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'SkillStoreItem_C:CreatSkillStoreItem_INST.CreatSkillStoreItem'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.58"
+    },
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderOpacity",
+        "PropertyPath": "RenderOpacity",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneFloatSection'SkillStoreItem_C:CreatSkillStoreItem_INST.CreatSkillStoreItem.MovieSceneFloatTrack_1.MovieSceneFloatSection_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.81"
+        }
+      ],
+      "EvaluationFieldGuid": "35704560-4E0A16E7-545A61B0-722C3A2F",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneFloatSection'SkillStoreItem_C:CreatSkillStoreItem_INST.CreatSkillStoreItem.MovieSceneFloatTrack_1.MovieSceneFloatSection_0'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.81"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Exclusive",
+                "Value": {
+                  "Value": 26002
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "35704560-4E0A16E7-545A61B0-722C3A2F"
+    }
+  },
+  {
+    "Type": "ScrollBoxSlot",
+    "Name": "ScrollBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ScrollBoxSlot'",
+    "Outer": {
+      "ObjectName": "UIScrollBox'SkillStoreItem_C:WidgetTree.ScrollView'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.111"
+    },
+    "Properties": {
+      "Padding": {
+        "Left": -96.0,
+        "Top": 38.399998
+      },
+      "HorizontalAlignment": "HAlign_Center",
+      "Parent": {
+        "ObjectName": "UIScrollBox'SkillStoreItem_C:WidgetTree.ScrollView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.111"
+      },
+      "Content": {
+        "ObjectName": "UniformGridPanel'SkillStoreItem_C:WidgetTree.GridView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.115"
+      }
+    }
+  },
+  {
+    "Type": "TabSkillCardBtn_C",
+    "Name": "SkillCardBtn1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'UE_game/Content/BluePrint/UI/SkillStore/TabSkillCardBtn.TabSkillCardBtn_C'",
+    "Outer": {
+      "ObjectName": "WidgetTree'SkillStoreItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.117"
+    },
+    "Template": {
+      "ObjectName": "TabSkillCardBtn_C'Default__TabSkillCardBtn_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/TabSkillCardBtn.4"
+    },
+    "Properties": {
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'SkillStoreItem_C:WidgetTree.CanvasPanel_313.CanvasPanelSlot_4'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.28"
+      }
+    }
+  },
+  {
+    "Type": "TabSkillCardBtn_C",
+    "Name": "SkillCardBtn2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'UE_game/Content/BluePrint/UI/SkillStore/TabSkillCardBtn.TabSkillCardBtn_C'",
+    "Outer": {
+      "ObjectName": "WidgetTree'SkillStoreItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.117"
+    },
+    "Template": {
+      "ObjectName": "TabSkillCardBtn_C'Default__TabSkillCardBtn_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/TabSkillCardBtn.4"
+    },
+    "Properties": {
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'SkillStoreItem_C:WidgetTree.CanvasPanel_313.CanvasPanelSlot_5'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.29"
+      }
+    }
+  },
+  {
+    "Type": "TabSkillCardBtn_C",
+    "Name": "SkillCardBtn3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'UE_game/Content/BluePrint/UI/SkillStore/TabSkillCardBtn.TabSkillCardBtn_C'",
+    "Outer": {
+      "ObjectName": "WidgetTree'SkillStoreItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.117"
+    },
+    "Template": {
+      "ObjectName": "TabSkillCardBtn_C'Default__TabSkillCardBtn_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/TabSkillCardBtn.4"
+    },
+    "Properties": {
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'SkillStoreItem_C:WidgetTree.CanvasPanel_313.CanvasPanelSlot_6'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.30"
+      }
+    }
+  },
+  {
+    "Type": "UIButton",
+    "Name": "AdviseBtn",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIButton'",
+    "Outer": {
+      "ObjectName": "WidgetTree'SkillStoreItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.117"
+    },
+    "Properties": {
+      "IconImage": {
+        "ImageSize": {
+          "X": 61.44,
+          "Y": 61.44
+        }
+      },
+      "WidgetStyle": {
+        "Normal": {
+          "ImageSize": {
+            "X": 374.4,
+            "Y": 190.08
+          },
+          "ResourceObject": {
+            "ObjectName": "PaperSprite'UI_SkillStore_tuijiandapei_Sprite'",
+            "ObjectPath": "UE_game/Content/Art/UI/TexturesAtlas/SkillStore/Atlas/UI_SkillStore_tuijiandapei_Sprite.1"
+          }
+        },
+        "Hovered": {
+          "ImageSize": {
+            "X": 374.4,
+            "Y": 190.08
+          },
+          "ResourceObject": {
+            "ObjectName": "PaperSprite'UI_SkillStore_tuijiandapei_Sprite'",
+            "ObjectPath": "UE_game/Content/Art/UI/TexturesAtlas/SkillStore/Atlas/UI_SkillStore_tuijiandapei_Sprite.1"
+          }
+        },
+        "Pressed": {
+          "ImageSize": {
+            "X": 374.4,
+            "Y": 190.08
+          },
+          "ResourceObject": {
+            "ObjectName": "PaperSprite'UI_SkillStore_tuijiandapei_Sprite'",
+            "ObjectPath": "UE_game/Content/Art/UI/TexturesAtlas/SkillStore/Atlas/UI_SkillStore_tuijiandapei_Sprite.1"
+          }
+        },
+        "Disabled": {
+          "ImageSize": {
+            "X": 195.0,
+            "Y": 99.0
+          },
+          "ResourceObject": {
+            "ObjectName": "PaperSprite'UI_SkillStore_tuijiandapei_Sprite'",
+            "ObjectPath": "UE_game/Content/Art/UI/TexturesAtlas/SkillStore/Atlas/UI_SkillStore_tuijiandapei_Sprite.1"
+          }
+        }
+      },
+      "Slots": [
+        {
+          "ObjectName": "ButtonSlot'SkillStoreItem_C:WidgetTree.AdviseBtn.ButtonSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.4"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'SkillStoreItem_C:WidgetTree.GoodPanel.CanvasPanelSlot_10'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.47"
+      },
+      "Visibility": "ESlateVisibility::Collapsed"
+    }
+  },
+  {
+    "Type": "UIButton",
+    "Name": "CancelSearchBtn",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIButton'",
+    "Outer": {
+      "ObjectName": "WidgetTree'SkillStoreItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.117"
+    },
+    "Properties": {
+      "IconImage": {
+        "ImageSize": {
+          "X": 61.44,
+          "Y": 61.44
+        }
+      },
+      "WidgetStyle": {
+        "Normal": {
+          "ImageSize": {
+            "X": 67.0,
+            "Y": 54.0
+          },
+          "ResourceObject": {
+            "ObjectName": "PaperSprite'UI_SkillStore_quxiaosousuo_Sprite'",
+            "ObjectPath": "UE_game/Content/Art/UI/TexturesAtlas/SkillStore/Atlas/UI_SkillStore_quxiaosousuo_Sprite.1"
+          },
+          "DrawAs": "ESlateBrushDrawType::Image"
+        },
+        "Hovered": {
+          "ImageSize": {
+            "X": 67.0,
+            "Y": 54.0
+          },
+          "ResourceObject": {
+            "ObjectName": "PaperSprite'UI_SkillStore_quxiaosousuo_Sprite'",
+            "ObjectPath": "UE_game/Content/Art/UI/TexturesAtlas/SkillStore/Atlas/UI_SkillStore_quxiaosousuo_Sprite.1"
+          },
+          "DrawAs": "ESlateBrushDrawType::Image"
+        },
+        "Pressed": {
+          "ImageSize": {
+            "X": 67.0,
+            "Y": 54.0
+          },
+          "ResourceObject": {
+            "ObjectName": "PaperSprite'UI_SkillStore_quxiaosousuo_Sprite'",
+            "ObjectPath": "UE_game/Content/Art/UI/TexturesAtlas/SkillStore/Atlas/UI_SkillStore_quxiaosousuo_Sprite.1"
+          },
+          "DrawAs": "ESlateBrushDrawType::Image"
+        },
+        "Disabled": {
+          "ImageSize": {
+            "X": 35.0,
+            "Y": 28.0
+          },
+          "ResourceObject": {
+            "ObjectName": "PaperSprite'UI_SkillStore_quxiaosousuo_Sprite'",
+            "ObjectPath": "UE_game/Content/Art/UI/TexturesAtlas/SkillStore/Atlas/UI_SkillStore_quxiaosousuo_Sprite.1"
+          }
+        },
+        "NormalPadding": {
+          "Left": 0.0,
+          "Top": 0.0,
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "PressedPadding": {
+          "Left": 0.0,
+          "Top": 0.0,
+          "Right": 0.0,
+          "Bottom": 0.0
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'SkillStoreItem_C:WidgetTree.GoodPanel.CanvasPanelSlot_7'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.51"
+      }
+    }
+  },
+  {
+    "Type": "UIButton",
+    "Name": "SearchBtn",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIButton'",
+    "Outer": {
+      "ObjectName": "WidgetTree'SkillStoreItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.117"
+    },
+    "Properties": {
+      "IconImage": {
+        "ImageSize": {
+          "X": 61.44,
+          "Y": 61.44
+        }
+      },
+      "bBindEnter": true,
+      "WidgetStyle": {
+        "Normal": {
+          "ImageSize": {
+            "X": 123.0,
+            "Y": 75.0
+          },
+          "ResourceObject": {
+            "ObjectName": "PaperSprite'UI_SkillStore_chazhao_Sprite'",
+            "ObjectPath": "UE_game/Content/Art/UI/TexturesAtlas/SkillStore/Atlas/UI_SkillStore_chazhao_Sprite.1"
+          },
+          "DrawAs": "ESlateBrushDrawType::Image"
+        },
+        "Hovered": {
+          "ImageSize": {
+            "X": 123.0,
+            "Y": 75.0
+          },
+          "ResourceObject": {
+            "ObjectName": "PaperSprite'UI_SkillStore_chazhao_Sprite'",
+            "ObjectPath": "UE_game/Content/Art/UI/TexturesAtlas/SkillStore/Atlas/UI_SkillStore_chazhao_Sprite.1"
+          },
+          "DrawAs": "ESlateBrushDrawType::Image"
+        },
+        "Pressed": {
+          "ImageSize": {
+            "X": 123.0,
+            "Y": 75.0
+          },
+          "ResourceObject": {
+            "ObjectName": "PaperSprite'UI_SkillStore_chazhao_Sprite'",
+            "ObjectPath": "UE_game/Content/Art/UI/TexturesAtlas/SkillStore/Atlas/UI_SkillStore_chazhao_Sprite.1"
+          },
+          "DrawAs": "ESlateBrushDrawType::Image"
+        },
+        "Disabled": {
+          "ImageSize": {
+            "X": 64.0,
+            "Y": 39.0
+          },
+          "ResourceObject": {
+            "ObjectName": "PaperSprite'UI_SkillStore_chazhao_Sprite'",
+            "ObjectPath": "UE_game/Content/Art/UI/TexturesAtlas/SkillStore/Atlas/UI_SkillStore_chazhao_Sprite.1"
+          }
+        },
+        "NormalPadding": {
+          "Left": 0.0,
+          "Top": 0.0,
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "PressedPadding": {
+          "Left": 0.0,
+          "Top": 0.0,
+          "Right": 0.0,
+          "Bottom": 0.0
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'SkillStoreItem_C:WidgetTree.GoodPanel.CanvasPanelSlot_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.48"
+      }
+    }
+  },
+  {
+    "Type": "UIButton",
+    "Name": "SortBtn1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIButton'",
+    "Outer": {
+      "ObjectName": "WidgetTree'SkillStoreItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.117"
+    },
+    "Properties": {
+      "IconImage": {
+        "ImageSize": {
+          "X": 61.44,
+          "Y": 61.44
+        }
+      },
+      "WidgetStyle": {
+        "Normal": {
+          "ImageSize": {
+            "X": 330.24,
+            "Y": 132.48
+          },
+          "ResourceObject": {
+            "ObjectName": "PaperSprite'UI_SkillStore_morenpaixubai_Sprite'",
+            "ObjectPath": "UE_game/Content/Art/UI/TexturesAtlas/SkillStore/Atlas/UI_SkillStore_morenpaixubai_Sprite.1"
+          }
+        },
+        "Hovered": {
+          "ImageSize": {
+            "X": 330.24,
+            "Y": 132.48
+          },
+          "ResourceObject": {
+            "ObjectName": "PaperSprite'UI_SkillStore_morenpaixubai_Sprite'",
+            "ObjectPath": "UE_game/Content/Art/UI/TexturesAtlas/SkillStore/Atlas/UI_SkillStore_morenpaixubai_Sprite.1"
+          }
+        },
+        "Pressed": {
+          "ImageSize": {
+            "X": 330.24,
+            "Y": 132.48
+          },
+          "ResourceObject": {
+            "ObjectName": "PaperSprite'UI_SkillStore_morenpaixubai_Sprite'",
+            "ObjectPath": "UE_game/Content/Art/UI/TexturesAtlas/SkillStore/Atlas/UI_SkillStore_morenpaixubai_Sprite.1"
+          }
+        },
+        "Disabled": {
+          "ImageSize": {
+            "X": 172.0,
+            "Y": 69.0
+          },
+          "ResourceObject": {
+            "ObjectName": "PaperSprite'UI_SkillStore_morenpaixubai_Sprite'",
+            "ObjectPath": "UE_game/Content/Art/UI/TexturesAtlas/SkillStore/Atlas/UI_SkillStore_morenpaixubai_Sprite.1"
+          }
+        }
+      },
+      "Slots": [
+        {
+          "ObjectName": "ButtonSlot'SkillStoreItem_C:WidgetTree.SortBtn1.ButtonSlot_2'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.5"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'SkillStoreItem_C:WidgetTree.Sort1BtnPanel.CanvasPanelSlot_5'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.52"
+      }
+    }
+  },
+  {
+    "Type": "UIButton",
+    "Name": "SortBtn2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIButton'",
+    "Outer": {
+      "ObjectName": "WidgetTree'SkillStoreItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.117"
+    },
+    "Properties": {
+      "IconImage": {
+        "ImageSize": {
+          "X": 61.44,
+          "Y": 61.44
+        }
+      },
+      "WidgetStyle": {
+        "Normal": {
+          "ImageSize": {
+            "X": 330.24,
+            "Y": 132.48
+          },
+          "ResourceObject": {
+            "ObjectName": "PaperSprite'UI_SkillStore_morenpaixubai_Sprite'",
+            "ObjectPath": "UE_game/Content/Art/UI/TexturesAtlas/SkillStore/Atlas/UI_SkillStore_morenpaixubai_Sprite.1"
+          }
+        },
+        "Hovered": {
+          "ImageSize": {
+            "X": 330.24,
+            "Y": 132.48
+          },
+          "ResourceObject": {
+            "ObjectName": "PaperSprite'UI_SkillStore_morenpaixubai_Sprite'",
+            "ObjectPath": "UE_game/Content/Art/UI/TexturesAtlas/SkillStore/Atlas/UI_SkillStore_morenpaixubai_Sprite.1"
+          }
+        },
+        "Pressed": {
+          "ImageSize": {
+            "X": 330.24,
+            "Y": 132.48
+          },
+          "ResourceObject": {
+            "ObjectName": "PaperSprite'UI_SkillStore_morenpaixubai_Sprite'",
+            "ObjectPath": "UE_game/Content/Art/UI/TexturesAtlas/SkillStore/Atlas/UI_SkillStore_morenpaixubai_Sprite.1"
+          }
+        },
+        "Disabled": {
+          "ImageSize": {
+            "X": 172.0,
+            "Y": 69.0
+          },
+          "ResourceObject": {
+            "ObjectName": "PaperSprite'UI_SkillStore_morenpaixubai_Sprite'",
+            "ObjectPath": "UE_game/Content/Art/UI/TexturesAtlas/SkillStore/Atlas/UI_SkillStore_morenpaixubai_Sprite.1"
+          }
+        }
+      },
+      "Slots": [
+        {
+          "ObjectName": "ButtonSlot'SkillStoreItem_C:WidgetTree.SortBtn2.ButtonSlot_2'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.6"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'SkillStoreItem_C:WidgetTree.Sort2BtnPanel.CanvasPanelSlot_5'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.53"
+      }
+    }
+  },
+  {
+    "Type": "UIEditText",
+    "Name": "Input",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIEditText'",
+    "Outer": {
+      "ObjectName": "WidgetTree'SkillStoreItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.117"
+    },
+    "Properties": {
+      "CurrStyleId": 1215,
+      "WidgetStyle": {
+        "Font": {
+          "FontObject": {
+            "ObjectName": "Font'tl_main_Font'",
+            "ObjectPath": "UE_game/Content/Art/UI/Fonts/tl_main_Font.0"
+          },
+          "Size": 24
+        },
+        "ColorAndOpacity": {
+          "SpecifiedColor": {
+            "R": 1.0,
+            "G": 1.0,
+            "B": 1.0,
+            "A": 1.0,
+            "Hex": "FFFFFF"
+          },
+          "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+        },
+        "CaretImage": {
+          "ImageSize": {
+            "X": 30.72,
+            "Y": 30.72
+          }
+        }
+      },
+      "VerticalJustification": "ETextVerticalJustify::Center",
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'SkillStoreItem_C:WidgetTree.GoodPanel.CanvasPanelSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.45"
+      },
+      "RenderTransform": {
+        "Shear": {
+          "X": -12.0,
+          "Y": 0.0
+        }
+      }
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "Defaltback1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'SkillStoreItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.117"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/TexturesAtlas/SkillStore/Atlas/UI_SkillStore_morenpaixu_Sprite.UI_SkillStore_morenpaixu_Sprite",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 330.24,
+          "Y": 132.48
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'SkillStoreItem_C:WidgetTree.CanvasPanel_148.CanvasPanelSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.24"
+      }
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "Defaltback2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'SkillStoreItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.117"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/TexturesAtlas/SkillStore/Atlas/UI_SkillStore_morenpaixu_Sprite.UI_SkillStore_morenpaixu_Sprite",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 330.24,
+          "Y": 132.48
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'SkillStoreItem_C:WidgetTree.CanvasPanel.CanvasPanelSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.19"
+      }
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "Image_831",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'SkillStoreItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.117"
+    },
+    "Properties": {
+      "IsBanHduiResize": true,
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/TexturesAtlas/SkillStore/Atlas/UI_SkillStore_jinengshuru_Sprite.UI_SkillStore_jinengshuru_Sprite",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 61.44,
+          "Y": 61.44
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'SkillStoreItem_C:WidgetTree.GoodPanel.CanvasPanelSlot_5'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.50"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "paixu1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'SkillStoreItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.117"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/TexturesAtlas/SkillStore/Atlas/UI_SkillStore_paixu_Sprite.UI_SkillStore_paixu_Sprite",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 28.8,
+          "Y": 30.72
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'SkillStoreItem_C:WidgetTree.CanvasPanel_148.CanvasPanelSlot_3'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.27"
+      }
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "Paixu2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'SkillStoreItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.117"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/TexturesAtlas/SkillStore/Atlas/UI_SkillStore_paixu_Sprite.UI_SkillStore_paixu_Sprite",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 28.8,
+          "Y": 30.72
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'SkillStoreItem_C:WidgetTree.CanvasPanel.CanvasPanelSlot_9'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.22"
+      }
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "Paixubai1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'SkillStoreItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.117"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/TexturesAtlas/SkillStore/Atlas/UI_SkillStore_paixubai_Sprite.UI_SkillStore_paixubai_Sprite",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 28.8,
+          "Y": 30.72
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'SkillStoreItem_C:WidgetTree.CanvasPanel_148.CanvasPanelSlot_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.26"
+      }
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "paixubai2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'SkillStoreItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.117"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/TexturesAtlas/SkillStore/Atlas/UI_SkillStore_paixubai_Sprite.UI_SkillStore_paixubai_Sprite",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 28.8,
+          "Y": 30.72
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'SkillStoreItem_C:WidgetTree.CanvasPanel.CanvasPanelSlot_8'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.21"
+      }
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "UIImage_152",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'SkillStoreItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.117"
+    },
+    "Properties": {
+      "IsBanHduiResize": true,
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/TexturesAtlas/SkillStore/Atlas/UI_SkillStore_ceheibian_Sprite.UI_SkillStore_ceheibian_Sprite",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 122.88,
+          "Y": 122.88
+        },
+        "Margin": {
+          "Left": 0.5,
+          "Top": 0.5,
+          "Right": 0.5,
+          "Bottom": 0.5
+        },
+        "DrawAs": "ESlateBrushDrawType::Box"
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'SkillStoreItem_C:WidgetTree.ViewPanel.CanvasPanelSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.56"
+      },
+      "RenderTransformPivot": {
+        "X": 0.0,
+        "Y": 0.0
+      }
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "UIImage_275",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'SkillStoreItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.117"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/UIEffect/UITexture/SkillStore/UI_T_SkillStore02.UI_T_SkillStore02",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 564.48,
+          "Y": 1368.96
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'SkillStoreItem_C:WidgetTree.FullView.CanvasPanelSlot_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.34"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "UIImage_348",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'SkillStoreItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.117"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/UIEffect/UITexture/SkillStore/UI_T_SkillStore01.UI_T_SkillStore01",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 562.56,
+          "Y": 1440.0
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'SkillStoreItem_C:WidgetTree.FullView.CanvasPanelSlot_3'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.36"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "UIImage_417",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'SkillStoreItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.117"
+    },
+    "Properties": {
+      "IsBanHduiResize": true,
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/TexturesAtlas/SkillStore/Atlas/UI_SkillStore_baibg_Sprite.UI_SkillStore_baibg_Sprite",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 122.88,
+          "Y": 122.88
+        },
+        "Margin": {
+          "Left": 0.5,
+          "Top": 0.5,
+          "Right": 0.5,
+          "Bottom": 0.5
+        },
+        "DrawAs": "ESlateBrushDrawType::Box"
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'SkillStoreItem_C:WidgetTree.ViewPanel.CanvasPanelSlot_3'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.57"
+      },
+      "RenderTransformPivot": {
+        "X": 0.0,
+        "Y": 0.0
+      }
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "UIImage_dit02_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'SkillStoreItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.117"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/UIEffect/UIMaterial/Inst/Skill/UI_MI_Dissoltion__EquipTransform_Ljh4.UI_MI_Dissoltion__EquipTransform_Ljh4",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 894.72,
+          "Y": 1411.2
+        },
+        "TintColor": {
+          "SpecifiedColor": {
+            "R": 0.0,
+            "G": 0.0,
+            "B": 0.0,
+            "A": 0.3,
+            "Hex": "4C000000"
+          }
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'SkillStoreItem_C:WidgetTree.FullView.CanvasPanelSlot_7'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.39"
+      },
+      "RenderTransform": {
+        "Scale": {
+          "X": 1.0,
+          "Y": -1.0
+        },
+        "Angle": 19.0
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "UIImage_dit02_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'SkillStoreItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.117"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/UIEffect/UIMaterial/Inst/Skill/UI_MI_Dissoltion__EquipTransform_Ljh4.UI_MI_Dissoltion__EquipTransform_Ljh4",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 894.72,
+          "Y": 1411.2
+        },
+        "TintColor": {
+          "SpecifiedColor": {
+            "R": 0.0,
+            "G": 0.0,
+            "B": 0.0,
+            "A": 0.3,
+            "Hex": "4C000000"
+          }
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'SkillStoreItem_C:WidgetTree.FullView.CanvasPanelSlot_6'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.38"
+      },
+      "RenderTransform": {
+        "Scale": {
+          "X": -1.0,
+          "Y": 1.0
+        },
+        "Angle": 19.0
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "UIImage_L03",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'SkillStoreItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.117"
+    },
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 61.44,
+          "Y": 61.44
+        }
+      },
+      "ColorAndOpacity": {
+        "R": 0.0,
+        "G": 0.0,
+        "B": 0.0,
+        "A": 1.0,
+        "Hex": "000000"
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'SkillStoreItem_C:WidgetTree.FxBgLeftPanel.CanvasPanelSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.41"
+      },
+      "RenderTransform": {
+        "Translation": {
+          "X": 0.0,
+          "Y": -3417.5999
+        },
+        "Scale": {
+          "X": 1.0,
+          "Y": 2.7
+        }
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "UIImage_L04",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'SkillStoreItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.117"
+    },
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 61.44,
+          "Y": 61.44
+        }
+      },
+      "ColorAndOpacity": {
+        "R": 0.0,
+        "G": 0.0,
+        "B": 0.0,
+        "A": 1.0,
+        "Hex": "000000"
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'SkillStoreItem_C:WidgetTree.FxBgLeftPanel.CanvasPanelSlot_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.42"
+      },
+      "RenderTransform": {
+        "Translation": {
+          "X": -330.24,
+          "Y": 0.0
+        },
+        "Scale": {
+          "X": 4.6,
+          "Y": 1.0
+        }
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "UIImage_R04",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'SkillStoreItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.117"
+    },
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 61.44,
+          "Y": 61.44
+        }
+      },
+      "ColorAndOpacity": {
+        "R": 0.0,
+        "G": 0.0,
+        "B": 0.0,
+        "A": 1.0,
+        "Hex": "000000"
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'SkillStoreItem_C:WidgetTree.FxBgRightPanel.CanvasPanelSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.43"
+      },
+      "RenderTransform": {
+        "Translation": {
+          "X": 0.0,
+          "Y": -656.64
+        }
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "UIImage_R05",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'SkillStoreItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.117"
+    },
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 61.44,
+          "Y": 61.44
+        }
+      },
+      "ColorAndOpacity": {
+        "R": 0.0,
+        "G": 0.0,
+        "B": 0.0,
+        "A": 1.0,
+        "Hex": "000000"
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'SkillStoreItem_C:WidgetTree.FxBgRightPanel.CanvasPanelSlot_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.44"
+      },
+      "RenderTransform": {
+        "Translation": {
+          "X": 0.0,
+          "Y": -2350.0798
+        }
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "UIScrollBox",
+    "Name": "ScrollView",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIScrollBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'SkillStoreItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.117"
+    },
+    "Properties": {
+      "WidgetStyle": {
+        "TopShadowBrush": {
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 1.0,
+              "G": 1.0,
+              "B": 1.0,
+              "A": 0.0,
+              "Hex": "FFFFFF"
+            }
+          },
+          "DrawAs": "ESlateBrushDrawType::Image"
+        },
+        "BottomShadowBrush": {
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 1.0,
+              "G": 1.0,
+              "B": 1.0,
+              "A": 0.0,
+              "Hex": "FFFFFF"
+            }
+          }
+        }
+      },
+      "WidgetBarStyle": {
+        "HorizontalBackgroundImage": {
+          "ImageSize": {
+            "X": 4.0,
+            "Y": 111.0
+          },
+          "ResourceObject": {
+            "ObjectName": "PaperSprite'UI_SkillStore_huadonghuang_Sprite'",
+            "ObjectPath": "UE_game/Content/Art/UI/TexturesAtlas/SkillStore/Atlas/UI_SkillStore_huadonghuang_Sprite.1"
+          }
+        },
+        "VerticalBackgroundImage": {
+          "ImageSize": {
+            "X": 4.0,
+            "Y": 456.0
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'UI_Bag_huadong'",
+            "ObjectPath": "UE_game/Content/Art/UI/Textures/Common/ScrollBar/NoAtlas/UI_Bag_huadong.0"
+          }
+        },
+        "VerticalTopSlotImage": {
+          "ImageSize": {
+            "X": 4.0,
+            "Y": 111.0
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 1.0,
+              "G": 1.0,
+              "B": 1.0,
+              "A": 0.0,
+              "Hex": "FFFFFF"
+            }
+          },
+          "ResourceObject": {
+            "ObjectName": "PaperSprite'UI_SkillStore_huadonghuang_Sprite'",
+            "ObjectPath": "UE_game/Content/Art/UI/TexturesAtlas/SkillStore/Atlas/UI_SkillStore_huadonghuang_Sprite.1"
+          }
+        },
+        "HorizontalTopSlotImage": {
+          "ImageSize": {
+            "X": 4.0,
+            "Y": 8.0
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 1.0,
+              "G": 1.0,
+              "B": 1.0,
+              "A": 0.0,
+              "Hex": "FFFFFF"
+            }
+          }
+        },
+        "VerticalBottomSlotImage": {
+          "ImageSize": {
+            "X": 6.0,
+            "Y": 111.0
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 1.0,
+              "G": 1.0,
+              "B": 1.0,
+              "A": 0.0,
+              "Hex": "FFFFFF"
+            }
+          },
+          "ResourceObject": {
+            "ObjectName": "PaperSprite'UI_SkillStore_huadonghuang_Sprite'",
+            "ObjectPath": "UE_game/Content/Art/UI/TexturesAtlas/SkillStore/Atlas/UI_SkillStore_huadonghuang_Sprite.1"
+          }
+        },
+        "HorizontalBottomSlotImage": {
+          "ImageSize": {
+            "X": 4.0,
+            "Y": 8.0
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 1.0,
+              "G": 1.0,
+              "B": 1.0,
+              "A": 0.0,
+              "Hex": "FFFFFF"
+            }
+          }
+        },
+        "NormalThumbImage": {
+          "ImageSize": {
+            "X": 4.0,
+            "Y": 66.0
+          },
+          "Margin": {
+            "Left": 0.0,
+            "Top": 0.3,
+            "Right": 0.0,
+            "Bottom": 0.3
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'UI_Bag_huadongbai'",
+            "ObjectPath": "UE_game/Content/Art/UI/Textures/Common/ScrollBar/NoAtlas/UI_Bag_huadongbai.0"
+          }
+        },
+        "HoveredThumbImage": {
+          "ImageSize": {
+            "X": 4.0,
+            "Y": 66.0
+          },
+          "Margin": {
+            "Left": 0.0,
+            "Top": 0.3,
+            "Right": 0.0,
+            "Bottom": 0.3
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'UI_Bag_huadongbai'",
+            "ObjectPath": "UE_game/Content/Art/UI/Textures/Common/ScrollBar/NoAtlas/UI_Bag_huadongbai.0"
+          }
+        },
+        "DraggedThumbImage": {
+          "ImageSize": {
+            "X": 4.0,
+            "Y": 66.0
+          },
+          "Margin": {
+            "Left": 0.0,
+            "Top": 0.3,
+            "Right": 0.0,
+            "Bottom": 0.3
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'UI_Bag_huadongbai'",
+            "ObjectPath": "UE_game/Content/Art/UI/Textures/Common/ScrollBar/NoAtlas/UI_Bag_huadongbai.0"
+          }
+        }
+      },
+      "ScrollbarThickness": {
+        "X": 4.0,
+        "Y": 8.0
+      },
+      "Slots": [
+        {
+          "ObjectName": "ScrollBoxSlot'SkillStoreItem_C:WidgetTree.ScrollView.ScrollBoxSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.84"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'SkillStoreItem_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.23"
+      },
+      "Clipping": "EWidgetClipping::ClipToBoundsAlways"
+    }
+  },
+  {
+    "Type": "UITextBlock",
+    "Name": "Text1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UITextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'SkillStoreItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.117"
+    },
+    "Properties": {
+      "CurrStyleId": 1223,
+      "Text": {
+        "Namespace": "",
+        "Key": "53A60C954BD5257D66C05A8D645A22D2",
+        "SourceString": "默认排序",
+        "LocalizedString": "默认排序"
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'SkillStoreItem_C:WidgetTree.CanvasPanel_148.CanvasPanelSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.25"
+      },
+      "Visibility": "ESlateVisibility::HitTestInvisible"
+    }
+  },
+  {
+    "Type": "UITextBlock",
+    "Name": "Text2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UITextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'SkillStoreItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.117"
+    },
+    "Properties": {
+      "CurrStyleId": 1224,
+      "Text": {
+        "Namespace": "",
+        "Key": "E631CF3D4556DF6F313E3EA6EA221555",
+        "SourceString": "伤害排序",
+        "LocalizedString": "伤害排序"
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'SkillStoreItem_C:WidgetTree.CanvasPanel.CanvasPanelSlot_7'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.20"
+      },
+      "Visibility": "ESlateVisibility::HitTestInvisible"
+    }
+  },
+  {
+    "Type": "UITextBlock",
+    "Name": "UITextBlock_140",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UITextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'SkillStoreItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.117"
+    },
+    "Properties": {
+      "CurrStyleId": 1221,
+      "CurrTextKey": "Func_SkillCtrl_Skill_Group",
+      "Text": {
+        "Namespace": "UMG",
+        "Key": "TextBlockDefaultValue",
+        "SourceString": "Text Block",
+        "LocalizedString": "Text Block"
+      },
+      "Slot": {
+        "ObjectName": "ButtonSlot'SkillStoreItem_C:WidgetTree.AdviseBtn.ButtonSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.4"
+      },
+      "Visibility": "ESlateVisibility::Collapsed"
+    }
+  },
+  {
+    "Type": "UniformGridPanel",
+    "Name": "GridView",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UniformGridPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'SkillStoreItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.117"
+    },
+    "Properties": {
+      "SlotPadding": {
+        "Left": 23.039999,
+        "Top": -19.199999,
+        "Right": 5.7599998
+      },
+      "Slot": {
+        "ObjectName": "ScrollBoxSlot'SkillStoreItem_C:WidgetTree.ScrollView.ScrollBoxSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.84"
+      }
+    }
+  },
+  {
+    "Type": "WidgetAnimation",
+    "Name": "CreatSkillStoreItem_INST",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetAnimation'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'SkillStoreItem_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.1"
+    },
+    "Properties": {
+      "MovieScene": {
+        "ObjectName": "MovieScene'SkillStoreItem_C:CreatSkillStoreItem_INST.CreatSkillStoreItem'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.58"
+      },
+      "AnimationBindings": [
+        {
+          "WidgetName": "UIImage_L03",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "962B0CBA-4A017A0E-D4CEE4AA-9E0D1018",
+          "bIsRootWidget": false
+        },
+        {
+          "WidgetName": "UIImage_L04",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "5B912D7D-4CD44EBF-4F6FE698-94F5206C",
+          "bIsRootWidget": false
+        },
+        {
+          "WidgetName": "UIImage_R04",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "961FC92B-44216BC3-5CB49890-8F219BC0",
+          "bIsRootWidget": false
+        },
+        {
+          "WidgetName": "UIImage_R05",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "7F36340C-45613F43-2F0D6297-ECD8D12B",
+          "bIsRootWidget": false
+        },
+        {
+          "WidgetName": "UIImage_dit02_1",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "47466846-4C6F2259-C3911F8A-16F923E0",
+          "bIsRootWidget": false
+        },
+        {
+          "WidgetName": "UIImage_dit02_2",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "4A9AFD50-4F6F5EB3-5B7AF6B6-326B1B73",
+          "bIsRootWidget": false
+        }
+      ],
+      "DisplayLabel": "CreatSkillStoreItem",
+      "CompiledData": {
+        "ObjectName": "MovieSceneCompiledData'SkillStoreItem_C:CreatSkillStoreItem_INST.CompiledData'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.79"
+      },
+      "Signature": "10FCF5BC-4BF3C332-26DFFEB9-930B1961"
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetTree'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'SkillStoreItem_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.1"
+    },
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "CanvasPanel'SkillStoreItem_C:WidgetTree.FullView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/SkillStore/SkillStoreItem.11"
+      }
+    }
+  }
+]

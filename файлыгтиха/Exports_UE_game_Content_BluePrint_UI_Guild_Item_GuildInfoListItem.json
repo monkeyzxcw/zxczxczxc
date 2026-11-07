@@ -1,0 +1,1835 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_GuildInfoListItem",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'GuildInfoListItem_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.4"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_Event_bIsSelected",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_Event_bIsExpanded",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "Function",
+    "Name": "BP_OnItemSelectionChanged",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'GuildInfoListItem_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.4"
+    },
+    "SuperStruct": {
+      "ObjectName": "Function'UserListEntry:BP_OnItemSelectionChanged'",
+      "ObjectPath": "/Script/UMG"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "bIsSelected",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "BP_OnItemExpansionChanged",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'GuildInfoListItem_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.4"
+    },
+    "SuperStruct": {
+      "ObjectName": "Function'UserListEntry:BP_OnItemExpansionChanged'",
+      "ObjectPath": "/Script/UMG"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "bIsExpanded",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "BP_OnEntryReleased",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'GuildInfoListItem_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.4"
+    },
+    "SuperStruct": {
+      "ObjectName": "Function'UserListEntry:BP_OnEntryReleased'",
+      "ObjectPath": "/Script/UMG"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "GuildInfoListItem_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Package": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'GuildInfoListItem_C:WidgetTree'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.45"
+      },
+      "bClassRequiresNativeTick": true,
+      "UberGraphFunction": {
+        "ObjectName": "Function'GuildInfoListItem_C:ExecuteUbergraph_GuildInfoListItem'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'UIListViewItem'",
+      "ObjectPath": "/Script/UE_game"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'GuildInfoListItem_C:BP_OnEntryReleased'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.3"
+      },
+      {
+        "ObjectName": "Function'GuildInfoListItem_C:BP_OnItemExpansionChanged'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.2"
+      },
+      {
+        "ObjectName": "Function'GuildInfoListItem_C:BP_OnItemSelectionChanged'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.1"
+      },
+      {
+        "ObjectName": "Function'GuildInfoListItem_C:ExecuteUbergraph_GuildInfoListItem'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "GuildIcon",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'GuildIcon_C'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildIcon.0"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "InvitedNoBtn",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIButton'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "InvitedYesBtn",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIButton'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ItemHintBg",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "RefusedBtn",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIButton'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "RequestedBtn",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIButton'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "StopRequestedBtn",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIButton'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "UIImage_3",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "UIImage_52",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "UIImage_69",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "UIImage_72",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "UIImage_139",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "UIImage_211",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "UIImage_293",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_GuildInfoListItem": {
+        "ObjectName": "Function'GuildInfoListItem_C:ExecuteUbergraph_GuildInfoListItem'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.0"
+      },
+      "BP_OnItemSelectionChanged": {
+        "ObjectName": "Function'GuildInfoListItem_C:BP_OnItemSelectionChanged'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.1"
+      },
+      "BP_OnItemExpansionChanged": {
+        "ObjectName": "Function'GuildInfoListItem_C:BP_OnItemExpansionChanged'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.2"
+      },
+      "BP_OnEntryReleased": {
+        "ObjectName": "Function'GuildInfoListItem_C:BP_OnEntryReleased'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.3"
+      }
+    },
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "Interfaces": [
+      {
+        "Class": {
+          "ObjectName": "Class'UserListEntry'",
+          "ObjectPath": "/Script/UMG"
+        },
+        "PointerProperty": null,
+        "PointerOffset": 0,
+        "bImplementedByK2": true
+      }
+    ],
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "GuildInfoListItem_C'Default__GuildInfoListItem_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.5"
+    }
+  },
+  {
+    "Type": "GuildInfoListItem_C",
+    "Name": "Default__GuildInfoListItem_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.GuildInfoListItem_C'",
+    "Package": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem",
+    "Properties": {
+      "UberGraphFrame": {},
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "ButtonSlot",
+    "Name": "ButtonSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ButtonSlot'",
+    "Outer": {
+      "ObjectName": "UIButton'GuildInfoListItem_C:WidgetTree.InvitedNoBtn'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.27"
+    },
+    "Properties": {
+      "Padding": {
+        "Left": 7.68,
+        "Top": 3.84,
+        "Right": 7.68,
+        "Bottom": 3.84
+      },
+      "Parent": {
+        "ObjectName": "UIButton'GuildInfoListItem_C:WidgetTree.InvitedNoBtn'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.27"
+      },
+      "Content": {
+        "ObjectName": "UIImage'GuildInfoListItem_C:WidgetTree.UIImage_139'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.33"
+      }
+    }
+  },
+  {
+    "Type": "ButtonSlot",
+    "Name": "ButtonSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ButtonSlot'",
+    "Outer": {
+      "ObjectName": "UIButton'GuildInfoListItem_C:WidgetTree.InvitedYesBtn'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.28"
+    },
+    "Properties": {
+      "Padding": {
+        "Left": 7.68,
+        "Top": 3.84,
+        "Right": 7.68,
+        "Bottom": 3.84
+      },
+      "Parent": {
+        "ObjectName": "UIButton'GuildInfoListItem_C:WidgetTree.InvitedYesBtn'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.28"
+      },
+      "Content": {
+        "ObjectName": "UIImage'GuildInfoListItem_C:WidgetTree.UIImage_52'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.37"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_166",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'GuildInfoListItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.45"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'GuildInfoListItem_C:WidgetTree.CanvasPanel_166.CanvasPanelSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.9"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'GuildInfoListItem_C:WidgetTree.CanvasPanel_166.CanvasPanelSlot_12'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.12"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'GuildInfoListItem_C:WidgetTree.CanvasPanel_166.CanvasPanelSlot_11'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.11"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'GuildInfoListItem_C:WidgetTree.CanvasPanel_166.CanvasPanelSlot_3'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.19"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'GuildInfoListItem_C:WidgetTree.CanvasPanel_166.CanvasPanelSlot_7'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.23"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'GuildInfoListItem_C:WidgetTree.CanvasPanel_166.CanvasPanelSlot_2'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.18"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'GuildInfoListItem_C:WidgetTree.CanvasPanel_166.CanvasPanelSlot_15'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.15"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'GuildInfoListItem_C:WidgetTree.CanvasPanel_166.CanvasPanelSlot_8'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.24"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'GuildInfoListItem_C:WidgetTree.CanvasPanel_166.CanvasPanelSlot_6'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.22"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'GuildInfoListItem_C:WidgetTree.CanvasPanel_166.CanvasPanelSlot_14'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.14"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'GuildInfoListItem_C:WidgetTree.CanvasPanel_166.CanvasPanelSlot_4'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.20"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'GuildInfoListItem_C:WidgetTree.CanvasPanel_166.CanvasPanelSlot_5'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.21"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'GuildInfoListItem_C:WidgetTree.CanvasPanel_166.CanvasPanelSlot_13'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.13"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'GuildInfoListItem_C:WidgetTree.CanvasPanel_166.CanvasPanelSlot_9'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.25"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'GuildInfoListItem_C:WidgetTree.CanvasPanel_166.CanvasPanelSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.10"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'GuildInfoListItem_C:WidgetTree.CanvasPanel_166.CanvasPanelSlot_18'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.16"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'GuildInfoListItem_C:WidgetTree.CanvasPanel_166.CanvasPanelSlot_19'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.17"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'GuildInfoListItem_C:WidgetTree.CanvasPanel_166'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.8"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 2311.68,
+          "Bottom": 203.51999
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "ZOrder": 1,
+      "Parent": {
+        "ObjectName": "CanvasPanel'GuildInfoListItem_C:WidgetTree.CanvasPanel_166'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.8"
+      },
+      "Content": {
+        "ObjectName": "UIImage'GuildInfoListItem_C:WidgetTree.UIImage_69'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.38"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'GuildInfoListItem_C:WidgetTree.CanvasPanel_166'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.8"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": -238.08,
+          "Right": 192.0,
+          "Bottom": 76.799995
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 1.0,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 1.0,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "ZOrder": 3,
+      "Parent": {
+        "ObjectName": "CanvasPanel'GuildInfoListItem_C:WidgetTree.CanvasPanel_166'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.8"
+      },
+      "Content": {
+        "ObjectName": "UIImage'GuildInfoListItem_C:WidgetTree.UIImage_3'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.36"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_11",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'GuildInfoListItem_C:WidgetTree.CanvasPanel_166'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.8"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": -220.79999,
+          "Top": -49.92,
+          "Right": 149.76,
+          "Bottom": 96.0
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 1.0,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 1.0,
+            "Y": 0.5
+          }
+        }
+      },
+      "bAutoSize": true,
+      "ZOrder": 4,
+      "Parent": {
+        "ObjectName": "CanvasPanel'GuildInfoListItem_C:WidgetTree.CanvasPanel_166'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.8"
+      },
+      "Content": {
+        "ObjectName": "UIButton'GuildInfoListItem_C:WidgetTree.InvitedNoBtn'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.27"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_12",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'GuildInfoListItem_C:WidgetTree.CanvasPanel_166'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.8"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": -407.03998,
+          "Top": -49.92,
+          "Right": 149.76,
+          "Bottom": 96.0
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 1.0,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 1.0,
+            "Y": 0.5
+          }
+        }
+      },
+      "bAutoSize": true,
+      "ZOrder": 4,
+      "Parent": {
+        "ObjectName": "CanvasPanel'GuildInfoListItem_C:WidgetTree.CanvasPanel_166'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.8"
+      },
+      "Content": {
+        "ObjectName": "UIButton'GuildInfoListItem_C:WidgetTree.InvitedYesBtn'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.28"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_13",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'GuildInfoListItem_C:WidgetTree.CanvasPanel_166'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.8"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 476.16,
+          "Top": -19.199999,
+          "Right": 768.0,
+          "Bottom": 57.6
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.0,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.0,
+            "Y": 0.5
+          }
+        }
+      },
+      "ZOrder": 3,
+      "Parent": {
+        "ObjectName": "CanvasPanel'GuildInfoListItem_C:WidgetTree.CanvasPanel_166'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.8"
+      },
+      "Content": {
+        "ObjectName": "UIShrinkTextBlock'GuildInfoListItem_C:WidgetTree.EnterLevel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.40"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_14",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'GuildInfoListItem_C:WidgetTree.CanvasPanel_166'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.8"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 472.31998,
+          "Top": -80.64,
+          "Right": 1344.0,
+          "Bottom": 57.6
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.0,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.0,
+            "Y": 0.5
+          }
+        }
+      },
+      "ZOrder": 3,
+      "Parent": {
+        "ObjectName": "CanvasPanel'GuildInfoListItem_C:WidgetTree.CanvasPanel_166'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.8"
+      },
+      "Content": {
+        "ObjectName": "UIShrinkTextBlock'GuildInfoListItem_C:WidgetTree.GuildName'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.44"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_15",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'GuildInfoListItem_C:WidgetTree.CanvasPanel_166'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.8"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 74.88,
+          "Top": -80.64,
+          "Right": 153.59999,
+          "Bottom": 153.59999
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.0,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.0,
+            "Y": 0.5
+          }
+        }
+      },
+      "ZOrder": 3,
+      "Parent": {
+        "ObjectName": "CanvasPanel'GuildInfoListItem_C:WidgetTree.CanvasPanel_166'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.8"
+      },
+      "Content": {
+        "ObjectName": "GuildIcon_C'GuildInfoListItem_C:WidgetTree.GuildIcon'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.26"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_18",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'GuildInfoListItem_C:WidgetTree.CanvasPanel_166'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.8"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 192.0,
+          "Bottom": 57.6
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.0,
+            "Y": 1.0
+          },
+          "Maximum": {
+            "X": 0.0,
+            "Y": 1.0
+          }
+        },
+        "Alignment": {
+          "X": 0.0,
+          "Y": 1.0
+        }
+      },
+      "bAutoSize": true,
+      "ZOrder": 2,
+      "Parent": {
+        "ObjectName": "CanvasPanel'GuildInfoListItem_C:WidgetTree.CanvasPanel_166'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.8"
+      },
+      "Content": {
+        "ObjectName": "UIImage'GuildInfoListItem_C:WidgetTree.UIImage_72'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.39"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_19",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'GuildInfoListItem_C:WidgetTree.CanvasPanel_166'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.8"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Top": 101.759995,
+          "Right": 192.0,
+          "Bottom": 57.6
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 1.0,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 1.0,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 1.0,
+          "Y": 1.0
+        }
+      },
+      "bAutoSize": true,
+      "ZOrder": 3,
+      "Parent": {
+        "ObjectName": "CanvasPanel'GuildInfoListItem_C:WidgetTree.CanvasPanel_166'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.8"
+      },
+      "Content": {
+        "ObjectName": "UIImage'GuildInfoListItem_C:WidgetTree.ItemHintBg'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.32"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'GuildInfoListItem_C:WidgetTree.CanvasPanel_166'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.8"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": -399.36,
+          "Top": -49.92,
+          "Right": 318.72,
+          "Bottom": 96.0
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 1.0,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 1.0,
+            "Y": 0.5
+          }
+        }
+      },
+      "ZOrder": 4,
+      "Parent": {
+        "ObjectName": "CanvasPanel'GuildInfoListItem_C:WidgetTree.CanvasPanel_166'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.8"
+      },
+      "Content": {
+        "ObjectName": "UIButton'GuildInfoListItem_C:WidgetTree.RefusedBtn'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.29"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'GuildInfoListItem_C:WidgetTree.CanvasPanel_166'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.8"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": -399.36,
+          "Top": -49.92,
+          "Right": 192.0,
+          "Bottom": 57.6
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 1.0,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 1.0,
+            "Y": 0.5
+          }
+        }
+      },
+      "bAutoSize": true,
+      "ZOrder": 4,
+      "Parent": {
+        "ObjectName": "CanvasPanel'GuildInfoListItem_C:WidgetTree.CanvasPanel_166'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.8"
+      },
+      "Content": {
+        "ObjectName": "UIButton'GuildInfoListItem_C:WidgetTree.StopRequestedBtn'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.31"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_4",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'GuildInfoListItem_C:WidgetTree.CanvasPanel_166'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.8"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 257.28,
+          "Top": -13.44,
+          "Right": 192.0,
+          "Bottom": 57.6
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.0,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.0,
+            "Y": 0.5
+          }
+        }
+      },
+      "bAutoSize": true,
+      "ZOrder": 3,
+      "Parent": {
+        "ObjectName": "CanvasPanel'GuildInfoListItem_C:WidgetTree.CanvasPanel_166'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.8"
+      },
+      "Content": {
+        "ObjectName": "UIImage'GuildInfoListItem_C:WidgetTree.UIImage_293'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.35"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_5",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'GuildInfoListItem_C:WidgetTree.CanvasPanel_166'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.8"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 299.52,
+          "Top": -19.199999,
+          "Right": 172.8,
+          "Bottom": 57.6
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.0,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.0,
+            "Y": 0.5
+          }
+        }
+      },
+      "ZOrder": 3,
+      "Parent": {
+        "ObjectName": "CanvasPanel'GuildInfoListItem_C:WidgetTree.CanvasPanel_166'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.8"
+      },
+      "Content": {
+        "ObjectName": "UIShrinkTextBlock'GuildInfoListItem_C:WidgetTree.GuildMemberNumber'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.43"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_6",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'GuildInfoListItem_C:WidgetTree.CanvasPanel_166'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.8"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 264.96,
+          "Top": -80.64,
+          "Right": 192.0,
+          "Bottom": 53.12
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.0,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.0,
+            "Y": 0.5
+          }
+        }
+      },
+      "ZOrder": 3,
+      "Parent": {
+        "ObjectName": "CanvasPanel'GuildInfoListItem_C:WidgetTree.CanvasPanel_166'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.8"
+      },
+      "Content": {
+        "ObjectName": "UIShrinkTextBlock'GuildInfoListItem_C:WidgetTree.GuildLevel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.42"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_7",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'GuildInfoListItem_C:WidgetTree.CanvasPanel_166'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.8"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": -399.36,
+          "Top": -49.92,
+          "Right": 318.72,
+          "Bottom": 96.0
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 1.0,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 1.0,
+            "Y": 0.5
+          }
+        }
+      },
+      "ZOrder": 4,
+      "Parent": {
+        "ObjectName": "CanvasPanel'GuildInfoListItem_C:WidgetTree.CanvasPanel_166'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.8"
+      },
+      "Content": {
+        "ObjectName": "UIButton'GuildInfoListItem_C:WidgetTree.RequestedBtn'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.30"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_8",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'GuildInfoListItem_C:WidgetTree.CanvasPanel_166'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.8"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 259.19998,
+          "Top": -80.64,
+          "Right": 192.0,
+          "Bottom": 57.6
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.0,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.0,
+            "Y": 0.5
+          }
+        }
+      },
+      "ZOrder": 3,
+      "Parent": {
+        "ObjectName": "CanvasPanel'GuildInfoListItem_C:WidgetTree.CanvasPanel_166'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.8"
+      },
+      "Content": {
+        "ObjectName": "UIImage'GuildInfoListItem_C:WidgetTree.UIImage_211'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.34"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_9",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'GuildInfoListItem_C:WidgetTree.CanvasPanel_166'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.8"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 255.36,
+          "Top": 48.0,
+          "Right": 1536.0,
+          "Bottom": 50.879997
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.0,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.0,
+            "Y": 0.5
+          }
+        }
+      },
+      "ZOrder": 3,
+      "Parent": {
+        "ObjectName": "CanvasPanel'GuildInfoListItem_C:WidgetTree.CanvasPanel_166'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.8"
+      },
+      "Content": {
+        "ObjectName": "UIShrinkTextBlock'GuildInfoListItem_C:WidgetTree.GuildDeclaration'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.41"
+      }
+    }
+  },
+  {
+    "Type": "GuildIcon_C",
+    "Name": "GuildIcon",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'UE_game/Content/BluePrint/UI/Guild/Item/GuildIcon.GuildIcon_C'",
+    "Outer": {
+      "ObjectName": "WidgetTree'GuildInfoListItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.45"
+    },
+    "Template": {
+      "ObjectName": "GuildIcon_C'Default__GuildIcon_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildIcon.1"
+    },
+    "Properties": {
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'GuildInfoListItem_C:WidgetTree.CanvasPanel_166.CanvasPanelSlot_15'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.15"
+      },
+      "Visibility": "ESlateVisibility::HitTestInvisible"
+    }
+  },
+  {
+    "Type": "UIButton",
+    "Name": "InvitedNoBtn",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIButton'",
+    "Outer": {
+      "ObjectName": "WidgetTree'GuildInfoListItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.45"
+    },
+    "Properties": {
+      "CurButtonStyleId": 1234,
+      "IconImage": {
+        "ImageSize": {
+          "X": 61.44,
+          "Y": 61.44
+        }
+      },
+      "WidgetStyle": {
+        "Normal": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          }
+        },
+        "Hovered": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          }
+        },
+        "Pressed": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          }
+        }
+      },
+      "ClickMethod": "EButtonClickMethod::PreciseClick",
+      "TouchMethod": "EButtonTouchMethod::PreciseTap",
+      "Slots": [
+        {
+          "ObjectName": "ButtonSlot'GuildInfoListItem_C:WidgetTree.InvitedNoBtn.ButtonSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.6"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'GuildInfoListItem_C:WidgetTree.CanvasPanel_166.CanvasPanelSlot_11'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.11"
+      }
+    }
+  },
+  {
+    "Type": "UIButton",
+    "Name": "InvitedYesBtn",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIButton'",
+    "Outer": {
+      "ObjectName": "WidgetTree'GuildInfoListItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.45"
+    },
+    "Properties": {
+      "CurButtonStyleId": 1233,
+      "IconImage": {
+        "ImageSize": {
+          "X": 61.44,
+          "Y": 61.44
+        }
+      },
+      "WidgetStyle": {
+        "Normal": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          }
+        },
+        "Hovered": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          }
+        },
+        "Pressed": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          }
+        }
+      },
+      "ClickMethod": "EButtonClickMethod::PreciseClick",
+      "TouchMethod": "EButtonTouchMethod::PreciseTap",
+      "Slots": [
+        {
+          "ObjectName": "ButtonSlot'GuildInfoListItem_C:WidgetTree.InvitedYesBtn.ButtonSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.7"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'GuildInfoListItem_C:WidgetTree.CanvasPanel_166.CanvasPanelSlot_12'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.12"
+      }
+    }
+  },
+  {
+    "Type": "UIButton",
+    "Name": "RefusedBtn",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIButton'",
+    "Outer": {
+      "ObjectName": "WidgetTree'GuildInfoListItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.45"
+    },
+    "Properties": {
+      "CurButtonStyleId": 1235,
+      "CurrStyleId": 2457,
+      "CurrTextKey": "Func_Guild_RefusedInvite",
+      "IconImage": {
+        "ImageSize": {
+          "X": 61.44,
+          "Y": 61.44
+        }
+      },
+      "WidgetStyle": {
+        "Normal": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          }
+        },
+        "Hovered": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          }
+        },
+        "Pressed": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          }
+        }
+      },
+      "ClickMethod": "EButtonClickMethod::PreciseClick",
+      "TouchMethod": "EButtonTouchMethod::PreciseTap",
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'GuildInfoListItem_C:WidgetTree.CanvasPanel_166.CanvasPanelSlot_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.18"
+      }
+    }
+  },
+  {
+    "Type": "UIButton",
+    "Name": "RequestedBtn",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIButton'",
+    "Outer": {
+      "ObjectName": "WidgetTree'GuildInfoListItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.45"
+    },
+    "Properties": {
+      "CurButtonStyleId": 1225,
+      "CurrStyleId": 2456,
+      "CurrTextKey": "Func_Guild_Apply_For",
+      "IconImage": {
+        "ImageSize": {
+          "X": 61.44,
+          "Y": 61.44
+        }
+      },
+      "WidgetStyle": {
+        "Normal": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          }
+        },
+        "Hovered": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          }
+        },
+        "Pressed": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          }
+        }
+      },
+      "ClickMethod": "EButtonClickMethod::PreciseClick",
+      "TouchMethod": "EButtonTouchMethod::PreciseTap",
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'GuildInfoListItem_C:WidgetTree.CanvasPanel_166.CanvasPanelSlot_7'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.23"
+      }
+    }
+  },
+  {
+    "Type": "UIButton",
+    "Name": "StopRequestedBtn",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIButton'",
+    "Outer": {
+      "ObjectName": "WidgetTree'GuildInfoListItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.45"
+    },
+    "Properties": {
+      "CurButtonStyleId": 1070,
+      "CurrStyleId": 1777,
+      "CurrTextKey": "Func_Guild_Stop_Apply",
+      "IconImage": {
+        "ImageSize": {
+          "X": 61.44,
+          "Y": 61.44
+        }
+      },
+      "WidgetStyle": {
+        "Normal": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          }
+        },
+        "Hovered": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          }
+        },
+        "Pressed": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          }
+        }
+      },
+      "ClickMethod": "EButtonClickMethod::PreciseClick",
+      "TouchMethod": "EButtonTouchMethod::PreciseTap",
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'GuildInfoListItem_C:WidgetTree.CanvasPanel_166.CanvasPanelSlot_3'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.19"
+      }
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "ItemHintBg",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'GuildInfoListItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.45"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/TexturesAtlas/Guild/Atlas/UI_Guild_MSbaseW_Sprite.UI_Guild_MSbaseW_Sprite",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 251.51999,
+          "Y": 203.51999
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'GuildInfoListItem_C:WidgetTree.CanvasPanel_166.CanvasPanelSlot_19'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.17"
+      },
+      "Visibility": "ESlateVisibility::HitTestInvisible"
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "UIImage_139",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'GuildInfoListItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.45"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/TexturesAtlas/Guild/Atlas/UI_Guild_012gou01_Sprite.UI_Guild_012gou01_Sprite",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 65.28,
+          "Y": 65.28
+        }
+      },
+      "Slot": {
+        "ObjectName": "ButtonSlot'GuildInfoListItem_C:WidgetTree.InvitedNoBtn.ButtonSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.6"
+      }
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "UIImage_211",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'GuildInfoListItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.45"
+    },
+    "Properties": {
+      "CurrStyleId": 5446,
+      "Brush": {
+        "ImageSize": {
+          "X": 122.88,
+          "Y": 92.159996
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'GuildInfoListItem_C:WidgetTree.CanvasPanel_166.CanvasPanelSlot_8'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.24"
+      },
+      "Visibility": "ESlateVisibility::HitTestInvisible"
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "UIImage_293",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'GuildInfoListItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.45"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/TexturesAtlas/Guild/Atlas/UI_Guild_01ICONnum_Sprite.UI_Guild_01ICONnum_Sprite",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 38.399998,
+          "Y": 38.399998
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'GuildInfoListItem_C:WidgetTree.CanvasPanel_166.CanvasPanelSlot_4'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.20"
+      },
+      "Visibility": "ESlateVisibility::HitTestInvisible"
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "UIImage_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'GuildInfoListItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.45"
+    },
+    "Properties": {
+      "CurrStyleId": 5444,
+      "Brush": {
+        "ImageSize": {
+          "X": 61.44,
+          "Y": 61.44
+        },
+        "Margin": {
+          "Left": 0.3,
+          "Top": 0.3,
+          "Right": 0.3,
+          "Bottom": 0.3
+        },
+        "DrawAs": "ESlateBrushDrawType::Box"
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'GuildInfoListItem_C:WidgetTree.CanvasPanel_166.CanvasPanelSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.10"
+      },
+      "Visibility": "ESlateVisibility::HitTestInvisible"
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "UIImage_52",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'GuildInfoListItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.45"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/TexturesAtlas/Guild/Atlas/UI_Guild_012gou00_Sprite.UI_Guild_012gou00_Sprite",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 65.28,
+          "Y": 65.28
+        }
+      },
+      "Slot": {
+        "ObjectName": "ButtonSlot'GuildInfoListItem_C:WidgetTree.InvitedYesBtn.ButtonSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.7"
+      }
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "UIImage_69",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'GuildInfoListItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.45"
+    },
+    "Properties": {
+      "CurrStyleId": 5443,
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/TexturesAtlas/Guild/Atlas/UI_Guild_MSbase_Sprite.UI_Guild_MSbase_Sprite",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 2311.68,
+          "Y": 203.51999
+        },
+        "DrawAs": "ESlateBrushDrawType::Box"
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'GuildInfoListItem_C:WidgetTree.CanvasPanel_166.CanvasPanelSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.9"
+      },
+      "Visibility": "ESlateVisibility::HitTestInvisible"
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "UIImage_72",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'GuildInfoListItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.45"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/TexturesAtlas/Guild/Atlas/UI_Guild_MSbase01_Sprite.UI_Guild_MSbase01_Sprite",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 1576.32,
+          "Y": 57.6
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'GuildInfoListItem_C:WidgetTree.CanvasPanel_166.CanvasPanelSlot_18'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.16"
+      },
+      "Visibility": "ESlateVisibility::HitTestInvisible"
+    }
+  },
+  {
+    "Type": "UIShrinkTextBlock",
+    "Name": "EnterLevel",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIShrinkTextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'GuildInfoListItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.45"
+    },
+    "Properties": {
+      "TextHAlignment": "HAlign_Left",
+      "CurrStyleId": 2454,
+      "TextContent": {
+        "Namespace": "",
+        "Key": "CA1080EA4728700C439C28A470D87A48",
+        "SourceString": "999",
+        "LocalizedString": "999"
+      },
+      "ShrinkSize": {
+        "X": 768.0,
+        "Y": 57.6
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'GuildInfoListItem_C:WidgetTree.CanvasPanel_166.CanvasPanelSlot_13'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.13"
+      },
+      "Visibility": "ESlateVisibility::HitTestInvisible"
+    }
+  },
+  {
+    "Type": "UIShrinkTextBlock",
+    "Name": "GuildDeclaration",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIShrinkTextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'GuildInfoListItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.45"
+    },
+    "Properties": {
+      "TextHAlignment": "HAlign_Left",
+      "CurrStyleId": 2455,
+      "TextContent": {
+        "Namespace": "",
+        "Key": "07E92CCD484BDF6FAF01B9B2AFF667A9",
+        "SourceString": "公会宣言最多二十个字啊啊啊啊啊啊啊啊",
+        "LocalizedString": "公会宣言最多二十个字啊啊啊啊啊啊啊啊"
+      },
+      "ShrinkSize": {
+        "X": 1536.0,
+        "Y": 50.879997
+      },
+      "ForceUseMainFont": true,
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'GuildInfoListItem_C:WidgetTree.CanvasPanel_166.CanvasPanelSlot_9'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.25"
+      }
+    }
+  },
+  {
+    "Type": "UIShrinkTextBlock",
+    "Name": "GuildLevel",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIShrinkTextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'GuildInfoListItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.45"
+    },
+    "Properties": {
+      "CurrStyleId": 2452,
+      "TextContent": {
+        "Namespace": "",
+        "Key": "20DBA440498A7608ED7027A6BE171190",
+        "SourceString": "LV.280",
+        "LocalizedString": "LV.280"
+      },
+      "ShrinkSize": {
+        "X": 192.0,
+        "Y": 122.88
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'GuildInfoListItem_C:WidgetTree.CanvasPanel_166.CanvasPanelSlot_6'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.22"
+      }
+    }
+  },
+  {
+    "Type": "UIShrinkTextBlock",
+    "Name": "GuildMemberNumber",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIShrinkTextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'GuildInfoListItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.45"
+    },
+    "Properties": {
+      "TextHAlignment": "HAlign_Left",
+      "CurrStyleId": 2454,
+      "TextContent": {
+        "Namespace": "",
+        "Key": "800D4AB448FC9050D0B808990E78B4BF",
+        "SourceString": "100/200",
+        "LocalizedString": "100/200"
+      },
+      "ShrinkSize": {
+        "X": 172.8,
+        "Y": 57.6
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'GuildInfoListItem_C:WidgetTree.CanvasPanel_166.CanvasPanelSlot_5'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.21"
+      }
+    }
+  },
+  {
+    "Type": "UIShrinkTextBlock",
+    "Name": "GuildName",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIShrinkTextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'GuildInfoListItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.45"
+    },
+    "Properties": {
+      "TextHAlignment": "HAlign_Left",
+      "CurrStyleId": 2453,
+      "TextContent": {
+        "Namespace": "",
+        "Key": "D8B9C356460054D84E9E619265E5B031",
+        "SourceString": "公会名称最多十二个汉字啊啊啊啊",
+        "LocalizedString": "公会名称最多十二个汉字啊啊啊啊"
+      },
+      "ShrinkSize": {
+        "X": 1344.0,
+        "Y": 57.6
+      },
+      "TextHJustification": "ETextJustify::Left",
+      "ForceUseMainFont": true,
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'GuildInfoListItem_C:WidgetTree.CanvasPanel_166.CanvasPanelSlot_14'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.14"
+      }
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetTree'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'GuildInfoListItem_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.4"
+    },
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "CanvasPanel'GuildInfoListItem_C:WidgetTree.CanvasPanel_166'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Guild/Item/GuildInfoListItem.8"
+      }
+    }
+  }
+]

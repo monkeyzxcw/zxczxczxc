@@ -1,0 +1,1169 @@
+[
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "ManualAffixItem_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Package": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'ManualAffixItem_C:WidgetTree'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.41"
+      },
+      "bClassRequiresNativeTick": true
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'UIListViewItem'",
+      "ObjectPath": "/Script/UE_game"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "AffixDesc",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIRichTextBlock'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "AffixSourceDesc",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIRichTextBlock'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "AffixTypeDesc",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIRichTextBlock'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "BgImg",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "DetailBtn",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIButton'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Icon_1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      }
+    ],
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "ManualAffixItem_C'Default__ManualAffixItem_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.1"
+    }
+  },
+  {
+    "Type": "ManualAffixItem_C",
+    "Name": "Default__ManualAffixItem_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.ManualAffixItem_C'",
+    "Package": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem",
+    "Properties": {
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'ManualAffixItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.41"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'ManualAffixItem_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_7'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.4"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "FullView",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'ManualAffixItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.41"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'ManualAffixItem_C:WidgetTree.FullView.CanvasPanelSlot_2'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.5"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'ManualAffixItem_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_7'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.4"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_7",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'ManualAffixItem_C:WidgetTree.CanvasPanel_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.2"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 192.0,
+          "Bottom": 57.6
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'ManualAffixItem_C:WidgetTree.CanvasPanel_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.2"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'ManualAffixItem_C:WidgetTree.FullView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.3"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'ManualAffixItem_C:WidgetTree.FullView'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.3"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 1966.08,
+          "Bottom": 134.4
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'ManualAffixItem_C:WidgetTree.FullView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.3"
+      },
+      "Content": {
+        "ObjectName": "SizeBox'ManualAffixItem_C:WidgetTree.DetailPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.18"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "AffixHBox",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'ManualAffixItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.41"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HorizontalBoxSlot'ManualAffixItem_C:WidgetTree.AffixHBox.HorizontalBoxSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.7"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'ManualAffixItem_C:WidgetTree.AffixHBox.HorizontalBoxSlot_6'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.12"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'ManualAffixItem_C:WidgetTree.AffixHBox.HorizontalBoxSlot_8'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.13"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'ManualAffixItem_C:WidgetTree.AffixHBox.HorizontalBoxSlot_5'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.11"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'ManualAffixItem_C:WidgetTree.AffixHBox.HorizontalBoxSlot_10'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.9"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'ManualAffixItem_C:WidgetTree.AffixHBox.HorizontalBoxSlot_2'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.10"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'ManualAffixItem_C:WidgetTree.AffixHBox.HorizontalBoxSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.8"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "OverlaySlot'ManualAffixItem_C:WidgetTree.DescOverlay01.OverlaySlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.15"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'ManualAffixItem_C:WidgetTree.AffixHBox'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.6"
+    },
+    "Properties": {
+      "Padding": {
+        "Left": 19.199999
+      },
+      "HorizontalAlignment": "HAlign_Left",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "HorizontalBox'ManualAffixItem_C:WidgetTree.AffixHBox'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.6"
+      },
+      "Content": {
+        "ObjectName": "UIImage'ManualAffixItem_C:WidgetTree.Icon_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.31"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'ManualAffixItem_C:WidgetTree.AffixHBox'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.6"
+    },
+    "Properties": {
+      "Padding": {
+        "Left": 9.599999,
+        "Right": 19.199999
+      },
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "HorizontalBox'ManualAffixItem_C:WidgetTree.AffixHBox'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.6"
+      },
+      "Content": {
+        "ObjectName": "UIButton'ManualAffixItem_C:WidgetTree.DetailBtn'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.29"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_10",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'ManualAffixItem_C:WidgetTree.AffixHBox'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.6"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Right",
+      "Parent": {
+        "ObjectName": "HorizontalBox'ManualAffixItem_C:WidgetTree.AffixHBox'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.6"
+      },
+      "Content": {
+        "ObjectName": "SizeBox'ManualAffixItem_C:WidgetTree.LvSBox'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.19"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'ManualAffixItem_C:WidgetTree.AffixHBox'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.6"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Right",
+      "Parent": {
+        "ObjectName": "HorizontalBox'ManualAffixItem_C:WidgetTree.AffixHBox'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.6"
+      },
+      "Content": {
+        "ObjectName": "SizeBox'ManualAffixItem_C:WidgetTree.WeightBox'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.22"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_5",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'ManualAffixItem_C:WidgetTree.AffixHBox'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.6"
+    },
+    "Properties": {
+      "Padding": {
+        "Left": 9.599999,
+        "Right": 9.599999
+      },
+      "HorizontalAlignment": "HAlign_Right",
+      "Parent": {
+        "ObjectName": "HorizontalBox'ManualAffixItem_C:WidgetTree.AffixHBox'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.6"
+      },
+      "Content": {
+        "ObjectName": "SizeBox'ManualAffixItem_C:WidgetTree.TypeSBox'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.21"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_6",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'ManualAffixItem_C:WidgetTree.AffixHBox'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.6"
+    },
+    "Properties": {
+      "Padding": {
+        "Left": 19.199999
+      },
+      "Size": {
+        "SizeRule": "ESlateSizeRule::Fill"
+      },
+      "HorizontalAlignment": "HAlign_Left",
+      "Parent": {
+        "ObjectName": "HorizontalBox'ManualAffixItem_C:WidgetTree.AffixHBox'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.6"
+      },
+      "Content": {
+        "ObjectName": "SizeBox'ManualAffixItem_C:WidgetTree.AffixDescSBox'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.17"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_8",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'ManualAffixItem_C:WidgetTree.AffixHBox'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.6"
+    },
+    "Properties": {
+      "Padding": {
+        "Left": 9.599999,
+        "Right": 9.599999
+      },
+      "HorizontalAlignment": "HAlign_Right",
+      "Parent": {
+        "ObjectName": "HorizontalBox'ManualAffixItem_C:WidgetTree.AffixHBox'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.6"
+      },
+      "Content": {
+        "ObjectName": "SizeBox'ManualAffixItem_C:WidgetTree.SourceSBox'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.20"
+      }
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "DescOverlay01",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Overlay'",
+    "Outer": {
+      "ObjectName": "WidgetTree'ManualAffixItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.41"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlaySlot'ManualAffixItem_C:WidgetTree.DescOverlay01.OverlaySlot_2'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.16"
+        },
+        {
+          "ObjectName": "OverlaySlot'ManualAffixItem_C:WidgetTree.DescOverlay01.OverlaySlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.15"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "SizeBoxSlot'ManualAffixItem_C:WidgetTree.DetailPanel.SizeBoxSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.24"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'ManualAffixItem_C:WidgetTree.DescOverlay01'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.14"
+    },
+    "Properties": {
+      "Padding": {
+        "Top": 23.039999,
+        "Bottom": 23.039999
+      },
+      "HorizontalAlignment": "HAlign_Fill",
+      "VerticalAlignment": "VAlign_Fill",
+      "Parent": {
+        "ObjectName": "Overlay'ManualAffixItem_C:WidgetTree.DescOverlay01'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.14"
+      },
+      "Content": {
+        "ObjectName": "HorizontalBox'ManualAffixItem_C:WidgetTree.AffixHBox'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.6"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'ManualAffixItem_C:WidgetTree.DescOverlay01'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.14"
+    },
+    "Properties": {
+      "Padding": {
+        "Left": 9.599999,
+        "Right": 9.599999
+      },
+      "HorizontalAlignment": "HAlign_Fill",
+      "VerticalAlignment": "VAlign_Fill",
+      "Parent": {
+        "ObjectName": "Overlay'ManualAffixItem_C:WidgetTree.DescOverlay01'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.14"
+      },
+      "Content": {
+        "ObjectName": "UIImage'ManualAffixItem_C:WidgetTree.BgImg'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.30"
+      }
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "AffixDescSBox",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'ManualAffixItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.41"
+    },
+    "Properties": {
+      "MinDesiredWidth": 983.04,
+      "MaxDesiredWidth": 660.48,
+      "bOverride_MinDesiredWidth": true,
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot'ManualAffixItem_C:WidgetTree.AffixDescSBox.SizeBoxSlot_2'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.23"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'ManualAffixItem_C:WidgetTree.AffixHBox.HorizontalBoxSlot_6'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.12"
+      }
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "DetailPanel",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'ManualAffixItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.41"
+    },
+    "Properties": {
+      "WidthOverride": 1966.08,
+      "MinDesiredWidth": 1931.52,
+      "MinDesiredHeight": 134.4,
+      "MaxDesiredWidth": 1966.08,
+      "bOverride_WidthOverride": true,
+      "bOverride_MinDesiredHeight": true,
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot'ManualAffixItem_C:WidgetTree.DetailPanel.SizeBoxSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.24"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'ManualAffixItem_C:WidgetTree.FullView.CanvasPanelSlot_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.5"
+      }
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "LvSBox",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'ManualAffixItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.41"
+    },
+    "Properties": {
+      "WidthOverride": 245.76,
+      "MinDesiredWidth": 245.76,
+      "bOverride_WidthOverride": true,
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot'ManualAffixItem_C:WidgetTree.LvSBox.SizeBoxSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.25"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'ManualAffixItem_C:WidgetTree.AffixHBox.HorizontalBoxSlot_10'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.9"
+      },
+      "Visibility": "ESlateVisibility::HitTestInvisible"
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SourceSBox",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'ManualAffixItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.41"
+    },
+    "Properties": {
+      "WidthOverride": 395.52,
+      "MinDesiredWidth": 384.0,
+      "bOverride_WidthOverride": true,
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot'ManualAffixItem_C:WidgetTree.SourceSBox.SizeBoxSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.26"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'ManualAffixItem_C:WidgetTree.AffixHBox.HorizontalBoxSlot_8'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.13"
+      }
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "TypeSBox",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'ManualAffixItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.41"
+    },
+    "Properties": {
+      "WidthOverride": 395.52,
+      "MinDesiredWidth": 245.76,
+      "bOverride_WidthOverride": true,
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot'ManualAffixItem_C:WidgetTree.TypeSBox.SizeBoxSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.27"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'ManualAffixItem_C:WidgetTree.AffixHBox.HorizontalBoxSlot_5'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.11"
+      }
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "WeightBox",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'ManualAffixItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.41"
+    },
+    "Properties": {
+      "WidthOverride": 245.76,
+      "MinDesiredWidth": 245.76,
+      "bOverride_WidthOverride": true,
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot'ManualAffixItem_C:WidgetTree.WeightBox.SizeBoxSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.28"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'ManualAffixItem_C:WidgetTree.AffixHBox.HorizontalBoxSlot_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.10"
+      },
+      "Visibility": "ESlateVisibility::Collapsed"
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBoxSlot'",
+    "Outer": {
+      "ObjectName": "SizeBox'ManualAffixItem_C:WidgetTree.AffixDescSBox'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.17"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Left",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "SizeBox'ManualAffixItem_C:WidgetTree.AffixDescSBox'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.17"
+      },
+      "Content": {
+        "ObjectName": "UIRichTextBlock'ManualAffixItem_C:WidgetTree.AffixDesc'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.32"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBoxSlot'",
+    "Outer": {
+      "ObjectName": "SizeBox'ManualAffixItem_C:WidgetTree.DetailPanel'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.18"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "SizeBox'ManualAffixItem_C:WidgetTree.DetailPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.18"
+      },
+      "Content": {
+        "ObjectName": "Overlay'ManualAffixItem_C:WidgetTree.DescOverlay01'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.14"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBoxSlot'",
+    "Outer": {
+      "ObjectName": "SizeBox'ManualAffixItem_C:WidgetTree.LvSBox'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.19"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "SizeBox'ManualAffixItem_C:WidgetTree.LvSBox'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.19"
+      },
+      "Content": {
+        "ObjectName": "UIShrinkTextBlock'ManualAffixItem_C:WidgetTree.AffixLevelDesc'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.35"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBoxSlot'",
+    "Outer": {
+      "ObjectName": "SizeBox'ManualAffixItem_C:WidgetTree.SourceSBox'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.20"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "SizeBox'ManualAffixItem_C:WidgetTree.SourceSBox'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.20"
+      },
+      "Content": {
+        "ObjectName": "UIRichTextBlock'ManualAffixItem_C:WidgetTree.AffixSourceDesc'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.33"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBoxSlot'",
+    "Outer": {
+      "ObjectName": "SizeBox'ManualAffixItem_C:WidgetTree.TypeSBox'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.21"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "SizeBox'ManualAffixItem_C:WidgetTree.TypeSBox'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.21"
+      },
+      "Content": {
+        "ObjectName": "UIRichTextBlock'ManualAffixItem_C:WidgetTree.AffixTypeDesc'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.34"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBoxSlot'",
+    "Outer": {
+      "ObjectName": "SizeBox'ManualAffixItem_C:WidgetTree.WeightBox'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.22"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "SizeBox'ManualAffixItem_C:WidgetTree.WeightBox'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.22"
+      },
+      "Content": {
+        "ObjectName": "VerticalBox'ManualAffixItem_C:WidgetTree.WeightHBox_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.38"
+      }
+    }
+  },
+  {
+    "Type": "UIButton",
+    "Name": "DetailBtn",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIButton'",
+    "Outer": {
+      "ObjectName": "WidgetTree'ManualAffixItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.41"
+    },
+    "Properties": {
+      "CurButtonStyleId": 1394,
+      "IconImage": {
+        "ImageSize": {
+          "X": 61.44,
+          "Y": 61.44
+        }
+      },
+      "WidgetStyle": {
+        "Normal": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          }
+        },
+        "Hovered": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          }
+        },
+        "Pressed": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          }
+        }
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'ManualAffixItem_C:WidgetTree.AffixHBox.HorizontalBoxSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.8"
+      },
+      "Visibility": "ESlateVisibility::Collapsed"
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "BgImg",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'ManualAffixItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.41"
+    },
+    "Properties": {
+      "CurrStyleId": 5538,
+      "Brush": {
+        "ImageSize": {
+          "X": 61.44,
+          "Y": 61.44
+        }
+      },
+      "Slot": {
+        "ObjectName": "OverlaySlot'ManualAffixItem_C:WidgetTree.DescOverlay01.OverlaySlot_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.16"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "Icon_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'ManualAffixItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.41"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/TexturesAtlas/TalNGStrengthen/Atlas/UI_TanlantNGStrengthen_ICONspell_Sprite.UI_TanlantNGStrengthen_ICONspell_Sprite",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 34.559998,
+          "Y": 34.559998
+        }
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'ManualAffixItem_C:WidgetTree.AffixHBox.HorizontalBoxSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.7"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "UIRichTextBlock",
+    "Name": "AffixDesc",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIRichTextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'ManualAffixItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.41"
+    },
+    "Properties": {
+      "CurrStyleId": 2689,
+      "ShrinkSize": {
+        "X": 122.88,
+        "Y": 122.88
+      },
+      "Text": {
+        "Namespace": "",
+        "Key": "E9B702C74D85FA2D65761E9BB5C341B9",
+        "SourceString": "<RichText Id=\"2689\">神射手</><RichText>:词缀描述内容</><RichText Id=\"2689\">神射手</><RichText>:词缀描述内容</>",
+        "LocalizedString": "<RichText Id=\"2689\">神射手</><RichText>:词缀描述内容</><RichText Id=\"2689\">神射手</><RichText>:词缀描述内容</>"
+      },
+      "MinDesiredWidth": 983.0,
+      "WrappingPolicy": "ETextWrappingPolicy::AllowPerCharacterWrapping",
+      "AutoWrapText": true,
+      "WrapTextAt": 983.0,
+      "Slot": {
+        "ObjectName": "SizeBoxSlot'ManualAffixItem_C:WidgetTree.AffixDescSBox.SizeBoxSlot_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.23"
+      }
+    }
+  },
+  {
+    "Type": "UIRichTextBlock",
+    "Name": "AffixSourceDesc",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIRichTextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'ManualAffixItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.41"
+    },
+    "Properties": {
+      "CurrStyleId": 2689,
+      "ShrinkSize": {
+        "X": 122.88,
+        "Y": 122.88
+      },
+      "Text": {
+        "Namespace": "",
+        "Key": "A426965649A65ABE7AA18E883770BCF1",
+        "SourceString": "<RichText Id=\"2689\">来源</>",
+        "LocalizedString": "<RichText Id=\"2689\">来源</>"
+      },
+      "MinDesiredWidth": 364.0,
+      "Justification": "ETextJustify::Center",
+      "WrappingPolicy": "ETextWrappingPolicy::AllowPerCharacterWrapping",
+      "AutoWrapText": true,
+      "WrapTextAt": 364.0,
+      "Slot": {
+        "ObjectName": "SizeBoxSlot'ManualAffixItem_C:WidgetTree.SourceSBox.SizeBoxSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.26"
+      }
+    }
+  },
+  {
+    "Type": "UIRichTextBlock",
+    "Name": "AffixTypeDesc",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIRichTextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'ManualAffixItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.41"
+    },
+    "Properties": {
+      "CurrStyleId": 2689,
+      "ShrinkSize": {
+        "X": 122.88,
+        "Y": 122.88
+      },
+      "Text": {
+        "Namespace": "",
+        "Key": "48E0C96F449BE9ABD1239FBB6A78C225",
+        "SourceString": "<RichText Id=\"2689\">类型</>",
+        "LocalizedString": "<RichText Id=\"2689\">类型</>"
+      },
+      "MinDesiredWidth": 364.0,
+      "Justification": "ETextJustify::Center",
+      "WrappingPolicy": "ETextWrappingPolicy::AllowPerCharacterWrapping",
+      "AutoWrapText": true,
+      "WrapTextAt": 364.0,
+      "Slot": {
+        "ObjectName": "SizeBoxSlot'ManualAffixItem_C:WidgetTree.TypeSBox.SizeBoxSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.27"
+      }
+    }
+  },
+  {
+    "Type": "UIShrinkTextBlock",
+    "Name": "AffixLevelDesc",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIShrinkTextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'ManualAffixItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.41"
+    },
+    "Properties": {
+      "CurrStyleId": 1015,
+      "TextContent": {
+        "Namespace": "",
+        "Key": "D2B7A6EF449EE660DA5498A96210E7A5",
+        "SourceString": "Lv.100",
+        "LocalizedString": "Lv.100"
+      },
+      "ShrinkSize": {
+        "X": 153.59999,
+        "Y": 96.0
+      },
+      "Slot": {
+        "ObjectName": "SizeBoxSlot'ManualAffixItem_C:WidgetTree.LvSBox.SizeBoxSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.25"
+      }
+    }
+  },
+  {
+    "Type": "UIShrinkTextBlock",
+    "Name": "AffixWeightDesc",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIShrinkTextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'ManualAffixItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.41"
+    },
+    "Properties": {
+      "CurrStyleId": 1015,
+      "TextContent": {
+        "Namespace": "",
+        "Key": "33524AA342E5D798D08785A0D713FD51",
+        "SourceString": "63.5%",
+        "LocalizedString": "63.5%"
+      },
+      "ShrinkSize": {
+        "X": 230.4,
+        "Y": 49.92
+      },
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'ManualAffixItem_C:WidgetTree.WeightHBox_1.VerticalBoxSlot_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.40"
+      }
+    }
+  },
+  {
+    "Type": "UIShrinkTextBlock",
+    "Name": "RatiotValue_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIShrinkTextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'ManualAffixItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.41"
+    },
+    "Properties": {
+      "CurrStyleId": 2829,
+      "TextContent": {
+        "Namespace": "",
+        "Key": "10F1FCC8407AA3357E431188D6136E65",
+        "SourceString": "6300%",
+        "LocalizedString": "6300%"
+      },
+      "ShrinkSize": {
+        "X": 230.4,
+        "Y": 49.92
+      },
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'ManualAffixItem_C:WidgetTree.WeightHBox_1.VerticalBoxSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.39"
+      },
+      "Visibility": "ESlateVisibility::Collapsed"
+    }
+  },
+  {
+    "Type": "VerticalBox",
+    "Name": "WeightHBox_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'ManualAffixItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.41"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "VerticalBoxSlot'ManualAffixItem_C:WidgetTree.WeightHBox_1.VerticalBoxSlot_2'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.40"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot'ManualAffixItem_C:WidgetTree.WeightHBox_1.VerticalBoxSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.39"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "SizeBoxSlot'ManualAffixItem_C:WidgetTree.WeightBox.SizeBoxSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.28"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Outer": {
+      "ObjectName": "VerticalBox'ManualAffixItem_C:WidgetTree.WeightHBox_1'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.38"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "VerticalBox'ManualAffixItem_C:WidgetTree.WeightHBox_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.38"
+      },
+      "Content": {
+        "ObjectName": "UIShrinkTextBlock'ManualAffixItem_C:WidgetTree.RatiotValue_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.37"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Outer": {
+      "ObjectName": "VerticalBox'ManualAffixItem_C:WidgetTree.WeightHBox_1'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.38"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "VerticalBox'ManualAffixItem_C:WidgetTree.WeightHBox_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.38"
+      },
+      "Content": {
+        "ObjectName": "UIShrinkTextBlock'ManualAffixItem_C:WidgetTree.AffixWeightDesc'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.36"
+      }
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetTree'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'ManualAffixItem_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.0"
+    },
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "CanvasPanel'ManualAffixItem_C:WidgetTree.CanvasPanel_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HelpManualV2/Affix/ManualAffixItem.2"
+      }
+    }
+  }
+]
