@@ -19,7 +19,8 @@ export function classifyGameArea(event = {}) {
   const zone = clean(event.mapZone, 100);
   const asset = clean(event.asset, 120);
   if (!zone && !asset) return 'unknown';
-  const tokens = `${zone}/${asset}`.toLowerCase().split(/[^a-z0-9]+/).filter(Boolean);
+  const label = clean(event.area, 120);
+  const tokens = `${zone}/${asset}/${label}`.toLowerCase().split(/[^a-z0-9]+/).filter(Boolean);
   return tokens.some((token) => HUB_SEGMENTS.has(token)) ? 'hub' : 'map';
 }
 
