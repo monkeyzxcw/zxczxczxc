@@ -199,22 +199,32 @@ function attachResourceKnowledge(item, indexes) {
     const definition = affix.id ? indexes.affixes.get(String(affix.id)) : null;
     const attributeDefinition = affix.attributeRaw ? indexes.attributes.get(String(affix.attributeRaw)) : null;
     const translatedName = localizedName(definition, indexes);
+    const attributeName = attributeDefinition?.enumName ||
+      attributeDefinition?.name ||
+      localizedName(attributeDefinition, indexes) ||
+      attributeDefinition?.rowName ||
+      null;
     return {
       ...affix,
-      catalogMatch: definition ? {
-        matched: true,
-        name: definition.name || translatedName || definition.rowName || null,
-        nameSource: definition.name ? 'data-table' : translatedName ? 'localization-table' : 'row-key',
-        nameKeyRaw: definition.nameKeyRaw || definition.textKeyRaw || null,
-        attributeRaw: definition.attributeRaw || affix.attributeRaw || null,
-        attributeName: attributeDefinition?.enumName || attributeDefinition?.name || localizedName(attributeDefinition, indexes) || attributeDefinition?.rowName || null,
+      catalogMatch: {
+        matched: Boolean(definition),
+        attributeMatched: Boolean(attributeDefinition),
+        name: definition
+          ? definition.name || translatedName || definition.rowName || null
+          : null,
+        nameSource: definition
+          ? definition.name ? 'data-table' : translatedName ? 'localization-table' : 'row-key'
+          : null,
+        nameKeyRaw: definition?.nameKeyRaw || definition?.textKeyRaw || null,
+        attributeRaw: definition?.attributeRaw || affix.attributeRaw || null,
+        attributeName,
         attributeSourcePath: attributeDefinition?.sourcePath || null,
-        tierRaw: definition.tierRaw || affix.tierRaw || null,
-        minRaw: definition.minRaw || null,
-        maxRaw: definition.maxRaw || null,
-        sourcePath: definition.sourcePath || null,
-        rowPath: definition.rowPath || null,
-      } : { matched: false },
+        tierRaw: definition?.tierRaw || affix.tierRaw || null,
+        minRaw: definition?.minRaw || null,
+        maxRaw: definition?.maxRaw || null,
+        sourcePath: definition?.sourcePath || null,
+        rowPath: definition?.rowPath || null,
+      },
     };
   });
   const translatedItemName = localizedName(itemDefinition, indexes);
@@ -312,7 +322,7 @@ export function analyzeEquipment(itemsInput, prioritiesInput = [], resourceIndex
       affixDefinitions: indexes.affixDefinitionCount,
       localizationEntries: indexes.localizationCount,
       attributeDefinitions: indexes.attributeDefinitionCount,
-      matchedAttributes: items.reduce((sum, item) => sum + item.affixes.filter((affix) => affix.catalogMatch.matched && affix.catalogMatch.attributeName).length, 0),
+      matchedAttributes: items.reduce((sum, item) => sum + item.affixes.filter((affix) => affix.catalogMatch.attributeMatched).length, 0),
       matchedItems: items.filter((item) => item.catalogItem.matched).length,
       matchedAffixes: items.reduce((sum, item) => sum + item.catalogAffixMatches, 0),
     },
