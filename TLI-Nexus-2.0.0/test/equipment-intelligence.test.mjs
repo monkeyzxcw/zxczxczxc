@@ -136,6 +136,54 @@ test('identical values duplicated across separate affixes remain ambiguous', () 
   assert.equal(result.verdict, 'insufficient-data');
 });
 
+test('imported game DataTables resolve raw affix IDs to verified names and ranges', () => {
+  const gear = item(41001, 'Шлем с явным аффиксом', [
+    {
+      id: '7001',
+      name: null,
+      tierRaw: null,
+      attributeRaw: null,
+      values: [{ key: 'LifeFlat', value: '135' }],
+    },
+  ], 'Head');
+  const resourceIndex = {
+    itemDefinitions: [{
+      id: '41001',
+      name: 'Helm Base',
+      slotRaw: 'Head',
+      itemTypeRaw: 'Helmet',
+      sourcePath: 'Content/Data/DT_EquipmentBase.json',
+    }],
+    affixDefinitions: [{
+      id: '7001',
+      name: 'Added maximum life',
+      attributeRaw: '12',
+      tierRaw: '2',
+      minRaw: '100',
+      maxRaw: '150',
+      sourcePath: 'Content/Data/DT_EquipmentAffix.json',
+    }],
+  };
+
+  const analysis = analyzeEquipment([gear], 'LifeFlat | Жизнь | 5 | higher', resourceIndex);
+  assert.equal(analysis.resourceCatalog.imported, true);
+  assert.equal(analysis.resourceCatalog.affixDefinitions, 1);
+  assert.equal(analysis.resourceCatalog.matchedAffixes, 1);
+  assert.equal(analysis.items[0].catalogItem.name, 'Helm Base');
+  assert.equal(analysis.items[0].affixes[0].catalogMatch.name, 'Added maximum life');
+  assert.equal(analysis.items[0].affixes[0].catalogMatch.minRaw, '100');
+  assert.equal(analysis.items[0].affixes[0].catalogMatch.maxRaw, '150');
+
+  const comparison = compareEquipment(
+    gear,
+    item(41002, 'Предмет B', [{ id: '9999', values: [{ key: 'LifeFlat', value: '120' }] }], 'Head'),
+    'LifeFlat | Жизнь | 5 | higher',
+    resourceIndex,
+  );
+  assert.equal(comparison.catalogAffixes.left[0].name, 'Added maximum life');
+  assert.equal(comparison.catalogAffixes.right[0].matched, false);
+});
+
 test('empty evidence returns an unavailable analysis, not a fabricated rating', () => {
   const result = analyzeEquipment([], 'LifeFlat | Жизнь | 5 | higher');
 
