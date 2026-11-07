@@ -403,11 +403,7 @@ export class LiveService {
         // The game may have been closed while Nexus was not running. Expire
         // the persisted open row only after several independent process scans.
         this.resumeMissingScans += 1;
-        if (this.resumeMissingScans >= 3) {
-          const expired = this.resumeSessionCandidate;
-          this.resumeSessionCandidate = null;
-          this.onResumeExpired(expired);
-        }
+        if (this.resumeMissingScans >= 3) this.expireResumeSessionCandidate();
       }
       if (this.manualLogFile) {
         if (!fs.existsSync(this.manualLogFile)) {
@@ -428,6 +424,14 @@ export class LiveService {
       this.emit();
     } catch (error) { this.lastError = String(error.message || error); this.emit(); }
     finally { this.busy = false; }
+  }
+
+  expireResumeSessionCandidate() {
+    if (!this.resumeSessionCandidate) return false;
+    const expired = this.resumeSessionCandidate;
+    this.resumeSessionCandidate = null;
+    this.onResumeExpired(expired);
+    return true;
   }
 
   restorePersistedSession(row, processInfo = {}) {
