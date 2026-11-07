@@ -5,7 +5,7 @@ import { fileURLToPath } from 'node:url';
 import { LiveService } from './core/liveService.js';
 import { getItemImageUrl, searchItems } from './core/itemCatalog.js';
 import { analyzeBuild, compareBuilds, encodeBuild, decodeBuild, BUILD_STAT_FIELDS } from './core/buildAnalysis.js';
-import { diagnoseBuild } from './core/buildAdvisor.js';
+import { diagnoseBuild, characterSnapshotToIntel } from './core/buildAdvisor.js';
 import { DEFAULT_APP_DATA, mergeAppData, mergeRendererUpdate } from './core/persistence.js';
 import { analyzeFarmingSessions } from './core/farmAnalytics.js';
 import { getGlobalHotkeyDefinitions } from './core/hotkeys.js';
@@ -655,11 +655,18 @@ app.whenReady().then(() => {
     const matchesLive = Boolean(profile && identity.playerId &&
       String(profile.playerId || profile.detectedPlayerId || '') === String(identity.playerId) &&
       Number(profile.lastSeasonId || profile.seasonId || 0) === Number(identity.seasonId || 0));
+    const wantedPlayerId = profile?.playerId || profile?.detectedPlayerId || null;
+    const wantedSeasonId = Number(profile?.lastSeasonId || profile?.seasonId || 0);
+    const savedSnapshot = profile ? (Array.isArray(profile.characterHistory) ? profile.characterHistory : [])
+      .slice().reverse().find((row) =>
+        (!wantedPlayerId || String(row.playerId || '') === String(wantedPlayerId)) &&
+        (!wantedSeasonId || Number(row.seasonId || 0) === wantedSeasonId)) || null : null;
     const intel = matchesLive ? state.characterIntel
-      : profile ? profile.characterIntelSnapshot || null
+      : profile ? characterSnapshotToIntel(savedSnapshot, profile)
         : state.characterIntel || null;
     const observedEquipment = matchesLive ? state.equipment
-      : profile?.equipmentSnapshot || profile?.characterIntelSnapshot?.equipment || null;
+      : savedSnapshot ? { items: savedSnapshot.partialEquipment || [] }
+        : profile?.equipmentSnapshot || null;
     return diagnoseBuild({
       build, profile, intel, equipment: observedEquipment,
       resourceIndex: readGameResourceIndex(), tlidbCatalog: readTlidbCatalog(), now: Date.now(),
