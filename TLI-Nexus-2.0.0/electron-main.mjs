@@ -113,8 +113,9 @@ function scheduleTlidbAutoSync(delayMs) {
   tlidbAutoSyncTimer = setTimeout(async () => {
     tlidbAutoSyncTimer = null;
     try {
-      await runTlidbSync({ automatic: true });
-      scheduleTlidbAutoSync(tlidbSyncIntervalMs());
+      const result = await runTlidbSync({ automatic: true });
+      const partial = Number(result.status?.summary?.pagesFailed) > 0;
+      scheduleTlidbAutoSync(partial ? TLIDB_AUTO_SYNC_RETRY_MS : tlidbSyncIntervalMs());
     } catch (error) {
       console.warn('[TLI Nexus] Автоматическая синхронизация TLIDB не удалась:', error?.message || error);
       scheduleTlidbAutoSync(TLIDB_AUTO_SYNC_RETRY_MS);
