@@ -64,6 +64,7 @@ export class GameMapTracker {
     this.currentMap = null;
     this.lastMap = null;
     this.completedMaps = [];
+    this.totalCompleted = 0;
     this.mapSequence = 0;
   }
 
@@ -127,6 +128,7 @@ export class GameMapTracker {
     this.lastMap = finished;
     this.completedMaps.push(finished);
     this.completedMaps = this.completedMaps.slice(-this.maxHistory);
+    this.totalCompleted += 1;
     this.currentMap = null;
     return finished;
   }
@@ -135,7 +137,7 @@ export class GameMapTracker {
     return {
       current: serializeMap(this.currentMap),
       last: this.lastMap ? { ...this.lastMap, loot: this.lastMap.loot.map((row) => ({ ...row })) } : null,
-      completedCount: this.completedMaps.length,
+      completedCount: this.totalCompleted,
       history: this.completedMaps.map((row) => ({ ...row, loot: row.loot.map((item) => ({ ...item })) })),
     };
   }
