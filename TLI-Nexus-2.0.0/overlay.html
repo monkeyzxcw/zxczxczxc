@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' data:; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'none'">
+  <title>TLI Nexus HUD</title><link rel="stylesheet" href="overlay.css">
+</head>
+<body>
+  <main class="shell" id="shell">
+    <header class="drag-region">
+      <div class="brand"><span class="orb"></span><div><b>TLI <i>NEXUS</i></b><small>GAME COMPANION · 2.0.0</small></div></div>
+      <div class="head-actions">
+        <button id="dashboard" title="Открыть главное окно">▦</button>
+        <button id="mode" title="Расширить / свернуть">⌄</button>
+        <button id="sound" title="Включить звук и проверить сигнал">♫</button>
+        <button id="clickthrough" title="Сквозной клик" aria-pressed="false">⌖</button>
+        <button id="pin" title="Открепить HUD от поверх всех окон" aria-label="Открепить HUD от поверх всех окон" aria-pressed="true">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 4h8l-1 5 3 3v2H6v-2l3-3-1-5Z"/><path d="M12 14v7"/></svg>
+        </button>
+        <button id="hide" title="Скрыть HUD">×</button>
+      </div>
+    </header>
+    <section class="status"><span id="dot" class="dot"></span><span id="status">Ожидание игры</span><small id="clock">SCANNING</small></section>
+    <section class="compact-metrics">
+      <div class="metric"><small>СЕССИЯ</small><strong id="duration">00:00</strong><span id="area-compact">Ожидание карты</span></div>
+      <div class="metric highlight"><small>ОЦЕНКА ЛУТА</small><strong id="session-value">— FE</strong><span id="hour-value">— FE/ч</span></div>
+      <div class="metric"><small>ПОДБОРЫ</small><strong id="pickup-events">0</strong><span><b id="fe-total">0</b> FE</span></div>
+    </section>
+    <section class="expanded-only identity">
+      <div><small>ПЕРСОНАЖ</small><strong id="player">Не определён</strong><span id="player-origin"></span></div>
+      <div class="area"><small>ОБЛАСТЬ</small><strong id="area">—</strong></div>
+    </section>
+    <section class="expanded-only extra-stats">
+      <div><small>ПРЕДМЕТОВ</small><b id="drops">0</b></div>
+      <div><small>ЦЕНА ОБЪЯВЛЕНА</small><b id="price-coverage">—</b></div>
+      <div><small>СЕЗОН</small><b id="season">—</b></div>
+    </section>
+    <section class="expanded-only loot">
+      <div class="section-title"><b>Последние находки</b><span id="logstate">LOG OFFLINE</span></div>
+      <div id="items" class="empty">Запусти игру — Nexus подключится автоматически.</div>
+    </section>
+    <section id="toast" class="drop-toast" aria-live="polite">
+      <div class="toast-glow"></div><div class="toast-icon" id="toast-icon">✦</div>
+      <div class="toast-copy"><small id="toast-tier">ЦЕННАЯ НАХОДКА</small><b id="toast-name">Предмет</b><span id="toast-qty">×1</span></div>
+      <strong id="toast-value">+20 FE</strong>
+    </section>
+    <section class="expanded-only setup-hint" id="setup-hint" hidden><b id="setup-title"></b><span id="setup-text"></span></section>
+    <div class="expanded-only diagnostic"><span id="last-action">Ожидание сообщений</span><span id="unknown">Не распознано: 0</span></div>
+    <details class="expanded-only debug"><summary id="debug-summary">Диагностика</summary><div id="debug-content"></div></details>
+    <footer><span id="file">Ожидание UE_game.log</span><span><i id="click-state">INTERACTIVE</i> · <b id="source">AUTO</b></span></footer>
+  </main>
+  <script src="overlay.js"></script>
+</body>
+</html>
