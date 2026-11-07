@@ -1,0 +1,1706 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_UIRestoreDegreeItem",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'UIRestoreDegreeItem_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.2"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_ComponentBoundEvent_Value",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "Function",
+    "Name": "BndEvt__UIRestoreDegreeItem_SliderItem_K2Node_ComponentBoundEvent_0_OnFloatValueChangedEvent__DelegateSignature",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'UIRestoreDegreeItem_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.2"
+    },
+    "ChildProperties": [
+      {
+        "Type": "FloatProperty",
+        "Name": "Value",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "UIRestoreDegreeItem_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Package": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem",
+    "Super": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'GMUserWidget_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/GMUserWidget.3"
+    },
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'UIRestoreDegreeItem_C:WidgetTree'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.46"
+      },
+      "DynamicBindingObjects": [
+        {
+          "ObjectName": "ComponentDelegateBinding'UIRestoreDegreeItem_C:ComponentDelegateBinding_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.27"
+        }
+      ],
+      "UberGraphFunction": {
+        "ObjectName": "Function'UIRestoreDegreeItem_C:ExecuteUbergraph_UIRestoreDegreeItem'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'GMUserWidget_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/GMUserWidget.3"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'UIRestoreDegreeItem_C:BndEvt__UIRestoreDegreeItem_SliderItem_K2Node_ComponentBoundEvent_0_OnFloatValueChangedEvent__DelegateSignature'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.1"
+      },
+      {
+        "ObjectName": "Function'UIRestoreDegreeItem_C:ExecuteUbergraph_UIRestoreDegreeItem'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "DesignImg",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "HideBtn",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Button'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "LoadBtn",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Button'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "NextBtn",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Button'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "NoResBtn",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Button'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "PreBtn",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Button'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ShowBtn",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Button'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SliderItem",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Slider'",
+          "ObjectPath": "/Script/UMG"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_UIRestoreDegreeItem": {
+        "ObjectName": "Function'UIRestoreDegreeItem_C:ExecuteUbergraph_UIRestoreDegreeItem'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.0"
+      },
+      "BndEvt__UIRestoreDegreeItem_SliderItem_K2Node_ComponentBoundEvent_0_OnFloatValueChangedEvent__DelegateSignature": {
+        "ObjectName": "Function'UIRestoreDegreeItem_C:BndEvt__UIRestoreDegreeItem_SliderItem_K2Node_ComponentBoundEvent_0_OnFloatValueChangedEvent__DelegateSignature'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.1"
+      }
+    },
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "UIRestoreDegreeItem_C'Default__UIRestoreDegreeItem_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.3"
+    }
+  },
+  {
+    "Type": "UIRestoreDegreeItem_C",
+    "Name": "Default__UIRestoreDegreeItem_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.UIRestoreDegreeItem_C'",
+    "Package": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem",
+    "Template": {
+      "ObjectName": "GMUserWidget_C'Default__GMUserWidget_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/GMUserWidget.4"
+    },
+    "Properties": {
+      "UberGraphFrame": {}
+    }
+  },
+  {
+    "Type": "Button",
+    "Name": "HideBtn",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Button'",
+    "Outer": {
+      "ObjectName": "WidgetTree'UIRestoreDegreeItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.46"
+    },
+    "Properties": {
+      "WidgetStyle": {
+        "Normal": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 1.0,
+              "G": 1.0,
+              "B": 1.0,
+              "A": 0.5,
+              "Hex": "7FFFFFFF"
+            }
+          }
+        },
+        "Hovered": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 1.0,
+              "G": 1.0,
+              "B": 1.0,
+              "A": 0.5,
+              "Hex": "7FFFFFFF"
+            }
+          }
+        },
+        "Pressed": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 1.0,
+              "G": 1.0,
+              "B": 1.0,
+              "A": 0.5,
+              "Hex": "7FFFFFFF"
+            }
+          }
+        }
+      },
+      "Slots": [
+        {
+          "ObjectName": "ButtonSlot'UIRestoreDegreeItem_C:WidgetTree.HideBtn.ButtonSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.10"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'UIRestoreDegreeItem_C:WidgetTree.BtnView.HorizontalBoxSlot_13'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.32"
+      }
+    }
+  },
+  {
+    "Type": "Button",
+    "Name": "LoadBtn",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Button'",
+    "Outer": {
+      "ObjectName": "WidgetTree'UIRestoreDegreeItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.46"
+    },
+    "Properties": {
+      "WidgetStyle": {
+        "Normal": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 1.0,
+              "G": 1.0,
+              "B": 1.0,
+              "A": 0.5,
+              "Hex": "7FFFFFFF"
+            }
+          }
+        },
+        "Hovered": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 1.0,
+              "G": 1.0,
+              "B": 1.0,
+              "A": 0.5,
+              "Hex": "7FFFFFFF"
+            }
+          }
+        },
+        "Pressed": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 1.0,
+              "G": 1.0,
+              "B": 1.0,
+              "A": 0.5,
+              "Hex": "7FFFFFFF"
+            }
+          }
+        }
+      },
+      "Slots": [
+        {
+          "ObjectName": "ButtonSlot'UIRestoreDegreeItem_C:WidgetTree.LoadBtn.ButtonSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.11"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'UIRestoreDegreeItem_C:WidgetTree.BtnView.HorizontalBoxSlot_11'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.30"
+      }
+    }
+  },
+  {
+    "Type": "Button",
+    "Name": "NextBtn",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Button'",
+    "Outer": {
+      "ObjectName": "WidgetTree'UIRestoreDegreeItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.46"
+    },
+    "Properties": {
+      "WidgetStyle": {
+        "Normal": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 1.0,
+              "G": 1.0,
+              "B": 1.0,
+              "A": 0.5,
+              "Hex": "7FFFFFFF"
+            }
+          }
+        },
+        "Hovered": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 1.0,
+              "G": 1.0,
+              "B": 1.0,
+              "A": 0.5,
+              "Hex": "7FFFFFFF"
+            }
+          }
+        },
+        "Pressed": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 1.0,
+              "G": 1.0,
+              "B": 1.0,
+              "A": 0.5,
+              "Hex": "7FFFFFFF"
+            }
+          }
+        }
+      },
+      "Slots": [
+        {
+          "ObjectName": "ButtonSlot'UIRestoreDegreeItem_C:WidgetTree.NextBtn.ButtonSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.12"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'UIRestoreDegreeItem_C:WidgetTree.BtnView.HorizontalBoxSlot_5'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.35"
+      }
+    }
+  },
+  {
+    "Type": "Button",
+    "Name": "NoResBtn",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Button'",
+    "Outer": {
+      "ObjectName": "WidgetTree'UIRestoreDegreeItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.46"
+    },
+    "Properties": {
+      "WidgetStyle": {
+        "Normal": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 1.0,
+              "G": 1.0,
+              "B": 1.0,
+              "A": 0.5,
+              "Hex": "7FFFFFFF"
+            }
+          }
+        },
+        "Hovered": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 1.0,
+              "G": 1.0,
+              "B": 1.0,
+              "A": 0.5,
+              "Hex": "7FFFFFFF"
+            }
+          }
+        },
+        "Pressed": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 1.0,
+              "G": 1.0,
+              "B": 1.0,
+              "A": 0.5,
+              "Hex": "7FFFFFFF"
+            }
+          }
+        }
+      },
+      "Slots": [
+        {
+          "ObjectName": "ButtonSlot'UIRestoreDegreeItem_C:WidgetTree.NoResBtn.ButtonSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.13"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'UIRestoreDegreeItem_C:WidgetTree.BtnView.HorizontalBoxSlot_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.33"
+      }
+    }
+  },
+  {
+    "Type": "Button",
+    "Name": "PreBtn",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Button'",
+    "Outer": {
+      "ObjectName": "WidgetTree'UIRestoreDegreeItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.46"
+    },
+    "Properties": {
+      "WidgetStyle": {
+        "Normal": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 1.0,
+              "G": 1.0,
+              "B": 1.0,
+              "A": 0.5,
+              "Hex": "7FFFFFFF"
+            }
+          }
+        },
+        "Hovered": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 1.0,
+              "G": 1.0,
+              "B": 1.0,
+              "A": 0.5,
+              "Hex": "7FFFFFFF"
+            }
+          }
+        },
+        "Pressed": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 1.0,
+              "G": 1.0,
+              "B": 1.0,
+              "A": 0.5,
+              "Hex": "7FFFFFFF"
+            }
+          }
+        }
+      },
+      "Slots": [
+        {
+          "ObjectName": "ButtonSlot'UIRestoreDegreeItem_C:WidgetTree.PreBtn.ButtonSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.14"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'UIRestoreDegreeItem_C:WidgetTree.BtnView.HorizontalBoxSlot_4'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.34"
+      }
+    }
+  },
+  {
+    "Type": "Button",
+    "Name": "ShowBtn",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Button'",
+    "Outer": {
+      "ObjectName": "WidgetTree'UIRestoreDegreeItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.46"
+    },
+    "Properties": {
+      "WidgetStyle": {
+        "Normal": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 1.0,
+              "G": 1.0,
+              "B": 1.0,
+              "A": 0.5,
+              "Hex": "7FFFFFFF"
+            }
+          }
+        },
+        "Hovered": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 1.0,
+              "G": 1.0,
+              "B": 1.0,
+              "A": 0.5,
+              "Hex": "7FFFFFFF"
+            }
+          }
+        },
+        "Pressed": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 1.0,
+              "G": 1.0,
+              "B": 1.0,
+              "A": 0.5,
+              "Hex": "7FFFFFFF"
+            }
+          }
+        }
+      },
+      "Slots": [
+        {
+          "ObjectName": "ButtonSlot'UIRestoreDegreeItem_C:WidgetTree.ShowBtn.ButtonSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.15"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'UIRestoreDegreeItem_C:WidgetTree.BtnView.HorizontalBoxSlot_12'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.31"
+      }
+    }
+  },
+  {
+    "Type": "ButtonSlot",
+    "Name": "ButtonSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ButtonSlot'",
+    "Outer": {
+      "ObjectName": "Button'UIRestoreDegreeItem_C:WidgetTree.HideBtn'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.4"
+    },
+    "Properties": {
+      "Padding": {
+        "Left": 7.68,
+        "Top": 7.68,
+        "Right": 7.68,
+        "Bottom": 3.84
+      },
+      "Parent": {
+        "ObjectName": "Button'UIRestoreDegreeItem_C:WidgetTree.HideBtn'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.4"
+      },
+      "Content": {
+        "ObjectName": "TextBlock'UIRestoreDegreeItem_C:WidgetTree.TextBlock_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.38"
+      }
+    }
+  },
+  {
+    "Type": "ButtonSlot",
+    "Name": "ButtonSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ButtonSlot'",
+    "Outer": {
+      "ObjectName": "Button'UIRestoreDegreeItem_C:WidgetTree.LoadBtn'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.5"
+    },
+    "Properties": {
+      "Padding": {
+        "Left": 7.68,
+        "Top": 7.68,
+        "Right": 7.68,
+        "Bottom": 3.84
+      },
+      "Parent": {
+        "ObjectName": "Button'UIRestoreDegreeItem_C:WidgetTree.LoadBtn'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.5"
+      },
+      "Content": {
+        "ObjectName": "TextBlock'UIRestoreDegreeItem_C:WidgetTree.TextBlock_3'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.39"
+      }
+    }
+  },
+  {
+    "Type": "ButtonSlot",
+    "Name": "ButtonSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ButtonSlot'",
+    "Outer": {
+      "ObjectName": "Button'UIRestoreDegreeItem_C:WidgetTree.NextBtn'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.6"
+    },
+    "Properties": {
+      "Padding": {
+        "Left": 7.68,
+        "Top": 7.68,
+        "Right": 7.68,
+        "Bottom": 3.84
+      },
+      "Parent": {
+        "ObjectName": "Button'UIRestoreDegreeItem_C:WidgetTree.NextBtn'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.6"
+      },
+      "Content": {
+        "ObjectName": "TextBlock'UIRestoreDegreeItem_C:WidgetTree.UEGC'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.41"
+      }
+    }
+  },
+  {
+    "Type": "ButtonSlot",
+    "Name": "ButtonSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ButtonSlot'",
+    "Outer": {
+      "ObjectName": "Button'UIRestoreDegreeItem_C:WidgetTree.NoResBtn'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.7"
+    },
+    "Properties": {
+      "Padding": {
+        "Left": 7.68,
+        "Top": 7.68,
+        "Right": 7.68,
+        "Bottom": 3.84
+      },
+      "Parent": {
+        "ObjectName": "Button'UIRestoreDegreeItem_C:WidgetTree.NoResBtn'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.7"
+      },
+      "Content": {
+        "ObjectName": "TextBlock'UIRestoreDegreeItem_C:WidgetTree.TextBlock'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.37"
+      }
+    }
+  },
+  {
+    "Type": "ButtonSlot",
+    "Name": "ButtonSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ButtonSlot'",
+    "Outer": {
+      "ObjectName": "Button'UIRestoreDegreeItem_C:WidgetTree.PreBtn'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.8"
+    },
+    "Properties": {
+      "Padding": {
+        "Left": 7.68,
+        "Top": 7.68,
+        "Right": 7.68,
+        "Bottom": 3.84
+      },
+      "Parent": {
+        "ObjectName": "Button'UIRestoreDegreeItem_C:WidgetTree.PreBtn'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.8"
+      },
+      "Content": {
+        "ObjectName": "TextBlock'UIRestoreDegreeItem_C:WidgetTree.UEGC_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.43"
+      }
+    }
+  },
+  {
+    "Type": "ButtonSlot",
+    "Name": "ButtonSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ButtonSlot'",
+    "Outer": {
+      "ObjectName": "Button'UIRestoreDegreeItem_C:WidgetTree.ShowBtn'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.9"
+    },
+    "Properties": {
+      "Padding": {
+        "Left": 7.68,
+        "Top": 7.68,
+        "Right": 7.68,
+        "Bottom": 3.84
+      },
+      "Parent": {
+        "ObjectName": "Button'UIRestoreDegreeItem_C:WidgetTree.ShowBtn'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.9"
+      },
+      "Content": {
+        "ObjectName": "TextBlock'UIRestoreDegreeItem_C:WidgetTree.TextBlock_4'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.40"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'UIRestoreDegreeItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.46"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'UIRestoreDegreeItem_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_2'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.20"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'UIRestoreDegreeItem_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_3'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.21"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_40",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'UIRestoreDegreeItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.46"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'UIRestoreDegreeItem_C:WidgetTree.CanvasPanel_40.CanvasPanelSlot_8'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.23"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'UIRestoreDegreeItem_C:WidgetTree.CanvasPanel_40.CanvasPanelSlot_7'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.22"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'UIRestoreDegreeItem_C:WidgetTree.BtnView.HorizontalBoxSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.29"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "NoResCanvas",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'UIRestoreDegreeItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.46"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'UIRestoreDegreeItem_C:WidgetTree.NoResCanvas.CanvasPanelSlot_4'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.24"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'UIRestoreDegreeItem_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_3'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.21"
+      },
+      "Visibility": "ESlateVisibility::Collapsed"
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "RestoreCanvas",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'UIRestoreDegreeItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.46"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'UIRestoreDegreeItem_C:WidgetTree.RestoreCanvas.CanvasPanelSlot_15'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.25"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'UIRestoreDegreeItem_C:WidgetTree.RestoreCanvas.CanvasPanelSlot_16'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.26"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'UIRestoreDegreeItem_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.20"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'UIRestoreDegreeItem_C:WidgetTree.CanvasPanel_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.16"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "Anchors": {
+          "Maximum": {
+            "X": 1.0,
+            "Y": 1.0
+          }
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'UIRestoreDegreeItem_C:WidgetTree.CanvasPanel_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.16"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'UIRestoreDegreeItem_C:WidgetTree.RestoreCanvas'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.19"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'UIRestoreDegreeItem_C:WidgetTree.CanvasPanel_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.16"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 1016.32007,
+          "Bottom": 1434.8799
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'UIRestoreDegreeItem_C:WidgetTree.CanvasPanel_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.16"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'UIRestoreDegreeItem_C:WidgetTree.NoResCanvas'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.18"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_7",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'UIRestoreDegreeItem_C:WidgetTree.CanvasPanel_40'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.17"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 207.36,
+          "Right": 669.1267,
+          "Bottom": 96.0
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'UIRestoreDegreeItem_C:WidgetTree.CanvasPanel_40'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.17"
+      },
+      "Content": {
+        "ObjectName": "Slider'UIRestoreDegreeItem_C:WidgetTree.SliderItem'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.36"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_8",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'UIRestoreDegreeItem_C:WidgetTree.CanvasPanel_40'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.17"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Top": 5.440001,
+          "Right": 192.0,
+          "Bottom": 76.16
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.0,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.0,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.0,
+          "Y": 0.5
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'UIRestoreDegreeItem_C:WidgetTree.CanvasPanel_40'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.17"
+      },
+      "Content": {
+        "ObjectName": "TextBlock'UIRestoreDegreeItem_C:WidgetTree.UEGC_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.42"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_4",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'UIRestoreDegreeItem_C:WidgetTree.NoResCanvas'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.18"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 7.68,
+          "Top": 207.36,
+          "Right": 192.0,
+          "Bottom": 57.6
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'UIRestoreDegreeItem_C:WidgetTree.NoResCanvas'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.18"
+      },
+      "Content": {
+        "ObjectName": "UITextBlock'UIRestoreDegreeItem_C:WidgetTree.NoResText'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.45"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_15",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'UIRestoreDegreeItem_C:WidgetTree.RestoreCanvas'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.19"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "Anchors": {
+          "Maximum": {
+            "X": 1.0,
+            "Y": 1.0
+          }
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'UIRestoreDegreeItem_C:WidgetTree.RestoreCanvas'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.19"
+      },
+      "Content": {
+        "ObjectName": "UIImage'UIRestoreDegreeItem_C:WidgetTree.DesignImg'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.44"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_16",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'UIRestoreDegreeItem_C:WidgetTree.RestoreCanvas'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.19"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 1184.6765,
+          "Bottom": 139.4855
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.0
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.0
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.0
+        }
+      },
+      "bAutoSize": true,
+      "ZOrder": 2,
+      "Parent": {
+        "ObjectName": "CanvasPanel'UIRestoreDegreeItem_C:WidgetTree.RestoreCanvas'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.19"
+      },
+      "Content": {
+        "ObjectName": "HorizontalBox'UIRestoreDegreeItem_C:WidgetTree.BtnView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.28"
+      }
+    }
+  },
+  {
+    "Type": "ComponentDelegateBinding",
+    "Name": "ComponentDelegateBinding_0",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ComponentDelegateBinding'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'UIRestoreDegreeItem_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.2"
+    },
+    "Properties": {
+      "ComponentDelegateBindings": [
+        {
+          "ComponentPropertyName": "SliderItem",
+          "DelegatePropertyName": "OnValueChanged",
+          "FunctionNameToBind": "BndEvt__UIRestoreDegreeItem_SliderItem_K2Node_ComponentBoundEvent_0_OnFloatValueChangedEvent__DelegateSignature"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "BtnView",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'UIRestoreDegreeItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.46"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HorizontalBoxSlot'UIRestoreDegreeItem_C:WidgetTree.BtnView.HorizontalBoxSlot_2'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.33"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'UIRestoreDegreeItem_C:WidgetTree.BtnView.HorizontalBoxSlot_11'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.30"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'UIRestoreDegreeItem_C:WidgetTree.BtnView.HorizontalBoxSlot_12'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.31"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'UIRestoreDegreeItem_C:WidgetTree.BtnView.HorizontalBoxSlot_13'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.32"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'UIRestoreDegreeItem_C:WidgetTree.BtnView.HorizontalBoxSlot_4'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.34"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'UIRestoreDegreeItem_C:WidgetTree.BtnView.HorizontalBoxSlot_5'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.35"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'UIRestoreDegreeItem_C:WidgetTree.BtnView.HorizontalBoxSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.29"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'UIRestoreDegreeItem_C:WidgetTree.RestoreCanvas.CanvasPanelSlot_16'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.26"
+      },
+      "RenderTransform": {
+        "Scale": {
+          "X": 0.67,
+          "Y": 0.67
+        }
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'UIRestoreDegreeItem_C:WidgetTree.BtnView'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.28"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "HorizontalBox'UIRestoreDegreeItem_C:WidgetTree.BtnView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.28"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'UIRestoreDegreeItem_C:WidgetTree.CanvasPanel_40'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.17"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_11",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'UIRestoreDegreeItem_C:WidgetTree.BtnView'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.28"
+    },
+    "Properties": {
+      "Padding": {
+        "Right": 96.0
+      },
+      "Parent": {
+        "ObjectName": "HorizontalBox'UIRestoreDegreeItem_C:WidgetTree.BtnView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.28"
+      },
+      "Content": {
+        "ObjectName": "Button'UIRestoreDegreeItem_C:WidgetTree.LoadBtn'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.5"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_12",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'UIRestoreDegreeItem_C:WidgetTree.BtnView'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.28"
+    },
+    "Properties": {
+      "Padding": {
+        "Right": 7.68
+      },
+      "Parent": {
+        "ObjectName": "HorizontalBox'UIRestoreDegreeItem_C:WidgetTree.BtnView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.28"
+      },
+      "Content": {
+        "ObjectName": "Button'UIRestoreDegreeItem_C:WidgetTree.ShowBtn'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.9"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_13",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'UIRestoreDegreeItem_C:WidgetTree.BtnView'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.28"
+    },
+    "Properties": {
+      "Padding": {
+        "Right": 96.0
+      },
+      "Parent": {
+        "ObjectName": "HorizontalBox'UIRestoreDegreeItem_C:WidgetTree.BtnView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.28"
+      },
+      "Content": {
+        "ObjectName": "Button'UIRestoreDegreeItem_C:WidgetTree.HideBtn'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.4"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'UIRestoreDegreeItem_C:WidgetTree.BtnView'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.28"
+    },
+    "Properties": {
+      "Padding": {
+        "Right": 38.399998
+      },
+      "Parent": {
+        "ObjectName": "HorizontalBox'UIRestoreDegreeItem_C:WidgetTree.BtnView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.28"
+      },
+      "Content": {
+        "ObjectName": "Button'UIRestoreDegreeItem_C:WidgetTree.NoResBtn'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.7"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_4",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'UIRestoreDegreeItem_C:WidgetTree.BtnView'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.28"
+    },
+    "Properties": {
+      "Padding": {
+        "Right": 7.68
+      },
+      "Parent": {
+        "ObjectName": "HorizontalBox'UIRestoreDegreeItem_C:WidgetTree.BtnView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.28"
+      },
+      "Content": {
+        "ObjectName": "Button'UIRestoreDegreeItem_C:WidgetTree.PreBtn'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.8"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_5",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'UIRestoreDegreeItem_C:WidgetTree.BtnView'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.28"
+    },
+    "Properties": {
+      "Padding": {
+        "Right": 7.68
+      },
+      "Parent": {
+        "ObjectName": "HorizontalBox'UIRestoreDegreeItem_C:WidgetTree.BtnView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.28"
+      },
+      "Content": {
+        "ObjectName": "Button'UIRestoreDegreeItem_C:WidgetTree.NextBtn'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.6"
+      }
+    }
+  },
+  {
+    "Type": "Slider",
+    "Name": "SliderItem",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Slider'",
+    "Outer": {
+      "ObjectName": "WidgetTree'UIRestoreDegreeItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.46"
+    },
+    "Properties": {
+      "Value": 0.8,
+      "WidgetStyle": {
+        "NormalBarImage": {
+          "ImageSize": {
+            "X": 192.0,
+            "Y": 96.0
+          }
+        },
+        "NormalThumbImage": {
+          "ImageSize": {
+            "X": 15.36,
+            "Y": 26.88
+          }
+        },
+        "HoveredThumbImage": {
+          "ImageSize": {
+            "X": 15.36,
+            "Y": 26.88
+          }
+        },
+        "DisabledThumbImage": {
+          "ImageSize": {
+            "X": 15.36,
+            "Y": 26.88
+          }
+        },
+        "BarThickness": 30.0
+      },
+      "IndentHandle": true,
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'UIRestoreDegreeItem_C:WidgetTree.CanvasPanel_40.CanvasPanelSlot_7'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.22"
+      }
+    }
+  },
+  {
+    "Type": "TextBlock",
+    "Name": "TextBlock",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'TextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'UIRestoreDegreeItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.46"
+    },
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "EA18E8AD41E4DF079BD071BD3078D918",
+        "SourceString": "No Res",
+        "LocalizedString": "No Res"
+      },
+      "ColorAndOpacity": {
+        "SpecifiedColor": {
+          "R": 0.0,
+          "G": 0.0,
+          "B": 0.0,
+          "A": 1.0,
+          "Hex": "000000"
+        }
+      },
+      "Font": {
+        "Size": 46
+      },
+      "Slot": {
+        "ObjectName": "ButtonSlot'UIRestoreDegreeItem_C:WidgetTree.NoResBtn.ButtonSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.13"
+      }
+    }
+  },
+  {
+    "Type": "TextBlock",
+    "Name": "TextBlock_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'TextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'UIRestoreDegreeItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.46"
+    },
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "DC85E93B4FBC8B81101DD995F9F34C1C",
+        "SourceString": "Hide",
+        "LocalizedString": "Hide"
+      },
+      "ColorAndOpacity": {
+        "SpecifiedColor": {
+          "R": 0.0,
+          "G": 0.0,
+          "B": 0.0,
+          "A": 1.0,
+          "Hex": "000000"
+        }
+      },
+      "Font": {
+        "Size": 46
+      },
+      "Slot": {
+        "ObjectName": "ButtonSlot'UIRestoreDegreeItem_C:WidgetTree.HideBtn.ButtonSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.10"
+      }
+    }
+  },
+  {
+    "Type": "TextBlock",
+    "Name": "TextBlock_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'TextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'UIRestoreDegreeItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.46"
+    },
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "EC690A5F4E4C0C8D3CD8A99995ACD7EA",
+        "SourceString": "Load",
+        "LocalizedString": "Load"
+      },
+      "ColorAndOpacity": {
+        "SpecifiedColor": {
+          "R": 0.0,
+          "G": 0.0,
+          "B": 0.0,
+          "A": 1.0,
+          "Hex": "000000"
+        }
+      },
+      "Font": {
+        "Size": 46
+      },
+      "Slot": {
+        "ObjectName": "ButtonSlot'UIRestoreDegreeItem_C:WidgetTree.LoadBtn.ButtonSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.11"
+      }
+    }
+  },
+  {
+    "Type": "TextBlock",
+    "Name": "TextBlock_4",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'TextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'UIRestoreDegreeItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.46"
+    },
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "E80F47F149D5D20FFF02F5B4BDCBF111",
+        "SourceString": "Show",
+        "LocalizedString": "Show"
+      },
+      "ColorAndOpacity": {
+        "SpecifiedColor": {
+          "R": 0.0,
+          "G": 0.0,
+          "B": 0.0,
+          "A": 1.0,
+          "Hex": "000000"
+        }
+      },
+      "Font": {
+        "Size": 46
+      },
+      "Slot": {
+        "ObjectName": "ButtonSlot'UIRestoreDegreeItem_C:WidgetTree.ShowBtn.ButtonSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.15"
+      }
+    }
+  },
+  {
+    "Type": "TextBlock",
+    "Name": "UEGC",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'TextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'UIRestoreDegreeItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.46"
+    },
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "9DE543AC4C5A3B1F9DEFC2AF180C5564",
+        "SourceString": "Next",
+        "LocalizedString": "Next"
+      },
+      "ColorAndOpacity": {
+        "SpecifiedColor": {
+          "R": 0.0,
+          "G": 0.0,
+          "B": 0.0,
+          "A": 1.0,
+          "Hex": "000000"
+        }
+      },
+      "Font": {
+        "Size": 46
+      },
+      "Slot": {
+        "ObjectName": "ButtonSlot'UIRestoreDegreeItem_C:WidgetTree.NextBtn.ButtonSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.12"
+      }
+    }
+  },
+  {
+    "Type": "TextBlock",
+    "Name": "UEGC_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'TextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'UIRestoreDegreeItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.46"
+    },
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "E1FD9A1B411AE55B795B92ACC0B91D38",
+        "SourceString": "透明度:",
+        "LocalizedString": "透明度:"
+      },
+      "ColorAndOpacity": {
+        "SpecifiedColor": {
+          "R": 0.0,
+          "G": 0.0,
+          "B": 0.0,
+          "A": 1.0,
+          "Hex": "000000"
+        }
+      },
+      "Font": {
+        "Size": 46
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'UIRestoreDegreeItem_C:WidgetTree.CanvasPanel_40.CanvasPanelSlot_8'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.23"
+      }
+    }
+  },
+  {
+    "Type": "TextBlock",
+    "Name": "UEGC_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'TextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'UIRestoreDegreeItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.46"
+    },
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "011775AD4CD0763ED6EB4793A3740FAA",
+        "SourceString": "Pre",
+        "LocalizedString": "Pre"
+      },
+      "ColorAndOpacity": {
+        "SpecifiedColor": {
+          "R": 0.0,
+          "G": 0.0,
+          "B": 0.0,
+          "A": 1.0,
+          "Hex": "000000"
+        }
+      },
+      "Font": {
+        "Size": 46
+      },
+      "Slot": {
+        "ObjectName": "ButtonSlot'UIRestoreDegreeItem_C:WidgetTree.PreBtn.ButtonSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.14"
+      }
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "DesignImg",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'UIRestoreDegreeItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.46"
+    },
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 61.44,
+          "Y": 61.44
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'UIRestoreDegreeItem_C:WidgetTree.RestoreCanvas.CanvasPanelSlot_15'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.25"
+      },
+      "Visibility": "ESlateVisibility::Collapsed"
+    }
+  },
+  {
+    "Type": "UITextBlock",
+    "Name": "NoResText",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UITextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'UIRestoreDegreeItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.46"
+    },
+    "Properties": {
+      "ColorAndOpacity": {
+        "SpecifiedColor": {
+          "R": 1.0,
+          "G": 0.0,
+          "B": 0.0,
+          "A": 1.0,
+          "Hex": "FF0000"
+        }
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'tl_main_Font'",
+          "ObjectPath": "UE_game/Content/Art/UI/Fonts/tl_main_Font.0"
+        },
+        "TypefaceFontName": "Default",
+        "Size": 26
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'UIRestoreDegreeItem_C:WidgetTree.NoResCanvas.CanvasPanelSlot_4'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.24"
+      },
+      "Visibility": "ESlateVisibility::HitTestInvisible"
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetTree'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'UIRestoreDegreeItem_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.2"
+    },
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "CanvasPanel'UIRestoreDegreeItem_C:WidgetTree.CanvasPanel_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIRestoreDegreeItem.16"
+      }
+    }
+  }
+]

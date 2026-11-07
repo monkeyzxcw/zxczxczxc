@@ -1,0 +1,3644 @@
+[
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "DropFilterConditionMultiSelector_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Package": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'DropFilterConditionMultiSelector_C:WidgetTree'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.131"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'UserWidget'",
+      "ObjectPath": "/Script/UMG"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "CloseBtn",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIButton'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ConfirmBtn",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIButton'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ContentListView_0",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIListView'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ContentListView_1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIListView'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ContentListViewSwitcher",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'WidgetSwitcher'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "PrimarySelectorTitleBgSwitcher",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'WidgetSwitcher'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SearchBtn",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIButton'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SearchEditText",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIEditText'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SecondarySelectorTitleBgSwitcher",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'WidgetSwitcher'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ThirdSelectorSwitcher",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'WidgetSwitcher'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ThirdSelectorTitleBgSwitcher",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'WidgetSwitcher'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "TipCloseBtn",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIButton'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "UIButton_149",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIButton'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "UIImage",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "UIImage_3",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "UIImage_4",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "UIImage_5",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "UIImage_6",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "UIImage_7",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "UIImage_8",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "UIImage_9",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "UIImage_10",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "UIImage_11",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "UIImage_12",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "UIImage_48",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "UIImage_83",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      }
+    ],
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "DropFilterConditionMultiSelector_C'Default__DropFilterConditionMultiSelector_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.1"
+    }
+  },
+  {
+    "Type": "DropFilterConditionMultiSelector_C",
+    "Name": "Default__DropFilterConditionMultiSelector_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.DropFilterConditionMultiSelector_C'",
+    "Package": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector",
+    "Properties": {
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'DropFilterConditionMultiSelector_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.131"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'DropFilterConditionMultiSelector_C:WidgetTree.CanvasPanel.CanvasPanelSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.10"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "OverlaySlot'DropFilterConditionMultiSelector_C:WidgetTree.Overlay_1.OverlaySlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.46"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'DropFilterConditionMultiSelector_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.131"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'DropFilterConditionMultiSelector_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.11"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'DropFilterConditionMultiSelector_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.12"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'DropFilterConditionMultiSelector_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.131"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'DropFilterConditionMultiSelector_C:WidgetTree.CanvasPanel_3.CanvasPanelSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.13"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "OverlaySlot'DropFilterConditionMultiSelector_C:WidgetTree.Overlay_2.OverlaySlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.48"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_4",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'DropFilterConditionMultiSelector_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.131"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'DropFilterConditionMultiSelector_C:WidgetTree.CanvasPanel_4.CanvasPanelSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.14"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "OverlaySlot'DropFilterConditionMultiSelector_C:WidgetTree.Overlay_3.OverlaySlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.50"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_45",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'DropFilterConditionMultiSelector_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.131"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'DropFilterConditionMultiSelector_C:WidgetTree.CanvasPanel_45.CanvasPanelSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.15"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'DropFilterConditionMultiSelector_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.12"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_5",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'DropFilterConditionMultiSelector_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.131"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'DropFilterConditionMultiSelector_C:WidgetTree.CanvasPanel_5.CanvasPanelSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.16"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'DropFilterConditionMultiSelector_C:WidgetTree.HorizontalBox_165.HorizontalBoxSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.25"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_6",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'DropFilterConditionMultiSelector_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.131"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'DropFilterConditionMultiSelector_C:WidgetTree.CanvasPanel_6.CanvasPanelSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.17"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "OverlaySlot'DropFilterConditionMultiSelector_C:WidgetTree.Overlay.OverlaySlot_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.44"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_7",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'DropFilterConditionMultiSelector_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.131"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'DropFilterConditionMultiSelector_C:WidgetTree.CanvasPanel_7.CanvasPanelSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.18"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "OverlaySlot'DropFilterConditionMultiSelector_C:WidgetTree.Overlay_60.OverlaySlot_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.62"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'DropFilterConditionMultiSelector_C:WidgetTree.CanvasPanel'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.2"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 718.6351,
+          "Bottom": 57.6
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'DropFilterConditionMultiSelector_C:WidgetTree.CanvasPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.2"
+      },
+      "Content": {
+        "ObjectName": "UIShrinkTextBlock'DropFilterConditionMultiSelector_C:WidgetTree.TitleText_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.98"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'DropFilterConditionMultiSelector_C:WidgetTree.CanvasPanel_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.3"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 192.0,
+          "Bottom": 57.6
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'DropFilterConditionMultiSelector_C:WidgetTree.CanvasPanel_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.3"
+      },
+      "Content": {
+        "ObjectName": "Overlay'DropFilterConditionMultiSelector_C:WidgetTree.Overlay_4'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.37"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'DropFilterConditionMultiSelector_C:WidgetTree.CanvasPanel_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.3"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "Anchors": {
+          "Maximum": {
+            "X": 1.0,
+            "Y": 1.0
+          }
+        }
+      },
+      "ZOrder": 5,
+      "Parent": {
+        "ObjectName": "CanvasPanel'DropFilterConditionMultiSelector_C:WidgetTree.CanvasPanel_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.3"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'DropFilterConditionMultiSelector_C:WidgetTree.CanvasPanel_45'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.6"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'DropFilterConditionMultiSelector_C:WidgetTree.CanvasPanel_3'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.4"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 718.6351,
+          "Bottom": 57.6
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'DropFilterConditionMultiSelector_C:WidgetTree.CanvasPanel_3'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.4"
+      },
+      "Content": {
+        "ObjectName": "UIShrinkTextBlock'DropFilterConditionMultiSelector_C:WidgetTree.TitleText_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.99"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'DropFilterConditionMultiSelector_C:WidgetTree.CanvasPanel_4'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.5"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 744.20825,
+          "Bottom": 57.6
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'DropFilterConditionMultiSelector_C:WidgetTree.CanvasPanel_4'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.5"
+      },
+      "Content": {
+        "ObjectName": "UIShrinkTextBlock'DropFilterConditionMultiSelector_C:WidgetTree.TitleText_3'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.100"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'DropFilterConditionMultiSelector_C:WidgetTree.CanvasPanel_45'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.6"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": -685.056,
+          "Top": -371.712,
+          "Right": -617.472,
+          "Bottom": -337.91998
+        },
+        "Anchors": {
+          "Maximum": {
+            "X": 1.0,
+            "Y": 1.0
+          }
+        }
+      },
+      "ZOrder": 5,
+      "Parent": {
+        "ObjectName": "CanvasPanel'DropFilterConditionMultiSelector_C:WidgetTree.CanvasPanel_45'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.6"
+      },
+      "Content": {
+        "ObjectName": "UIButton'DropFilterConditionMultiSelector_C:WidgetTree.TipCloseBtn'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.76"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'DropFilterConditionMultiSelector_C:WidgetTree.CanvasPanel_5'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.7"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 1058.6104,
+          "Bottom": 49.744343
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'DropFilterConditionMultiSelector_C:WidgetTree.CanvasPanel_5'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.7"
+      },
+      "Content": {
+        "ObjectName": "UIEditText'DropFilterConditionMultiSelector_C:WidgetTree.SearchEditText'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.78"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'DropFilterConditionMultiSelector_C:WidgetTree.CanvasPanel_6'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.8"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 556.8,
+          "Bottom": 142.08
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'DropFilterConditionMultiSelector_C:WidgetTree.CanvasPanel_6'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.8"
+      },
+      "Content": {
+        "ObjectName": "UIShrinkTextBlock'DropFilterConditionMultiSelector_C:WidgetTree.HintText_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.96"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'DropFilterConditionMultiSelector_C:WidgetTree.CanvasPanel_7'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.9"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 1402.1647,
+          "Bottom": 94.29397
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'DropFilterConditionMultiSelector_C:WidgetTree.CanvasPanel_7'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.9"
+      },
+      "Content": {
+        "ObjectName": "UIShrinkTextBlock'DropFilterConditionMultiSelector_C:WidgetTree.TitleText'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.97"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "HorizontalBox_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'DropFilterConditionMultiSelector_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.131"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HorizontalBoxSlot'DropFilterConditionMultiSelector_C:WidgetTree.HorizontalBox_0.HorizontalBoxSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.23"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'DropFilterConditionMultiSelector_C:WidgetTree.HorizontalBox_0.HorizontalBoxSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.24"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "OverlaySlot'DropFilterConditionMultiSelector_C:WidgetTree.Overlay_6.OverlaySlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.58"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "HorizontalBox_165",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'DropFilterConditionMultiSelector_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.131"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HorizontalBoxSlot'DropFilterConditionMultiSelector_C:WidgetTree.HorizontalBox_165.HorizontalBoxSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.25"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'DropFilterConditionMultiSelector_C:WidgetTree.HorizontalBox_165.HorizontalBoxSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.26"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "OverlaySlot'DropFilterConditionMultiSelector_C:WidgetTree.Overlay_325.OverlaySlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.53"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "HorizontalBox_51",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'DropFilterConditionMultiSelector_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.131"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HorizontalBoxSlot'DropFilterConditionMultiSelector_C:WidgetTree.HorizontalBox_51.HorizontalBoxSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.27"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'DropFilterConditionMultiSelector_C:WidgetTree.HorizontalBox_51.HorizontalBoxSlot_5'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.28"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "SizeBoxSlot'DropFilterConditionMultiSelector_C:WidgetTree.SizeBox_3.SizeBoxSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.72"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "HorizontalBox_82",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'DropFilterConditionMultiSelector_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.131"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HorizontalBoxSlot'DropFilterConditionMultiSelector_C:WidgetTree.HorizontalBox_82.HorizontalBoxSlot_2'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.30"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'DropFilterConditionMultiSelector_C:WidgetTree.HorizontalBox_82.HorizontalBoxSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.29"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'DropFilterConditionMultiSelector_C:WidgetTree.VerticalBox_57.VerticalBoxSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.115"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'DropFilterConditionMultiSelector_C:WidgetTree.HorizontalBox_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.19"
+    },
+    "Properties": {
+      "Size": {
+        "SizeRule": "ESlateSizeRule::Fill"
+      },
+      "Parent": {
+        "ObjectName": "HorizontalBox'DropFilterConditionMultiSelector_C:WidgetTree.HorizontalBox_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.19"
+      },
+      "Content": {
+        "ObjectName": "VerticalBox'DropFilterConditionMultiSelector_C:WidgetTree.VerticalBox'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.101"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'DropFilterConditionMultiSelector_C:WidgetTree.HorizontalBox_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.19"
+    },
+    "Properties": {
+      "Size": {
+        "SizeRule": "ESlateSizeRule::Fill"
+      },
+      "Parent": {
+        "ObjectName": "HorizontalBox'DropFilterConditionMultiSelector_C:WidgetTree.HorizontalBox_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.19"
+      },
+      "Content": {
+        "ObjectName": "VerticalBox'DropFilterConditionMultiSelector_C:WidgetTree.VerticalBox_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.103"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'DropFilterConditionMultiSelector_C:WidgetTree.HorizontalBox_165'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.20"
+    },
+    "Properties": {
+      "Padding": {
+        "Left": 19.199999,
+        "Right": 19.199999
+      },
+      "HorizontalAlignment": "HAlign_Left",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "HorizontalBox'DropFilterConditionMultiSelector_C:WidgetTree.HorizontalBox_165'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.20"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'DropFilterConditionMultiSelector_C:WidgetTree.CanvasPanel_5'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.7"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'DropFilterConditionMultiSelector_C:WidgetTree.HorizontalBox_165'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.20"
+    },
+    "Properties": {
+      "Padding": {
+        "Top": 9.599999,
+        "Right": 19.199999,
+        "Bottom": 9.599999
+      },
+      "HorizontalAlignment": "HAlign_Right",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "HorizontalBox'DropFilterConditionMultiSelector_C:WidgetTree.HorizontalBox_165'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.20"
+      },
+      "Content": {
+        "ObjectName": "UIButton'DropFilterConditionMultiSelector_C:WidgetTree.SearchBtn'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.75"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'DropFilterConditionMultiSelector_C:WidgetTree.HorizontalBox_51'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.21"
+    },
+    "Properties": {
+      "Size": {
+        "SizeRule": "ESlateSizeRule::Fill"
+      },
+      "Parent": {
+        "ObjectName": "HorizontalBox'DropFilterConditionMultiSelector_C:WidgetTree.HorizontalBox_51'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.21"
+      },
+      "Content": {
+        "ObjectName": "Overlay'DropFilterConditionMultiSelector_C:WidgetTree.Overlay_6'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.39"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_5",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'DropFilterConditionMultiSelector_C:WidgetTree.HorizontalBox_51'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.21"
+    },
+    "Properties": {
+      "Size": {
+        "Value": 0.5,
+        "SizeRule": "ESlateSizeRule::Fill"
+      },
+      "Parent": {
+        "ObjectName": "HorizontalBox'DropFilterConditionMultiSelector_C:WidgetTree.HorizontalBox_51'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.21"
+      },
+      "Content": {
+        "ObjectName": "Overlay'DropFilterConditionMultiSelector_C:WidgetTree.Overlay_7'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.41"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'DropFilterConditionMultiSelector_C:WidgetTree.HorizontalBox_82'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.22"
+    },
+    "Properties": {
+      "Size": {
+        "SizeRule": "ESlateSizeRule::Fill"
+      },
+      "HorizontalAlignment": "HAlign_Right",
+      "Parent": {
+        "ObjectName": "HorizontalBox'DropFilterConditionMultiSelector_C:WidgetTree.HorizontalBox_82'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.22"
+      },
+      "Content": {
+        "ObjectName": "UIButton'DropFilterConditionMultiSelector_C:WidgetTree.ConfirmBtn'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.74"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'DropFilterConditionMultiSelector_C:WidgetTree.HorizontalBox_82'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.22"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "HorizontalBox'DropFilterConditionMultiSelector_C:WidgetTree.HorizontalBox_82'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.22"
+      },
+      "Content": {
+        "ObjectName": "Overlay'DropFilterConditionMultiSelector_C:WidgetTree.Overlay_325'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.36"
+      }
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "Overlay",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Overlay'",
+    "Outer": {
+      "ObjectName": "WidgetTree'DropFilterConditionMultiSelector_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.131"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlaySlot'DropFilterConditionMultiSelector_C:WidgetTree.Overlay.OverlaySlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.42"
+        },
+        {
+          "ObjectName": "OverlaySlot'DropFilterConditionMultiSelector_C:WidgetTree.Overlay.OverlaySlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.43"
+        },
+        {
+          "ObjectName": "OverlaySlot'DropFilterConditionMultiSelector_C:WidgetTree.Overlay.OverlaySlot_2'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.44"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "WidgetSwitcherSlot'DropFilterConditionMultiSelector_C:WidgetTree.ThirdSelectorSwitcher.WidgetSwitcherSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.128"
+      }
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "Overlay_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Overlay'",
+    "Outer": {
+      "ObjectName": "WidgetTree'DropFilterConditionMultiSelector_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.131"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlaySlot'DropFilterConditionMultiSelector_C:WidgetTree.Overlay_0.OverlaySlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.45"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "SizeBoxSlot'DropFilterConditionMultiSelector_C:WidgetTree.SizeBox_1.SizeBoxSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.70"
+      }
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "Overlay_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Overlay'",
+    "Outer": {
+      "ObjectName": "WidgetTree'DropFilterConditionMultiSelector_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.131"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlaySlot'DropFilterConditionMultiSelector_C:WidgetTree.Overlay_1.OverlaySlot_2'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.47"
+        },
+        {
+          "ObjectName": "OverlaySlot'DropFilterConditionMultiSelector_C:WidgetTree.Overlay_1.OverlaySlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.46"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'DropFilterConditionMultiSelector_C:WidgetTree.VerticalBox.VerticalBoxSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.106"
+      }
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "Overlay_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Overlay'",
+    "Outer": {
+      "ObjectName": "WidgetTree'DropFilterConditionMultiSelector_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.131"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlaySlot'DropFilterConditionMultiSelector_C:WidgetTree.Overlay_2.OverlaySlot_2'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.49"
+        },
+        {
+          "ObjectName": "OverlaySlot'DropFilterConditionMultiSelector_C:WidgetTree.Overlay_2.OverlaySlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.48"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'DropFilterConditionMultiSelector_C:WidgetTree.VerticalBox_1.VerticalBoxSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.110"
+      }
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "Overlay_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Overlay'",
+    "Outer": {
+      "ObjectName": "WidgetTree'DropFilterConditionMultiSelector_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.131"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlaySlot'DropFilterConditionMultiSelector_C:WidgetTree.Overlay_3.OverlaySlot_2'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.51"
+        },
+        {
+          "ObjectName": "OverlaySlot'DropFilterConditionMultiSelector_C:WidgetTree.Overlay_3.OverlaySlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.50"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'DropFilterConditionMultiSelector_C:WidgetTree.VerticalBox_2.VerticalBoxSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.112"
+      }
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "Overlay_325",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Overlay'",
+    "Outer": {
+      "ObjectName": "WidgetTree'DropFilterConditionMultiSelector_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.131"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlaySlot'DropFilterConditionMultiSelector_C:WidgetTree.Overlay_325.OverlaySlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.52"
+        },
+        {
+          "ObjectName": "OverlaySlot'DropFilterConditionMultiSelector_C:WidgetTree.Overlay_325.OverlaySlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.53"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'DropFilterConditionMultiSelector_C:WidgetTree.HorizontalBox_82.HorizontalBoxSlot_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.30"
+      }
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "Overlay_4",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Overlay'",
+    "Outer": {
+      "ObjectName": "WidgetTree'DropFilterConditionMultiSelector_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.131"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlaySlot'DropFilterConditionMultiSelector_C:WidgetTree.Overlay_4.OverlaySlot_3'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.55"
+        },
+        {
+          "ObjectName": "OverlaySlot'DropFilterConditionMultiSelector_C:WidgetTree.Overlay_4.OverlaySlot_2'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.54"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'DropFilterConditionMultiSelector_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.11"
+      }
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "Overlay_5",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Overlay'",
+    "Outer": {
+      "ObjectName": "WidgetTree'DropFilterConditionMultiSelector_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.131"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlaySlot'DropFilterConditionMultiSelector_C:WidgetTree.Overlay_5.OverlaySlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.56"
+        },
+        {
+          "ObjectName": "OverlaySlot'DropFilterConditionMultiSelector_C:WidgetTree.Overlay_5.OverlaySlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.57"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'DropFilterConditionMultiSelector_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.108"
+      }
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "Overlay_6",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Overlay'",
+    "Outer": {
+      "ObjectName": "WidgetTree'DropFilterConditionMultiSelector_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.131"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlaySlot'DropFilterConditionMultiSelector_C:WidgetTree.Overlay_6.OverlaySlot_2'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.59"
+        },
+        {
+          "ObjectName": "OverlaySlot'DropFilterConditionMultiSelector_C:WidgetTree.Overlay_6.OverlaySlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.58"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'DropFilterConditionMultiSelector_C:WidgetTree.HorizontalBox_51.HorizontalBoxSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.27"
+      }
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "Overlay_60",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Overlay'",
+    "Outer": {
+      "ObjectName": "WidgetTree'DropFilterConditionMultiSelector_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.131"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlaySlot'DropFilterConditionMultiSelector_C:WidgetTree.Overlay_60.OverlaySlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.60"
+        },
+        {
+          "ObjectName": "OverlaySlot'DropFilterConditionMultiSelector_C:WidgetTree.Overlay_60.OverlaySlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.61"
+        },
+        {
+          "ObjectName": "OverlaySlot'DropFilterConditionMultiSelector_C:WidgetTree.Overlay_60.OverlaySlot_2'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.62"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'DropFilterConditionMultiSelector_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.109"
+      }
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "Overlay_7",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Overlay'",
+    "Outer": {
+      "ObjectName": "WidgetTree'DropFilterConditionMultiSelector_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.131"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlaySlot'DropFilterConditionMultiSelector_C:WidgetTree.Overlay_7.OverlaySlot_2'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.64"
+        },
+        {
+          "ObjectName": "OverlaySlot'DropFilterConditionMultiSelector_C:WidgetTree.Overlay_7.OverlaySlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.63"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'DropFilterConditionMultiSelector_C:WidgetTree.HorizontalBox_51.HorizontalBoxSlot_5'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.28"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'DropFilterConditionMultiSelector_C:WidgetTree.Overlay'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.31"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Fill",
+      "VerticalAlignment": "VAlign_Fill",
+      "Parent": {
+        "ObjectName": "Overlay'DropFilterConditionMultiSelector_C:WidgetTree.Overlay'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.31"
+      },
+      "Content": {
+        "ObjectName": "UIImage'DropFilterConditionMultiSelector_C:WidgetTree.UIImage_3'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.83"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'DropFilterConditionMultiSelector_C:WidgetTree.Overlay'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.31"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "Overlay'DropFilterConditionMultiSelector_C:WidgetTree.Overlay'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.31"
+      },
+      "Content": {
+        "ObjectName": "UIImage'DropFilterConditionMultiSelector_C:WidgetTree.UIImage_4'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.84"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'DropFilterConditionMultiSelector_C:WidgetTree.Overlay'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.31"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "Overlay'DropFilterConditionMultiSelector_C:WidgetTree.Overlay'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.31"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'DropFilterConditionMultiSelector_C:WidgetTree.CanvasPanel_6'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.8"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'DropFilterConditionMultiSelector_C:WidgetTree.Overlay_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.32"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "Overlay'DropFilterConditionMultiSelector_C:WidgetTree.Overlay_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.32"
+      },
+      "Content": {
+        "ObjectName": "UIScrollBox'DropFilterConditionMultiSelector_C:WidgetTree.SecondaryTypeScrollBox'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.95"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'DropFilterConditionMultiSelector_C:WidgetTree.Overlay_1'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.33"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "Overlay'DropFilterConditionMultiSelector_C:WidgetTree.Overlay_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.33"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'DropFilterConditionMultiSelector_C:WidgetTree.CanvasPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.2"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'DropFilterConditionMultiSelector_C:WidgetTree.Overlay_1'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.33"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Fill",
+      "VerticalAlignment": "VAlign_Fill",
+      "Parent": {
+        "ObjectName": "Overlay'DropFilterConditionMultiSelector_C:WidgetTree.Overlay_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.33"
+      },
+      "Content": {
+        "ObjectName": "WidgetSwitcher'DropFilterConditionMultiSelector_C:WidgetTree.PrimarySelectorTitleBgSwitcher'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.117"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'DropFilterConditionMultiSelector_C:WidgetTree.Overlay_2'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.34"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "Overlay'DropFilterConditionMultiSelector_C:WidgetTree.Overlay_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.34"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'DropFilterConditionMultiSelector_C:WidgetTree.CanvasPanel_3'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.4"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'DropFilterConditionMultiSelector_C:WidgetTree.Overlay_2'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.34"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Fill",
+      "VerticalAlignment": "VAlign_Fill",
+      "Parent": {
+        "ObjectName": "Overlay'DropFilterConditionMultiSelector_C:WidgetTree.Overlay_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.34"
+      },
+      "Content": {
+        "ObjectName": "WidgetSwitcher'DropFilterConditionMultiSelector_C:WidgetTree.SecondarySelectorTitleBgSwitcher'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.118"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'DropFilterConditionMultiSelector_C:WidgetTree.Overlay_3'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.35"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "Overlay'DropFilterConditionMultiSelector_C:WidgetTree.Overlay_3'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.35"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'DropFilterConditionMultiSelector_C:WidgetTree.CanvasPanel_4'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.5"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'DropFilterConditionMultiSelector_C:WidgetTree.Overlay_3'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.35"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Fill",
+      "VerticalAlignment": "VAlign_Fill",
+      "Parent": {
+        "ObjectName": "Overlay'DropFilterConditionMultiSelector_C:WidgetTree.Overlay_3'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.35"
+      },
+      "Content": {
+        "ObjectName": "WidgetSwitcher'DropFilterConditionMultiSelector_C:WidgetTree.ThirdSelectorTitleBgSwitcher'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.120"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'DropFilterConditionMultiSelector_C:WidgetTree.Overlay_325'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.36"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Fill",
+      "VerticalAlignment": "VAlign_Fill",
+      "Parent": {
+        "ObjectName": "Overlay'DropFilterConditionMultiSelector_C:WidgetTree.Overlay_325'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.36"
+      },
+      "Content": {
+        "ObjectName": "UIImage'DropFilterConditionMultiSelector_C:WidgetTree.UIImage'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.79"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'DropFilterConditionMultiSelector_C:WidgetTree.Overlay_325'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.36"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Fill",
+      "VerticalAlignment": "VAlign_Fill",
+      "Parent": {
+        "ObjectName": "Overlay'DropFilterConditionMultiSelector_C:WidgetTree.Overlay_325'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.36"
+      },
+      "Content": {
+        "ObjectName": "HorizontalBox'DropFilterConditionMultiSelector_C:WidgetTree.HorizontalBox_165'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.20"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'DropFilterConditionMultiSelector_C:WidgetTree.Overlay_4'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.37"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "Overlay'DropFilterConditionMultiSelector_C:WidgetTree.Overlay_4'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.37"
+      },
+      "Content": {
+        "ObjectName": "VerticalBox'DropFilterConditionMultiSelector_C:WidgetTree.VerticalBox_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.102"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'DropFilterConditionMultiSelector_C:WidgetTree.Overlay_4'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.37"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Fill",
+      "VerticalAlignment": "VAlign_Fill",
+      "Parent": {
+        "ObjectName": "Overlay'DropFilterConditionMultiSelector_C:WidgetTree.Overlay_4'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.37"
+      },
+      "Content": {
+        "ObjectName": "UIButton'DropFilterConditionMultiSelector_C:WidgetTree.UIButton_149'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.77"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'DropFilterConditionMultiSelector_C:WidgetTree.Overlay_5'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.38"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Fill",
+      "VerticalAlignment": "VAlign_Fill",
+      "Parent": {
+        "ObjectName": "Overlay'DropFilterConditionMultiSelector_C:WidgetTree.Overlay_5'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.38"
+      },
+      "Content": {
+        "ObjectName": "UIImage'DropFilterConditionMultiSelector_C:WidgetTree.UIImage_48'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.85"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'DropFilterConditionMultiSelector_C:WidgetTree.Overlay_5'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.38"
+    },
+    "Properties": {
+      "Padding": {
+        "Left": 38.399998,
+        "Top": 38.399998,
+        "Right": 38.399998,
+        "Bottom": 38.399998
+      },
+      "HorizontalAlignment": "HAlign_Center",
+      "Parent": {
+        "ObjectName": "Overlay'DropFilterConditionMultiSelector_C:WidgetTree.Overlay_5'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.38"
+      },
+      "Content": {
+        "ObjectName": "VerticalBox'DropFilterConditionMultiSelector_C:WidgetTree.VerticalBox_57'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.105"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'DropFilterConditionMultiSelector_C:WidgetTree.Overlay_6'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.39"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Fill",
+      "VerticalAlignment": "VAlign_Fill",
+      "Parent": {
+        "ObjectName": "Overlay'DropFilterConditionMultiSelector_C:WidgetTree.Overlay_6'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.39"
+      },
+      "Content": {
+        "ObjectName": "HorizontalBox'DropFilterConditionMultiSelector_C:WidgetTree.HorizontalBox_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.19"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'DropFilterConditionMultiSelector_C:WidgetTree.Overlay_6'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.39"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Fill",
+      "VerticalAlignment": "VAlign_Fill",
+      "Parent": {
+        "ObjectName": "Overlay'DropFilterConditionMultiSelector_C:WidgetTree.Overlay_6'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.39"
+      },
+      "Content": {
+        "ObjectName": "UIImage'DropFilterConditionMultiSelector_C:WidgetTree.UIImage_11'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.81"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'DropFilterConditionMultiSelector_C:WidgetTree.Overlay_60'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.40"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Fill",
+      "VerticalAlignment": "VAlign_Fill",
+      "Parent": {
+        "ObjectName": "Overlay'DropFilterConditionMultiSelector_C:WidgetTree.Overlay_60'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.40"
+      },
+      "Content": {
+        "ObjectName": "UIImage'DropFilterConditionMultiSelector_C:WidgetTree.UIImage_83'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.90"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'DropFilterConditionMultiSelector_C:WidgetTree.Overlay_60'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.40"
+    },
+    "Properties": {
+      "Padding": {
+        "Top": -19.199999
+      },
+      "HorizontalAlignment": "HAlign_Right",
+      "Parent": {
+        "ObjectName": "Overlay'DropFilterConditionMultiSelector_C:WidgetTree.Overlay_60'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.40"
+      },
+      "Content": {
+        "ObjectName": "UIButton'DropFilterConditionMultiSelector_C:WidgetTree.CloseBtn'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.73"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'DropFilterConditionMultiSelector_C:WidgetTree.Overlay_60'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.40"
+    },
+    "Properties": {
+      "Padding": {
+        "Left": 28.8
+      },
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "Overlay'DropFilterConditionMultiSelector_C:WidgetTree.Overlay_60'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.40"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'DropFilterConditionMultiSelector_C:WidgetTree.CanvasPanel_7'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.9"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'DropFilterConditionMultiSelector_C:WidgetTree.Overlay_7'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.41"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Fill",
+      "VerticalAlignment": "VAlign_Fill",
+      "Parent": {
+        "ObjectName": "Overlay'DropFilterConditionMultiSelector_C:WidgetTree.Overlay_7'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.41"
+      },
+      "Content": {
+        "ObjectName": "VerticalBox'DropFilterConditionMultiSelector_C:WidgetTree.VerticalBox_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.104"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'DropFilterConditionMultiSelector_C:WidgetTree.Overlay_7'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.41"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Fill",
+      "Parent": {
+        "ObjectName": "Overlay'DropFilterConditionMultiSelector_C:WidgetTree.Overlay_7'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.41"
+      },
+      "Content": {
+        "ObjectName": "UIImage'DropFilterConditionMultiSelector_C:WidgetTree.UIImage_12'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.82"
+      }
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SizeBox_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'DropFilterConditionMultiSelector_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.131"
+    },
+    "Properties": {
+      "HeightOverride": 664.32,
+      "bOverride_HeightOverride": true,
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot'DropFilterConditionMultiSelector_C:WidgetTree.SizeBox_0.SizeBoxSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.69"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'DropFilterConditionMultiSelector_C:WidgetTree.VerticalBox_2.VerticalBoxSlot_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.113"
+      }
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SizeBox_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'DropFilterConditionMultiSelector_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.131"
+    },
+    "Properties": {
+      "HeightOverride": 668.3645,
+      "bOverride_HeightOverride": true,
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot'DropFilterConditionMultiSelector_C:WidgetTree.SizeBox_1.SizeBoxSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.70"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'DropFilterConditionMultiSelector_C:WidgetTree.VerticalBox_1.VerticalBoxSlot_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.111"
+      }
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SizeBox_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'DropFilterConditionMultiSelector_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.131"
+    },
+    "Properties": {
+      "HeightOverride": 663.1241,
+      "bOverride_HeightOverride": true,
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot'DropFilterConditionMultiSelector_C:WidgetTree.SizeBox_2.SizeBoxSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.71"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'DropFilterConditionMultiSelector_C:WidgetTree.VerticalBox.VerticalBoxSlot_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.107"
+      }
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SizeBox_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'DropFilterConditionMultiSelector_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.131"
+    },
+    "Properties": {
+      "WidthOverride": 2402.5713,
+      "bOverride_WidthOverride": true,
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot'DropFilterConditionMultiSelector_C:WidgetTree.SizeBox_3.SizeBoxSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.72"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'DropFilterConditionMultiSelector_C:WidgetTree.VerticalBox_57.VerticalBoxSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.114"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBoxSlot'",
+    "Outer": {
+      "ObjectName": "SizeBox'DropFilterConditionMultiSelector_C:WidgetTree.SizeBox_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.65"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "SizeBox'DropFilterConditionMultiSelector_C:WidgetTree.SizeBox_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.65"
+      },
+      "Content": {
+        "ObjectName": "WidgetSwitcher'DropFilterConditionMultiSelector_C:WidgetTree.ThirdSelectorSwitcher'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.119"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBoxSlot'",
+    "Outer": {
+      "ObjectName": "SizeBox'DropFilterConditionMultiSelector_C:WidgetTree.SizeBox_1'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.66"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "SizeBox'DropFilterConditionMultiSelector_C:WidgetTree.SizeBox_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.66"
+      },
+      "Content": {
+        "ObjectName": "Overlay'DropFilterConditionMultiSelector_C:WidgetTree.Overlay_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.32"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBoxSlot'",
+    "Outer": {
+      "ObjectName": "SizeBox'DropFilterConditionMultiSelector_C:WidgetTree.SizeBox_2'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.67"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Left",
+      "VerticalAlignment": "VAlign_Top",
+      "Parent": {
+        "ObjectName": "SizeBox'DropFilterConditionMultiSelector_C:WidgetTree.SizeBox_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.67"
+      },
+      "Content": {
+        "ObjectName": "UIScrollBox'DropFilterConditionMultiSelector_C:WidgetTree.PrimaryTypeScrollBox'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.94"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBoxSlot'",
+    "Outer": {
+      "ObjectName": "SizeBox'DropFilterConditionMultiSelector_C:WidgetTree.SizeBox_3'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.68"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "SizeBox'DropFilterConditionMultiSelector_C:WidgetTree.SizeBox_3'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.68"
+      },
+      "Content": {
+        "ObjectName": "HorizontalBox'DropFilterConditionMultiSelector_C:WidgetTree.HorizontalBox_51'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.21"
+      }
+    }
+  },
+  {
+    "Type": "UIButton",
+    "Name": "CloseBtn",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIButton'",
+    "Outer": {
+      "ObjectName": "WidgetTree'DropFilterConditionMultiSelector_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.131"
+    },
+    "Properties": {
+      "CurButtonStyleId": 1458,
+      "IconImage": {
+        "ImageSize": {
+          "X": 84.479996,
+          "Y": 84.479996
+        }
+      },
+      "WidgetStyle": {
+        "Normal": {
+          "ImageSize": {
+            "X": 53.76,
+            "Y": 49.92
+          },
+          "ResourceObject": {
+            "ObjectName": "PaperSprite'UI_MiniMap_OptimizeGuanbi_Sprite'",
+            "ObjectPath": "UE_game/Content/Art/UI/TexturesAtlas/Fight/AtlasMap/UI_MiniMap_OptimizeGuanbi_Sprite.1"
+          }
+        },
+        "Hovered": {
+          "ImageSize": {
+            "X": 53.76,
+            "Y": 49.92
+          },
+          "ResourceObject": {
+            "ObjectName": "PaperSprite'UI_MiniMap_OptimizeGuanbi_Sprite'",
+            "ObjectPath": "UE_game/Content/Art/UI/TexturesAtlas/Fight/AtlasMap/UI_MiniMap_OptimizeGuanbi_Sprite.1"
+          }
+        },
+        "Pressed": {
+          "ImageSize": {
+            "X": 53.76,
+            "Y": 49.92
+          },
+          "ResourceObject": {
+            "ObjectName": "PaperSprite'UI_MiniMap_OptimizeGuanbi_Sprite'",
+            "ObjectPath": "UE_game/Content/Art/UI/TexturesAtlas/Fight/AtlasMap/UI_MiniMap_OptimizeGuanbi_Sprite.1"
+          }
+        },
+        "NormalPadding": {
+          "Left": 0.0,
+          "Top": 0.0,
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "PressedPadding": {
+          "Left": 0.0,
+          "Top": 0.0,
+          "Right": 0.0,
+          "Bottom": 0.0
+        }
+      },
+      "Slot": {
+        "ObjectName": "OverlaySlot'DropFilterConditionMultiSelector_C:WidgetTree.Overlay_60.OverlaySlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.61"
+      }
+    }
+  },
+  {
+    "Type": "UIButton",
+    "Name": "ConfirmBtn",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIButton'",
+    "Outer": {
+      "ObjectName": "WidgetTree'DropFilterConditionMultiSelector_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.131"
+    },
+    "Properties": {
+      "CurButtonStyleId": 1110,
+      "CurrStyleId": 1319,
+      "CurrTextKey": "Func_Common_Confirm",
+      "TextHAlignment": "HAlign_Left",
+      "IconImage": {
+        "ImageSize": {
+          "X": 61.44,
+          "Y": 61.44
+        }
+      },
+      "WidgetStyle": {
+        "Normal": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          }
+        },
+        "Hovered": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          }
+        },
+        "Pressed": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          }
+        }
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'DropFilterConditionMultiSelector_C:WidgetTree.HorizontalBox_82.HorizontalBoxSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.29"
+      }
+    }
+  },
+  {
+    "Type": "UIButton",
+    "Name": "SearchBtn",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIButton'",
+    "Outer": {
+      "ObjectName": "WidgetTree'DropFilterConditionMultiSelector_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.131"
+    },
+    "Properties": {
+      "IconImage": {
+        "ImageSize": {
+          "X": 61.44,
+          "Y": 61.44
+        }
+      },
+      "WidgetStyle": {
+        "Normal": {
+          "ImageSize": {
+            "X": 92.159996,
+            "Y": 92.159996
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'UI_Common_BTsearch'",
+            "ObjectPath": "UE_game/Content/Art/UI/Textures/Common/Png9/NoAtlas/UI_Common_BTsearch.0"
+          }
+        },
+        "Hovered": {
+          "ImageSize": {
+            "X": 92.159996,
+            "Y": 92.159996
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'UI_Common_BTsearch'",
+            "ObjectPath": "UE_game/Content/Art/UI/Textures/Common/Png9/NoAtlas/UI_Common_BTsearch.0"
+          }
+        },
+        "Pressed": {
+          "ImageSize": {
+            "X": 92.159996,
+            "Y": 92.159996
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'UI_Common_BTsearch'",
+            "ObjectPath": "UE_game/Content/Art/UI/Textures/Common/Png9/NoAtlas/UI_Common_BTsearch.0"
+          }
+        },
+        "Disabled": {
+          "ImageSize": {
+            "X": 48.0,
+            "Y": 48.0
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'UI_Common_BTsearch'",
+            "ObjectPath": "UE_game/Content/Art/UI/Textures/Common/Png9/NoAtlas/UI_Common_BTsearch.0"
+          }
+        },
+        "NormalPadding": {
+          "Left": 0.0,
+          "Top": 0.0,
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "PressedPadding": {
+          "Left": 0.0,
+          "Top": 0.0,
+          "Right": 0.0,
+          "Bottom": 0.0
+        }
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'DropFilterConditionMultiSelector_C:WidgetTree.HorizontalBox_165.HorizontalBoxSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.26"
+      }
+    }
+  },
+  {
+    "Type": "UIButton",
+    "Name": "TipCloseBtn",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIButton'",
+    "Outer": {
+      "ObjectName": "WidgetTree'DropFilterConditionMultiSelector_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.131"
+    },
+    "Properties": {
+      "bIsTransparent": true,
+      "IconImage": {
+        "ImageSize": {
+          "X": 61.44,
+          "Y": 61.44
+        }
+      },
+      "WidgetStyle": {
+        "Normal": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          }
+        },
+        "Hovered": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          }
+        },
+        "Pressed": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          }
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'DropFilterConditionMultiSelector_C:WidgetTree.CanvasPanel_45.CanvasPanelSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.15"
+      },
+      "Visibility": "ESlateVisibility::Hidden"
+    }
+  },
+  {
+    "Type": "UIButton",
+    "Name": "UIButton_149",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIButton'",
+    "Outer": {
+      "ObjectName": "WidgetTree'DropFilterConditionMultiSelector_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.131"
+    },
+    "Properties": {
+      "bIsTransparent": true,
+      "IconImage": {
+        "ImageSize": {
+          "X": 61.44,
+          "Y": 61.44
+        }
+      },
+      "WidgetStyle": {
+        "Normal": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          }
+        },
+        "Hovered": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          }
+        },
+        "Pressed": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          }
+        }
+      },
+      "Slot": {
+        "ObjectName": "OverlaySlot'DropFilterConditionMultiSelector_C:WidgetTree.Overlay_4.OverlaySlot_3'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.55"
+      }
+    }
+  },
+  {
+    "Type": "UIEditText",
+    "Name": "SearchEditText",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIEditText'",
+    "Outer": {
+      "ObjectName": "WidgetTree'DropFilterConditionMultiSelector_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.131"
+    },
+    "Properties": {
+      "CurrStyleId": 3431,
+      "WidgetStyle": {
+        "Font": {
+          "FontObject": {
+            "ObjectName": "Font'tl_main_Font'",
+            "ObjectPath": "UE_game/Content/Art/UI/Fonts/tl_main_Font.0"
+          },
+          "Size": 34
+        },
+        "ColorAndOpacity": {
+          "SpecifiedColor": {
+            "R": 1.0,
+            "G": 1.0,
+            "B": 1.0,
+            "A": 1.0,
+            "Hex": "FFFFFF"
+          },
+          "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+        },
+        "CaretImage": {
+          "ImageSize": {
+            "X": 30.72,
+            "Y": 30.72
+          }
+        }
+      },
+      "VerticalJustification": "ETextVerticalJustify::Center",
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'DropFilterConditionMultiSelector_C:WidgetTree.CanvasPanel_5.CanvasPanelSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.16"
+      }
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "UIImage",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'DropFilterConditionMultiSelector_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.131"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/TexturesAtlas/Filter/Atlas/UI_Filter_BGinput_Sprite.UI_Filter_BGinput_Sprite",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 88.32,
+          "Y": 88.32
+        },
+        "Margin": {
+          "Left": 0.5,
+          "Top": 0.5,
+          "Right": 0.5,
+          "Bottom": 0.5
+        },
+        "DrawAs": "ESlateBrushDrawType::Box"
+      },
+      "Slot": {
+        "ObjectName": "OverlaySlot'DropFilterConditionMultiSelector_C:WidgetTree.Overlay_325.OverlaySlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.52"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "UIImage_10",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'DropFilterConditionMultiSelector_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.131"
+    },
+    "Properties": {
+      "IsBanHduiResize": true,
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/TexturesAtlas/Filter/Atlas/UI_Filter_01BGtitle03_Sprite.UI_Filter_01BGtitle03_Sprite",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 157.44,
+          "Y": 78.72
+        }
+      },
+      "Slot": {
+        "ObjectName": "WidgetSwitcherSlot'DropFilterConditionMultiSelector_C:WidgetTree.ThirdSelectorTitleBgSwitcher.WidgetSwitcherSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.130"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "UIImage_11",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'DropFilterConditionMultiSelector_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.131"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/TexturesAtlas/Filter/Atlas/UI_Filter_01BGpickedwhite_Sprite.UI_Filter_01BGpickedwhite_Sprite",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 245.76,
+          "Y": 245.76
+        },
+        "Margin": {
+          "Left": 0.5,
+          "Top": 0.5,
+          "Right": 0.5,
+          "Bottom": 0.5
+        },
+        "DrawAs": "ESlateBrushDrawType::Box"
+      },
+      "Slot": {
+        "ObjectName": "OverlaySlot'DropFilterConditionMultiSelector_C:WidgetTree.Overlay_6.OverlaySlot_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.59"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "UIImage_12",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'DropFilterConditionMultiSelector_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.131"
+    },
+    "Properties": {
+      "IsBanHduiResize": true,
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/TexturesAtlas/Filter/Atlas/UI_Filter_01BGpickedwhite_Sprite.UI_Filter_01BGpickedwhite_Sprite",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 737.27997,
+          "Y": 760.32
+        },
+        "Margin": {
+          "Left": 0.5,
+          "Top": 0.5,
+          "Right": 0.5,
+          "Bottom": 0.5
+        },
+        "DrawAs": "ESlateBrushDrawType::Box"
+      },
+      "Slot": {
+        "ObjectName": "OverlaySlot'DropFilterConditionMultiSelector_C:WidgetTree.Overlay_7.OverlaySlot_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.64"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "UIImage_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'DropFilterConditionMultiSelector_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.131"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/TexturesAtlas/Filter/Atlas/UI_Filter_01BGpickedwhite_Sprite.UI_Filter_01BGpickedwhite_Sprite",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 245.76,
+          "Y": 245.76
+        }
+      },
+      "Slot": {
+        "ObjectName": "OverlaySlot'DropFilterConditionMultiSelector_C:WidgetTree.Overlay.OverlaySlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.42"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "UIImage_4",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'DropFilterConditionMultiSelector_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.131"
+    },
+    "Properties": {
+      "IsBanHduiResize": true,
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/TexturesAtlas/Filter/Atlas/UI_Filter_01ICONatt_Sprite.UI_Filter_01ICONatt_Sprite",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 192.0,
+          "Y": 192.0
+        }
+      },
+      "Slot": {
+        "ObjectName": "OverlaySlot'DropFilterConditionMultiSelector_C:WidgetTree.Overlay.OverlaySlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.43"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "UIImage_48",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'DropFilterConditionMultiSelector_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.131"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/TexturesAtlas/Filter/Atlas/UI_Filter_01BGtitle03_Sprite.UI_Filter_01BGtitle03_Sprite",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 157.44,
+          "Y": 157.44
+        },
+        "Margin": {
+          "Left": 0.5,
+          "Top": 0.5,
+          "Right": 0.5,
+          "Bottom": 0.5
+        },
+        "DrawAs": "ESlateBrushDrawType::Box"
+      },
+      "Slot": {
+        "ObjectName": "OverlaySlot'DropFilterConditionMultiSelector_C:WidgetTree.Overlay_5.OverlaySlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.56"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "UIImage_5",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'DropFilterConditionMultiSelector_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.131"
+    },
+    "Properties": {
+      "IsBanHduiResize": true,
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/TexturesAtlas/Filter/Atlas/UI_Filter_01BGtitle00_Sprite.UI_Filter_01BGtitle00_Sprite",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 157.44,
+          "Y": 78.72
+        }
+      },
+      "Slot": {
+        "ObjectName": "WidgetSwitcherSlot'DropFilterConditionMultiSelector_C:WidgetTree.PrimarySelectorTitleBgSwitcher.WidgetSwitcherSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.123"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "UIImage_6",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'DropFilterConditionMultiSelector_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.131"
+    },
+    "Properties": {
+      "IsBanHduiResize": true,
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/TexturesAtlas/Filter/Atlas/UI_Filter_01BGtitle02_Sprite.UI_Filter_01BGtitle02_Sprite",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 157.44,
+          "Y": 78.72
+        }
+      },
+      "Slot": {
+        "ObjectName": "WidgetSwitcherSlot'DropFilterConditionMultiSelector_C:WidgetTree.PrimarySelectorTitleBgSwitcher.WidgetSwitcherSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.124"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "UIImage_7",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'DropFilterConditionMultiSelector_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.131"
+    },
+    "Properties": {
+      "IsBanHduiResize": true,
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/TexturesAtlas/Filter/Atlas/UI_Filter_01BGtitle00_Sprite.UI_Filter_01BGtitle00_Sprite",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 157.44,
+          "Y": 78.72
+        }
+      },
+      "Slot": {
+        "ObjectName": "WidgetSwitcherSlot'DropFilterConditionMultiSelector_C:WidgetTree.SecondarySelectorTitleBgSwitcher.WidgetSwitcherSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.125"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "UIImage_8",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'DropFilterConditionMultiSelector_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.131"
+    },
+    "Properties": {
+      "IsBanHduiResize": true,
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/TexturesAtlas/Filter/Atlas/UI_Filter_01BGtitle02_Sprite.UI_Filter_01BGtitle02_Sprite",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 157.44,
+          "Y": 78.72
+        }
+      },
+      "Slot": {
+        "ObjectName": "WidgetSwitcherSlot'DropFilterConditionMultiSelector_C:WidgetTree.SecondarySelectorTitleBgSwitcher.WidgetSwitcherSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.126"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "UIImage_83",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'DropFilterConditionMultiSelector_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.131"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/Textures/Common/Png9/NoAtlas/UI_Common2_Title01_Png9.UI_Common2_Title01_Png9",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 153.59999,
+          "Y": 115.2
+        },
+        "Margin": {
+          "Left": 0.5,
+          "Top": 0.5,
+          "Right": 0.5,
+          "Bottom": 0.5
+        },
+        "DrawAs": "ESlateBrushDrawType::Box"
+      },
+      "Slot": {
+        "ObjectName": "OverlaySlot'DropFilterConditionMultiSelector_C:WidgetTree.Overlay_60.OverlaySlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.60"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "UIImage_9",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'DropFilterConditionMultiSelector_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.131"
+    },
+    "Properties": {
+      "IsBanHduiResize": true,
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/TexturesAtlas/Filter/Atlas/UI_Filter_01BGtitle01_Sprite.UI_Filter_01BGtitle01_Sprite",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 157.44,
+          "Y": 78.72
+        }
+      },
+      "Slot": {
+        "ObjectName": "WidgetSwitcherSlot'DropFilterConditionMultiSelector_C:WidgetTree.ThirdSelectorTitleBgSwitcher.WidgetSwitcherSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.129"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "UIListView",
+    "Name": "ContentListView_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIListView'",
+    "Outer": {
+      "ObjectName": "WidgetTree'DropFilterConditionMultiSelector_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.131"
+    },
+    "Properties": {
+      "EntrySpacing": 19.2,
+      "EntryWidgetClass": {
+        "ObjectName": "WidgetBlueprintGeneratedClass'DropFilterConditionSelectorItem_C'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionSelectorItem.0"
+      },
+      "Slot": {
+        "ObjectName": "WidgetSwitcherSlot'DropFilterConditionMultiSelector_C:WidgetTree.ContentListViewSwitcher.WidgetSwitcherSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.121"
+      }
+    }
+  },
+  {
+    "Type": "UIListView",
+    "Name": "ContentListView_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIListView'",
+    "Outer": {
+      "ObjectName": "WidgetTree'DropFilterConditionMultiSelector_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.131"
+    },
+    "Properties": {
+      "EntrySpacing": 19.2,
+      "EntryWidgetClass": {
+        "ObjectName": "WidgetBlueprintGeneratedClass'DropFilterConditionSelectorItemBase_C'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionSelectorItemBase.0"
+      },
+      "Slot": {
+        "ObjectName": "WidgetSwitcherSlot'DropFilterConditionMultiSelector_C:WidgetTree.ContentListViewSwitcher.WidgetSwitcherSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.122"
+      }
+    }
+  },
+  {
+    "Type": "UIScrollBox",
+    "Name": "PrimaryTypeScrollBox",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIScrollBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'DropFilterConditionMultiSelector_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.131"
+    },
+    "Properties": {
+      "WidgetStyle": {
+        "TopShadowBrush": {
+          "DrawAs": "ESlateBrushDrawType::NoDrawType"
+        },
+        "BottomShadowBrush": {
+          "DrawAs": "ESlateBrushDrawType::NoDrawType"
+        }
+      },
+      "ScrollBarVisibility": "ESlateVisibility::Collapsed",
+      "Slot": {
+        "ObjectName": "SizeBoxSlot'DropFilterConditionMultiSelector_C:WidgetTree.SizeBox_2.SizeBoxSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.71"
+      }
+    }
+  },
+  {
+    "Type": "UIScrollBox",
+    "Name": "SecondaryTypeScrollBox",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIScrollBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'DropFilterConditionMultiSelector_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.131"
+    },
+    "Properties": {
+      "WidgetStyle": {
+        "TopShadowBrush": {
+          "DrawAs": "ESlateBrushDrawType::NoDrawType"
+        },
+        "BottomShadowBrush": {
+          "DrawAs": "ESlateBrushDrawType::NoDrawType"
+        },
+        "LeftShadowBrush": {
+          "DrawAs": "ESlateBrushDrawType::NoDrawType"
+        },
+        "RightShadowBrush": {
+          "DrawAs": "ESlateBrushDrawType::NoDrawType"
+        }
+      },
+      "ScrollBarVisibility": "ESlateVisibility::Collapsed",
+      "Slot": {
+        "ObjectName": "OverlaySlot'DropFilterConditionMultiSelector_C:WidgetTree.Overlay_0.OverlaySlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.45"
+      }
+    }
+  },
+  {
+    "Type": "UIShrinkTextBlock",
+    "Name": "HintText_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIShrinkTextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'DropFilterConditionMultiSelector_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.131"
+    },
+    "Properties": {
+      "CurrStyleId": 3435,
+      "ShrinkSize": {
+        "X": 556.8,
+        "Y": 142.08
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'DropFilterConditionMultiSelector_C:WidgetTree.CanvasPanel_6.CanvasPanelSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.17"
+      }
+    }
+  },
+  {
+    "Type": "UIShrinkTextBlock",
+    "Name": "TitleText",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIShrinkTextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'DropFilterConditionMultiSelector_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.131"
+    },
+    "Properties": {
+      "TextHAlignment": "HAlign_Left",
+      "CurrStyleId": 2064,
+      "CurrTextKey": "Func_DropFilter_TitleConditionEdit",
+      "ShrinkSize": {
+        "X": 1402.1647,
+        "Y": 94.29397
+      },
+      "TextHJustification": "ETextJustify::Left",
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'DropFilterConditionMultiSelector_C:WidgetTree.CanvasPanel_7.CanvasPanelSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.18"
+      }
+    }
+  },
+  {
+    "Type": "UIShrinkTextBlock",
+    "Name": "TitleText_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIShrinkTextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'DropFilterConditionMultiSelector_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.131"
+    },
+    "Properties": {
+      "CurrStyleId": 3432,
+      "ShrinkSize": {
+        "X": 718.6351,
+        "Y": 57.6
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'DropFilterConditionMultiSelector_C:WidgetTree.CanvasPanel.CanvasPanelSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.10"
+      }
+    }
+  },
+  {
+    "Type": "UIShrinkTextBlock",
+    "Name": "TitleText_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIShrinkTextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'DropFilterConditionMultiSelector_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.131"
+    },
+    "Properties": {
+      "CurrStyleId": 3432,
+      "ShrinkSize": {
+        "X": 718.6351,
+        "Y": 57.6
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'DropFilterConditionMultiSelector_C:WidgetTree.CanvasPanel_3.CanvasPanelSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.13"
+      }
+    }
+  },
+  {
+    "Type": "UIShrinkTextBlock",
+    "Name": "TitleText_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIShrinkTextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'DropFilterConditionMultiSelector_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.131"
+    },
+    "Properties": {
+      "CurrStyleId": 3435,
+      "ShrinkSize": {
+        "X": 744.20825,
+        "Y": 57.6
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'DropFilterConditionMultiSelector_C:WidgetTree.CanvasPanel_4.CanvasPanelSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.14"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBox",
+    "Name": "VerticalBox",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'DropFilterConditionMultiSelector_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.131"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "VerticalBoxSlot'DropFilterConditionMultiSelector_C:WidgetTree.VerticalBox.VerticalBoxSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.106"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot'DropFilterConditionMultiSelector_C:WidgetTree.VerticalBox.VerticalBoxSlot_2'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.107"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'DropFilterConditionMultiSelector_C:WidgetTree.HorizontalBox_0.HorizontalBoxSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.23"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBox",
+    "Name": "VerticalBox_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'DropFilterConditionMultiSelector_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.131"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "VerticalBoxSlot'DropFilterConditionMultiSelector_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.109"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot'DropFilterConditionMultiSelector_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.108"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "OverlaySlot'DropFilterConditionMultiSelector_C:WidgetTree.Overlay_4.OverlaySlot_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.54"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBox",
+    "Name": "VerticalBox_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'DropFilterConditionMultiSelector_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.131"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "VerticalBoxSlot'DropFilterConditionMultiSelector_C:WidgetTree.VerticalBox_1.VerticalBoxSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.110"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot'DropFilterConditionMultiSelector_C:WidgetTree.VerticalBox_1.VerticalBoxSlot_2'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.111"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'DropFilterConditionMultiSelector_C:WidgetTree.HorizontalBox_0.HorizontalBoxSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.24"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBox",
+    "Name": "VerticalBox_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'DropFilterConditionMultiSelector_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.131"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "VerticalBoxSlot'DropFilterConditionMultiSelector_C:WidgetTree.VerticalBox_2.VerticalBoxSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.112"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot'DropFilterConditionMultiSelector_C:WidgetTree.VerticalBox_2.VerticalBoxSlot_2'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.113"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "OverlaySlot'DropFilterConditionMultiSelector_C:WidgetTree.Overlay_7.OverlaySlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.63"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBox",
+    "Name": "VerticalBox_57",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'DropFilterConditionMultiSelector_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.131"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "VerticalBoxSlot'DropFilterConditionMultiSelector_C:WidgetTree.VerticalBox_57.VerticalBoxSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.114"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot'DropFilterConditionMultiSelector_C:WidgetTree.VerticalBox_57.VerticalBoxSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.115"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "OverlaySlot'DropFilterConditionMultiSelector_C:WidgetTree.Overlay_5.OverlaySlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.57"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Outer": {
+      "ObjectName": "VerticalBox'DropFilterConditionMultiSelector_C:WidgetTree.VerticalBox'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.101"
+    },
+    "Properties": {
+      "VerticalAlignment": "VAlign_Top",
+      "Parent": {
+        "ObjectName": "VerticalBox'DropFilterConditionMultiSelector_C:WidgetTree.VerticalBox'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.101"
+      },
+      "Content": {
+        "ObjectName": "Overlay'DropFilterConditionMultiSelector_C:WidgetTree.Overlay_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.33"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Outer": {
+      "ObjectName": "VerticalBox'DropFilterConditionMultiSelector_C:WidgetTree.VerticalBox'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.101"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "VerticalBox'DropFilterConditionMultiSelector_C:WidgetTree.VerticalBox'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.101"
+      },
+      "Content": {
+        "ObjectName": "SizeBox'DropFilterConditionMultiSelector_C:WidgetTree.SizeBox_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.67"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Outer": {
+      "ObjectName": "VerticalBox'DropFilterConditionMultiSelector_C:WidgetTree.VerticalBox_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.102"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "VerticalBox'DropFilterConditionMultiSelector_C:WidgetTree.VerticalBox_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.102"
+      },
+      "Content": {
+        "ObjectName": "Overlay'DropFilterConditionMultiSelector_C:WidgetTree.Overlay_5'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.38"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Outer": {
+      "ObjectName": "VerticalBox'DropFilterConditionMultiSelector_C:WidgetTree.VerticalBox_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.102"
+    },
+    "Properties": {
+      "Padding": {
+        "Bottom": 19.199999
+      },
+      "Parent": {
+        "ObjectName": "VerticalBox'DropFilterConditionMultiSelector_C:WidgetTree.VerticalBox_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.102"
+      },
+      "Content": {
+        "ObjectName": "Overlay'DropFilterConditionMultiSelector_C:WidgetTree.Overlay_60'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.40"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Outer": {
+      "ObjectName": "VerticalBox'DropFilterConditionMultiSelector_C:WidgetTree.VerticalBox_1'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.103"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "VerticalBox'DropFilterConditionMultiSelector_C:WidgetTree.VerticalBox_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.103"
+      },
+      "Content": {
+        "ObjectName": "Overlay'DropFilterConditionMultiSelector_C:WidgetTree.Overlay_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.34"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Outer": {
+      "ObjectName": "VerticalBox'DropFilterConditionMultiSelector_C:WidgetTree.VerticalBox_1'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.103"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "VerticalBox'DropFilterConditionMultiSelector_C:WidgetTree.VerticalBox_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.103"
+      },
+      "Content": {
+        "ObjectName": "SizeBox'DropFilterConditionMultiSelector_C:WidgetTree.SizeBox_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.66"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Outer": {
+      "ObjectName": "VerticalBox'DropFilterConditionMultiSelector_C:WidgetTree.VerticalBox_2'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.104"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "VerticalBox'DropFilterConditionMultiSelector_C:WidgetTree.VerticalBox_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.104"
+      },
+      "Content": {
+        "ObjectName": "Overlay'DropFilterConditionMultiSelector_C:WidgetTree.Overlay_3'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.35"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Outer": {
+      "ObjectName": "VerticalBox'DropFilterConditionMultiSelector_C:WidgetTree.VerticalBox_2'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.104"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "VerticalBox'DropFilterConditionMultiSelector_C:WidgetTree.VerticalBox_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.104"
+      },
+      "Content": {
+        "ObjectName": "SizeBox'DropFilterConditionMultiSelector_C:WidgetTree.SizeBox_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.65"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Outer": {
+      "ObjectName": "VerticalBox'DropFilterConditionMultiSelector_C:WidgetTree.VerticalBox_57'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.105"
+    },
+    "Properties": {
+      "Padding": {
+        "Bottom": 28.8
+      },
+      "Parent": {
+        "ObjectName": "VerticalBox'DropFilterConditionMultiSelector_C:WidgetTree.VerticalBox_57'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.105"
+      },
+      "Content": {
+        "ObjectName": "SizeBox'DropFilterConditionMultiSelector_C:WidgetTree.SizeBox_3'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.68"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Outer": {
+      "ObjectName": "VerticalBox'DropFilterConditionMultiSelector_C:WidgetTree.VerticalBox_57'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.105"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "VerticalBox'DropFilterConditionMultiSelector_C:WidgetTree.VerticalBox_57'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.105"
+      },
+      "Content": {
+        "ObjectName": "HorizontalBox'DropFilterConditionMultiSelector_C:WidgetTree.HorizontalBox_82'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.22"
+      }
+    }
+  },
+  {
+    "Type": "WidgetSwitcher",
+    "Name": "ContentListViewSwitcher",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetSwitcher'",
+    "Outer": {
+      "ObjectName": "WidgetTree'DropFilterConditionMultiSelector_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.131"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "WidgetSwitcherSlot'DropFilterConditionMultiSelector_C:WidgetTree.ContentListViewSwitcher.WidgetSwitcherSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.121"
+        },
+        {
+          "ObjectName": "WidgetSwitcherSlot'DropFilterConditionMultiSelector_C:WidgetTree.ContentListViewSwitcher.WidgetSwitcherSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.122"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "WidgetSwitcherSlot'DropFilterConditionMultiSelector_C:WidgetTree.ThirdSelectorSwitcher.WidgetSwitcherSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.127"
+      }
+    }
+  },
+  {
+    "Type": "WidgetSwitcher",
+    "Name": "PrimarySelectorTitleBgSwitcher",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetSwitcher'",
+    "Outer": {
+      "ObjectName": "WidgetTree'DropFilterConditionMultiSelector_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.131"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "WidgetSwitcherSlot'DropFilterConditionMultiSelector_C:WidgetTree.PrimarySelectorTitleBgSwitcher.WidgetSwitcherSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.123"
+        },
+        {
+          "ObjectName": "WidgetSwitcherSlot'DropFilterConditionMultiSelector_C:WidgetTree.PrimarySelectorTitleBgSwitcher.WidgetSwitcherSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.124"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "OverlaySlot'DropFilterConditionMultiSelector_C:WidgetTree.Overlay_1.OverlaySlot_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.47"
+      }
+    }
+  },
+  {
+    "Type": "WidgetSwitcher",
+    "Name": "SecondarySelectorTitleBgSwitcher",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetSwitcher'",
+    "Outer": {
+      "ObjectName": "WidgetTree'DropFilterConditionMultiSelector_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.131"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "WidgetSwitcherSlot'DropFilterConditionMultiSelector_C:WidgetTree.SecondarySelectorTitleBgSwitcher.WidgetSwitcherSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.125"
+        },
+        {
+          "ObjectName": "WidgetSwitcherSlot'DropFilterConditionMultiSelector_C:WidgetTree.SecondarySelectorTitleBgSwitcher.WidgetSwitcherSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.126"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "OverlaySlot'DropFilterConditionMultiSelector_C:WidgetTree.Overlay_2.OverlaySlot_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.49"
+      }
+    }
+  },
+  {
+    "Type": "WidgetSwitcher",
+    "Name": "ThirdSelectorSwitcher",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetSwitcher'",
+    "Outer": {
+      "ObjectName": "WidgetTree'DropFilterConditionMultiSelector_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.131"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "WidgetSwitcherSlot'DropFilterConditionMultiSelector_C:WidgetTree.ThirdSelectorSwitcher.WidgetSwitcherSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.127"
+        },
+        {
+          "ObjectName": "WidgetSwitcherSlot'DropFilterConditionMultiSelector_C:WidgetTree.ThirdSelectorSwitcher.WidgetSwitcherSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.128"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "SizeBoxSlot'DropFilterConditionMultiSelector_C:WidgetTree.SizeBox_0.SizeBoxSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.69"
+      }
+    }
+  },
+  {
+    "Type": "WidgetSwitcher",
+    "Name": "ThirdSelectorTitleBgSwitcher",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetSwitcher'",
+    "Outer": {
+      "ObjectName": "WidgetTree'DropFilterConditionMultiSelector_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.131"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "WidgetSwitcherSlot'DropFilterConditionMultiSelector_C:WidgetTree.ThirdSelectorTitleBgSwitcher.WidgetSwitcherSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.129"
+        },
+        {
+          "ObjectName": "WidgetSwitcherSlot'DropFilterConditionMultiSelector_C:WidgetTree.ThirdSelectorTitleBgSwitcher.WidgetSwitcherSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.130"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "OverlaySlot'DropFilterConditionMultiSelector_C:WidgetTree.Overlay_3.OverlaySlot_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.51"
+      }
+    }
+  },
+  {
+    "Type": "WidgetSwitcherSlot",
+    "Name": "WidgetSwitcherSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetSwitcherSlot'",
+    "Outer": {
+      "ObjectName": "WidgetSwitcher'DropFilterConditionMultiSelector_C:WidgetTree.ContentListViewSwitcher'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.116"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "WidgetSwitcher'DropFilterConditionMultiSelector_C:WidgetTree.ContentListViewSwitcher'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.116"
+      },
+      "Content": {
+        "ObjectName": "UIListView'DropFilterConditionMultiSelector_C:WidgetTree.ContentListView_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.92"
+      }
+    }
+  },
+  {
+    "Type": "WidgetSwitcherSlot",
+    "Name": "WidgetSwitcherSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetSwitcherSlot'",
+    "Outer": {
+      "ObjectName": "WidgetSwitcher'DropFilterConditionMultiSelector_C:WidgetTree.ContentListViewSwitcher'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.116"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "WidgetSwitcher'DropFilterConditionMultiSelector_C:WidgetTree.ContentListViewSwitcher'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.116"
+      },
+      "Content": {
+        "ObjectName": "UIListView'DropFilterConditionMultiSelector_C:WidgetTree.ContentListView_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.93"
+      }
+    }
+  },
+  {
+    "Type": "WidgetSwitcherSlot",
+    "Name": "WidgetSwitcherSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetSwitcherSlot'",
+    "Outer": {
+      "ObjectName": "WidgetSwitcher'DropFilterConditionMultiSelector_C:WidgetTree.PrimarySelectorTitleBgSwitcher'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.117"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "WidgetSwitcher'DropFilterConditionMultiSelector_C:WidgetTree.PrimarySelectorTitleBgSwitcher'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.117"
+      },
+      "Content": {
+        "ObjectName": "UIImage'DropFilterConditionMultiSelector_C:WidgetTree.UIImage_5'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.86"
+      }
+    }
+  },
+  {
+    "Type": "WidgetSwitcherSlot",
+    "Name": "WidgetSwitcherSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetSwitcherSlot'",
+    "Outer": {
+      "ObjectName": "WidgetSwitcher'DropFilterConditionMultiSelector_C:WidgetTree.PrimarySelectorTitleBgSwitcher'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.117"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "WidgetSwitcher'DropFilterConditionMultiSelector_C:WidgetTree.PrimarySelectorTitleBgSwitcher'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.117"
+      },
+      "Content": {
+        "ObjectName": "UIImage'DropFilterConditionMultiSelector_C:WidgetTree.UIImage_6'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.87"
+      }
+    }
+  },
+  {
+    "Type": "WidgetSwitcherSlot",
+    "Name": "WidgetSwitcherSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetSwitcherSlot'",
+    "Outer": {
+      "ObjectName": "WidgetSwitcher'DropFilterConditionMultiSelector_C:WidgetTree.SecondarySelectorTitleBgSwitcher'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.118"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "WidgetSwitcher'DropFilterConditionMultiSelector_C:WidgetTree.SecondarySelectorTitleBgSwitcher'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.118"
+      },
+      "Content": {
+        "ObjectName": "UIImage'DropFilterConditionMultiSelector_C:WidgetTree.UIImage_7'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.88"
+      }
+    }
+  },
+  {
+    "Type": "WidgetSwitcherSlot",
+    "Name": "WidgetSwitcherSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetSwitcherSlot'",
+    "Outer": {
+      "ObjectName": "WidgetSwitcher'DropFilterConditionMultiSelector_C:WidgetTree.SecondarySelectorTitleBgSwitcher'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.118"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "WidgetSwitcher'DropFilterConditionMultiSelector_C:WidgetTree.SecondarySelectorTitleBgSwitcher'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.118"
+      },
+      "Content": {
+        "ObjectName": "UIImage'DropFilterConditionMultiSelector_C:WidgetTree.UIImage_8'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.89"
+      }
+    }
+  },
+  {
+    "Type": "WidgetSwitcherSlot",
+    "Name": "WidgetSwitcherSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetSwitcherSlot'",
+    "Outer": {
+      "ObjectName": "WidgetSwitcher'DropFilterConditionMultiSelector_C:WidgetTree.ThirdSelectorSwitcher'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.119"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "WidgetSwitcher'DropFilterConditionMultiSelector_C:WidgetTree.ThirdSelectorSwitcher'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.119"
+      },
+      "Content": {
+        "ObjectName": "WidgetSwitcher'DropFilterConditionMultiSelector_C:WidgetTree.ContentListViewSwitcher'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.116"
+      }
+    }
+  },
+  {
+    "Type": "WidgetSwitcherSlot",
+    "Name": "WidgetSwitcherSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetSwitcherSlot'",
+    "Outer": {
+      "ObjectName": "WidgetSwitcher'DropFilterConditionMultiSelector_C:WidgetTree.ThirdSelectorSwitcher'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.119"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "WidgetSwitcher'DropFilterConditionMultiSelector_C:WidgetTree.ThirdSelectorSwitcher'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.119"
+      },
+      "Content": {
+        "ObjectName": "Overlay'DropFilterConditionMultiSelector_C:WidgetTree.Overlay'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.31"
+      }
+    }
+  },
+  {
+    "Type": "WidgetSwitcherSlot",
+    "Name": "WidgetSwitcherSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetSwitcherSlot'",
+    "Outer": {
+      "ObjectName": "WidgetSwitcher'DropFilterConditionMultiSelector_C:WidgetTree.ThirdSelectorTitleBgSwitcher'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.120"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "WidgetSwitcher'DropFilterConditionMultiSelector_C:WidgetTree.ThirdSelectorTitleBgSwitcher'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.120"
+      },
+      "Content": {
+        "ObjectName": "UIImage'DropFilterConditionMultiSelector_C:WidgetTree.UIImage_9'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.91"
+      }
+    }
+  },
+  {
+    "Type": "WidgetSwitcherSlot",
+    "Name": "WidgetSwitcherSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetSwitcherSlot'",
+    "Outer": {
+      "ObjectName": "WidgetSwitcher'DropFilterConditionMultiSelector_C:WidgetTree.ThirdSelectorTitleBgSwitcher'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.120"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "WidgetSwitcher'DropFilterConditionMultiSelector_C:WidgetTree.ThirdSelectorTitleBgSwitcher'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.120"
+      },
+      "Content": {
+        "ObjectName": "UIImage'DropFilterConditionMultiSelector_C:WidgetTree.UIImage_10'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.80"
+      }
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetTree'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'DropFilterConditionMultiSelector_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.0"
+    },
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "CanvasPanel'DropFilterConditionMultiSelector_C:WidgetTree.CanvasPanel_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.3"
+      }
+    }
+  }
+]

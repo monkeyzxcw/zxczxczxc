@@ -1,0 +1,2673 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_UIDebugMemory",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'UIDebugMemory_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.5"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "Function",
+    "Name": "Construct",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'UIDebugMemory_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.5"
+    },
+    "Super": {
+      "ObjectName": "Function'GMUserWidget_C:Construct'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/GMUserWidget.1"
+    },
+    "SuperStruct": {
+      "ObjectName": "Function'GMUserWidget_C:Construct'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/GMUserWidget.1"
+    },
+    "FunctionFlags": "FUNC_BlueprintCosmetic | FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "UpdateUI",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'UIDebugMemory_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.5"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Instance_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'AudioMgr'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "CallFunc_DebugBank_out",
+        "Flags": "RF_Public",
+        "ElementSize": 16
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "CallFunc_Conv_StringToText_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "UpdateEachText",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'UIDebugMemory_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.5"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "Index",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CurWidget",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'TextBlock'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "MaxWidget",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'TextBlock'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "CallFunc_Conv_FloatToText_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "CallFunc_Conv_FloatToText_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_MakeStruct_FormatArgumentData",
+        "Flags": "RF_Public",
+        "ElementSize": 64,
+        "Struct": {
+          "ObjectName": "ScriptStruct'FormatArgumentData'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_MakeStruct_FormatArgumentData_1",
+        "Flags": "RF_Public",
+        "ElementSize": 64,
+        "Struct": {
+          "ObjectName": "ScriptStruct'FormatArgumentData'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "K2Node_MakeArray_Array",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ReferenceParm",
+        "Inner": {
+          "Type": "StructProperty",
+          "Name": "K2Node_MakeArray_Array",
+          "Flags": "RF_Public",
+          "ElementSize": 64,
+          "Struct": {
+            "ObjectName": "ScriptStruct'FormatArgumentData'",
+            "ObjectPath": "/Script/Engine"
+          }
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "K2Node_MakeArray_Array_1",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ReferenceParm",
+        "Inner": {
+          "Type": "StructProperty",
+          "Name": "K2Node_MakeArray_Array_1",
+          "Flags": "RF_Public",
+          "ElementSize": 64,
+          "Struct": {
+            "ObjectName": "ScriptStruct'FormatArgumentData'",
+            "ObjectPath": "/Script/Engine"
+          }
+        }
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "CallFunc_Format_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "CallFunc_Format_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "DoRefresh",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'UIDebugMemory_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.5"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Instance_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'DebugMgr'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "CallFunc_StatisticsMemoryUsage_requireMemoryArray",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ReferenceParm",
+        "Inner": {
+          "Type": "FloatProperty",
+          "Name": "CallFunc_StatisticsMemoryUsage_requireMemoryArray",
+          "Flags": "RF_Public",
+          "ElementSize": 4
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "CallFunc_StatisticsMemoryUsage_runtimeMemoryArray",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ReferenceParm",
+        "Inner": {
+          "Type": "FloatProperty",
+          "Name": "CallFunc_StatisticsMemoryUsage_runtimeMemoryArray",
+          "Flags": "RF_Public",
+          "ElementSize": 4
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "UIDebugMemory_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Package": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory",
+    "Super": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'GMUserWidget_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/GMUserWidget.3"
+    },
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'UIDebugMemory_C:WidgetTree'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.66"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'UIDebugMemory_C:ExecuteUbergraph_UIDebugMemory'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'GMUserWidget_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/GMUserWidget.3"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'UIDebugMemory_C:DoRefresh'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.4"
+      },
+      {
+        "ObjectName": "Function'UIDebugMemory_C:UpdateEachText'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.3"
+      },
+      {
+        "ObjectName": "Function'UIDebugMemory_C:UpdateUI'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.2"
+      },
+      {
+        "ObjectName": "Function'UIDebugMemory_C:Construct'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.1"
+      },
+      {
+        "ObjectName": "Function'UIDebugMemory_C:ExecuteUbergraph_UIDebugMemory'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CurAnimMem",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'TextBlock'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CurAudioMem",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'TextBlock'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CurEffectMem",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'TextBlock'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CurLevelMem",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'TextBlock'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CurMonsterMem",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'TextBlock'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CurPlayerMem",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'TextBlock'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CurPreMem",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'TextBlock'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CurUIMem",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'TextBlock'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "EstAmimMem",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'TextBlock'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "EstAudioMem",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'TextBlock'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "EstEffectMem",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'TextBlock'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "EstLevelMem",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'TextBlock'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "EstMonsterMem",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'TextBlock'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "EstPlayerMem",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'TextBlock'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "EstPreMem",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'TextBlock'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "EstUIMem",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'TextBlock'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Image_0",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "TextBlock_78",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'TextBlock'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "CurrentMemory",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Inner": {
+          "Type": "FloatProperty",
+          "Name": "CurrentMemory",
+          "Flags": "RF_Public",
+          "ElementSize": 4
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "MaxMemory",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Inner": {
+          "Type": "FloatProperty",
+          "Name": "MaxMemory",
+          "Flags": "RF_Public",
+          "ElementSize": 4
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_UIDebugMemory": {
+        "ObjectName": "Function'UIDebugMemory_C:ExecuteUbergraph_UIDebugMemory'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.0"
+      },
+      "Construct": {
+        "ObjectName": "Function'UIDebugMemory_C:Construct'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.1"
+      },
+      "UpdateUI": {
+        "ObjectName": "Function'UIDebugMemory_C:UpdateUI'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.2"
+      },
+      "UpdateEachText": {
+        "ObjectName": "Function'UIDebugMemory_C:UpdateEachText'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.3"
+      },
+      "DoRefresh": {
+        "ObjectName": "Function'UIDebugMemory_C:DoRefresh'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.4"
+      }
+    },
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "UIDebugMemory_C'Default__UIDebugMemory_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.6"
+    }
+  },
+  {
+    "Type": "UIDebugMemory_C",
+    "Name": "Default__UIDebugMemory_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.UIDebugMemory_C'",
+    "Package": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory",
+    "Template": {
+      "ObjectName": "GMUserWidget_C'Default__GMUserWidget_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/GMUserWidget.4"
+    },
+    "Properties": {
+      "UberGraphFrame": {}
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "FullView",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'UIDebugMemory_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.66"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'UIDebugMemory_C:WidgetTree.FullView.CanvasPanelSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.10"
+        }
+      ],
+      "Visibility": "ESlateVisibility::HitTestInvisible"
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "ListView",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'UIDebugMemory_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.66"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'UIDebugMemory_C:WidgetTree.ListView.CanvasPanelSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.11"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'UIDebugMemory_C:WidgetTree.ListView.CanvasPanelSlot_12'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.12"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'UIDebugMemory_C:WidgetTree.ListView.CanvasPanelSlot_15'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.13"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'UIDebugMemory_C:WidgetTree.ListView.CanvasPanelSlot_18'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.14"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'UIDebugMemory_C:WidgetTree.ListView.CanvasPanelSlot_19'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.15"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'UIDebugMemory_C:WidgetTree.ListView.CanvasPanelSlot_20'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.17"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'UIDebugMemory_C:WidgetTree.ListView.CanvasPanelSlot_21'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.18"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'UIDebugMemory_C:WidgetTree.ListView.CanvasPanelSlot_22'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.19"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'UIDebugMemory_C:WidgetTree.ListView.CanvasPanelSlot_23'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.20"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'UIDebugMemory_C:WidgetTree.ListView.CanvasPanelSlot_24'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.21"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'UIDebugMemory_C:WidgetTree.ListView.CanvasPanelSlot_25'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.22"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'UIDebugMemory_C:WidgetTree.ListView.CanvasPanelSlot_26'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.23"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'UIDebugMemory_C:WidgetTree.ListView.CanvasPanelSlot_27'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.24"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'UIDebugMemory_C:WidgetTree.ListView.CanvasPanelSlot_28'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.25"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'UIDebugMemory_C:WidgetTree.ListView.CanvasPanelSlot_29'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.26"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'UIDebugMemory_C:WidgetTree.ListView.CanvasPanelSlot_30'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.27"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'UIDebugMemory_C:WidgetTree.ListView.CanvasPanelSlot_31'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.28"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'UIDebugMemory_C:WidgetTree.ListView.CanvasPanelSlot_32'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.29"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'UIDebugMemory_C:WidgetTree.ListView.CanvasPanelSlot_33'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.30"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'UIDebugMemory_C:WidgetTree.ListView.CanvasPanelSlot_35'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.31"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'UIDebugMemory_C:WidgetTree.ListView.CanvasPanelSlot_36'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.32"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'UIDebugMemory_C:WidgetTree.ListView.CanvasPanelSlot_37'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.33"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'UIDebugMemory_C:WidgetTree.ListView.CanvasPanelSlot_38'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.34"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'UIDebugMemory_C:WidgetTree.ListView.CanvasPanelSlot_39'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.35"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'UIDebugMemory_C:WidgetTree.ListView.CanvasPanelSlot_40'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.36"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'UIDebugMemory_C:WidgetTree.ListView.CanvasPanelSlot_2'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.16"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'UIDebugMemory_C:WidgetTree.UIView.CanvasPanelSlot_6'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.38"
+      },
+      "Visibility": "ESlateVisibility::HitTestInvisible"
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "UIView",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'UIDebugMemory_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.66"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'UIDebugMemory_C:WidgetTree.UIView.CanvasPanelSlot_5'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.37"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'UIDebugMemory_C:WidgetTree.UIView.CanvasPanelSlot_6'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.38"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'UIDebugMemory_C:WidgetTree.FullView.CanvasPanelSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.10"
+      },
+      "Visibility": "ESlateVisibility::HitTestInvisible"
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'UIDebugMemory_C:WidgetTree.FullView'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.7"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 138.23999,
+          "Right": 161.28,
+          "Bottom": 0.0
+        },
+        "Anchors": {
+          "Maximum": {
+            "X": 1.0,
+            "Y": 1.0
+          }
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'UIDebugMemory_C:WidgetTree.FullView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.7"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'UIDebugMemory_C:WidgetTree.UIView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.9"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'UIDebugMemory_C:WidgetTree.ListView'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.8"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 23.039999,
+          "Top": 7.68,
+          "Right": 307.19998,
+          "Bottom": 57.6
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'UIDebugMemory_C:WidgetTree.ListView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.8"
+      },
+      "Content": {
+        "ObjectName": "TextBlock'UIDebugMemory_C:WidgetTree.title'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.64"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_12",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'UIDebugMemory_C:WidgetTree.ListView'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.8"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 192.0,
+          "Top": 76.799995,
+          "Right": 128.77576,
+          "Bottom": 57.6
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'UIDebugMemory_C:WidgetTree.ListView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.8"
+      },
+      "Content": {
+        "ObjectName": "TextBlock'UIDebugMemory_C:WidgetTree.TextBlock_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.55"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_15",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'UIDebugMemory_C:WidgetTree.ListView'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.8"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 192.0,
+          "Top": 145.92,
+          "Right": 128.77576,
+          "Bottom": 57.6
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'UIDebugMemory_C:WidgetTree.ListView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.8"
+      },
+      "Content": {
+        "ObjectName": "TextBlock'UIDebugMemory_C:WidgetTree.TextBlock_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.56"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_18",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'UIDebugMemory_C:WidgetTree.ListView'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.8"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 192.0,
+          "Top": 215.04,
+          "Right": 128.77576,
+          "Bottom": 57.6
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'UIDebugMemory_C:WidgetTree.ListView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.8"
+      },
+      "Content": {
+        "ObjectName": "TextBlock'UIDebugMemory_C:WidgetTree.TextBlock_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.57"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_19",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'UIDebugMemory_C:WidgetTree.ListView'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.8"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 199.68,
+          "Top": 299.52,
+          "Right": 128.77576,
+          "Bottom": 57.6
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'UIDebugMemory_C:WidgetTree.ListView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.8"
+      },
+      "Content": {
+        "ObjectName": "TextBlock'UIDebugMemory_C:WidgetTree.TextBlock_3'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.58"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'UIDebugMemory_C:WidgetTree.ListView'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.8"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 69.119995,
+          "Top": 775.68,
+          "Right": 192.0,
+          "Bottom": 57.6
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'UIDebugMemory_C:WidgetTree.ListView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.8"
+      },
+      "Content": {
+        "ObjectName": "TextBlock'UIDebugMemory_C:WidgetTree.TextBlock_78'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.63"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_20",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'UIDebugMemory_C:WidgetTree.ListView'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.8"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 207.36,
+          "Top": 391.68,
+          "Right": 128.77576,
+          "Bottom": 57.6
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'UIDebugMemory_C:WidgetTree.ListView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.8"
+      },
+      "Content": {
+        "ObjectName": "TextBlock'UIDebugMemory_C:WidgetTree.TextBlock_4'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.59"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_21",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'UIDebugMemory_C:WidgetTree.ListView'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.8"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 199.68,
+          "Top": 476.16,
+          "Right": 128.77576,
+          "Bottom": 57.6
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'UIDebugMemory_C:WidgetTree.ListView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.8"
+      },
+      "Content": {
+        "ObjectName": "TextBlock'UIDebugMemory_C:WidgetTree.TextBlock_5'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.60"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_22",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'UIDebugMemory_C:WidgetTree.ListView'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.8"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 199.68,
+          "Top": 576.0,
+          "Right": 128.77576,
+          "Bottom": 57.6
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'UIDebugMemory_C:WidgetTree.ListView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.8"
+      },
+      "Content": {
+        "ObjectName": "TextBlock'UIDebugMemory_C:WidgetTree.TextBlock_6'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.61"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_23",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'UIDebugMemory_C:WidgetTree.ListView'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.8"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 199.68,
+          "Top": 668.16,
+          "Right": 128.77576,
+          "Bottom": 57.6
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'UIDebugMemory_C:WidgetTree.ListView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.8"
+      },
+      "Content": {
+        "ObjectName": "TextBlock'UIDebugMemory_C:WidgetTree.TextBlock_7'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.62"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_24",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'UIDebugMemory_C:WidgetTree.ListView'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.8"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 529.92,
+          "Top": 76.799995,
+          "Right": 128.77576,
+          "Bottom": 57.6
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'UIDebugMemory_C:WidgetTree.ListView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.8"
+      },
+      "Content": {
+        "ObjectName": "TextBlock'UIDebugMemory_C:WidgetTree.CurLevelMem'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.42"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_25",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'UIDebugMemory_C:WidgetTree.ListView'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.8"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 860.16,
+          "Top": 76.799995,
+          "Right": 128.77576,
+          "Bottom": 57.6
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'UIDebugMemory_C:WidgetTree.ListView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.8"
+      },
+      "Content": {
+        "ObjectName": "TextBlock'UIDebugMemory_C:WidgetTree.EstLevelMem'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.50"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_26",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'UIDebugMemory_C:WidgetTree.ListView'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.8"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 529.92,
+          "Top": 145.92,
+          "Right": 128.77576,
+          "Bottom": 57.6
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'UIDebugMemory_C:WidgetTree.ListView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.8"
+      },
+      "Content": {
+        "ObjectName": "TextBlock'UIDebugMemory_C:WidgetTree.CurPlayerMem'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.44"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_27",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'UIDebugMemory_C:WidgetTree.ListView'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.8"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 860.16,
+          "Top": 145.92,
+          "Right": 128.77576,
+          "Bottom": 57.6
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'UIDebugMemory_C:WidgetTree.ListView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.8"
+      },
+      "Content": {
+        "ObjectName": "TextBlock'UIDebugMemory_C:WidgetTree.EstPlayerMem'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.52"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_28",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'UIDebugMemory_C:WidgetTree.ListView'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.8"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 529.92,
+          "Top": 222.72,
+          "Right": 128.77576,
+          "Bottom": 57.6
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'UIDebugMemory_C:WidgetTree.ListView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.8"
+      },
+      "Content": {
+        "ObjectName": "TextBlock'UIDebugMemory_C:WidgetTree.CurMonsterMem'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.43"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_29",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'UIDebugMemory_C:WidgetTree.ListView'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.8"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 860.16,
+          "Top": 222.72,
+          "Right": 128.77576,
+          "Bottom": 57.6
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'UIDebugMemory_C:WidgetTree.ListView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.8"
+      },
+      "Content": {
+        "ObjectName": "TextBlock'UIDebugMemory_C:WidgetTree.EstMonsterMem'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.51"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_30",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'UIDebugMemory_C:WidgetTree.ListView'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.8"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 529.92,
+          "Top": 307.19998,
+          "Right": 128.77576,
+          "Bottom": 57.6
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'UIDebugMemory_C:WidgetTree.ListView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.8"
+      },
+      "Content": {
+        "ObjectName": "TextBlock'UIDebugMemory_C:WidgetTree.CurUIMem'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.46"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_31",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'UIDebugMemory_C:WidgetTree.ListView'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.8"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 860.16,
+          "Top": 307.19998,
+          "Right": 128.77576,
+          "Bottom": 57.6
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'UIDebugMemory_C:WidgetTree.ListView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.8"
+      },
+      "Content": {
+        "ObjectName": "TextBlock'UIDebugMemory_C:WidgetTree.EstUIMem'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.54"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_32",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'UIDebugMemory_C:WidgetTree.ListView'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.8"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 529.92,
+          "Top": 399.36,
+          "Right": 128.77576,
+          "Bottom": 57.6
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'UIDebugMemory_C:WidgetTree.ListView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.8"
+      },
+      "Content": {
+        "ObjectName": "TextBlock'UIDebugMemory_C:WidgetTree.CurAudioMem'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.40"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_33",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'UIDebugMemory_C:WidgetTree.ListView'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.8"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 860.16,
+          "Top": 391.68,
+          "Right": 128.77576,
+          "Bottom": 57.6
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'UIDebugMemory_C:WidgetTree.ListView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.8"
+      },
+      "Content": {
+        "ObjectName": "TextBlock'UIDebugMemory_C:WidgetTree.EstAudioMem'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.48"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_35",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'UIDebugMemory_C:WidgetTree.ListView'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.8"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 529.92,
+          "Top": 476.16,
+          "Right": 128.77576,
+          "Bottom": 57.6
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'UIDebugMemory_C:WidgetTree.ListView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.8"
+      },
+      "Content": {
+        "ObjectName": "TextBlock'UIDebugMemory_C:WidgetTree.CurEffectMem'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.41"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_36",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'UIDebugMemory_C:WidgetTree.ListView'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.8"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 860.16,
+          "Top": 468.47998,
+          "Right": 128.77576,
+          "Bottom": 57.6
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'UIDebugMemory_C:WidgetTree.ListView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.8"
+      },
+      "Content": {
+        "ObjectName": "TextBlock'UIDebugMemory_C:WidgetTree.EstEffectMem'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.49"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_37",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'UIDebugMemory_C:WidgetTree.ListView'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.8"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 529.92,
+          "Top": 560.64,
+          "Right": 128.77576,
+          "Bottom": 57.6
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'UIDebugMemory_C:WidgetTree.ListView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.8"
+      },
+      "Content": {
+        "ObjectName": "TextBlock'UIDebugMemory_C:WidgetTree.CurAnimMem'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.39"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_38",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'UIDebugMemory_C:WidgetTree.ListView'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.8"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 860.16,
+          "Top": 560.64,
+          "Right": 128.77576,
+          "Bottom": 57.6
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'UIDebugMemory_C:WidgetTree.ListView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.8"
+      },
+      "Content": {
+        "ObjectName": "TextBlock'UIDebugMemory_C:WidgetTree.EstAmimMem'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.47"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_39",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'UIDebugMemory_C:WidgetTree.ListView'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.8"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 529.92,
+          "Top": 660.48,
+          "Right": 128.77576,
+          "Bottom": 57.6
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'UIDebugMemory_C:WidgetTree.ListView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.8"
+      },
+      "Content": {
+        "ObjectName": "TextBlock'UIDebugMemory_C:WidgetTree.CurPreMem'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.45"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_40",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'UIDebugMemory_C:WidgetTree.ListView'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.8"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 860.16,
+          "Top": 652.8,
+          "Right": 128.77576,
+          "Bottom": 57.6
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'UIDebugMemory_C:WidgetTree.ListView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.8"
+      },
+      "Content": {
+        "ObjectName": "TextBlock'UIDebugMemory_C:WidgetTree.EstPreMem'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.53"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_5",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'UIDebugMemory_C:WidgetTree.UIView'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.9"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": -552.3782,
+          "Top": -348.3927,
+          "Right": 1232.6232,
+          "Bottom": 882.1194
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'UIDebugMemory_C:WidgetTree.UIView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.9"
+      },
+      "Content": {
+        "ObjectName": "UIImage'UIDebugMemory_C:WidgetTree.Image_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.65"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_6",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'UIDebugMemory_C:WidgetTree.UIView'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.9"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 680.34106,
+          "Top": -348.3927,
+          "Right": 1232.7192,
+          "Bottom": 886.05365
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 1.0,
+          "Y": 0.0
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'UIDebugMemory_C:WidgetTree.UIView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.9"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'UIDebugMemory_C:WidgetTree.ListView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.8"
+      }
+    }
+  },
+  {
+    "Type": "TextBlock",
+    "Name": "CurAnimMem",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'TextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'UIDebugMemory_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.66"
+    },
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "7A057F334C67558703D1D3876A56B126",
+        "SourceString": "0",
+        "LocalizedString": "0"
+      },
+      "ColorAndOpacity": {
+        "SpecifiedColor": {
+          "R": 0.0,
+          "G": 1.0,
+          "B": 0.0,
+          "A": 1.0,
+          "Hex": "00FF00"
+        }
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'tl_main_Font'",
+          "ObjectPath": "UE_game/Content/Art/UI/Fonts/tl_main_Font.0"
+        },
+        "TypefaceFontName": "Default",
+        "Size": 38
+      },
+      "Justification": "ETextJustify::Center",
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'UIDebugMemory_C:WidgetTree.ListView.CanvasPanelSlot_37'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.33"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "TextBlock",
+    "Name": "CurAudioMem",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'TextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'UIDebugMemory_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.66"
+    },
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "7A057F334C67558703D1D3876A56B126",
+        "SourceString": "0",
+        "LocalizedString": "0"
+      },
+      "ColorAndOpacity": {
+        "SpecifiedColor": {
+          "R": 0.0,
+          "G": 1.0,
+          "B": 0.0,
+          "A": 1.0,
+          "Hex": "00FF00"
+        }
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'tl_main_Font'",
+          "ObjectPath": "UE_game/Content/Art/UI/Fonts/tl_main_Font.0"
+        },
+        "TypefaceFontName": "Default",
+        "Size": 38
+      },
+      "Justification": "ETextJustify::Center",
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'UIDebugMemory_C:WidgetTree.ListView.CanvasPanelSlot_32'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.29"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "TextBlock",
+    "Name": "CurEffectMem",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'TextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'UIDebugMemory_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.66"
+    },
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "7A057F334C67558703D1D3876A56B126",
+        "SourceString": "0",
+        "LocalizedString": "0"
+      },
+      "ColorAndOpacity": {
+        "SpecifiedColor": {
+          "R": 0.0,
+          "G": 1.0,
+          "B": 0.0,
+          "A": 1.0,
+          "Hex": "00FF00"
+        }
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'tl_main_Font'",
+          "ObjectPath": "UE_game/Content/Art/UI/Fonts/tl_main_Font.0"
+        },
+        "TypefaceFontName": "Default",
+        "Size": 38
+      },
+      "Justification": "ETextJustify::Center",
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'UIDebugMemory_C:WidgetTree.ListView.CanvasPanelSlot_35'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.31"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "TextBlock",
+    "Name": "CurLevelMem",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'TextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'UIDebugMemory_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.66"
+    },
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "7A057F334C67558703D1D3876A56B126",
+        "SourceString": "0",
+        "LocalizedString": "0"
+      },
+      "ColorAndOpacity": {
+        "SpecifiedColor": {
+          "R": 0.0,
+          "G": 1.0,
+          "B": 0.0,
+          "A": 1.0,
+          "Hex": "00FF00"
+        }
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'tl_main_Font'",
+          "ObjectPath": "UE_game/Content/Art/UI/Fonts/tl_main_Font.0"
+        },
+        "TypefaceFontName": "Default",
+        "Size": 38
+      },
+      "Justification": "ETextJustify::Center",
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'UIDebugMemory_C:WidgetTree.ListView.CanvasPanelSlot_24'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.21"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "TextBlock",
+    "Name": "CurMonsterMem",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'TextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'UIDebugMemory_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.66"
+    },
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "7A057F334C67558703D1D3876A56B126",
+        "SourceString": "0",
+        "LocalizedString": "0"
+      },
+      "ColorAndOpacity": {
+        "SpecifiedColor": {
+          "R": 0.0,
+          "G": 1.0,
+          "B": 0.0,
+          "A": 1.0,
+          "Hex": "00FF00"
+        }
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'tl_main_Font'",
+          "ObjectPath": "UE_game/Content/Art/UI/Fonts/tl_main_Font.0"
+        },
+        "TypefaceFontName": "Default",
+        "Size": 38
+      },
+      "Justification": "ETextJustify::Center",
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'UIDebugMemory_C:WidgetTree.ListView.CanvasPanelSlot_28'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.25"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "TextBlock",
+    "Name": "CurPlayerMem",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'TextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'UIDebugMemory_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.66"
+    },
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "7A057F334C67558703D1D3876A56B126",
+        "SourceString": "0",
+        "LocalizedString": "0"
+      },
+      "ColorAndOpacity": {
+        "SpecifiedColor": {
+          "R": 0.0,
+          "G": 1.0,
+          "B": 0.0,
+          "A": 1.0,
+          "Hex": "00FF00"
+        }
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'tl_main_Font'",
+          "ObjectPath": "UE_game/Content/Art/UI/Fonts/tl_main_Font.0"
+        },
+        "TypefaceFontName": "Default",
+        "Size": 38
+      },
+      "Justification": "ETextJustify::Center",
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'UIDebugMemory_C:WidgetTree.ListView.CanvasPanelSlot_26'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.23"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "TextBlock",
+    "Name": "CurPreMem",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'TextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'UIDebugMemory_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.66"
+    },
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "7A057F334C67558703D1D3876A56B126",
+        "SourceString": "0",
+        "LocalizedString": "0"
+      },
+      "ColorAndOpacity": {
+        "SpecifiedColor": {
+          "R": 0.0,
+          "G": 1.0,
+          "B": 0.0,
+          "A": 1.0,
+          "Hex": "00FF00"
+        }
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'tl_main_Font'",
+          "ObjectPath": "UE_game/Content/Art/UI/Fonts/tl_main_Font.0"
+        },
+        "TypefaceFontName": "Default",
+        "Size": 38
+      },
+      "Justification": "ETextJustify::Center",
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'UIDebugMemory_C:WidgetTree.ListView.CanvasPanelSlot_39'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.35"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "TextBlock",
+    "Name": "CurUIMem",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'TextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'UIDebugMemory_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.66"
+    },
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "7A057F334C67558703D1D3876A56B126",
+        "SourceString": "0",
+        "LocalizedString": "0"
+      },
+      "ColorAndOpacity": {
+        "SpecifiedColor": {
+          "R": 0.0,
+          "G": 1.0,
+          "B": 0.0,
+          "A": 1.0,
+          "Hex": "00FF00"
+        }
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'tl_main_Font'",
+          "ObjectPath": "UE_game/Content/Art/UI/Fonts/tl_main_Font.0"
+        },
+        "TypefaceFontName": "Default",
+        "Size": 38
+      },
+      "Justification": "ETextJustify::Center",
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'UIDebugMemory_C:WidgetTree.ListView.CanvasPanelSlot_30'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.27"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "TextBlock",
+    "Name": "EstAmimMem",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'TextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'UIDebugMemory_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.66"
+    },
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "7A057F334C67558703D1D3876A56B126",
+        "SourceString": "0",
+        "LocalizedString": "0"
+      },
+      "ColorAndOpacity": {
+        "SpecifiedColor": {
+          "R": 0.0,
+          "G": 1.0,
+          "B": 0.0,
+          "A": 1.0,
+          "Hex": "00FF00"
+        }
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'tl_main_Font'",
+          "ObjectPath": "UE_game/Content/Art/UI/Fonts/tl_main_Font.0"
+        },
+        "TypefaceFontName": "Default",
+        "Size": 38
+      },
+      "Justification": "ETextJustify::Center",
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'UIDebugMemory_C:WidgetTree.ListView.CanvasPanelSlot_38'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.34"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "TextBlock",
+    "Name": "EstAudioMem",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'TextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'UIDebugMemory_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.66"
+    },
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "7A057F334C67558703D1D3876A56B126",
+        "SourceString": "0",
+        "LocalizedString": "0"
+      },
+      "ColorAndOpacity": {
+        "SpecifiedColor": {
+          "R": 0.0,
+          "G": 1.0,
+          "B": 0.0,
+          "A": 1.0,
+          "Hex": "00FF00"
+        }
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'tl_main_Font'",
+          "ObjectPath": "UE_game/Content/Art/UI/Fonts/tl_main_Font.0"
+        },
+        "TypefaceFontName": "Default",
+        "Size": 38
+      },
+      "Justification": "ETextJustify::Center",
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'UIDebugMemory_C:WidgetTree.ListView.CanvasPanelSlot_33'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.30"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "TextBlock",
+    "Name": "EstEffectMem",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'TextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'UIDebugMemory_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.66"
+    },
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "7A057F334C67558703D1D3876A56B126",
+        "SourceString": "0",
+        "LocalizedString": "0"
+      },
+      "ColorAndOpacity": {
+        "SpecifiedColor": {
+          "R": 0.0,
+          "G": 1.0,
+          "B": 0.0,
+          "A": 1.0,
+          "Hex": "00FF00"
+        }
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'tl_main_Font'",
+          "ObjectPath": "UE_game/Content/Art/UI/Fonts/tl_main_Font.0"
+        },
+        "TypefaceFontName": "Default",
+        "Size": 38
+      },
+      "Justification": "ETextJustify::Center",
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'UIDebugMemory_C:WidgetTree.ListView.CanvasPanelSlot_36'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.32"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "TextBlock",
+    "Name": "EstLevelMem",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'TextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'UIDebugMemory_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.66"
+    },
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "7A057F334C67558703D1D3876A56B126",
+        "SourceString": "0",
+        "LocalizedString": "0"
+      },
+      "ColorAndOpacity": {
+        "SpecifiedColor": {
+          "R": 0.0,
+          "G": 1.0,
+          "B": 0.0,
+          "A": 1.0,
+          "Hex": "00FF00"
+        }
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'tl_main_Font'",
+          "ObjectPath": "UE_game/Content/Art/UI/Fonts/tl_main_Font.0"
+        },
+        "TypefaceFontName": "Default",
+        "Size": 38
+      },
+      "Justification": "ETextJustify::Center",
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'UIDebugMemory_C:WidgetTree.ListView.CanvasPanelSlot_25'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.22"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "TextBlock",
+    "Name": "EstMonsterMem",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'TextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'UIDebugMemory_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.66"
+    },
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "7A057F334C67558703D1D3876A56B126",
+        "SourceString": "0",
+        "LocalizedString": "0"
+      },
+      "ColorAndOpacity": {
+        "SpecifiedColor": {
+          "R": 0.0,
+          "G": 1.0,
+          "B": 0.0,
+          "A": 1.0,
+          "Hex": "00FF00"
+        }
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'tl_main_Font'",
+          "ObjectPath": "UE_game/Content/Art/UI/Fonts/tl_main_Font.0"
+        },
+        "TypefaceFontName": "Default",
+        "Size": 38
+      },
+      "Justification": "ETextJustify::Center",
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'UIDebugMemory_C:WidgetTree.ListView.CanvasPanelSlot_29'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.26"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "TextBlock",
+    "Name": "EstPlayerMem",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'TextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'UIDebugMemory_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.66"
+    },
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "7A057F334C67558703D1D3876A56B126",
+        "SourceString": "0",
+        "LocalizedString": "0"
+      },
+      "ColorAndOpacity": {
+        "SpecifiedColor": {
+          "R": 0.0,
+          "G": 1.0,
+          "B": 0.0,
+          "A": 1.0,
+          "Hex": "00FF00"
+        }
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'tl_main_Font'",
+          "ObjectPath": "UE_game/Content/Art/UI/Fonts/tl_main_Font.0"
+        },
+        "TypefaceFontName": "Default",
+        "Size": 38
+      },
+      "Justification": "ETextJustify::Center",
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'UIDebugMemory_C:WidgetTree.ListView.CanvasPanelSlot_27'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.24"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "TextBlock",
+    "Name": "EstPreMem",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'TextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'UIDebugMemory_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.66"
+    },
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "7A057F334C67558703D1D3876A56B126",
+        "SourceString": "0",
+        "LocalizedString": "0"
+      },
+      "ColorAndOpacity": {
+        "SpecifiedColor": {
+          "R": 0.0,
+          "G": 1.0,
+          "B": 0.0,
+          "A": 1.0,
+          "Hex": "00FF00"
+        }
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'tl_main_Font'",
+          "ObjectPath": "UE_game/Content/Art/UI/Fonts/tl_main_Font.0"
+        },
+        "TypefaceFontName": "Default",
+        "Size": 38
+      },
+      "Justification": "ETextJustify::Center",
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'UIDebugMemory_C:WidgetTree.ListView.CanvasPanelSlot_40'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.36"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "TextBlock",
+    "Name": "EstUIMem",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'TextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'UIDebugMemory_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.66"
+    },
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "7A057F334C67558703D1D3876A56B126",
+        "SourceString": "0",
+        "LocalizedString": "0"
+      },
+      "ColorAndOpacity": {
+        "SpecifiedColor": {
+          "R": 0.0,
+          "G": 1.0,
+          "B": 0.0,
+          "A": 1.0,
+          "Hex": "00FF00"
+        }
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'tl_main_Font'",
+          "ObjectPath": "UE_game/Content/Art/UI/Fonts/tl_main_Font.0"
+        },
+        "TypefaceFontName": "Default",
+        "Size": 38
+      },
+      "Justification": "ETextJustify::Center",
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'UIDebugMemory_C:WidgetTree.ListView.CanvasPanelSlot_31'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.28"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "TextBlock",
+    "Name": "TextBlock_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'TextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'UIDebugMemory_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.66"
+    },
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "0BC197FF4F67D84DE479FEB545027692",
+        "SourceString": "Level",
+        "LocalizedString": "Level"
+      },
+      "ColorAndOpacity": {
+        "SpecifiedColor": {
+          "R": 0.0,
+          "G": 1.0,
+          "B": 0.0,
+          "A": 1.0,
+          "Hex": "00FF00"
+        }
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'tl_main_Font'",
+          "ObjectPath": "UE_game/Content/Art/UI/Fonts/tl_main_Font.0"
+        },
+        "TypefaceFontName": "Default",
+        "Size": 38
+      },
+      "Justification": "ETextJustify::Center",
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'UIDebugMemory_C:WidgetTree.ListView.CanvasPanelSlot_12'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.12"
+      }
+    }
+  },
+  {
+    "Type": "TextBlock",
+    "Name": "TextBlock_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'TextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'UIDebugMemory_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.66"
+    },
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "19F2C7E14F1CBBEFF28B92B4F7F7CE5A",
+        "SourceString": "Character",
+        "LocalizedString": "Character"
+      },
+      "ColorAndOpacity": {
+        "SpecifiedColor": {
+          "R": 0.0,
+          "G": 1.0,
+          "B": 0.0,
+          "A": 1.0,
+          "Hex": "00FF00"
+        }
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'tl_main_Font'",
+          "ObjectPath": "UE_game/Content/Art/UI/Fonts/tl_main_Font.0"
+        },
+        "TypefaceFontName": "Default",
+        "Size": 38
+      },
+      "Justification": "ETextJustify::Center",
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'UIDebugMemory_C:WidgetTree.ListView.CanvasPanelSlot_15'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.13"
+      }
+    }
+  },
+  {
+    "Type": "TextBlock",
+    "Name": "TextBlock_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'TextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'UIDebugMemory_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.66"
+    },
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "EA66697442DD8F75DC5984B337FAEC6A",
+        "SourceString": "Monster",
+        "LocalizedString": "Monster"
+      },
+      "ColorAndOpacity": {
+        "SpecifiedColor": {
+          "R": 0.0,
+          "G": 1.0,
+          "B": 0.0,
+          "A": 1.0,
+          "Hex": "00FF00"
+        }
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'tl_main_Font'",
+          "ObjectPath": "UE_game/Content/Art/UI/Fonts/tl_main_Font.0"
+        },
+        "TypefaceFontName": "Default",
+        "Size": 38
+      },
+      "Justification": "ETextJustify::Center",
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'UIDebugMemory_C:WidgetTree.ListView.CanvasPanelSlot_18'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.14"
+      }
+    }
+  },
+  {
+    "Type": "TextBlock",
+    "Name": "TextBlock_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'TextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'UIDebugMemory_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.66"
+    },
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "682C57144BD417549F84C78482F72AFC",
+        "SourceString": "UI",
+        "LocalizedString": "UI"
+      },
+      "ColorAndOpacity": {
+        "SpecifiedColor": {
+          "R": 0.0,
+          "G": 1.0,
+          "B": 0.0,
+          "A": 1.0,
+          "Hex": "00FF00"
+        }
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'tl_main_Font'",
+          "ObjectPath": "UE_game/Content/Art/UI/Fonts/tl_main_Font.0"
+        },
+        "TypefaceFontName": "Default",
+        "Size": 38
+      },
+      "Justification": "ETextJustify::Center",
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'UIDebugMemory_C:WidgetTree.ListView.CanvasPanelSlot_19'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.15"
+      }
+    }
+  },
+  {
+    "Type": "TextBlock",
+    "Name": "TextBlock_4",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'TextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'UIDebugMemory_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.66"
+    },
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "16FEB4A149F4DAC37089458B5040BFB4",
+        "SourceString": "Audio",
+        "LocalizedString": "Audio"
+      },
+      "ColorAndOpacity": {
+        "SpecifiedColor": {
+          "R": 0.0,
+          "G": 1.0,
+          "B": 0.0,
+          "A": 1.0,
+          "Hex": "00FF00"
+        }
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'tl_main_Font'",
+          "ObjectPath": "UE_game/Content/Art/UI/Fonts/tl_main_Font.0"
+        },
+        "TypefaceFontName": "Default",
+        "Size": 38
+      },
+      "Justification": "ETextJustify::Center",
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'UIDebugMemory_C:WidgetTree.ListView.CanvasPanelSlot_20'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.17"
+      }
+    }
+  },
+  {
+    "Type": "TextBlock",
+    "Name": "TextBlock_5",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'TextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'UIDebugMemory_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.66"
+    },
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "E9178BCC45B2F2403BE06BB3F20AD970",
+        "SourceString": "Effect",
+        "LocalizedString": "Effect"
+      },
+      "ColorAndOpacity": {
+        "SpecifiedColor": {
+          "R": 0.0,
+          "G": 1.0,
+          "B": 0.0,
+          "A": 1.0,
+          "Hex": "00FF00"
+        }
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'tl_main_Font'",
+          "ObjectPath": "UE_game/Content/Art/UI/Fonts/tl_main_Font.0"
+        },
+        "TypefaceFontName": "Default",
+        "Size": 38
+      },
+      "Justification": "ETextJustify::Center",
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'UIDebugMemory_C:WidgetTree.ListView.CanvasPanelSlot_21'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.18"
+      }
+    }
+  },
+  {
+    "Type": "TextBlock",
+    "Name": "TextBlock_6",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'TextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'UIDebugMemory_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.66"
+    },
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "68697BC64AF841842ECB0C93EC113235",
+        "SourceString": "Animation",
+        "LocalizedString": "Animation"
+      },
+      "ColorAndOpacity": {
+        "SpecifiedColor": {
+          "R": 0.0,
+          "G": 1.0,
+          "B": 0.0,
+          "A": 1.0,
+          "Hex": "00FF00"
+        }
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'tl_main_Font'",
+          "ObjectPath": "UE_game/Content/Art/UI/Fonts/tl_main_Font.0"
+        },
+        "TypefaceFontName": "Default",
+        "Size": 38
+      },
+      "Justification": "ETextJustify::Center",
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'UIDebugMemory_C:WidgetTree.ListView.CanvasPanelSlot_22'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.19"
+      }
+    }
+  },
+  {
+    "Type": "TextBlock",
+    "Name": "TextBlock_7",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'TextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'UIDebugMemory_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.66"
+    },
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "0D991B71431D29F4B83A1BA72B6909D3",
+        "SourceString": "Preload",
+        "LocalizedString": "Preload"
+      },
+      "ColorAndOpacity": {
+        "SpecifiedColor": {
+          "R": 0.0,
+          "G": 1.0,
+          "B": 0.0,
+          "A": 1.0,
+          "Hex": "00FF00"
+        }
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'tl_main_Font'",
+          "ObjectPath": "UE_game/Content/Art/UI/Fonts/tl_main_Font.0"
+        },
+        "TypefaceFontName": "Default",
+        "Size": 38
+      },
+      "Justification": "ETextJustify::Center",
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'UIDebugMemory_C:WidgetTree.ListView.CanvasPanelSlot_23'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.20"
+      }
+    }
+  },
+  {
+    "Type": "TextBlock",
+    "Name": "TextBlock_78",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'TextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'UIDebugMemory_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.66"
+    },
+    "Properties": {
+      "Text": {
+        "Namespace": "UMG",
+        "Key": "TextBlockDefaultValue",
+        "SourceString": "Text Block",
+        "LocalizedString": "Text Block"
+      },
+      "Font": {
+        "Size": 46
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'UIDebugMemory_C:WidgetTree.ListView.CanvasPanelSlot_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.16"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "TextBlock",
+    "Name": "title",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'TextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'UIDebugMemory_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.66"
+    },
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "3AD0E4E340C4F59D170899B0E791FD01",
+        "SourceString": "MemoryUsage     (Current / Estimated )",
+        "LocalizedString": "MemoryUsage     (Current / Estimated )"
+      },
+      "ColorAndOpacity": {
+        "SpecifiedColor": {
+          "R": 0.0,
+          "G": 1.0,
+          "B": 0.0,
+          "A": 1.0,
+          "Hex": "00FF00"
+        }
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'tl_main_Font'",
+          "ObjectPath": "UE_game/Content/Art/UI/Fonts/tl_main_Font.0"
+        },
+        "TypefaceFontName": "Default",
+        "Size": 38
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'UIDebugMemory_C:WidgetTree.ListView.CanvasPanelSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.11"
+      }
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "Image_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'UIDebugMemory_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.66"
+    },
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 61.44,
+          "Y": 61.44
+        },
+        "DrawAs": "ESlateBrushDrawType::Box"
+      },
+      "ColorAndOpacity": {
+        "R": 0.0,
+        "G": 0.0,
+        "B": 0.0,
+        "A": 0.5,
+        "Hex": "7F000000"
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'UIDebugMemory_C:WidgetTree.UIView.CanvasPanelSlot_5'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.37"
+      }
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetTree'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'UIDebugMemory_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.5"
+    },
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "CanvasPanel'UIDebugMemory_C:WidgetTree.FullView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIDebugMemory.7"
+      }
+    }
+  }
+]

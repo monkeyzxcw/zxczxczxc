@@ -1,0 +1,578 @@
+[
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "DebugLogItem_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Package": "UE_game/Content/BluePrint/UI/Debug/Item/DebugLogItem",
+    "Super": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'GMUserWidget_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/GMUserWidget.3"
+    },
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'DebugLogItem_C:WidgetTree'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/DebugLogItem.17"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'GMUserWidget_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/GMUserWidget.3"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "CloseEngineLogBtn",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Button'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "EngineLogVerbosityDrop",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'GmV2DropBoxItem_C'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Settings/GmV2/GmV2DropBoxItem.3"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "OpenEngineLogBtn",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Button'",
+          "ObjectPath": "/Script/UMG"
+        }
+      }
+    ],
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "DebugLogItem_C'Default__DebugLogItem_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/DebugLogItem.1"
+    }
+  },
+  {
+    "Type": "DebugLogItem_C",
+    "Name": "Default__DebugLogItem_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'UE_game/Content/BluePrint/UI/Debug/Item/DebugLogItem.DebugLogItem_C'",
+    "Package": "UE_game/Content/BluePrint/UI/Debug/Item/DebugLogItem",
+    "Template": {
+      "ObjectName": "GMUserWidget_C'Default__GMUserWidget_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/GMUserWidget.4"
+    }
+  },
+  {
+    "Type": "Button",
+    "Name": "CloseEngineLogBtn",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Button'",
+    "Outer": {
+      "ObjectName": "WidgetTree'DebugLogItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/DebugLogItem.17"
+    },
+    "Properties": {
+      "WidgetStyle": {
+        "Normal": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 1.0,
+              "G": 1.0,
+              "B": 1.0,
+              "A": 0.5,
+              "Hex": "7FFFFFFF"
+            }
+          }
+        },
+        "Hovered": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 1.0,
+              "G": 1.0,
+              "B": 1.0,
+              "A": 0.5,
+              "Hex": "7FFFFFFF"
+            }
+          }
+        },
+        "Pressed": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 1.0,
+              "G": 1.0,
+              "B": 1.0,
+              "A": 0.5,
+              "Hex": "7FFFFFFF"
+            }
+          }
+        }
+      },
+      "Slots": [
+        {
+          "ObjectName": "ButtonSlot'DebugLogItem_C:WidgetTree.CloseEngineLogBtn.ButtonSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/DebugLogItem.4"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'DebugLogItem_C:WidgetTree.BtnView.HorizontalBoxSlot_6'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/DebugLogItem.12"
+      }
+    }
+  },
+  {
+    "Type": "Button",
+    "Name": "OpenEngineLogBtn",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Button'",
+    "Outer": {
+      "ObjectName": "WidgetTree'DebugLogItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/DebugLogItem.17"
+    },
+    "Properties": {
+      "WidgetStyle": {
+        "Normal": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 1.0,
+              "G": 1.0,
+              "B": 1.0,
+              "A": 0.5,
+              "Hex": "7FFFFFFF"
+            }
+          }
+        },
+        "Hovered": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 1.0,
+              "G": 1.0,
+              "B": 1.0,
+              "A": 0.5,
+              "Hex": "7FFFFFFF"
+            }
+          }
+        },
+        "Pressed": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 1.0,
+              "G": 1.0,
+              "B": 1.0,
+              "A": 0.5,
+              "Hex": "7FFFFFFF"
+            }
+          }
+        }
+      },
+      "Slots": [
+        {
+          "ObjectName": "ButtonSlot'DebugLogItem_C:WidgetTree.OpenEngineLogBtn.ButtonSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/DebugLogItem.5"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'DebugLogItem_C:WidgetTree.BtnView.HorizontalBoxSlot_3'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/DebugLogItem.10"
+      }
+    }
+  },
+  {
+    "Type": "ButtonSlot",
+    "Name": "ButtonSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ButtonSlot'",
+    "Outer": {
+      "ObjectName": "Button'DebugLogItem_C:WidgetTree.CloseEngineLogBtn'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/DebugLogItem.2"
+    },
+    "Properties": {
+      "Padding": {
+        "Left": 7.68,
+        "Top": 7.68,
+        "Right": 7.68,
+        "Bottom": 3.84
+      },
+      "Parent": {
+        "ObjectName": "Button'DebugLogItem_C:WidgetTree.CloseEngineLogBtn'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/DebugLogItem.2"
+      },
+      "Content": {
+        "ObjectName": "TextBlock'DebugLogItem_C:WidgetTree.TextBlock_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/DebugLogItem.16"
+      }
+    }
+  },
+  {
+    "Type": "ButtonSlot",
+    "Name": "ButtonSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ButtonSlot'",
+    "Outer": {
+      "ObjectName": "Button'DebugLogItem_C:WidgetTree.OpenEngineLogBtn'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/DebugLogItem.3"
+    },
+    "Properties": {
+      "Padding": {
+        "Left": 7.68,
+        "Top": 7.68,
+        "Right": 7.68,
+        "Bottom": 3.84
+      },
+      "Parent": {
+        "ObjectName": "Button'DebugLogItem_C:WidgetTree.OpenEngineLogBtn'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/DebugLogItem.3"
+      },
+      "Content": {
+        "ObjectName": "TextBlock'DebugLogItem_C:WidgetTree.TextBlock'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/DebugLogItem.15"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'DebugLogItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/DebugLogItem.17"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'DebugLogItem_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/DebugLogItem.7"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'DebugLogItem_C:WidgetTree.CanvasPanel_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/DebugLogItem.6"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 1184.6765,
+          "Bottom": 139.4855
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.0
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.0
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.0
+        }
+      },
+      "bAutoSize": true,
+      "ZOrder": 2,
+      "Parent": {
+        "ObjectName": "CanvasPanel'DebugLogItem_C:WidgetTree.CanvasPanel_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/DebugLogItem.6"
+      },
+      "Content": {
+        "ObjectName": "HorizontalBox'DebugLogItem_C:WidgetTree.BtnView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/DebugLogItem.9"
+      }
+    }
+  },
+  {
+    "Type": "GmV2DropBoxItem_C",
+    "Name": "EngineLogVerbosityDrop",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'UE_game/Content/BluePrint/UI/Debug/Settings/GmV2/GmV2DropBoxItem.GmV2DropBoxItem_C'",
+    "Outer": {
+      "ObjectName": "WidgetTree'DebugLogItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/DebugLogItem.17"
+    },
+    "Template": {
+      "ObjectName": "GmV2DropBoxItem_C'Default__GmV2DropBoxItem_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Settings/GmV2/GmV2DropBoxItem.4"
+    },
+    "Properties": {
+      "EmptyTips": "EngineLogsVerbosity",
+      "Slot": {
+        "ObjectName": "SizeBoxSlot'DebugLogItem_C:WidgetTree.SizeBox_64.SizeBoxSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/DebugLogItem.14"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "BtnView",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'DebugLogItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/DebugLogItem.17"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HorizontalBoxSlot'DebugLogItem_C:WidgetTree.BtnView.HorizontalBoxSlot_3'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/DebugLogItem.10"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'DebugLogItem_C:WidgetTree.BtnView.HorizontalBoxSlot_6'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/DebugLogItem.12"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'DebugLogItem_C:WidgetTree.BtnView.HorizontalBoxSlot_5'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/DebugLogItem.11"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'DebugLogItem_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/DebugLogItem.7"
+      },
+      "RenderTransform": {
+        "Scale": {
+          "X": 0.67,
+          "Y": 0.67
+        }
+      },
+      "Clipping": "EWidgetClipping::OnDemand"
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'DebugLogItem_C:WidgetTree.BtnView'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/DebugLogItem.9"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "HorizontalBox'DebugLogItem_C:WidgetTree.BtnView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/DebugLogItem.9"
+      },
+      "Content": {
+        "ObjectName": "Button'DebugLogItem_C:WidgetTree.OpenEngineLogBtn'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/DebugLogItem.3"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_5",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'DebugLogItem_C:WidgetTree.BtnView'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/DebugLogItem.9"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "HorizontalBox'DebugLogItem_C:WidgetTree.BtnView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/DebugLogItem.9"
+      },
+      "Content": {
+        "ObjectName": "SizeBox'DebugLogItem_C:WidgetTree.SizeBox_64'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/DebugLogItem.13"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_6",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'DebugLogItem_C:WidgetTree.BtnView'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/DebugLogItem.9"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "HorizontalBox'DebugLogItem_C:WidgetTree.BtnView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/DebugLogItem.9"
+      },
+      "Content": {
+        "ObjectName": "Button'DebugLogItem_C:WidgetTree.CloseEngineLogBtn'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/DebugLogItem.2"
+      }
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SizeBox_64",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'DebugLogItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/DebugLogItem.17"
+    },
+    "Properties": {
+      "WidthOverride": 576.0,
+      "bOverride_WidthOverride": true,
+      "bOverride_HeightOverride": true,
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot'DebugLogItem_C:WidgetTree.SizeBox_64.SizeBoxSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/DebugLogItem.14"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'DebugLogItem_C:WidgetTree.BtnView.HorizontalBoxSlot_5'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/DebugLogItem.11"
+      },
+      "Clipping": "EWidgetClipping::OnDemand"
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBoxSlot'",
+    "Outer": {
+      "ObjectName": "SizeBox'DebugLogItem_C:WidgetTree.SizeBox_64'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/DebugLogItem.13"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "SizeBox'DebugLogItem_C:WidgetTree.SizeBox_64'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/DebugLogItem.13"
+      },
+      "Content": {
+        "ObjectName": "GmV2DropBoxItem_C'DebugLogItem_C:WidgetTree.EngineLogVerbosityDrop'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/DebugLogItem.8"
+      }
+    }
+  },
+  {
+    "Type": "TextBlock",
+    "Name": "TextBlock",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'TextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'DebugLogItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/DebugLogItem.17"
+    },
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "0310B72440F16A33E1D7FF9D726AB264",
+        "SourceString": "OpenEngineLog",
+        "LocalizedString": "OpenEngineLog"
+      },
+      "ColorAndOpacity": {
+        "SpecifiedColor": {
+          "R": 0.0,
+          "G": 0.0,
+          "B": 0.0,
+          "A": 1.0,
+          "Hex": "000000"
+        }
+      },
+      "Font": {
+        "Size": 46
+      },
+      "Slot": {
+        "ObjectName": "ButtonSlot'DebugLogItem_C:WidgetTree.OpenEngineLogBtn.ButtonSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/DebugLogItem.5"
+      }
+    }
+  },
+  {
+    "Type": "TextBlock",
+    "Name": "TextBlock_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'TextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'DebugLogItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/DebugLogItem.17"
+    },
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "A1546E5C4FBBE5DE6D9D48AEEDE29879",
+        "SourceString": "CloseEngineLog",
+        "LocalizedString": "CloseEngineLog"
+      },
+      "ColorAndOpacity": {
+        "SpecifiedColor": {
+          "R": 0.0,
+          "G": 0.0,
+          "B": 0.0,
+          "A": 1.0,
+          "Hex": "000000"
+        }
+      },
+      "Font": {
+        "Size": 46
+      },
+      "Slot": {
+        "ObjectName": "ButtonSlot'DebugLogItem_C:WidgetTree.CloseEngineLogBtn.ButtonSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/DebugLogItem.4"
+      }
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetTree'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'DebugLogItem_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/DebugLogItem.0"
+    },
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "CanvasPanel'DebugLogItem_C:WidgetTree.CanvasPanel_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/DebugLogItem.6"
+      }
+    }
+  }
+]

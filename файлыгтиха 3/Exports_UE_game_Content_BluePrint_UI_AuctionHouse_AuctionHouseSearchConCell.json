@@ -1,0 +1,956 @@
+[
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "AuctionHouseSearchConCell_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Package": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchConCell",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'AuctionHouseSearchConCell_C:WidgetTree'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchConCell.31"
+      },
+      "bClassRequiresNativeTick": true
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'UIListViewItem'",
+      "ObjectPath": "/Script/UE_game"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Button_Select",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Button'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Image_1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Image_Bg_1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Text_Desc",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIRichTextBlock'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "UIImage",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "UIImage_76",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      }
+    ],
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "AuctionHouseSearchConCell_C'Default__AuctionHouseSearchConCell_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchConCell.1"
+    }
+  },
+  {
+    "Type": "AuctionHouseSearchConCell_C",
+    "Name": "Default__AuctionHouseSearchConCell_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchConCell.AuctionHouseSearchConCell_C'",
+    "Package": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchConCell",
+    "Properties": {
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "Button",
+    "Name": "Button_Select",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Button'",
+    "Outer": {
+      "ObjectName": "WidgetTree'AuctionHouseSearchConCell_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchConCell.31"
+    },
+    "Properties": {
+      "WidgetStyle": {
+        "Normal": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          }
+        },
+        "Hovered": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          }
+        },
+        "Pressed": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          }
+        }
+      },
+      "ColorAndOpacity": {
+        "R": 1.0,
+        "G": 1.0,
+        "B": 1.0,
+        "A": 0.0,
+        "Hex": "FFFFFF"
+      },
+      "ClickMethod": "EButtonClickMethod::PreciseClick",
+      "TouchMethod": "EButtonTouchMethod::PreciseTap",
+      "PressMethod": "EButtonPressMethod::ButtonRelease",
+      "IsFocusable": false,
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'AuctionHouseSearchConCell_C:WidgetTree.TextPanel.CanvasPanelSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchConCell.9"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'AuctionHouseSearchConCell_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchConCell.31"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'AuctionHouseSearchConCell_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_17'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchConCell.6"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_190",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'AuctionHouseSearchConCell_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchConCell.31"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'AuctionHouseSearchConCell_C:WidgetTree.CanvasPanel_190.CanvasPanelSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchConCell.7"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'AuctionHouseSearchConCell_C:WidgetTree.CanvasPanel_190.CanvasPanelSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchConCell.8"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "SizeBoxSlot'AuctionHouseSearchConCell_C:WidgetTree.SizeBox_0.SizeBoxSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchConCell.17"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "TextPanel",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'AuctionHouseSearchConCell_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchConCell.31"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'AuctionHouseSearchConCell_C:WidgetTree.TextPanel.CanvasPanelSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchConCell.10"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'AuctionHouseSearchConCell_C:WidgetTree.TextPanel.CanvasPanelSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchConCell.9"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'AuctionHouseSearchConCell_C:WidgetTree.TextPanel.CanvasPanelSlot_4'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchConCell.11"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "OverlaySlot'AuctionHouseSearchConCell_C:WidgetTree.Overlay_62.OverlaySlot_6'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchConCell.13"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_17",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'AuctionHouseSearchConCell_C:WidgetTree.CanvasPanel_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchConCell.3"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 0.0,
+          "Bottom": 333.53378
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.0,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 1.0,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'AuctionHouseSearchConCell_C:WidgetTree.CanvasPanel_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchConCell.3"
+      },
+      "Content": {
+        "ObjectName": "SizeBox'AuctionHouseSearchConCell_C:WidgetTree.SizeBox_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchConCell.15"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'AuctionHouseSearchConCell_C:WidgetTree.CanvasPanel_190'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchConCell.4"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "Anchors": {
+          "Maximum": {
+            "X": 1.0,
+            "Y": 1.0
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'AuctionHouseSearchConCell_C:WidgetTree.CanvasPanel_190'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchConCell.4"
+      },
+      "Content": {
+        "ObjectName": "Overlay'AuctionHouseSearchConCell_C:WidgetTree.Overlay_62'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchConCell.12"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'AuctionHouseSearchConCell_C:WidgetTree.CanvasPanel_190'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchConCell.4"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 76.799995,
+          "Top": -19.199999,
+          "Right": 84.479996,
+          "Bottom": 86.4
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.0,
+            "Y": 1.0
+          },
+          "Maximum": {
+            "X": 0.0,
+            "Y": 1.0
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 1.0
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'AuctionHouseSearchConCell_C:WidgetTree.CanvasPanel_190'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchConCell.4"
+      },
+      "Content": {
+        "ObjectName": "UIImage'AuctionHouseSearchConCell_C:WidgetTree.Image_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchConCell.18"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'AuctionHouseSearchConCell_C:WidgetTree.TextPanel'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchConCell.5"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "Anchors": {
+          "Maximum": {
+            "X": 1.0,
+            "Y": 1.0
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'AuctionHouseSearchConCell_C:WidgetTree.TextPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchConCell.5"
+      },
+      "Content": {
+        "ObjectName": "Button'AuctionHouseSearchConCell_C:WidgetTree.Button_Select'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchConCell.2"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'AuctionHouseSearchConCell_C:WidgetTree.TextPanel'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchConCell.5"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "Anchors": {
+          "Maximum": {
+            "X": 1.0,
+            "Y": 1.0
+          }
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'AuctionHouseSearchConCell_C:WidgetTree.TextPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchConCell.5"
+      },
+      "Content": {
+        "ObjectName": "VerticalBox'AuctionHouseSearchConCell_C:WidgetTree.VerticalBox_162'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchConCell.23"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_4",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'AuctionHouseSearchConCell_C:WidgetTree.TextPanel'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchConCell.5"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 153.59999,
+          "Right": 57.6,
+          "Bottom": 0.0
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.0,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 1.0,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "ZOrder": 1,
+      "Parent": {
+        "ObjectName": "CanvasPanel'AuctionHouseSearchConCell_C:WidgetTree.TextPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchConCell.5"
+      },
+      "Content": {
+        "ObjectName": "VerticalBox'AuctionHouseSearchConCell_C:WidgetTree.VerticalBox_260'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchConCell.24"
+      }
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "Overlay_62",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Overlay'",
+    "Outer": {
+      "ObjectName": "WidgetTree'AuctionHouseSearchConCell_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchConCell.31"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlaySlot'AuctionHouseSearchConCell_C:WidgetTree.Overlay_62.OverlaySlot_6'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchConCell.13"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'AuctionHouseSearchConCell_C:WidgetTree.CanvasPanel_190.CanvasPanelSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchConCell.7"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_6",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'AuctionHouseSearchConCell_C:WidgetTree.Overlay_62'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchConCell.12"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Fill",
+      "VerticalAlignment": "VAlign_Fill",
+      "Parent": {
+        "ObjectName": "Overlay'AuctionHouseSearchConCell_C:WidgetTree.Overlay_62'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchConCell.12"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'AuctionHouseSearchConCell_C:WidgetTree.TextPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchConCell.5"
+      }
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SizeBox",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'AuctionHouseSearchConCell_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchConCell.31"
+    },
+    "Properties": {
+      "HeightOverride": 38.4,
+      "bOverride_HeightOverride": true,
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'AuctionHouseSearchConCell_C:WidgetTree.VerticalBox_260.VerticalBoxSlot_3'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchConCell.30"
+      }
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SizeBox_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'AuctionHouseSearchConCell_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchConCell.31"
+    },
+    "Properties": {
+      "MinDesiredHeight": 153.6,
+      "bOverride_MinDesiredHeight": true,
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot'AuctionHouseSearchConCell_C:WidgetTree.SizeBox_0.SizeBoxSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchConCell.17"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'AuctionHouseSearchConCell_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_17'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchConCell.6"
+      }
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SizeBox_90",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'AuctionHouseSearchConCell_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchConCell.31"
+    },
+    "Properties": {
+      "HeightOverride": 38.4,
+      "bOverride_HeightOverride": true,
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'AuctionHouseSearchConCell_C:WidgetTree.VerticalBox_260.VerticalBoxSlot_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchConCell.29"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBoxSlot'",
+    "Outer": {
+      "ObjectName": "SizeBox'AuctionHouseSearchConCell_C:WidgetTree.SizeBox_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchConCell.15"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "SizeBox'AuctionHouseSearchConCell_C:WidgetTree.SizeBox_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchConCell.15"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'AuctionHouseSearchConCell_C:WidgetTree.CanvasPanel_190'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchConCell.4"
+      }
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "Image_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'AuctionHouseSearchConCell_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchConCell.31"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/TexturesAtlas/AuctionHouse/Atlas/UI_AuctionHouse_2_1BGblockICON1_Sprite.UI_AuctionHouse_2_1BGblockICON1_Sprite",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 84.479996,
+          "Y": 86.4
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'AuctionHouseSearchConCell_C:WidgetTree.CanvasPanel_190.CanvasPanelSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchConCell.8"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "Image_Bg_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'AuctionHouseSearchConCell_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchConCell.31"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/TexturesAtlas/AuctionHouse/Atlas/UI_AuctionHouse_2_2BGblock1_02_Sprite.UI_AuctionHouse_2_2BGblock1_02_Sprite",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 629.76,
+          "Y": 26.88
+        },
+        "Margin": {
+          "Left": 0.4,
+          "Top": 0.4,
+          "Right": 0.4,
+          "Bottom": 0.4
+        },
+        "DrawAs": "ESlateBrushDrawType::Box"
+      },
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'AuctionHouseSearchConCell_C:WidgetTree.VerticalBox_162.VerticalBoxSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchConCell.26"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "UIImage",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'AuctionHouseSearchConCell_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchConCell.31"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/TexturesAtlas/AuctionHouse/Atlas/UI_AuctionHouse_2_2BGblock1_01_Sprite.UI_AuctionHouse_2_2BGblock1_01_Sprite",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 629.76,
+          "Y": 26.88
+        },
+        "Margin": {
+          "Left": 0.4,
+          "Top": 0.4,
+          "Right": 0.4,
+          "Bottom": 0.4
+        },
+        "DrawAs": "ESlateBrushDrawType::Box"
+      },
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'AuctionHouseSearchConCell_C:WidgetTree.VerticalBox_162.VerticalBoxSlot_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchConCell.27"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "UIImage_76",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'AuctionHouseSearchConCell_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchConCell.31"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/TexturesAtlas/AuctionHouse/Atlas/UI_AuctionHouse_2_2BGblock1_01_Sprite.UI_AuctionHouse_2_2BGblock1_01_Sprite",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 629.76,
+          "Y": 26.88
+        },
+        "Margin": {
+          "Left": 0.4,
+          "Top": 0.4,
+          "Right": 0.4,
+          "Bottom": 0.4
+        },
+        "DrawAs": "ESlateBrushDrawType::Box"
+      },
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'AuctionHouseSearchConCell_C:WidgetTree.VerticalBox_162.VerticalBoxSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchConCell.25"
+      },
+      "RenderTransform": {
+        "Angle": 180.0
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "UIRichTextBlock",
+    "Name": "Text_Desc",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIRichTextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'AuctionHouseSearchConCell_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchConCell.31"
+    },
+    "Properties": {
+      "CurrStyleId": 1024,
+      "ShrinkSize": {
+        "X": 499.19998,
+        "Y": 576.0
+      },
+      "Text": {
+        "Namespace": "",
+        "Key": "4C9980854CC937F4B8D0D389113DA996",
+        "SourceString": "<Richtext>大大家大大家大</><Richtext>",
+        "LocalizedString": "<Richtext>大大家大大家大</><Richtext>"
+      },
+      "MinDesiredWidth": 480.0,
+      "WrappingPolicy": "ETextWrappingPolicy::AllowPerCharacterWrapping",
+      "AutoWrapText": true,
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'AuctionHouseSearchConCell_C:WidgetTree.VerticalBox_260.VerticalBoxSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchConCell.28"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBox",
+    "Name": "VerticalBox_162",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'AuctionHouseSearchConCell_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchConCell.31"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "VerticalBoxSlot'AuctionHouseSearchConCell_C:WidgetTree.VerticalBox_162.VerticalBoxSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchConCell.25"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot'AuctionHouseSearchConCell_C:WidgetTree.VerticalBox_162.VerticalBoxSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchConCell.26"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot'AuctionHouseSearchConCell_C:WidgetTree.VerticalBox_162.VerticalBoxSlot_2'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchConCell.27"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'AuctionHouseSearchConCell_C:WidgetTree.TextPanel.CanvasPanelSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchConCell.10"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBox",
+    "Name": "VerticalBox_260",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'AuctionHouseSearchConCell_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchConCell.31"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "VerticalBoxSlot'AuctionHouseSearchConCell_C:WidgetTree.VerticalBox_260.VerticalBoxSlot_2'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchConCell.29"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot'AuctionHouseSearchConCell_C:WidgetTree.VerticalBox_260.VerticalBoxSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchConCell.28"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot'AuctionHouseSearchConCell_C:WidgetTree.VerticalBox_260.VerticalBoxSlot_3'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchConCell.30"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'AuctionHouseSearchConCell_C:WidgetTree.TextPanel.CanvasPanelSlot_4'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchConCell.11"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Outer": {
+      "ObjectName": "VerticalBox'AuctionHouseSearchConCell_C:WidgetTree.VerticalBox_162'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchConCell.23"
+    },
+    "Properties": {
+      "Padding": {
+        "Top": -3.84
+      },
+      "VerticalAlignment": "VAlign_Top",
+      "Parent": {
+        "ObjectName": "VerticalBox'AuctionHouseSearchConCell_C:WidgetTree.VerticalBox_162'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchConCell.23"
+      },
+      "Content": {
+        "ObjectName": "UIImage'AuctionHouseSearchConCell_C:WidgetTree.UIImage_76'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchConCell.21"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Outer": {
+      "ObjectName": "VerticalBox'AuctionHouseSearchConCell_C:WidgetTree.VerticalBox_162'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchConCell.23"
+    },
+    "Properties": {
+      "Size": {
+        "SizeRule": "ESlateSizeRule::Fill"
+      },
+      "Parent": {
+        "ObjectName": "VerticalBox'AuctionHouseSearchConCell_C:WidgetTree.VerticalBox_162'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchConCell.23"
+      },
+      "Content": {
+        "ObjectName": "UIImage'AuctionHouseSearchConCell_C:WidgetTree.Image_Bg_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchConCell.19"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Outer": {
+      "ObjectName": "VerticalBox'AuctionHouseSearchConCell_C:WidgetTree.VerticalBox_162'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchConCell.23"
+    },
+    "Properties": {
+      "Padding": {
+        "Bottom": -3.84
+      },
+      "VerticalAlignment": "VAlign_Bottom",
+      "Parent": {
+        "ObjectName": "VerticalBox'AuctionHouseSearchConCell_C:WidgetTree.VerticalBox_162'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchConCell.23"
+      },
+      "Content": {
+        "ObjectName": "UIImage'AuctionHouseSearchConCell_C:WidgetTree.UIImage'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchConCell.20"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Outer": {
+      "ObjectName": "VerticalBox'AuctionHouseSearchConCell_C:WidgetTree.VerticalBox_260'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchConCell.24"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "VerticalBox'AuctionHouseSearchConCell_C:WidgetTree.VerticalBox_260'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchConCell.24"
+      },
+      "Content": {
+        "ObjectName": "UIRichTextBlock'AuctionHouseSearchConCell_C:WidgetTree.Text_Desc'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchConCell.22"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Outer": {
+      "ObjectName": "VerticalBox'AuctionHouseSearchConCell_C:WidgetTree.VerticalBox_260'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchConCell.24"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "VerticalBox'AuctionHouseSearchConCell_C:WidgetTree.VerticalBox_260'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchConCell.24"
+      },
+      "Content": {
+        "ObjectName": "SizeBox'AuctionHouseSearchConCell_C:WidgetTree.SizeBox_90'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchConCell.16"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Outer": {
+      "ObjectName": "VerticalBox'AuctionHouseSearchConCell_C:WidgetTree.VerticalBox_260'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchConCell.24"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "VerticalBox'AuctionHouseSearchConCell_C:WidgetTree.VerticalBox_260'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchConCell.24"
+      },
+      "Content": {
+        "ObjectName": "SizeBox'AuctionHouseSearchConCell_C:WidgetTree.SizeBox'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchConCell.14"
+      }
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetTree'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'AuctionHouseSearchConCell_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchConCell.0"
+    },
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "CanvasPanel'AuctionHouseSearchConCell_C:WidgetTree.CanvasPanel_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchConCell.3"
+      }
+    }
+  }
+]

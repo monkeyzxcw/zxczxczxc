@@ -1,0 +1,130 @@
+[
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "FtDebugItem_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Package": "UE_game/Content/BluePrint/UI/Debug/Item/FtDebugItem",
+    "Super": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'GMUserWidget_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/GMUserWidget.3"
+    },
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'FtDebugItem_C:WidgetTree'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/FtDebugItem.5"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'GMUserWidget_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/GMUserWidget.3"
+    },
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "FtDebugItem_C'Default__FtDebugItem_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/FtDebugItem.1"
+    }
+  },
+  {
+    "Type": "FtDebugItem_C",
+    "Name": "Default__FtDebugItem_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'UE_game/Content/BluePrint/UI/Debug/Item/FtDebugItem.FtDebugItem_C'",
+    "Package": "UE_game/Content/BluePrint/UI/Debug/Item/FtDebugItem",
+    "Template": {
+      "ObjectName": "GMUserWidget_C'Default__GMUserWidget_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/GMUserWidget.4"
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "FullView",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'FtDebugItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/FtDebugItem.5"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'FtDebugItem_C:WidgetTree.FullView.CanvasPanelSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/FtDebugItem.4"
+        }
+      ],
+      "Visibility": "ESlateVisibility::HitTestInvisible"
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "UIView",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'FtDebugItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/FtDebugItem.5"
+    },
+    "Properties": {
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'FtDebugItem_C:WidgetTree.FullView.CanvasPanelSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/FtDebugItem.4"
+      },
+      "Visibility": "ESlateVisibility::HitTestInvisible"
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'FtDebugItem_C:WidgetTree.FullView'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/FtDebugItem.2"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 149.76,
+          "Right": 149.76,
+          "Bottom": 0.0
+        },
+        "Anchors": {
+          "Maximum": {
+            "X": 1.0,
+            "Y": 1.0
+          }
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'FtDebugItem_C:WidgetTree.FullView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/FtDebugItem.2"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'FtDebugItem_C:WidgetTree.UIView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/FtDebugItem.3"
+      }
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetTree'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'FtDebugItem_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/FtDebugItem.0"
+    },
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "CanvasPanel'FtDebugItem_C:WidgetTree.FullView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/FtDebugItem.2"
+      }
+    }
+  }
+]

@@ -1,0 +1,189 @@
+[
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "LuaMemoryItem_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Package": "UE_game/Content/BluePrint/UI/Debug/Item/LuaMemoryItem",
+    "Super": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'GMUserWidget_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/GMUserWidget.3"
+    },
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'LuaMemoryItem_C:WidgetTree'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/LuaMemoryItem.5"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'GMUserWidget_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/GMUserWidget.3"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "UIListView",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIListView'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "position",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector2D'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "displayId",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "NewVar_0",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'TextBlock'",
+          "ObjectPath": "/Script/UMG"
+        }
+      }
+    ],
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "LuaMemoryItem_C'Default__LuaMemoryItem_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/LuaMemoryItem.1"
+    }
+  },
+  {
+    "Type": "LuaMemoryItem_C",
+    "Name": "Default__LuaMemoryItem_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'UE_game/Content/BluePrint/UI/Debug/Item/LuaMemoryItem.LuaMemoryItem_C'",
+    "Package": "UE_game/Content/BluePrint/UI/Debug/Item/LuaMemoryItem",
+    "Template": {
+      "ObjectName": "GMUserWidget_C'Default__GMUserWidget_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/GMUserWidget.4"
+    },
+    "Properties": {
+      "position": {
+        "X": -1.0,
+        "Y": 0.0
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "FullView",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'LuaMemoryItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/LuaMemoryItem.5"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'LuaMemoryItem_C:WidgetTree.FullView.CanvasPanelSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/LuaMemoryItem.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'LuaMemoryItem_C:WidgetTree.FullView'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/LuaMemoryItem.2"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Top": -115.2,
+          "Right": 345.6,
+          "Bottom": 322.56
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.0,
+            "Y": 1.0
+          },
+          "Maximum": {
+            "X": 0.0,
+            "Y": 1.0
+          }
+        },
+        "Alignment": {
+          "X": 0.0,
+          "Y": 1.0
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'LuaMemoryItem_C:WidgetTree.FullView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/LuaMemoryItem.2"
+      },
+      "Content": {
+        "ObjectName": "UIListView'LuaMemoryItem_C:WidgetTree.UIListView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/LuaMemoryItem.4"
+      }
+    }
+  },
+  {
+    "Type": "UIListView",
+    "Name": "UIListView",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIListView'",
+    "Outer": {
+      "ObjectName": "WidgetTree'LuaMemoryItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/LuaMemoryItem.5"
+    },
+    "Properties": {
+      "EntryWidgetClass": {
+        "ObjectName": "WidgetBlueprintGeneratedClass'LuaMemoryItemCell_C'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/LuaMemoryItemCell.0"
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'LuaMemoryItem_C:WidgetTree.FullView.CanvasPanelSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/LuaMemoryItem.3"
+      },
+      "Visibility": "ESlateVisibility::HitTestInvisible"
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetTree'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'LuaMemoryItem_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/LuaMemoryItem.0"
+    },
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "CanvasPanel'LuaMemoryItem_C:WidgetTree.FullView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/LuaMemoryItem.2"
+      }
+    }
+  }
+]

@@ -1,0 +1,1824 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_ActivityJumpIconItemS10_Reward",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'ActivityJumpIconItemS10_Reward_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Jump/ActivityJumpIconItemS10_Reward.2"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_PlayAnimation_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'UMGSequencePlayer'",
+          "ObjectPath": "/Script/UMG"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "Function",
+    "Name": "Construct",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'ActivityJumpIconItemS10_Reward_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Jump/ActivityJumpIconItemS10_Reward.2"
+    },
+    "SuperStruct": {
+      "ObjectName": "Function'UserWidget:Construct'",
+      "ObjectPath": "/Script/UMG"
+    },
+    "FunctionFlags": "FUNC_BlueprintCosmetic | FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "ActivityJumpIconItemS10_Reward_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Package": "UE_game/Content/BluePrint/UI/ActivityCenter/Jump/ActivityJumpIconItemS10_Reward",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'ActivityJumpIconItemS10_Reward_C:WidgetTree'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Jump/ActivityJumpIconItemS10_Reward.40"
+      },
+      "Animations": [
+        {
+          "ObjectName": "WidgetAnimation'ActivityJumpIconItemS10_Reward_C:Anim_Show_INST'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Jump/ActivityJumpIconItemS10_Reward.39"
+        }
+      ],
+      "UberGraphFunction": {
+        "ObjectName": "Function'ActivityJumpIconItemS10_Reward_C:ExecuteUbergraph_ActivityJumpIconItemS10_Reward'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Jump/ActivityJumpIconItemS10_Reward.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'UserWidget'",
+      "ObjectPath": "/Script/UMG"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'ActivityJumpIconItemS10_Reward_C:Construct'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Jump/ActivityJumpIconItemS10_Reward.1"
+      },
+      {
+        "ObjectName": "Function'ActivityJumpIconItemS10_Reward_C:ExecuteUbergraph_ActivityJumpIconItemS10_Reward'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Jump/ActivityJumpIconItemS10_Reward.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Anim_Show",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Transient | RepSkip",
+        "PropertyClass": {
+          "ObjectName": "Class'WidgetAnimation'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Bg",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Icon",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "IconBg",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "JumpButton",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIButton'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "NameText",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIRichTextBlock'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "RedDot",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "UIImage_359",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_ActivityJumpIconItemS10_Reward": {
+        "ObjectName": "Function'ActivityJumpIconItemS10_Reward_C:ExecuteUbergraph_ActivityJumpIconItemS10_Reward'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Jump/ActivityJumpIconItemS10_Reward.0"
+      },
+      "Construct": {
+        "ObjectName": "Function'ActivityJumpIconItemS10_Reward_C:Construct'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Jump/ActivityJumpIconItemS10_Reward.1"
+      }
+    },
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "ActivityJumpIconItemS10_Reward_C'Default__ActivityJumpIconItemS10_Reward_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Jump/ActivityJumpIconItemS10_Reward.3"
+    }
+  },
+  {
+    "Type": "ActivityJumpIconItemS10_Reward_C",
+    "Name": "Default__ActivityJumpIconItemS10_Reward_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'UE_game/Content/BluePrint/UI/ActivityCenter/Jump/ActivityJumpIconItemS10_Reward.ActivityJumpIconItemS10_Reward_C'",
+    "Package": "UE_game/Content/BluePrint/UI/ActivityCenter/Jump/ActivityJumpIconItemS10_Reward",
+    "Properties": {
+      "UberGraphFrame": {},
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'ActivityJumpIconItemS10_Reward_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Jump/ActivityJumpIconItemS10_Reward.40"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'ActivityJumpIconItemS10_Reward_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_6'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Jump/ActivityJumpIconItemS10_Reward.7"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_113",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'ActivityJumpIconItemS10_Reward_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Jump/ActivityJumpIconItemS10_Reward.40"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'ActivityJumpIconItemS10_Reward_C:WidgetTree.CanvasPanel_113.CanvasPanelSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Jump/ActivityJumpIconItemS10_Reward.9"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'ActivityJumpIconItemS10_Reward_C:WidgetTree.CanvasPanel_113.CanvasPanelSlot_15'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Jump/ActivityJumpIconItemS10_Reward.12"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'ActivityJumpIconItemS10_Reward_C:WidgetTree.CanvasPanel_113.CanvasPanelSlot_16'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Jump/ActivityJumpIconItemS10_Reward.13"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'ActivityJumpIconItemS10_Reward_C:WidgetTree.CanvasPanel_113.CanvasPanelSlot_10'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Jump/ActivityJumpIconItemS10_Reward.10"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'ActivityJumpIconItemS10_Reward_C:WidgetTree.CanvasPanel_113.CanvasPanelSlot_3'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Jump/ActivityJumpIconItemS10_Reward.15"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'ActivityJumpIconItemS10_Reward_C:WidgetTree.CanvasPanel_113.CanvasPanelSlot_12'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Jump/ActivityJumpIconItemS10_Reward.11"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'ActivityJumpIconItemS10_Reward_C:WidgetTree.CanvasPanel_113.CanvasPanelSlot_5'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Jump/ActivityJumpIconItemS10_Reward.16"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'ActivityJumpIconItemS10_Reward_C:WidgetTree.CanvasPanel_113.CanvasPanelSlot_2'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Jump/ActivityJumpIconItemS10_Reward.14"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'ActivityJumpIconItemS10_Reward_C:WidgetTree.CanvasPanel_113.CanvasPanelSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Jump/ActivityJumpIconItemS10_Reward.8"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'ActivityJumpIconItemS10_Reward_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_6'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Jump/ActivityJumpIconItemS10_Reward.7"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_83",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'ActivityJumpIconItemS10_Reward_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Jump/ActivityJumpIconItemS10_Reward.40"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'ActivityJumpIconItemS10_Reward_C:WidgetTree.CanvasPanel_83.CanvasPanelSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Jump/ActivityJumpIconItemS10_Reward.17"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'ActivityJumpIconItemS10_Reward_C:WidgetTree.CanvasPanel_113.CanvasPanelSlot_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Jump/ActivityJumpIconItemS10_Reward.14"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_6",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'ActivityJumpIconItemS10_Reward_C:WidgetTree.CanvasPanel_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Jump/ActivityJumpIconItemS10_Reward.4"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 796.8,
+          "Bottom": 360.96
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'ActivityJumpIconItemS10_Reward_C:WidgetTree.CanvasPanel_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Jump/ActivityJumpIconItemS10_Reward.4"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'ActivityJumpIconItemS10_Reward_C:WidgetTree.CanvasPanel_113'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Jump/ActivityJumpIconItemS10_Reward.5"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'ActivityJumpIconItemS10_Reward_C:WidgetTree.CanvasPanel_113'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Jump/ActivityJumpIconItemS10_Reward.5"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 230.4,
+          "Top": 96.0,
+          "Right": 489.59998,
+          "Bottom": 19.199999
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'ActivityJumpIconItemS10_Reward_C:WidgetTree.CanvasPanel_113'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Jump/ActivityJumpIconItemS10_Reward.5"
+      },
+      "Content": {
+        "ObjectName": "UIImage'ActivityJumpIconItemS10_Reward_C:WidgetTree.UIImage_359'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Jump/ActivityJumpIconItemS10_Reward.35"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'ActivityJumpIconItemS10_Reward_C:WidgetTree.CanvasPanel_113'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Jump/ActivityJumpIconItemS10_Reward.5"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 796.8,
+          "Bottom": 360.96
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'ActivityJumpIconItemS10_Reward_C:WidgetTree.CanvasPanel_113'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Jump/ActivityJumpIconItemS10_Reward.5"
+      },
+      "Content": {
+        "ObjectName": "UIImage'ActivityJumpIconItemS10_Reward_C:WidgetTree.Bg'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Jump/ActivityJumpIconItemS10_Reward.31"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_10",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'ActivityJumpIconItemS10_Reward_C:WidgetTree.CanvasPanel_113'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Jump/ActivityJumpIconItemS10_Reward.5"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 230.4,
+          "Top": 30.72,
+          "Right": 495.48495,
+          "Bottom": 69.34661
+        }
+      },
+      "ZOrder": 1,
+      "Parent": {
+        "ObjectName": "CanvasPanel'ActivityJumpIconItemS10_Reward_C:WidgetTree.CanvasPanel_113'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Jump/ActivityJumpIconItemS10_Reward.5"
+      },
+      "Content": {
+        "ObjectName": "UIRichTextBlock'ActivityJumpIconItemS10_Reward_C:WidgetTree.NameText'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Jump/ActivityJumpIconItemS10_Reward.36"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_12",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'ActivityJumpIconItemS10_Reward_C:WidgetTree.CanvasPanel_113'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Jump/ActivityJumpIconItemS10_Reward.5"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 230.4,
+          "Top": 117.119995,
+          "Right": 518.39996,
+          "Bottom": 80.64
+        }
+      },
+      "ZOrder": 1,
+      "Parent": {
+        "ObjectName": "CanvasPanel'ActivityJumpIconItemS10_Reward_C:WidgetTree.CanvasPanel_113'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Jump/ActivityJumpIconItemS10_Reward.5"
+      },
+      "Content": {
+        "ObjectName": "UIShrinkTextBlock'ActivityJumpIconItemS10_Reward_C:WidgetTree.RewardDesc'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Jump/ActivityJumpIconItemS10_Reward.38"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_15",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'ActivityJumpIconItemS10_Reward_C:WidgetTree.CanvasPanel_113'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Jump/ActivityJumpIconItemS10_Reward.5"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": -278.4,
+          "Top": -74.88,
+          "Right": 192.0,
+          "Bottom": 57.6
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "ZOrder": 1,
+      "Parent": {
+        "ObjectName": "CanvasPanel'ActivityJumpIconItemS10_Reward_C:WidgetTree.CanvasPanel_113'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Jump/ActivityJumpIconItemS10_Reward.5"
+      },
+      "Content": {
+        "ObjectName": "UIImage'ActivityJumpIconItemS10_Reward_C:WidgetTree.IconBg'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Jump/ActivityJumpIconItemS10_Reward.33"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_16",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'ActivityJumpIconItemS10_Reward_C:WidgetTree.CanvasPanel_113'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Jump/ActivityJumpIconItemS10_Reward.5"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": -278.4,
+          "Top": -74.88,
+          "Right": 192.0,
+          "Bottom": 57.6
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "ZOrder": 1,
+      "Parent": {
+        "ObjectName": "CanvasPanel'ActivityJumpIconItemS10_Reward_C:WidgetTree.CanvasPanel_113'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Jump/ActivityJumpIconItemS10_Reward.5"
+      },
+      "Content": {
+        "ObjectName": "UIImage'ActivityJumpIconItemS10_Reward_C:WidgetTree.Icon'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Jump/ActivityJumpIconItemS10_Reward.32"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'ActivityJumpIconItemS10_Reward_C:WidgetTree.CanvasPanel_113'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Jump/ActivityJumpIconItemS10_Reward.5"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 70.36121,
+          "Top": 69.119995,
+          "Right": 545.20245,
+          "Bottom": 116.45414
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "ZOrder": 12,
+      "Parent": {
+        "ObjectName": "CanvasPanel'ActivityJumpIconItemS10_Reward_C:WidgetTree.CanvasPanel_113'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Jump/ActivityJumpIconItemS10_Reward.5"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'ActivityJumpIconItemS10_Reward_C:WidgetTree.CanvasPanel_83'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Jump/ActivityJumpIconItemS10_Reward.6"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'ActivityJumpIconItemS10_Reward_C:WidgetTree.CanvasPanel_113'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Jump/ActivityJumpIconItemS10_Reward.5"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 345.6,
+          "Top": -145.92,
+          "Right": 61.44,
+          "Bottom": 61.44
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "ZOrder": 10,
+      "Parent": {
+        "ObjectName": "CanvasPanel'ActivityJumpIconItemS10_Reward_C:WidgetTree.CanvasPanel_113'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Jump/ActivityJumpIconItemS10_Reward.5"
+      },
+      "Content": {
+        "ObjectName": "UIImage'ActivityJumpIconItemS10_Reward_C:WidgetTree.RedDot'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Jump/ActivityJumpIconItemS10_Reward.34"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_5",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'ActivityJumpIconItemS10_Reward_C:WidgetTree.CanvasPanel_113'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Jump/ActivityJumpIconItemS10_Reward.5"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 796.8,
+          "Bottom": 360.96
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "ZOrder": 10,
+      "Parent": {
+        "ObjectName": "CanvasPanel'ActivityJumpIconItemS10_Reward_C:WidgetTree.CanvasPanel_113'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Jump/ActivityJumpIconItemS10_Reward.5"
+      },
+      "Content": {
+        "ObjectName": "UIButton'ActivityJumpIconItemS10_Reward_C:WidgetTree.JumpButton'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Jump/ActivityJumpIconItemS10_Reward.30"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'ActivityJumpIconItemS10_Reward_C:WidgetTree.CanvasPanel_83'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Jump/ActivityJumpIconItemS10_Reward.6"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 545.20245,
+          "Bottom": 116.45414
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "ZOrder": 2,
+      "Parent": {
+        "ObjectName": "CanvasPanel'ActivityJumpIconItemS10_Reward_C:WidgetTree.CanvasPanel_83'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Jump/ActivityJumpIconItemS10_Reward.6"
+      },
+      "Content": {
+        "ObjectName": "UIScrollBox'ActivityJumpIconItemS10_Reward_C:WidgetTree.UIScrollBox_59'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Jump/ActivityJumpIconItemS10_Reward.37"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "RewardNode",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'ActivityJumpIconItemS10_Reward_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Jump/ActivityJumpIconItemS10_Reward.40"
+    },
+    "Properties": {
+      "Slot": {
+        "ObjectName": "ScrollBoxSlot'ActivityJumpIconItemS10_Reward_C:WidgetTree.UIScrollBox_59.ScrollBoxSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Jump/ActivityJumpIconItemS10_Reward.29"
+      },
+      "RenderTransform": {
+        "Scale": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "RenderTransformPivot": {
+        "X": 0.0,
+        "Y": 0.5
+      }
+    }
+  },
+  {
+    "Type": "MovieScene",
+    "Name": "Anim_Show",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene'",
+    "Outer": {
+      "ObjectName": "WidgetAnimation'ActivityJumpIconItemS10_Reward_C:Anim_Show_INST'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Jump/ActivityJumpIconItemS10_Reward.39"
+    },
+    "Properties": {
+      "Possessables": [
+        {
+          "Tags": [],
+          "Guid": "EC7B7AA5-4C4F3860-7C04EC86-CD55CEEC",
+          "Name": "CanvasPanel_113",
+          "PossessedObjectClass": {
+            "ObjectName": "Class'CanvasPanel'",
+            "ObjectPath": "/Script/UMG"
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        }
+      ],
+      "ObjectBindings": [
+        {
+          "ObjectGuid": "EC7B7AA5-4C4F3860-7C04EC86-CD55CEEC",
+          "BindingName": "CanvasPanel_113",
+          "Tracks": [
+            {
+              "ObjectName": "MovieScene2DTransformTrack'ActivityJumpIconItemS10_Reward_C:Anim_Show_INST.Anim_Show.MovieScene2DTransformTrack_0'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Jump/ActivityJumpIconItemS10_Reward.21"
+            },
+            {
+              "ObjectName": "MovieSceneFloatTrack'ActivityJumpIconItemS10_Reward_C:Anim_Show_INST.Anim_Show.MovieSceneFloatTrack_0'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Jump/ActivityJumpIconItemS10_Reward.28"
+            }
+          ]
+        }
+      ],
+      "PlaybackRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 32000
+            }
+          }
+        }
+      },
+      "DisplayRate": {
+        "Numerator": 30
+      },
+      "Signature": "9501695A-4F49E0D8-63183191-7AD77A17"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformSection",
+    "Name": "MovieScene2DTransformSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene2DTransformSection'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformTrack'ActivityJumpIconItemS10_Reward_C:Anim_Show_INST.Anim_Show.MovieScene2DTransformTrack_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Jump/ActivityJumpIconItemS10_Reward.21"
+    },
+    "Properties": {
+      "Translation": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 30000
+          }
+        ],
+        "Values": [
+          {
+            "Value": -100.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.497028,
+              "LeaveTangentWeight": 0.497028,
+              "TangentWeightMode": 3
+            },
+            "InterpMode": 2,
+            "TangentMode": 1
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Translation[1]": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Rotation": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Scale": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          }
+        ],
+        "Values": [
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Scale[1]": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          }
+        ],
+        "Values": [
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Shear": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Shear[1]": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'ActivityJumpIconItemS10_Reward_C:Anim_Show_INST.Anim_Show.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0.EaseInFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Jump/ActivityJumpIconItemS10_Reward.22"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'ActivityJumpIconItemS10_Reward_C:Anim_Show_INST.Anim_Show.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0.EaseOutFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Jump/ActivityJumpIconItemS10_Reward.23"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 32000
+            }
+          }
+        }
+      },
+      "Signature": "8296CDF8-406714EC-7D61D1BC-7C4A758C"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformTrack",
+    "Name": "MovieScene2DTransformTrack_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene2DTransformTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'ActivityJumpIconItemS10_Reward_C:Anim_Show_INST.Anim_Show'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Jump/ActivityJumpIconItemS10_Reward.19"
+    },
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderTransform",
+        "PropertyPath": "RenderTransform",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieScene2DTransformSection'ActivityJumpIconItemS10_Reward_C:Anim_Show_INST.Anim_Show.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Jump/ActivityJumpIconItemS10_Reward.20"
+        }
+      ],
+      "EvaluationFieldGuid": "F777CE2E-492CCDBD-7D460B92-68420E14",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieScene2DTransformSection'ActivityJumpIconItemS10_Reward_C:Anim_Show_INST.Anim_Show.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Jump/ActivityJumpIconItemS10_Reward.20"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Exclusive",
+                "Value": {
+                  "Value": 32000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "F777CE2E-492CCDBD-7D460B92-68420E14"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformSection'ActivityJumpIconItemS10_Reward_C:Anim_Show_INST.Anim_Show.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Jump/ActivityJumpIconItemS10_Reward.20"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformSection'ActivityJumpIconItemS10_Reward_C:Anim_Show_INST.Anim_Show.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Jump/ActivityJumpIconItemS10_Reward.20"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatSection'ActivityJumpIconItemS10_Reward_C:Anim_Show_INST.Anim_Show.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Jump/ActivityJumpIconItemS10_Reward.27"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatSection'ActivityJumpIconItemS10_Reward_C:Anim_Show_INST.Anim_Show.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Jump/ActivityJumpIconItemS10_Reward.27"
+    }
+  },
+  {
+    "Type": "MovieSceneCompiledData",
+    "Name": "CompiledData",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneCompiledData'",
+    "Outer": {
+      "ObjectName": "WidgetAnimation'ActivityJumpIconItemS10_Reward_C:Anim_Show_INST'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Jump/ActivityJumpIconItemS10_Reward.39"
+    },
+    "Properties": {
+      "EntityComponentField": {
+        "PersistentEntityTree": {
+          "SerializedData": {
+            "Data": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 2,
+                  "Capacity": 2
+                }
+              ],
+              "Items": [
+                {
+                  "EntityIndex": 0,
+                  "MetaDataIndex": -1
+                },
+                {
+                  "EntityIndex": 1,
+                  "MetaDataIndex": -1
+                }
+              ]
+            },
+            "RootNode": {
+              "Range": {
+                "LowerBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                },
+                "UpperBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                }
+              },
+              "Parent": {
+                "ChildrenHandle": {
+                  "EntryIndex": -1
+                },
+                "Index": -1
+              },
+              "ChildrenID": {
+                "EntryIndex": 0
+              },
+              "DataID": {
+                "EntryIndex": -1
+              }
+            },
+            "ChildNodes": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 1,
+                  "Capacity": 1
+                }
+              ],
+              "Items": [
+                {
+                  "Range": {
+                    "LowerBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 0
+                      }
+                    },
+                    "UpperBound": {
+                      "Type": 0,
+                      "Value": {
+                        "Value": 32000
+                      }
+                    }
+                  },
+                  "Parent": {
+                    "ChildrenHandle": {
+                      "EntryIndex": -1
+                    },
+                    "Index": 0
+                  },
+                  "ChildrenID": {
+                    "EntryIndex": -1
+                  },
+                  "DataID": {
+                    "EntryIndex": 0
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "Entities": [
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieScene2DTransformSection'ActivityJumpIconItemS10_Reward_C:Anim_Show_INST.Anim_Show.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0'",
+                "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Jump/ActivityJumpIconItemS10_Reward.20"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 0
+          },
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieSceneFloatSection'ActivityJumpIconItemS10_Reward_C:Anim_Show_INST.Anim_Show.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+                "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Jump/ActivityJumpIconItemS10_Reward.27"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 1
+          }
+        ],
+        "SharedMetaData": [
+          {
+            "ObjectBindingID": "EC7B7AA5-4C4F3860-7C04EC86-CD55CEEC"
+          },
+          {
+            "ObjectBindingID": "EC7B7AA5-4C4F3860-7C04EC86-CD55CEEC"
+          }
+        ]
+      },
+      "CompiledSignature": "CCAB1880-483BB4B7-EB642E84-815350CE",
+      "CompilerVersion": "7D4B9809-2FAC4A6B-964ECF72-D8279EF8",
+      "AccumulatedMask": {
+        "bEntityComponentField": true
+      },
+      "AllocatedMask": {
+        "bEntityComponentField": true
+      }
+    }
+  },
+  {
+    "Type": "MovieSceneFloatSection",
+    "Name": "MovieSceneFloatSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneFloatSection'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatTrack'ActivityJumpIconItemS10_Reward_C:Anim_Show_INST.Anim_Show.MovieSceneFloatTrack_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Jump/ActivityJumpIconItemS10_Reward.28"
+    },
+    "Properties": {
+      "FloatCurve": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 20000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'ActivityJumpIconItemS10_Reward_C:Anim_Show_INST.Anim_Show.MovieSceneFloatTrack_0.MovieSceneFloatSection_0.EaseInFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Jump/ActivityJumpIconItemS10_Reward.24"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'ActivityJumpIconItemS10_Reward_C:Anim_Show_INST.Anim_Show.MovieSceneFloatTrack_0.MovieSceneFloatSection_0.EaseOutFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Jump/ActivityJumpIconItemS10_Reward.25"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 32000
+            }
+          }
+        }
+      },
+      "Signature": "58CA9610-412D4BAD-1B934A9C-FB538401"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatTrack",
+    "Name": "MovieSceneFloatTrack_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneFloatTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'ActivityJumpIconItemS10_Reward_C:Anim_Show_INST.Anim_Show'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Jump/ActivityJumpIconItemS10_Reward.19"
+    },
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderOpacity",
+        "PropertyPath": "RenderOpacity",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneFloatSection'ActivityJumpIconItemS10_Reward_C:Anim_Show_INST.Anim_Show.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Jump/ActivityJumpIconItemS10_Reward.27"
+        }
+      ],
+      "EvaluationFieldGuid": "AF841C0B-4D6ABB87-03AE68A6-7C4F8700",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneFloatSection'ActivityJumpIconItemS10_Reward_C:Anim_Show_INST.Anim_Show.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Jump/ActivityJumpIconItemS10_Reward.27"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Exclusive",
+                "Value": {
+                  "Value": 32000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "AF841C0B-4D6ABB87-03AE68A6-7C4F8700"
+    }
+  },
+  {
+    "Type": "ScrollBoxSlot",
+    "Name": "ScrollBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ScrollBoxSlot'",
+    "Outer": {
+      "ObjectName": "UIScrollBox'ActivityJumpIconItemS10_Reward_C:WidgetTree.UIScrollBox_59'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Jump/ActivityJumpIconItemS10_Reward.37"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Left",
+      "Parent": {
+        "ObjectName": "UIScrollBox'ActivityJumpIconItemS10_Reward_C:WidgetTree.UIScrollBox_59'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Jump/ActivityJumpIconItemS10_Reward.37"
+      },
+      "Content": {
+        "ObjectName": "HorizontalBox'ActivityJumpIconItemS10_Reward_C:WidgetTree.RewardNode'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Jump/ActivityJumpIconItemS10_Reward.18"
+      }
+    }
+  },
+  {
+    "Type": "UIButton",
+    "Name": "JumpButton",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIButton'",
+    "Outer": {
+      "ObjectName": "WidgetTree'ActivityJumpIconItemS10_Reward_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Jump/ActivityJumpIconItemS10_Reward.40"
+    },
+    "Properties": {
+      "IconImage": {
+        "ImageSize": {
+          "X": 61.44,
+          "Y": 61.44
+        },
+        "DrawAs": "ESlateBrushDrawType::NoDrawType"
+      },
+      "WidgetStyle": {
+        "Normal": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          },
+          "DrawAs": "ESlateBrushDrawType::NoDrawType"
+        },
+        "Hovered": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          },
+          "DrawAs": "ESlateBrushDrawType::NoDrawType"
+        },
+        "Pressed": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          },
+          "DrawAs": "ESlateBrushDrawType::NoDrawType"
+        },
+        "NormalPadding": {
+          "Left": 0.0,
+          "Top": 0.0,
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "PressedPadding": {
+          "Left": 0.0,
+          "Top": 0.0,
+          "Right": 0.0,
+          "Bottom": 0.0
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'ActivityJumpIconItemS10_Reward_C:WidgetTree.CanvasPanel_113.CanvasPanelSlot_5'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Jump/ActivityJumpIconItemS10_Reward.16"
+      }
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "Bg",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'ActivityJumpIconItemS10_Reward_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Jump/ActivityJumpIconItemS10_Reward.40"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/TexturesAtlas/ActivityCenter/AtlasActivityS10/Atlas/UI_ActivityS10_ActBG02_Sprite.UI_ActivityS10_ActBG02_Sprite",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 359.03998,
+          "Y": 359.03998
+        },
+        "Margin": {
+          "Left": 0.3,
+          "Top": 0.3,
+          "Right": 0.3,
+          "Bottom": 0.3
+        },
+        "DrawAs": "ESlateBrushDrawType::Box"
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'ActivityJumpIconItemS10_Reward_C:WidgetTree.CanvasPanel_113.CanvasPanelSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Jump/ActivityJumpIconItemS10_Reward.9"
+      }
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "Icon",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'ActivityJumpIconItemS10_Reward_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Jump/ActivityJumpIconItemS10_Reward.40"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/TexturesAtlas/ActivityCenter/AtlasActivityS10/Atlas/UI_ActivityS10_ActICON02_00_Sprite.UI_ActivityS10_ActICON02_00_Sprite",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 163.2,
+          "Y": 163.2
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'ActivityJumpIconItemS10_Reward_C:WidgetTree.CanvasPanel_113.CanvasPanelSlot_16'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Jump/ActivityJumpIconItemS10_Reward.13"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "IconBg",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'ActivityJumpIconItemS10_Reward_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Jump/ActivityJumpIconItemS10_Reward.40"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/TexturesAtlas/ActivityCenter/AtlasActivityS10/Atlas/UI_ActivityS10_ActICON02UI_ActivityS10_ActICON02_01_Sprite.UI_ActivityS10_ActICON02UI_ActivityS10_ActICON02_01_Sprite",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 163.2,
+          "Y": 163.2
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'ActivityJumpIconItemS10_Reward_C:WidgetTree.CanvasPanel_113.CanvasPanelSlot_15'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Jump/ActivityJumpIconItemS10_Reward.12"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "RedDot",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'ActivityJumpIconItemS10_Reward_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Jump/ActivityJumpIconItemS10_Reward.40"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/Textures/Common/Other/NoAtlas/Icon_Common_Red.Icon_Common_Red",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 122.88,
+          "Y": 122.88
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'ActivityJumpIconItemS10_Reward_C:WidgetTree.CanvasPanel_113.CanvasPanelSlot_3'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Jump/ActivityJumpIconItemS10_Reward.15"
+      }
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "UIImage_359",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'ActivityJumpIconItemS10_Reward_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Jump/ActivityJumpIconItemS10_Reward.40"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/TexturesAtlas/ActivityCenter/AtlasActivityS10/Atlas/UI_ActivityS10_ActBG02_01_Sprite.UI_ActivityS10_ActBG02_01_Sprite",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 489.59998,
+          "Y": 19.199999
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'ActivityJumpIconItemS10_Reward_C:WidgetTree.CanvasPanel_113.CanvasPanelSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Jump/ActivityJumpIconItemS10_Reward.8"
+      }
+    }
+  },
+  {
+    "Type": "UIRichTextBlock",
+    "Name": "NameText",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIRichTextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'ActivityJumpIconItemS10_Reward_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Jump/ActivityJumpIconItemS10_Reward.40"
+    },
+    "Properties": {
+      "CurrStyleId": 4317,
+      "IsShrink": true,
+      "ShrinkSize": {
+        "X": 499.19998,
+        "Y": 96.0
+      },
+      "Text": {
+        "Namespace": "",
+        "Key": "345D0E6249F97367FF3543AD6E307B5E",
+        "SourceString": "<RichText>AAAAA</>",
+        "LocalizedString": "<RichText>AAAAA</>"
+      },
+      "VerticalJustification": "ETextVerticalJustify::Center",
+      "WrapTextAt": 637.0,
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'ActivityJumpIconItemS10_Reward_C:WidgetTree.CanvasPanel_113.CanvasPanelSlot_10'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Jump/ActivityJumpIconItemS10_Reward.10"
+      }
+    }
+  },
+  {
+    "Type": "UIScrollBox",
+    "Name": "UIScrollBox_59",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIScrollBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'ActivityJumpIconItemS10_Reward_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Jump/ActivityJumpIconItemS10_Reward.40"
+    },
+    "Properties": {
+      "Orientation": "Orient_Horizontal",
+      "ScrollBarVisibility": "ESlateVisibility::Collapsed",
+      "ScrollbarThickness": {
+        "X": 0.0,
+        "Y": 0.0
+      },
+      "ScrollbarPadding": {
+        "Left": 0.0,
+        "Top": 0.0,
+        "Right": 0.0,
+        "Bottom": 0.0
+      },
+      "Slots": [
+        {
+          "ObjectName": "ScrollBoxSlot'ActivityJumpIconItemS10_Reward_C:WidgetTree.UIScrollBox_59.ScrollBoxSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Jump/ActivityJumpIconItemS10_Reward.29"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'ActivityJumpIconItemS10_Reward_C:WidgetTree.CanvasPanel_83.CanvasPanelSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Jump/ActivityJumpIconItemS10_Reward.17"
+      }
+    }
+  },
+  {
+    "Type": "UIShrinkTextBlock",
+    "Name": "RewardDesc",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIShrinkTextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'ActivityJumpIconItemS10_Reward_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Jump/ActivityJumpIconItemS10_Reward.40"
+    },
+    "Properties": {
+      "TextVerticalAlignment": "VAlign_Top",
+      "TextHAlignment": "HAlign_Left",
+      "CurrStyleId": 4318,
+      "TextContent": {
+        "Namespace": "",
+        "Key": "252730F5460CA88A6D79F8A936312846",
+        "SourceString": "1.1 -1.2 1 1",
+        "LocalizedString": "1.1 -1.2 1 1"
+      },
+      "ShrinkSize": {
+        "X": 518.39996,
+        "Y": 80.64
+      },
+      "TextHJustification": "ETextJustify::Left",
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'ActivityJumpIconItemS10_Reward_C:WidgetTree.CanvasPanel_113.CanvasPanelSlot_12'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Jump/ActivityJumpIconItemS10_Reward.11"
+      }
+    }
+  },
+  {
+    "Type": "WidgetAnimation",
+    "Name": "Anim_Show_INST",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetAnimation'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'ActivityJumpIconItemS10_Reward_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Jump/ActivityJumpIconItemS10_Reward.2"
+    },
+    "Properties": {
+      "MovieScene": {
+        "ObjectName": "MovieScene'ActivityJumpIconItemS10_Reward_C:Anim_Show_INST.Anim_Show'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Jump/ActivityJumpIconItemS10_Reward.19"
+      },
+      "AnimationBindings": [
+        {
+          "WidgetName": "CanvasPanel_113",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "EC7B7AA5-4C4F3860-7C04EC86-CD55CEEC",
+          "bIsRootWidget": false
+        }
+      ],
+      "DisplayLabel": "Anim_Show",
+      "CompiledData": {
+        "ObjectName": "MovieSceneCompiledData'ActivityJumpIconItemS10_Reward_C:Anim_Show_INST.CompiledData'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Jump/ActivityJumpIconItemS10_Reward.26"
+      },
+      "Signature": "CCAB1880-483BB4B7-EB642E84-815350CE"
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetTree'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'ActivityJumpIconItemS10_Reward_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Jump/ActivityJumpIconItemS10_Reward.2"
+    },
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "CanvasPanel'ActivityJumpIconItemS10_Reward_C:WidgetTree.CanvasPanel_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Jump/ActivityJumpIconItemS10_Reward.4"
+      }
+    }
+  }
+]

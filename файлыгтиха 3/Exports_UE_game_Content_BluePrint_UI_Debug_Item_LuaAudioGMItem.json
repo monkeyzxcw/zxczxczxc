@@ -1,0 +1,312 @@
+[
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "LuaAudioGMItem_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Package": "UE_game/Content/BluePrint/UI/Debug/Item/LuaAudioGMItem",
+    "Super": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'GMUserWidget_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/GMUserWidget.3"
+    },
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'LuaAudioGMItem_C:WidgetTree'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/LuaAudioGMItem.9"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'GMUserWidget_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/GMUserWidget.3"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "AudioBtn",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Button'",
+          "ObjectPath": "/Script/UMG"
+        }
+      }
+    ],
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "LuaAudioGMItem_C'Default__LuaAudioGMItem_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/LuaAudioGMItem.1"
+    }
+  },
+  {
+    "Type": "LuaAudioGMItem_C",
+    "Name": "Default__LuaAudioGMItem_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'UE_game/Content/BluePrint/UI/Debug/Item/LuaAudioGMItem.LuaAudioGMItem_C'",
+    "Package": "UE_game/Content/BluePrint/UI/Debug/Item/LuaAudioGMItem",
+    "Template": {
+      "ObjectName": "GMUserWidget_C'Default__GMUserWidget_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/GMUserWidget.4"
+    }
+  },
+  {
+    "Type": "Button",
+    "Name": "AudioBtn",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Button'",
+    "Outer": {
+      "ObjectName": "WidgetTree'LuaAudioGMItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/LuaAudioGMItem.9"
+    },
+    "Properties": {
+      "WidgetStyle": {
+        "Normal": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 1.0,
+              "G": 1.0,
+              "B": 1.0,
+              "A": 0.5,
+              "Hex": "7FFFFFFF"
+            }
+          }
+        },
+        "Hovered": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 1.0,
+              "G": 1.0,
+              "B": 1.0,
+              "A": 0.5,
+              "Hex": "7FFFFFFF"
+            }
+          }
+        },
+        "Pressed": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 1.0,
+              "G": 1.0,
+              "B": 1.0,
+              "A": 0.5,
+              "Hex": "7FFFFFFF"
+            }
+          }
+        }
+      },
+      "Slots": [
+        {
+          "ObjectName": "ButtonSlot'LuaAudioGMItem_C:WidgetTree.AudioBtn.ButtonSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/LuaAudioGMItem.3"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'LuaAudioGMItem_C:WidgetTree.BtnView.HorizontalBoxSlot_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/LuaAudioGMItem.7"
+      }
+    }
+  },
+  {
+    "Type": "ButtonSlot",
+    "Name": "ButtonSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ButtonSlot'",
+    "Outer": {
+      "ObjectName": "Button'LuaAudioGMItem_C:WidgetTree.AudioBtn'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/LuaAudioGMItem.2"
+    },
+    "Properties": {
+      "Padding": {
+        "Left": 7.68,
+        "Top": 7.68,
+        "Right": 7.68,
+        "Bottom": 3.84
+      },
+      "Parent": {
+        "ObjectName": "Button'LuaAudioGMItem_C:WidgetTree.AudioBtn'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/LuaAudioGMItem.2"
+      },
+      "Content": {
+        "ObjectName": "TextBlock'LuaAudioGMItem_C:WidgetTree.Audio_text'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/LuaAudioGMItem.8"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'LuaAudioGMItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/LuaAudioGMItem.9"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'LuaAudioGMItem_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/LuaAudioGMItem.5"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'LuaAudioGMItem_C:WidgetTree.CanvasPanel_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/LuaAudioGMItem.4"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Top": 76.799995,
+          "Right": 1184.6765,
+          "Bottom": 139.4855
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.0
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.0
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.0
+        }
+      },
+      "bAutoSize": true,
+      "ZOrder": 2,
+      "Parent": {
+        "ObjectName": "CanvasPanel'LuaAudioGMItem_C:WidgetTree.CanvasPanel_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/LuaAudioGMItem.4"
+      },
+      "Content": {
+        "ObjectName": "HorizontalBox'LuaAudioGMItem_C:WidgetTree.BtnView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/LuaAudioGMItem.6"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "BtnView",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'LuaAudioGMItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/LuaAudioGMItem.9"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HorizontalBoxSlot'LuaAudioGMItem_C:WidgetTree.BtnView.HorizontalBoxSlot_2'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/LuaAudioGMItem.7"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'LuaAudioGMItem_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/LuaAudioGMItem.5"
+      },
+      "RenderTransform": {
+        "Scale": {
+          "X": 0.67,
+          "Y": 0.67
+        }
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'LuaAudioGMItem_C:WidgetTree.BtnView'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/LuaAudioGMItem.6"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "HorizontalBox'LuaAudioGMItem_C:WidgetTree.BtnView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/LuaAudioGMItem.6"
+      },
+      "Content": {
+        "ObjectName": "Button'LuaAudioGMItem_C:WidgetTree.AudioBtn'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/LuaAudioGMItem.2"
+      }
+    }
+  },
+  {
+    "Type": "TextBlock",
+    "Name": "Audio_text",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'TextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'LuaAudioGMItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/LuaAudioGMItem.9"
+    },
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "E434F256478964ACC7FC52B710D17D47",
+        "SourceString": "AudioGM",
+        "LocalizedString": "AudioGM"
+      },
+      "ColorAndOpacity": {
+        "SpecifiedColor": {
+          "R": 0.0,
+          "G": 0.0,
+          "B": 0.0,
+          "A": 1.0,
+          "Hex": "000000"
+        }
+      },
+      "Font": {
+        "Size": 46
+      },
+      "Slot": {
+        "ObjectName": "ButtonSlot'LuaAudioGMItem_C:WidgetTree.AudioBtn.ButtonSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/LuaAudioGMItem.3"
+      }
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetTree'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'LuaAudioGMItem_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/LuaAudioGMItem.0"
+    },
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "CanvasPanel'LuaAudioGMItem_C:WidgetTree.CanvasPanel_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/LuaAudioGMItem.4"
+      }
+    }
+  }
+]

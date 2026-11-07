@@ -1,0 +1,2774 @@
+[
+  {
+    "Type": "Function",
+    "Name": "SelectionToCmd",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'UIAssetLoadDebugItem_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.1"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StrProperty",
+        "Name": "InputPin",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "OriginText",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "PropertyFlags": "Parm | OutParm | ReturnParm"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Conv_StringToInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "CallFunc_Split_LeftS",
+        "Flags": "RF_Public",
+        "ElementSize": 16
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "CallFunc_Split_RightS",
+        "Flags": "RF_Public",
+        "ElementSize": 16
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Split_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "CallFunc_Conv_IntToString_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "CallFunc_Concat_StrStr_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "CallFunc_Concat_StrStr_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 16
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "CallFunc_Concat_StrStr_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 16
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "CallFunc_Concat_StrStr_ReturnValue_3",
+        "Flags": "RF_Public",
+        "ElementSize": 16
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "CallFunc_Conv_StringToText_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "CallFunc_Conv_StringToText_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "CallFunc_Split_LeftS_1",
+        "Flags": "RF_Public",
+        "ElementSize": 16
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "CallFunc_Split_RightS_1",
+        "Flags": "RF_Public",
+        "ElementSize": 16
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Split_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "CallFunc_Concat_StrStr_ReturnValue_4",
+        "Flags": "RF_Public",
+        "ElementSize": 16
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "CallFunc_Concat_StrStr_ReturnValue_5",
+        "Flags": "RF_Public",
+        "ElementSize": 16
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "CallFunc_Concat_StrStr_ReturnValue_6",
+        "Flags": "RF_Public",
+        "ElementSize": 16
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "CallFunc_Conv_StringToText_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasOutParms | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_BlueprintPure"
+  },
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "UIAssetLoadDebugItem_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Package": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem",
+    "Super": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'GMUserWidget_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/GMUserWidget.3"
+    },
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'UIAssetLoadDebugItem_C:WidgetTree'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.68"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'GMUserWidget_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/GMUserWidget.3"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'UIAssetLoadDebugItem_C:SelectionToCmd'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "AllTextruesBtn",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Button'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "AtlasBtn",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Button'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "BgImage",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CloseBtn",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Button'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "FlushBtn",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Button'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "FlushUIBtn",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Button'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "GCBtn",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Button'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "GodBtn",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Button'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "HandleBtn",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Button'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "MIssBtn",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Button'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "MRBtn",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Button'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ResExportBtn",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Button'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ToogleBtn",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Button'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "UIImage_0",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      }
+    ],
+    "FuncMap": {
+      "SelectionToCmd": {
+        "ObjectName": "Function'UIAssetLoadDebugItem_C:SelectionToCmd'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.0"
+      }
+    },
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "UIAssetLoadDebugItem_C'Default__UIAssetLoadDebugItem_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.2"
+    }
+  },
+  {
+    "Type": "UIAssetLoadDebugItem_C",
+    "Name": "Default__UIAssetLoadDebugItem_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.UIAssetLoadDebugItem_C'",
+    "Package": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem",
+    "Template": {
+      "ObjectName": "GMUserWidget_C'Default__GMUserWidget_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/GMUserWidget.4"
+    }
+  },
+  {
+    "Type": "Button",
+    "Name": "AllTextruesBtn",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Button'",
+    "Outer": {
+      "ObjectName": "WidgetTree'UIAssetLoadDebugItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.68"
+    },
+    "Properties": {
+      "WidgetStyle": {
+        "Normal": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 1.0,
+              "G": 1.0,
+              "B": 1.0,
+              "A": 0.5,
+              "Hex": "7FFFFFFF"
+            }
+          }
+        },
+        "Hovered": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 1.0,
+              "G": 1.0,
+              "B": 1.0,
+              "A": 0.5,
+              "Hex": "7FFFFFFF"
+            }
+          }
+        },
+        "Pressed": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 1.0,
+              "G": 1.0,
+              "B": 1.0,
+              "A": 0.5,
+              "Hex": "7FFFFFFF"
+            }
+          }
+        }
+      },
+      "Slots": [
+        {
+          "ObjectName": "ButtonSlot'UIAssetLoadDebugItem_C:WidgetTree.AllTextruesBtn.ButtonSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.15"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'UIAssetLoadDebugItem_C:WidgetTree.BtnView.HorizontalBoxSlot_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.43"
+      }
+    }
+  },
+  {
+    "Type": "Button",
+    "Name": "AtlasBtn",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Button'",
+    "Outer": {
+      "ObjectName": "WidgetTree'UIAssetLoadDebugItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.68"
+    },
+    "Properties": {
+      "WidgetStyle": {
+        "Normal": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 1.0,
+              "G": 1.0,
+              "B": 1.0,
+              "A": 0.5,
+              "Hex": "7FFFFFFF"
+            }
+          }
+        },
+        "Hovered": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 1.0,
+              "G": 1.0,
+              "B": 1.0,
+              "A": 0.5,
+              "Hex": "7FFFFFFF"
+            }
+          }
+        },
+        "Pressed": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 1.0,
+              "G": 1.0,
+              "B": 1.0,
+              "A": 0.5,
+              "Hex": "7FFFFFFF"
+            }
+          }
+        }
+      },
+      "Slots": [
+        {
+          "ObjectName": "ButtonSlot'UIAssetLoadDebugItem_C:WidgetTree.AtlasBtn.ButtonSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.16"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'UIAssetLoadDebugItem_C:WidgetTree.BtnView.HorizontalBoxSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.39"
+      }
+    }
+  },
+  {
+    "Type": "Button",
+    "Name": "CloseBtn",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Button'",
+    "Outer": {
+      "ObjectName": "WidgetTree'UIAssetLoadDebugItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.68"
+    },
+    "Properties": {
+      "WidgetStyle": {
+        "Normal": {
+          "ImageSize": {
+            "X": 153.59999,
+            "Y": 153.59999
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 1.0,
+              "G": 1.0,
+              "B": 1.0,
+              "A": 0.5,
+              "Hex": "7FFFFFFF"
+            }
+          }
+        },
+        "Hovered": {
+          "ImageSize": {
+            "X": 96.0,
+            "Y": 96.0
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 1.0,
+              "G": 1.0,
+              "B": 1.0,
+              "A": 0.5,
+              "Hex": "7FFFFFFF"
+            }
+          }
+        },
+        "Pressed": {
+          "ImageSize": {
+            "X": 96.0,
+            "Y": 96.0
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 1.0,
+              "G": 1.0,
+              "B": 1.0,
+              "A": 0.5,
+              "Hex": "7FFFFFFF"
+            }
+          }
+        },
+        "Disabled": {
+          "ImageSize": {
+            "X": 50.0,
+            "Y": 50.0
+          }
+        }
+      },
+      "Slots": [
+        {
+          "ObjectName": "ButtonSlot'UIAssetLoadDebugItem_C:WidgetTree.CloseBtn.ButtonSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.17"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'UIAssetLoadDebugItem_C:WidgetTree.LogCanvas.CanvasPanelSlot_3'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.36"
+      }
+    }
+  },
+  {
+    "Type": "Button",
+    "Name": "FlushBtn",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Button'",
+    "Outer": {
+      "ObjectName": "WidgetTree'UIAssetLoadDebugItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.68"
+    },
+    "Properties": {
+      "WidgetStyle": {
+        "Normal": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 1.0,
+              "G": 1.0,
+              "B": 1.0,
+              "A": 0.5,
+              "Hex": "7FFFFFFF"
+            }
+          }
+        },
+        "Hovered": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 1.0,
+              "G": 1.0,
+              "B": 1.0,
+              "A": 0.5,
+              "Hex": "7FFFFFFF"
+            }
+          }
+        },
+        "Pressed": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 1.0,
+              "G": 1.0,
+              "B": 1.0,
+              "A": 0.5,
+              "Hex": "7FFFFFFF"
+            }
+          }
+        }
+      },
+      "Slots": [
+        {
+          "ObjectName": "ButtonSlot'UIAssetLoadDebugItem_C:WidgetTree.FlushBtn.ButtonSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.18"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'UIAssetLoadDebugItem_C:WidgetTree.BtnView.HorizontalBoxSlot_5'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.46"
+      }
+    }
+  },
+  {
+    "Type": "Button",
+    "Name": "FlushUIBtn",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Button'",
+    "Outer": {
+      "ObjectName": "WidgetTree'UIAssetLoadDebugItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.68"
+    },
+    "Properties": {
+      "WidgetStyle": {
+        "Normal": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 1.0,
+              "G": 1.0,
+              "B": 1.0,
+              "A": 0.5,
+              "Hex": "7FFFFFFF"
+            }
+          }
+        },
+        "Hovered": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 1.0,
+              "G": 1.0,
+              "B": 1.0,
+              "A": 0.5,
+              "Hex": "7FFFFFFF"
+            }
+          }
+        },
+        "Pressed": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 1.0,
+              "G": 1.0,
+              "B": 1.0,
+              "A": 0.5,
+              "Hex": "7FFFFFFF"
+            }
+          }
+        }
+      },
+      "Slots": [
+        {
+          "ObjectName": "ButtonSlot'UIAssetLoadDebugItem_C:WidgetTree.FlushUIBtn.ButtonSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.19"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'UIAssetLoadDebugItem_C:WidgetTree.BtnView.HorizontalBoxSlot_11'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.42"
+      }
+    }
+  },
+  {
+    "Type": "Button",
+    "Name": "GCBtn",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Button'",
+    "Outer": {
+      "ObjectName": "WidgetTree'UIAssetLoadDebugItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.68"
+    },
+    "Properties": {
+      "WidgetStyle": {
+        "Normal": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 1.0,
+              "G": 1.0,
+              "B": 1.0,
+              "A": 0.5,
+              "Hex": "7FFFFFFF"
+            }
+          }
+        },
+        "Hovered": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 1.0,
+              "G": 1.0,
+              "B": 1.0,
+              "A": 0.5,
+              "Hex": "7FFFFFFF"
+            }
+          }
+        },
+        "Pressed": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 1.0,
+              "G": 1.0,
+              "B": 1.0,
+              "A": 0.5,
+              "Hex": "7FFFFFFF"
+            }
+          }
+        }
+      },
+      "Slots": [
+        {
+          "ObjectName": "ButtonSlot'UIAssetLoadDebugItem_C:WidgetTree.GCBtn.ButtonSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.20"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'UIAssetLoadDebugItem_C:WidgetTree.BtnView.HorizontalBoxSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.40"
+      }
+    }
+  },
+  {
+    "Type": "Button",
+    "Name": "GodBtn",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Button'",
+    "Outer": {
+      "ObjectName": "WidgetTree'UIAssetLoadDebugItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.68"
+    },
+    "Properties": {
+      "WidgetStyle": {
+        "Normal": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 1.0,
+              "G": 1.0,
+              "B": 1.0,
+              "A": 0.5,
+              "Hex": "7FFFFFFF"
+            }
+          }
+        },
+        "Hovered": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 1.0,
+              "G": 1.0,
+              "B": 1.0,
+              "A": 0.5,
+              "Hex": "7FFFFFFF"
+            }
+          }
+        },
+        "Pressed": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 1.0,
+              "G": 1.0,
+              "B": 1.0,
+              "A": 0.5,
+              "Hex": "7FFFFFFF"
+            }
+          }
+        }
+      },
+      "Slots": [
+        {
+          "ObjectName": "ButtonSlot'UIAssetLoadDebugItem_C:WidgetTree.GodBtn.ButtonSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.21"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'UIAssetLoadDebugItem_C:WidgetTree.BtnView.HorizontalBoxSlot_8'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.49"
+      }
+    }
+  },
+  {
+    "Type": "Button",
+    "Name": "HandleBtn",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Button'",
+    "Outer": {
+      "ObjectName": "WidgetTree'UIAssetLoadDebugItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.68"
+    },
+    "Properties": {
+      "WidgetStyle": {
+        "Normal": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 1.0,
+              "G": 1.0,
+              "B": 1.0,
+              "A": 0.5,
+              "Hex": "7FFFFFFF"
+            }
+          }
+        },
+        "Hovered": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 1.0,
+              "G": 1.0,
+              "B": 1.0,
+              "A": 0.5,
+              "Hex": "7FFFFFFF"
+            }
+          }
+        },
+        "Pressed": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 1.0,
+              "G": 1.0,
+              "B": 1.0,
+              "A": 0.5,
+              "Hex": "7FFFFFFF"
+            }
+          }
+        }
+      },
+      "Slots": [
+        {
+          "ObjectName": "ButtonSlot'UIAssetLoadDebugItem_C:WidgetTree.HandleBtn.ButtonSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.22"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'UIAssetLoadDebugItem_C:WidgetTree.BtnView.HorizontalBoxSlot_10'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.41"
+      }
+    }
+  },
+  {
+    "Type": "Button",
+    "Name": "MIssBtn",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Button'",
+    "Outer": {
+      "ObjectName": "WidgetTree'UIAssetLoadDebugItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.68"
+    },
+    "Properties": {
+      "WidgetStyle": {
+        "Normal": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 1.0,
+              "G": 1.0,
+              "B": 1.0,
+              "A": 0.5,
+              "Hex": "7FFFFFFF"
+            }
+          }
+        },
+        "Hovered": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 1.0,
+              "G": 1.0,
+              "B": 1.0,
+              "A": 0.5,
+              "Hex": "7FFFFFFF"
+            }
+          }
+        },
+        "Pressed": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 1.0,
+              "G": 1.0,
+              "B": 1.0,
+              "A": 0.5,
+              "Hex": "7FFFFFFF"
+            }
+          }
+        }
+      },
+      "Slots": [
+        {
+          "ObjectName": "ButtonSlot'UIAssetLoadDebugItem_C:WidgetTree.MIssBtn.ButtonSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.23"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'UIAssetLoadDebugItem_C:WidgetTree.BtnView.HorizontalBoxSlot_6'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.47"
+      }
+    }
+  },
+  {
+    "Type": "Button",
+    "Name": "MRBtn",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Button'",
+    "Outer": {
+      "ObjectName": "WidgetTree'UIAssetLoadDebugItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.68"
+    },
+    "Properties": {
+      "WidgetStyle": {
+        "Normal": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 1.0,
+              "G": 1.0,
+              "B": 1.0,
+              "A": 0.5,
+              "Hex": "7FFFFFFF"
+            }
+          }
+        },
+        "Hovered": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 1.0,
+              "G": 1.0,
+              "B": 1.0,
+              "A": 0.5,
+              "Hex": "7FFFFFFF"
+            }
+          }
+        },
+        "Pressed": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 1.0,
+              "G": 1.0,
+              "B": 1.0,
+              "A": 0.5,
+              "Hex": "7FFFFFFF"
+            }
+          }
+        }
+      },
+      "Slots": [
+        {
+          "ObjectName": "ButtonSlot'UIAssetLoadDebugItem_C:WidgetTree.MRBtn.ButtonSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.24"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'UIAssetLoadDebugItem_C:WidgetTree.BtnView.HorizontalBoxSlot_7'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.48"
+      }
+    }
+  },
+  {
+    "Type": "Button",
+    "Name": "ResExportBtn",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Button'",
+    "Outer": {
+      "ObjectName": "WidgetTree'UIAssetLoadDebugItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.68"
+    },
+    "Properties": {
+      "WidgetStyle": {
+        "Normal": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 1.0,
+              "G": 1.0,
+              "B": 1.0,
+              "A": 0.5,
+              "Hex": "7FFFFFFF"
+            }
+          }
+        },
+        "Hovered": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 1.0,
+              "G": 1.0,
+              "B": 1.0,
+              "A": 0.5,
+              "Hex": "7FFFFFFF"
+            }
+          }
+        },
+        "Pressed": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 1.0,
+              "G": 1.0,
+              "B": 1.0,
+              "A": 0.5,
+              "Hex": "7FFFFFFF"
+            }
+          }
+        }
+      },
+      "Slots": [
+        {
+          "ObjectName": "ButtonSlot'UIAssetLoadDebugItem_C:WidgetTree.ResExportBtn.ButtonSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.25"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'UIAssetLoadDebugItem_C:WidgetTree.BtnView.HorizontalBoxSlot_3'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.44"
+      }
+    }
+  },
+  {
+    "Type": "Button",
+    "Name": "ToogleBtn",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Button'",
+    "Outer": {
+      "ObjectName": "WidgetTree'UIAssetLoadDebugItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.68"
+    },
+    "Properties": {
+      "WidgetStyle": {
+        "Normal": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 1.0,
+              "G": 1.0,
+              "B": 1.0,
+              "A": 0.5,
+              "Hex": "7FFFFFFF"
+            }
+          }
+        },
+        "Hovered": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 1.0,
+              "G": 1.0,
+              "B": 1.0,
+              "A": 0.5,
+              "Hex": "7FFFFFFF"
+            }
+          }
+        },
+        "Pressed": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 1.0,
+              "G": 1.0,
+              "B": 1.0,
+              "A": 0.5,
+              "Hex": "7FFFFFFF"
+            }
+          }
+        }
+      },
+      "Slots": [
+        {
+          "ObjectName": "ButtonSlot'UIAssetLoadDebugItem_C:WidgetTree.ToogleBtn.ButtonSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.26"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'UIAssetLoadDebugItem_C:WidgetTree.BtnView.HorizontalBoxSlot_4'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.45"
+      }
+    }
+  },
+  {
+    "Type": "ButtonSlot",
+    "Name": "ButtonSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ButtonSlot'",
+    "Outer": {
+      "ObjectName": "Button'UIAssetLoadDebugItem_C:WidgetTree.AllTextruesBtn'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.3"
+    },
+    "Properties": {
+      "Padding": {
+        "Left": 7.68,
+        "Top": 7.68,
+        "Right": 7.68,
+        "Bottom": 3.84
+      },
+      "Parent": {
+        "ObjectName": "Button'UIAssetLoadDebugItem_C:WidgetTree.AllTextruesBtn'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.3"
+      },
+      "Content": {
+        "ObjectName": "TextBlock'UIAssetLoadDebugItem_C:WidgetTree.TextBlock_6'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.63"
+      }
+    }
+  },
+  {
+    "Type": "ButtonSlot",
+    "Name": "ButtonSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ButtonSlot'",
+    "Outer": {
+      "ObjectName": "Button'UIAssetLoadDebugItem_C:WidgetTree.AtlasBtn'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.4"
+    },
+    "Properties": {
+      "Padding": {
+        "Left": 7.68,
+        "Top": 7.68,
+        "Right": 7.68,
+        "Bottom": 3.84
+      },
+      "Parent": {
+        "ObjectName": "Button'UIAssetLoadDebugItem_C:WidgetTree.AtlasBtn'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.4"
+      },
+      "Content": {
+        "ObjectName": "TextBlock'UIAssetLoadDebugItem_C:WidgetTree.TextBlock'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.56"
+      }
+    }
+  },
+  {
+    "Type": "ButtonSlot",
+    "Name": "ButtonSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ButtonSlot'",
+    "Outer": {
+      "ObjectName": "Button'UIAssetLoadDebugItem_C:WidgetTree.CloseBtn'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.5"
+    },
+    "Properties": {
+      "Padding": {
+        "Left": 7.68,
+        "Top": 0.0,
+        "Right": 7.68,
+        "Bottom": 23.039999
+      },
+      "HorizontalAlignment": "HAlign_Fill",
+      "Parent": {
+        "ObjectName": "Button'UIAssetLoadDebugItem_C:WidgetTree.CloseBtn'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.5"
+      },
+      "Content": {
+        "ObjectName": "TextBlock'UIAssetLoadDebugItem_C:WidgetTree.TextBlock_45'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.61"
+      }
+    }
+  },
+  {
+    "Type": "ButtonSlot",
+    "Name": "ButtonSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ButtonSlot'",
+    "Outer": {
+      "ObjectName": "Button'UIAssetLoadDebugItem_C:WidgetTree.FlushBtn'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.6"
+    },
+    "Properties": {
+      "Padding": {
+        "Left": 7.68,
+        "Top": 7.68,
+        "Right": 7.68,
+        "Bottom": 3.84
+      },
+      "Parent": {
+        "ObjectName": "Button'UIAssetLoadDebugItem_C:WidgetTree.FlushBtn'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.6"
+      },
+      "Content": {
+        "ObjectName": "TextBlock'UIAssetLoadDebugItem_C:WidgetTree.FlushText'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.51"
+      }
+    }
+  },
+  {
+    "Type": "ButtonSlot",
+    "Name": "ButtonSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ButtonSlot'",
+    "Outer": {
+      "ObjectName": "Button'UIAssetLoadDebugItem_C:WidgetTree.FlushUIBtn'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.7"
+    },
+    "Properties": {
+      "Padding": {
+        "Left": 7.68,
+        "Top": 7.68,
+        "Right": 7.68,
+        "Bottom": 3.84
+      },
+      "Parent": {
+        "ObjectName": "Button'UIAssetLoadDebugItem_C:WidgetTree.FlushUIBtn'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.7"
+      },
+      "Content": {
+        "ObjectName": "TextBlock'UIAssetLoadDebugItem_C:WidgetTree.FlushText_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.53"
+      }
+    }
+  },
+  {
+    "Type": "ButtonSlot",
+    "Name": "ButtonSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ButtonSlot'",
+    "Outer": {
+      "ObjectName": "Button'UIAssetLoadDebugItem_C:WidgetTree.GCBtn'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.8"
+    },
+    "Properties": {
+      "Padding": {
+        "Left": 7.68,
+        "Top": 7.68,
+        "Right": 7.68,
+        "Bottom": 3.84
+      },
+      "Parent": {
+        "ObjectName": "Button'UIAssetLoadDebugItem_C:WidgetTree.GCBtn'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.8"
+      },
+      "Content": {
+        "ObjectName": "TextBlock'UIAssetLoadDebugItem_C:WidgetTree.Limit'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.54"
+      }
+    }
+  },
+  {
+    "Type": "ButtonSlot",
+    "Name": "ButtonSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ButtonSlot'",
+    "Outer": {
+      "ObjectName": "Button'UIAssetLoadDebugItem_C:WidgetTree.GodBtn'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.9"
+    },
+    "Properties": {
+      "Padding": {
+        "Left": 7.68,
+        "Top": 7.68,
+        "Right": 7.68,
+        "Bottom": 3.84
+      },
+      "Parent": {
+        "ObjectName": "Button'UIAssetLoadDebugItem_C:WidgetTree.GodBtn'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.9"
+      },
+      "Content": {
+        "ObjectName": "TextBlock'UIAssetLoadDebugItem_C:WidgetTree.TextBlock_3'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.59"
+      }
+    }
+  },
+  {
+    "Type": "ButtonSlot",
+    "Name": "ButtonSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ButtonSlot'",
+    "Outer": {
+      "ObjectName": "Button'UIAssetLoadDebugItem_C:WidgetTree.HandleBtn'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.10"
+    },
+    "Properties": {
+      "Padding": {
+        "Left": 7.68,
+        "Top": 7.68,
+        "Right": 7.68,
+        "Bottom": 3.84
+      },
+      "Parent": {
+        "ObjectName": "Button'UIAssetLoadDebugItem_C:WidgetTree.HandleBtn'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.10"
+      },
+      "Content": {
+        "ObjectName": "TextBlock'UIAssetLoadDebugItem_C:WidgetTree.TextBlock_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.58"
+      }
+    }
+  },
+  {
+    "Type": "ButtonSlot",
+    "Name": "ButtonSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ButtonSlot'",
+    "Outer": {
+      "ObjectName": "Button'UIAssetLoadDebugItem_C:WidgetTree.MIssBtn'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.11"
+    },
+    "Properties": {
+      "Padding": {
+        "Left": 7.68,
+        "Top": 7.68,
+        "Right": 7.68,
+        "Bottom": 3.84
+      },
+      "Parent": {
+        "ObjectName": "Button'UIAssetLoadDebugItem_C:WidgetTree.MIssBtn'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.11"
+      },
+      "Content": {
+        "ObjectName": "TextBlock'UIAssetLoadDebugItem_C:WidgetTree.FlushText_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.52"
+      }
+    }
+  },
+  {
+    "Type": "ButtonSlot",
+    "Name": "ButtonSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ButtonSlot'",
+    "Outer": {
+      "ObjectName": "Button'UIAssetLoadDebugItem_C:WidgetTree.MRBtn'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.12"
+    },
+    "Properties": {
+      "Padding": {
+        "Left": 7.68,
+        "Top": 7.68,
+        "Right": 7.68,
+        "Bottom": 3.84
+      },
+      "Parent": {
+        "ObjectName": "Button'UIAssetLoadDebugItem_C:WidgetTree.MRBtn'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.12"
+      },
+      "Content": {
+        "ObjectName": "TextBlock'UIAssetLoadDebugItem_C:WidgetTree.TextBlock_5'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.62"
+      }
+    }
+  },
+  {
+    "Type": "ButtonSlot",
+    "Name": "ButtonSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ButtonSlot'",
+    "Outer": {
+      "ObjectName": "Button'UIAssetLoadDebugItem_C:WidgetTree.ResExportBtn'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.13"
+    },
+    "Properties": {
+      "Padding": {
+        "Left": 7.68,
+        "Top": 7.68,
+        "Right": 7.68,
+        "Bottom": 3.84
+      },
+      "Parent": {
+        "ObjectName": "Button'UIAssetLoadDebugItem_C:WidgetTree.ResExportBtn'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.13"
+      },
+      "Content": {
+        "ObjectName": "TextBlock'UIAssetLoadDebugItem_C:WidgetTree.TextBlock_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.57"
+      }
+    }
+  },
+  {
+    "Type": "ButtonSlot",
+    "Name": "ButtonSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ButtonSlot'",
+    "Outer": {
+      "ObjectName": "Button'UIAssetLoadDebugItem_C:WidgetTree.ToogleBtn'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.14"
+    },
+    "Properties": {
+      "Padding": {
+        "Left": 7.68,
+        "Top": 7.68,
+        "Right": 7.68,
+        "Bottom": 3.84
+      },
+      "Parent": {
+        "ObjectName": "Button'UIAssetLoadDebugItem_C:WidgetTree.ToogleBtn'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.14"
+      },
+      "Content": {
+        "ObjectName": "TextBlock'UIAssetLoadDebugItem_C:WidgetTree.TextBlock_4'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.60"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "FullView",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'UIAssetLoadDebugItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.68"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'UIAssetLoadDebugItem_C:WidgetTree.FullView.CanvasPanelSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.30"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'UIAssetLoadDebugItem_C:WidgetTree.FullView.CanvasPanelSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.31"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'UIAssetLoadDebugItem_C:WidgetTree.FullView.CanvasPanelSlot_2'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.32"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "GroupPanel",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'UIAssetLoadDebugItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.68"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'UIAssetLoadDebugItem_C:WidgetTree.GroupPanel.CanvasPanelSlot_2'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.34"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'UIAssetLoadDebugItem_C:WidgetTree.GroupPanel.CanvasPanelSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.33"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'UIAssetLoadDebugItem_C:WidgetTree.FullView.CanvasPanelSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.31"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "LogCanvas",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'UIAssetLoadDebugItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.68"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'UIAssetLoadDebugItem_C:WidgetTree.LogCanvas.CanvasPanelSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.35"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'UIAssetLoadDebugItem_C:WidgetTree.LogCanvas.CanvasPanelSlot_3'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.36"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'UIAssetLoadDebugItem_C:WidgetTree.LogCanvas.CanvasPanelSlot_4'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.37"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'UIAssetLoadDebugItem_C:WidgetTree.FullView.CanvasPanelSlot_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.32"
+      },
+      "Visibility": "ESlateVisibility::Collapsed"
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'UIAssetLoadDebugItem_C:WidgetTree.FullView'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.27"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 1184.6765,
+          "Bottom": 115.2
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.0
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.0
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.0
+        }
+      },
+      "bAutoSize": true,
+      "ZOrder": 2,
+      "Parent": {
+        "ObjectName": "CanvasPanel'UIAssetLoadDebugItem_C:WidgetTree.FullView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.27"
+      },
+      "Content": {
+        "ObjectName": "HorizontalBox'UIAssetLoadDebugItem_C:WidgetTree.BtnView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.38"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'UIAssetLoadDebugItem_C:WidgetTree.FullView'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.27"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Top": 86.4,
+          "Right": 192.0,
+          "Bottom": 57.6
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.0
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.0
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.0
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'UIAssetLoadDebugItem_C:WidgetTree.FullView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.27"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'UIAssetLoadDebugItem_C:WidgetTree.GroupPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.28"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'UIAssetLoadDebugItem_C:WidgetTree.FullView'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.27"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Top": 153.59999,
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "Anchors": {
+          "Maximum": {
+            "X": 1.0,
+            "Y": 1.0
+          }
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'UIAssetLoadDebugItem_C:WidgetTree.FullView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.27"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'UIAssetLoadDebugItem_C:WidgetTree.LogCanvas'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.29"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'UIAssetLoadDebugItem_C:WidgetTree.GroupPanel'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.28"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 192.0,
+          "Bottom": 57.6
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'UIAssetLoadDebugItem_C:WidgetTree.GroupPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.28"
+      },
+      "Content": {
+        "ObjectName": "UITextBlock'UIAssetLoadDebugItem_C:WidgetTree.GroundInfo'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.67"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'UIAssetLoadDebugItem_C:WidgetTree.GroupPanel'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.28"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": -9.599999,
+          "Top": -9.599999,
+          "Right": -9.599999,
+          "Bottom": -9.599999
+        },
+        "Anchors": {
+          "Maximum": {
+            "X": 1.0,
+            "Y": 1.0
+          }
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'UIAssetLoadDebugItem_C:WidgetTree.GroupPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.28"
+      },
+      "Content": {
+        "ObjectName": "UIImage'UIAssetLoadDebugItem_C:WidgetTree.UIImage_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.65"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'UIAssetLoadDebugItem_C:WidgetTree.LogCanvas'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.29"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "Anchors": {
+          "Maximum": {
+            "X": 1.0,
+            "Y": 1.0
+          }
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'UIAssetLoadDebugItem_C:WidgetTree.LogCanvas'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.29"
+      },
+      "Content": {
+        "ObjectName": "UIImage'UIAssetLoadDebugItem_C:WidgetTree.BgImage'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.64"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'UIAssetLoadDebugItem_C:WidgetTree.LogCanvas'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.29"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": -122.88,
+          "Top": -69.119995,
+          "Right": 115.2,
+          "Bottom": 57.6
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 1.0,
+            "Y": 0.0
+          },
+          "Maximum": {
+            "X": 1.0,
+            "Y": 0.0
+          }
+        }
+      },
+      "ZOrder": 10,
+      "Parent": {
+        "ObjectName": "CanvasPanel'UIAssetLoadDebugItem_C:WidgetTree.LogCanvas'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.29"
+      },
+      "Content": {
+        "ObjectName": "Button'UIAssetLoadDebugItem_C:WidgetTree.CloseBtn'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.5"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_4",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'UIAssetLoadDebugItem_C:WidgetTree.LogCanvas'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.29"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 192.0,
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "Anchors": {
+          "Maximum": {
+            "X": 1.0,
+            "Y": 1.0
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.0
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'UIAssetLoadDebugItem_C:WidgetTree.LogCanvas'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.29"
+      },
+      "Content": {
+        "ObjectName": "UIScrollBox'UIAssetLoadDebugItem_C:WidgetTree.ResScroll_4'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.66"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "BtnView",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'UIAssetLoadDebugItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.68"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HorizontalBoxSlot'UIAssetLoadDebugItem_C:WidgetTree.BtnView.HorizontalBoxSlot_8'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.49"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'UIAssetLoadDebugItem_C:WidgetTree.BtnView.HorizontalBoxSlot_3'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.44"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'UIAssetLoadDebugItem_C:WidgetTree.BtnView.HorizontalBoxSlot_10'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.41"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'UIAssetLoadDebugItem_C:WidgetTree.BtnView.HorizontalBoxSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.40"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'UIAssetLoadDebugItem_C:WidgetTree.BtnView.HorizontalBoxSlot_7'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.48"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'UIAssetLoadDebugItem_C:WidgetTree.BtnView.HorizontalBoxSlot_4'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.45"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'UIAssetLoadDebugItem_C:WidgetTree.BtnView.HorizontalBoxSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.39"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'UIAssetLoadDebugItem_C:WidgetTree.BtnView.HorizontalBoxSlot_2'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.43"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'UIAssetLoadDebugItem_C:WidgetTree.BtnView.HorizontalBoxSlot_5'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.46"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'UIAssetLoadDebugItem_C:WidgetTree.BtnView.HorizontalBoxSlot_11'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.42"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'UIAssetLoadDebugItem_C:WidgetTree.BtnView.HorizontalBoxSlot_6'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.47"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'UIAssetLoadDebugItem_C:WidgetTree.FullView.CanvasPanelSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.30"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'UIAssetLoadDebugItem_C:WidgetTree.BtnView'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.38"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "HorizontalBox'UIAssetLoadDebugItem_C:WidgetTree.BtnView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.38"
+      },
+      "Content": {
+        "ObjectName": "Button'UIAssetLoadDebugItem_C:WidgetTree.AtlasBtn'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.4"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'UIAssetLoadDebugItem_C:WidgetTree.BtnView'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.38"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "HorizontalBox'UIAssetLoadDebugItem_C:WidgetTree.BtnView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.38"
+      },
+      "Content": {
+        "ObjectName": "Button'UIAssetLoadDebugItem_C:WidgetTree.GCBtn'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.8"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_10",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'UIAssetLoadDebugItem_C:WidgetTree.BtnView'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.38"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "HorizontalBox'UIAssetLoadDebugItem_C:WidgetTree.BtnView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.38"
+      },
+      "Content": {
+        "ObjectName": "Button'UIAssetLoadDebugItem_C:WidgetTree.HandleBtn'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.10"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_11",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'UIAssetLoadDebugItem_C:WidgetTree.BtnView'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.38"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "HorizontalBox'UIAssetLoadDebugItem_C:WidgetTree.BtnView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.38"
+      },
+      "Content": {
+        "ObjectName": "Button'UIAssetLoadDebugItem_C:WidgetTree.FlushUIBtn'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.7"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'UIAssetLoadDebugItem_C:WidgetTree.BtnView'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.38"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "HorizontalBox'UIAssetLoadDebugItem_C:WidgetTree.BtnView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.38"
+      },
+      "Content": {
+        "ObjectName": "Button'UIAssetLoadDebugItem_C:WidgetTree.AllTextruesBtn'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.3"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'UIAssetLoadDebugItem_C:WidgetTree.BtnView'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.38"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "HorizontalBox'UIAssetLoadDebugItem_C:WidgetTree.BtnView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.38"
+      },
+      "Content": {
+        "ObjectName": "Button'UIAssetLoadDebugItem_C:WidgetTree.ResExportBtn'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.13"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_4",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'UIAssetLoadDebugItem_C:WidgetTree.BtnView'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.38"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "HorizontalBox'UIAssetLoadDebugItem_C:WidgetTree.BtnView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.38"
+      },
+      "Content": {
+        "ObjectName": "Button'UIAssetLoadDebugItem_C:WidgetTree.ToogleBtn'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.14"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_5",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'UIAssetLoadDebugItem_C:WidgetTree.BtnView'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.38"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "HorizontalBox'UIAssetLoadDebugItem_C:WidgetTree.BtnView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.38"
+      },
+      "Content": {
+        "ObjectName": "Button'UIAssetLoadDebugItem_C:WidgetTree.FlushBtn'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.6"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_6",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'UIAssetLoadDebugItem_C:WidgetTree.BtnView'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.38"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "HorizontalBox'UIAssetLoadDebugItem_C:WidgetTree.BtnView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.38"
+      },
+      "Content": {
+        "ObjectName": "Button'UIAssetLoadDebugItem_C:WidgetTree.MIssBtn'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.11"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_7",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'UIAssetLoadDebugItem_C:WidgetTree.BtnView'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.38"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "HorizontalBox'UIAssetLoadDebugItem_C:WidgetTree.BtnView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.38"
+      },
+      "Content": {
+        "ObjectName": "Button'UIAssetLoadDebugItem_C:WidgetTree.MRBtn'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.12"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_8",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'UIAssetLoadDebugItem_C:WidgetTree.BtnView'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.38"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "HorizontalBox'UIAssetLoadDebugItem_C:WidgetTree.BtnView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.38"
+      },
+      "Content": {
+        "ObjectName": "Button'UIAssetLoadDebugItem_C:WidgetTree.GodBtn'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.9"
+      }
+    }
+  },
+  {
+    "Type": "ScrollBoxSlot",
+    "Name": "ScrollBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ScrollBoxSlot'",
+    "Outer": {
+      "ObjectName": "UIScrollBox'UIAssetLoadDebugItem_C:WidgetTree.ResScroll_4'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.66"
+    },
+    "Properties": {
+      "Padding": {
+        "Left": 19.199999,
+        "Right": 19.199999
+      },
+      "Parent": {
+        "ObjectName": "UIScrollBox'UIAssetLoadDebugItem_C:WidgetTree.ResScroll_4'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.66"
+      },
+      "Content": {
+        "ObjectName": "TextBlock'UIAssetLoadDebugItem_C:WidgetTree.LogText'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.55"
+      }
+    }
+  },
+  {
+    "Type": "TextBlock",
+    "Name": "FlushText",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'TextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'UIAssetLoadDebugItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.68"
+    },
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "24B36F4F416CCF6357DFE18C5AE3F639",
+        "SourceString": " Flush ",
+        "LocalizedString": " Flush "
+      },
+      "ColorAndOpacity": {
+        "SpecifiedColor": {
+          "R": 0.0,
+          "G": 0.0,
+          "B": 0.0,
+          "A": 1.0,
+          "Hex": "000000"
+        }
+      },
+      "Font": {
+        "Size": 38
+      },
+      "Slot": {
+        "ObjectName": "ButtonSlot'UIAssetLoadDebugItem_C:WidgetTree.FlushBtn.ButtonSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.18"
+      }
+    }
+  },
+  {
+    "Type": "TextBlock",
+    "Name": "FlushText_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'TextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'UIAssetLoadDebugItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.68"
+    },
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "F43D1A3C46EEE86B2035649D620AF7E5",
+        "SourceString": " Miss ",
+        "LocalizedString": " Miss "
+      },
+      "ColorAndOpacity": {
+        "SpecifiedColor": {
+          "R": 0.0,
+          "G": 0.0,
+          "B": 0.0,
+          "A": 1.0,
+          "Hex": "000000"
+        }
+      },
+      "Font": {
+        "Size": 38
+      },
+      "Slot": {
+        "ObjectName": "ButtonSlot'UIAssetLoadDebugItem_C:WidgetTree.MIssBtn.ButtonSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.23"
+      }
+    }
+  },
+  {
+    "Type": "TextBlock",
+    "Name": "FlushText_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'TextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'UIAssetLoadDebugItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.68"
+    },
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "4DB85C704C7AFBBF761678BEEECA1F72",
+        "SourceString": " UIFlush ",
+        "LocalizedString": " UIFlush "
+      },
+      "ColorAndOpacity": {
+        "SpecifiedColor": {
+          "R": 0.0,
+          "G": 0.0,
+          "B": 0.0,
+          "A": 1.0,
+          "Hex": "000000"
+        }
+      },
+      "Font": {
+        "Size": 38
+      },
+      "Slot": {
+        "ObjectName": "ButtonSlot'UIAssetLoadDebugItem_C:WidgetTree.FlushUIBtn.ButtonSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.19"
+      }
+    }
+  },
+  {
+    "Type": "TextBlock",
+    "Name": "Limit",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'TextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'UIAssetLoadDebugItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.68"
+    },
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "43D7625B417C3C5265D4E980AAF148FF",
+        "SourceString": "  GC  ",
+        "LocalizedString": "  GC  "
+      },
+      "ColorAndOpacity": {
+        "SpecifiedColor": {
+          "R": 0.0,
+          "G": 0.0,
+          "B": 0.0,
+          "A": 1.0,
+          "Hex": "000000"
+        }
+      },
+      "Font": {
+        "Size": 38
+      },
+      "Slot": {
+        "ObjectName": "ButtonSlot'UIAssetLoadDebugItem_C:WidgetTree.GCBtn.ButtonSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.20"
+      }
+    }
+  },
+  {
+    "Type": "TextBlock",
+    "Name": "LogText",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'TextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'UIAssetLoadDebugItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.68"
+    },
+    "Properties": {
+      "Text": {
+        "Namespace": "UMG",
+        "Key": "TextBlockDefaultValue",
+        "SourceString": "Text Block",
+        "LocalizedString": "Text Block"
+      },
+      "ColorAndOpacity": {
+        "SpecifiedColor": {
+          "R": 0.672443,
+          "G": 0.665387,
+          "B": 0.672443,
+          "A": 1.0,
+          "Hex": "D6D5D6"
+        }
+      },
+      "Font": {
+        "TypefaceFontName": "Regular",
+        "Size": 26
+      },
+      "WrappingPolicy": "ETextWrappingPolicy::AllowPerCharacterWrapping",
+      "AutoWrapText": true,
+      "WrapTextAt": 2803.0,
+      "Slot": {
+        "ObjectName": "ScrollBoxSlot'UIAssetLoadDebugItem_C:WidgetTree.ResScroll_4.ScrollBoxSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.50"
+      }
+    }
+  },
+  {
+    "Type": "TextBlock",
+    "Name": "TextBlock",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'TextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'UIAssetLoadDebugItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.68"
+    },
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "7441C5F546FAEF5AC6918888B6DB98FB",
+        "SourceString": " Atlas ",
+        "LocalizedString": " Atlas "
+      },
+      "ColorAndOpacity": {
+        "SpecifiedColor": {
+          "R": 0.0,
+          "G": 0.0,
+          "B": 0.0,
+          "A": 1.0,
+          "Hex": "000000"
+        }
+      },
+      "Font": {
+        "Size": 38
+      },
+      "Slot": {
+        "ObjectName": "ButtonSlot'UIAssetLoadDebugItem_C:WidgetTree.AtlasBtn.ButtonSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.16"
+      }
+    }
+  },
+  {
+    "Type": "TextBlock",
+    "Name": "TextBlock_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'TextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'UIAssetLoadDebugItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.68"
+    },
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "B707AF7D472BA7A58ABF1DA73BFB13C0",
+        "SourceString": "  Detail Log ",
+        "LocalizedString": "  Detail Log "
+      },
+      "ColorAndOpacity": {
+        "SpecifiedColor": {
+          "R": 0.0,
+          "G": 0.0,
+          "B": 0.0,
+          "A": 1.0,
+          "Hex": "000000"
+        }
+      },
+      "Font": {
+        "Size": 38
+      },
+      "Slot": {
+        "ObjectName": "ButtonSlot'UIAssetLoadDebugItem_C:WidgetTree.ResExportBtn.ButtonSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.25"
+      }
+    }
+  },
+  {
+    "Type": "TextBlock",
+    "Name": "TextBlock_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'TextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'UIAssetLoadDebugItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.68"
+    },
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "AD8E052247526E43AA5B1AAFCF6DFF85",
+        "SourceString": " ErrorHandle Log ",
+        "LocalizedString": " ErrorHandle Log "
+      },
+      "ColorAndOpacity": {
+        "SpecifiedColor": {
+          "R": 0.0,
+          "G": 0.0,
+          "B": 0.0,
+          "A": 1.0,
+          "Hex": "000000"
+        }
+      },
+      "Font": {
+        "Size": 38
+      },
+      "Slot": {
+        "ObjectName": "ButtonSlot'UIAssetLoadDebugItem_C:WidgetTree.HandleBtn.ButtonSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.22"
+      }
+    }
+  },
+  {
+    "Type": "TextBlock",
+    "Name": "TextBlock_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'TextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'UIAssetLoadDebugItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.68"
+    },
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "8C3BB1774CCDF1CE1E81FF9090D8BAEA",
+        "SourceString": "  扫荡 ",
+        "LocalizedString": "  扫荡 "
+      },
+      "ColorAndOpacity": {
+        "SpecifiedColor": {
+          "R": 0.0,
+          "G": 0.0,
+          "B": 0.0,
+          "A": 1.0,
+          "Hex": "000000"
+        }
+      },
+      "Font": {
+        "Size": 38
+      },
+      "Slot": {
+        "ObjectName": "ButtonSlot'UIAssetLoadDebugItem_C:WidgetTree.GodBtn.ButtonSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.21"
+      }
+    }
+  },
+  {
+    "Type": "TextBlock",
+    "Name": "TextBlock_4",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'TextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'UIAssetLoadDebugItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.68"
+    },
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "0CDA5FFF4FDE6035EDE1DFB2BDD20CF1",
+        "SourceString": " 参数 ",
+        "LocalizedString": " 参数 "
+      },
+      "ColorAndOpacity": {
+        "SpecifiedColor": {
+          "R": 0.0,
+          "G": 0.0,
+          "B": 0.0,
+          "A": 1.0,
+          "Hex": "000000"
+        }
+      },
+      "Font": {
+        "Size": 38
+      },
+      "Slot": {
+        "ObjectName": "ButtonSlot'UIAssetLoadDebugItem_C:WidgetTree.ToogleBtn.ButtonSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.26"
+      }
+    }
+  },
+  {
+    "Type": "TextBlock",
+    "Name": "TextBlock_45",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'TextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'UIAssetLoadDebugItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.68"
+    },
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "75573D4549B838BC4C8A53814917476E",
+        "SourceString": "x",
+        "LocalizedString": "x"
+      },
+      "Font": {
+        "Size": 46
+      },
+      "Justification": "ETextJustify::Center",
+      "Slot": {
+        "ObjectName": "ButtonSlot'UIAssetLoadDebugItem_C:WidgetTree.CloseBtn.ButtonSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.17"
+      },
+      "Visibility": "ESlateVisibility::HitTestInvisible"
+    }
+  },
+  {
+    "Type": "TextBlock",
+    "Name": "TextBlock_5",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'TextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'UIAssetLoadDebugItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.68"
+    },
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "148B517E4A69194B97086F86E3075786",
+        "SourceString": "  MR  ",
+        "LocalizedString": "  MR  "
+      },
+      "ColorAndOpacity": {
+        "SpecifiedColor": {
+          "R": 0.0,
+          "G": 0.0,
+          "B": 0.0,
+          "A": 1.0,
+          "Hex": "000000"
+        }
+      },
+      "Font": {
+        "Size": 38
+      },
+      "Slot": {
+        "ObjectName": "ButtonSlot'UIAssetLoadDebugItem_C:WidgetTree.MRBtn.ButtonSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.24"
+      }
+    }
+  },
+  {
+    "Type": "TextBlock",
+    "Name": "TextBlock_6",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'TextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'UIAssetLoadDebugItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.68"
+    },
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "D40D5F4B4C7820C181200BAB3E5F2CC5",
+        "SourceString": "Textures ",
+        "LocalizedString": "Textures "
+      },
+      "ColorAndOpacity": {
+        "SpecifiedColor": {
+          "R": 0.0,
+          "G": 0.0,
+          "B": 0.0,
+          "A": 1.0,
+          "Hex": "000000"
+        }
+      },
+      "Font": {
+        "Size": 38
+      },
+      "Slot": {
+        "ObjectName": "ButtonSlot'UIAssetLoadDebugItem_C:WidgetTree.AllTextruesBtn.ButtonSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.15"
+      }
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "BgImage",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'UIAssetLoadDebugItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.68"
+    },
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 61.44,
+          "Y": 61.44
+        }
+      },
+      "ColorAndOpacity": {
+        "R": 0.016807,
+        "G": 0.015209,
+        "B": 0.016807,
+        "A": 1.0,
+        "Hex": "232123"
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'UIAssetLoadDebugItem_C:WidgetTree.LogCanvas.CanvasPanelSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.35"
+      },
+      "Visibility": "ESlateVisibility::HitTestInvisible"
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "UIImage_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'UIAssetLoadDebugItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.68"
+    },
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 61.44,
+          "Y": 61.44
+        },
+        "TintColor": {
+          "SpecifiedColor": {
+            "R": 0.0,
+            "G": 0.0,
+            "B": 0.0,
+            "A": 1.0,
+            "Hex": "000000"
+          }
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'UIAssetLoadDebugItem_C:WidgetTree.GroupPanel.CanvasPanelSlot_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.34"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible",
+      "RenderOpacity": 0.6
+    }
+  },
+  {
+    "Type": "UIScrollBox",
+    "Name": "ResScroll_4",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIScrollBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'UIAssetLoadDebugItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.68"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "ScrollBoxSlot'UIAssetLoadDebugItem_C:WidgetTree.ResScroll_4.ScrollBoxSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.50"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'UIAssetLoadDebugItem_C:WidgetTree.LogCanvas.CanvasPanelSlot_4'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.37"
+      }
+    }
+  },
+  {
+    "Type": "UITextBlock",
+    "Name": "GroundInfo",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UITextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'UIAssetLoadDebugItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.68"
+    },
+    "Properties": {
+      "ColorAndOpacity": {
+        "SpecifiedColor": {
+          "R": 1.0,
+          "G": 0.37838,
+          "B": 0.0,
+          "A": 1.0,
+          "Hex": "FFA600"
+        }
+      },
+      "Font": {
+        "TypefaceFontName": "Regular",
+        "Size": 30
+      },
+      "Justification": "ETextJustify::Center",
+      "VerticalJustification": "ETextVerticalJustify::Center",
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'UIAssetLoadDebugItem_C:WidgetTree.GroupPanel.CanvasPanelSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.33"
+      }
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetTree'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'UIAssetLoadDebugItem_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.1"
+    },
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "CanvasPanel'UIAssetLoadDebugItem_C:WidgetTree.FullView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIAssetLoadDebugItem.27"
+      }
+    }
+  }
+]

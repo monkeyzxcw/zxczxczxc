@@ -1,0 +1,608 @@
+[
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "DropType_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Package": "UE_game/Content/BluePrint/UI/DropType/DropType",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'DropType_C:WidgetTree'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropType/DropType.19"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'UserWidget'",
+      "ObjectPath": "/Script/UMG"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Button_Click",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Button'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Image_Bg",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Image_Bg_Frame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "UISafeZone_1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UISafeZone'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      }
+    ],
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "DropType_C'Default__DropType_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropType/DropType.1"
+    }
+  },
+  {
+    "Type": "DropType_C",
+    "Name": "Default__DropType_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'UE_game/Content/BluePrint/UI/DropType/DropType.DropType_C'",
+    "Package": "UE_game/Content/BluePrint/UI/DropType/DropType",
+    "Properties": {
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "Button",
+    "Name": "Button_Click",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Button'",
+    "Outer": {
+      "ObjectName": "WidgetTree'DropType_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropType/DropType.19"
+    },
+    "Properties": {
+      "WidgetStyle": {
+        "Normal": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          },
+          "DrawAs": "ESlateBrushDrawType::NoDrawType"
+        },
+        "Hovered": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          },
+          "DrawAs": "ESlateBrushDrawType::NoDrawType"
+        },
+        "Pressed": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          },
+          "DrawAs": "ESlateBrushDrawType::NoDrawType"
+        },
+        "NormalPadding": {
+          "Left": 0.0,
+          "Top": 0.0,
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "PressedPadding": {
+          "Left": 0.0,
+          "Top": 0.0,
+          "Right": 0.0,
+          "Bottom": 0.0
+        }
+      },
+      "ClickMethod": "EButtonClickMethod::PreciseClick",
+      "TouchMethod": "EButtonTouchMethod::PreciseTap",
+      "IsFocusable": false,
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'DropType_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_5'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropType/DropType.7"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'DropType_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropType/DropType.19"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'DropType_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_5'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/DropType/DropType.7"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'DropType_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/DropType/DropType.6"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "SafeZoneSlot'DropType_C:WidgetTree.UISafeZone_1.SafeZoneSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropType/DropType.14"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_116",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'DropType_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropType/DropType.19"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'DropType_C:WidgetTree.CanvasPanel_116.CanvasPanelSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/DropType/DropType.8"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "OverlaySlot'DropType_C:WidgetTree.Overlay_233.OverlaySlot_3'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropType/DropType.13"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_98",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'DropType_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropType/DropType.19"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'DropType_C:WidgetTree.CanvasPanel_98.CanvasPanelSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/DropType/DropType.9"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'DropType_C:WidgetTree.CanvasPanel_98.CanvasPanelSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/DropType/DropType.10"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'DropType_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropType/DropType.6"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'DropType_C:WidgetTree.CanvasPanel_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropType/DropType.3"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 576.0,
+          "Top": 172.8,
+          "Right": 576.0,
+          "Bottom": 144.0
+        },
+        "Anchors": {
+          "Maximum": {
+            "X": 1.0,
+            "Y": 1.0
+          }
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'DropType_C:WidgetTree.CanvasPanel_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropType/DropType.3"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'DropType_C:WidgetTree.CanvasPanel_98'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropType/DropType.5"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_5",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'DropType_C:WidgetTree.CanvasPanel_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropType/DropType.3"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "Anchors": {
+          "Maximum": {
+            "X": 1.0,
+            "Y": 1.0
+          }
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'DropType_C:WidgetTree.CanvasPanel_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropType/DropType.3"
+      },
+      "Content": {
+        "ObjectName": "Button'DropType_C:WidgetTree.Button_Click'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropType/DropType.2"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'DropType_C:WidgetTree.CanvasPanel_116'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropType/DropType.4"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 58.559998,
+          "Top": 86.4,
+          "Right": 58.559998,
+          "Bottom": 86.4
+        },
+        "Anchors": {
+          "Maximum": {
+            "X": 1.0,
+            "Y": 1.0
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'DropType_C:WidgetTree.CanvasPanel_116'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropType/DropType.4"
+      },
+      "Content": {
+        "ObjectName": "UIScrollBox'DropType_C:WidgetTree.ItemScroll'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropType/DropType.18"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'DropType_C:WidgetTree.CanvasPanel_98'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropType/DropType.5"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 46.079998,
+          "Top": 110.399994,
+          "Right": 46.079998,
+          "Bottom": 110.399994
+        },
+        "Anchors": {
+          "Maximum": {
+            "X": 1.0,
+            "Y": 1.0
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'DropType_C:WidgetTree.CanvasPanel_98'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropType/DropType.5"
+      },
+      "Content": {
+        "ObjectName": "UIImage'DropType_C:WidgetTree.Image_Bg_Frame'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropType/DropType.16"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'DropType_C:WidgetTree.CanvasPanel_98'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropType/DropType.5"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 14.4,
+          "Top": 53.76,
+          "Right": 106.56,
+          "Bottom": 176.64
+        },
+        "Anchors": {
+          "Maximum": {
+            "X": 1.0,
+            "Y": 1.0
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'DropType_C:WidgetTree.CanvasPanel_98'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropType/DropType.5"
+      },
+      "Content": {
+        "ObjectName": "Overlay'DropType_C:WidgetTree.Overlay_233'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropType/DropType.11"
+      }
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "Overlay_233",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Overlay'",
+    "Outer": {
+      "ObjectName": "WidgetTree'DropType_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropType/DropType.19"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlaySlot'DropType_C:WidgetTree.Overlay_233.OverlaySlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/DropType/DropType.12"
+        },
+        {
+          "ObjectName": "OverlaySlot'DropType_C:WidgetTree.Overlay_233.OverlaySlot_3'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/DropType/DropType.13"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'DropType_C:WidgetTree.CanvasPanel_98.CanvasPanelSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropType/DropType.10"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'DropType_C:WidgetTree.Overlay_233'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropType/DropType.11"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Fill",
+      "VerticalAlignment": "VAlign_Fill",
+      "Parent": {
+        "ObjectName": "Overlay'DropType_C:WidgetTree.Overlay_233'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropType/DropType.11"
+      },
+      "Content": {
+        "ObjectName": "UIImage'DropType_C:WidgetTree.Image_Bg'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropType/DropType.15"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'DropType_C:WidgetTree.Overlay_233'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropType/DropType.11"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Fill",
+      "VerticalAlignment": "VAlign_Fill",
+      "Parent": {
+        "ObjectName": "Overlay'DropType_C:WidgetTree.Overlay_233'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropType/DropType.11"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'DropType_C:WidgetTree.CanvasPanel_116'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropType/DropType.4"
+      }
+    }
+  },
+  {
+    "Type": "SafeZoneSlot",
+    "Name": "SafeZoneSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SafeZoneSlot'",
+    "Outer": {
+      "ObjectName": "UISafeZone'DropType_C:WidgetTree.UISafeZone_1'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropType/DropType.17"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "UISafeZone'DropType_C:WidgetTree.UISafeZone_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropType/DropType.17"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'DropType_C:WidgetTree.CanvasPanel_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropType/DropType.3"
+      }
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "Image_Bg",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'DropType_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropType/DropType.19"
+    },
+    "Properties": {
+      "IsBanHduiResize": true,
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/Textures/Common/NoAlpha/CommonBg/UI_Common_TanBg.UI_Common_TanBg",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 1845.12,
+          "Y": 892.8
+        },
+        "Margin": {
+          "Left": 0.5,
+          "Top": 0.5,
+          "Right": 0.5,
+          "Bottom": 0.5
+        },
+        "DrawAs": "ESlateBrushDrawType::Box"
+      },
+      "Slot": {
+        "ObjectName": "OverlaySlot'DropType_C:WidgetTree.Overlay_233.OverlaySlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropType/DropType.12"
+      }
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "Image_Bg_Frame",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'DropType_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropType/DropType.19"
+    },
+    "Properties": {
+      "CurrStyleId": 5171,
+      "Brush": {
+        "ImageSize": {
+          "X": 61.44,
+          "Y": 61.44
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'DropType_C:WidgetTree.CanvasPanel_98.CanvasPanelSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropType/DropType.9"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "UISafeZone",
+    "Name": "UISafeZone_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UISafeZone'",
+    "Outer": {
+      "ObjectName": "WidgetTree'DropType_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropType/DropType.19"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "SafeZoneSlot'DropType_C:WidgetTree.UISafeZone_1.SafeZoneSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/DropType/DropType.14"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "UIScrollBox",
+    "Name": "ItemScroll",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIScrollBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'DropType_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropType/DropType.19"
+    },
+    "Properties": {
+      "WidgetStyle": {
+        "TopShadowBrush": {
+          "DrawAs": "ESlateBrushDrawType::NoDrawType"
+        },
+        "BottomShadowBrush": {
+          "DrawAs": "ESlateBrushDrawType::NoDrawType"
+        },
+        "LeftShadowBrush": {
+          "DrawAs": "ESlateBrushDrawType::NoDrawType"
+        },
+        "RightShadowBrush": {
+          "DrawAs": "ESlateBrushDrawType::NoDrawType"
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'DropType_C:WidgetTree.CanvasPanel_116.CanvasPanelSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropType/DropType.8"
+      }
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetTree'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'DropType_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropType/DropType.0"
+    },
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "UISafeZone'DropType_C:WidgetTree.UISafeZone_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropType/DropType.17"
+      }
+    }
+  }
+]

@@ -1,0 +1,654 @@
+[
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "DropFilterVoiceChooseItem_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Package": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterVoiceChooseItem",
+    "Super": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'ListViewItem_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Common/ListView/ListViewItem.0"
+    },
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'DropFilterVoiceChooseItem_C:WidgetTree'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterVoiceChooseItem.17"
+      },
+      "bClassRequiresNativeTick": true
+    },
+    "SuperStruct": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'ListViewItem_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Common/ListView/ListViewItem.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Bg",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Bg_1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "PlayVoiceBtn",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIButton'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SelectBtn",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIButton'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      }
+    ],
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "DropFilterVoiceChooseItem_C'Default__DropFilterVoiceChooseItem_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterVoiceChooseItem.1"
+    }
+  },
+  {
+    "Type": "DropFilterVoiceChooseItem_C",
+    "Name": "Default__DropFilterVoiceChooseItem_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'UE_game/Content/BluePrint/UI/DropFilter/DropFilterVoiceChooseItem.DropFilterVoiceChooseItem_C'",
+    "Package": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterVoiceChooseItem",
+    "Template": {
+      "ObjectName": "ListViewItem_C'Default__ListViewItem_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Common/ListView/ListViewItem.1"
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'DropFilterVoiceChooseItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterVoiceChooseItem.17"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'DropFilterVoiceChooseItem_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_8'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterVoiceChooseItem.5"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'DropFilterVoiceChooseItem_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterVoiceChooseItem.4"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "VoiceChoosePannel",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'DropFilterVoiceChooseItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterVoiceChooseItem.17"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'DropFilterVoiceChooseItem_C:WidgetTree.VoiceChoosePannel.CanvasPanelSlot_5'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterVoiceChooseItem.8"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'DropFilterVoiceChooseItem_C:WidgetTree.VoiceChoosePannel.CanvasPanelSlot_3'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterVoiceChooseItem.7"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'DropFilterVoiceChooseItem_C:WidgetTree.VoiceChoosePannel.CanvasPanelSlot_2'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterVoiceChooseItem.6"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'DropFilterVoiceChooseItem_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_8'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterVoiceChooseItem.5"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'DropFilterVoiceChooseItem_C:WidgetTree.CanvasPanel_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterVoiceChooseItem.2"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": -45.82755,
+          "Right": 1430.07,
+          "Bottom": 57.6
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "ZOrder": 4,
+      "Parent": {
+        "ObjectName": "CanvasPanel'DropFilterVoiceChooseItem_C:WidgetTree.CanvasPanel_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterVoiceChooseItem.2"
+      },
+      "Content": {
+        "ObjectName": "UIButton'DropFilterVoiceChooseItem_C:WidgetTree.SelectBtn'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterVoiceChooseItem.13"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_8",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'DropFilterVoiceChooseItem_C:WidgetTree.CanvasPanel_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterVoiceChooseItem.2"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 1536.0,
+          "Bottom": 76.799995
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'DropFilterVoiceChooseItem_C:WidgetTree.CanvasPanel_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterVoiceChooseItem.2"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'DropFilterVoiceChooseItem_C:WidgetTree.VoiceChoosePannel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterVoiceChooseItem.3"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'DropFilterVoiceChooseItem_C:WidgetTree.VoiceChoosePannel'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterVoiceChooseItem.3"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 1632.0,
+          "Bottom": 76.799995
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'DropFilterVoiceChooseItem_C:WidgetTree.VoiceChoosePannel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterVoiceChooseItem.3"
+      },
+      "Content": {
+        "ObjectName": "HorizontalBox'DropFilterVoiceChooseItem_C:WidgetTree.HorizontalBox_54'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterVoiceChooseItem.9"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'DropFilterVoiceChooseItem_C:WidgetTree.VoiceChoosePannel'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterVoiceChooseItem.3"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 1632.0,
+          "Bottom": 93.87434
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.0,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.0,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.0,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'DropFilterVoiceChooseItem_C:WidgetTree.VoiceChoosePannel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterVoiceChooseItem.3"
+      },
+      "Content": {
+        "ObjectName": "UIImage'DropFilterVoiceChooseItem_C:WidgetTree.Bg'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterVoiceChooseItem.14"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_5",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'DropFilterVoiceChooseItem_C:WidgetTree.VoiceChoosePannel'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterVoiceChooseItem.3"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 1545.6,
+          "Bottom": 76.799995
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.0,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.0,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.0,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "ZOrder": 1,
+      "Parent": {
+        "ObjectName": "CanvasPanel'DropFilterVoiceChooseItem_C:WidgetTree.VoiceChoosePannel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterVoiceChooseItem.3"
+      },
+      "Content": {
+        "ObjectName": "UIImage'DropFilterVoiceChooseItem_C:WidgetTree.Bg_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterVoiceChooseItem.15"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "HorizontalBox_54",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'DropFilterVoiceChooseItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterVoiceChooseItem.17"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HorizontalBoxSlot'DropFilterVoiceChooseItem_C:WidgetTree.HorizontalBox_54.HorizontalBoxSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterVoiceChooseItem.10"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'DropFilterVoiceChooseItem_C:WidgetTree.HorizontalBox_54.HorizontalBoxSlot_2'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterVoiceChooseItem.11"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'DropFilterVoiceChooseItem_C:WidgetTree.VoiceChoosePannel.CanvasPanelSlot_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterVoiceChooseItem.6"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'DropFilterVoiceChooseItem_C:WidgetTree.HorizontalBox_54'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterVoiceChooseItem.9"
+    },
+    "Properties": {
+      "Padding": {
+        "Left": 38.399998
+      },
+      "Parent": {
+        "ObjectName": "HorizontalBox'DropFilterVoiceChooseItem_C:WidgetTree.HorizontalBox_54'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterVoiceChooseItem.9"
+      },
+      "Content": {
+        "ObjectName": "UIShrinkTextBlock'DropFilterVoiceChooseItem_C:WidgetTree.VoiceInfoText'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterVoiceChooseItem.16"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'DropFilterVoiceChooseItem_C:WidgetTree.HorizontalBox_54'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterVoiceChooseItem.9"
+    },
+    "Properties": {
+      "Padding": {
+        "Left": 9.599999,
+        "Top": 9.599999,
+        "Right": 9.599999,
+        "Bottom": 9.599999
+      },
+      "HorizontalAlignment": "HAlign_Left",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "HorizontalBox'DropFilterVoiceChooseItem_C:WidgetTree.HorizontalBox_54'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterVoiceChooseItem.9"
+      },
+      "Content": {
+        "ObjectName": "UIButton'DropFilterVoiceChooseItem_C:WidgetTree.PlayVoiceBtn'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterVoiceChooseItem.12"
+      }
+    }
+  },
+  {
+    "Type": "UIButton",
+    "Name": "PlayVoiceBtn",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIButton'",
+    "Outer": {
+      "ObjectName": "WidgetTree'DropFilterVoiceChooseItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterVoiceChooseItem.17"
+    },
+    "Properties": {
+      "IconImage": {
+        "ImageSize": {
+          "X": 61.44,
+          "Y": 61.44
+        }
+      },
+      "WidgetStyle": {
+        "Normal": {
+          "ImageSize": {
+            "X": 75.0,
+            "Y": 65.0
+          },
+          "ResourceObject": {
+            "ObjectName": "PaperSprite'UI_Filter_YXBTinxiaoyusheicon_Sprite'",
+            "ObjectPath": "UE_game/Content/Art/UI/TexturesAtlas/Filter/Atlas/UI_Filter_YXBTinxiaoyusheicon_Sprite.1"
+          },
+          "DrawAs": "ESlateBrushDrawType::Image"
+        },
+        "Hovered": {
+          "ImageSize": {
+            "X": 75.0,
+            "Y": 65.0
+          },
+          "ResourceObject": {
+            "ObjectName": "PaperSprite'UI_Filter_YXBTinxiaoyusheicon_Sprite'",
+            "ObjectPath": "UE_game/Content/Art/UI/TexturesAtlas/Filter/Atlas/UI_Filter_YXBTinxiaoyusheicon_Sprite.1"
+          },
+          "DrawAs": "ESlateBrushDrawType::Image"
+        },
+        "Pressed": {
+          "ImageSize": {
+            "X": 75.0,
+            "Y": 65.0
+          },
+          "ResourceObject": {
+            "ObjectName": "PaperSprite'UI_Filter_YXBTinxiaoyusheicon_Sprite'",
+            "ObjectPath": "UE_game/Content/Art/UI/TexturesAtlas/Filter/Atlas/UI_Filter_YXBTinxiaoyusheicon_Sprite.1"
+          },
+          "DrawAs": "ESlateBrushDrawType::Image"
+        },
+        "NormalPadding": {
+          "Left": 0.0,
+          "Top": 0.0,
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "PressedPadding": {
+          "Left": 0.0,
+          "Top": 0.0,
+          "Right": 0.0,
+          "Bottom": 0.0
+        }
+      },
+      "ClickMethod": "EButtonClickMethod::PreciseClick",
+      "TouchMethod": "EButtonTouchMethod::PreciseTap",
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'DropFilterVoiceChooseItem_C:WidgetTree.HorizontalBox_54.HorizontalBoxSlot_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterVoiceChooseItem.11"
+      }
+    }
+  },
+  {
+    "Type": "UIButton",
+    "Name": "SelectBtn",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIButton'",
+    "Outer": {
+      "ObjectName": "WidgetTree'DropFilterVoiceChooseItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterVoiceChooseItem.17"
+    },
+    "Properties": {
+      "bIsTransparent": true,
+      "IconImage": {
+        "ImageSize": {
+          "X": 61.44,
+          "Y": 61.44
+        }
+      },
+      "WidgetStyle": {
+        "Normal": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          }
+        },
+        "Hovered": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          }
+        },
+        "Pressed": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          }
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'DropFilterVoiceChooseItem_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterVoiceChooseItem.4"
+      }
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "Bg",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'DropFilterVoiceChooseItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterVoiceChooseItem.17"
+    },
+    "Properties": {
+      "IsBanHduiResize": true,
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/TexturesAtlas/Filter/Atlas/UI_Filter_YXBGtiao00_Sprite.UI_Filter_YXBGtiao00_Sprite",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 1632.0,
+          "Y": 105.6
+        },
+        "Margin": {
+          "Left": 0.4,
+          "Right": 0.495413
+        },
+        "DrawAs": "ESlateBrushDrawType::Box"
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'DropFilterVoiceChooseItem_C:WidgetTree.VoiceChoosePannel.CanvasPanelSlot_3'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterVoiceChooseItem.7"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "Bg_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'DropFilterVoiceChooseItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterVoiceChooseItem.17"
+    },
+    "Properties": {
+      "IsBanHduiResize": true,
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/TexturesAtlas/Filter/Atlas/UI_Filter_YXBGtiao01_Sprite.UI_Filter_YXBGtiao01_Sprite",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 1633.9199,
+          "Y": 111.36
+        },
+        "Margin": {
+          "Left": 0.4,
+          "Right": 0.495413
+        },
+        "DrawAs": "ESlateBrushDrawType::Box"
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'DropFilterVoiceChooseItem_C:WidgetTree.VoiceChoosePannel.CanvasPanelSlot_5'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterVoiceChooseItem.8"
+      },
+      "Visibility": "ESlateVisibility::Hidden"
+    }
+  },
+  {
+    "Type": "UIShrinkTextBlock",
+    "Name": "VoiceInfoText",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIShrinkTextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'DropFilterVoiceChooseItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterVoiceChooseItem.17"
+    },
+    "Properties": {
+      "CurrStyleId": 2485,
+      "TextContent": {
+        "Namespace": "",
+        "Key": "0AB2A8CC4FCFD94A69B5198D7444F8B8",
+        "SourceString": "阿三大苏打",
+        "LocalizedString": "阿三大苏打"
+      },
+      "ShrinkSize": {
+        "X": 1344.0,
+        "Y": 76.799995
+      },
+      "WidthOverride": 1462.1041,
+      "HeightOverride": 76.8,
+      "bOverride_WidthOverride": true,
+      "bOverride_HeightOverride": true,
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'DropFilterVoiceChooseItem_C:WidgetTree.HorizontalBox_54.HorizontalBoxSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterVoiceChooseItem.10"
+      }
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetTree'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'DropFilterVoiceChooseItem_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterVoiceChooseItem.0"
+    },
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "CanvasPanel'DropFilterVoiceChooseItem_C:WidgetTree.CanvasPanel_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterVoiceChooseItem.2"
+      }
+    }
+  }
+]

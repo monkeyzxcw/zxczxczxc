@@ -1,0 +1,779 @@
+[
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "LuaErrorItem_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Package": "UE_game/Content/BluePrint/UI/Debug/Item/LuaErrorItem",
+    "Super": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'GMUserWidget_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/GMUserWidget.3"
+    },
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'LuaErrorItem_C:WidgetTree'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/LuaErrorItem.19"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'GMUserWidget_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/GMUserWidget.3"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "BackBtn",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Button'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Bg",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ResetAccount",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Button'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "position",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector2D'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "displayId",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "NewVar_0",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'TextBlock'",
+          "ObjectPath": "/Script/UMG"
+        }
+      }
+    ],
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "LuaErrorItem_C'Default__LuaErrorItem_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/LuaErrorItem.1"
+    }
+  },
+  {
+    "Type": "LuaErrorItem_C",
+    "Name": "Default__LuaErrorItem_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'UE_game/Content/BluePrint/UI/Debug/Item/LuaErrorItem.LuaErrorItem_C'",
+    "Package": "UE_game/Content/BluePrint/UI/Debug/Item/LuaErrorItem",
+    "Template": {
+      "ObjectName": "GMUserWidget_C'Default__GMUserWidget_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/GMUserWidget.4"
+    },
+    "Properties": {
+      "position": {
+        "X": -1.0,
+        "Y": 0.0
+      }
+    }
+  },
+  {
+    "Type": "Button",
+    "Name": "BackBtn",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Button'",
+    "Outer": {
+      "ObjectName": "WidgetTree'LuaErrorItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/LuaErrorItem.19"
+    },
+    "Properties": {
+      "WidgetStyle": {
+        "Normal": {
+          "ImageSize": {
+            "X": 153.59999,
+            "Y": 153.59999
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'UI_Common_Frame_CloseBtn'",
+            "ObjectPath": "UE_game/Content/Art/UI/Textures/Common/Btn/NoAtlas/UI_Common_Frame_CloseBtn.0"
+          },
+          "DrawAs": "ESlateBrushDrawType::Image"
+        },
+        "Hovered": {
+          "ImageSize": {
+            "X": 153.59999,
+            "Y": 153.59999
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'UI_Common_Frame_CloseBtn'",
+            "ObjectPath": "UE_game/Content/Art/UI/Textures/Common/Btn/NoAtlas/UI_Common_Frame_CloseBtn.0"
+          },
+          "ResourceName": "../../../Engine/Content/Slate/Common/Button.png",
+          "DrawAs": "ESlateBrushDrawType::Image"
+        },
+        "Pressed": {
+          "ImageSize": {
+            "X": 153.59999,
+            "Y": 153.59999
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'UI_Common_Frame_CloseBtn'",
+            "ObjectPath": "UE_game/Content/Art/UI/Textures/Common/Btn/NoAtlas/UI_Common_Frame_CloseBtn.0"
+          },
+          "ResourceName": "../../../Engine/Content/Slate/Common/Button.png",
+          "DrawAs": "ESlateBrushDrawType::Image"
+        },
+        "Disabled": {
+          "ImageSize": {
+            "X": 80.0,
+            "Y": 80.0
+          },
+          "Margin": {
+            "Left": 0.25,
+            "Top": 0.25,
+            "Right": 0.25,
+            "Bottom": 0.25
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'UI_Common_Frame_CloseBtn'",
+            "ObjectPath": "UE_game/Content/Art/UI/Textures/Common/Btn/NoAtlas/UI_Common_Frame_CloseBtn.0"
+          },
+          "ResourceName": "../../../Engine/Content/Slate/Common/Button.png",
+          "DrawAs": "ESlateBrushDrawType::Image",
+          "ImageType": "ESlateBrushImageType::FullColor"
+        },
+        "NormalPadding": {
+          "Left": 0.0,
+          "Top": 0.0,
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "PressedPadding": {
+          "Left": 0.0,
+          "Top": 0.0,
+          "Right": 0.0,
+          "Bottom": 0.0
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'LuaErrorItem_C:WidgetTree.RootVIew.CanvasPanelSlot_12'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/LuaErrorItem.10"
+      },
+      "bIsVolatile": true
+    }
+  },
+  {
+    "Type": "Button",
+    "Name": "ResetAccount",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Button'",
+    "Outer": {
+      "ObjectName": "WidgetTree'LuaErrorItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/LuaErrorItem.19"
+    },
+    "Properties": {
+      "WidgetStyle": {
+        "Normal": {
+          "ImageSize": {
+            "X": 326.4,
+            "Y": 97.92
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'UI_Common_BtnButton04'",
+            "ObjectPath": "UE_game/Content/Art/UI/Textures/Common/Btn/NoAtlas/UI_Common_BtnButton04.0"
+          },
+          "DrawAs": "ESlateBrushDrawType::Image"
+        },
+        "Hovered": {
+          "ImageSize": {
+            "X": 326.4,
+            "Y": 97.92
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'UI_Common_BtnButton04'",
+            "ObjectPath": "UE_game/Content/Art/UI/Textures/Common/Btn/NoAtlas/UI_Common_BtnButton04.0"
+          },
+          "ResourceName": "../../../Engine/Content/Slate/Common/Button.png",
+          "DrawAs": "ESlateBrushDrawType::Image"
+        },
+        "Pressed": {
+          "ImageSize": {
+            "X": 326.4,
+            "Y": 97.92
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'UI_Common_BtnButton04'",
+            "ObjectPath": "UE_game/Content/Art/UI/Textures/Common/Btn/NoAtlas/UI_Common_BtnButton04.0"
+          },
+          "ResourceName": "../../../Engine/Content/Slate/Common/Button.png",
+          "DrawAs": "ESlateBrushDrawType::Image"
+        },
+        "Disabled": {
+          "ImageSize": {
+            "X": 170.0,
+            "Y": 51.0
+          },
+          "Margin": {
+            "Left": 0.25,
+            "Top": 0.25,
+            "Right": 0.25,
+            "Bottom": 0.25
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'UI_Common_BtnButton04'",
+            "ObjectPath": "UE_game/Content/Art/UI/Textures/Common/Btn/NoAtlas/UI_Common_BtnButton04.0"
+          },
+          "ResourceName": "../../../Engine/Content/Slate/Common/Button.png",
+          "DrawAs": "ESlateBrushDrawType::Image",
+          "ImageType": "ESlateBrushImageType::FullColor"
+        },
+        "NormalPadding": {
+          "Left": 0.0,
+          "Top": 0.0,
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "PressedPadding": {
+          "Left": 0.0,
+          "Top": 0.0,
+          "Right": 0.0,
+          "Bottom": 0.0
+        }
+      },
+      "Slots": [
+        {
+          "ObjectName": "ButtonSlot'LuaErrorItem_C:WidgetTree.ResetAccount.ButtonSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/LuaErrorItem.4"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'LuaErrorItem_C:WidgetTree.RootVIew.CanvasPanelSlot_11'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/LuaErrorItem.9"
+      },
+      "bIsVolatile": true
+    }
+  },
+  {
+    "Type": "ButtonSlot",
+    "Name": "ButtonSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ButtonSlot'",
+    "Outer": {
+      "ObjectName": "Button'LuaErrorItem_C:WidgetTree.ResetAccount'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/LuaErrorItem.3"
+    },
+    "Properties": {
+      "Padding": {
+        "Left": 7.68,
+        "Top": 3.84,
+        "Right": 7.68,
+        "Bottom": 3.84
+      },
+      "Parent": {
+        "ObjectName": "Button'LuaErrorItem_C:WidgetTree.ResetAccount'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/LuaErrorItem.3"
+      },
+      "Content": {
+        "ObjectName": "UITextBlock'LuaErrorItem_C:WidgetTree.UITextBlock_113'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/LuaErrorItem.18"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "Container",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'LuaErrorItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/LuaErrorItem.19"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'LuaErrorItem_C:WidgetTree.Container.CanvasPanelSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/LuaErrorItem.7"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'LuaErrorItem_C:WidgetTree.RootVIew.CanvasPanelSlot_4'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/LuaErrorItem.12"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "RootVIew",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'LuaErrorItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/LuaErrorItem.19"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'LuaErrorItem_C:WidgetTree.RootVIew.CanvasPanelSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/LuaErrorItem.8"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'LuaErrorItem_C:WidgetTree.RootVIew.CanvasPanelSlot_13'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/LuaErrorItem.11"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'LuaErrorItem_C:WidgetTree.RootVIew.CanvasPanelSlot_4'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/LuaErrorItem.12"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'LuaErrorItem_C:WidgetTree.RootVIew.CanvasPanelSlot_12'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/LuaErrorItem.10"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'LuaErrorItem_C:WidgetTree.RootVIew.CanvasPanelSlot_11'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/LuaErrorItem.9"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'LuaErrorItem_C:WidgetTree.Container'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/LuaErrorItem.5"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "Anchors": {
+          "Maximum": {
+            "X": 1.0,
+            "Y": 1.0
+          }
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'LuaErrorItem_C:WidgetTree.Container'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/LuaErrorItem.5"
+      },
+      "Content": {
+        "ObjectName": "UIScrollBox'LuaErrorItem_C:WidgetTree.ScrollBox_54'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/LuaErrorItem.15"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'LuaErrorItem_C:WidgetTree.RootVIew'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/LuaErrorItem.6"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "Anchors": {
+          "Maximum": {
+            "X": 1.0,
+            "Y": 1.0
+          }
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'LuaErrorItem_C:WidgetTree.RootVIew'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/LuaErrorItem.6"
+      },
+      "Content": {
+        "ObjectName": "UIImage'LuaErrorItem_C:WidgetTree.Bg'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/LuaErrorItem.14"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_11",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'LuaErrorItem_C:WidgetTree.RootVIew'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/LuaErrorItem.6"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": -663.3955,
+          "Top": -475.19998,
+          "Right": 326.4,
+          "Bottom": 97.92
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "ZOrder": 10,
+      "Parent": {
+        "ObjectName": "CanvasPanel'LuaErrorItem_C:WidgetTree.RootVIew'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/LuaErrorItem.6"
+      },
+      "Content": {
+        "ObjectName": "Button'LuaErrorItem_C:WidgetTree.ResetAccount'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/LuaErrorItem.3"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_12",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'LuaErrorItem_C:WidgetTree.RootVIew'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/LuaErrorItem.6"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 994.56,
+          "Top": -618.24,
+          "Right": 153.59999,
+          "Bottom": 153.59999
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 1.0,
+          "Y": 0.0
+        }
+      },
+      "ZOrder": 10,
+      "Parent": {
+        "ObjectName": "CanvasPanel'LuaErrorItem_C:WidgetTree.RootVIew'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/LuaErrorItem.6"
+      },
+      "Content": {
+        "ObjectName": "Button'LuaErrorItem_C:WidgetTree.BackBtn'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/LuaErrorItem.2"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_13",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'LuaErrorItem_C:WidgetTree.RootVIew'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/LuaErrorItem.6"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": -33.6,
+          "Top": -475.52,
+          "Right": 192.0,
+          "Bottom": -17.493341
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'LuaErrorItem_C:WidgetTree.RootVIew'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/LuaErrorItem.6"
+      },
+      "Content": {
+        "ObjectName": "UITextBlock'LuaErrorItem_C:WidgetTree.Title'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/LuaErrorItem.17"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_4",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'LuaErrorItem_C:WidgetTree.RootVIew'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/LuaErrorItem.6"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 5.493164E-06,
+          "Top": 99.84,
+          "Right": 1739.52,
+          "Bottom": 928.64
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'LuaErrorItem_C:WidgetTree.RootVIew'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/LuaErrorItem.6"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'LuaErrorItem_C:WidgetTree.Container'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/LuaErrorItem.5"
+      }
+    }
+  },
+  {
+    "Type": "ScrollBoxSlot",
+    "Name": "ScrollBoxSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ScrollBoxSlot'",
+    "Outer": {
+      "ObjectName": "UIScrollBox'LuaErrorItem_C:WidgetTree.ScrollBox_54'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/LuaErrorItem.15"
+    },
+    "Properties": {
+      "Padding": {
+        "Left": 19.199999,
+        "Top": 19.199999,
+        "Right": 19.199999,
+        "Bottom": 19.199999
+      },
+      "Parent": {
+        "ObjectName": "UIScrollBox'LuaErrorItem_C:WidgetTree.ScrollBox_54'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/LuaErrorItem.15"
+      },
+      "Content": {
+        "ObjectName": "UITextBlock'LuaErrorItem_C:WidgetTree.ErrorMsg'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/LuaErrorItem.16"
+      }
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "Bg",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'LuaErrorItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/LuaErrorItem.19"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/Textures/Common/Bg/NoAtlas/UI_Common_GrayBg.UI_Common_GrayBg",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 122.88,
+          "Y": 122.88
+        }
+      },
+      "ColorAndOpacity": {
+        "R": 1.0,
+        "G": 1.0,
+        "B": 1.0,
+        "A": 0.3,
+        "Hex": "4CFFFFFF"
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'LuaErrorItem_C:WidgetTree.RootVIew.CanvasPanelSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/LuaErrorItem.8"
+      }
+    }
+  },
+  {
+    "Type": "UIScrollBox",
+    "Name": "ScrollBox_54",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIScrollBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'LuaErrorItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/LuaErrorItem.19"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "ScrollBoxSlot'LuaErrorItem_C:WidgetTree.ScrollBox_54.ScrollBoxSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/LuaErrorItem.13"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'LuaErrorItem_C:WidgetTree.Container.CanvasPanelSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/LuaErrorItem.7"
+      }
+    }
+  },
+  {
+    "Type": "UITextBlock",
+    "Name": "ErrorMsg",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UITextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'LuaErrorItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/LuaErrorItem.19"
+    },
+    "Properties": {
+      "CurrStyleId": 1014,
+      "Text": {
+        "Namespace": "",
+        "Key": "9BF6843F4F85C7DFBE398CAA9B3383D7",
+        "SourceString": "英雄特性英雄特性英雄特性英雄特性英雄特性英雄特性英雄特性英雄特性",
+        "LocalizedString": "英雄特性英雄特性英雄特性英雄特性英雄特性英雄特性英雄特性英雄特性"
+      },
+      "Font": {
+        "Size": 17
+      },
+      "AutoWrapText": true,
+      "Slot": {
+        "ObjectName": "ScrollBoxSlot'LuaErrorItem_C:WidgetTree.ScrollBox_54.ScrollBoxSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/LuaErrorItem.13"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "UITextBlock",
+    "Name": "Title",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UITextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'LuaErrorItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/LuaErrorItem.19"
+    },
+    "Properties": {
+      "CurrStyleId": 1077,
+      "CurrTextKey": "Func_Common_Log",
+      "ColorAndOpacity": {
+        "SpecifiedColor": {
+          "R": 0.0,
+          "G": 1.0,
+          "B": 0.0,
+          "A": 1.0,
+          "Hex": "00FF00"
+        }
+      },
+      "Justification": "ETextJustify::Center",
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'LuaErrorItem_C:WidgetTree.RootVIew.CanvasPanelSlot_13'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/LuaErrorItem.11"
+      }
+    }
+  },
+  {
+    "Type": "UITextBlock",
+    "Name": "UITextBlock_113",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UITextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'LuaErrorItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/LuaErrorItem.19"
+    },
+    "Properties": {
+      "CurrStyleId": 1110,
+      "CurrTextKey": "Func_Common_ResetAccount",
+      "Slot": {
+        "ObjectName": "ButtonSlot'LuaErrorItem_C:WidgetTree.ResetAccount.ButtonSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/LuaErrorItem.4"
+      }
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetTree'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'LuaErrorItem_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/LuaErrorItem.0"
+    },
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "CanvasPanel'LuaErrorItem_C:WidgetTree.RootVIew'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/LuaErrorItem.6"
+      }
+    }
+  }
+]

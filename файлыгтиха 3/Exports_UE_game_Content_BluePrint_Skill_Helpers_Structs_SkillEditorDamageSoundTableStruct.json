@@ -1,0 +1,87 @@
+[
+  {
+    "Type": "UserDefinedStruct",
+    "Name": "SkillEditorDamageSoundTableStruct",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UserDefinedStruct'",
+    "Package": "UE_game/Content/BluePrint/Skill/Helpers/Structs/SkillEditorDamageSoundTableStruct",
+    "Properties": {
+      "Guid": "8AA99489-459E03C1-9B95D596-DE6F013F"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ArrayProperty",
+        "Name": "AttackSndTypes_20_78978441415390234CF8C0A139AFDDA8",
+        "Flags": "RF_Public | RF_NeedPostLoad | RF_NeedPostLoadSubobjects | RF_WasLoaded | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "Inner": {
+          "Type": "ByteProperty",
+          "Name": "AttackSndTypes_20_78978441415390234CF8C0A139AFDDA8",
+          "Flags": "RF_Public | RF_NeedPostLoad | RF_NeedPostLoadSubobjects | RF_WasLoaded | RF_LoadCompleted",
+          "ElementSize": 1,
+          "Enum": {
+            "ObjectName": "UserDefinedEnum'ESkillEditorDmgAttackSndType'",
+            "ObjectPath": "UE_game/Content/Audio/BluePrint/Damage/Enums/ESkillEditorDmgAttackSndType.0"
+          }
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "VictimSndTypes_17_F84ED27346CF99C0AEACA89021B710D5",
+        "Flags": "RF_Public | RF_NeedPostLoad | RF_NeedPostLoadSubobjects | RF_WasLoaded | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "Inner": {
+          "Type": "ByteProperty",
+          "Name": "VictimSndTypes_17_F84ED27346CF99C0AEACA89021B710D5",
+          "Flags": "RF_Public | RF_NeedPostLoad | RF_NeedPostLoadSubobjects | RF_WasLoaded | RF_LoadCompleted",
+          "ElementSize": 1,
+          "Enum": {
+            "ObjectName": "UserDefinedEnum'ESkillEditorDmgVictimSndType'",
+            "ObjectPath": "UE_game/Content/Audio/BluePrint/Damage/Enums/ESkillEditorDmgVictimSndType.0"
+          }
+        }
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "bCrit_21_644A59B840E7CBBD96764491D96925E4",
+        "Flags": "RF_Public | RF_NeedPostLoad | RF_NeedPostLoadSubobjects | RF_WasLoaded | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "Enum": {
+          "ObjectName": "Enum'EDamageSndCritCond'",
+          "ObjectPath": "/Script/UE_game"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public | RF_NeedPostLoad | RF_NeedPostLoadSubobjects | RF_WasLoaded | RF_LoadCompleted",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "SoftObjectProperty",
+        "Name": "AudioEvent_13_BE05ACA14410157079DF62B1CC3A9062",
+        "Flags": "RF_Public | RF_NeedPostLoad | RF_NeedPostLoadSubobjects | RF_WasLoaded | RF_LoadCompleted",
+        "ElementSize": 48,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "PropertyClass": {
+          "ObjectName": "Class'AkAudioEvent'",
+          "ObjectPath": "/Script/AkAudio"
+        }
+      }
+    ],
+    "StructFlags": 0,
+    "DefaultProperties": {
+      "AttackSndTypes_20_78978441415390234CF8C0A139AFDDA8": [],
+      "VictimSndTypes_17_F84ED27346CF99C0AEACA89021B710D5": [],
+      "bCrit_21_644A59B840E7CBBD96764491D96925E4": "EDamageSndCritCond::E_always",
+      "AudioEvent_13_BE05ACA14410157079DF62B1CC3A9062": {
+        "AssetPathName": "None",
+        "SubPathString": ""
+      }
+    }
+  }
+]

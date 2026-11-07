@@ -1,0 +1,643 @@
+[
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "ActivityShop_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Package": "UE_game/Content/BluePrint/UI/ActivityCenter/Shop/ActivityShop",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'ActivityShop_C:WidgetTree'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Shop/ActivityShop.18"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'UserWidget'",
+      "ObjectPath": "/Script/UMG"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "BtnCloseTips",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIButton'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ImgGrayMask",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "TextTime",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIRichTextBlock'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      }
+    ],
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "ActivityShop_C'Default__ActivityShop_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Shop/ActivityShop.1"
+    }
+  },
+  {
+    "Type": "ActivityShop_C",
+    "Name": "Default__ActivityShop_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'UE_game/Content/BluePrint/UI/ActivityCenter/Shop/ActivityShop.ActivityShop_C'",
+    "Package": "UE_game/Content/BluePrint/UI/ActivityCenter/Shop/ActivityShop",
+    "Properties": {
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'ActivityShop_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Shop/ActivityShop.18"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'ActivityShop_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_6'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Shop/ActivityShop.10"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'ActivityShop_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Shop/ActivityShop.6"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'ActivityShop_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Shop/ActivityShop.5"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'ActivityShop_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_2'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Shop/ActivityShop.7"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'ActivityShop_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_4'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Shop/ActivityShop.8"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'ActivityShop_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_5'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Shop/ActivityShop.9"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CenterPanel",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'ActivityShop_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Shop/ActivityShop.18"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'ActivityShop_C:WidgetTree.CenterPanel.CanvasPanelSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Shop/ActivityShop.11"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'ActivityShop_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Shop/ActivityShop.6"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "GoodsTipsPanel",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'ActivityShop_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Shop/ActivityShop.18"
+    },
+    "Properties": {
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'ActivityShop_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_5'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Shop/ActivityShop.9"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'ActivityShop_C:WidgetTree.CanvasPanel_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Shop/ActivityShop.2"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 1120.3014,
+          "Top": -654.1553,
+          "Right": 192.0,
+          "Bottom": 57.6
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 1.0,
+          "Y": 0.0
+        }
+      },
+      "bAutoSize": true,
+      "ZOrder": 3,
+      "Parent": {
+        "ObjectName": "CanvasPanel'ActivityShop_C:WidgetTree.CanvasPanel_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Shop/ActivityShop.2"
+      },
+      "Content": {
+        "ObjectName": "HorizontalBox'ActivityShop_C:WidgetTree.TopMoneyList'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Shop/ActivityShop.12"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'ActivityShop_C:WidgetTree.CanvasPanel_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Shop/ActivityShop.2"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 259.84885,
+          "Top": 57.990868,
+          "Right": 1770.6056,
+          "Bottom": 914.4685
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "ZOrder": 2,
+      "Parent": {
+        "ObjectName": "CanvasPanel'ActivityShop_C:WidgetTree.CanvasPanel_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Shop/ActivityShop.2"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'ActivityShop_C:WidgetTree.CenterPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Shop/ActivityShop.3"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'ActivityShop_C:WidgetTree.CanvasPanel_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Shop/ActivityShop.2"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "Anchors": {
+          "Maximum": {
+            "X": 1.0,
+            "Y": 1.0
+          }
+        }
+      },
+      "ZOrder": 1,
+      "Parent": {
+        "ObjectName": "CanvasPanel'ActivityShop_C:WidgetTree.CanvasPanel_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Shop/ActivityShop.2"
+      },
+      "Content": {
+        "ObjectName": "UIButton'ActivityShop_C:WidgetTree.BtnCloseTips'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Shop/ActivityShop.14"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_4",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'ActivityShop_C:WidgetTree.CanvasPanel_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Shop/ActivityShop.2"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "Anchors": {
+          "Maximum": {
+            "X": 1.0,
+            "Y": 1.0
+          }
+        }
+      },
+      "ZOrder": 1,
+      "Parent": {
+        "ObjectName": "CanvasPanel'ActivityShop_C:WidgetTree.CanvasPanel_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Shop/ActivityShop.2"
+      },
+      "Content": {
+        "ObjectName": "UIImage'ActivityShop_C:WidgetTree.ImgGrayMask'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Shop/ActivityShop.15"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_5",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'ActivityShop_C:WidgetTree.CanvasPanel_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Shop/ActivityShop.2"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": -934.75714,
+          "Right": 675.83997,
+          "Bottom": 1440.0
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "ZOrder": 3,
+      "Parent": {
+        "ObjectName": "CanvasPanel'ActivityShop_C:WidgetTree.CanvasPanel_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Shop/ActivityShop.2"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'ActivityShop_C:WidgetTree.GoodsTipsPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Shop/ActivityShop.4"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_6",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'ActivityShop_C:WidgetTree.CanvasPanel_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Shop/ActivityShop.2"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": -61.08788,
+          "Top": -444.86948,
+          "Right": 1105.9199,
+          "Bottom": 49.92
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "ZOrder": 2,
+      "Parent": {
+        "ObjectName": "CanvasPanel'ActivityShop_C:WidgetTree.CanvasPanel_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Shop/ActivityShop.2"
+      },
+      "Content": {
+        "ObjectName": "UIRichTextBlock'ActivityShop_C:WidgetTree.TextTime'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Shop/ActivityShop.16"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'ActivityShop_C:WidgetTree.CenterPanel'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Shop/ActivityShop.3"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "Anchors": {
+          "Maximum": {
+            "X": 1.0,
+            "Y": 1.0
+          }
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'ActivityShop_C:WidgetTree.CenterPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Shop/ActivityShop.3"
+      },
+      "Content": {
+        "ObjectName": "UIScrollBox'ActivityShop_C:WidgetTree.UIScrollBox_135'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Shop/ActivityShop.17"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "TopMoneyList",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'ActivityShop_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Shop/ActivityShop.18"
+    },
+    "Properties": {
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'ActivityShop_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Shop/ActivityShop.5"
+      }
+    }
+  },
+  {
+    "Type": "ScrollBoxSlot",
+    "Name": "ScrollBoxSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ScrollBoxSlot'",
+    "Outer": {
+      "ObjectName": "UIScrollBox'ActivityShop_C:WidgetTree.UIScrollBox_135'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Shop/ActivityShop.17"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "UIScrollBox'ActivityShop_C:WidgetTree.UIScrollBox_135'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Shop/ActivityShop.17"
+      },
+      "Content": {
+        "ObjectName": "WrapBox'ActivityShop_C:WidgetTree.GoodsList'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Shop/ActivityShop.19"
+      }
+    }
+  },
+  {
+    "Type": "UIButton",
+    "Name": "BtnCloseTips",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIButton'",
+    "Outer": {
+      "ObjectName": "WidgetTree'ActivityShop_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Shop/ActivityShop.18"
+    },
+    "Properties": {
+      "IconImage": {
+        "ImageSize": {
+          "X": 61.44,
+          "Y": 61.44
+        }
+      },
+      "WidgetStyle": {
+        "Normal": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          },
+          "DrawAs": "ESlateBrushDrawType::NoDrawType"
+        },
+        "Hovered": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          },
+          "DrawAs": "ESlateBrushDrawType::NoDrawType"
+        },
+        "Pressed": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          },
+          "DrawAs": "ESlateBrushDrawType::NoDrawType"
+        },
+        "NormalPadding": {
+          "Left": 0.0,
+          "Top": 0.0,
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "PressedPadding": {
+          "Left": 0.0,
+          "Top": 0.0,
+          "Right": 0.0,
+          "Bottom": 0.0
+        }
+      },
+      "TouchMethod": "EButtonTouchMethod::PreciseTap",
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'ActivityShop_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Shop/ActivityShop.7"
+      },
+      "Visibility": "ESlateVisibility::Collapsed"
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "ImgGrayMask",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'ActivityShop_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Shop/ActivityShop.18"
+    },
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 61.44,
+          "Y": 61.44
+        }
+      },
+      "ColorAndOpacity": {
+        "R": 0.0,
+        "G": 0.0,
+        "B": 0.0,
+        "A": 0.3,
+        "Hex": "4C000000"
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'ActivityShop_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_4'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Shop/ActivityShop.8"
+      },
+      "Visibility": "ESlateVisibility::Collapsed"
+    }
+  },
+  {
+    "Type": "UIRichTextBlock",
+    "Name": "TextTime",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIRichTextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'ActivityShop_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Shop/ActivityShop.18"
+    },
+    "Properties": {
+      "CurrStyleId": 2040,
+      "ShrinkSize": {
+        "X": 122.88,
+        "Y": 122.88
+      },
+      "Text": {
+        "Namespace": "",
+        "Key": "AD105680474E63C4251214940C905735",
+        "SourceString": "<RichText>本活动已结束，界面关闭倒计时00:30</>",
+        "LocalizedString": "<RichText>本活动已结束，界面关闭倒计时00:30</>"
+      },
+      "VerticalJustification": "ETextVerticalJustify::Center",
+      "Margin": {
+        "Top": 10.0
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'ActivityShop_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_6'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Shop/ActivityShop.10"
+      }
+    }
+  },
+  {
+    "Type": "UIScrollBox",
+    "Name": "UIScrollBox_135",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIScrollBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'ActivityShop_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Shop/ActivityShop.18"
+    },
+    "Properties": {
+      "WidgetStyle": {
+        "TopShadowBrush": {
+          "DrawAs": "ESlateBrushDrawType::NoDrawType"
+        },
+        "BottomShadowBrush": {
+          "DrawAs": "ESlateBrushDrawType::NoDrawType"
+        }
+      },
+      "ScrollBarVisibility": "ESlateVisibility::Collapsed",
+      "Slots": [
+        {
+          "ObjectName": "ScrollBoxSlot'ActivityShop_C:WidgetTree.UIScrollBox_135.ScrollBoxSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Shop/ActivityShop.13"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'ActivityShop_C:WidgetTree.CenterPanel.CanvasPanelSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Shop/ActivityShop.11"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetTree'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'ActivityShop_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Shop/ActivityShop.0"
+    },
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "CanvasPanel'ActivityShop_C:WidgetTree.CanvasPanel_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Shop/ActivityShop.2"
+      }
+    }
+  },
+  {
+    "Type": "WrapBox",
+    "Name": "GoodsList",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WrapBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'ActivityShop_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Shop/ActivityShop.18"
+    },
+    "Properties": {
+      "WrapSize": 960.0,
+      "Slot": {
+        "ObjectName": "ScrollBoxSlot'ActivityShop_C:WidgetTree.UIScrollBox_135.ScrollBoxSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ActivityCenter/Shop/ActivityShop.13"
+      }
+    }
+  }
+]

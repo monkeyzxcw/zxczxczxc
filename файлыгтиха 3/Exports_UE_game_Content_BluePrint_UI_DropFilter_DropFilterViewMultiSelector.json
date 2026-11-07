@@ -1,0 +1,373 @@
+[
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "DropFilterViewMultiSelector_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Package": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterViewMultiSelector",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'DropFilterViewMultiSelector_C:WidgetTree'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterViewMultiSelector.13"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'UserWidget'",
+      "ObjectPath": "/Script/UMG"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "CloseMultiSelectorBtn",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIButton'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "DropFilterConditionMultiSelector",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'DropFilterConditionMultiSelector_C'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.0"
+        }
+      }
+    ],
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "DropFilterViewMultiSelector_C'Default__DropFilterViewMultiSelector_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterViewMultiSelector.1"
+    }
+  },
+  {
+    "Type": "DropFilterViewMultiSelector_C",
+    "Name": "Default__DropFilterViewMultiSelector_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'UE_game/Content/BluePrint/UI/DropFilter/DropFilterViewMultiSelector.DropFilterViewMultiSelector_C'",
+    "Package": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterViewMultiSelector",
+    "Properties": {
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "BackgroundBlur",
+    "Name": "BackgroundBlur_57",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BackgroundBlur'",
+    "Outer": {
+      "ObjectName": "WidgetTree'DropFilterViewMultiSelector_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterViewMultiSelector.13"
+    },
+    "Properties": {
+      "BlurStrength": 10.0,
+      "Slot": {
+        "ObjectName": "OverlaySlot'DropFilterViewMultiSelector_C:WidgetTree.MultiSelectorOverlay.OverlaySlot_5'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterViewMultiSelector.9"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'DropFilterViewMultiSelector_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterViewMultiSelector.13"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'DropFilterViewMultiSelector_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterViewMultiSelector.4"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'DropFilterViewMultiSelector_C:WidgetTree.CanvasPanel_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterViewMultiSelector.3"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "Anchors": {
+          "Maximum": {
+            "X": 1.0,
+            "Y": 1.0
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "ZOrder": 5,
+      "Parent": {
+        "ObjectName": "CanvasPanel'DropFilterViewMultiSelector_C:WidgetTree.CanvasPanel_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterViewMultiSelector.3"
+      },
+      "Content": {
+        "ObjectName": "Overlay'DropFilterViewMultiSelector_C:WidgetTree.MultiSelectorOverlay'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterViewMultiSelector.6"
+      }
+    }
+  },
+  {
+    "Type": "DropFilterConditionMultiSelector_C",
+    "Name": "DropFilterConditionMultiSelector",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.DropFilterConditionMultiSelector_C'",
+    "Outer": {
+      "ObjectName": "WidgetTree'DropFilterViewMultiSelector_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterViewMultiSelector.13"
+    },
+    "Template": {
+      "ObjectName": "DropFilterConditionMultiSelector_C'Default__DropFilterConditionMultiSelector_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterConditionMultiSelector.1"
+    },
+    "Properties": {
+      "Slot": {
+        "ObjectName": "OverlaySlot'DropFilterViewMultiSelector_C:WidgetTree.MultiSelectorOverlay.OverlaySlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterViewMultiSelector.7"
+      }
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "MultiSelectorOverlay",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Overlay'",
+    "Outer": {
+      "ObjectName": "WidgetTree'DropFilterViewMultiSelector_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterViewMultiSelector.13"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlaySlot'DropFilterViewMultiSelector_C:WidgetTree.MultiSelectorOverlay.OverlaySlot_5'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterViewMultiSelector.9"
+        },
+        {
+          "ObjectName": "OverlaySlot'DropFilterViewMultiSelector_C:WidgetTree.MultiSelectorOverlay.OverlaySlot_7'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterViewMultiSelector.10"
+        },
+        {
+          "ObjectName": "OverlaySlot'DropFilterViewMultiSelector_C:WidgetTree.MultiSelectorOverlay.OverlaySlot_3'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterViewMultiSelector.8"
+        },
+        {
+          "ObjectName": "OverlaySlot'DropFilterViewMultiSelector_C:WidgetTree.MultiSelectorOverlay.OverlaySlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterViewMultiSelector.7"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'DropFilterViewMultiSelector_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterViewMultiSelector.4"
+      },
+      "Visibility": "ESlateVisibility::Collapsed"
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'DropFilterViewMultiSelector_C:WidgetTree.MultiSelectorOverlay'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterViewMultiSelector.6"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "Overlay'DropFilterViewMultiSelector_C:WidgetTree.MultiSelectorOverlay'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterViewMultiSelector.6"
+      },
+      "Content": {
+        "ObjectName": "DropFilterConditionMultiSelector_C'DropFilterViewMultiSelector_C:WidgetTree.DropFilterConditionMultiSelector'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterViewMultiSelector.5"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'DropFilterViewMultiSelector_C:WidgetTree.MultiSelectorOverlay'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterViewMultiSelector.6"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Fill",
+      "VerticalAlignment": "VAlign_Fill",
+      "Parent": {
+        "ObjectName": "Overlay'DropFilterViewMultiSelector_C:WidgetTree.MultiSelectorOverlay'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterViewMultiSelector.6"
+      },
+      "Content": {
+        "ObjectName": "UIButton'DropFilterViewMultiSelector_C:WidgetTree.CloseMultiSelectorBtn'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterViewMultiSelector.11"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_5",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'DropFilterViewMultiSelector_C:WidgetTree.MultiSelectorOverlay'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterViewMultiSelector.6"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Fill",
+      "VerticalAlignment": "VAlign_Fill",
+      "Parent": {
+        "ObjectName": "Overlay'DropFilterViewMultiSelector_C:WidgetTree.MultiSelectorOverlay'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterViewMultiSelector.6"
+      },
+      "Content": {
+        "ObjectName": "BackgroundBlur'DropFilterViewMultiSelector_C:WidgetTree.BackgroundBlur_57'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterViewMultiSelector.2"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_7",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'DropFilterViewMultiSelector_C:WidgetTree.MultiSelectorOverlay'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterViewMultiSelector.6"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Fill",
+      "VerticalAlignment": "VAlign_Fill",
+      "Parent": {
+        "ObjectName": "Overlay'DropFilterViewMultiSelector_C:WidgetTree.MultiSelectorOverlay'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterViewMultiSelector.6"
+      },
+      "Content": {
+        "ObjectName": "UIImage'DropFilterViewMultiSelector_C:WidgetTree.UIImage_25'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterViewMultiSelector.12"
+      }
+    }
+  },
+  {
+    "Type": "UIButton",
+    "Name": "CloseMultiSelectorBtn",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIButton'",
+    "Outer": {
+      "ObjectName": "WidgetTree'DropFilterViewMultiSelector_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterViewMultiSelector.13"
+    },
+    "Properties": {
+      "bIsTransparent": true,
+      "IconImage": {
+        "ImageSize": {
+          "X": 61.44,
+          "Y": 61.44
+        }
+      },
+      "WidgetStyle": {
+        "Normal": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          }
+        },
+        "Hovered": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          }
+        },
+        "Pressed": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          }
+        }
+      },
+      "Slot": {
+        "ObjectName": "OverlaySlot'DropFilterViewMultiSelector_C:WidgetTree.MultiSelectorOverlay.OverlaySlot_3'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterViewMultiSelector.8"
+      },
+      "Visibility": "ESlateVisibility::Collapsed"
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "UIImage_25",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'DropFilterViewMultiSelector_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterViewMultiSelector.13"
+    },
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 61.44,
+          "Y": 61.44
+        },
+        "TintColor": {
+          "SpecifiedColor": {
+            "R": 0.0,
+            "G": 0.0,
+            "B": 0.0,
+            "A": 0.8,
+            "Hex": "CC000000"
+          }
+        }
+      },
+      "Slot": {
+        "ObjectName": "OverlaySlot'DropFilterViewMultiSelector_C:WidgetTree.MultiSelectorOverlay.OverlaySlot_7'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterViewMultiSelector.10"
+      },
+      "bIsVariable": false
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetTree'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'DropFilterViewMultiSelector_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterViewMultiSelector.0"
+    },
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "CanvasPanel'DropFilterViewMultiSelector_C:WidgetTree.CanvasPanel_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/DropFilter/DropFilterViewMultiSelector.3"
+      }
+    }
+  }
+]

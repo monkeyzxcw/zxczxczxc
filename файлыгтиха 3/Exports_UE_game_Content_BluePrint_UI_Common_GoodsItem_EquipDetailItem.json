@@ -1,0 +1,685 @@
+[
+  {
+    "Type": "Function",
+    "Name": "OnInstallEqual__DelegateSignature",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'EquipDetailItem_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Common/GoodsItem/EquipDetailItem.1"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StrProperty",
+        "Name": "ItemId",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_Delegate | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "EquipDetailItem_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Package": "UE_game/Content/BluePrint/UI/Common/GoodsItem/EquipDetailItem",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'EquipDetailItem_C:WidgetTree'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Common/GoodsItem/EquipDetailItem.22"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'UserWidget'",
+      "ObjectPath": "/Script/UMG"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'EquipDetailItem_C:OnInstallEqual__DelegateSignature'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Common/GoodsItem/EquipDetailItem.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "BackBtn",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIButton'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CurrencyTips",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'CurrencyTips_C'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/BackGround/CurrencyTips.0"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Image_Bg",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "ItemId",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "MulticastInlineDelegateProperty",
+        "Name": "OnInstallEqual",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance | BlueprintAssignable | BlueprintCallable",
+        "SignatureFunction": {
+          "ObjectName": "Function'EquipDetailItem_C:OnInstallEqual__DelegateSignature'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Common/GoodsItem/EquipDetailItem.0"
+        }
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "CmdName",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "StorePos",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      }
+    ],
+    "FuncMap": {
+      "OnInstallEqual__DelegateSignature": {
+        "ObjectName": "Function'EquipDetailItem_C:OnInstallEqual__DelegateSignature'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Common/GoodsItem/EquipDetailItem.0"
+      }
+    },
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "EquipDetailItem_C'Default__EquipDetailItem_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Common/GoodsItem/EquipDetailItem.2"
+    }
+  },
+  {
+    "Type": "EquipDetailItem_C",
+    "Name": "Default__EquipDetailItem_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'UE_game/Content/BluePrint/UI/Common/GoodsItem/EquipDetailItem.EquipDetailItem_C'",
+    "Package": "UE_game/Content/BluePrint/UI/Common/GoodsItem/EquipDetailItem",
+    "Properties": {
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "ButtonSlot",
+    "Name": "ButtonSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ButtonSlot'",
+    "Outer": {
+      "ObjectName": "UIButton'EquipDetailItem_C:WidgetTree.BackBtn'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Common/GoodsItem/EquipDetailItem.20"
+    },
+    "Properties": {
+      "Padding": {
+        "Left": 0.0,
+        "Top": 0.0,
+        "Right": 0.0,
+        "Bottom": 0.0
+      },
+      "HorizontalAlignment": "HAlign_Fill",
+      "VerticalAlignment": "VAlign_Fill",
+      "Parent": {
+        "ObjectName": "UIButton'EquipDetailItem_C:WidgetTree.BackBtn'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Common/GoodsItem/EquipDetailItem.20"
+      },
+      "Content": {
+        "ObjectName": "UIImage'EquipDetailItem_C:WidgetTree.Image_Bg'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Common/GoodsItem/EquipDetailItem.21"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_Con",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipDetailItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Common/GoodsItem/EquipDetailItem.22"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'EquipDetailItem_C:WidgetTree.CanvasPanel_Con.CanvasPanelSlot_3'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Common/GoodsItem/EquipDetailItem.7"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'EquipDetailItem_C:WidgetTree.WidgetRootView.CanvasPanelSlot_8'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Common/GoodsItem/EquipDetailItem.10"
+      },
+      "RenderTransformPivot": {
+        "X": 1.0,
+        "Y": 0.5
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_Extra",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipDetailItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Common/GoodsItem/EquipDetailItem.22"
+    },
+    "Properties": {
+      "Slot": {
+        "ObjectName": "SizeBoxSlot'EquipDetailItem_C:WidgetTree.SizeBox_Extra.SizeBoxSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Common/GoodsItem/EquipDetailItem.18"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "WidgetRootView",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipDetailItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Common/GoodsItem/EquipDetailItem.22"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'EquipDetailItem_C:WidgetTree.WidgetRootView.CanvasPanelSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Common/GoodsItem/EquipDetailItem.8"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'EquipDetailItem_C:WidgetTree.WidgetRootView.CanvasPanelSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Common/GoodsItem/EquipDetailItem.9"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'EquipDetailItem_C:WidgetTree.WidgetRootView.CanvasPanelSlot_8'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Common/GoodsItem/EquipDetailItem.10"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'EquipDetailItem_C:WidgetTree.CanvasPanel_Con'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Common/GoodsItem/EquipDetailItem.4"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 192.0,
+          "Bottom": 0.0
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.0
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 1.0
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'EquipDetailItem_C:WidgetTree.CanvasPanel_Con'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Common/GoodsItem/EquipDetailItem.4"
+      },
+      "Content": {
+        "ObjectName": "HorizontalBox'EquipDetailItem_C:WidgetTree.HorizontalBox_Con'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Common/GoodsItem/EquipDetailItem.12"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'EquipDetailItem_C:WidgetTree.WidgetRootView'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Common/GoodsItem/EquipDetailItem.6"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 0.0,
+          "Bottom": 0.0
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'EquipDetailItem_C:WidgetTree.WidgetRootView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Common/GoodsItem/EquipDetailItem.6"
+      },
+      "Content": {
+        "ObjectName": "Overlay'EquipDetailItem_C:WidgetTree.Overlay_123'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Common/GoodsItem/EquipDetailItem.15"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'EquipDetailItem_C:WidgetTree.WidgetRootView'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Common/GoodsItem/EquipDetailItem.6"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "Anchors": {
+          "Maximum": {
+            "X": 1.0,
+            "Y": 1.0
+          }
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'EquipDetailItem_C:WidgetTree.WidgetRootView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Common/GoodsItem/EquipDetailItem.6"
+      },
+      "Content": {
+        "ObjectName": "UIButton'EquipDetailItem_C:WidgetTree.BackBtn'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Common/GoodsItem/EquipDetailItem.20"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_8",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'EquipDetailItem_C:WidgetTree.WidgetRootView'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Common/GoodsItem/EquipDetailItem.6"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 1344.0,
+          "Bottom": 1440.0
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'EquipDetailItem_C:WidgetTree.WidgetRootView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Common/GoodsItem/EquipDetailItem.6"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'EquipDetailItem_C:WidgetTree.CanvasPanel_Con'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Common/GoodsItem/EquipDetailItem.4"
+      }
+    }
+  },
+  {
+    "Type": "CurrencyTips_C",
+    "Name": "CurrencyTips",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'UE_game/Content/BluePrint/UI/BackGround/CurrencyTips.CurrencyTips_C'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipDetailItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Common/GoodsItem/EquipDetailItem.22"
+    },
+    "Template": {
+      "ObjectName": "CurrencyTips_C'Default__CurrencyTips_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/BackGround/CurrencyTips.1"
+    },
+    "Properties": {
+      "Slot": {
+        "ObjectName": "SizeBoxSlot'EquipDetailItem_C:WidgetTree.SizeBox_Main.SizeBoxSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Common/GoodsItem/EquipDetailItem.19"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "HorizontalBox_Con",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipDetailItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Common/GoodsItem/EquipDetailItem.22"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HorizontalBoxSlot'EquipDetailItem_C:WidgetTree.HorizontalBox_Con.HorizontalBoxSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Common/GoodsItem/EquipDetailItem.13"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'EquipDetailItem_C:WidgetTree.HorizontalBox_Con.HorizontalBoxSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Common/GoodsItem/EquipDetailItem.14"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'EquipDetailItem_C:WidgetTree.CanvasPanel_Con.CanvasPanelSlot_3'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Common/GoodsItem/EquipDetailItem.7"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'EquipDetailItem_C:WidgetTree.HorizontalBox_Con'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Common/GoodsItem/EquipDetailItem.12"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "HorizontalBox'EquipDetailItem_C:WidgetTree.HorizontalBox_Con'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Common/GoodsItem/EquipDetailItem.12"
+      },
+      "Content": {
+        "ObjectName": "SizeBox'EquipDetailItem_C:WidgetTree.SizeBox_Main'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Common/GoodsItem/EquipDetailItem.17"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'EquipDetailItem_C:WidgetTree.HorizontalBox_Con'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Common/GoodsItem/EquipDetailItem.12"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "HorizontalBox'EquipDetailItem_C:WidgetTree.HorizontalBox_Con'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Common/GoodsItem/EquipDetailItem.12"
+      },
+      "Content": {
+        "ObjectName": "SizeBox'EquipDetailItem_C:WidgetTree.SizeBox_Extra'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Common/GoodsItem/EquipDetailItem.16"
+      }
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "Overlay_123",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Overlay'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipDetailItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Common/GoodsItem/EquipDetailItem.22"
+    },
+    "Properties": {
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'EquipDetailItem_C:WidgetTree.WidgetRootView.CanvasPanelSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Common/GoodsItem/EquipDetailItem.8"
+      }
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SizeBox_Extra",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipDetailItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Common/GoodsItem/EquipDetailItem.22"
+    },
+    "Properties": {
+      "WidthOverride": 600.0,
+      "HeightOverride": 1440.0,
+      "bOverride_WidthOverride": true,
+      "bOverride_HeightOverride": true,
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot'EquipDetailItem_C:WidgetTree.SizeBox_Extra.SizeBoxSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Common/GoodsItem/EquipDetailItem.18"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'EquipDetailItem_C:WidgetTree.HorizontalBox_Con.HorizontalBoxSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Common/GoodsItem/EquipDetailItem.14"
+      },
+      "Visibility": "ESlateVisibility::Collapsed"
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SizeBox_Main",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipDetailItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Common/GoodsItem/EquipDetailItem.22"
+    },
+    "Properties": {
+      "WidthOverride": 550.0,
+      "HeightOverride": 1440.0,
+      "bOverride_WidthOverride": true,
+      "bOverride_HeightOverride": true,
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot'EquipDetailItem_C:WidgetTree.SizeBox_Main.SizeBoxSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Common/GoodsItem/EquipDetailItem.19"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'EquipDetailItem_C:WidgetTree.HorizontalBox_Con.HorizontalBoxSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Common/GoodsItem/EquipDetailItem.13"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBoxSlot'",
+    "Outer": {
+      "ObjectName": "SizeBox'EquipDetailItem_C:WidgetTree.SizeBox_Extra'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Common/GoodsItem/EquipDetailItem.16"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "SizeBox'EquipDetailItem_C:WidgetTree.SizeBox_Extra'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Common/GoodsItem/EquipDetailItem.16"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'EquipDetailItem_C:WidgetTree.CanvasPanel_Extra'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Common/GoodsItem/EquipDetailItem.5"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBoxSlot'",
+    "Outer": {
+      "ObjectName": "SizeBox'EquipDetailItem_C:WidgetTree.SizeBox_Main'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Common/GoodsItem/EquipDetailItem.17"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "SizeBox'EquipDetailItem_C:WidgetTree.SizeBox_Main'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Common/GoodsItem/EquipDetailItem.17"
+      },
+      "Content": {
+        "ObjectName": "CurrencyTips_C'EquipDetailItem_C:WidgetTree.CurrencyTips'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Common/GoodsItem/EquipDetailItem.11"
+      }
+    }
+  },
+  {
+    "Type": "UIButton",
+    "Name": "BackBtn",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIButton'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipDetailItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Common/GoodsItem/EquipDetailItem.22"
+    },
+    "Properties": {
+      "IconImage": {
+        "ImageSize": {
+          "X": 61.44,
+          "Y": 61.44
+        }
+      },
+      "WidgetStyle": {
+        "Normal": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          },
+          "DrawAs": "ESlateBrushDrawType::NoDrawType"
+        },
+        "Hovered": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          },
+          "DrawAs": "ESlateBrushDrawType::NoDrawType"
+        },
+        "Pressed": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          },
+          "DrawAs": "ESlateBrushDrawType::NoDrawType"
+        },
+        "NormalPadding": {
+          "Left": 0.0,
+          "Top": 0.0,
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "PressedPadding": {
+          "Left": 0.0,
+          "Top": 0.0,
+          "Right": 0.0,
+          "Bottom": 0.0
+        }
+      },
+      "Slots": [
+        {
+          "ObjectName": "ButtonSlot'EquipDetailItem_C:WidgetTree.BackBtn.ButtonSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Common/GoodsItem/EquipDetailItem.3"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'EquipDetailItem_C:WidgetTree.WidgetRootView.CanvasPanelSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Common/GoodsItem/EquipDetailItem.9"
+      }
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "Image_Bg",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipDetailItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Common/GoodsItem/EquipDetailItem.22"
+    },
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 61.44,
+          "Y": 61.44
+        }
+      },
+      "ColorAndOpacity": {
+        "R": 0.0,
+        "G": 0.0,
+        "B": 0.0,
+        "A": 1.0,
+        "Hex": "000000"
+      },
+      "Slot": {
+        "ObjectName": "ButtonSlot'EquipDetailItem_C:WidgetTree.BackBtn.ButtonSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Common/GoodsItem/EquipDetailItem.3"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible",
+      "RenderOpacity": 0.4
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetTree'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'EquipDetailItem_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Common/GoodsItem/EquipDetailItem.1"
+    },
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "CanvasPanel'EquipDetailItem_C:WidgetTree.WidgetRootView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Common/GoodsItem/EquipDetailItem.6"
+      }
+    }
+  }
+]

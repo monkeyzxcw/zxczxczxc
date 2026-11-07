@@ -1,0 +1,1344 @@
+[
+  {
+    "Type": "Function",
+    "Name": "UpdateSize",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'UIMinClickTesterItem_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIMinClickTesterItem.1"
+    },
+    "ChildProperties": [
+      {
+        "Type": "FloatProperty",
+        "Name": "Width",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "Height",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "FontSize",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "UIMinClickTesterItem_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Package": "UE_game/Content/BluePrint/UI/Debug/Item/UIMinClickTesterItem",
+    "Super": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'GMUserWidget_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/GMUserWidget.3"
+    },
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'UIMinClickTesterItem_C:WidgetTree'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIMinClickTesterItem.38"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'GMUserWidget_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/GMUserWidget.3"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'UIMinClickTesterItem_C:UpdateSize'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIMinClickTesterItem.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Bg",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CloseBtn",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIButton'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ConfirmBtn",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIButton'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ExitBtn",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIButton'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "LET",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIEditText'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "MinClick",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'MinClick_C'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Test/MinClick.3"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "RET",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIEditText'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SizeBtn",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIButton'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "UIImage_58",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      }
+    ],
+    "FuncMap": {
+      "UpdateSize": {
+        "ObjectName": "Function'UIMinClickTesterItem_C:UpdateSize'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIMinClickTesterItem.0"
+      }
+    },
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "UIMinClickTesterItem_C'Default__UIMinClickTesterItem_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIMinClickTesterItem.2"
+    }
+  },
+  {
+    "Type": "UIMinClickTesterItem_C",
+    "Name": "Default__UIMinClickTesterItem_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'UE_game/Content/BluePrint/UI/Debug/Item/UIMinClickTesterItem.UIMinClickTesterItem_C'",
+    "Package": "UE_game/Content/BluePrint/UI/Debug/Item/UIMinClickTesterItem",
+    "Template": {
+      "ObjectName": "GMUserWidget_C'Default__GMUserWidget_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/GMUserWidget.4"
+    }
+  },
+  {
+    "Type": "ButtonSlot",
+    "Name": "ButtonSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ButtonSlot'",
+    "Outer": {
+      "ObjectName": "UIButton'UIMinClickTesterItem_C:WidgetTree.CloseBtn'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIMinClickTesterItem.23"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "UIButton'UIMinClickTesterItem_C:WidgetTree.CloseBtn'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIMinClickTesterItem.23"
+      },
+      "Content": {
+        "ObjectName": "UITextBlock'UIMinClickTesterItem_C:WidgetTree.UITextBlock_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIMinClickTesterItem.32"
+      }
+    }
+  },
+  {
+    "Type": "ButtonSlot",
+    "Name": "ButtonSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ButtonSlot'",
+    "Outer": {
+      "ObjectName": "UIButton'UIMinClickTesterItem_C:WidgetTree.ConfirmBtn'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIMinClickTesterItem.24"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "UIButton'UIMinClickTesterItem_C:WidgetTree.ConfirmBtn'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIMinClickTesterItem.24"
+      },
+      "Content": {
+        "ObjectName": "UITextBlock'UIMinClickTesterItem_C:WidgetTree.UITextBlock'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIMinClickTesterItem.31"
+      }
+    }
+  },
+  {
+    "Type": "ButtonSlot",
+    "Name": "ButtonSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ButtonSlot'",
+    "Outer": {
+      "ObjectName": "UIButton'UIMinClickTesterItem_C:WidgetTree.ExitBtn'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIMinClickTesterItem.25"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "UIButton'UIMinClickTesterItem_C:WidgetTree.ExitBtn'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIMinClickTesterItem.25"
+      },
+      "Content": {
+        "ObjectName": "UITextBlock'UIMinClickTesterItem_C:WidgetTree.UITextBlock_5'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIMinClickTesterItem.35"
+      }
+    }
+  },
+  {
+    "Type": "ButtonSlot",
+    "Name": "ButtonSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ButtonSlot'",
+    "Outer": {
+      "ObjectName": "UIButton'UIMinClickTesterItem_C:WidgetTree.SizeBtn'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIMinClickTesterItem.26"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "UIButton'UIMinClickTesterItem_C:WidgetTree.SizeBtn'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIMinClickTesterItem.26"
+      },
+      "Content": {
+        "ObjectName": "UITextBlock'UIMinClickTesterItem_C:WidgetTree.UITextBlock_77'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIMinClickTesterItem.36"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "FullView",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'UIMinClickTesterItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIMinClickTesterItem.38"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'UIMinClickTesterItem_C:WidgetTree.FullView.CanvasPanelSlot_4'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIMinClickTesterItem.10"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'UIMinClickTesterItem_C:WidgetTree.FullView.CanvasPanelSlot_18'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIMinClickTesterItem.9"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'UIMinClickTesterItem_C:WidgetTree.FullView.CanvasPanelSlot_5'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIMinClickTesterItem.11"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'UIMinClickTesterItem_C:WidgetTree.FullView.CanvasPanelSlot_8'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIMinClickTesterItem.12"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "SizePanel",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'UIMinClickTesterItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIMinClickTesterItem.38"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'UIMinClickTesterItem_C:WidgetTree.SizePanel.CanvasPanelSlot_5'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIMinClickTesterItem.17"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'UIMinClickTesterItem_C:WidgetTree.SizePanel.CanvasPanelSlot_12'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIMinClickTesterItem.16"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'UIMinClickTesterItem_C:WidgetTree.SizePanel.CanvasPanelSlot_9'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIMinClickTesterItem.21"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'UIMinClickTesterItem_C:WidgetTree.SizePanel.CanvasPanelSlot_10'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIMinClickTesterItem.14"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'UIMinClickTesterItem_C:WidgetTree.SizePanel.CanvasPanelSlot_8'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIMinClickTesterItem.20"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'UIMinClickTesterItem_C:WidgetTree.SizePanel.CanvasPanelSlot_11'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIMinClickTesterItem.15"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'UIMinClickTesterItem_C:WidgetTree.SizePanel.CanvasPanelSlot_6'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIMinClickTesterItem.18"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'UIMinClickTesterItem_C:WidgetTree.SizePanel.CanvasPanelSlot_7'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIMinClickTesterItem.19"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'UIMinClickTesterItem_C:WidgetTree.SizePanel.CanvasPanelSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIMinClickTesterItem.13"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'UIMinClickTesterItem_C:WidgetTree.FullView.CanvasPanelSlot_8'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIMinClickTesterItem.12"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_18",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'UIMinClickTesterItem_C:WidgetTree.FullView'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIMinClickTesterItem.7"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "Anchors": {
+          "Maximum": {
+            "X": 1.0,
+            "Y": 1.0
+          }
+        }
+      },
+      "ZOrder": 1,
+      "Parent": {
+        "ObjectName": "CanvasPanel'UIMinClickTesterItem_C:WidgetTree.FullView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIMinClickTesterItem.7"
+      },
+      "Content": {
+        "ObjectName": "MinClick_C'UIMinClickTesterItem_C:WidgetTree.MinClick'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIMinClickTesterItem.22"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_4",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'UIMinClickTesterItem_C:WidgetTree.FullView'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIMinClickTesterItem.7"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "Anchors": {
+          "Maximum": {
+            "X": 1.0,
+            "Y": 1.0
+          }
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'UIMinClickTesterItem_C:WidgetTree.FullView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIMinClickTesterItem.7"
+      },
+      "Content": {
+        "ObjectName": "UIImage'UIMinClickTesterItem_C:WidgetTree.Bg'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIMinClickTesterItem.29"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_5",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'UIMinClickTesterItem_C:WidgetTree.FullView'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIMinClickTesterItem.7"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 200.0,
+          "Bottom": 80.0
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.0
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.0
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.0
+        }
+      },
+      "ZOrder": 2,
+      "Parent": {
+        "ObjectName": "CanvasPanel'UIMinClickTesterItem_C:WidgetTree.FullView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIMinClickTesterItem.7"
+      },
+      "Content": {
+        "ObjectName": "UIButton'UIMinClickTesterItem_C:WidgetTree.SizeBtn'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIMinClickTesterItem.26"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_8",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'UIMinClickTesterItem_C:WidgetTree.FullView'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIMinClickTesterItem.7"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 1000.0,
+          "Bottom": 500.0
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "ZOrder": 3,
+      "Parent": {
+        "ObjectName": "CanvasPanel'UIMinClickTesterItem_C:WidgetTree.FullView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIMinClickTesterItem.7"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'UIMinClickTesterItem_C:WidgetTree.SizePanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIMinClickTesterItem.8"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'UIMinClickTesterItem_C:WidgetTree.SizePanel'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIMinClickTesterItem.8"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Top": 100.0,
+          "Right": 160.0,
+          "Bottom": 60.0
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 1.0,
+          "Y": 0.0
+        }
+      },
+      "ZOrder": 1,
+      "Parent": {
+        "ObjectName": "CanvasPanel'UIMinClickTesterItem_C:WidgetTree.SizePanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIMinClickTesterItem.8"
+      },
+      "Content": {
+        "ObjectName": "UIButton'UIMinClickTesterItem_C:WidgetTree.ExitBtn'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIMinClickTesterItem.25"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_10",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'UIMinClickTesterItem_C:WidgetTree.SizePanel'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIMinClickTesterItem.8"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 110.0,
+          "Right": 200.0,
+          "Bottom": 60.0
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.0,
+          "Y": 0.5
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'UIMinClickTesterItem_C:WidgetTree.SizePanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIMinClickTesterItem.8"
+      },
+      "Content": {
+        "ObjectName": "UIEditText'UIMinClickTesterItem_C:WidgetTree.RET'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIMinClickTesterItem.28"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_11",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'UIMinClickTesterItem_C:WidgetTree.SizePanel'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIMinClickTesterItem.8"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": -110.0,
+          "Right": 200.0,
+          "Bottom": 60.0
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 1.0,
+          "Y": 0.54
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'UIMinClickTesterItem_C:WidgetTree.SizePanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIMinClickTesterItem.8"
+      },
+      "Content": {
+        "ObjectName": "UIEditText'UIMinClickTesterItem_C:WidgetTree.LET'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIMinClickTesterItem.27"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_12",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'UIMinClickTesterItem_C:WidgetTree.SizePanel'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIMinClickTesterItem.8"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Top": -30.0,
+          "Bottom": 40.0
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'UIMinClickTesterItem_C:WidgetTree.SizePanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIMinClickTesterItem.8"
+      },
+      "Content": {
+        "ObjectName": "UITextBlock'UIMinClickTesterItem_C:WidgetTree.UITextBlock_3'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIMinClickTesterItem.34"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_5",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'UIMinClickTesterItem_C:WidgetTree.SizePanel'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIMinClickTesterItem.8"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "Anchors": {
+          "Maximum": {
+            "X": 1.0,
+            "Y": 1.0
+          }
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'UIMinClickTesterItem_C:WidgetTree.SizePanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIMinClickTesterItem.8"
+      },
+      "Content": {
+        "ObjectName": "UIImage'UIMinClickTesterItem_C:WidgetTree.UIImage_58'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIMinClickTesterItem.30"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_6",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'UIMinClickTesterItem_C:WidgetTree.SizePanel'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIMinClickTesterItem.8"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 60.0,
+          "Bottom": 60.0
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 1.0,
+            "Y": 0.0
+          },
+          "Maximum": {
+            "X": 1.0,
+            "Y": 0.0
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "ZOrder": 1,
+      "Parent": {
+        "ObjectName": "CanvasPanel'UIMinClickTesterItem_C:WidgetTree.SizePanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIMinClickTesterItem.8"
+      },
+      "Content": {
+        "ObjectName": "UIButton'UIMinClickTesterItem_C:WidgetTree.CloseBtn'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIMinClickTesterItem.23"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_7",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'UIMinClickTesterItem_C:WidgetTree.SizePanel'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIMinClickTesterItem.8"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Top": 100.0,
+          "Right": 160.0,
+          "Bottom": 60.0
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        }
+      },
+      "ZOrder": 1,
+      "Parent": {
+        "ObjectName": "CanvasPanel'UIMinClickTesterItem_C:WidgetTree.SizePanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIMinClickTesterItem.8"
+      },
+      "Content": {
+        "ObjectName": "UIButton'UIMinClickTesterItem_C:WidgetTree.ConfirmBtn'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIMinClickTesterItem.24"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_8",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'UIMinClickTesterItem_C:WidgetTree.SizePanel'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIMinClickTesterItem.8"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 160.0,
+          "Top": -60.0,
+          "Bottom": 40.0
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.0,
+          "Y": 0.5
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'UIMinClickTesterItem_C:WidgetTree.SizePanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIMinClickTesterItem.8"
+      },
+      "Content": {
+        "ObjectName": "UITextBlock'UIMinClickTesterItem_C:WidgetTree.UITextBlock_79'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIMinClickTesterItem.37"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_9",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'UIMinClickTesterItem_C:WidgetTree.SizePanel'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIMinClickTesterItem.8"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": -160.0,
+          "Top": -60.0,
+          "Bottom": 40.0
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 1.0,
+          "Y": 0.5
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'UIMinClickTesterItem_C:WidgetTree.SizePanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIMinClickTesterItem.8"
+      },
+      "Content": {
+        "ObjectName": "UITextBlock'UIMinClickTesterItem_C:WidgetTree.UITextBlock_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIMinClickTesterItem.33"
+      }
+    }
+  },
+  {
+    "Type": "MinClick_C",
+    "Name": "MinClick",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'UE_game/Content/BluePrint/UI/Test/MinClick.MinClick_C'",
+    "Outer": {
+      "ObjectName": "WidgetTree'UIMinClickTesterItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIMinClickTesterItem.38"
+    },
+    "Template": {
+      "ObjectName": "MinClick_C'Default__MinClick_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Test/MinClick.4"
+    },
+    "Properties": {
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'UIMinClickTesterItem_C:WidgetTree.FullView.CanvasPanelSlot_18'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIMinClickTesterItem.9"
+      }
+    }
+  },
+  {
+    "Type": "UIButton",
+    "Name": "CloseBtn",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIButton'",
+    "Outer": {
+      "ObjectName": "WidgetTree'UIMinClickTesterItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIMinClickTesterItem.38"
+    },
+    "Properties": {
+      "WidgetStyle": {
+        "NormalPadding": {
+          "Left": 0.0,
+          "Top": 0.0,
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "PressedPadding": {
+          "Left": 0.0,
+          "Top": 0.0,
+          "Right": 0.0,
+          "Bottom": 0.0
+        }
+      },
+      "Slots": [
+        {
+          "ObjectName": "ButtonSlot'UIMinClickTesterItem_C:WidgetTree.CloseBtn.ButtonSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIMinClickTesterItem.3"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'UIMinClickTesterItem_C:WidgetTree.SizePanel.CanvasPanelSlot_6'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIMinClickTesterItem.18"
+      }
+    }
+  },
+  {
+    "Type": "UIButton",
+    "Name": "ConfirmBtn",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIButton'",
+    "Outer": {
+      "ObjectName": "WidgetTree'UIMinClickTesterItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIMinClickTesterItem.38"
+    },
+    "Properties": {
+      "WidgetStyle": {
+        "NormalPadding": {
+          "Left": 0.0,
+          "Top": 0.0,
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "PressedPadding": {
+          "Left": 0.0,
+          "Top": 0.0,
+          "Right": 0.0,
+          "Bottom": 0.0
+        }
+      },
+      "Slots": [
+        {
+          "ObjectName": "ButtonSlot'UIMinClickTesterItem_C:WidgetTree.ConfirmBtn.ButtonSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIMinClickTesterItem.4"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'UIMinClickTesterItem_C:WidgetTree.SizePanel.CanvasPanelSlot_7'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIMinClickTesterItem.19"
+      }
+    }
+  },
+  {
+    "Type": "UIButton",
+    "Name": "ExitBtn",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIButton'",
+    "Outer": {
+      "ObjectName": "WidgetTree'UIMinClickTesterItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIMinClickTesterItem.38"
+    },
+    "Properties": {
+      "WidgetStyle": {
+        "NormalPadding": {
+          "Left": 0.0,
+          "Top": 0.0,
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "PressedPadding": {
+          "Left": 0.0,
+          "Top": 0.0,
+          "Right": 0.0,
+          "Bottom": 0.0
+        }
+      },
+      "Slots": [
+        {
+          "ObjectName": "ButtonSlot'UIMinClickTesterItem_C:WidgetTree.ExitBtn.ButtonSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIMinClickTesterItem.5"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'UIMinClickTesterItem_C:WidgetTree.SizePanel.CanvasPanelSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIMinClickTesterItem.13"
+      }
+    }
+  },
+  {
+    "Type": "UIButton",
+    "Name": "SizeBtn",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIButton'",
+    "Outer": {
+      "ObjectName": "WidgetTree'UIMinClickTesterItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIMinClickTesterItem.38"
+    },
+    "Properties": {
+      "WidgetStyle": {
+        "NormalPadding": {
+          "Left": 0.0,
+          "Top": 0.0,
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "PressedPadding": {
+          "Left": 0.0,
+          "Top": 0.0,
+          "Right": 0.0,
+          "Bottom": 0.0
+        }
+      },
+      "Slots": [
+        {
+          "ObjectName": "ButtonSlot'UIMinClickTesterItem_C:WidgetTree.SizeBtn.ButtonSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIMinClickTesterItem.6"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'UIMinClickTesterItem_C:WidgetTree.FullView.CanvasPanelSlot_5'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIMinClickTesterItem.11"
+      }
+    }
+  },
+  {
+    "Type": "UIEditText",
+    "Name": "LET",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIEditText'",
+    "Outer": {
+      "ObjectName": "WidgetTree'UIMinClickTesterItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIMinClickTesterItem.38"
+    },
+    "Properties": {
+      "FontObject": {
+        "ObjectName": "Font'UI_Font_Light'",
+        "ObjectPath": "UE_game/Content/Art/UI/Fonts/UI_Font_Light.0"
+      },
+      "Text": {
+        "Namespace": "",
+        "Key": "C0D723924B1D0637A8418D93D86302ED",
+        "SourceString": "80",
+        "LocalizedString": "80"
+      },
+      "HintText": {
+        "Namespace": "",
+        "Key": "434B7A4F4671600971554299F508CBC3",
+        "SourceString": "80",
+        "LocalizedString": "80"
+      },
+      "WidgetStyle": {
+        "Font": {
+          "FontObject": {
+            "ObjectName": "Font'UI_Font_Light'",
+            "ObjectPath": "UE_game/Content/Art/UI/Fonts/UI_Font_Light.0"
+          },
+          "Size": 22
+        }
+      },
+      "Justification": "ETextJustify::Center",
+      "VerticalJustification": "ETextVerticalJustify::Center",
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'UIMinClickTesterItem_C:WidgetTree.SizePanel.CanvasPanelSlot_11'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIMinClickTesterItem.15"
+      }
+    }
+  },
+  {
+    "Type": "UIEditText",
+    "Name": "RET",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIEditText'",
+    "Outer": {
+      "ObjectName": "WidgetTree'UIMinClickTesterItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIMinClickTesterItem.38"
+    },
+    "Properties": {
+      "FontObject": {
+        "ObjectName": "Font'UI_Font_Light'",
+        "ObjectPath": "UE_game/Content/Art/UI/Fonts/UI_Font_Light.0"
+      },
+      "Text": {
+        "Namespace": "",
+        "Key": "D5E3F16E4C540C74673690A279093EC4",
+        "SourceString": "80",
+        "LocalizedString": "80"
+      },
+      "HintText": {
+        "Namespace": "",
+        "Key": "8DFC6E354A5AE4A99F4DC090677129C8",
+        "SourceString": "80",
+        "LocalizedString": "80"
+      },
+      "WidgetStyle": {
+        "Font": {
+          "FontObject": {
+            "ObjectName": "Font'UI_Font_Light'",
+            "ObjectPath": "UE_game/Content/Art/UI/Fonts/UI_Font_Light.0"
+          },
+          "Size": 22
+        }
+      },
+      "Justification": "ETextJustify::Center",
+      "VerticalJustification": "ETextVerticalJustify::Center",
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'UIMinClickTesterItem_C:WidgetTree.SizePanel.CanvasPanelSlot_10'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIMinClickTesterItem.14"
+      }
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "Bg",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'UIMinClickTesterItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIMinClickTesterItem.38"
+    },
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 61.44,
+          "Y": 61.44
+        }
+      },
+      "ColorAndOpacity": {
+        "R": 0.130208,
+        "G": 0.130208,
+        "B": 0.130208,
+        "A": 1.0,
+        "Hex": "656565"
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'UIMinClickTesterItem_C:WidgetTree.FullView.CanvasPanelSlot_4'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIMinClickTesterItem.10"
+      }
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "UIImage_58",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'UIMinClickTesterItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIMinClickTesterItem.38"
+    },
+    "Properties": {
+      "ColorAndOpacity": {
+        "R": 0.088542,
+        "G": 0.088542,
+        "B": 0.088542,
+        "A": 1.0,
+        "Hex": "545454"
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'UIMinClickTesterItem_C:WidgetTree.SizePanel.CanvasPanelSlot_5'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIMinClickTesterItem.17"
+      }
+    }
+  },
+  {
+    "Type": "UITextBlock",
+    "Name": "UITextBlock",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UITextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'UIMinClickTesterItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIMinClickTesterItem.38"
+    },
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "7DA008F74031AA35DF215C96D7055B2F",
+        "SourceString": "确认",
+        "LocalizedString": "确认"
+      },
+      "Slot": {
+        "ObjectName": "ButtonSlot'UIMinClickTesterItem_C:WidgetTree.ConfirmBtn.ButtonSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIMinClickTesterItem.4"
+      }
+    }
+  },
+  {
+    "Type": "UITextBlock",
+    "Name": "UITextBlock_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UITextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'UIMinClickTesterItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIMinClickTesterItem.38"
+    },
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "6F5747CB4485EAF995763583770D70DF",
+        "SourceString": "x",
+        "LocalizedString": "x"
+      },
+      "Slot": {
+        "ObjectName": "ButtonSlot'UIMinClickTesterItem_C:WidgetTree.CloseBtn.ButtonSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIMinClickTesterItem.3"
+      }
+    }
+  },
+  {
+    "Type": "UITextBlock",
+    "Name": "UITextBlock_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UITextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'UIMinClickTesterItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIMinClickTesterItem.38"
+    },
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "CFBF5B974817B3054E6CF3856594333D",
+        "SourceString": "长",
+        "LocalizedString": "长"
+      },
+      "Font": {
+        "Size": 32
+      },
+      "Justification": "ETextJustify::Center",
+      "VerticalJustification": "ETextVerticalJustify::Center",
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'UIMinClickTesterItem_C:WidgetTree.SizePanel.CanvasPanelSlot_9'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIMinClickTesterItem.21"
+      }
+    }
+  },
+  {
+    "Type": "UITextBlock",
+    "Name": "UITextBlock_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UITextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'UIMinClickTesterItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIMinClickTesterItem.38"
+    },
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "05C272B6486F925D29778AB734B5B3C4",
+        "SourceString": "x",
+        "LocalizedString": "x"
+      },
+      "Justification": "ETextJustify::Center",
+      "VerticalJustification": "ETextVerticalJustify::Center",
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'UIMinClickTesterItem_C:WidgetTree.SizePanel.CanvasPanelSlot_12'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIMinClickTesterItem.16"
+      }
+    }
+  },
+  {
+    "Type": "UITextBlock",
+    "Name": "UITextBlock_5",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UITextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'UIMinClickTesterItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIMinClickTesterItem.38"
+    },
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "27D555984754CE0D1ECCAB82003C6F68",
+        "SourceString": "退出",
+        "LocalizedString": "退出"
+      },
+      "Slot": {
+        "ObjectName": "ButtonSlot'UIMinClickTesterItem_C:WidgetTree.ExitBtn.ButtonSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIMinClickTesterItem.5"
+      }
+    }
+  },
+  {
+    "Type": "UITextBlock",
+    "Name": "UITextBlock_77",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UITextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'UIMinClickTesterItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIMinClickTesterItem.38"
+    },
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "59B1819845DB76EEC6FBE2B97FC2330A",
+        "SourceString": "调整尺寸",
+        "LocalizedString": "调整尺寸"
+      },
+      "Slot": {
+        "ObjectName": "ButtonSlot'UIMinClickTesterItem_C:WidgetTree.SizeBtn.ButtonSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIMinClickTesterItem.6"
+      }
+    }
+  },
+  {
+    "Type": "UITextBlock",
+    "Name": "UITextBlock_79",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UITextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'UIMinClickTesterItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIMinClickTesterItem.38"
+    },
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "093BB45142CD630A3D9F31AC9CDC421B",
+        "SourceString": "宽",
+        "LocalizedString": "宽"
+      },
+      "Font": {
+        "Size": 32
+      },
+      "Justification": "ETextJustify::Center",
+      "VerticalJustification": "ETextVerticalJustify::Center",
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'UIMinClickTesterItem_C:WidgetTree.SizePanel.CanvasPanelSlot_8'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIMinClickTesterItem.20"
+      }
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetTree'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'UIMinClickTesterItem_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIMinClickTesterItem.1"
+    },
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "CanvasPanel'UIMinClickTesterItem_C:WidgetTree.FullView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Debug/Item/UIMinClickTesterItem.7"
+      }
+    }
+  }
+]

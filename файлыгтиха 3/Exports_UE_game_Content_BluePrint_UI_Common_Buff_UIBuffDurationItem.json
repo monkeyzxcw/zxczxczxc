@@ -1,0 +1,763 @@
+[
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "UIBuffDurationItem_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Package": "UE_game/Content/BluePrint/UI/Common/Buff/UIBuffDurationItem",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'UIBuffDurationItem_C:WidgetTree'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Common/Buff/UIBuffDurationItem.19"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'UserWidget'",
+      "ObjectPath": "/Script/UMG"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "BuffIcon",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIMaskedIcon'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CooldownImage",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "DeBuffSign",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "NegativeIconBg",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "NumberBg",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "PositiveIconBg",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SelectBtn",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Button'",
+          "ObjectPath": "/Script/UMG"
+        }
+      }
+    ],
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "UIBuffDurationItem_C'Default__UIBuffDurationItem_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Common/Buff/UIBuffDurationItem.1"
+    }
+  },
+  {
+    "Type": "UIBuffDurationItem_C",
+    "Name": "Default__UIBuffDurationItem_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'UE_game/Content/BluePrint/UI/Common/Buff/UIBuffDurationItem.UIBuffDurationItem_C'",
+    "Package": "UE_game/Content/BluePrint/UI/Common/Buff/UIBuffDurationItem",
+    "Properties": {
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "Button",
+    "Name": "SelectBtn",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Button'",
+    "Outer": {
+      "ObjectName": "WidgetTree'UIBuffDurationItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Common/Buff/UIBuffDurationItem.19"
+    },
+    "Properties": {
+      "WidgetStyle": {
+        "Normal": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 1.0,
+              "G": 1.0,
+              "B": 1.0,
+              "A": 0.0,
+              "Hex": "FFFFFF"
+            }
+          }
+        },
+        "Hovered": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 1.0,
+              "G": 1.0,
+              "B": 1.0,
+              "A": 0.0,
+              "Hex": "FFFFFF"
+            }
+          }
+        },
+        "Pressed": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 1.0,
+              "G": 1.0,
+              "B": 1.0,
+              "A": 0.0,
+              "Hex": "FFFFFF"
+            }
+          }
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'UIBuffDurationItem_C:WidgetTree.RootView.CanvasPanelSlot_12'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Common/Buff/UIBuffDurationItem.5"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "RootView",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'UIBuffDurationItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Common/Buff/UIBuffDurationItem.19"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'UIBuffDurationItem_C:WidgetTree.RootView.CanvasPanelSlot_12'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Common/Buff/UIBuffDurationItem.5"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'UIBuffDurationItem_C:WidgetTree.RootView.CanvasPanelSlot_13'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Common/Buff/UIBuffDurationItem.6"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'UIBuffDurationItem_C:WidgetTree.RootView.CanvasPanelSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Common/Buff/UIBuffDurationItem.4"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'UIBuffDurationItem_C:WidgetTree.RootView.CanvasPanelSlot_17'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Common/Buff/UIBuffDurationItem.7"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'UIBuffDurationItem_C:WidgetTree.RootView.CanvasPanelSlot_18'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Common/Buff/UIBuffDurationItem.8"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'UIBuffDurationItem_C:WidgetTree.RootView.CanvasPanelSlot_19'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Common/Buff/UIBuffDurationItem.9"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'UIBuffDurationItem_C:WidgetTree.RootView.CanvasPanelSlot_20'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Common/Buff/UIBuffDurationItem.10"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'UIBuffDurationItem_C:WidgetTree.RootView.CanvasPanelSlot_21'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Common/Buff/UIBuffDurationItem.11"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'UIBuffDurationItem_C:WidgetTree.RootView'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Common/Buff/UIBuffDurationItem.3"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 64.0,
+          "Bottom": 64.0
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'UIBuffDurationItem_C:WidgetTree.RootView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Common/Buff/UIBuffDurationItem.3"
+      },
+      "Content": {
+        "ObjectName": "UIMaskedIcon'UIBuffDurationItem_C:WidgetTree.BuffIcon'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Common/Buff/UIBuffDurationItem.17"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_12",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'UIBuffDurationItem_C:WidgetTree.RootView'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Common/Buff/UIBuffDurationItem.3"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 52.0,
+          "Bottom": 52.0
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "ZOrder": 6,
+      "Parent": {
+        "ObjectName": "CanvasPanel'UIBuffDurationItem_C:WidgetTree.RootView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Common/Buff/UIBuffDurationItem.3"
+      },
+      "Content": {
+        "ObjectName": "Button'UIBuffDurationItem_C:WidgetTree.SelectBtn'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Common/Buff/UIBuffDurationItem.2"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_13",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'UIBuffDurationItem_C:WidgetTree.RootView'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Common/Buff/UIBuffDurationItem.3"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 64.0,
+          "Bottom": 64.0
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'UIBuffDurationItem_C:WidgetTree.RootView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Common/Buff/UIBuffDurationItem.3"
+      },
+      "Content": {
+        "ObjectName": "UIImage'UIBuffDurationItem_C:WidgetTree.DeBuffSign'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Common/Buff/UIBuffDurationItem.13"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_17",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'UIBuffDurationItem_C:WidgetTree.RootView'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Common/Buff/UIBuffDurationItem.3"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 61.0,
+          "Bottom": 61.0
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'UIBuffDurationItem_C:WidgetTree.RootView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Common/Buff/UIBuffDurationItem.3"
+      },
+      "Content": {
+        "ObjectName": "UIImage'UIBuffDurationItem_C:WidgetTree.CooldownImage'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Common/Buff/UIBuffDurationItem.12"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_18",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'UIBuffDurationItem_C:WidgetTree.RootView'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Common/Buff/UIBuffDurationItem.3"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 83.0,
+          "Bottom": 83.0
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'UIBuffDurationItem_C:WidgetTree.RootView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Common/Buff/UIBuffDurationItem.3"
+      },
+      "Content": {
+        "ObjectName": "UIImage'UIBuffDurationItem_C:WidgetTree.PositiveIconBg'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Common/Buff/UIBuffDurationItem.16"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_19",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'UIBuffDurationItem_C:WidgetTree.RootView'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Common/Buff/UIBuffDurationItem.3"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 83.0,
+          "Bottom": 83.0
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "ZOrder": 1,
+      "Parent": {
+        "ObjectName": "CanvasPanel'UIBuffDurationItem_C:WidgetTree.RootView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Common/Buff/UIBuffDurationItem.3"
+      },
+      "Content": {
+        "ObjectName": "UIImage'UIBuffDurationItem_C:WidgetTree.NegativeIconBg'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Common/Buff/UIBuffDurationItem.14"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_20",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'UIBuffDurationItem_C:WidgetTree.RootView'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Common/Buff/UIBuffDurationItem.3"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 69.0,
+          "Bottom": 59.0
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "Maximum": {
+            "X": 1.0,
+            "Y": 1.0
+          }
+        },
+        "Alignment": {
+          "X": 1.0,
+          "Y": 1.0
+        }
+      },
+      "ZOrder": 1,
+      "Parent": {
+        "ObjectName": "CanvasPanel'UIBuffDurationItem_C:WidgetTree.RootView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Common/Buff/UIBuffDurationItem.3"
+      },
+      "Content": {
+        "ObjectName": "UIImage'UIBuffDurationItem_C:WidgetTree.NumberBg'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Common/Buff/UIBuffDurationItem.15"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_21",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'UIBuffDurationItem_C:WidgetTree.RootView'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Common/Buff/UIBuffDurationItem.3"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": -16.0,
+          "Top": -16.0,
+          "Right": 35.0
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 1.0,
+            "Y": 1.0
+          },
+          "Maximum": {
+            "X": 1.0,
+            "Y": 1.0
+          }
+        },
+        "Alignment": {
+          "X": 1.0,
+          "Y": 1.0
+        }
+      },
+      "ZOrder": 1,
+      "Parent": {
+        "ObjectName": "CanvasPanel'UIBuffDurationItem_C:WidgetTree.RootView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Common/Buff/UIBuffDurationItem.3"
+      },
+      "Content": {
+        "ObjectName": "UIShrinkTextBlock'UIBuffDurationItem_C:WidgetTree.Number'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Common/Buff/UIBuffDurationItem.18"
+      }
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "CooldownImage",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'UIBuffDurationItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Common/Buff/UIBuffDurationItem.19"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/UIEffect/UIMaterial/Inst/Fight/UI_Mat_SkillCooldown_Square.UI_Mat_SkillCooldown_Square",
+        "SubPathString": ""
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'UIBuffDurationItem_C:WidgetTree.RootView.CanvasPanelSlot_17'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Common/Buff/UIBuffDurationItem.7"
+      },
+      "Visibility": "ESlateVisibility::Collapsed",
+      "RenderOpacity": 0.6
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "DeBuffSign",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'UIBuffDurationItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Common/Buff/UIBuffDurationItem.19"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UIV2/Common/Icon/UI/Textures/Mask/NoAtlas/UI_Mask_Fight_BuffMask.UI_Mask_Fight_BuffMask",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 66.0,
+          "Y": 66.0
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'UIBuffDurationItem_C:WidgetTree.RootView.CanvasPanelSlot_13'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Common/Buff/UIBuffDurationItem.6"
+      },
+      "Visibility": "ESlateVisibility::Collapsed"
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "NegativeIconBg",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'UIBuffDurationItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Common/Buff/UIBuffDurationItem.19"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UIV2/FightV2/UI/TexturesAtlas/Atlas/UI_Img_FightV2_DEBUFFline_Sprite.UI_Img_FightV2_DEBUFFline_Sprite",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 83.0,
+          "Y": 83.0
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'UIBuffDurationItem_C:WidgetTree.RootView.CanvasPanelSlot_19'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Common/Buff/UIBuffDurationItem.9"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "NumberBg",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'UIBuffDurationItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Common/Buff/UIBuffDurationItem.19"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UIV2/FightV2/UI/TexturesAtlas/Atlas/UI_Img_FightV2_BUFFbgblack_Sprite.UI_Img_FightV2_BUFFbgblack_Sprite",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 69.0,
+          "Y": 59.0
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'UIBuffDurationItem_C:WidgetTree.RootView.CanvasPanelSlot_20'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Common/Buff/UIBuffDurationItem.10"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "PositiveIconBg",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'UIBuffDurationItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Common/Buff/UIBuffDurationItem.19"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UIV2/FightV2/UI/TexturesAtlas/Atlas/UI_Img_FightV2_BUFFline_Sprite.UI_Img_FightV2_BUFFline_Sprite",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 83.0,
+          "Y": 83.0
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'UIBuffDurationItem_C:WidgetTree.RootView.CanvasPanelSlot_18'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Common/Buff/UIBuffDurationItem.8"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "UIMaskedIcon",
+    "Name": "BuffIcon",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIMaskedIcon'",
+    "Outer": {
+      "ObjectName": "WidgetTree'UIBuffDurationItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Common/Buff/UIBuffDurationItem.19"
+    },
+    "Properties": {
+      "MaskTexture": {
+        "AssetPathName": "/Game/Art/UIV2/Common/Icon/UI/Textures/Mask/NoAtlas/UI_Mask_Fight_BuffMask.UI_Mask_Fight_BuffMask",
+        "SubPathString": ""
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'UIBuffDurationItem_C:WidgetTree.RootView.CanvasPanelSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Common/Buff/UIBuffDurationItem.4"
+      }
+    }
+  },
+  {
+    "Type": "UIShrinkTextBlock",
+    "Name": "Number",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIShrinkTextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'UIBuffDurationItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Common/Buff/UIBuffDurationItem.19"
+    },
+    "Properties": {
+      "TextContent": {
+        "Namespace": "",
+        "Key": "DD804FF34F9CE99B584D49833B546A67",
+        "SourceString": "1",
+        "LocalizedString": "1"
+      },
+      "ShrinkSize": {
+        "X": 100.0,
+        "Y": 35.0
+      },
+      "FontInfo": {
+        "FontObject": {
+          "ObjectName": "Font'UI_Font_Light'",
+          "ObjectPath": "UE_game/Content/Art/UI/Fonts/UI_Font_Light.0"
+        },
+        "TypefaceFontName": "Default",
+        "Size": 21
+      },
+      "ColorAndOpacity": {
+        "SpecifiedColor": {
+          "R": 1.0,
+          "G": 1.0,
+          "B": 1.0,
+          "A": 1.0,
+          "Hex": "FFFFFF"
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'UIBuffDurationItem_C:WidgetTree.RootView.CanvasPanelSlot_21'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Common/Buff/UIBuffDurationItem.11"
+      }
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetTree'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'UIBuffDurationItem_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Common/Buff/UIBuffDurationItem.0"
+    },
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "CanvasPanel'UIBuffDurationItem_C:WidgetTree.RootView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Common/Buff/UIBuffDurationItem.3"
+      }
+    }
+  }
+]

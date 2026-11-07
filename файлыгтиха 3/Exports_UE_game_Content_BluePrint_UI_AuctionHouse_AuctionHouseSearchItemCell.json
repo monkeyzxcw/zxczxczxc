@@ -1,0 +1,2658 @@
+[
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "AuctionHouseSearchItemCell_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Package": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'AuctionHouseSearchItemCell_C:WidgetTree'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.81"
+      },
+      "bClassRequiresNativeTick": true,
+      "Animations": [
+        {
+          "ObjectName": "WidgetAnimation'AuctionHouseSearchItemCell_C:AuctionHouseSearchItemCellAnim_Loop_INST'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.71"
+        }
+      ]
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'UIListViewItem'",
+      "ObjectPath": "/Script/UE_game"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "AuctionHouseSearchItemCellAnim_Loop",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Transient | RepSkip",
+        "PropertyClass": {
+          "ObjectName": "Class'WidgetAnimation'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Button_Select",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Button'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "GoodBaseIcon",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'GoodBaseIcon_C'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Common/GoodsItem/GoodBaseIcon.1"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Image_BG",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Image_BG_Bottom",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Image_BG_Bottom_1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Image_Cost",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Image_Select",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Image_Type_Desc",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ScrollBox_Label",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'WrapBox'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Text_Desc",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIRichTextBlock'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "WidgetSwitcher_Con",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'WidgetSwitcher'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "WidgetSwitcher_Con1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'WidgetSwitcher'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "WidgetSwitcher_Con2",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'WidgetSwitcher'",
+          "ObjectPath": "/Script/UMG"
+        }
+      }
+    ],
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "AuctionHouseSearchItemCell_C'Default__AuctionHouseSearchItemCell_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.1"
+    }
+  },
+  {
+    "Type": "AuctionHouseSearchItemCell_C",
+    "Name": "Default__AuctionHouseSearchItemCell_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.AuctionHouseSearchItemCell_C'",
+    "Package": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell",
+    "Properties": {
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "Button",
+    "Name": "Button_Select",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Button'",
+    "Outer": {
+      "ObjectName": "WidgetTree'AuctionHouseSearchItemCell_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.81"
+    },
+    "Properties": {
+      "WidgetStyle": {
+        "Normal": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          }
+        },
+        "Hovered": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          }
+        },
+        "Pressed": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          }
+        }
+      },
+      "ColorAndOpacity": {
+        "R": 1.0,
+        "G": 1.0,
+        "B": 1.0,
+        "A": 0.0,
+        "Hex": "FFFFFF"
+      },
+      "ClickMethod": "EButtonClickMethod::PreciseClick",
+      "TouchMethod": "EButtonTouchMethod::PreciseTap",
+      "PressMethod": "EButtonPressMethod::ButtonRelease",
+      "IsFocusable": false,
+      "Slot": {
+        "ObjectName": "OverlaySlot'AuctionHouseSearchItemCell_C:WidgetTree.Overlay_134.OverlaySlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.30"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'AuctionHouseSearchItemCell_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.81"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'AuctionHouseSearchItemCell_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.9"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'AuctionHouseSearchItemCell_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.81"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'AuctionHouseSearchItemCell_C:WidgetTree.CanvasPanel_1.CanvasPanelSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.10"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'AuctionHouseSearchItemCell_C:WidgetTree.CanvasPanel_1.CanvasPanelSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.11"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "WidgetSwitcherSlot'AuctionHouseSearchItemCell_C:WidgetTree.WidgetSwitcher_Con.WidgetSwitcherSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.75"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_227",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'AuctionHouseSearchItemCell_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.81"
+    },
+    "Properties": {
+      "Slot": {
+        "ObjectName": "WidgetSwitcherSlot'AuctionHouseSearchItemCell_C:WidgetTree.WidgetSwitcher_Con.WidgetSwitcherSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.76"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_94",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'AuctionHouseSearchItemCell_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.81"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'AuctionHouseSearchItemCell_C:WidgetTree.CanvasPanel_94.CanvasPanelSlot_13'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.14"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'AuctionHouseSearchItemCell_C:WidgetTree.CanvasPanel_94.CanvasPanelSlot_2'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.15"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'AuctionHouseSearchItemCell_C:WidgetTree.CanvasPanel_94.CanvasPanelSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.12"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'AuctionHouseSearchItemCell_C:WidgetTree.CanvasPanel_94.CanvasPanelSlot_5'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.16"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'AuctionHouseSearchItemCell_C:WidgetTree.CanvasPanel_94.CanvasPanelSlot_9'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.17"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'AuctionHouseSearchItemCell_C:WidgetTree.CanvasPanel_94.CanvasPanelSlot_10'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.13"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'AuctionHouseSearchItemCell_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.62"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_Bottom",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'AuctionHouseSearchItemCell_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.81"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'AuctionHouseSearchItemCell_C:WidgetTree.CanvasPanel_Bottom.CanvasPanelSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.19"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'AuctionHouseSearchItemCell_C:WidgetTree.CanvasPanel_Bottom.CanvasPanelSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.18"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "WidgetSwitcherSlot'AuctionHouseSearchItemCell_C:WidgetTree.WidgetSwitcher_Con1.WidgetSwitcherSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.77"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_Bottom_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'AuctionHouseSearchItemCell_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.81"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'AuctionHouseSearchItemCell_C:WidgetTree.CanvasPanel_Bottom_1.CanvasPanelSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.20"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'AuctionHouseSearchItemCell_C:WidgetTree.CanvasPanel_Bottom_1.CanvasPanelSlot_2'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.21"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "WidgetSwitcherSlot'AuctionHouseSearchItemCell_C:WidgetTree.WidgetSwitcher_Con1.WidgetSwitcherSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.78"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'AuctionHouseSearchItemCell_C:WidgetTree.CanvasPanel_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.3"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 0.0,
+          "Bottom": 57.6
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.0,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 1.0,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.0,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'AuctionHouseSearchItemCell_C:WidgetTree.CanvasPanel_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.3"
+      },
+      "Content": {
+        "ObjectName": "VerticalBox'AuctionHouseSearchItemCell_C:WidgetTree.VerticalBox_110'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.57"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'AuctionHouseSearchItemCell_C:WidgetTree.CanvasPanel_1'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.4"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 38.399998,
+          "Top": 52.41523,
+          "Right": 49.92,
+          "Bottom": 49.92
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'AuctionHouseSearchItemCell_C:WidgetTree.CanvasPanel_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.4"
+      },
+      "Content": {
+        "ObjectName": "UIImage'AuctionHouseSearchItemCell_C:WidgetTree.Image_Cost'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.46"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'AuctionHouseSearchItemCell_C:WidgetTree.CanvasPanel_1'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.4"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 119.04,
+          "Top": 50.055695,
+          "Right": 96.0,
+          "Bottom": 38.399998
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'AuctionHouseSearchItemCell_C:WidgetTree.CanvasPanel_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.4"
+      },
+      "Content": {
+        "ObjectName": "UITextBlock'AuctionHouseSearchItemCell_C:WidgetTree.Text_Cost'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.51"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'AuctionHouseSearchItemCell_C:WidgetTree.CanvasPanel_94'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.6"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "Anchors": {
+          "Maximum": {
+            "X": 1.0,
+            "Y": 1.0
+          }
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'AuctionHouseSearchItemCell_C:WidgetTree.CanvasPanel_94'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.6"
+      },
+      "Content": {
+        "ObjectName": "WidgetSwitcher'AuctionHouseSearchItemCell_C:WidgetTree.WidgetSwitcher_Con'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.72"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_10",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'AuctionHouseSearchItemCell_C:WidgetTree.CanvasPanel_94'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.6"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 59.52,
+          "Top": 84.479996,
+          "Right": 96.0,
+          "Bottom": 38.399998
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 1.0,
+            "Y": 0.0
+          },
+          "Maximum": {
+            "X": 1.0,
+            "Y": 0.0
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'AuctionHouseSearchItemCell_C:WidgetTree.CanvasPanel_94'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.6"
+      },
+      "Content": {
+        "ObjectName": "UITextBlock'AuctionHouseSearchItemCell_C:WidgetTree.Text_Type_Desc'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.53"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_13",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'AuctionHouseSearchItemCell_C:WidgetTree.CanvasPanel_94'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.6"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": -149.76,
+          "Top": -57.6,
+          "Right": 192.0,
+          "Bottom": 188.15999
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.0,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.0,
+            "Y": 0.5
+          }
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'AuctionHouseSearchItemCell_C:WidgetTree.CanvasPanel_94'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.6"
+      },
+      "Content": {
+        "ObjectName": "GoodBaseIcon_C'AuctionHouseSearchItemCell_C:WidgetTree.GoodBaseIcon'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.22"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'AuctionHouseSearchItemCell_C:WidgetTree.CanvasPanel_94'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.6"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 28.8,
+          "Top": -19.199999,
+          "Right": 314.88,
+          "Bottom": 61.44
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.0,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.0,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.0,
+          "Y": 0.5
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'AuctionHouseSearchItemCell_C:WidgetTree.CanvasPanel_94'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.6"
+      },
+      "Content": {
+        "ObjectName": "SizeBox'AuctionHouseSearchItemCell_C:WidgetTree.SizeBox_115'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.36"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_5",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'AuctionHouseSearchItemCell_C:WidgetTree.CanvasPanel_94'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.6"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": -144.0,
+          "Top": 50.912678,
+          "Right": 96.0,
+          "Bottom": 38.399998
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.0,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'AuctionHouseSearchItemCell_C:WidgetTree.CanvasPanel_94'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.6"
+      },
+      "Content": {
+        "ObjectName": "UITextBlock'AuctionHouseSearchItemCell_C:WidgetTree.Text_Need_Lv'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.52"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_9",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'AuctionHouseSearchItemCell_C:WidgetTree.CanvasPanel_94'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.6"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 59.52,
+          "Top": 84.479996,
+          "Right": 105.6,
+          "Bottom": 49.92
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 1.0,
+            "Y": 0.0
+          },
+          "Maximum": {
+            "X": 1.0,
+            "Y": 0.0
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'AuctionHouseSearchItemCell_C:WidgetTree.CanvasPanel_94'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.6"
+      },
+      "Content": {
+        "ObjectName": "UIImage'AuctionHouseSearchItemCell_C:WidgetTree.Image_Type_Desc'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.48"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'AuctionHouseSearchItemCell_C:WidgetTree.CanvasPanel_Bottom'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.7"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 0.0,
+          "Bottom": 57.6
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.0,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 1.0,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.0,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "ZOrder": 1,
+      "Parent": {
+        "ObjectName": "CanvasPanel'AuctionHouseSearchItemCell_C:WidgetTree.CanvasPanel_Bottom'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.7"
+      },
+      "Content": {
+        "ObjectName": "VerticalBox'AuctionHouseSearchItemCell_C:WidgetTree.VerticalBox_62'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.58"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'AuctionHouseSearchItemCell_C:WidgetTree.CanvasPanel_Bottom'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.7"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "Anchors": {
+          "Maximum": {
+            "X": 1.0,
+            "Y": 1.0
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.0
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'AuctionHouseSearchItemCell_C:WidgetTree.CanvasPanel_Bottom'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.7"
+      },
+      "Content": {
+        "ObjectName": "UIImage'AuctionHouseSearchItemCell_C:WidgetTree.Image_BG_Bottom'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.44"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'AuctionHouseSearchItemCell_C:WidgetTree.CanvasPanel_Bottom_1'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.8"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "Anchors": {
+          "Maximum": {
+            "X": 1.0,
+            "Y": 1.0
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 1.0
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'AuctionHouseSearchItemCell_C:WidgetTree.CanvasPanel_Bottom_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.8"
+      },
+      "Content": {
+        "ObjectName": "UIImage'AuctionHouseSearchItemCell_C:WidgetTree.Image_BG_Bottom_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.45"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'AuctionHouseSearchItemCell_C:WidgetTree.CanvasPanel_Bottom_1'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.8"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 0.0,
+          "Bottom": 57.6
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.0,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 1.0,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.0,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "ZOrder": 1,
+      "Parent": {
+        "ObjectName": "CanvasPanel'AuctionHouseSearchItemCell_C:WidgetTree.CanvasPanel_Bottom_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.8"
+      },
+      "Content": {
+        "ObjectName": "VerticalBox'AuctionHouseSearchItemCell_C:WidgetTree.VerticalBox'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.55"
+      }
+    }
+  },
+  {
+    "Type": "GoodBaseIcon_C",
+    "Name": "GoodBaseIcon",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'UE_game/Content/BluePrint/UI/Common/GoodsItem/GoodBaseIcon.GoodBaseIcon_C'",
+    "Outer": {
+      "ObjectName": "WidgetTree'AuctionHouseSearchItemCell_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.81"
+    },
+    "Template": {
+      "ObjectName": "GoodBaseIcon_C'Default__GoodBaseIcon_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Common/GoodsItem/GoodBaseIcon.2"
+    },
+    "Properties": {
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'AuctionHouseSearchItemCell_C:WidgetTree.CanvasPanel_94.CanvasPanelSlot_13'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.14"
+      },
+      "RenderTransform": {
+        "Scale": {
+          "X": 0.7,
+          "Y": 0.7
+        }
+      }
+    }
+  },
+  {
+    "Type": "MovieScene",
+    "Name": "AuctionHouseSearchItemCellAnim_Loop",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene'",
+    "Outer": {
+      "ObjectName": "WidgetAnimation'AuctionHouseSearchItemCell_C:AuctionHouseSearchItemCellAnim_Loop_INST'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.71"
+    },
+    "Properties": {
+      "Possessables": [
+        {
+          "Tags": [],
+          "Guid": "F4935081-4137ABC7-C187B09B-E19925EC",
+          "Name": "Image_Select",
+          "PossessedObjectClass": {
+            "ObjectName": "Class'UIImage'",
+            "ObjectPath": "/Script/UE_game"
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        }
+      ],
+      "ObjectBindings": [
+        {
+          "ObjectGuid": "F4935081-4137ABC7-C187B09B-E19925EC",
+          "BindingName": "Image_Select",
+          "Tracks": [
+            {
+              "ObjectName": "MovieSceneFloatTrack'AuctionHouseSearchItemCell_C:AuctionHouseSearchItemCellAnim_Loop_INST.AuctionHouseSearchItemCellAnim_Loop.MovieSceneFloatTrack_0'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.28"
+            }
+          ]
+        }
+      ],
+      "PlaybackRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 100001
+            }
+          }
+        }
+      },
+      "DisplayRate": {
+        "Numerator": 30
+      },
+      "Signature": "42CA4F3D-48307FD7-4581C388-FDA898B2"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatSection'AuctionHouseSearchItemCell_C:AuctionHouseSearchItemCellAnim_Loop_INST.AuctionHouseSearchItemCellAnim_Loop.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.27"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatSection'AuctionHouseSearchItemCell_C:AuctionHouseSearchItemCellAnim_Loop_INST.AuctionHouseSearchItemCellAnim_Loop.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.27"
+    }
+  },
+  {
+    "Type": "MovieSceneCompiledData",
+    "Name": "CompiledData",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneCompiledData'",
+    "Outer": {
+      "ObjectName": "WidgetAnimation'AuctionHouseSearchItemCell_C:AuctionHouseSearchItemCellAnim_Loop_INST'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.71"
+    },
+    "Properties": {
+      "EntityComponentField": {
+        "PersistentEntityTree": {
+          "SerializedData": {
+            "Data": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 1,
+                  "Capacity": 1
+                }
+              ],
+              "Items": [
+                {
+                  "EntityIndex": 0,
+                  "MetaDataIndex": -1
+                }
+              ]
+            },
+            "RootNode": {
+              "Range": {
+                "LowerBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                },
+                "UpperBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                }
+              },
+              "Parent": {
+                "ChildrenHandle": {
+                  "EntryIndex": -1
+                },
+                "Index": -1
+              },
+              "ChildrenID": {
+                "EntryIndex": 0
+              },
+              "DataID": {
+                "EntryIndex": -1
+              }
+            },
+            "ChildNodes": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 1,
+                  "Capacity": 1
+                }
+              ],
+              "Items": [
+                {
+                  "Range": {
+                    "LowerBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 0
+                      }
+                    },
+                    "UpperBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 100000
+                      }
+                    }
+                  },
+                  "Parent": {
+                    "ChildrenHandle": {
+                      "EntryIndex": -1
+                    },
+                    "Index": 0
+                  },
+                  "ChildrenID": {
+                    "EntryIndex": -1
+                  },
+                  "DataID": {
+                    "EntryIndex": 0
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "Entities": [
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieSceneFloatSection'AuctionHouseSearchItemCell_C:AuctionHouseSearchItemCellAnim_Loop_INST.AuctionHouseSearchItemCellAnim_Loop.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+                "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.27"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 0
+          }
+        ],
+        "SharedMetaData": [
+          {
+            "ObjectBindingID": "F4935081-4137ABC7-C187B09B-E19925EC"
+          }
+        ]
+      },
+      "CompiledSignature": "4DE6934C-4F902778-2B461F9E-FFD42395",
+      "CompilerVersion": "7D4B9809-2FAC4A6B-964ECF72-D8279EF8",
+      "AccumulatedMask": {
+        "bEntityComponentField": true
+      },
+      "AllocatedMask": {
+        "bEntityComponentField": true
+      }
+    }
+  },
+  {
+    "Type": "MovieSceneFloatSection",
+    "Name": "MovieSceneFloatSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneFloatSection'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatTrack'AuctionHouseSearchItemCell_C:AuctionHouseSearchItemCellAnim_Loop_INST.AuctionHouseSearchItemCellAnim_Loop.MovieSceneFloatTrack_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.28"
+    },
+    "Properties": {
+      "FloatCurve": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 50000
+          },
+          {
+            "Value": 100000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 5.462169E-09,
+              "LeaveTangent": 5.462169E-09,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 1
+          },
+          {
+            "Value": 0.5,
+            "Tangent": {
+              "ArriveTangent": -6.738037E-08,
+              "LeaveTangent": -6.738037E-08,
+              "ArriveTangentWeight": 0.42929965,
+              "LeaveTangentWeight": 0.42929965,
+              "TangentWeightMode": 3
+            },
+            "InterpMode": 2,
+            "TangentMode": 1
+          },
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 1.1950318E-07,
+              "LeaveTangent": 1.1950318E-07,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 1
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'AuctionHouseSearchItemCell_C:AuctionHouseSearchItemCellAnim_Loop_INST.AuctionHouseSearchItemCellAnim_Loop.MovieSceneFloatTrack_0.MovieSceneFloatSection_0.EaseInFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.24"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'AuctionHouseSearchItemCell_C:AuctionHouseSearchItemCellAnim_Loop_INST.AuctionHouseSearchItemCellAnim_Loop.MovieSceneFloatTrack_0.MovieSceneFloatSection_0.EaseOutFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.25"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 100000
+            }
+          }
+        }
+      },
+      "Signature": "15A7C0BD-406A4A20-47421BBD-9937C7F3"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatTrack",
+    "Name": "MovieSceneFloatTrack_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneFloatTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'AuctionHouseSearchItemCell_C:AuctionHouseSearchItemCellAnim_Loop_INST.AuctionHouseSearchItemCellAnim_Loop'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.23"
+    },
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderOpacity",
+        "PropertyPath": "RenderOpacity",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneFloatSection'AuctionHouseSearchItemCell_C:AuctionHouseSearchItemCellAnim_Loop_INST.AuctionHouseSearchItemCellAnim_Loop.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.27"
+        }
+      ],
+      "EvaluationFieldGuid": "E8A7EF56-432649E5-C20FE4BC-C2198DB9",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneFloatSection'AuctionHouseSearchItemCell_C:AuctionHouseSearchItemCellAnim_Loop_INST.AuctionHouseSearchItemCellAnim_Loop.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.27"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 100000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "E8A7EF56-432649E5-C20FE4BC-C2198DB9"
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "Overlay_134",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Overlay'",
+    "Outer": {
+      "ObjectName": "WidgetTree'AuctionHouseSearchItemCell_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.81"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlaySlot'AuctionHouseSearchItemCell_C:WidgetTree.Overlay_134.OverlaySlot_10'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.31"
+        },
+        {
+          "ObjectName": "OverlaySlot'AuctionHouseSearchItemCell_C:WidgetTree.Overlay_134.OverlaySlot_11'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.32"
+        },
+        {
+          "ObjectName": "OverlaySlot'AuctionHouseSearchItemCell_C:WidgetTree.Overlay_134.OverlaySlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.30"
+        },
+        {
+          "ObjectName": "OverlaySlot'AuctionHouseSearchItemCell_C:WidgetTree.Overlay_134.OverlaySlot_6'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.33"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'AuctionHouseSearchItemCell_C:WidgetTree.VerticalBox_110.VerticalBoxSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.65"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'AuctionHouseSearchItemCell_C:WidgetTree.Overlay_134'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.29"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Fill",
+      "VerticalAlignment": "VAlign_Fill",
+      "Parent": {
+        "ObjectName": "Overlay'AuctionHouseSearchItemCell_C:WidgetTree.Overlay_134'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.29"
+      },
+      "Content": {
+        "ObjectName": "Button'AuctionHouseSearchItemCell_C:WidgetTree.Button_Select'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.2"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_10",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'AuctionHouseSearchItemCell_C:WidgetTree.Overlay_134'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.29"
+    },
+    "Properties": {
+      "Padding": {
+        "Left": -28.8,
+        "Top": -49.92,
+        "Right": -28.8,
+        "Bottom": -49.92
+      },
+      "HorizontalAlignment": "HAlign_Fill",
+      "VerticalAlignment": "VAlign_Fill",
+      "Parent": {
+        "ObjectName": "Overlay'AuctionHouseSearchItemCell_C:WidgetTree.Overlay_134'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.29"
+      },
+      "Content": {
+        "ObjectName": "UIImage'AuctionHouseSearchItemCell_C:WidgetTree.Image_Select'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.47"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_11",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'AuctionHouseSearchItemCell_C:WidgetTree.Overlay_134'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.29"
+    },
+    "Properties": {
+      "Padding": {
+        "Top": -15.36,
+        "Bottom": -15.36
+      },
+      "HorizontalAlignment": "HAlign_Fill",
+      "VerticalAlignment": "VAlign_Fill",
+      "Parent": {
+        "ObjectName": "Overlay'AuctionHouseSearchItemCell_C:WidgetTree.Overlay_134'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.29"
+      },
+      "Content": {
+        "ObjectName": "UIImage'AuctionHouseSearchItemCell_C:WidgetTree.Image_BG'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.43"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_6",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'AuctionHouseSearchItemCell_C:WidgetTree.Overlay_134'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.29"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Fill",
+      "Parent": {
+        "ObjectName": "Overlay'AuctionHouseSearchItemCell_C:WidgetTree.Overlay_134'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.29"
+      },
+      "Content": {
+        "ObjectName": "VerticalBox'AuctionHouseSearchItemCell_C:WidgetTree.VerticalBox_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.56"
+      }
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SizeBox",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'AuctionHouseSearchItemCell_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.81"
+    },
+    "Properties": {
+      "HeightOverride": 15.36,
+      "bOverride_HeightOverride": true,
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'AuctionHouseSearchItemCell_C:WidgetTree.VerticalBox_62.VerticalBoxSlot_4'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.70"
+      }
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SizeBox_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'AuctionHouseSearchItemCell_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.81"
+    },
+    "Properties": {
+      "HeightOverride": 19.2,
+      "bOverride_HeightOverride": true,
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'AuctionHouseSearchItemCell_C:WidgetTree.VerticalBox_110.VerticalBoxSlot_3'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.67"
+      }
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SizeBox_115",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'AuctionHouseSearchItemCell_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.81"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot'AuctionHouseSearchItemCell_C:WidgetTree.SizeBox_115.SizeBoxSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.42"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'AuctionHouseSearchItemCell_C:WidgetTree.CanvasPanel_94.CanvasPanelSlot_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.15"
+      }
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SizeBox_165",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'AuctionHouseSearchItemCell_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.81"
+    },
+    "Properties": {
+      "HeightOverride": 28.8,
+      "bOverride_HeightOverride": true,
+      "Slot": {
+        "ObjectName": "WidgetSwitcherSlot'AuctionHouseSearchItemCell_C:WidgetTree.WidgetSwitcher_Con2.WidgetSwitcherSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.80"
+      }
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SizeBox_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'AuctionHouseSearchItemCell_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.81"
+    },
+    "Properties": {
+      "HeightOverride": 9.6,
+      "bOverride_HeightOverride": true,
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'AuctionHouseSearchItemCell_C:WidgetTree.VerticalBox.VerticalBoxSlot_4'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.60"
+      }
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SizeBox_225",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'AuctionHouseSearchItemCell_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.81"
+    },
+    "Properties": {
+      "HeightOverride": 15.36,
+      "bOverride_HeightOverride": true,
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'AuctionHouseSearchItemCell_C:WidgetTree.VerticalBox_62.VerticalBoxSlot_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.69"
+      }
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SizeBox_293",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'AuctionHouseSearchItemCell_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.81"
+    },
+    "Properties": {
+      "HeightOverride": 19.2,
+      "bOverride_HeightOverride": true,
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'AuctionHouseSearchItemCell_C:WidgetTree.VerticalBox_110.VerticalBoxSlot_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.66"
+      }
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SizeBox_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'AuctionHouseSearchItemCell_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.81"
+    },
+    "Properties": {
+      "HeightOverride": 9.6,
+      "bOverride_HeightOverride": true,
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'AuctionHouseSearchItemCell_C:WidgetTree.VerticalBox.VerticalBoxSlot_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.59"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBoxSlot'",
+    "Outer": {
+      "ObjectName": "SizeBox'AuctionHouseSearchItemCell_C:WidgetTree.SizeBox_115'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.36"
+    },
+    "Properties": {
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "SizeBox'AuctionHouseSearchItemCell_C:WidgetTree.SizeBox_115'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.36"
+      },
+      "Content": {
+        "ObjectName": "UIShrinkTextBlock'AuctionHouseSearchItemCell_C:WidgetTree.Text_Name'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.50"
+      }
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "Image_BG",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'AuctionHouseSearchItemCell_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.81"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/TexturesAtlas/AuctionHouse/Atlas/UI_AuctionHouse_2_2BGblock1_Sprite.UI_AuctionHouse_2_2BGblock1_Sprite",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 629.76,
+          "Y": 245.76
+        },
+        "Margin": {
+          "Left": 0.4,
+          "Top": 0.4,
+          "Right": 0.4,
+          "Bottom": 0.4
+        },
+        "DrawAs": "ESlateBrushDrawType::Box"
+      },
+      "Slot": {
+        "ObjectName": "OverlaySlot'AuctionHouseSearchItemCell_C:WidgetTree.Overlay_134.OverlaySlot_11'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.32"
+      }
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "Image_BG_Bottom",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'AuctionHouseSearchItemCell_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.81"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/TexturesAtlas/AuctionHouse/Atlas/UI_AuctionHouse_2_2BGblock2_02_Sprite.UI_AuctionHouse_2_2BGblock2_02_Sprite",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 629.76,
+          "Y": 26.88
+        },
+        "Margin": {
+          "Left": 0.4,
+          "Top": 0.4,
+          "Right": 0.4,
+          "Bottom": 0.4
+        },
+        "DrawAs": "ESlateBrushDrawType::Box"
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'AuctionHouseSearchItemCell_C:WidgetTree.CanvasPanel_Bottom.CanvasPanelSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.19"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "Image_BG_Bottom_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'AuctionHouseSearchItemCell_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.81"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/TexturesAtlas/AuctionHouse/Atlas/UI_AuctionHouse_2_2BGblock2_02_Sprite.UI_AuctionHouse_2_2BGblock2_02_Sprite",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 629.76,
+          "Y": 26.88
+        },
+        "Margin": {
+          "Left": 0.4,
+          "Top": 0.4,
+          "Right": 0.4,
+          "Bottom": 0.4
+        },
+        "DrawAs": "ESlateBrushDrawType::Box"
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'AuctionHouseSearchItemCell_C:WidgetTree.CanvasPanel_Bottom_1.CanvasPanelSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.20"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "Image_Cost",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'AuctionHouseSearchItemCell_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.81"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/TexturesAtlas/AuctionHouse/Atlas/UI_AuctionHouse_ICONstr_Sprite.UI_AuctionHouse_ICONstr_Sprite",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 61.44,
+          "Y": 61.44
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'AuctionHouseSearchItemCell_C:WidgetTree.CanvasPanel_1.CanvasPanelSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.10"
+      }
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "Image_Select",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'AuctionHouseSearchItemCell_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.81"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/TexturesAtlas/AuctionHouse/Atlas/UI_AuctionHouse_2_2BGblockPICKED_Sprite.UI_AuctionHouse_2_2BGblockPICKED_Sprite",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 687.36,
+          "Y": 303.36
+        },
+        "Margin": {
+          "Left": 0.4,
+          "Top": 0.4,
+          "Right": 0.4,
+          "Bottom": 0.4
+        },
+        "DrawAs": "ESlateBrushDrawType::Box"
+      },
+      "Slot": {
+        "ObjectName": "OverlaySlot'AuctionHouseSearchItemCell_C:WidgetTree.Overlay_134.OverlaySlot_10'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.31"
+      }
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "Image_Type_Desc",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'AuctionHouseSearchItemCell_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.81"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/TexturesAtlas/AuctionHouse/Atlas/UI_AuctionHouse_2_2BGblock3_Sprite.UI_AuctionHouse_2_2BGblock3_Sprite",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 105.6,
+          "Y": 49.92
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'AuctionHouseSearchItemCell_C:WidgetTree.CanvasPanel_94.CanvasPanelSlot_9'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.17"
+      },
+      "Visibility": "ESlateVisibility::Collapsed"
+    }
+  },
+  {
+    "Type": "UIRichTextBlock",
+    "Name": "Text_Desc",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIRichTextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'AuctionHouseSearchItemCell_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.81"
+    },
+    "Properties": {
+      "CurrStyleId": 1009,
+      "ShrinkSize": {
+        "X": 122.88,
+        "Y": 122.88
+      },
+      "Text": {
+        "Namespace": "",
+        "Key": "8C3BD3C84ECB23421411549D434EE07B",
+        "SourceString": "<Richtext>大家大</>",
+        "LocalizedString": "<Richtext>大家大</>"
+      },
+      "MinDesiredWidth": 614.0,
+      "Justification": "ETextJustify::Center",
+      "WrappingPolicy": "ETextWrappingPolicy::AllowPerCharacterWrapping",
+      "AutoWrapText": true,
+      "WrapTextAt": 600.0,
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'AuctionHouseSearchItemCell_C:WidgetTree.VerticalBox_62.VerticalBoxSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.68"
+      }
+    }
+  },
+  {
+    "Type": "UIShrinkTextBlock",
+    "Name": "Text_Name",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIShrinkTextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'AuctionHouseSearchItemCell_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.81"
+    },
+    "Properties": {
+      "TextHAlignment": "HAlign_Left",
+      "CurrStyleId": 1003,
+      "TextContent": {
+        "Namespace": "",
+        "Key": "DC7589E545557667AF0CD88E02C3CBF2",
+        "SourceString": "绿色法杖",
+        "LocalizedString": "绿色法杖"
+      },
+      "ShrinkSize": {
+        "X": 450.0,
+        "Y": 120.0
+      },
+      "TextHJustification": "ETextJustify::Left",
+      "Slot": {
+        "ObjectName": "SizeBoxSlot'AuctionHouseSearchItemCell_C:WidgetTree.SizeBox_115.SizeBoxSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.42"
+      }
+    }
+  },
+  {
+    "Type": "UITextBlock",
+    "Name": "Text_Cost",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UITextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'AuctionHouseSearchItemCell_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.81"
+    },
+    "Properties": {
+      "CurrStyleId": 1003,
+      "Text": {
+        "Namespace": "",
+        "Key": "7EEA1B294E176D25A5CA75A348C582DC",
+        "SourceString": "99",
+        "LocalizedString": "99"
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'tl_main_Font'",
+          "ObjectPath": "UE_game/Content/Art/UI/Fonts/tl_main_Font.0"
+        },
+        "OutlineSettings": {
+          "OutlineSize": 1,
+          "OutlineColor": {
+            "R": 0.0,
+            "G": 0.0,
+            "B": 0.0,
+            "A": 0.607843,
+            "Hex": "9B000000"
+          }
+        },
+        "TypefaceFontName": "Default",
+        "Size": 15
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'AuctionHouseSearchItemCell_C:WidgetTree.CanvasPanel_1.CanvasPanelSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.11"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "UITextBlock",
+    "Name": "Text_Need_Lv",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UITextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'AuctionHouseSearchItemCell_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.81"
+    },
+    "Properties": {
+      "CurrStyleId": 1003,
+      "Text": {
+        "Namespace": "",
+        "Key": "7EEA1B294E176D25A5CA75A348C582DC",
+        "SourceString": "99",
+        "LocalizedString": "99"
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'tl_main_Font'",
+          "ObjectPath": "UE_game/Content/Art/UI/Fonts/tl_main_Font.0"
+        },
+        "OutlineSettings": {
+          "OutlineSize": 1,
+          "OutlineColor": {
+            "R": 0.0,
+            "G": 0.0,
+            "B": 0.0,
+            "A": 0.60784316,
+            "Hex": "9B000000"
+          }
+        },
+        "TypefaceFontName": "Default",
+        "Size": 15
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'AuctionHouseSearchItemCell_C:WidgetTree.CanvasPanel_94.CanvasPanelSlot_5'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.16"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "UITextBlock",
+    "Name": "Text_Type_Desc",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UITextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'AuctionHouseSearchItemCell_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.81"
+    },
+    "Properties": {
+      "CurrStyleId": 1595,
+      "Text": {
+        "Namespace": "",
+        "Key": "B1DD3214455450394B5E399E772B7BAD",
+        "SourceString": "智慧",
+        "LocalizedString": "智慧"
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'tl_main_Font'",
+          "ObjectPath": "UE_game/Content/Art/UI/Fonts/tl_main_Font.0"
+        },
+        "OutlineSettings": {
+          "OutlineSize": 1,
+          "OutlineColor": {
+            "R": 0.0,
+            "G": 0.0,
+            "B": 0.0,
+            "A": 0.607843,
+            "Hex": "9B000000"
+          }
+        },
+        "TypefaceFontName": "Default",
+        "Size": 15
+      },
+      "Justification": "ETextJustify::Center",
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'AuctionHouseSearchItemCell_C:WidgetTree.CanvasPanel_94.CanvasPanelSlot_10'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.13"
+      },
+      "Visibility": "ESlateVisibility::Collapsed"
+    }
+  },
+  {
+    "Type": "UITextBlock",
+    "Name": "UITextBlock_Limit",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UITextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'AuctionHouseSearchItemCell_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.81"
+    },
+    "Properties": {
+      "CurrStyleId": 1979,
+      "Text": {
+        "Namespace": "UMG",
+        "Key": "TextBlockDefaultValue",
+        "SourceString": "Text Block",
+        "LocalizedString": "Text Block"
+      },
+      "Font": {
+        "FontObject": null,
+        "TypefaceFontName": "Default"
+      },
+      "WrapTextAt": 430.0,
+      "Slot": {
+        "ObjectName": "WidgetSwitcherSlot'AuctionHouseSearchItemCell_C:WidgetTree.WidgetSwitcher_Con2.WidgetSwitcherSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.79"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "VerticalBox",
+    "Name": "VerticalBox",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'AuctionHouseSearchItemCell_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.81"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "VerticalBoxSlot'AuctionHouseSearchItemCell_C:WidgetTree.VerticalBox.VerticalBoxSlot_4'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.60"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot'AuctionHouseSearchItemCell_C:WidgetTree.VerticalBox.VerticalBoxSlot_5'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.61"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot'AuctionHouseSearchItemCell_C:WidgetTree.VerticalBox.VerticalBoxSlot_2'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.59"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'AuctionHouseSearchItemCell_C:WidgetTree.CanvasPanel_Bottom_1.CanvasPanelSlot_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.21"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBox",
+    "Name": "VerticalBox_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'AuctionHouseSearchItemCell_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.81"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "VerticalBoxSlot'AuctionHouseSearchItemCell_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.62"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot'AuctionHouseSearchItemCell_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_3'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.64"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot'AuctionHouseSearchItemCell_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.63"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "OverlaySlot'AuctionHouseSearchItemCell_C:WidgetTree.Overlay_134.OverlaySlot_6'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.33"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBox",
+    "Name": "VerticalBox_110",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'AuctionHouseSearchItemCell_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.81"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "VerticalBoxSlot'AuctionHouseSearchItemCell_C:WidgetTree.VerticalBox_110.VerticalBoxSlot_2'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.66"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot'AuctionHouseSearchItemCell_C:WidgetTree.VerticalBox_110.VerticalBoxSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.65"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot'AuctionHouseSearchItemCell_C:WidgetTree.VerticalBox_110.VerticalBoxSlot_3'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.67"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'AuctionHouseSearchItemCell_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.9"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBox",
+    "Name": "VerticalBox_62",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'AuctionHouseSearchItemCell_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.81"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "VerticalBoxSlot'AuctionHouseSearchItemCell_C:WidgetTree.VerticalBox_62.VerticalBoxSlot_4'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.70"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot'AuctionHouseSearchItemCell_C:WidgetTree.VerticalBox_62.VerticalBoxSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.68"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot'AuctionHouseSearchItemCell_C:WidgetTree.VerticalBox_62.VerticalBoxSlot_2'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.69"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'AuctionHouseSearchItemCell_C:WidgetTree.CanvasPanel_Bottom.CanvasPanelSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.18"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Outer": {
+      "ObjectName": "VerticalBox'AuctionHouseSearchItemCell_C:WidgetTree.VerticalBox'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.55"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "VerticalBox'AuctionHouseSearchItemCell_C:WidgetTree.VerticalBox'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.55"
+      },
+      "Content": {
+        "ObjectName": "SizeBox'AuctionHouseSearchItemCell_C:WidgetTree.SizeBox_3'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.41"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_4",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Outer": {
+      "ObjectName": "VerticalBox'AuctionHouseSearchItemCell_C:WidgetTree.VerticalBox'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.55"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "VerticalBox'AuctionHouseSearchItemCell_C:WidgetTree.VerticalBox'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.55"
+      },
+      "Content": {
+        "ObjectName": "SizeBox'AuctionHouseSearchItemCell_C:WidgetTree.SizeBox_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.38"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_5",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Outer": {
+      "ObjectName": "VerticalBox'AuctionHouseSearchItemCell_C:WidgetTree.VerticalBox'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.55"
+    },
+    "Properties": {
+      "Padding": {
+        "Left": 38.399998,
+        "Right": 38.399998
+      },
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "VerticalBox'AuctionHouseSearchItemCell_C:WidgetTree.VerticalBox'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.55"
+      },
+      "Content": {
+        "ObjectName": "WrapBox'AuctionHouseSearchItemCell_C:WidgetTree.ScrollBox_Label'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.82"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Outer": {
+      "ObjectName": "VerticalBox'AuctionHouseSearchItemCell_C:WidgetTree.VerticalBox_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.56"
+    },
+    "Properties": {
+      "Padding": {
+        "Left": 172.8,
+        "Top": -28.8
+      },
+      "HorizontalAlignment": "HAlign_Left",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "VerticalBox'AuctionHouseSearchItemCell_C:WidgetTree.VerticalBox_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.56"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'AuctionHouseSearchItemCell_C:WidgetTree.CanvasPanel_94'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.6"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Outer": {
+      "ObjectName": "VerticalBox'AuctionHouseSearchItemCell_C:WidgetTree.VerticalBox_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.56"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "VerticalBox'AuctionHouseSearchItemCell_C:WidgetTree.VerticalBox_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.56"
+      },
+      "Content": {
+        "ObjectName": "WidgetSwitcher'AuctionHouseSearchItemCell_C:WidgetTree.WidgetSwitcher_Con1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.73"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Outer": {
+      "ObjectName": "VerticalBox'AuctionHouseSearchItemCell_C:WidgetTree.VerticalBox_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.56"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "VerticalBox'AuctionHouseSearchItemCell_C:WidgetTree.VerticalBox_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.56"
+      },
+      "Content": {
+        "ObjectName": "WidgetSwitcher'AuctionHouseSearchItemCell_C:WidgetTree.WidgetSwitcher_Con2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.74"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Outer": {
+      "ObjectName": "VerticalBox'AuctionHouseSearchItemCell_C:WidgetTree.VerticalBox_110'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.57"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "VerticalBox'AuctionHouseSearchItemCell_C:WidgetTree.VerticalBox_110'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.57"
+      },
+      "Content": {
+        "ObjectName": "Overlay'AuctionHouseSearchItemCell_C:WidgetTree.Overlay_134'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.29"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Outer": {
+      "ObjectName": "VerticalBox'AuctionHouseSearchItemCell_C:WidgetTree.VerticalBox_110'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.57"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "VerticalBox'AuctionHouseSearchItemCell_C:WidgetTree.VerticalBox_110'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.57"
+      },
+      "Content": {
+        "ObjectName": "SizeBox'AuctionHouseSearchItemCell_C:WidgetTree.SizeBox_293'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.40"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Outer": {
+      "ObjectName": "VerticalBox'AuctionHouseSearchItemCell_C:WidgetTree.VerticalBox_110'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.57"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "VerticalBox'AuctionHouseSearchItemCell_C:WidgetTree.VerticalBox_110'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.57"
+      },
+      "Content": {
+        "ObjectName": "SizeBox'AuctionHouseSearchItemCell_C:WidgetTree.SizeBox_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.35"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Outer": {
+      "ObjectName": "VerticalBox'AuctionHouseSearchItemCell_C:WidgetTree.VerticalBox_62'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.58"
+    },
+    "Properties": {
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "VerticalBox'AuctionHouseSearchItemCell_C:WidgetTree.VerticalBox_62'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.58"
+      },
+      "Content": {
+        "ObjectName": "UIRichTextBlock'AuctionHouseSearchItemCell_C:WidgetTree.Text_Desc'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.49"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Outer": {
+      "ObjectName": "VerticalBox'AuctionHouseSearchItemCell_C:WidgetTree.VerticalBox_62'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.58"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "VerticalBox'AuctionHouseSearchItemCell_C:WidgetTree.VerticalBox_62'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.58"
+      },
+      "Content": {
+        "ObjectName": "SizeBox'AuctionHouseSearchItemCell_C:WidgetTree.SizeBox_225'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.39"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_4",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Outer": {
+      "ObjectName": "VerticalBox'AuctionHouseSearchItemCell_C:WidgetTree.VerticalBox_62'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.58"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "VerticalBox'AuctionHouseSearchItemCell_C:WidgetTree.VerticalBox_62'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.58"
+      },
+      "Content": {
+        "ObjectName": "SizeBox'AuctionHouseSearchItemCell_C:WidgetTree.SizeBox'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.34"
+      }
+    }
+  },
+  {
+    "Type": "WidgetAnimation",
+    "Name": "AuctionHouseSearchItemCellAnim_Loop_INST",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetAnimation'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'AuctionHouseSearchItemCell_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.0"
+    },
+    "Properties": {
+      "MovieScene": {
+        "ObjectName": "MovieScene'AuctionHouseSearchItemCell_C:AuctionHouseSearchItemCellAnim_Loop_INST.AuctionHouseSearchItemCellAnim_Loop'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.23"
+      },
+      "AnimationBindings": [
+        {
+          "WidgetName": "Image_Select",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "F4935081-4137ABC7-C187B09B-E19925EC",
+          "bIsRootWidget": false
+        }
+      ],
+      "DisplayLabel": "AuctionHouseSearchItemCellAnim_Loop",
+      "CompiledData": {
+        "ObjectName": "MovieSceneCompiledData'AuctionHouseSearchItemCell_C:AuctionHouseSearchItemCellAnim_Loop_INST.CompiledData'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.26"
+      },
+      "Signature": "4DE6934C-4F902778-2B461F9E-FFD42395"
+    }
+  },
+  {
+    "Type": "WidgetSwitcher",
+    "Name": "WidgetSwitcher_Con",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetSwitcher'",
+    "Outer": {
+      "ObjectName": "WidgetTree'AuctionHouseSearchItemCell_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.81"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "WidgetSwitcherSlot'AuctionHouseSearchItemCell_C:WidgetTree.WidgetSwitcher_Con.WidgetSwitcherSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.75"
+        },
+        {
+          "ObjectName": "WidgetSwitcherSlot'AuctionHouseSearchItemCell_C:WidgetTree.WidgetSwitcher_Con.WidgetSwitcherSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.76"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'AuctionHouseSearchItemCell_C:WidgetTree.CanvasPanel_94.CanvasPanelSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.12"
+      }
+    }
+  },
+  {
+    "Type": "WidgetSwitcher",
+    "Name": "WidgetSwitcher_Con1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetSwitcher'",
+    "Outer": {
+      "ObjectName": "WidgetTree'AuctionHouseSearchItemCell_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.81"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "WidgetSwitcherSlot'AuctionHouseSearchItemCell_C:WidgetTree.WidgetSwitcher_Con1.WidgetSwitcherSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.77"
+        },
+        {
+          "ObjectName": "WidgetSwitcherSlot'AuctionHouseSearchItemCell_C:WidgetTree.WidgetSwitcher_Con1.WidgetSwitcherSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.78"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'AuctionHouseSearchItemCell_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.63"
+      }
+    }
+  },
+  {
+    "Type": "WidgetSwitcher",
+    "Name": "WidgetSwitcher_Con2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetSwitcher'",
+    "Outer": {
+      "ObjectName": "WidgetTree'AuctionHouseSearchItemCell_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.81"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "WidgetSwitcherSlot'AuctionHouseSearchItemCell_C:WidgetTree.WidgetSwitcher_Con2.WidgetSwitcherSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.80"
+        },
+        {
+          "ObjectName": "WidgetSwitcherSlot'AuctionHouseSearchItemCell_C:WidgetTree.WidgetSwitcher_Con2.WidgetSwitcherSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.79"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'AuctionHouseSearchItemCell_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_3'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.64"
+      }
+    }
+  },
+  {
+    "Type": "WidgetSwitcherSlot",
+    "Name": "WidgetSwitcherSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetSwitcherSlot'",
+    "Outer": {
+      "ObjectName": "WidgetSwitcher'AuctionHouseSearchItemCell_C:WidgetTree.WidgetSwitcher_Con'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.72"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "WidgetSwitcher'AuctionHouseSearchItemCell_C:WidgetTree.WidgetSwitcher_Con'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.72"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'AuctionHouseSearchItemCell_C:WidgetTree.CanvasPanel_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.4"
+      }
+    }
+  },
+  {
+    "Type": "WidgetSwitcherSlot",
+    "Name": "WidgetSwitcherSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetSwitcherSlot'",
+    "Outer": {
+      "ObjectName": "WidgetSwitcher'AuctionHouseSearchItemCell_C:WidgetTree.WidgetSwitcher_Con'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.72"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "WidgetSwitcher'AuctionHouseSearchItemCell_C:WidgetTree.WidgetSwitcher_Con'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.72"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'AuctionHouseSearchItemCell_C:WidgetTree.CanvasPanel_227'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.5"
+      }
+    }
+  },
+  {
+    "Type": "WidgetSwitcherSlot",
+    "Name": "WidgetSwitcherSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetSwitcherSlot'",
+    "Outer": {
+      "ObjectName": "WidgetSwitcher'AuctionHouseSearchItemCell_C:WidgetTree.WidgetSwitcher_Con1'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.73"
+    },
+    "Properties": {
+      "VerticalAlignment": "VAlign_Bottom",
+      "Parent": {
+        "ObjectName": "WidgetSwitcher'AuctionHouseSearchItemCell_C:WidgetTree.WidgetSwitcher_Con1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.73"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'AuctionHouseSearchItemCell_C:WidgetTree.CanvasPanel_Bottom'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.7"
+      }
+    }
+  },
+  {
+    "Type": "WidgetSwitcherSlot",
+    "Name": "WidgetSwitcherSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetSwitcherSlot'",
+    "Outer": {
+      "ObjectName": "WidgetSwitcher'AuctionHouseSearchItemCell_C:WidgetTree.WidgetSwitcher_Con1'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.73"
+    },
+    "Properties": {
+      "VerticalAlignment": "VAlign_Bottom",
+      "Parent": {
+        "ObjectName": "WidgetSwitcher'AuctionHouseSearchItemCell_C:WidgetTree.WidgetSwitcher_Con1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.73"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'AuctionHouseSearchItemCell_C:WidgetTree.CanvasPanel_Bottom_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.8"
+      }
+    }
+  },
+  {
+    "Type": "WidgetSwitcherSlot",
+    "Name": "WidgetSwitcherSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetSwitcherSlot'",
+    "Outer": {
+      "ObjectName": "WidgetSwitcher'AuctionHouseSearchItemCell_C:WidgetTree.WidgetSwitcher_Con2'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.74"
+    },
+    "Properties": {
+      "Padding": {
+        "Left": 201.59999,
+        "Top": -38.399998,
+        "Bottom": 19.199999
+      },
+      "HorizontalAlignment": "HAlign_Left",
+      "VerticalAlignment": "VAlign_Top",
+      "Parent": {
+        "ObjectName": "WidgetSwitcher'AuctionHouseSearchItemCell_C:WidgetTree.WidgetSwitcher_Con2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.74"
+      },
+      "Content": {
+        "ObjectName": "UITextBlock'AuctionHouseSearchItemCell_C:WidgetTree.UITextBlock_Limit'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.54"
+      }
+    }
+  },
+  {
+    "Type": "WidgetSwitcherSlot",
+    "Name": "WidgetSwitcherSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetSwitcherSlot'",
+    "Outer": {
+      "ObjectName": "WidgetSwitcher'AuctionHouseSearchItemCell_C:WidgetTree.WidgetSwitcher_Con2'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.74"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "WidgetSwitcher'AuctionHouseSearchItemCell_C:WidgetTree.WidgetSwitcher_Con2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.74"
+      },
+      "Content": {
+        "ObjectName": "SizeBox'AuctionHouseSearchItemCell_C:WidgetTree.SizeBox_165'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.37"
+      }
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetTree'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'AuctionHouseSearchItemCell_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.0"
+    },
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "CanvasPanel'AuctionHouseSearchItemCell_C:WidgetTree.CanvasPanel_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.3"
+      }
+    }
+  },
+  {
+    "Type": "WrapBox",
+    "Name": "ScrollBox_Label",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WrapBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'AuctionHouseSearchItemCell_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.81"
+    },
+    "Properties": {
+      "InnerSlotPadding": {
+        "X": 19.199999,
+        "Y": 9.599999
+      },
+      "WrapSize": 614.4,
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'AuctionHouseSearchItemCell_C:WidgetTree.VerticalBox.VerticalBoxSlot_5'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/AuctionHouse/AuctionHouseSearchItemCell.61"
+      },
+      "bIsVariable": true
+    }
+  }
+]
