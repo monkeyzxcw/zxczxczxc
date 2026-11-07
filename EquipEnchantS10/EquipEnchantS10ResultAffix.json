@@ -1,0 +1,2693 @@
+[
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "EquipEnchantS10ResultAffix_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Package": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'EquipEnchantS10ResultAffix_C:WidgetTree'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.60"
+      },
+      "Animations": [
+        {
+          "ObjectName": "WidgetAnimation'EquipEnchantS10ResultAffix_C:Anim_Saoguang_INST'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.59"
+        }
+      ]
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'UserWidget'",
+      "ObjectPath": "/Script/UMG"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Anim_Saoguang",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Transient | RepSkip",
+        "PropertyClass": {
+          "ObjectName": "Class'WidgetAnimation'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "AffixBar",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'EquipEnchantS10AffixBar_C'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10AffixBar.0"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ConfirmBtn",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIButton'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "glow",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "par",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIParticleEmitter'",
+          "ObjectPath": "/Script/UIParticle"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ReforgeBtn",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIButton'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "saoguang",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "UIImage",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "UIImage_1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "UIImage_2",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "UIImage_28",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "UIImage_73",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      }
+    ],
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "EquipEnchantS10ResultAffix_C'Default__EquipEnchantS10ResultAffix_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.1"
+    }
+  },
+  {
+    "Type": "EquipEnchantS10ResultAffix_C",
+    "Name": "Default__EquipEnchantS10ResultAffix_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.EquipEnchantS10ResultAffix_C'",
+    "Package": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix",
+    "Properties": {
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipEnchantS10ResultAffix_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.60"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'EquipEnchantS10ResultAffix_C:WidgetTree.CanvasPanel.CanvasPanelSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.10"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'EquipEnchantS10ResultAffix_C:WidgetTree.CanvasPanel_204.CanvasPanelSlot_7'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.15"
+      },
+      "Clipping": "EWidgetClipping::ClipToBounds"
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipEnchantS10ResultAffix_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.60"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'EquipEnchantS10ResultAffix_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_11'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.11"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'EquipEnchantS10ResultAffix_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_7'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.12"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_204",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipEnchantS10ResultAffix_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.60"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'EquipEnchantS10ResultAffix_C:WidgetTree.CanvasPanel_204.CanvasPanelSlot_5'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.14"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'EquipEnchantS10ResultAffix_C:WidgetTree.CanvasPanel_204.CanvasPanelSlot_7'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.15"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'EquipEnchantS10ResultAffix_C:WidgetTree.CanvasPanel_204.CanvasPanelSlot_2'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.13"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'EquipEnchantS10ResultAffix_C:WidgetTree.ReforgePanel.CanvasPanelSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.27"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_21",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipEnchantS10ResultAffix_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.60"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'EquipEnchantS10ResultAffix_C:WidgetTree.CanvasPanel_21.CanvasPanelSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.16"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'EquipEnchantS10ResultAffix_C:WidgetTree.CanvasPanel_21.CanvasPanelSlot_2'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.18"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'EquipEnchantS10ResultAffix_C:WidgetTree.CanvasPanel_21.CanvasPanelSlot_4'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.20"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'EquipEnchantS10ResultAffix_C:WidgetTree.CanvasPanel_21.CanvasPanelSlot_7'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.22"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'EquipEnchantS10ResultAffix_C:WidgetTree.CanvasPanel_21.CanvasPanelSlot_6'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.21"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'EquipEnchantS10ResultAffix_C:WidgetTree.CanvasPanel_21.CanvasPanelSlot_16'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.17"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'EquipEnchantS10ResultAffix_C:WidgetTree.CanvasPanel_21.CanvasPanelSlot_3'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.19"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'EquipEnchantS10ResultAffix_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_7'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.12"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_267",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipEnchantS10ResultAffix_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.60"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'EquipEnchantS10ResultAffix_C:WidgetTree.CanvasPanel_267.CanvasPanelSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.23"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'EquipEnchantS10ResultAffix_C:WidgetTree.CanvasPanel_204.CanvasPanelSlot_5'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.14"
+      },
+      "Clipping": "EWidgetClipping::ClipToBounds"
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_51",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipEnchantS10ResultAffix_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.60"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'EquipEnchantS10ResultAffix_C:WidgetTree.CanvasPanel_51.CanvasPanelSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.24"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "SizeBoxSlot'EquipEnchantS10ResultAffix_C:WidgetTree.ReforgeConsumeSizeBox.SizeBoxSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.47"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "EffectPanel",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipEnchantS10ResultAffix_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.60"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'EquipEnchantS10ResultAffix_C:WidgetTree.EffectPanel.CanvasPanelSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.25"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'EquipEnchantS10ResultAffix_C:WidgetTree.EffectPanel.CanvasPanelSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.26"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'EquipEnchantS10ResultAffix_C:WidgetTree.CanvasPanel_21.CanvasPanelSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.16"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "ReforgePanel",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipEnchantS10ResultAffix_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.60"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'EquipEnchantS10ResultAffix_C:WidgetTree.ReforgePanel.CanvasPanelSlot_2'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.28"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'EquipEnchantS10ResultAffix_C:WidgetTree.ReforgePanel.CanvasPanelSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.27"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "SizeBoxSlot'EquipEnchantS10ResultAffix_C:WidgetTree.ReforgeBox.SizeBoxSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.46"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'EquipEnchantS10ResultAffix_C:WidgetTree.CanvasPanel'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.2"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 192.0,
+          "Bottom": 57.6
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.0
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.0
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.0
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'EquipEnchantS10ResultAffix_C:WidgetTree.CanvasPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.2"
+      },
+      "Content": {
+        "ObjectName": "UIImage'EquipEnchantS10ResultAffix_C:WidgetTree.UIImage_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.54"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_11",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'EquipEnchantS10ResultAffix_C:WidgetTree.CanvasPanel_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.3"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Top": -261.12,
+          "Right": 576.0,
+          "Bottom": 57.6
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'EquipEnchantS10ResultAffix_C:WidgetTree.CanvasPanel_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.3"
+      },
+      "Content": {
+        "ObjectName": "UIShrinkTextBlock'EquipEnchantS10ResultAffix_C:WidgetTree.TitleText'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.58"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_7",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'EquipEnchantS10ResultAffix_C:WidgetTree.CanvasPanel_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.3"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 835.19995,
+          "Bottom": 403.19998
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'EquipEnchantS10ResultAffix_C:WidgetTree.CanvasPanel_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.3"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'EquipEnchantS10ResultAffix_C:WidgetTree.CanvasPanel_21'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.5"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'EquipEnchantS10ResultAffix_C:WidgetTree.CanvasPanel_204'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.4"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Top": 140.16,
+          "Right": 806.39996,
+          "Bottom": 192.0
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'EquipEnchantS10ResultAffix_C:WidgetTree.CanvasPanel_204'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.4"
+      },
+      "Content": {
+        "ObjectName": "SizeBox'EquipEnchantS10ResultAffix_C:WidgetTree.ReforgeConsumeSizeBox'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.45"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_5",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'EquipEnchantS10ResultAffix_C:WidgetTree.CanvasPanel_204'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.4"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Top": 152.36691,
+          "Right": 0.0,
+          "Bottom": 167.04
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.0,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 1.0,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'EquipEnchantS10ResultAffix_C:WidgetTree.CanvasPanel_204'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.4"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'EquipEnchantS10ResultAffix_C:WidgetTree.CanvasPanel_267'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.6"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_7",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'EquipEnchantS10ResultAffix_C:WidgetTree.CanvasPanel_204'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.4"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Top": 58.176,
+          "Right": 0.0,
+          "Bottom": 21.119999
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.0,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 1.0,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'EquipEnchantS10ResultAffix_C:WidgetTree.CanvasPanel_204'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.4"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'EquipEnchantS10ResultAffix_C:WidgetTree.CanvasPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.2"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'EquipEnchantS10ResultAffix_C:WidgetTree.CanvasPanel_21'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.5"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "Anchors": {
+          "Maximum": {
+            "X": 1.0,
+            "Y": 1.0
+          }
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'EquipEnchantS10ResultAffix_C:WidgetTree.CanvasPanel_21'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.5"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'EquipEnchantS10ResultAffix_C:WidgetTree.EffectPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.8"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_16",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'EquipEnchantS10ResultAffix_C:WidgetTree.CanvasPanel_21'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.5"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 192.0,
+          "Bottom": 57.6
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "ZOrder": 7,
+      "Parent": {
+        "ObjectName": "CanvasPanel'EquipEnchantS10ResultAffix_C:WidgetTree.CanvasPanel_21'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.5"
+      },
+      "Content": {
+        "ObjectName": "UIImage'EquipEnchantS10ResultAffix_C:WidgetTree.glow'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.50"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'EquipEnchantS10ResultAffix_C:WidgetTree.CanvasPanel_21'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.5"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "Anchors": {
+          "Maximum": {
+            "X": 1.0,
+            "Y": 1.0
+          }
+        }
+      },
+      "ZOrder": 3,
+      "Parent": {
+        "ObjectName": "CanvasPanel'EquipEnchantS10ResultAffix_C:WidgetTree.CanvasPanel_21'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.5"
+      },
+      "Content": {
+        "ObjectName": "UIImage'EquipEnchantS10ResultAffix_C:WidgetTree.UIImage_73'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.56"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'EquipEnchantS10ResultAffix_C:WidgetTree.CanvasPanel_21'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.5"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "Anchors": {
+          "Maximum": {
+            "X": 1.0,
+            "Y": 1.0
+          }
+        }
+      },
+      "bAutoSize": true,
+      "ZOrder": 8,
+      "Parent": {
+        "ObjectName": "CanvasPanel'EquipEnchantS10ResultAffix_C:WidgetTree.CanvasPanel_21'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.5"
+      },
+      "Content": {
+        "ObjectName": "UIImage'EquipEnchantS10ResultAffix_C:WidgetTree.saoguang'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.51"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_4",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'EquipEnchantS10ResultAffix_C:WidgetTree.CanvasPanel_21'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.5"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 192.0,
+          "Bottom": 57.6
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 1.0,
+            "Y": 0.0
+          },
+          "Maximum": {
+            "X": 1.0,
+            "Y": 0.0
+          }
+        },
+        "Alignment": {
+          "X": 1.0,
+          "Y": 0.0
+        }
+      },
+      "bAutoSize": true,
+      "ZOrder": 4,
+      "Parent": {
+        "ObjectName": "CanvasPanel'EquipEnchantS10ResultAffix_C:WidgetTree.CanvasPanel_21'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.5"
+      },
+      "Content": {
+        "ObjectName": "UIImage'EquipEnchantS10ResultAffix_C:WidgetTree.UIImage_28'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.55"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_6",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'EquipEnchantS10ResultAffix_C:WidgetTree.CanvasPanel_21'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.5"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 16.34926,
+          "Top": 280.32,
+          "Right": 844.8,
+          "Bottom": 96.0
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "ZOrder": 6,
+      "Parent": {
+        "ObjectName": "CanvasPanel'EquipEnchantS10ResultAffix_C:WidgetTree.CanvasPanel_21'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.5"
+      },
+      "Content": {
+        "ObjectName": "HorizontalBox'EquipEnchantS10ResultAffix_C:WidgetTree.HorizontalBox_72'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.30"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_7",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'EquipEnchantS10ResultAffix_C:WidgetTree.CanvasPanel_21'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.5"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Top": 9.599999,
+          "Right": 192.0,
+          "Bottom": 57.6
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "ZOrder": 5,
+      "Parent": {
+        "ObjectName": "CanvasPanel'EquipEnchantS10ResultAffix_C:WidgetTree.CanvasPanel_21'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.5"
+      },
+      "Content": {
+        "ObjectName": "EquipEnchantS10AffixBar_C'EquipEnchantS10ResultAffix_C:WidgetTree.AffixBar'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.29"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'EquipEnchantS10ResultAffix_C:WidgetTree.CanvasPanel_267'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.6"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Top": -94.079994,
+          "Right": 0.0,
+          "Bottom": 188.15999
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.0,
+            "Y": 1.0
+          },
+          "Maximum": {
+            "X": 1.0,
+            "Y": 1.0
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'EquipEnchantS10ResultAffix_C:WidgetTree.CanvasPanel_267'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.6"
+      },
+      "Content": {
+        "ObjectName": "UIImage'EquipEnchantS10ResultAffix_C:WidgetTree.UIImage_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.53"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'EquipEnchantS10ResultAffix_C:WidgetTree.CanvasPanel_51'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.7"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 192.0,
+          "Bottom": 57.6
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'EquipEnchantS10ResultAffix_C:WidgetTree.CanvasPanel_51'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.7"
+      },
+      "Content": {
+        "ObjectName": "HorizontalBox'EquipEnchantS10ResultAffix_C:WidgetTree.ReforgeConsumeBox'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.31"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'EquipEnchantS10ResultAffix_C:WidgetTree.EffectPanel'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.8"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Top": -33.299557,
+          "Right": 1060.3046,
+          "Bottom": 151.07301
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.0
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.0
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'EquipEnchantS10ResultAffix_C:WidgetTree.EffectPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.8"
+      },
+      "Content": {
+        "ObjectName": "UIImage'EquipEnchantS10ResultAffix_C:WidgetTree.UIImage'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.52"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'EquipEnchantS10ResultAffix_C:WidgetTree.EffectPanel'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.8"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 192.0,
+          "Bottom": 57.6
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.0
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.0
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'EquipEnchantS10ResultAffix_C:WidgetTree.EffectPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.8"
+      },
+      "Content": {
+        "ObjectName": "UIParticleEmitter'EquipEnchantS10ResultAffix_C:WidgetTree.par'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.57"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'EquipEnchantS10ResultAffix_C:WidgetTree.ReforgePanel'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.9"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Top": 13.998219,
+          "Right": 192.0,
+          "Bottom": 57.6
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'EquipEnchantS10ResultAffix_C:WidgetTree.ReforgePanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.9"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'EquipEnchantS10ResultAffix_C:WidgetTree.CanvasPanel_204'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.4"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'EquipEnchantS10ResultAffix_C:WidgetTree.ReforgePanel'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.9"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 192.0,
+          "Bottom": 57.6
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'EquipEnchantS10ResultAffix_C:WidgetTree.ReforgePanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.9"
+      },
+      "Content": {
+        "ObjectName": "UIButton'EquipEnchantS10ResultAffix_C:WidgetTree.ReforgeBtn'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.49"
+      }
+    }
+  },
+  {
+    "Type": "EquipEnchantS10AffixBar_C",
+    "Name": "AffixBar",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10AffixBar.EquipEnchantS10AffixBar_C'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipEnchantS10ResultAffix_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.60"
+    },
+    "Template": {
+      "ObjectName": "EquipEnchantS10AffixBar_C'Default__EquipEnchantS10AffixBar_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10AffixBar.1"
+    },
+    "Properties": {
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'EquipEnchantS10ResultAffix_C:WidgetTree.CanvasPanel_21.CanvasPanelSlot_7'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.22"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "HorizontalBox_72",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipEnchantS10ResultAffix_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.60"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HorizontalBoxSlot'EquipEnchantS10ResultAffix_C:WidgetTree.HorizontalBox_72.HorizontalBoxSlot_7'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.33"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'EquipEnchantS10ResultAffix_C:WidgetTree.HorizontalBox_72.HorizontalBoxSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.32"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'EquipEnchantS10ResultAffix_C:WidgetTree.CanvasPanel_21.CanvasPanelSlot_6'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.21"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "ReforgeConsumeBox",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipEnchantS10ResultAffix_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.60"
+    },
+    "Properties": {
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'EquipEnchantS10ResultAffix_C:WidgetTree.CanvasPanel_51.CanvasPanelSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.24"
+      },
+      "RenderTransform": {
+        "Scale": {
+          "X": 0.56,
+          "Y": 0.56
+        }
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'EquipEnchantS10ResultAffix_C:WidgetTree.HorizontalBox_72'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.30"
+    },
+    "Properties": {
+      "Size": {
+        "SizeRule": "ESlateSizeRule::Fill"
+      },
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "HorizontalBox'EquipEnchantS10ResultAffix_C:WidgetTree.HorizontalBox_72'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.30"
+      },
+      "Content": {
+        "ObjectName": "UIButton'EquipEnchantS10ResultAffix_C:WidgetTree.ConfirmBtn'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.48"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_7",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'EquipEnchantS10ResultAffix_C:WidgetTree.HorizontalBox_72'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.30"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "Parent": {
+        "ObjectName": "HorizontalBox'EquipEnchantS10ResultAffix_C:WidgetTree.HorizontalBox_72'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.30"
+      },
+      "Content": {
+        "ObjectName": "SizeBox'EquipEnchantS10ResultAffix_C:WidgetTree.ReforgeBox'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.44"
+      }
+    }
+  },
+  {
+    "Type": "MovieScene",
+    "Name": "Anim_Saoguang",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene'",
+    "Outer": {
+      "ObjectName": "WidgetAnimation'EquipEnchantS10ResultAffix_C:Anim_Saoguang_INST'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.59"
+    },
+    "Properties": {
+      "Possessables": [
+        {
+          "Tags": [],
+          "Guid": "9D32305A-4CCE9592-E1559B89-B55B7B11",
+          "Name": "saoguang",
+          "PossessedObjectClass": {
+            "ObjectName": "Class'UIImage'",
+            "ObjectPath": "/Script/UE_game"
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        },
+        {
+          "Tags": [],
+          "Guid": "6470A493-495E83A0-ABE607B1-4E14DF13",
+          "Name": "glow",
+          "PossessedObjectClass": {
+            "ObjectName": "Class'UIImage'",
+            "ObjectPath": "/Script/UE_game"
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        }
+      ],
+      "ObjectBindings": [
+        {
+          "ObjectGuid": "9D32305A-4CCE9592-E1559B89-B55B7B11",
+          "BindingName": "saoguang",
+          "Tracks": [
+            {
+              "ObjectName": "MovieSceneWidgetMaterialTrack'EquipEnchantS10ResultAffix_C:Anim_Saoguang_INST.Anim_Saoguang.MovieSceneWidgetMaterialTrack_1'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.43"
+            }
+          ]
+        },
+        {
+          "ObjectGuid": "6470A493-495E83A0-ABE607B1-4E14DF13",
+          "BindingName": "glow",
+          "Tracks": [
+            {
+              "ObjectName": "MovieSceneFloatTrack'EquipEnchantS10ResultAffix_C:Anim_Saoguang_INST.Anim_Saoguang.MovieSceneFloatTrack_0'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.41"
+            }
+          ]
+        }
+      ],
+      "PlaybackRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 22001
+            }
+          }
+        }
+      },
+      "DisplayRate": {
+        "Numerator": 30
+      },
+      "Signature": "185C1CC5-49615767-A804A7AC-0F1B6BC1"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatSection'EquipEnchantS10ResultAffix_C:Anim_Saoguang_INST.Anim_Saoguang.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.40"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatSection'EquipEnchantS10ResultAffix_C:Anim_Saoguang_INST.Anim_Saoguang.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.40"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneParameterSection'EquipEnchantS10ResultAffix_C:Anim_Saoguang_INST.Anim_Saoguang.MovieSceneWidgetMaterialTrack_1.MovieSceneParameterSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.42"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneParameterSection'EquipEnchantS10ResultAffix_C:Anim_Saoguang_INST.Anim_Saoguang.MovieSceneWidgetMaterialTrack_1.MovieSceneParameterSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.42"
+    }
+  },
+  {
+    "Type": "MovieSceneCompiledData",
+    "Name": "CompiledData",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneCompiledData'",
+    "Outer": {
+      "ObjectName": "WidgetAnimation'EquipEnchantS10ResultAffix_C:Anim_Saoguang_INST'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.59"
+    },
+    "Properties": {
+      "EvaluationTemplate": {
+        "Tracks": [
+          {
+            "Key": {
+              "Value": 0
+            },
+            "Value": {
+              "ObjectBindingID": "9D32305A-4CCE9592-E1559B89-B55B7B11",
+              "EvaluationPriority": 1000,
+              "EvaluationMethod": "EEvaluationMethod::Static",
+              "SourceTrack": {
+                "ObjectName": "MovieSceneWidgetMaterialTrack'EquipEnchantS10ResultAffix_C:Anim_Saoguang_INST.Anim_Saoguang.MovieSceneWidgetMaterialTrack_1'",
+                "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.43"
+              },
+              "ChildTemplates": [
+                {
+                  "TypeName": "/Script/UMG.MovieSceneWidgetMaterialSectionTemplate",
+                  "Data": {
+                    "BrushPropertyNamePath": [
+                      "Brush"
+                    ],
+                    "Scalars": [],
+                    "Bools": [],
+                    "Vector2Ds": [],
+                    "Vectors": [],
+                    "Colors": [
+                      {
+                        "ParameterName": "Translation",
+                        "RedCurve": {
+                          "PreInfinityExtrap": "RCCE_Constant",
+                          "PostInfinityExtrap": "RCCE_Constant",
+                          "Times": [
+                            {
+                              "Value": 0
+                            },
+                            {
+                              "Value": 20000
+                            }
+                          ],
+                          "Values": [
+                            {
+                              "Value": 1.0185928,
+                              "Tangent": {
+                                "ArriveTangent": -0.00020739145,
+                                "LeaveTangent": -0.00020739145,
+                                "ArriveTangentWeight": 0.0,
+                                "LeaveTangentWeight": 0.0,
+                                "TangentWeightMode": 0
+                              },
+                              "InterpMode": 2,
+                              "TangentMode": 1
+                            },
+                            {
+                              "Value": -0.68999994,
+                              "Tangent": {
+                                "ArriveTangent": 0.0,
+                                "LeaveTangent": 0.0,
+                                "ArriveTangentWeight": 0.0,
+                                "LeaveTangentWeight": 0.0,
+                                "TangentWeightMode": 0
+                              },
+                              "InterpMode": 2,
+                              "TangentMode": 0
+                            }
+                          ],
+                          "DefaultValue": 0.0,
+                          "bHasDefaultValue": false,
+                          "TickResolution": {
+                            "Numerator": 60000,
+                            "Denominator": 1
+                          },
+                          "bShowCurve": false,
+                          "StructFallback": null
+                        },
+                        "GreenCurve": {
+                          "PreInfinityExtrap": "RCCE_Constant",
+                          "PostInfinityExtrap": "RCCE_Constant",
+                          "Times": [],
+                          "Values": [],
+                          "DefaultValue": 0.0,
+                          "bHasDefaultValue": false,
+                          "TickResolution": {
+                            "Numerator": 60000,
+                            "Denominator": 1
+                          },
+                          "bShowCurve": false,
+                          "StructFallback": null
+                        },
+                        "BlueCurve": {
+                          "PreInfinityExtrap": "RCCE_Constant",
+                          "PostInfinityExtrap": "RCCE_Constant",
+                          "Times": [],
+                          "Values": [],
+                          "DefaultValue": 0.0,
+                          "bHasDefaultValue": false,
+                          "TickResolution": {
+                            "Numerator": 60000,
+                            "Denominator": 1
+                          },
+                          "bShowCurve": false,
+                          "StructFallback": null
+                        },
+                        "AlphaCurve": {
+                          "PreInfinityExtrap": "RCCE_Constant",
+                          "PostInfinityExtrap": "RCCE_Constant",
+                          "Times": [],
+                          "Values": [],
+                          "DefaultValue": 0.0,
+                          "bHasDefaultValue": false,
+                          "TickResolution": {
+                            "Numerator": 60000,
+                            "Denominator": 1
+                          },
+                          "bShowCurve": false,
+                          "StructFallback": null
+                        }
+                      }
+                    ],
+                    "Transforms": [],
+                    "CompletionMode": "EMovieSceneCompletionMode::KeepState",
+                    "SourceSectionPtr": {
+                      "ObjectName": "MovieSceneParameterSection'EquipEnchantS10ResultAffix_C:Anim_Saoguang_INST.Anim_Saoguang.MovieSceneWidgetMaterialTrack_1.MovieSceneParameterSection_0'",
+                      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.42"
+                    }
+                  }
+                }
+              ],
+              "TrackTemplate": {
+                "TypeName": "",
+                "Data": null
+              },
+              "EvaluationGroup": "None",
+              "bEvaluateInPreroll": false,
+              "bEvaluateInPostroll": false,
+              "bTearDownPriority": false
+            }
+          }
+        ],
+        "TemplateLedger": {
+          "LastTrackIdentifier": {
+            "Value": 0
+          },
+          "TrackSignatureToTrackIdentifier": [
+            {
+              "Key": "86CB3B22-46D455AF-B5E65780-5B00EBEE",
+              "Value": {
+                "Value": 0
+              }
+            }
+          ]
+        }
+      },
+      "EntityComponentField": {
+        "PersistentEntityTree": {
+          "SerializedData": {
+            "Data": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 1,
+                  "Capacity": 1
+                }
+              ],
+              "Items": [
+                {
+                  "EntityIndex": 0,
+                  "MetaDataIndex": -1
+                }
+              ]
+            },
+            "RootNode": {
+              "Range": {
+                "LowerBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                },
+                "UpperBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                }
+              },
+              "Parent": {
+                "ChildrenHandle": {
+                  "EntryIndex": -1
+                },
+                "Index": -1
+              },
+              "ChildrenID": {
+                "EntryIndex": 0
+              },
+              "DataID": {
+                "EntryIndex": -1
+              }
+            },
+            "ChildNodes": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 1,
+                  "Capacity": 1
+                }
+              ],
+              "Items": [
+                {
+                  "Range": {
+                    "LowerBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 0
+                      }
+                    },
+                    "UpperBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 22000
+                      }
+                    }
+                  },
+                  "Parent": {
+                    "ChildrenHandle": {
+                      "EntryIndex": -1
+                    },
+                    "Index": 0
+                  },
+                  "ChildrenID": {
+                    "EntryIndex": -1
+                  },
+                  "DataID": {
+                    "EntryIndex": 0
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "Entities": [
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieSceneFloatSection'EquipEnchantS10ResultAffix_C:Anim_Saoguang_INST.Anim_Saoguang.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+                "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.40"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 0
+          }
+        ],
+        "SharedMetaData": [
+          {
+            "ObjectBindingID": "6470A493-495E83A0-ABE607B1-4E14DF13"
+          }
+        ]
+      },
+      "TrackTemplateField": {
+        "Ranges": [
+          {
+            "Value": {
+              "LowerBound": {
+                "Type": 2,
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": 0,
+                "Value": {
+                  "Value": 0
+                }
+              }
+            }
+          },
+          {
+            "Value": {
+              "LowerBound": {
+                "Type": 1,
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": 0,
+                "Value": {
+                  "Value": 22000
+                }
+              }
+            }
+          },
+          {
+            "Value": {
+              "LowerBound": {
+                "Type": 1,
+                "Value": {
+                  "Value": 22000
+                }
+              },
+              "UpperBound": {
+                "Type": 2,
+                "Value": {
+                  "Value": 0
+                }
+              }
+            }
+          }
+        ],
+        "Groups": [
+          {
+            "LUTIndices": [],
+            "TrackLUT": [],
+            "SectionLUT": []
+          },
+          {
+            "LUTIndices": [
+              {
+                "NumInitPtrs": 0,
+                "NumEvalPtrs": 1
+              }
+            ],
+            "TrackLUT": [
+              {
+                "TrackPtr": {
+                  "SequenceID": {
+                    "Value": 0
+                  },
+                  "TrackIdentifier": {
+                    "Value": 0
+                  }
+                },
+                "NumChildren": 1
+              }
+            ],
+            "SectionLUT": [
+              {
+                "ChildIndex": 0,
+                "Flags": "ESectionEvaluationFlags::None",
+                "ForcedTime": {
+                  "Value": -2147483648
+                }
+              }
+            ]
+          },
+          {
+            "LUTIndices": [],
+            "TrackLUT": [],
+            "SectionLUT": []
+          }
+        ],
+        "MetaData": [
+          {
+            "ActiveSequences": [
+              {
+                "Value": 0
+              }
+            ],
+            "ActiveEntities": []
+          },
+          {
+            "ActiveSequences": [
+              {
+                "Value": 0
+              }
+            ],
+            "ActiveEntities": [
+              {
+                "Key": {
+                  "SequenceID": {
+                    "Value": 0
+                  },
+                  "TrackIdentifier": {
+                    "Value": 0
+                  },
+                  "SectionIndex": 0
+                },
+                "SetupIndex": 0,
+                "TearDownIndex": 65535
+              }
+            ]
+          },
+          {
+            "ActiveSequences": [
+              {
+                "Value": 0
+              }
+            ],
+            "ActiveEntities": []
+          }
+        ]
+      },
+      "CompiledSignature": "DBD436A1-4708E480-FA7CD1B7-F7C646BC",
+      "CompilerVersion": "7D4B9809-2FAC4A6B-964ECF72-D8279EF8",
+      "AccumulatedMask": {
+        "bEvaluationTemplate": true,
+        "bEvaluationTemplateField": true,
+        "bEntityComponentField": true
+      },
+      "AllocatedMask": {
+        "bEvaluationTemplate": true,
+        "bEvaluationTemplateField": true,
+        "bEntityComponentField": true
+      }
+    }
+  },
+  {
+    "Type": "MovieSceneFloatSection",
+    "Name": "MovieSceneFloatSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneFloatSection'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatTrack'EquipEnchantS10ResultAffix_C:Anim_Saoguang_INST.Anim_Saoguang.MovieSceneFloatTrack_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.41"
+    },
+    "Properties": {
+      "FloatCurve": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 4000
+          },
+          {
+            "Value": 20000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 0.1,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'EquipEnchantS10ResultAffix_C:Anim_Saoguang_INST.Anim_Saoguang.MovieSceneFloatTrack_0.MovieSceneFloatSection_0.EaseInFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.35"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'EquipEnchantS10ResultAffix_C:Anim_Saoguang_INST.Anim_Saoguang.MovieSceneFloatTrack_0.MovieSceneFloatSection_0.EaseOutFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.36"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 22000
+            }
+          }
+        }
+      },
+      "Signature": "817F22AC-47800460-FE1F73AE-7400E66B"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatTrack",
+    "Name": "MovieSceneFloatTrack_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneFloatTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'EquipEnchantS10ResultAffix_C:Anim_Saoguang_INST.Anim_Saoguang'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.34"
+    },
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderOpacity",
+        "PropertyPath": "RenderOpacity",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneFloatSection'EquipEnchantS10ResultAffix_C:Anim_Saoguang_INST.Anim_Saoguang.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.40"
+        }
+      ],
+      "EvaluationFieldGuid": "4F39F26C-474CC86B-AF6DC991-E689FA9F",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneFloatSection'EquipEnchantS10ResultAffix_C:Anim_Saoguang_INST.Anim_Saoguang.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.40"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 22000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "4F39F26C-474CC86B-AF6DC991-E689FA9F"
+    }
+  },
+  {
+    "Type": "MovieSceneParameterSection",
+    "Name": "MovieSceneParameterSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneParameterSection'",
+    "Outer": {
+      "ObjectName": "MovieSceneWidgetMaterialTrack'EquipEnchantS10ResultAffix_C:Anim_Saoguang_INST.Anim_Saoguang.MovieSceneWidgetMaterialTrack_1'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.43"
+    },
+    "Properties": {
+      "ColorParameterNamesAndCurves": [
+        {
+          "ParameterName": "Translation",
+          "RedCurve": {
+            "PreInfinityExtrap": "RCCE_Constant",
+            "PostInfinityExtrap": "RCCE_Constant",
+            "Times": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 20000
+              }
+            ],
+            "Values": [
+              {
+                "Value": 1.0185928,
+                "Tangent": {
+                  "ArriveTangent": -0.00020739145,
+                  "LeaveTangent": -0.00020739145,
+                  "ArriveTangentWeight": 0.0,
+                  "LeaveTangentWeight": 0.0,
+                  "TangentWeightMode": 0
+                },
+                "InterpMode": 2,
+                "TangentMode": 1
+              },
+              {
+                "Value": -0.68999994,
+                "Tangent": {
+                  "ArriveTangent": 0.0,
+                  "LeaveTangent": 0.0,
+                  "ArriveTangentWeight": 0.0,
+                  "LeaveTangentWeight": 0.0,
+                  "TangentWeightMode": 0
+                },
+                "InterpMode": 2,
+                "TangentMode": 0
+              }
+            ],
+            "DefaultValue": 0.0,
+            "bHasDefaultValue": false,
+            "TickResolution": {
+              "Numerator": 60000,
+              "Denominator": 1
+            },
+            "bShowCurve": false,
+            "StructFallback": null
+          },
+          "GreenCurve": {
+            "PreInfinityExtrap": "RCCE_Constant",
+            "PostInfinityExtrap": "RCCE_Constant",
+            "Times": [],
+            "Values": [],
+            "DefaultValue": 0.0,
+            "bHasDefaultValue": false,
+            "TickResolution": {
+              "Numerator": 60000,
+              "Denominator": 1
+            },
+            "bShowCurve": false,
+            "StructFallback": null
+          },
+          "BlueCurve": {
+            "PreInfinityExtrap": "RCCE_Constant",
+            "PostInfinityExtrap": "RCCE_Constant",
+            "Times": [],
+            "Values": [],
+            "DefaultValue": 0.0,
+            "bHasDefaultValue": false,
+            "TickResolution": {
+              "Numerator": 60000,
+              "Denominator": 1
+            },
+            "bShowCurve": false,
+            "StructFallback": null
+          },
+          "AlphaCurve": {
+            "PreInfinityExtrap": "RCCE_Constant",
+            "PostInfinityExtrap": "RCCE_Constant",
+            "Times": [],
+            "Values": [],
+            "DefaultValue": 0.0,
+            "bHasDefaultValue": false,
+            "TickResolution": {
+              "Numerator": 60000,
+              "Denominator": 1
+            },
+            "bShowCurve": false,
+            "StructFallback": null
+          }
+        }
+      ],
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'EquipEnchantS10ResultAffix_C:Anim_Saoguang_INST.Anim_Saoguang.MovieSceneWidgetMaterialTrack_1.MovieSceneParameterSection_0.EaseInFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.37"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'EquipEnchantS10ResultAffix_C:Anim_Saoguang_INST.Anim_Saoguang.MovieSceneWidgetMaterialTrack_1.MovieSceneParameterSection_0.EaseOutFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.38"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 22000
+            }
+          }
+        }
+      },
+      "Signature": "A3E94BA1-4418E133-6C13D6B1-72AA5D08"
+    }
+  },
+  {
+    "Type": "MovieSceneWidgetMaterialTrack",
+    "Name": "MovieSceneWidgetMaterialTrack_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneWidgetMaterialTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'EquipEnchantS10ResultAffix_C:Anim_Saoguang_INST.Anim_Saoguang'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.34"
+    },
+    "Properties": {
+      "BrushPropertyNamePath": [
+        "Brush"
+      ],
+      "TrackName": "Brush",
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneParameterSection'EquipEnchantS10ResultAffix_C:Anim_Saoguang_INST.Anim_Saoguang.MovieSceneWidgetMaterialTrack_1.MovieSceneParameterSection_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.42"
+        }
+      ],
+      "EvaluationFieldGuid": "86CB3B22-46D455AF-B5E65780-5B00EBEE",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneParameterSection'EquipEnchantS10ResultAffix_C:Anim_Saoguang_INST.Anim_Saoguang.MovieSceneWidgetMaterialTrack_1.MovieSceneParameterSection_0'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.42"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Exclusive",
+                "Value": {
+                  "Value": 22000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "86CB3B22-46D455AF-B5E65780-5B00EBEE"
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "ReforgeBox",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipEnchantS10ResultAffix_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.60"
+    },
+    "Properties": {
+      "WidthOverride": 422.4,
+      "HeightOverride": 149.76,
+      "bOverride_WidthOverride": true,
+      "bOverride_HeightOverride": true,
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot'EquipEnchantS10ResultAffix_C:WidgetTree.ReforgeBox.SizeBoxSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.46"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'EquipEnchantS10ResultAffix_C:WidgetTree.HorizontalBox_72.HorizontalBoxSlot_7'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.33"
+      }
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "ReforgeConsumeSizeBox",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipEnchantS10ResultAffix_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.60"
+    },
+    "Properties": {
+      "WidthOverride": 311.04,
+      "MinDesiredWidth": 311.04,
+      "bOverride_WidthOverride": true,
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot'EquipEnchantS10ResultAffix_C:WidgetTree.ReforgeConsumeSizeBox.SizeBoxSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.47"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'EquipEnchantS10ResultAffix_C:WidgetTree.CanvasPanel_204.CanvasPanelSlot_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.13"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBoxSlot'",
+    "Outer": {
+      "ObjectName": "SizeBox'EquipEnchantS10ResultAffix_C:WidgetTree.ReforgeBox'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.44"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "SizeBox'EquipEnchantS10ResultAffix_C:WidgetTree.ReforgeBox'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.44"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'EquipEnchantS10ResultAffix_C:WidgetTree.ReforgePanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.9"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBoxSlot'",
+    "Outer": {
+      "ObjectName": "SizeBox'EquipEnchantS10ResultAffix_C:WidgetTree.ReforgeConsumeSizeBox'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.45"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "SizeBox'EquipEnchantS10ResultAffix_C:WidgetTree.ReforgeConsumeSizeBox'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.45"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'EquipEnchantS10ResultAffix_C:WidgetTree.CanvasPanel_51'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.7"
+      }
+    }
+  },
+  {
+    "Type": "UIButton",
+    "Name": "ConfirmBtn",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIButton'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipEnchantS10ResultAffix_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.60"
+    },
+    "Properties": {
+      "CommonButtonStyleId": 11,
+      "CurrTextKey": "Func_Common_Confirm",
+      "IconImage": {
+        "ImageSize": {
+          "X": 61.44,
+          "Y": 61.44
+        }
+      },
+      "WidgetStyle": {
+        "Normal": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          }
+        },
+        "Hovered": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          }
+        },
+        "Pressed": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          }
+        }
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'EquipEnchantS10ResultAffix_C:WidgetTree.HorizontalBox_72.HorizontalBoxSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.32"
+      }
+    }
+  },
+  {
+    "Type": "UIButton",
+    "Name": "ReforgeBtn",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIButton'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipEnchantS10ResultAffix_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.60"
+    },
+    "Properties": {
+      "CommonButtonStyleId": 12,
+      "CurrTextKey": "Func_EquipEnchantS10_Again",
+      "IconImage": {
+        "ImageSize": {
+          "X": 61.44,
+          "Y": 61.44
+        }
+      },
+      "BindedGamepadKey": "EUIGamepadKey::ELB",
+      "WidgetStyle": {
+        "Normal": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          }
+        },
+        "Hovered": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          }
+        },
+        "Pressed": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          }
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'EquipEnchantS10ResultAffix_C:WidgetTree.ReforgePanel.CanvasPanelSlot_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.28"
+      }
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "glow",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipEnchantS10ResultAffix_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.60"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/UIEffect/UIMaterial/Inst/EquipEnchantS10/UI_MI_EquipEnchantS10_11.UI_MI_EquipEnchantS10_11",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 835.19995,
+          "Y": 403.19998
+        },
+        "Margin": {
+          "Left": 0.4,
+          "Top": 0.4,
+          "Right": 0.4,
+          "Bottom": 0.4
+        },
+        "DrawAs": "ESlateBrushDrawType::Box"
+      },
+      "ColorAndOpacity": {
+        "R": 0.542615,
+        "G": 0.770784,
+        "B": 1.0,
+        "A": 1.0,
+        "Hex": "C3E4FF"
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'EquipEnchantS10ResultAffix_C:WidgetTree.CanvasPanel_21.CanvasPanelSlot_16'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.17"
+      },
+      "RenderTransform": {
+        "Scale": {
+          "X": 1.01,
+          "Y": 1.0
+        }
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible",
+      "RenderOpacity": 0.0
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "saoguang",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipEnchantS10ResultAffix_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.60"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/UIEffect/UIMaterial/Inst/EquipEnchantS10/UI_MI_EquipEnchantS10_07.UI_MI_EquipEnchantS10_07",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 844.8,
+          "Y": 403.19998
+        },
+        "Margin": {
+          "Left": 0.4,
+          "Top": 0.4,
+          "Right": 0.4,
+          "Bottom": 0.4
+        },
+        "DrawAs": "ESlateBrushDrawType::Box"
+      },
+      "ColorAndOpacity": {
+        "R": 0.317172,
+        "G": 0.755584,
+        "B": 1.0,
+        "A": 1.0,
+        "Hex": "99E2FF"
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'EquipEnchantS10ResultAffix_C:WidgetTree.CanvasPanel_21.CanvasPanelSlot_3'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.19"
+      },
+      "RenderTransform": {
+        "Scale": {
+          "X": 1.01,
+          "Y": 1.0
+        }
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "UIImage",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipEnchantS10ResultAffix_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.60"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/UIEffect/UIMaterial/Inst/EquipEnchantS10/UI_MI_EquipEnchantS10_12.UI_MI_EquipEnchantS10_12",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 61.44,
+          "Y": 61.44
+        }
+      },
+      "ColorAndOpacity": {
+        "R": 0.52802,
+        "G": 0.826656,
+        "B": 1.0,
+        "A": 1.0,
+        "Hex": "C0EBFF"
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'EquipEnchantS10ResultAffix_C:WidgetTree.EffectPanel.CanvasPanelSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.25"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "UIImage_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipEnchantS10ResultAffix_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.60"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/TexturesAtlas/EquipEnchantS10/Atlas/UI_EquipEnchantS10_After01_Sprite.UI_EquipEnchantS10_After01_Sprite",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 311.03998,
+          "Y": 188.15999
+        },
+        "Margin": {
+          "Left": 0.5,
+          "Top": 0.5,
+          "Right": 0.5,
+          "Bottom": 0.5
+        },
+        "DrawAs": "ESlateBrushDrawType::Box"
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'EquipEnchantS10ResultAffix_C:WidgetTree.CanvasPanel_267.CanvasPanelSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.23"
+      }
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "UIImage_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipEnchantS10ResultAffix_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.60"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/TexturesAtlas/EquipEnchantS10/Atlas/UI_EquipEnchantS10_After01_Sprite.UI_EquipEnchantS10_After01_Sprite",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 311.03998,
+          "Y": 188.15999
+        },
+        "Margin": {
+          "Left": 0.5,
+          "Top": 0.5,
+          "Right": 0.5,
+          "Bottom": 0.5
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'EquipEnchantS10ResultAffix_C:WidgetTree.CanvasPanel.CanvasPanelSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.10"
+      }
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "UIImage_28",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipEnchantS10ResultAffix_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.60"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/Textures/EquipEnchantS10/NoAtlas/UI_EquipEnchantS10_Bg_Formula_Pinting.UI_EquipEnchantS10_Bg_Formula_Pinting",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 779.51996,
+          "Y": 353.28
+        }
+      },
+      "ColorAndOpacity": {
+        "R": 1.0,
+        "G": 1.0,
+        "B": 1.0,
+        "A": 0.3,
+        "Hex": "4CFFFFFF"
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'EquipEnchantS10ResultAffix_C:WidgetTree.CanvasPanel_21.CanvasPanelSlot_4'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.20"
+      }
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "UIImage_73",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipEnchantS10ResultAffix_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.60"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/Textures/EquipEnchantS10/NoAtlas/UI_EquipEnchantS10_Bg_Formula02.UI_EquipEnchantS10_Bg_Formula02",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 88.32,
+          "Y": 403.19998
+        },
+        "Margin": {
+          "Left": 0.4,
+          "Top": 0.4,
+          "Right": 0.4,
+          "Bottom": 0.4
+        },
+        "DrawAs": "ESlateBrushDrawType::Box"
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'EquipEnchantS10ResultAffix_C:WidgetTree.CanvasPanel_21.CanvasPanelSlot_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.18"
+      }
+    }
+  },
+  {
+    "Type": "UIParticleEmitter",
+    "Name": "par",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIParticleEmitter'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipEnchantS10ResultAffix_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.60"
+    },
+    "Properties": {
+      "Asset": {
+        "ObjectName": "UIParticleEmitterAsset'UI_P_EquipEnchantS10_04'",
+        "ObjectPath": "UE_game/Content/Art/UI/UIEffect/UIParticle/EquipEnchantS10/UI_P_EquipEnchantS10_04.0"
+      },
+      "bPlayParticle": true,
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'EquipEnchantS10ResultAffix_C:WidgetTree.EffectPanel.CanvasPanelSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.26"
+      },
+      "RenderTransform": {
+        "Scale": {
+          "X": 1.92,
+          "Y": 1.92
+        }
+      }
+    }
+  },
+  {
+    "Type": "UIShrinkTextBlock",
+    "Name": "TitleText",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIShrinkTextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipEnchantS10ResultAffix_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.60"
+    },
+    "Properties": {
+      "CurrStyleId": 4244,
+      "TextContent": {
+        "Namespace": "",
+        "Key": "C6F98AA04FC07DB4CDF174A472A081DB",
+        "SourceString": "Title",
+        "LocalizedString": "Title"
+      },
+      "ShrinkSize": {
+        "X": 576.0,
+        "Y": 57.6
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'EquipEnchantS10ResultAffix_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_11'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.11"
+      },
+      "RenderOpacity": 0.6
+    }
+  },
+  {
+    "Type": "WidgetAnimation",
+    "Name": "Anim_Saoguang_INST",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetAnimation'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'EquipEnchantS10ResultAffix_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.0"
+    },
+    "Properties": {
+      "MovieScene": {
+        "ObjectName": "MovieScene'EquipEnchantS10ResultAffix_C:Anim_Saoguang_INST.Anim_Saoguang'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.34"
+      },
+      "AnimationBindings": [
+        {
+          "WidgetName": "saoguang",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "9D32305A-4CCE9592-E1559B89-B55B7B11",
+          "bIsRootWidget": false
+        },
+        {
+          "WidgetName": "glow",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "6470A493-495E83A0-ABE607B1-4E14DF13",
+          "bIsRootWidget": false
+        }
+      ],
+      "DisplayLabel": "Anim_Saoguang",
+      "CompiledData": {
+        "ObjectName": "MovieSceneCompiledData'EquipEnchantS10ResultAffix_C:Anim_Saoguang_INST.CompiledData'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.39"
+      },
+      "Signature": "DBD436A1-4708E480-FA7CD1B7-F7C646BC"
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetTree'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'EquipEnchantS10ResultAffix_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.0"
+    },
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "CanvasPanel'EquipEnchantS10ResultAffix_C:WidgetTree.CanvasPanel_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipEnchantS10/EquipEnchantS10ResultAffix.3"
+      }
+    }
+  }
+]
