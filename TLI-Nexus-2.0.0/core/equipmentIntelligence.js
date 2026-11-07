@@ -153,24 +153,37 @@ function normalizeItems(input) {
 function resourceIndexes(resourceIndex) {
   const itemRows = Array.isArray(resourceIndex?.itemDefinitions) ? resourceIndex.itemDefinitions : [];
   const affixRows = Array.isArray(resourceIndex?.affixDefinitions) ? resourceIndex.affixDefinitions : [];
+  const localizationRows = Array.isArray(resourceIndex?.localizationEntries) ? resourceIndex.localizationEntries : [];
   return {
     imported: Boolean(resourceIndex && typeof resourceIndex === 'object'),
     items: new Map(itemRows.filter((row) => row?.id != null).map((row) => [String(row.id), row])),
     affixes: new Map(affixRows.filter((row) => row?.id != null).map((row) => [String(row.id), row])),
+    localizations: new Map(localizationRows.filter((row) => row?.key != null).map((row) => [String(row.key), row])),
     itemDefinitionCount: itemRows.length,
     affixDefinitionCount: affixRows.length,
+    localizationCount: localizationRows.length,
   };
+}
+
+function localizedName(definition, indexes) {
+  if (!definition) return null;
+  const key = definition.nameKeyRaw || definition.textKeyRaw ||
+    definition.descriptionKeyRaw || null;
+  return key ? indexes.localizations.get(String(key))?.text || null : null;
 }
 
 function attachResourceKnowledge(item, indexes) {
   const itemDefinition = item.itemId ? indexes.items.get(String(item.itemId)) : null;
   const affixes = item.affixes.map((affix) => {
     const definition = affix.id ? indexes.affixes.get(String(affix.id)) : null;
+    const translatedName = localizedName(definition, indexes);
     return {
       ...affix,
       catalogMatch: definition ? {
         matched: true,
-        name: definition.name || definition.rowName || null,
+        name: definition.name || translatedName || definition.rowName || null,
+        nameSource: definition.name ? 'data-table' : translatedName ? 'localization-table' : 'row-key',
+        nameKeyRaw: definition.nameKeyRaw || definition.textKeyRaw || null,
         attributeRaw: definition.attributeRaw || null,
         tierRaw: definition.tierRaw || null,
         minRaw: definition.minRaw || null,
@@ -180,11 +193,14 @@ function attachResourceKnowledge(item, indexes) {
       } : { matched: false },
     };
   });
+  const translatedItemName = localizedName(itemDefinition, indexes);
   return {
     ...item,
     catalogItem: itemDefinition ? {
       matched: true,
-      name: itemDefinition.name || itemDefinition.rowName || null,
+      name: itemDefinition.name || translatedItemName || itemDefinition.rowName || null,
+      nameSource: itemDefinition.name ? 'data-table' : translatedItemName ? 'localization-table' : 'row-key',
+      nameKeyRaw: itemDefinition.nameKeyRaw || itemDefinition.textKeyRaw || null,
       slotRaw: itemDefinition.slotRaw || null,
       itemTypeRaw: itemDefinition.itemTypeRaw || null,
       sourcePath: itemDefinition.sourcePath || null,
@@ -270,6 +286,7 @@ export function analyzeEquipment(itemsInput, prioritiesInput = [], resourceIndex
       imported: indexes.imported,
       itemDefinitions: indexes.itemDefinitionCount,
       affixDefinitions: indexes.affixDefinitionCount,
+      localizationEntries: indexes.localizationCount,
       matchedItems: items.filter((item) => item.catalogItem.matched).length,
       matchedAffixes: items.reduce((sum, item) => sum + item.catalogAffixMatches, 0),
     },
@@ -464,6 +481,7 @@ export function compareEquipment(leftInput, rightInput, prioritiesInput = [], re
       imported: indexes.imported,
       itemDefinitions: indexes.itemDefinitionCount,
       affixDefinitions: indexes.affixDefinitionCount,
+      localizationEntries: indexes.localizationCount,
       leftItemMatched: left.catalogItem.matched,
       rightItemMatched: right.catalogItem.matched,
       leftAffixMatches: left.catalogAffixMatches,
