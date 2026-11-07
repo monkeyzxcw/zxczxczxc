@@ -156,8 +156,12 @@ function analyzeExplicitEquipment(intel, resourceIndex, partialEquipment) {
     const slotRaw = item.slotRaw || definition?.slotRaw || null;
     const affixes = (Array.isArray(item.affixes) ? item.affixes : []).slice(0,40).map((affix) => {
       const definition = affixDefinition(affix.id,resourceIndex);
-      const attributeRaw = definition?.attributeRaw ?? affix.attributeRaw ?? null;
-      const attribute = attributeDefinition(attributeRaw,resourceIndex);
+      const definitionAttributeRaw = definition?.attributeRaw ?? null;
+      const observedAttributeRaw = affix.attributeRaw ?? null;
+      const attributeMismatch = definitionAttributeRaw !== null && observedAttributeRaw !== null &&
+        String(definitionAttributeRaw) !== String(observedAttributeRaw);
+      const attributeRaw = observedAttributeRaw ?? definitionAttributeRaw ?? null;
+      const attribute = attributeMismatch ? null : attributeDefinition(attributeRaw,resourceIndex);
       const attrLabel = attribute?.enumName || attribute?.name || localize(attribute,resourceIndex) || attribute?.rowName || null;
       const attrCanonical = canonicalStat(attribute?.enumName || attrLabel || '', attrLabel || '');
       const directValue = (Array.isArray(affix.values) ? affix.values : []).filter((field) =>
@@ -170,15 +174,21 @@ function analyzeExplicitEquipment(intel, resourceIndex, partialEquipment) {
       const max = parseNumberWithUnit(definition?.maxRaw);
       let rollPercent = null;
       let rollStatus = 'unavailable';
-      if (parsedValue && min && max && parsedValue.unit === min.unit && min.unit === max.unit && max.number > min.number) {
-        rollPercent = Math.max(0,Math.min(100,Number(((parsedValue.number-min.number)/(max.number-min.number)*100).toFixed(1))));
-        rollStatus = rollPercent < 25 ? 'low-quarter' : rollPercent > 75 ? 'high-quarter' : 'middle-range';
+      if (!attributeMismatch && parsedValue && min && max && parsedValue.unit === min.unit && min.unit === max.unit && max.number > min.number) {
+        if (parsedValue.number < min.number || parsedValue.number > max.number) {
+          rollStatus = 'outside-range';
+        } else {
+          rollPercent = Number(((parsedValue.number-min.number)/(max.number-min.number)*100).toFixed(1));
+          rollStatus = rollPercent < 25 ? 'low-quarter' : rollPercent > 75 ? 'high-quarter' : 'middle-range';
+        }
       }
       const affixName = clean(affix.name || definition?.name || localize(definition,resourceIndex) || definition?.rowName || ('Аффикс '+(affix.id || 'без ID')),160);
       return {
         id: affix.id ? String(affix.id) : null, name: affixName, tier: definition?.tierRaw || affix.tierRaw || null,
-        attributeRaw: attributeRaw === null ? null : String(attributeRaw), attributeName: attrLabel,
-        statKey: attrCanonical || (candidates[0] ? canonicalStat(candidates[0].key) : null),
+        attributeRaw: attributeRaw === null ? null : String(attributeRaw),
+        catalogAttributeRaw: definitionAttributeRaw === null ? null : String(definitionAttributeRaw),
+        attributeMismatch, attributeName: attrLabel,
+        statKey: attributeMismatch ? null : attrCanonical || (candidates[0] ? canonicalStat(candidates[0].key) : null),
         value: candidates.length === 1 ? clean(candidates[0].value,80) : null,
         rollPercent, rollStatus, min: definition?.minRaw ?? null, max: definition?.maxRaw ?? null,
         exactCatalogMatch: Boolean(definition), sourcePath: definition?.sourcePath || affix.path || null,
@@ -261,6 +271,12 @@ export function diagnoseBuild({ build = {}, profile = null, intel = null, equipm
       {id:row.id});
   }
   for (const item of gear.items) {
+    for (const affix of item.affixes.filter((row)=>row.attributeMismatch)) {
+      add(96,'warning','affix-attrtype-conflict','ID аффикса и AttrType расходятся',
+        item.slot+' · '+item.name+' · '+affix.name+': в логе AttrType '+affix.attributeRaw+', в FModel '+affix.catalogAttributeRaw+'.',
+        'Не используй это сопоставление для оценки характеристики или диапазона. Проверь, что экспорт FModel относится к той же версии игры, что и лог.',
+        {itemId:item.itemId,affixId:affix.id,observedAttrType:affix.attributeRaw,catalogAttrType:affix.catalogAttributeRaw});
+    }
     for (const affix of item.affixes.filter((row)=>row.rollStatus==='low-quarter')) {
       add(72,'info','low-affix-roll','Низкий ролл подтверждённого аффикса',
         item.slot+' · '+item.name+' · '+affix.name+': '+affix.value+' из диапазона '+affix.min+'–'+affix.max+' ('+affix.rollPercent+'% диапазона).',
