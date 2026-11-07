@@ -165,10 +165,10 @@ test('native topmost state is explicitly cleared when HUD is unpinned', () => {
   assert.doesNotMatch(main, /overlay:toggle-pin/);
 });
 
-test('package version is 2.0.0 Character Intelligence platform release', () => {
+test('package version is 2.1.0 equipment intelligence release', () => {
   const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
   const pkg = JSON.parse(fs.readFileSync(path.join(root, 'package.json'), 'utf8'));
-  assert.equal(pkg.version, '2.0.0');
+  assert.equal(pkg.version, '2.1.0');
   assert.ok(pkg.build.files.includes('docs/RELEASE_NOTES_1.1.0.md'));
   assert.ok(pkg.build.files.includes('docs/RELEASE_NOTES_1.1.1.md'));
   assert.ok(pkg.build.files.includes('docs/RELEASE_NOTES_1.2.0.md'));
@@ -177,10 +177,11 @@ test('package version is 2.0.0 Character Intelligence platform release', () => {
   assert.ok(pkg.build.files.includes('docs/RELEASE_NOTES_1.4.0.md'));
   const overlay = fs.readFileSync(path.join(root, 'overlay.html'), 'utf8');
   const dashboard = fs.readFileSync(path.join(root, 'dashboard.html'), 'utf8');
-  assert.match(overlay, /GAME COMPANION · 2.0.0/);
-  assert.match(dashboard, /TLI Nexus 2.0.0/);
+  assert.match(overlay, /GAME COMPANION · 2.1.0/);
+  assert.match(dashboard, /TLI Nexus 2.1.0/);
   assert.ok(pkg.scripts.check.includes('core/hotkeys.js'));
   assert.ok(pkg.scripts.check.includes('core/equipmentTracker.js'));
+  assert.ok(pkg.scripts.check.includes('core/equipmentIntelligence.js'));
   assert.equal(pkg.scripts.check.includes('core/farmAnalytics.js'), true);
   const bat = fs.readFileSync(path.join(root, 'start-desktop.bat'), 'utf8');
   assert.match(bat, /npm install --include=dev/);
