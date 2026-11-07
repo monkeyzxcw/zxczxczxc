@@ -60,7 +60,20 @@ export function extractItemAffixEvidence(itemNode, pathPrefix = []) {
 
     const idKey = Object.keys(node).find((key) => ID_KEYS.has(normalizeKey(key)));
     const id = idKey ? directScalar(node, [idKey]) : null;
-    const fields = allScalars(node).filter((field) => !ID_KEYS.has(normalizeKey(field.key)));
+    // A parent like BaseAffix may contain several child affixes. Do not emit
+    // that parent as one synthetic affix; only collect scalar fields on the
+    // candidate node itself. Child nodes are visited independently.
+    const fields = Object.entries(node)
+      .map(([key, raw]) => ({ key, value: scalar(raw) }))
+      .filter((field) => (
+        (typeof field.value === 'string' || typeof field.value === 'number' || typeof field.value === 'boolean') &&
+        !ID_KEYS.has(normalizeKey(field.key))
+      ))
+      .map((field) => ({
+        key: field.key,
+        path: [...fullPath, field.key].join('.'),
+        value: text(field.value, 220),
+      }));
     if (!id && fields.length === 0) return;
 
     const values = fields.map((field) => ({
