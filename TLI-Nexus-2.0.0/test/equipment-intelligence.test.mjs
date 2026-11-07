@@ -219,6 +219,7 @@ test('attribute enum can be resolved even when the affix roll row is missing', (
     attributeDefinitions: [{
       enumId: '12',
       enumName: 'Maximum Life',
+      enumType: 'DT_AffixAttrType',
       sourcePath: 'Content/Data/DT_AffixAttrType.json',
     }],
     localizationEntries: [],
