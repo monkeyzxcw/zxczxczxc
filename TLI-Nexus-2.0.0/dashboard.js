@@ -365,7 +365,44 @@ function importObservedStatsToAnalyzer(){
   selectedBuildId=build.id;void saveData().then(()=>renderAnalyzer());toast(`Подставлено явных показателей из лога: ${count}. Значения сохранены с источниками.`);
 }
 function captureAnalyzer(){const build=data.builds.find(b=>b.id===$('analyzer-build').value);if(!build)return null;build.stats=build.stats||{};build.targets=build.targets||{};for(const input of document.querySelectorAll('[data-stat]'))build.stats[input.dataset.stat]=input.value===''?null:Number(input.value);for(const input of document.querySelectorAll('[data-target]'))build.targets[input.dataset.target]=input.value===''?null:Number(input.value);return build;}
-async function runAnalyzer(){const build=captureAnalyzer();if(!build)return toast('Сначала создай билд');await saveData();const report=await window.nexus.analyzeBuild(build);latestAnalysis=report;$('analysis-completeness').textContent=`Заполненность данных: ${report.completeness}% · ${report.knownStats}/${report.totalStats} характеристик`;$('analysis-findings').className='findings';$('analysis-findings').innerHTML=report.findings.map(f=>`<article class="finding ${f.severity}"><span class="severity">${f.severity==='warning'?'⚠':f.severity==='success'?'✓':'ⓘ'}</span><div><b>${esc(f.title)}</b><p>${esc(f.detail)} ${f.action?`<br><strong>Что проверить:</strong> ${esc(f.action)}`:''}</p></div></article>`).join('');}
+function renderBuildAudit(report){
+  const root=$('build-audit-results');
+  if(!root)return;
+  if(!report){root.className='build-audit-results empty';root.textContent='Нет результата полного анализа.';return;}
+  const summary=report.summary||{};
+  const character=report.character||{};
+  const value=(v)=>v===null||v===undefined||v===''?'—':esc(String(v));
+  const statusLabel=(status)=>({observed:'Найдено',not-observed:'Не найдено',unverifiable:'Нельзя сверить',no-live-data:'Нет снимка'})[status]||status;
+  const statRows=(report.stats||[]).filter(row=>row.current!==null||row.target!==null).map(row=>`<tr><td>${esc(row.label)}</td><td>${value(row.current)}</td><td>${value(row.target)}</td><td>${row.belowTarget?`<span class="negative">не хватает ${value(row.gap)}</span>`:'—'}</td><td><small>${esc(row.source||'')}</small></td></tr>`).join('');
+  const renderEntries=(group)=>group?.expected?.length?group.expected.map(row=>`<div class="audit-line"><div><b>${esc(row.text)}</b><small>${row.id?`ID ${esc(row.id)} · `:''}${row.matched?.length?`Совпало: ${row.matched.map(x=>esc(x.name||x.id)).join(', ')}`:''}</small></div><span class="audit-status ${esc(row.status)}">${esc(statusLabel(row.status))}</span></div>`).join(''):'<div class="empty">В сохранённой сборке нет записей.</div>';
+  const gear=(report.equipment?.items||[]).map(item=>`<article class="audit-gear"><div class="audit-gear-head"><div><b>${esc(item.name)}</b><small>${esc(item.slot)} · ID ${value(item.itemId)} · ${item.catalogMatch?'найдено в FModel':'нет точной строки предмета'}</small></div><span>${item.affixes?.length||0} афф.</span></div>${(item.affixes||[]).map(affix=>`<div class="audit-line"><div><b>${esc(affix.name)}</b><small>${affix.id?`ID ${esc(affix.id)} · `:''}${affix.attributeName?esc(affix.attributeName):affix.attributeRaw?`AttrType ${esc(affix.attributeRaw)}`:''}${affix.tier?` · T${esc(affix.tier)}`:''}${affix.min!==null&&affix.min!==undefined?` · диапазон ${esc(String(affix.min))}–${esc(String(affix.max))}`:''}</small></div><span class="audit-status ${affix.rollStatus==='low-quarter'?'not-observed':'observed'}">${affix.value?esc(affix.value):'Значение —'}${affix.rollPercent!==null?` · ${number(affix.rollPercent,1)}%`:''}</span></div>`).join('')||'<small class="muted">Явные аффиксы не найдены.</small>'}</article>`).join('')||'<div class="empty">Подтверждённая экипировка из лога пока не восстановлена.</div>';
+  const recommendations=(report.recommendations||[]).map((row,index)=>`<article class="audit-recommendation ${esc(row.severity)}"><div class="audit-rank">${index+1}</div><div><b>${esc(row.title)}</b><p>${esc(row.reason)}</p><small><strong>Что сделать:</strong> ${esc(row.action)}</small></div></article>`).join('')||'<div class="empty">По доступным данным явных действий не найдено. Это не подтверждает оптимальность билда.</div>';
+  const focus=(report.damageFocus?.checkedStats||[]).map(row=>`<span class="audit-chip">${esc(row.label)}: ${row.observed?'есть данные':'нет данных'}${row.target!==null?` · цель ${value(row.target)}`:''}</span>`).join('');
+  const limitations=(report.limitations||[]).map(row=>`<li>${esc(row)}</li>`).join('');
+  root.className='build-audit-results';
+  $('build-audit-state').textContent=report.status==='stale-character-data'?'СНИМОК УСТАРЕЛ':report.status==='no-live-character-data'?'НЕТ ДАННЫХ ПЕРСОНАЖА':'АУДИТ ГОТОВ';
+  root.innerHTML=`
+    <div class="audit-summary"><div><small>ПЕРСОНАЖ</small><b>${esc(character.name||'Не определён')}</b><span>${esc(character.hero||'Герой не указан')} · ${esc(character.specialization||'специализация не указана')}</span></div><div><small>ПОКРЫТИЕ ДАННЫХ</small><b>${number(summary.dataCoveragePercent||0,0)}%</b><span>Не является рейтингом силы</span></div><div><small>ПРОБЛЕМЫ</small><b>${number(summary.recommendations||0,0)}</b><span>Приоритетных действий</span></div><div><small>ЭКИПИРОВКА</small><b>${number(summary.explicitEquipmentItems||0,0)}</b><span>Явно наблюдаемых предметов</span></div></div>
+    <section class="audit-section"><h4>1. Характеристики и цели</h4><div class="table-wrap"><table><thead><tr><th>ПАРАМЕТР</th><th>СЕЙЧАС</th><th>ЦЕЛЬ</th><th>РАЗРЫВ</th><th>ИСТОЧНИК</th></tr></thead><tbody>${statRows||'<tr><td colspan="5" class="empty">Нет показателей для сравнения. Внеси значения или импортируй их из лога.</td></tr>'}</tbody></table></div></section>
+    <div class="audit-two"><section class="audit-section"><h4>2. Навыки и поддержки</h4><div class="audit-list">${renderEntries(report.skills)}</div><small class="muted">Снимок из лога: ${number(report.skills?.observedCount||0,0)} записей. ID сравниваются точно.</small></section><section class="audit-section"><h4>3. Таланты</h4><div class="audit-list">${renderEntries(report.talents)}</div><small class="muted">Снимок из лога: ${number(report.talents?.observedCount||0,0)} записей. ID сравниваются точно.</small></section></div>
+    <section class="audit-section"><h4>4. Экипировка и аффиксы</h4><div class="audit-gear-grid">${gear}</div><small class="muted">Сопоставлено с FModel: предметов ${number(summary.matchedItemDefinitions||0,0)}, аффиксов ${number(summary.matchedAffixes||0,0)}. Частичных событий PutOn/PutOff: ${number(report.equipment?.partialObservedItems||0,0)}. Полный комплект не подтверждён.</small></section>
+    <section class="audit-section"><h4>5. Фокус урона</h4><div class="audit-chips">${focus||'<span class="muted">Тип урона не указан.</span>'}</div><small class="muted">Эти параметры помогают найти недостающие данные, но Nexus не выводит выдуманный DPS и не рассчитывает мультипликаторы без подтверждённых формул.</small></section>
+    <section class="audit-section"><h4>6. План улучшений по приоритету</h4><div class="audit-recommendations">${recommendations}</div></section>
+    <section class="audit-section audit-caveats"><h4>Что пока нельзя надёжно проверить</h4><p>${esc(report.interactions?.explanation||'Связи навыков, поддержек и талантов требуют подтверждённой игровой базы эффектов.')}</p><ul>${limitations}</ul></section>
+    <p class="disclaimer">${esc(report.disclaimer||'Результат основан только на подтверждённых игровых полях и пользовательских целях.')}</p>`;
+}
+async function runAnalyzer(){
+  const build=captureAnalyzer();
+  if(!build)return toast('Сначала создай билд');
+  await saveData();
+  const report=await window.nexus.analyzeBuild(build);
+  latestAnalysis=report;
+  $('analysis-completeness').textContent=`Заполненность ручных данных: ${report.completeness}% · ${report.knownStats}/${report.totalStats} характеристик`;
+  $('analysis-findings').className='findings';
+  $('analysis-findings').innerHTML=report.findings.map(f=>`<article class="finding ${f.severity}"><span class="severity">${f.severity==='warning'?'⚠':f.severity==='success'?'✓':'ⓘ'}</span><div><b>${esc(f.title)}</b><p>${esc(f.detail)} ${f.action?`<br><strong>Что проверить:</strong> ${esc(f.action)}`:''}</p></div></article>`).join('');
+  const audit=await window.nexus.diagnoseBuild(build,build.profileId||null);
+  renderBuildAudit(audit);
+}
 async function renderFarming(){
   const allSessions=data.farmingSessions||[];
   const previousFilter=$('farm-profile-filter').value;
