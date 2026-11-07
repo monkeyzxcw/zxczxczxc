@@ -1,8 +1,9 @@
-name: TLI Nexus checks
+name: TLI Nexus checks and Windows package
 
 on:
   push:
     branches:
+      - main
       - "release/tli-nexus-*"
     paths:
       - "TLI-Nexus-2.0.0/**"
@@ -20,6 +21,7 @@ permissions:
 
 jobs:
   checks:
+    name: Syntax, tests and release verification
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -35,3 +37,33 @@ jobs:
         run: npm install --ignore-scripts --no-audit --no-fund
       - name: Run syntax, tests and release verifier
         run: npm run release:check
+
+  windows-package:
+    name: Build Windows x64 application
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    needs: checks
+    runs-on: windows-latest
+    defaults:
+      run:
+        working-directory: TLI-Nexus-2.0.0
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22.13.1"
+      - name: Install dependencies
+        run: npm install --no-audit --no-fund
+      - name: Run release checks on Windows
+        run: npm run release:check
+      - name: Build NSIS installer and portable application
+        run: npm run dist:win
+      - name: Upload Windows binaries
+        uses: actions/upload-artifact@v4
+        with:
+          name: TLI-Nexus-2.2.0-Windows-x64
+          path: |
+            TLI-Nexus-2.0.0/release/*.exe
+          if-no-files-found: error
+          retention-days: 14
