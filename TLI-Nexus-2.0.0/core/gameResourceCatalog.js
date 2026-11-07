@@ -21,14 +21,26 @@ const scalar = (value) => Array.isArray(value) ? value.at(-1) : value;
 
 function scalarMap(node) {
   const result = [];
-  if (!isRecord(node)) return result;
-  for (const [key, raw] of Object.entries(node)) {
-    const value = scalar(raw);
-    if (typeof value === 'string' || typeof value === 'number' || typeof value === 'boolean') {
-      result.push({ key, value: clean(value, 300) });
+  const payload = rowPayload(node);
+  if (!isRecord(payload)) return result;
+  walk(payload, (current) => {
+    for (const [key, raw] of Object.entries(current)) {
+      const value = scalar(raw);
+      if (typeof value === 'string' || typeof value === 'number' || typeof value === 'boolean') {
+        result.push({ key, value: clean(value, 300) });
+      }
     }
-  }
+  });
   return result;
+}
+
+function rowPayload(row) {
+  if (!isRecord(row)) return row;
+  for (const key of ['Value', 'Data', 'RowData', 'Fields', 'Properties']) {
+    const candidate = scalar(row[key]);
+    if (isRecord(candidate)) return candidate;
+  }
+  return row;
 }
 
 function findNamed(node, names) {
@@ -120,7 +132,8 @@ function extractRows(resourcePath, doc, kind) {
     const fields = scalarMap(entry.row);
     const fieldKeys = new Set(fields.map((field) => normalizeKey(field.key)));
     const idField = fields.find((field) => EXPLICIT_ID_KEYS.has(normalizeKey(field.key)));
-    const name = findNamed(entry.row, [
+    const payload = rowPayload(entry.row);
+    const name = findNamed(payload, [
       'Name', 'DisplayName', 'ItemName', 'EquipName', 'AffixName', 'NameKey',
       'TextKey', 'DescKey', 'Title',
     ]);
@@ -140,16 +153,16 @@ function extractRows(resourcePath, doc, kind) {
       [...fieldKeys].some((key) => ['itemid', 'itembaseid', 'configbaseid', 'equipmentid', 'equipmentbaseid'].includes(key));
 
     if (rowLooksAffix && id) {
-      summary.attributeRaw = findNamed(entry.row, [
+      summary.attributeRaw = findNamed(payload, [
         'AttrType', 'AffixAttrType', 'AttributeType', 'AttributeId', 'AttrId',
       ]);
-      summary.minRaw = findNamed(entry.row, ['Min', 'MinValue', 'ValueMin', 'MinRoll']);
-      summary.maxRaw = findNamed(entry.row, ['Max', 'MaxValue', 'ValueMax', 'MaxRoll']);
-      summary.tierRaw = findNamed(entry.row, ['Tier', 'AffixTier', 'Level', 'AffixLevel']);
+      summary.minRaw = findNamed(payload, ['Min', 'MinValue', 'ValueMin', 'MinRoll']);
+      summary.maxRaw = findNamed(payload, ['Max', 'MaxValue', 'ValueMax', 'MaxRoll']);
+      summary.tierRaw = findNamed(payload, ['Tier', 'AffixTier', 'Level', 'AffixLevel']);
       affixRows.push(summary);
     } else if (rowLooksItem && id) {
-      summary.slotRaw = findNamed(entry.row, ['EquipSlot', 'EquipmentSlot', 'WearSlot', 'Slot']);
-      summary.itemTypeRaw = findNamed(entry.row, ['ItemType', 'EquipType', 'EquipmentType', 'Type']);
+      summary.slotRaw = findNamed(payload, ['EquipSlot', 'EquipmentSlot', 'WearSlot', 'Slot']);
+      summary.itemTypeRaw = findNamed(payload, ['ItemType', 'EquipType', 'EquipmentType', 'Type']);
       itemRows.push(summary);
     }
   }
@@ -162,8 +175,8 @@ function readTextResource(filePath, maxBytes) {
   const buffer = fs.readFileSync(filePath);
   if (buffer.includes(0)) return null;
   const content = buffer.toString('utf8');
-  const printable = content.replace(/[\t\r\n -~]/g, '').length;
-  if (content.length && printable / content.length > 0.15) return null;
+  const controlChars = [...content].filter((char) => /\p{C}/u.test(char) && !/[\t\r\n]/.test(char)).length;
+  if (content.length && controlChars / content.length > 0.05) return null;
   return content;
 }
 
@@ -185,7 +198,7 @@ function listFiles(root, maxFiles, errors) {
         stack.push(fullPath);
       } else if (entry.isFile()) {
         const extension = path.extname(entry.name).toLowerCase();
-        if (extension === '.json' || extension === '.out' || extension === '.lua' || extension === '.txt' || extension === '.ini') {
+        if (extension === '.json' || extension === '.out' || extension === '.lua' || extension === '.txt' || extension === '.ini' || extension === '.locres') {
           results.push(fullPath);
         }
       }
@@ -215,8 +228,10 @@ function parseDefaultGameIni(content) {
  * access and never executes game scripts or loads binary assets.
  */
 export function scanGameResourceFolder(rootPath, options = {}) {
-  const root = path.resolve(String(rootPath || ''));
-  if (!root || !fs.existsSync(root) || !fs.statSync(root).isDirectory()) {
+  const selected = String(rootPath || '').trim();
+  if (!selected) throw new Error('Выбери папку с экспортом игровых ресурсов.');
+  const root = path.resolve(selected);
+  if (!fs.existsSync(root) || !fs.statSync(root).isDirectory()) {
     throw new Error('Выбранная папка игровых ресурсов не найдена.');
   }
 
@@ -256,6 +271,11 @@ export function scanGameResourceFolder(rootPath, options = {}) {
       }
     } catch (error) {
       errors.push({ path: relativePath, reason: clean(error.message, 200) });
+      continue;
+    }
+
+    if (extension === '.locres') {
+      localizationHints.push({ path: relativePath, extension, bytes: fs.statSync(filePath).size, parsed: false });
       continue;
     }
 
