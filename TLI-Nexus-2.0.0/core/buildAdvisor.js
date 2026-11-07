@@ -283,7 +283,7 @@ export function diagnoseBuild({ build = {}, profile = null, intel = null, equipm
   }
   const focus = damageFocus(build);
   if (focus.length) {
-    const notObserved = focus.filter((key)=>!stats.some((row)=>row.key===key && row.current!==null));
+    const notObserved = focus.filter((key)=>!stats.some((row)=>row.key===key && row.source==='UE_game.log'));
     if (notObserved.length) add(40,'info','damage-focus-incomplete','Не хватает показателей по выбранному типу урона',
       'Для типа «'+clean(build.damageType,60)+'» Nexus проверяет '+focus.map((key)=>STAT_LABELS[key]).join(' и ')+'.',
       'Добавь эти показатели из игрового листа характеристик. Без них Nexus не станет оценивать потенциал урона числом.');
@@ -330,7 +330,7 @@ export function diagnoseBuild({ build = {}, profile = null, intel = null, equipm
       explanation:'Nexus видит ID/уровень/позицию навыков и талантов, но текущие локальные источники не подтверждают определения всех эффектов и связи поддержек. Поэтому он не делает вывод, что конкретный талант усиливает конкретный навык.',
       availableEvidence:{skillIds: (intel?.skills || []).length, talentIds:(intel?.talents || []).length, itemAffixes:gear.matchedAffixes},
     },
-    damageFocus:{damageType:clean(build.damageType,60)||null, checkedStats:focus.map((key)=>({key,label:STAT_LABELS[key],observed:stats.some((row)=>row.key===key&&row.current!==null),target:finite(build.targets?.[key])}))},
+    damageFocus:{damageType:clean(build.damageType,60)||null, checkedStats:focus.map((key)=>({key,label:STAT_LABELS[key],observed:stats.some((row)=>row.key===key&&row.source==='UE_game.log'),target:finite(build.targets?.[key])}))},
     recommendations:byPriority, limitations,
     tlidb:{available:tlidbRecords>0,records:tlidbRecords,patchVerification:tlidbCatalog?.patchVerification || 'unknown'},
     sourceSummary:{
