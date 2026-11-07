@@ -83,3 +83,25 @@ test('stale profile data is marked and TLIDB is shown as reference only', () => 
   assert.equal(report.tlidb.records,3);
   assert.ok(report.limitations.some((row)=>/не использованы для ложного сопоставления/i.test(row)));
 });
+
+test('catalog conflicts and out-of-range values are not scored as low rolls', () => {
+  const report=diagnoseBuild({
+    build:{skills:[],talents:[]},
+    intel:{
+      lastObservedAt:Date.now(),
+      explicitEquipment:[{itemId:41001,slotRaw:'Head',affixes:[
+        {id:'7001',attributeRaw:'13',values:[{key:'Value',value:'110'}]},
+        {id:'7001',attributeRaw:'12',values:[{key:'Value',value:'99'}]},
+      ]}],
+    },
+    resourceIndex,now:Date.now(),
+  });
+  const [conflict,outside]=report.equipment.items[0].affixes;
+  assert.equal(conflict.attributeMismatch,true);
+  assert.equal(conflict.statKey,null);
+  assert.equal(conflict.rollPercent,null);
+  assert.equal(outside.rollStatus,'outside-range');
+  assert.equal(outside.rollPercent,null);
+  assert.ok(report.recommendations.some((row)=>row.code==='affix-attrtype-conflict'));
+  assert.equal(report.recommendations.filter((row)=>row.code==='low-affix-roll').length,0);
+});
