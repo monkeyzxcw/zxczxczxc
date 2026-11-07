@@ -73,3 +73,27 @@ test('map history is bounded to the configured number of recent runs', () => {
   assert.equal(tracker.snapshot().history.length, 2);
   assert.deepEqual(tracker.snapshot().history.map((row) => row.name), ['Map 1', 'Map 2']);
 });
+
+
+test('map tracker restores current and completed maps, loot totals and sequence', () => {
+  const tracker = new GameMapTracker();
+  tracker.enterArea({ area: 'Map A', asset: 'Map_A', mapZone: 'Atlas', areaId: 1, levelUid: 1 }, 1000);
+  tracker.addLoot({ kind: 'loot', configBaseId: 100300, qty: 8 });
+  tracker.enterArea({ area: 'Stronghold', asset: 'Stronghold', mapZone: 'Town' }, 21000);
+  tracker.enterArea({ area: 'Map B', asset: 'Map_B', mapZone: 'Atlas', areaId: 2, levelUid: 2 }, 30000);
+  tracker.addLoot({ kind: 'loot', configBaseId: 5028, qty: 4 });
+
+  const restored = new GameMapTracker();
+  restored.restore(tracker.snapshot());
+  assert.equal(restored.snapshot().completedCount, 1);
+  assert.equal(restored.snapshot().history[0].name, 'Map A');
+  assert.equal(restored.snapshot().current.name, 'Map B');
+  assert.equal(restored.snapshot().current.drops, 4);
+  assert.equal(restored.snapshot().current.loot[0].itemId, 5028);
+
+  const next = restored.enterArea({
+    area: 'Map C', asset: 'Map_C', mapZone: 'Atlas', areaId: 3, levelUid: 3,
+  }, 60000);
+  assert.equal(next.completed.name, 'Map B');
+  assert.match(restored.snapshot().current.id, /^map-3-/);
+});
