@@ -130,7 +130,9 @@ function configureTlidbAutoSync() {
 
   const cached = readTlidbCatalog();
   const syncedAt = Number(cached?.syncedAt) || 0;
-  const remaining = syncedAt ? tlidbSyncIntervalMs() - (Date.now() - syncedAt) : 0;
+  const retrySoon = Number(cached?.summary?.pagesFailed) > 0;
+  const nextInterval = retrySoon ? TLIDB_AUTO_SYNC_RETRY_MS : tlidbSyncIntervalMs();
+  const remaining = syncedAt ? nextInterval - (Date.now() - syncedAt) : 0;
   scheduleTlidbAutoSync(remaining > 0 ? remaining : TLIDB_AUTO_SYNC_STARTUP_DELAY_MS);
 }
 async function runTlidbSync({ automatic = false } = {}) {
@@ -580,7 +582,10 @@ app.whenReady().then(() => {
   ipcMain.handle('tlidb:status', () => tlidbStatusSnapshot());
   ipcMain.handle('tlidb:sync', async () => {
     const result = await runTlidbSync({ automatic: false });
-    if (tlidbAutoSyncEnabled()) scheduleTlidbAutoSync(tlidbSyncIntervalMs());
+    if (tlidbAutoSyncEnabled()) {
+      const partial = Number(result.status?.summary?.pagesFailed) > 0;
+      scheduleTlidbAutoSync(partial ? TLIDB_AUTO_SYNC_RETRY_MS : tlidbSyncIntervalMs());
+    }
     return result;
   });
   ipcMain.handle('tlidb:search', (_event, query, options = {}) => searchTlidbAffixes(
