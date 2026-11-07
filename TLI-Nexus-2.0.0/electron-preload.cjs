@@ -20,6 +20,8 @@ contextBridge.exposeInMainWorld('nexus', {
   exportBackup: () => ipcRenderer.invoke('app:export'),
   importBackup: () => ipcRenderer.invoke('app:import'),
   searchItems: (query) => ipcRenderer.invoke('items:search', query),
+  getGameResourceStatus: () => ipcRenderer.invoke('game-resources:status'),
+  importGameResources: () => ipcRenderer.invoke('game-resources:import'),
   getItemIcon: (id) => ipcRenderer.invoke('items:icon', id),
   getPriceHistory: (id, days = 30, seasonId = undefined) => ipcRenderer.invoke('prices:history', id, days, seasonId),
   analyzeBuild: (build) => ipcRenderer.invoke('build:analyze', build),
