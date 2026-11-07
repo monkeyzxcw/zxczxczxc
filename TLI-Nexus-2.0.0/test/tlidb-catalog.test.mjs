@@ -107,7 +107,7 @@ test('TLIDB sync fetches only allowlisted pages and records source/version limit
   assert.equal(result.patchVerification, 'unknown');
   assert.ok(result.limitations.some((line) => /internal game/i.test(line)));
   assert.equal(tlidbCatalogStatus(result).imported, true);
-  assert.throws(() => fetchTlidbCatalog({ slugs: ['https://attacker.test'], fetchImpl: async () => { throw new Error('should not run'); } }), /Недопустимая/);
+  await assert.rejects(fetchTlidbCatalog({ slugs: ['https://attacker.test'], fetchImpl: async () => { throw new Error('should not run'); } }), /Недопустимая/);
 });
 
 test('TLIDB sync rejects off-domain redirects and records the failed page', async () => {
