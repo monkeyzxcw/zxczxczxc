@@ -116,7 +116,7 @@ function compareDeclaredEntries(entries, observed, label) {
     const unverifiable = !entry.id && !observed.some((row) => row.name);
     return {
       label, text: entry.text, id: entry.id, status: found.length
-        ? 'observed' : unverifiable ? 'unverifiable' : observed.length ? 'not-observed' : 'no-live-data',
+        ? 'observed' : !entry.id ? 'unverifiable' : observed.length ? 'not-observed' : 'no-live-data',
       matched: found.slice(0,3).map((row) => ({ id: row.id, name: row.name || null, slot: row.slot || null, level: row.level ?? null })),
     };
   });
