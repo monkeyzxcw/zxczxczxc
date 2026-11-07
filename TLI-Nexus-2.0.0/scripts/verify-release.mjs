@@ -7,13 +7,13 @@ const required = [
   'electron-main.mjs', 'electron-preload.cjs', 'build-installer.bat',
   'overlay.html', 'overlay.js', 'overlay.css', 'dashboard.html', 'dashboard.js', 'dashboard.css',
   'core/liveService.js', 'core/gameLogEvents.js', 'core/characterIntel.js', 'core/characterReport.js',
-  'core/snapshotHistory.js', 'core/buildAnalysis.js', 'core/equipmentIntelligence.js', 'core/itemObservation.js', 'core/gameResourceCatalog.js', 'core/persistence.js', 'core/farmAnalytics.js',
+  'core/snapshotHistory.js', 'core/buildAnalysis.js', 'core/equipmentIntelligence.js', 'core/itemObservation.js', 'core/gameResourceCatalog.js', 'core/tlidbCatalog.js', 'core/persistence.js', 'core/farmAnalytics.js',
   'core/priceHistory.js', 'core/hotkeys.js', 'core/equipmentTracker.js', 'core/characterProfiles.js',
   'data/item-catalog.json', 'assets/nexus-icon.svg', 'assets/nexus-icon.png', 'assets/nexus-icon.ico',
   'start-desktop.bat', 'start-desktop-admin.ps1', 'README.md',
   'docs/USER_ACCEPTANCE_CHECKLIST.md', 'docs/RELEASE_NOTES_2.0.0.md',
   'test/release.test.mjs', 'test/character-intel.test.mjs', 'test/character-platform.test.mjs', 'test/equipment-intelligence.test.mjs',
-  'test/game-resources.test.mjs', 'docs/RELEASE_NOTES_2.1.0.md', 'docs/RELEASE_NOTES_2.2.0.md',
+  'test/game-resources.test.mjs', 'test/tlidb-catalog.test.mjs', 'docs/RELEASE_NOTES_2.1.0.md', 'docs/RELEASE_NOTES_2.2.0.md',
   'docs/GAME_RESOURCE_EXTRACTION.md',
 ];
 
@@ -51,7 +51,7 @@ if (missing.length) {
     !pkg.devDependencies?.['electron-builder'] ||
     !pkg.build?.win?.target?.includes('nsis') ||
     !pkg.build?.win?.target?.includes('portable') ||
-    !pkg.scripts.check.includes('core/characterIntel.js') || !pkg.scripts.check.includes('core/characterReport.js') || !pkg.scripts.check.includes('core/snapshotHistory.js') || !pkg.scripts.check.includes('core/hotkeys.js') || !pkg.scripts.check.includes('core/equipmentTracker.js') || !pkg.scripts.check.includes('core/equipmentIntelligence.js') || !pkg.scripts.check.includes('core/itemObservation.js') || !pkg.scripts.check.includes('core/gameResourceCatalog.js') ||
+    !pkg.scripts.check.includes('core/characterIntel.js') || !pkg.scripts.check.includes('core/characterReport.js') || !pkg.scripts.check.includes('core/snapshotHistory.js') || !pkg.scripts.check.includes('core/hotkeys.js') || !pkg.scripts.check.includes('core/equipmentTracker.js') || !pkg.scripts.check.includes('core/equipmentIntelligence.js') || !pkg.scripts.check.includes('core/itemObservation.js') || !pkg.scripts.check.includes('core/gameResourceCatalog.js') || !pkg.scripts.check.includes('core/tlidbCatalog.js') ||
     pkg.build?.win?.target?.some((target) => typeof target !== 'string') ||
     pkg.build?.nsis?.artifactName !== 'TLI-Nexus-${version}-Setup-${arch}.${ext}' ||
     pkg.build?.portable?.artifactName !== 'TLI-Nexus-${version}-Portable-${arch}.${ext}'
