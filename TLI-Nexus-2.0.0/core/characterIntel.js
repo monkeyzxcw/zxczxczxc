@@ -363,7 +363,15 @@ export class CharacterIntel {
     return { identity: this.identity ? { ...this.identity } : null, stats: [...this.stats.values()].map((x) => ({ ...x })),
       skills: [...this.skills.values()].map((x) => ({ ...x })), talents: [...this.talents.values()].map((x) => ({ ...x })),
       explicitEquipment: [...this.explicitEquipment.values()].map((x) => ({ ...x, affixes: (x.affixes || []).map((a) => ({ ...a, values: (a.values || []).map((v) => ({ ...v })) })), rawFields: (x.rawFields || []).map((v) => ({ ...v })) })),
-      inventorySnapshots: this.inventorySnapshots.map((x) => ({ ...x, items: (x.items || []).map((i) => ({ ...i, extra: { ...(i.extra || {}) }, details: (i.details || []).map((d) => ({ ...d })) })) })),
+      inventorySnapshots: this.inventorySnapshots.map((x) => ({
+        ...x,
+        items: (x.items || []).map((i) => ({
+          ...i,
+          extra: { ...(i.extra || {}) },
+          affixes: (i.affixes || []).map((a) => ({ ...a, values: (a.values || []).map((v) => ({ ...v })) })),
+          details: (i.details || []).map((d) => ({ ...d })),
+        })),
+      })),
       fieldSchema: [...this.fieldSchema.values()].slice(-300).map((x) => ({ ...x })), actions: Object.fromEntries(this.actions),
       lastObservedAt: this.lastObservedAt, messagesAnalyzed: this.messagesAnalyzed, lastAction: this.lastAction,
       lastUpdate: this.lastUpdate ? { ...this.lastUpdate } : null };
