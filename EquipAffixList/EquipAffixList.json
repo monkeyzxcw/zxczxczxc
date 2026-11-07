@@ -1,0 +1,4431 @@
+[
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "EquipAffixList_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Package": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'EquipAffixList_C:WidgetTree'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.129"
+      },
+      "bClassRequiresNativeTick": true
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'UIBackGroundWidget'",
+      "ObjectPath": "/Script/UE_game"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "C_AffixContentForDetail",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'AffixContentForDetail_C'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/AffixContentForDetail.0"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "C_AffixContentForMain",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'AffixContentForMain_C'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/AffixContentForMain.0"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "C_ClearButton",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIButton'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "C_OptionButton_AllAffix",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIButton'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "C_OptionButton_Ash",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIButton'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "C_OptionButton_Close",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIButton'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "C_OptionButton_Level",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIButton'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "C_OptionButton_Library",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIButton'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "C_OptionButton_Prefix",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIButton'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "C_OptionButton_Suffix",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIButton'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "C_OptionButton_Weapon",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIButton'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "C_OptionList",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'OptionList_C'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/OptionList.0"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "C_OptionState_Ash",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'WidgetSwitcher'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "C_OptionState_Library",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'WidgetSwitcher'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "C_OptionState_Weapon",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'WidgetSwitcher'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "C_SearchButton",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIButton'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "C_SearchInputText",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIEditText'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "C_UITitleItem",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'UITitleItem_C'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Common/Title/UITitleItem.0"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "C_WeaponName",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "FilterDropBox",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'UIDropBoxDownComponent_C'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Common/UIDropBox/UIDropBoxDownComponent.4"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "FilterDropBoxArrowImgSwitcher",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'WidgetSwitcher'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "FilterDropBoxBtn",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIButton'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "UIImage",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "UIImage_1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "UIImage_2",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "UIImage_3",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "UIImage_4",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "UIImage_5",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "UIImage_6",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "UIImage_7",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "UIImage_51",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "UIImage_57",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "UIImage_219",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      }
+    ],
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "EquipAffixList_C'Default__EquipAffixList_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.1"
+    }
+  },
+  {
+    "Type": "EquipAffixList_C",
+    "Name": "Default__EquipAffixList_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.EquipAffixList_C'",
+    "Package": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList",
+    "Properties": {
+      "BackGroundType": "EBackGroundType::EBlueType",
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "AffixContentForDetail_C",
+    "Name": "C_AffixContentForDetail",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'UE_game/Content/BluePrint/UI/EquipAffixList/AffixContentForDetail.AffixContentForDetail_C'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipAffixList_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.129"
+    },
+    "Template": {
+      "ObjectName": "AffixContentForDetail_C'Default__AffixContentForDetail_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/AffixContentForDetail.1"
+    },
+    "Properties": {
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'EquipAffixList_C:WidgetTree.C_ContentForDetailPanel.CanvasPanelSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.31"
+      }
+    }
+  },
+  {
+    "Type": "AffixContentForMain_C",
+    "Name": "C_AffixContentForMain",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'UE_game/Content/BluePrint/UI/EquipAffixList/AffixContentForMain.AffixContentForMain_C'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipAffixList_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.129"
+    },
+    "Template": {
+      "ObjectName": "AffixContentForMain_C'Default__AffixContentForMain_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/AffixContentForMain.1"
+    },
+    "Properties": {
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'EquipAffixList_C:WidgetTree.DisplayPanel.CanvasPanelSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.52"
+      }
+    }
+  },
+  {
+    "Type": "ButtonSlot",
+    "Name": "ButtonSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ButtonSlot'",
+    "Outer": {
+      "ObjectName": "UIButton'EquipAffixList_C:WidgetTree.C_OptionButton_AllAffix'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.83"
+    },
+    "Properties": {
+      "Padding": {
+        "Left": 7.68,
+        "Top": 3.84,
+        "Right": 7.68,
+        "Bottom": 3.84
+      },
+      "HorizontalAlignment": "HAlign_Fill",
+      "VerticalAlignment": "VAlign_Fill",
+      "Parent": {
+        "ObjectName": "UIButton'EquipAffixList_C:WidgetTree.C_OptionButton_AllAffix'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.83"
+      },
+      "Content": {
+        "ObjectName": "UIShrinkTextBlock'EquipAffixList_C:WidgetTree.UIShrinkTextBlock_104'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.113"
+      }
+    }
+  },
+  {
+    "Type": "ButtonSlot",
+    "Name": "ButtonSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ButtonSlot'",
+    "Outer": {
+      "ObjectName": "UIButton'EquipAffixList_C:WidgetTree.C_OptionButton_Ash'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.84"
+    },
+    "Properties": {
+      "Padding": {
+        "Left": 7.68,
+        "Top": 3.84,
+        "Right": 7.68,
+        "Bottom": 3.84
+      },
+      "HorizontalAlignment": "HAlign_Fill",
+      "VerticalAlignment": "VAlign_Fill",
+      "Parent": {
+        "ObjectName": "UIButton'EquipAffixList_C:WidgetTree.C_OptionButton_Ash'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.84"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'EquipAffixList_C:WidgetTree.CanvasPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.14"
+      }
+    }
+  },
+  {
+    "Type": "ButtonSlot",
+    "Name": "ButtonSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ButtonSlot'",
+    "Outer": {
+      "ObjectName": "UIButton'EquipAffixList_C:WidgetTree.C_OptionButton_Library'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.87"
+    },
+    "Properties": {
+      "Padding": {
+        "Left": 7.68,
+        "Top": 3.84,
+        "Right": 7.68,
+        "Bottom": 3.84
+      },
+      "HorizontalAlignment": "HAlign_Fill",
+      "VerticalAlignment": "VAlign_Fill",
+      "Parent": {
+        "ObjectName": "UIButton'EquipAffixList_C:WidgetTree.C_OptionButton_Library'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.87"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'EquipAffixList_C:WidgetTree.CanvasPanel_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.17"
+      }
+    }
+  },
+  {
+    "Type": "ButtonSlot",
+    "Name": "ButtonSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ButtonSlot'",
+    "Outer": {
+      "ObjectName": "UIButton'EquipAffixList_C:WidgetTree.C_OptionButton_Prefix'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.88"
+    },
+    "Properties": {
+      "Padding": {
+        "Left": 7.68,
+        "Top": 3.84,
+        "Right": 7.68,
+        "Bottom": 3.84
+      },
+      "HorizontalAlignment": "HAlign_Fill",
+      "VerticalAlignment": "VAlign_Fill",
+      "Parent": {
+        "ObjectName": "UIButton'EquipAffixList_C:WidgetTree.C_OptionButton_Prefix'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.88"
+      },
+      "Content": {
+        "ObjectName": "UIShrinkTextBlock'EquipAffixList_C:WidgetTree.PrefixText'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.111"
+      }
+    }
+  },
+  {
+    "Type": "ButtonSlot",
+    "Name": "ButtonSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ButtonSlot'",
+    "Outer": {
+      "ObjectName": "UIButton'EquipAffixList_C:WidgetTree.C_OptionButton_Suffix'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.89"
+    },
+    "Properties": {
+      "Padding": {
+        "Left": 7.68,
+        "Top": 3.84,
+        "Right": 7.68,
+        "Bottom": 3.84
+      },
+      "HorizontalAlignment": "HAlign_Fill",
+      "VerticalAlignment": "VAlign_Fill",
+      "Parent": {
+        "ObjectName": "UIButton'EquipAffixList_C:WidgetTree.C_OptionButton_Suffix'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.89"
+      },
+      "Content": {
+        "ObjectName": "UIShrinkTextBlock'EquipAffixList_C:WidgetTree.SuffixText'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.112"
+      }
+    }
+  },
+  {
+    "Type": "ButtonSlot",
+    "Name": "ButtonSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ButtonSlot'",
+    "Outer": {
+      "ObjectName": "UIButton'EquipAffixList_C:WidgetTree.C_OptionButton_Weapon'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.90"
+    },
+    "Properties": {
+      "Padding": {
+        "Left": 7.68,
+        "Top": 3.84,
+        "Right": 7.68,
+        "Bottom": 3.84
+      },
+      "HorizontalAlignment": "HAlign_Fill",
+      "VerticalAlignment": "VAlign_Fill",
+      "Parent": {
+        "ObjectName": "UIButton'EquipAffixList_C:WidgetTree.C_OptionButton_Weapon'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.90"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'EquipAffixList_C:WidgetTree.CanvasPanel_449'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.18"
+      }
+    }
+  },
+  {
+    "Type": "ButtonSlot",
+    "Name": "ButtonSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ButtonSlot'",
+    "Outer": {
+      "ObjectName": "UIButton'EquipAffixList_C:WidgetTree.FilterDropBoxBtn'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.92"
+    },
+    "Properties": {
+      "Padding": {
+        "Left": 0.0,
+        "Top": -5.76,
+        "Right": 0.0,
+        "Bottom": 0.0
+      },
+      "Parent": {
+        "ObjectName": "UIButton'EquipAffixList_C:WidgetTree.FilterDropBoxBtn'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.92"
+      },
+      "Content": {
+        "ObjectName": "HorizontalBox'EquipAffixList_C:WidgetTree.HorizontalBox_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.66"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "AffixOption",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipAffixList_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.129"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'EquipAffixList_C:WidgetTree.AffixOption.CanvasPanelSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.28"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'EquipAffixList_C:WidgetTree.AffixOption.CanvasPanelSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.29"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'EquipAffixList_C:WidgetTree.AffixOption.CanvasPanelSlot_2'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.30"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "SizeBoxSlot'EquipAffixList_C:WidgetTree.AffixOptionBox.SizeBoxSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.80"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "C_ContentForDetailPanel",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipAffixList_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.129"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'EquipAffixList_C:WidgetTree.C_ContentForDetailPanel.CanvasPanelSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.31"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'EquipAffixList_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_7'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.40"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "C_OptionsPanel",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipAffixList_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.129"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'EquipAffixList_C:WidgetTree.C_OptionsPanel.CanvasPanelSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.32"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'EquipAffixList_C:WidgetTree.C_OptionsPanel.CanvasPanelSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.33"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'EquipAffixList_C:WidgetTree.TypeOption.CanvasPanelSlot_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.64"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipAffixList_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.129"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'EquipAffixList_C:WidgetTree.CanvasPanel.CanvasPanelSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.34"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'EquipAffixList_C:WidgetTree.CanvasPanel.CanvasPanelSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.35"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'EquipAffixList_C:WidgetTree.CanvasPanel.CanvasPanelSlot_3'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.36"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "ButtonSlot'EquipAffixList_C:WidgetTree.C_OptionButton_Ash.ButtonSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.5"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipAffixList_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.129"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'EquipAffixList_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_5'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.39"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'EquipAffixList_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_17'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.38"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'EquipAffixList_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.37"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'EquipAffixList_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_7'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.40"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_189",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipAffixList_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.129"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'EquipAffixList_C:WidgetTree.CanvasPanel_189.CanvasPanelSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.41"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'EquipAffixList_C:WidgetTree.HorizontalBox_0.HorizontalBoxSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.69"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipAffixList_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.129"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'EquipAffixList_C:WidgetTree.CanvasPanel_2.CanvasPanelSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.42"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'EquipAffixList_C:WidgetTree.CanvasPanel_2.CanvasPanelSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.43"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'EquipAffixList_C:WidgetTree.CanvasPanel_2.CanvasPanelSlot_3'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.44"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "ButtonSlot'EquipAffixList_C:WidgetTree.C_OptionButton_Library.ButtonSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.6"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_449",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipAffixList_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.129"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'EquipAffixList_C:WidgetTree.CanvasPanel_449.CanvasPanelSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.45"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'EquipAffixList_C:WidgetTree.CanvasPanel_449.CanvasPanelSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.46"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'EquipAffixList_C:WidgetTree.CanvasPanel_449.CanvasPanelSlot_3'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.47"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "ButtonSlot'EquipAffixList_C:WidgetTree.C_OptionButton_Weapon.ButtonSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.9"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "ContentPanel",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipAffixList_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.129"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'EquipAffixList_C:WidgetTree.ContentPanel.CanvasPanelSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.48"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'EquipAffixList_C:WidgetTree.ContentPanel.CanvasPanelSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.49"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'EquipAffixList_C:WidgetTree.ContentPanel.CanvasPanelSlot_2'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.50"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'EquipAffixList_C:WidgetTree.ContentPanel.CanvasPanelSlot_4'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.51"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "SizeBoxSlot'EquipAffixList_C:WidgetTree.ContentBox.SizeBoxSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.81"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "DisplayPanel",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipAffixList_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.129"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'EquipAffixList_C:WidgetTree.DisplayPanel.CanvasPanelSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.52"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'EquipAffixList_C:WidgetTree.ContentPanel.CanvasPanelSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.48"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "FilterDropBoxPanel",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipAffixList_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.129"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'EquipAffixList_C:WidgetTree.FilterDropBoxPanel.CanvasPanelSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.53"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'EquipAffixList_C:WidgetTree.FilterDropBoxPanel.CanvasPanelSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.54"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'EquipAffixList_C:WidgetTree.ContentPanel.CanvasPanelSlot_4'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.51"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "LevelOption",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipAffixList_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.129"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'EquipAffixList_C:WidgetTree.LevelOption.CanvasPanelSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.55"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'EquipAffixList_C:WidgetTree.LevelOption.CanvasPanelSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.56"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'EquipAffixList_C:WidgetTree.ContentPanel.CanvasPanelSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.49"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "OptionButton_AshPanel",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipAffixList_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.129"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'EquipAffixList_C:WidgetTree.OptionButton_AshPanel.CanvasPanelSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.57"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'EquipAffixList_C:WidgetTree.HorizontalBox_187.HorizontalBoxSlot_7'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.73"
+      },
+      "Visibility": "ESlateVisibility::Collapsed"
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "OptionButton_LibraryPanel",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipAffixList_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.129"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'EquipAffixList_C:WidgetTree.OptionButton_LibraryPanel.CanvasPanelSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.58"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'EquipAffixList_C:WidgetTree.HorizontalBox_187.HorizontalBoxSlot_10'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.71"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "OptionButton_WeaponPanel",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipAffixList_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.129"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'EquipAffixList_C:WidgetTree.OptionButton_WeaponPanel.CanvasPanelSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.59"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'EquipAffixList_C:WidgetTree.HorizontalBox_187.HorizontalBoxSlot_5'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.72"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "SearchOption",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipAffixList_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.129"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'EquipAffixList_C:WidgetTree.SearchOption.CanvasPanelSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.60"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'EquipAffixList_C:WidgetTree.SearchOption.CanvasPanelSlot_4'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.63"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'EquipAffixList_C:WidgetTree.SearchOption.CanvasPanelSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.61"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'EquipAffixList_C:WidgetTree.SearchOption.CanvasPanelSlot_2'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.62"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'EquipAffixList_C:WidgetTree.ContentPanel.CanvasPanelSlot_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.50"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "TypeOption",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipAffixList_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.129"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'EquipAffixList_C:WidgetTree.TypeOption.CanvasPanelSlot_5'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.65"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'EquipAffixList_C:WidgetTree.TypeOption.CanvasPanelSlot_2'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.64"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'EquipAffixList_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_17'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.38"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'EquipAffixList_C:WidgetTree.AffixOption'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.11"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Top": -224.64,
+          "Right": 408.96,
+          "Bottom": 120.96
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'EquipAffixList_C:WidgetTree.AffixOption'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.11"
+      },
+      "Content": {
+        "ObjectName": "UIButton'EquipAffixList_C:WidgetTree.C_OptionButton_AllAffix'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.83"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'EquipAffixList_C:WidgetTree.AffixOption'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.11"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Top": -92.159996,
+          "Right": 408.96,
+          "Bottom": 120.96
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'EquipAffixList_C:WidgetTree.AffixOption'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.11"
+      },
+      "Content": {
+        "ObjectName": "UIButton'EquipAffixList_C:WidgetTree.C_OptionButton_Prefix'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.88"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'EquipAffixList_C:WidgetTree.AffixOption'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.11"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Top": 40.32,
+          "Right": 408.96,
+          "Bottom": 120.96
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'EquipAffixList_C:WidgetTree.AffixOption'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.11"
+      },
+      "Content": {
+        "ObjectName": "UIButton'EquipAffixList_C:WidgetTree.C_OptionButton_Suffix'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.89"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'EquipAffixList_C:WidgetTree.C_ContentForDetailPanel'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.12"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "Anchors": {
+          "Maximum": {
+            "X": 1.0,
+            "Y": 1.0
+          }
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'EquipAffixList_C:WidgetTree.C_ContentForDetailPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.12"
+      },
+      "Content": {
+        "ObjectName": "AffixContentForDetail_C'EquipAffixList_C:WidgetTree.C_AffixContentForDetail'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.2"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'EquipAffixList_C:WidgetTree.C_OptionsPanel'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.13"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "Anchors": {
+          "Maximum": {
+            "X": 1.0,
+            "Y": 1.0
+          }
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'EquipAffixList_C:WidgetTree.C_OptionsPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.13"
+      },
+      "Content": {
+        "ObjectName": "UIButton'EquipAffixList_C:WidgetTree.C_OptionButton_Close'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.85"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'EquipAffixList_C:WidgetTree.C_OptionsPanel'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.13"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": -163.2,
+          "Top": 140.16,
+          "Right": 192.0,
+          "Bottom": 57.6
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 1.0,
+            "Y": 0.0
+          },
+          "Maximum": {
+            "X": 1.0,
+            "Y": 0.0
+          }
+        },
+        "Alignment": {
+          "X": 1.0,
+          "Y": 0.0
+        }
+      },
+      "bAutoSize": true,
+      "ZOrder": 1,
+      "Parent": {
+        "ObjectName": "CanvasPanel'EquipAffixList_C:WidgetTree.C_OptionsPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.13"
+      },
+      "Content": {
+        "ObjectName": "OptionList_C'EquipAffixList_C:WidgetTree.C_OptionList'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.77"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'EquipAffixList_C:WidgetTree.CanvasPanel'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.14"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": -281.02954,
+          "Right": 69.119995,
+          "Bottom": 69.119995
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'EquipAffixList_C:WidgetTree.CanvasPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.14"
+      },
+      "Content": {
+        "ObjectName": "UIImage'EquipAffixList_C:WidgetTree.UIImage_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.97"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'EquipAffixList_C:WidgetTree.CanvasPanel'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.14"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": -13.736634,
+          "Right": 468.47998,
+          "Bottom": 65.28
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'EquipAffixList_C:WidgetTree.CanvasPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.14"
+      },
+      "Content": {
+        "ObjectName": "UIShrinkTextBlock'EquipAffixList_C:WidgetTree.C_OptionName_Ash'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.107"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'EquipAffixList_C:WidgetTree.CanvasPanel'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.14"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 297.6,
+          "Top": 3.84,
+          "Right": 192.0,
+          "Bottom": 57.6
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'EquipAffixList_C:WidgetTree.CanvasPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.14"
+      },
+      "Content": {
+        "ObjectName": "WidgetSwitcher'EquipAffixList_C:WidgetTree.C_OptionState_Ash'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.117"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'EquipAffixList_C:WidgetTree.CanvasPanel_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.15"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 192.0,
+          "Bottom": 57.6
+        }
+      },
+      "bAutoSize": true,
+      "ZOrder": 10,
+      "Parent": {
+        "ObjectName": "CanvasPanel'EquipAffixList_C:WidgetTree.CanvasPanel_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.15"
+      },
+      "Content": {
+        "ObjectName": "UITitleItem_C'EquipAffixList_C:WidgetTree.C_UITitleItem'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.116"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_17",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'EquipAffixList_C:WidgetTree.CanvasPanel_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.15"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "Anchors": {
+          "Maximum": {
+            "X": 1.0,
+            "Y": 1.0
+          }
+        }
+      },
+      "ZOrder": 2,
+      "Parent": {
+        "ObjectName": "CanvasPanel'EquipAffixList_C:WidgetTree.CanvasPanel_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.15"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'EquipAffixList_C:WidgetTree.TypeOption'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.27"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_5",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'EquipAffixList_C:WidgetTree.CanvasPanel_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.15"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 3118.0798,
+          "Bottom": 0.0
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.0
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 1.0
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.0
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'EquipAffixList_C:WidgetTree.CanvasPanel_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.15"
+      },
+      "Content": {
+        "ObjectName": "HorizontalBox'EquipAffixList_C:WidgetTree.HorizontalBox_57'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.68"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_7",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'EquipAffixList_C:WidgetTree.CanvasPanel_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.15"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "Anchors": {
+          "Maximum": {
+            "X": 1.0,
+            "Y": 1.0
+          }
+        }
+      },
+      "ZOrder": 15,
+      "Parent": {
+        "ObjectName": "CanvasPanel'EquipAffixList_C:WidgetTree.CanvasPanel_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.15"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'EquipAffixList_C:WidgetTree.C_ContentForDetailPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.12"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'EquipAffixList_C:WidgetTree.CanvasPanel_189'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.16"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 403.19998,
+          "Bottom": 72.28738
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'EquipAffixList_C:WidgetTree.CanvasPanel_189'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.16"
+      },
+      "Content": {
+        "ObjectName": "UIShrinkTextBlock'EquipAffixList_C:WidgetTree.FilterDropBoxBtnText'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.110"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'EquipAffixList_C:WidgetTree.CanvasPanel_2'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.17"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": -281.02954,
+          "Right": 69.119995,
+          "Bottom": 69.119995
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'EquipAffixList_C:WidgetTree.CanvasPanel_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.17"
+      },
+      "Content": {
+        "ObjectName": "UIImage'EquipAffixList_C:WidgetTree.UIImage_4'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.101"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'EquipAffixList_C:WidgetTree.CanvasPanel_2'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.17"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": -13.736634,
+          "Right": 468.47998,
+          "Bottom": 65.28
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'EquipAffixList_C:WidgetTree.CanvasPanel_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.17"
+      },
+      "Content": {
+        "ObjectName": "UIShrinkTextBlock'EquipAffixList_C:WidgetTree.C_OptionName_Library'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.108"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'EquipAffixList_C:WidgetTree.CanvasPanel_2'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.17"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 297.6,
+          "Top": 3.84,
+          "Right": 192.0,
+          "Bottom": 57.6
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'EquipAffixList_C:WidgetTree.CanvasPanel_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.17"
+      },
+      "Content": {
+        "ObjectName": "WidgetSwitcher'EquipAffixList_C:WidgetTree.C_OptionState_Library'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.118"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'EquipAffixList_C:WidgetTree.CanvasPanel_449'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.18"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": -281.02954,
+          "Right": 69.119995,
+          "Bottom": 69.119995
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'EquipAffixList_C:WidgetTree.CanvasPanel_449'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.18"
+      },
+      "Content": {
+        "ObjectName": "UIImage'EquipAffixList_C:WidgetTree.C_WeaponName'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.95"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'EquipAffixList_C:WidgetTree.CanvasPanel_449'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.18"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": -13.736634,
+          "Right": 468.47998,
+          "Bottom": 65.28
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'EquipAffixList_C:WidgetTree.CanvasPanel_449'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.18"
+      },
+      "Content": {
+        "ObjectName": "UIShrinkTextBlock'EquipAffixList_C:WidgetTree.C_OptionName_Weapon'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.109"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'EquipAffixList_C:WidgetTree.CanvasPanel_449'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.18"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 297.6,
+          "Top": 3.84,
+          "Right": 192.0,
+          "Bottom": 57.6
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'EquipAffixList_C:WidgetTree.CanvasPanel_449'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.18"
+      },
+      "Content": {
+        "ObjectName": "WidgetSwitcher'EquipAffixList_C:WidgetTree.C_OptionState_Weapon'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.119"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'EquipAffixList_C:WidgetTree.ContentPanel'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.19"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "Anchors": {
+          "Maximum": {
+            "X": 1.0,
+            "Y": 1.0
+          }
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'EquipAffixList_C:WidgetTree.ContentPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.19"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'EquipAffixList_C:WidgetTree.DisplayPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.20"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'EquipAffixList_C:WidgetTree.ContentPanel'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.19"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "Anchors": {
+          "Maximum": {
+            "X": 1.0,
+            "Y": 1.0
+          }
+        }
+      },
+      "ZOrder": 1,
+      "Parent": {
+        "ObjectName": "CanvasPanel'EquipAffixList_C:WidgetTree.ContentPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.19"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'EquipAffixList_C:WidgetTree.LevelOption'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.22"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'EquipAffixList_C:WidgetTree.ContentPanel'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.19"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": -1205.76,
+          "Top": -720.0,
+          "Right": 2411.52,
+          "Bottom": 1440.0
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        }
+      },
+      "ZOrder": 1,
+      "Parent": {
+        "ObjectName": "CanvasPanel'EquipAffixList_C:WidgetTree.ContentPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.19"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'EquipAffixList_C:WidgetTree.SearchOption'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.26"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_4",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'EquipAffixList_C:WidgetTree.ContentPanel'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.19"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 48.23999,
+          "Top": -461.0
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "ZOrder": 2,
+      "Parent": {
+        "ObjectName": "CanvasPanel'EquipAffixList_C:WidgetTree.ContentPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.19"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'EquipAffixList_C:WidgetTree.FilterDropBoxPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.21"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'EquipAffixList_C:WidgetTree.DisplayPanel'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.20"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Top": 108.6504,
+          "Right": 192.0,
+          "Bottom": 57.6
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'EquipAffixList_C:WidgetTree.DisplayPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.20"
+      },
+      "Content": {
+        "ObjectName": "AffixContentForMain_C'EquipAffixList_C:WidgetTree.C_AffixContentForMain'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.3"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'EquipAffixList_C:WidgetTree.FilterDropBoxPanel'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.21"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Top": 12.407203,
+          "Right": 558.8803,
+          "Bottom": 119.04
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'EquipAffixList_C:WidgetTree.FilterDropBoxPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.21"
+      },
+      "Content": {
+        "ObjectName": "UIButton'EquipAffixList_C:WidgetTree.FilterDropBoxBtn'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.92"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'EquipAffixList_C:WidgetTree.FilterDropBoxPanel'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.21"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Top": 292.00272,
+          "Right": 192.0,
+          "Bottom": 57.6
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 1.0
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 1.0
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.0
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'EquipAffixList_C:WidgetTree.FilterDropBoxPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.21"
+      },
+      "Content": {
+        "ObjectName": "UIDropBoxDownComponent_C'EquipAffixList_C:WidgetTree.FilterDropBox'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.93"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'EquipAffixList_C:WidgetTree.LevelOption'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.22"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 602.88,
+          "Top": -453.12,
+          "Right": 384.0,
+          "Bottom": 115.2
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'EquipAffixList_C:WidgetTree.LevelOption'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.22"
+      },
+      "Content": {
+        "ObjectName": "UIShrinkTextBlock'EquipAffixList_C:WidgetTree.UIShrinkTextBlock_106'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.114"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'EquipAffixList_C:WidgetTree.LevelOption'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.22"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 894.72,
+          "Top": -456.96,
+          "Right": 176.64,
+          "Bottom": 84.479996
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'EquipAffixList_C:WidgetTree.LevelOption'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.22"
+      },
+      "Content": {
+        "ObjectName": "UIButton'EquipAffixList_C:WidgetTree.C_OptionButton_Level'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.86"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'EquipAffixList_C:WidgetTree.OptionButton_AshPanel'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.23"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 656.64,
+          "Bottom": 76.799995
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "ZOrder": 2,
+      "Parent": {
+        "ObjectName": "CanvasPanel'EquipAffixList_C:WidgetTree.OptionButton_AshPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.23"
+      },
+      "Content": {
+        "ObjectName": "UIButton'EquipAffixList_C:WidgetTree.C_OptionButton_Ash'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.84"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'EquipAffixList_C:WidgetTree.OptionButton_LibraryPanel'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.24"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 656.64,
+          "Bottom": 76.799995
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "ZOrder": 2,
+      "Parent": {
+        "ObjectName": "CanvasPanel'EquipAffixList_C:WidgetTree.OptionButton_LibraryPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.24"
+      },
+      "Content": {
+        "ObjectName": "UIButton'EquipAffixList_C:WidgetTree.C_OptionButton_Library'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.87"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'EquipAffixList_C:WidgetTree.OptionButton_WeaponPanel'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.25"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 656.64,
+          "Bottom": 76.799995
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "ZOrder": 2,
+      "Parent": {
+        "ObjectName": "CanvasPanel'EquipAffixList_C:WidgetTree.OptionButton_WeaponPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.25"
+      },
+      "Content": {
+        "ObjectName": "UIButton'EquipAffixList_C:WidgetTree.C_OptionButton_Weapon'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.90"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'EquipAffixList_C:WidgetTree.SearchOption'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.26"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": -679.68,
+          "Top": -456.96,
+          "Right": 192.0,
+          "Bottom": 57.6
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'EquipAffixList_C:WidgetTree.SearchOption'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.26"
+      },
+      "Content": {
+        "ObjectName": "UIImage'EquipAffixList_C:WidgetTree.UIImage_51'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.103"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'EquipAffixList_C:WidgetTree.SearchOption'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.26"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": -428.16,
+          "Top": -455.03998,
+          "Right": 38.399998,
+          "Bottom": 30.72
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "ZOrder": 2,
+      "Parent": {
+        "ObjectName": "CanvasPanel'EquipAffixList_C:WidgetTree.SearchOption'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.26"
+      },
+      "Content": {
+        "ObjectName": "UIButton'EquipAffixList_C:WidgetTree.C_ClearButton'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.82"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'EquipAffixList_C:WidgetTree.SearchOption'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.26"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": -324.47998,
+          "Top": -447.36,
+          "Right": 115.2,
+          "Bottom": 107.52
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'EquipAffixList_C:WidgetTree.SearchOption'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.26"
+      },
+      "Content": {
+        "ObjectName": "UIButton'EquipAffixList_C:WidgetTree.C_SearchButton'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.91"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_4",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'EquipAffixList_C:WidgetTree.SearchOption'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.26"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": -708.48,
+          "Top": -456.96,
+          "Right": 468.47998,
+          "Bottom": 69.119995
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "ZOrder": 1,
+      "Parent": {
+        "ObjectName": "CanvasPanel'EquipAffixList_C:WidgetTree.SearchOption'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.26"
+      },
+      "Content": {
+        "ObjectName": "UIEditText'EquipAffixList_C:WidgetTree.C_SearchInputText'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.94"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'EquipAffixList_C:WidgetTree.TypeOption'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.27"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "Anchors": {
+          "Maximum": {
+            "X": 1.0,
+            "Y": 1.0
+          }
+        }
+      },
+      "ZOrder": 1,
+      "Parent": {
+        "ObjectName": "CanvasPanel'EquipAffixList_C:WidgetTree.TypeOption'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.27"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'EquipAffixList_C:WidgetTree.C_OptionsPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.13"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_5",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'EquipAffixList_C:WidgetTree.TypeOption'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.27"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": -186.23999,
+          "Top": 113.28,
+          "Right": 192.0,
+          "Bottom": 57.6
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 1.0,
+            "Y": 0.0
+          },
+          "Maximum": {
+            "X": 1.0,
+            "Y": 0.0
+          }
+        },
+        "Alignment": {
+          "X": 1.0,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'EquipAffixList_C:WidgetTree.TypeOption'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.27"
+      },
+      "Content": {
+        "ObjectName": "HorizontalBox'EquipAffixList_C:WidgetTree.HorizontalBox_187'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.67"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "HorizontalBox_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipAffixList_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.129"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HorizontalBoxSlot'EquipAffixList_C:WidgetTree.HorizontalBox_0.HorizontalBoxSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.69"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'EquipAffixList_C:WidgetTree.HorizontalBox_0.HorizontalBoxSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.70"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "ButtonSlot'EquipAffixList_C:WidgetTree.FilterDropBoxBtn.ButtonSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.10"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "HorizontalBox_187",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipAffixList_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.129"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HorizontalBoxSlot'EquipAffixList_C:WidgetTree.HorizontalBox_187.HorizontalBoxSlot_8'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.74"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'EquipAffixList_C:WidgetTree.HorizontalBox_187.HorizontalBoxSlot_10'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.71"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'EquipAffixList_C:WidgetTree.HorizontalBox_187.HorizontalBoxSlot_7'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.73"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'EquipAffixList_C:WidgetTree.HorizontalBox_187.HorizontalBoxSlot_5'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.72"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'EquipAffixList_C:WidgetTree.TypeOption.CanvasPanelSlot_5'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.65"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "HorizontalBox_57",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipAffixList_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.129"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HorizontalBoxSlot'EquipAffixList_C:WidgetTree.HorizontalBox_57.HorizontalBoxSlot_5'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.75"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'EquipAffixList_C:WidgetTree.HorizontalBox_57.HorizontalBoxSlot_6'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.76"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'EquipAffixList_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_5'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.39"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'EquipAffixList_C:WidgetTree.HorizontalBox_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.66"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "HorizontalBox'EquipAffixList_C:WidgetTree.HorizontalBox_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.66"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'EquipAffixList_C:WidgetTree.CanvasPanel_189'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.16"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'EquipAffixList_C:WidgetTree.HorizontalBox_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.66"
+    },
+    "Properties": {
+      "Padding": {
+        "Left": -9.599999
+      },
+      "HorizontalAlignment": "HAlign_Left",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "HorizontalBox'EquipAffixList_C:WidgetTree.HorizontalBox_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.66"
+      },
+      "Content": {
+        "ObjectName": "WidgetSwitcher'EquipAffixList_C:WidgetTree.FilterDropBoxArrowImgSwitcher'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.120"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_10",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'EquipAffixList_C:WidgetTree.HorizontalBox_187'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.67"
+    },
+    "Properties": {
+      "Padding": {
+        "Right": 9.599999
+      },
+      "Parent": {
+        "ObjectName": "HorizontalBox'EquipAffixList_C:WidgetTree.HorizontalBox_187'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.67"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'EquipAffixList_C:WidgetTree.OptionButton_LibraryPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.24"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_5",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'EquipAffixList_C:WidgetTree.HorizontalBox_187'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.67"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "HorizontalBox'EquipAffixList_C:WidgetTree.HorizontalBox_187'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.67"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'EquipAffixList_C:WidgetTree.OptionButton_WeaponPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.25"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_7",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'EquipAffixList_C:WidgetTree.HorizontalBox_187'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.67"
+    },
+    "Properties": {
+      "Padding": {
+        "Right": 9.599999
+      },
+      "Parent": {
+        "ObjectName": "HorizontalBox'EquipAffixList_C:WidgetTree.HorizontalBox_187'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.67"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'EquipAffixList_C:WidgetTree.OptionButton_AshPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.23"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_8",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'EquipAffixList_C:WidgetTree.HorizontalBox_187'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.67"
+    },
+    "Properties": {
+      "Padding": {
+        "Right": 9.599999
+      },
+      "Parent": {
+        "ObjectName": "HorizontalBox'EquipAffixList_C:WidgetTree.HorizontalBox_187'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.67"
+      },
+      "Content": {
+        "ObjectName": "UIShrinkTextBlock'EquipAffixList_C:WidgetTree.UIShrinkTextBlock_208'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.115"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_5",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'EquipAffixList_C:WidgetTree.HorizontalBox_57'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.68"
+    },
+    "Properties": {
+      "Padding": {
+        "Left": -67.2
+      },
+      "Parent": {
+        "ObjectName": "HorizontalBox'EquipAffixList_C:WidgetTree.HorizontalBox_57'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.68"
+      },
+      "Content": {
+        "ObjectName": "SizeBox'EquipAffixList_C:WidgetTree.AffixOptionBox'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.78"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_6",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'EquipAffixList_C:WidgetTree.HorizontalBox_57'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.68"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "HorizontalBox'EquipAffixList_C:WidgetTree.HorizontalBox_57'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.68"
+      },
+      "Content": {
+        "ObjectName": "SizeBox'EquipAffixList_C:WidgetTree.ContentBox'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.79"
+      }
+    }
+  },
+  {
+    "Type": "OptionList_C",
+    "Name": "C_OptionList",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'UE_game/Content/BluePrint/UI/EquipAffixList/OptionList.OptionList_C'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipAffixList_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.129"
+    },
+    "Template": {
+      "ObjectName": "OptionList_C'Default__OptionList_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/OptionList.1"
+    },
+    "Properties": {
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'EquipAffixList_C:WidgetTree.C_OptionsPanel.CanvasPanelSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.33"
+      }
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "AffixOptionBox",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipAffixList_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.129"
+    },
+    "Properties": {
+      "WidthOverride": 410.88,
+      "bOverride_WidthOverride": true,
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot'EquipAffixList_C:WidgetTree.AffixOptionBox.SizeBoxSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.80"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'EquipAffixList_C:WidgetTree.HorizontalBox_57.HorizontalBoxSlot_5'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.75"
+      }
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "ContentBox",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipAffixList_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.129"
+    },
+    "Properties": {
+      "WidthOverride": 2027.52,
+      "bOverride_WidthOverride": true,
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot'EquipAffixList_C:WidgetTree.ContentBox.SizeBoxSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.81"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'EquipAffixList_C:WidgetTree.HorizontalBox_57.HorizontalBoxSlot_6'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.76"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBoxSlot'",
+    "Outer": {
+      "ObjectName": "SizeBox'EquipAffixList_C:WidgetTree.AffixOptionBox'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.78"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Left",
+      "Parent": {
+        "ObjectName": "SizeBox'EquipAffixList_C:WidgetTree.AffixOptionBox'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.78"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'EquipAffixList_C:WidgetTree.AffixOption'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.11"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBoxSlot'",
+    "Outer": {
+      "ObjectName": "SizeBox'EquipAffixList_C:WidgetTree.ContentBox'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.79"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "SizeBox'EquipAffixList_C:WidgetTree.ContentBox'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.79"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'EquipAffixList_C:WidgetTree.ContentPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.19"
+      }
+    }
+  },
+  {
+    "Type": "UIButton",
+    "Name": "C_ClearButton",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIButton'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipAffixList_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.129"
+    },
+    "Properties": {
+      "CurButtonStyleId": 1386,
+      "IconImage": {
+        "ImageSize": {
+          "X": 61.44,
+          "Y": 61.44
+        }
+      },
+      "WidgetStyle": {
+        "Normal": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          }
+        },
+        "Hovered": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          }
+        },
+        "Pressed": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          }
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'EquipAffixList_C:WidgetTree.SearchOption.CanvasPanelSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.61"
+      }
+    }
+  },
+  {
+    "Type": "UIButton",
+    "Name": "C_OptionButton_AllAffix",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIButton'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipAffixList_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.129"
+    },
+    "Properties": {
+      "CurButtonStyleId": 1385,
+      "CurrStyleId": 1008,
+      "CurrTextKey": "Func_AffixList_Affix",
+      "IconImage": {
+        "ImageSize": {
+          "X": 61.44,
+          "Y": 61.44
+        }
+      },
+      "WidgetStyle": {
+        "Normal": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          }
+        },
+        "Hovered": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          }
+        },
+        "Pressed": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          }
+        }
+      },
+      "Slots": [
+        {
+          "ObjectName": "ButtonSlot'EquipAffixList_C:WidgetTree.C_OptionButton_AllAffix.ButtonSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.4"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'EquipAffixList_C:WidgetTree.AffixOption.CanvasPanelSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.28"
+      }
+    }
+  },
+  {
+    "Type": "UIButton",
+    "Name": "C_OptionButton_Ash",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIButton'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipAffixList_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.129"
+    },
+    "Properties": {
+      "CurButtonStyleId": 1388,
+      "IconImage": {
+        "ImageSize": {
+          "X": 61.44,
+          "Y": 61.44
+        }
+      },
+      "WidgetStyle": {
+        "Normal": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          }
+        },
+        "Hovered": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          }
+        },
+        "Pressed": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          }
+        }
+      },
+      "Slots": [
+        {
+          "ObjectName": "ButtonSlot'EquipAffixList_C:WidgetTree.C_OptionButton_Ash.ButtonSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.5"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'EquipAffixList_C:WidgetTree.OptionButton_AshPanel.CanvasPanelSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.57"
+      }
+    }
+  },
+  {
+    "Type": "UIButton",
+    "Name": "C_OptionButton_Close",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIButton'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipAffixList_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.129"
+    },
+    "Properties": {
+      "IconImage": {
+        "ImageSize": {
+          "X": 61.44,
+          "Y": 61.44
+        }
+      },
+      "WidgetStyle": {
+        "Normal": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 1.0,
+              "G": 1.0,
+              "B": 1.0,
+              "A": 0.0,
+              "Hex": "FFFFFF"
+            }
+          }
+        },
+        "Hovered": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 1.0,
+              "G": 1.0,
+              "B": 1.0,
+              "A": 0.0,
+              "Hex": "FFFFFF"
+            }
+          }
+        },
+        "Pressed": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 1.0,
+              "G": 1.0,
+              "B": 1.0,
+              "A": 0.0,
+              "Hex": "FFFFFF"
+            }
+          }
+        },
+        "NormalPadding": {
+          "Left": 0.0,
+          "Top": 0.0,
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "PressedPadding": {
+          "Left": 0.0,
+          "Top": 0.0,
+          "Right": 0.0,
+          "Bottom": 0.0
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'EquipAffixList_C:WidgetTree.C_OptionsPanel.CanvasPanelSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.32"
+      }
+    }
+  },
+  {
+    "Type": "UIButton",
+    "Name": "C_OptionButton_Level",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIButton'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipAffixList_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.129"
+    },
+    "Properties": {
+      "CurButtonStyleId": 1391,
+      "IconImage": {
+        "ImageSize": {
+          "X": 61.44,
+          "Y": 61.44
+        }
+      },
+      "WidgetStyle": {
+        "Normal": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          }
+        },
+        "Hovered": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          }
+        },
+        "Pressed": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          }
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'EquipAffixList_C:WidgetTree.LevelOption.CanvasPanelSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.56"
+      }
+    }
+  },
+  {
+    "Type": "UIButton",
+    "Name": "C_OptionButton_Library",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIButton'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipAffixList_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.129"
+    },
+    "Properties": {
+      "CurButtonStyleId": 1388,
+      "IconImage": {
+        "ImageSize": {
+          "X": 61.44,
+          "Y": 61.44
+        }
+      },
+      "WidgetStyle": {
+        "Normal": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          }
+        },
+        "Hovered": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          }
+        },
+        "Pressed": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          }
+        }
+      },
+      "Slots": [
+        {
+          "ObjectName": "ButtonSlot'EquipAffixList_C:WidgetTree.C_OptionButton_Library.ButtonSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.6"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'EquipAffixList_C:WidgetTree.OptionButton_LibraryPanel.CanvasPanelSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.58"
+      }
+    }
+  },
+  {
+    "Type": "UIButton",
+    "Name": "C_OptionButton_Prefix",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIButton'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipAffixList_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.129"
+    },
+    "Properties": {
+      "CurButtonStyleId": 1385,
+      "CurrStyleId": 1008,
+      "CurrTextKey": "Func_AffixList_Prefix",
+      "IconImage": {
+        "ImageSize": {
+          "X": 61.44,
+          "Y": 61.44
+        }
+      },
+      "WidgetStyle": {
+        "Normal": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          }
+        },
+        "Hovered": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          }
+        },
+        "Pressed": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          }
+        }
+      },
+      "Slots": [
+        {
+          "ObjectName": "ButtonSlot'EquipAffixList_C:WidgetTree.C_OptionButton_Prefix.ButtonSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.7"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'EquipAffixList_C:WidgetTree.AffixOption.CanvasPanelSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.29"
+      }
+    }
+  },
+  {
+    "Type": "UIButton",
+    "Name": "C_OptionButton_Suffix",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIButton'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipAffixList_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.129"
+    },
+    "Properties": {
+      "CurButtonStyleId": 1385,
+      "CurrStyleId": 1008,
+      "CurrTextKey": "Func_AffixList_Suffix",
+      "IconImage": {
+        "ImageSize": {
+          "X": 61.44,
+          "Y": 61.44
+        }
+      },
+      "WidgetStyle": {
+        "Normal": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          }
+        },
+        "Hovered": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          }
+        },
+        "Pressed": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          }
+        }
+      },
+      "Slots": [
+        {
+          "ObjectName": "ButtonSlot'EquipAffixList_C:WidgetTree.C_OptionButton_Suffix.ButtonSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.8"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'EquipAffixList_C:WidgetTree.AffixOption.CanvasPanelSlot_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.30"
+      }
+    }
+  },
+  {
+    "Type": "UIButton",
+    "Name": "C_OptionButton_Weapon",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIButton'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipAffixList_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.129"
+    },
+    "Properties": {
+      "CurButtonStyleId": 1388,
+      "IconImage": {
+        "ImageSize": {
+          "X": 61.44,
+          "Y": 61.44
+        }
+      },
+      "WidgetStyle": {
+        "Normal": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          }
+        },
+        "Hovered": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          }
+        },
+        "Pressed": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          }
+        }
+      },
+      "Slots": [
+        {
+          "ObjectName": "ButtonSlot'EquipAffixList_C:WidgetTree.C_OptionButton_Weapon.ButtonSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.9"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'EquipAffixList_C:WidgetTree.OptionButton_WeaponPanel.CanvasPanelSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.59"
+      }
+    }
+  },
+  {
+    "Type": "UIButton",
+    "Name": "C_SearchButton",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIButton'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipAffixList_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.129"
+    },
+    "Properties": {
+      "CurButtonStyleId": 1387,
+      "IconImage": {
+        "ImageSize": {
+          "X": 61.44,
+          "Y": 61.44
+        }
+      },
+      "WidgetStyle": {
+        "Normal": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          }
+        },
+        "Hovered": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          }
+        },
+        "Pressed": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          }
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'EquipAffixList_C:WidgetTree.SearchOption.CanvasPanelSlot_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.62"
+      }
+    }
+  },
+  {
+    "Type": "UIButton",
+    "Name": "FilterDropBoxBtn",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIButton'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipAffixList_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.129"
+    },
+    "Properties": {
+      "CurButtonStyleId": 1694,
+      "IconImage": {
+        "ImageSize": {
+          "X": 61.44,
+          "Y": 61.44
+        }
+      },
+      "WidgetStyle": {
+        "Normal": {
+          "ImageSize": {
+            "X": 499.19998,
+            "Y": 119.04
+          },
+          "Margin": {
+            "Left": 0.42,
+            "Top": 0.3,
+            "Right": 0.42,
+            "Bottom": 0.5
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'UI_Common_Png9_10003'",
+            "ObjectPath": "UE_game/Content/Art/UI/Textures/Common/Png9/NoAtlas/UI_Common_Png9_10003.0"
+          },
+          "ResourceName": "None",
+          "ImageType": "ESlateBrushImageType::NoImage"
+        },
+        "Hovered": {
+          "ImageSize": {
+            "X": 499.19998,
+            "Y": 119.04
+          },
+          "Margin": {
+            "Left": 0.42,
+            "Top": 0.3,
+            "Right": 0.42,
+            "Bottom": 0.5
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'UI_Common_Png9_10003'",
+            "ObjectPath": "UE_game/Content/Art/UI/Textures/Common/Png9/NoAtlas/UI_Common_Png9_10003.0"
+          },
+          "ResourceName": "None",
+          "ImageType": "ESlateBrushImageType::NoImage"
+        },
+        "Pressed": {
+          "ImageSize": {
+            "X": 499.19998,
+            "Y": 119.04
+          },
+          "Margin": {
+            "Left": 0.42,
+            "Top": 0.3,
+            "Right": 0.42,
+            "Bottom": 0.5
+          },
+          "ResourceObject": {
+            "ObjectName": "Texture2D'UI_Common_Png9_10003'",
+            "ObjectPath": "UE_game/Content/Art/UI/Textures/Common/Png9/NoAtlas/UI_Common_Png9_10003.0"
+          },
+          "ResourceName": "None",
+          "ImageType": "ESlateBrushImageType::NoImage"
+        },
+        "NormalPadding": {
+          "Left": 0.0,
+          "Top": 0.0,
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "PressedPadding": {
+          "Left": 0.0,
+          "Top": 0.0,
+          "Right": 0.0,
+          "Bottom": 0.0
+        }
+      },
+      "Slots": [
+        {
+          "ObjectName": "ButtonSlot'EquipAffixList_C:WidgetTree.FilterDropBoxBtn.ButtonSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.10"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'EquipAffixList_C:WidgetTree.FilterDropBoxPanel.CanvasPanelSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.53"
+      }
+    }
+  },
+  {
+    "Type": "UIDropBoxDownComponent_C",
+    "Name": "FilterDropBox",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'UE_game/Content/BluePrint/UI/Common/UIDropBox/UIDropBoxDownComponent.UIDropBoxDownComponent_C'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipAffixList_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.129"
+    },
+    "Template": {
+      "ObjectName": "UIDropBoxDownComponent_C'Default__UIDropBoxDownComponent_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Common/UIDropBox/UIDropBoxDownComponent.5"
+    },
+    "Properties": {
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'EquipAffixList_C:WidgetTree.FilterDropBoxPanel.CanvasPanelSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.54"
+      },
+      "Visibility": "ESlateVisibility::Collapsed"
+    }
+  },
+  {
+    "Type": "UIEditText",
+    "Name": "C_SearchInputText",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIEditText'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipAffixList_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.129"
+    },
+    "Properties": {
+      "WidgetStyle": {
+        "Font": {
+          "FontObject": {
+            "ObjectName": "Font'tl_main_Font'",
+            "ObjectPath": "UE_game/Content/Art/UI/Fonts/tl_main_Font.0"
+          },
+          "TypefaceFontName": "Default",
+          "Size": 28
+        },
+        "CaretImage": {
+          "ImageSize": {
+            "X": 30.72,
+            "Y": 30.72
+          }
+        }
+      },
+      "Justification": "ETextJustify::Center",
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'EquipAffixList_C:WidgetTree.SearchOption.CanvasPanelSlot_4'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.63"
+      }
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "C_WeaponName",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipAffixList_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.129"
+    },
+    "Properties": {
+      "IsBanHduiResize": true,
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/TexturesAtlas/EquipAffixList/Atlas/UI_EquipAffixList_Icon_Gear02_Sprite.UI_EquipAffixList_Icon_Gear02_Sprite",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 76.799995,
+          "Y": 76.799995
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'EquipAffixList_C:WidgetTree.CanvasPanel_449.CanvasPanelSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.45"
+      }
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "UIImage",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipAffixList_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.129"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/TexturesAtlas/EquipAffixList/Atlas/UI_EquipAffixList_IconDown_Sprite.UI_EquipAffixList_IconDown_Sprite",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 61.44,
+          "Y": 53.76
+        }
+      },
+      "Slot": {
+        "ObjectName": "WidgetSwitcherSlot'EquipAffixList_C:WidgetTree.C_OptionState_Weapon.WidgetSwitcherSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.126"
+      }
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "UIImage_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipAffixList_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.129"
+    },
+    "Properties": {
+      "IsBanHduiResize": true,
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/TexturesAtlas/EquipAffixList/Atlas/UI_EquipAffixList_Icon_Gear01_Sprite.UI_EquipAffixList_Icon_Gear01_Sprite",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 84.479996,
+          "Y": 99.84
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'EquipAffixList_C:WidgetTree.CanvasPanel.CanvasPanelSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.34"
+      }
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "UIImage_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipAffixList_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.129"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/TexturesAtlas/EquipAffixList/Atlas/UI_EquipAffixList_IconUP_Sprite.UI_EquipAffixList_IconUP_Sprite",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 30.72,
+          "Y": 23.039999
+        }
+      },
+      "Slot": {
+        "ObjectName": "WidgetSwitcherSlot'EquipAffixList_C:WidgetTree.C_OptionState_Ash.WidgetSwitcherSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.121"
+      }
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "UIImage_219",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipAffixList_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.129"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/TexturesAtlas/EquipAffixList/Atlas/UI_EquipAffixList_IconUP_Sprite.UI_EquipAffixList_IconUP_Sprite",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 30.72,
+          "Y": 23.039999
+        }
+      },
+      "Slot": {
+        "ObjectName": "WidgetSwitcherSlot'EquipAffixList_C:WidgetTree.C_OptionState_Weapon.WidgetSwitcherSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.125"
+      }
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "UIImage_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipAffixList_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.129"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/TexturesAtlas/EquipAffixList/Atlas/UI_EquipAffixList_IconDown_Sprite.UI_EquipAffixList_IconDown_Sprite",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 61.44,
+          "Y": 53.76
+        }
+      },
+      "Slot": {
+        "ObjectName": "WidgetSwitcherSlot'EquipAffixList_C:WidgetTree.C_OptionState_Ash.WidgetSwitcherSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.122"
+      }
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "UIImage_4",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipAffixList_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.129"
+    },
+    "Properties": {
+      "IsBanHduiResize": true,
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/TexturesAtlas/EquipAffixList/Atlas/UI_EquipAffixList_Icon_Gear01_Sprite.UI_EquipAffixList_Icon_Gear01_Sprite",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 84.479996,
+          "Y": 99.84
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'EquipAffixList_C:WidgetTree.CanvasPanel_2.CanvasPanelSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.42"
+      }
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "UIImage_5",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipAffixList_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.129"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/TexturesAtlas/EquipAffixList/Atlas/UI_EquipAffixList_IconUP_Sprite.UI_EquipAffixList_IconUP_Sprite",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 30.72,
+          "Y": 23.039999
+        }
+      },
+      "Slot": {
+        "ObjectName": "WidgetSwitcherSlot'EquipAffixList_C:WidgetTree.C_OptionState_Library.WidgetSwitcherSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.123"
+      }
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "UIImage_51",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipAffixList_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.129"
+    },
+    "Properties": {
+      "CurrStyleId": 5636,
+      "Brush": {
+        "ImageSize": {
+          "X": 61.44,
+          "Y": 61.44
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'EquipAffixList_C:WidgetTree.SearchOption.CanvasPanelSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.60"
+      }
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "UIImage_57",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipAffixList_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.129"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/Textures/Common/Png9/NoAtlas/UI_Common_WArrowdown.UI_Common_WArrowdown",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 38.399998,
+          "Y": 23.039999
+        }
+      },
+      "Slot": {
+        "ObjectName": "WidgetSwitcherSlot'EquipAffixList_C:WidgetTree.FilterDropBoxArrowImgSwitcher.WidgetSwitcherSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.127"
+      }
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "UIImage_6",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipAffixList_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.129"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/TexturesAtlas/EquipAffixList/Atlas/UI_EquipAffixList_IconDown_Sprite.UI_EquipAffixList_IconDown_Sprite",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 61.44,
+          "Y": 53.76
+        }
+      },
+      "Slot": {
+        "ObjectName": "WidgetSwitcherSlot'EquipAffixList_C:WidgetTree.C_OptionState_Library.WidgetSwitcherSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.124"
+      }
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "UIImage_7",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipAffixList_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.129"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/Textures/Common/Png9/NoAtlas/UI_Common_BArrowup.UI_Common_BArrowup",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 38.399998,
+          "Y": 23.039999
+        }
+      },
+      "Slot": {
+        "ObjectName": "WidgetSwitcherSlot'EquipAffixList_C:WidgetTree.FilterDropBoxArrowImgSwitcher.WidgetSwitcherSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.128"
+      }
+    }
+  },
+  {
+    "Type": "UIShrinkTextBlock",
+    "Name": "C_OptionName_Ash",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIShrinkTextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipAffixList_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.129"
+    },
+    "Properties": {
+      "TextHAlignment": "HAlign_Fill",
+      "CurrStyleId": 1015,
+      "ShrinkSize": {
+        "X": 460.8,
+        "Y": 61.44
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'EquipAffixList_C:WidgetTree.CanvasPanel.CanvasPanelSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.35"
+      }
+    }
+  },
+  {
+    "Type": "UIShrinkTextBlock",
+    "Name": "C_OptionName_Library",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIShrinkTextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipAffixList_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.129"
+    },
+    "Properties": {
+      "TextHAlignment": "HAlign_Fill",
+      "CurrStyleId": 1015,
+      "ShrinkSize": {
+        "X": 460.8,
+        "Y": 61.44
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'EquipAffixList_C:WidgetTree.CanvasPanel_2.CanvasPanelSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.43"
+      }
+    }
+  },
+  {
+    "Type": "UIShrinkTextBlock",
+    "Name": "C_OptionName_Weapon",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIShrinkTextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipAffixList_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.129"
+    },
+    "Properties": {
+      "TextHAlignment": "HAlign_Fill",
+      "CurrStyleId": 1015,
+      "ShrinkSize": {
+        "X": 460.8,
+        "Y": 61.44
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'EquipAffixList_C:WidgetTree.CanvasPanel_449.CanvasPanelSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.46"
+      }
+    }
+  },
+  {
+    "Type": "UIShrinkTextBlock",
+    "Name": "FilterDropBoxBtnText",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIShrinkTextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipAffixList_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.129"
+    },
+    "Properties": {
+      "CurrStyleId": 3681,
+      "CurrTextKey": "Func_FarmReference_TagFilterText",
+      "ShrinkSize": {
+        "X": 403.19998,
+        "Y": 72.28738
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'EquipAffixList_C:WidgetTree.CanvasPanel_189.CanvasPanelSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.41"
+      }
+    }
+  },
+  {
+    "Type": "UIShrinkTextBlock",
+    "Name": "PrefixText",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIShrinkTextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipAffixList_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.129"
+    },
+    "Properties": {
+      "CurrStyleId": 1008,
+      "CurrTextKey": "Func_AffixList_Prefix",
+      "ShrinkSize": {
+        "X": 364.8,
+        "Y": 119.04
+      },
+      "Slot": {
+        "ObjectName": "ButtonSlot'EquipAffixList_C:WidgetTree.C_OptionButton_Prefix.ButtonSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.7"
+      }
+    }
+  },
+  {
+    "Type": "UIShrinkTextBlock",
+    "Name": "SuffixText",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIShrinkTextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipAffixList_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.129"
+    },
+    "Properties": {
+      "CurrStyleId": 1008,
+      "CurrTextKey": "Func_AffixList_Suffix",
+      "ShrinkSize": {
+        "X": 364.8,
+        "Y": 119.04
+      },
+      "Slot": {
+        "ObjectName": "ButtonSlot'EquipAffixList_C:WidgetTree.C_OptionButton_Suffix.ButtonSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.8"
+      }
+    }
+  },
+  {
+    "Type": "UIShrinkTextBlock",
+    "Name": "UIShrinkTextBlock_104",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIShrinkTextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipAffixList_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.129"
+    },
+    "Properties": {
+      "CurrStyleId": 1008,
+      "CurrTextKey": "Func_AffixList_Affix",
+      "ShrinkSize": {
+        "X": 364.8,
+        "Y": 119.04
+      },
+      "Slot": {
+        "ObjectName": "ButtonSlot'EquipAffixList_C:WidgetTree.C_OptionButton_AllAffix.ButtonSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.4"
+      }
+    }
+  },
+  {
+    "Type": "UIShrinkTextBlock",
+    "Name": "UIShrinkTextBlock_106",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIShrinkTextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipAffixList_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.129"
+    },
+    "Properties": {
+      "TextHAlignment": "HAlign_Right",
+      "CurrStyleId": 2031,
+      "CurrTextKey": "Func_AffixList_HideDetail",
+      "ShrinkSize": {
+        "X": 384.0,
+        "Y": 115.2
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'EquipAffixList_C:WidgetTree.LevelOption.CanvasPanelSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.55"
+      }
+    }
+  },
+  {
+    "Type": "UIShrinkTextBlock",
+    "Name": "UIShrinkTextBlock_208",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIShrinkTextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipAffixList_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.129"
+    },
+    "Properties": {
+      "TextHAlignment": "HAlign_Right",
+      "CurrStyleId": 1015,
+      "CurrTextKey": "Func_AffixList_SiftInfo",
+      "ShrinkSize": {
+        "X": 460.8,
+        "Y": 61.44
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'EquipAffixList_C:WidgetTree.HorizontalBox_187.HorizontalBoxSlot_8'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.74"
+      }
+    }
+  },
+  {
+    "Type": "UITitleItem_C",
+    "Name": "C_UITitleItem",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'UE_game/Content/BluePrint/UI/Common/Title/UITitleItem.UITitleItem_C'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipAffixList_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.129"
+    },
+    "Template": {
+      "ObjectName": "UITitleItem_C'Default__UITitleItem_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Common/Title/UITitleItem.1"
+    },
+    "Properties": {
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'EquipAffixList_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.37"
+      }
+    }
+  },
+  {
+    "Type": "WidgetSwitcher",
+    "Name": "C_OptionState_Ash",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetSwitcher'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipAffixList_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.129"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "WidgetSwitcherSlot'EquipAffixList_C:WidgetTree.C_OptionState_Ash.WidgetSwitcherSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.121"
+        },
+        {
+          "ObjectName": "WidgetSwitcherSlot'EquipAffixList_C:WidgetTree.C_OptionState_Ash.WidgetSwitcherSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.122"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'EquipAffixList_C:WidgetTree.CanvasPanel.CanvasPanelSlot_3'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.36"
+      }
+    }
+  },
+  {
+    "Type": "WidgetSwitcher",
+    "Name": "C_OptionState_Library",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetSwitcher'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipAffixList_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.129"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "WidgetSwitcherSlot'EquipAffixList_C:WidgetTree.C_OptionState_Library.WidgetSwitcherSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.123"
+        },
+        {
+          "ObjectName": "WidgetSwitcherSlot'EquipAffixList_C:WidgetTree.C_OptionState_Library.WidgetSwitcherSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.124"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'EquipAffixList_C:WidgetTree.CanvasPanel_2.CanvasPanelSlot_3'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.44"
+      }
+    }
+  },
+  {
+    "Type": "WidgetSwitcher",
+    "Name": "C_OptionState_Weapon",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetSwitcher'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipAffixList_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.129"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "WidgetSwitcherSlot'EquipAffixList_C:WidgetTree.C_OptionState_Weapon.WidgetSwitcherSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.125"
+        },
+        {
+          "ObjectName": "WidgetSwitcherSlot'EquipAffixList_C:WidgetTree.C_OptionState_Weapon.WidgetSwitcherSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.126"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'EquipAffixList_C:WidgetTree.CanvasPanel_449.CanvasPanelSlot_3'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.47"
+      }
+    }
+  },
+  {
+    "Type": "WidgetSwitcher",
+    "Name": "FilterDropBoxArrowImgSwitcher",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetSwitcher'",
+    "Outer": {
+      "ObjectName": "WidgetTree'EquipAffixList_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.129"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "WidgetSwitcherSlot'EquipAffixList_C:WidgetTree.FilterDropBoxArrowImgSwitcher.WidgetSwitcherSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.127"
+        },
+        {
+          "ObjectName": "WidgetSwitcherSlot'EquipAffixList_C:WidgetTree.FilterDropBoxArrowImgSwitcher.WidgetSwitcherSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.128"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'EquipAffixList_C:WidgetTree.HorizontalBox_0.HorizontalBoxSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.70"
+      }
+    }
+  },
+  {
+    "Type": "WidgetSwitcherSlot",
+    "Name": "WidgetSwitcherSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetSwitcherSlot'",
+    "Outer": {
+      "ObjectName": "WidgetSwitcher'EquipAffixList_C:WidgetTree.C_OptionState_Ash'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.117"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "WidgetSwitcher'EquipAffixList_C:WidgetTree.C_OptionState_Ash'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.117"
+      },
+      "Content": {
+        "ObjectName": "UIImage'EquipAffixList_C:WidgetTree.UIImage_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.98"
+      }
+    }
+  },
+  {
+    "Type": "WidgetSwitcherSlot",
+    "Name": "WidgetSwitcherSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetSwitcherSlot'",
+    "Outer": {
+      "ObjectName": "WidgetSwitcher'EquipAffixList_C:WidgetTree.C_OptionState_Ash'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.117"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "WidgetSwitcher'EquipAffixList_C:WidgetTree.C_OptionState_Ash'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.117"
+      },
+      "Content": {
+        "ObjectName": "UIImage'EquipAffixList_C:WidgetTree.UIImage_3'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.100"
+      }
+    }
+  },
+  {
+    "Type": "WidgetSwitcherSlot",
+    "Name": "WidgetSwitcherSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetSwitcherSlot'",
+    "Outer": {
+      "ObjectName": "WidgetSwitcher'EquipAffixList_C:WidgetTree.C_OptionState_Library'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.118"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "WidgetSwitcher'EquipAffixList_C:WidgetTree.C_OptionState_Library'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.118"
+      },
+      "Content": {
+        "ObjectName": "UIImage'EquipAffixList_C:WidgetTree.UIImage_5'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.102"
+      }
+    }
+  },
+  {
+    "Type": "WidgetSwitcherSlot",
+    "Name": "WidgetSwitcherSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetSwitcherSlot'",
+    "Outer": {
+      "ObjectName": "WidgetSwitcher'EquipAffixList_C:WidgetTree.C_OptionState_Library'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.118"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "WidgetSwitcher'EquipAffixList_C:WidgetTree.C_OptionState_Library'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.118"
+      },
+      "Content": {
+        "ObjectName": "UIImage'EquipAffixList_C:WidgetTree.UIImage_6'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.105"
+      }
+    }
+  },
+  {
+    "Type": "WidgetSwitcherSlot",
+    "Name": "WidgetSwitcherSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetSwitcherSlot'",
+    "Outer": {
+      "ObjectName": "WidgetSwitcher'EquipAffixList_C:WidgetTree.C_OptionState_Weapon'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.119"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "WidgetSwitcher'EquipAffixList_C:WidgetTree.C_OptionState_Weapon'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.119"
+      },
+      "Content": {
+        "ObjectName": "UIImage'EquipAffixList_C:WidgetTree.UIImage_219'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.99"
+      }
+    }
+  },
+  {
+    "Type": "WidgetSwitcherSlot",
+    "Name": "WidgetSwitcherSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetSwitcherSlot'",
+    "Outer": {
+      "ObjectName": "WidgetSwitcher'EquipAffixList_C:WidgetTree.C_OptionState_Weapon'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.119"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "WidgetSwitcher'EquipAffixList_C:WidgetTree.C_OptionState_Weapon'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.119"
+      },
+      "Content": {
+        "ObjectName": "UIImage'EquipAffixList_C:WidgetTree.UIImage'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.96"
+      }
+    }
+  },
+  {
+    "Type": "WidgetSwitcherSlot",
+    "Name": "WidgetSwitcherSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetSwitcherSlot'",
+    "Outer": {
+      "ObjectName": "WidgetSwitcher'EquipAffixList_C:WidgetTree.FilterDropBoxArrowImgSwitcher'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.120"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "WidgetSwitcher'EquipAffixList_C:WidgetTree.FilterDropBoxArrowImgSwitcher'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.120"
+      },
+      "Content": {
+        "ObjectName": "UIImage'EquipAffixList_C:WidgetTree.UIImage_57'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.104"
+      }
+    }
+  },
+  {
+    "Type": "WidgetSwitcherSlot",
+    "Name": "WidgetSwitcherSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetSwitcherSlot'",
+    "Outer": {
+      "ObjectName": "WidgetSwitcher'EquipAffixList_C:WidgetTree.FilterDropBoxArrowImgSwitcher'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.120"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "WidgetSwitcher'EquipAffixList_C:WidgetTree.FilterDropBoxArrowImgSwitcher'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.120"
+      },
+      "Content": {
+        "ObjectName": "UIImage'EquipAffixList_C:WidgetTree.UIImage_7'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.106"
+      }
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetTree'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'EquipAffixList_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.0"
+    },
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "CanvasPanel'EquipAffixList_C:WidgetTree.CanvasPanel_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/EquipAffixList/EquipAffixList.15"
+      }
+    }
+  }
+]
