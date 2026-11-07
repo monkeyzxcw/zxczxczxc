@@ -1,0 +1,4265 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_HeroCatAgileWidget",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'HeroCatAgileWidget_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.3"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "CallFunc_Conv_IntToText_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Event_MyGeometry",
+        "Flags": "RF_Public",
+        "ElementSize": 56,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Geometry'",
+          "ObjectPath": "/Script/SlateCore"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_Event_InDeltaTime",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_Event_bInCatAgile",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_Event_percent",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "K2Node_Event_num",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_BoolBool_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_PlayAnimation_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'UMGSequencePlayer'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_PlayAnimation_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'UMGSequencePlayer'",
+          "ObjectPath": "/Script/UMG"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "Update",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'HeroCatAgileWidget_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.3"
+    },
+    "SuperStruct": {
+      "ObjectName": "Function'EHeroCharacterCatAgileWidget:Update'",
+      "ObjectPath": "/Script/UE_game"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "bInCatAgile",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "percent",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "num",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Tick",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'HeroCatAgileWidget_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.3"
+    },
+    "SuperStruct": {
+      "ObjectName": "Function'UserWidget:Tick'",
+      "ObjectPath": "/Script/UMG"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "MyGeometry",
+        "Flags": "RF_Public",
+        "ElementSize": 56,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Struct": {
+          "ObjectName": "ScriptStruct'Geometry'",
+          "ObjectPath": "/Script/SlateCore"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "InDeltaTime",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCosmetic | FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "HeroCatAgileWidget_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Package": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'HeroCatAgileWidget_C:WidgetTree'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.72"
+      },
+      "bClassRequiresNativeTick": true,
+      "Animations": [
+        {
+          "ObjectName": "WidgetAnimation'HeroCatAgileWidget_C:FullHeroCatAgileAnim_INST'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.70"
+        },
+        {
+          "ObjectName": "WidgetAnimation'HeroCatAgileWidget_C:StopHeroCatAgileAnim_INST'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.71"
+        }
+      ],
+      "UberGraphFunction": {
+        "ObjectName": "Function'HeroCatAgileWidget_C:ExecuteUbergraph_HeroCatAgileWidget'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'EHeroCharacterCatAgileWidget'",
+      "ObjectPath": "/Script/UE_game"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'HeroCatAgileWidget_C:Tick'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.2"
+      },
+      {
+        "ObjectName": "Function'HeroCatAgileWidget_C:Update'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.1"
+      },
+      {
+        "ObjectName": "Function'HeroCatAgileWidget_C:ExecuteUbergraph_HeroCatAgileWidget'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "StopHeroCatAgileAnim",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Transient | RepSkip",
+        "PropertyClass": {
+          "ObjectName": "Class'WidgetAnimation'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "FullHeroCatAgileAnim",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Transient | RepSkip",
+        "PropertyClass": {
+          "ObjectName": "Class'WidgetAnimation'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "AgileProgress",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'ProgressBar'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "erL",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "erR",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "NumBg",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "NumText",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UITextBlock'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "UIImage",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "UIImage_220",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "UIImage_494",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "zhua",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "IsInAgile",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "Percent",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Num",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_HeroCatAgileWidget": {
+        "ObjectName": "Function'HeroCatAgileWidget_C:ExecuteUbergraph_HeroCatAgileWidget'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.0"
+      },
+      "Update": {
+        "ObjectName": "Function'HeroCatAgileWidget_C:Update'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.1"
+      },
+      "Tick": {
+        "ObjectName": "Function'HeroCatAgileWidget_C:Tick'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.2"
+      }
+    },
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "HeroCatAgileWidget_C'Default__HeroCatAgileWidget_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.4"
+    }
+  },
+  {
+    "Type": "HeroCatAgileWidget_C",
+    "Name": "Default__HeroCatAgileWidget_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.HeroCatAgileWidget_C'",
+    "Package": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget",
+    "Properties": {
+      "UberGraphFrame": {},
+      "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'HeroCatAgileWidget_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.72"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'HeroCatAgileWidget_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.9"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "FxPanel01",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'HeroCatAgileWidget_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.72"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'HeroCatAgileWidget_C:WidgetTree.FxPanel01.CanvasPanelSlot_2'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.11"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'HeroCatAgileWidget_C:WidgetTree.FxPanel01.CanvasPanelSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.10"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'HeroCatAgileWidget_C:WidgetTree.FxPanel01.CanvasPanelSlot_5'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.14"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'HeroCatAgileWidget_C:WidgetTree.FxPanel01.CanvasPanelSlot_3'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.12"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'HeroCatAgileWidget_C:WidgetTree.FxPanel01.CanvasPanelSlot_4'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.13"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'HeroCatAgileWidget_C:WidgetTree.MainPanel.CanvasPanelSlot_4'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.19"
+      },
+      "RenderOpacity": 0.0
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "FxPanel02",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'HeroCatAgileWidget_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.72"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'HeroCatAgileWidget_C:WidgetTree.FxPanel02.CanvasPanelSlot_3'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.16"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'HeroCatAgileWidget_C:WidgetTree.FxPanel02.CanvasPanelSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.15"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'HeroCatAgileWidget_C:WidgetTree.MainPanel.CanvasPanelSlot_6'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.21"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "MainPanel",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'HeroCatAgileWidget_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.72"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'HeroCatAgileWidget_C:WidgetTree.MainPanel.CanvasPanelSlot_4'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.19"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'HeroCatAgileWidget_C:WidgetTree.MainPanel.CanvasPanelSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.17"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'HeroCatAgileWidget_C:WidgetTree.MainPanel.CanvasPanelSlot_3'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.18"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'HeroCatAgileWidget_C:WidgetTree.MainPanel.CanvasPanelSlot_5'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.20"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'HeroCatAgileWidget_C:WidgetTree.MainPanel.CanvasPanelSlot_8'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.22"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'HeroCatAgileWidget_C:WidgetTree.MainPanel.CanvasPanelSlot_6'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.21"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'HeroCatAgileWidget_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.9"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'HeroCatAgileWidget_C:WidgetTree.CanvasPanel_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.5"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 76.799995,
+          "Bottom": 76.799995
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'HeroCatAgileWidget_C:WidgetTree.CanvasPanel_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.5"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'HeroCatAgileWidget_C:WidgetTree.MainPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.8"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'HeroCatAgileWidget_C:WidgetTree.FxPanel01'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.6"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 111.36,
+          "Bottom": 111.36
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'HeroCatAgileWidget_C:WidgetTree.FxPanel01'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.6"
+      },
+      "Content": {
+        "ObjectName": "UIImage'HeroCatAgileWidget_C:WidgetTree.UIImage'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.64"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'HeroCatAgileWidget_C:WidgetTree.FxPanel01'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.6"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 268.8,
+          "Bottom": 268.8
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'HeroCatAgileWidget_C:WidgetTree.FxPanel01'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.6"
+      },
+      "Content": {
+        "ObjectName": "UIImage'HeroCatAgileWidget_C:WidgetTree.UIImage_494'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.66"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'HeroCatAgileWidget_C:WidgetTree.FxPanel01'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.6"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 40.094536,
+          "Top": -44.484074,
+          "Right": 72.96,
+          "Bottom": 72.96
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'HeroCatAgileWidget_C:WidgetTree.FxPanel01'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.6"
+      },
+      "Content": {
+        "ObjectName": "UIImage'HeroCatAgileWidget_C:WidgetTree.erR'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.61"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_4",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'HeroCatAgileWidget_C:WidgetTree.FxPanel01'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.6"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": -39.22143,
+          "Top": -46.190334,
+          "Right": 72.96,
+          "Bottom": 72.96
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'HeroCatAgileWidget_C:WidgetTree.FxPanel01'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.6"
+      },
+      "Content": {
+        "ObjectName": "UIImage'HeroCatAgileWidget_C:WidgetTree.erL'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.60"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_5",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'HeroCatAgileWidget_C:WidgetTree.FxPanel01'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.6"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 111.36,
+          "Bottom": 111.36
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'HeroCatAgileWidget_C:WidgetTree.FxPanel01'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.6"
+      },
+      "Content": {
+        "ObjectName": "UIImage'HeroCatAgileWidget_C:WidgetTree.UIImage_220'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.65"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'HeroCatAgileWidget_C:WidgetTree.FxPanel02'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.7"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Top": -11.063063,
+          "Right": 192.0,
+          "Bottom": 57.6
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'HeroCatAgileWidget_C:WidgetTree.FxPanel02'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.7"
+      },
+      "Content": {
+        "ObjectName": "UIImage'HeroCatAgileWidget_C:WidgetTree.zhua'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.67"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'HeroCatAgileWidget_C:WidgetTree.FxPanel02'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.7"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 126.71999,
+          "Bottom": 126.71999
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'HeroCatAgileWidget_C:WidgetTree.FxPanel02'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.7"
+      },
+      "Content": {
+        "ObjectName": "UIParticleEmitter'HeroCatAgileWidget_C:WidgetTree.UIParticleEmitter'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.68"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'HeroCatAgileWidget_C:WidgetTree.MainPanel'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.8"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 122.88,
+          "Bottom": 122.88
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "ZOrder": 1,
+      "Parent": {
+        "ObjectName": "CanvasPanel'HeroCatAgileWidget_C:WidgetTree.MainPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.8"
+      },
+      "Content": {
+        "ObjectName": "UIImage'HeroCatAgileWidget_C:WidgetTree.ProgressBg'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.63"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'HeroCatAgileWidget_C:WidgetTree.MainPanel'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.8"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 115.2,
+          "Bottom": 115.2
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "ZOrder": 1,
+      "Parent": {
+        "ObjectName": "CanvasPanel'HeroCatAgileWidget_C:WidgetTree.MainPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.8"
+      },
+      "Content": {
+        "ObjectName": "ProgressBar'HeroCatAgileWidget_C:WidgetTree.AgileProgress'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.59"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_4",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'HeroCatAgileWidget_C:WidgetTree.MainPanel'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.8"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 192.0,
+          "Bottom": 57.6
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'HeroCatAgileWidget_C:WidgetTree.MainPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.8"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'HeroCatAgileWidget_C:WidgetTree.FxPanel01'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.6"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_5",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'HeroCatAgileWidget_C:WidgetTree.MainPanel'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.8"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 38.399998,
+          "Top": 34.559998,
+          "Right": 76.799995,
+          "Bottom": 76.799995
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "ZOrder": 3,
+      "Parent": {
+        "ObjectName": "CanvasPanel'HeroCatAgileWidget_C:WidgetTree.MainPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.8"
+      },
+      "Content": {
+        "ObjectName": "UIImage'HeroCatAgileWidget_C:WidgetTree.NumBg'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.62"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_6",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'HeroCatAgileWidget_C:WidgetTree.MainPanel'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.8"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 126.71999,
+          "Bottom": 126.71999
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "ZOrder": 4,
+      "Parent": {
+        "ObjectName": "CanvasPanel'HeroCatAgileWidget_C:WidgetTree.MainPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.8"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'HeroCatAgileWidget_C:WidgetTree.FxPanel02'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.7"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_8",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'HeroCatAgileWidget_C:WidgetTree.MainPanel'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.8"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 40.32,
+          "Top": 38.399998,
+          "Right": 192.0,
+          "Bottom": 57.6
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "ZOrder": 4,
+      "Parent": {
+        "ObjectName": "CanvasPanel'HeroCatAgileWidget_C:WidgetTree.MainPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.8"
+      },
+      "Content": {
+        "ObjectName": "UITextBlock'HeroCatAgileWidget_C:WidgetTree.NumText'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.69"
+      }
+    }
+  },
+  {
+    "Type": "MovieScene",
+    "Name": "FullHeroCatAgileAnim",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene'",
+    "Outer": {
+      "ObjectName": "WidgetAnimation'HeroCatAgileWidget_C:FullHeroCatAgileAnim_INST'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.70"
+    },
+    "Properties": {
+      "Possessables": [
+        {
+          "Tags": [],
+          "Guid": "4A1AA39B-476A302A-795BE4B2-0C3A45D7",
+          "Name": "zhua",
+          "PossessedObjectClass": {
+            "ObjectName": "Class'UIImage'",
+            "ObjectPath": "/Script/UE_game"
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        },
+        {
+          "Tags": [],
+          "Guid": "D617E023-4BC9CD09-5445128B-DA90417E",
+          "Name": "FxPanel01",
+          "PossessedObjectClass": {
+            "ObjectName": "Class'CanvasPanel'",
+            "ObjectPath": "/Script/UMG"
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        },
+        {
+          "Tags": [],
+          "Guid": "F49947C5-4D5CDC9E-F11F1598-CA2E1EDC",
+          "Name": "UIParticleEmitter",
+          "PossessedObjectClass": {
+            "ObjectName": "Class'UIParticleEmitter'",
+            "ObjectPath": "/Script/UIParticle"
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        }
+      ],
+      "ObjectBindings": [
+        {
+          "ObjectGuid": "4A1AA39B-476A302A-795BE4B2-0C3A45D7",
+          "BindingName": "UIImage_364",
+          "Tracks": [
+            {
+              "ObjectName": "MovieScene2DTransformTrack'HeroCatAgileWidget_C:FullHeroCatAgileAnim_INST.FullHeroCatAgileAnim.MovieScene2DTransformTrack_0'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.26"
+            },
+            {
+              "ObjectName": "MovieSceneColorTrack'HeroCatAgileWidget_C:FullHeroCatAgileAnim_INST.FullHeroCatAgileAnim.MovieSceneColorTrack_0'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.49"
+            },
+            {
+              "ObjectName": "MovieSceneWidgetMaterialTrack'HeroCatAgileWidget_C:FullHeroCatAgileAnim_INST.FullHeroCatAgileAnim.MovieSceneWidgetMaterialTrack_0'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.58"
+            }
+          ]
+        },
+        {
+          "ObjectGuid": "D617E023-4BC9CD09-5445128B-DA90417E",
+          "BindingName": "FxPanel01",
+          "Tracks": [
+            {
+              "ObjectName": "MovieSceneFloatTrack'HeroCatAgileWidget_C:FullHeroCatAgileAnim_INST.FullHeroCatAgileAnim.MovieSceneFloatTrack_1'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.55"
+            }
+          ]
+        },
+        {
+          "ObjectGuid": "F49947C5-4D5CDC9E-F11F1598-CA2E1EDC",
+          "BindingName": "UIParticleEmitter",
+          "Tracks": [
+            {
+              "ObjectName": "MovieSceneBoolTrack'HeroCatAgileWidget_C:FullHeroCatAgileAnim_INST.FullHeroCatAgileAnim.MovieSceneBoolTrack_0'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.29"
+            }
+          ]
+        }
+      ],
+      "PlaybackRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 52000
+            }
+          }
+        }
+      },
+      "DisplayRate": {
+        "Numerator": 30
+      },
+      "Signature": "3265C6E8-48EAABA1-DDB2C895-82E59F91"
+    }
+  },
+  {
+    "Type": "MovieScene",
+    "Name": "StopHeroCatAgileAnim",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene'",
+    "Outer": {
+      "ObjectName": "WidgetAnimation'HeroCatAgileWidget_C:StopHeroCatAgileAnim_INST'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.71"
+    },
+    "Properties": {
+      "Possessables": [
+        {
+          "Tags": [],
+          "Guid": "2BCB69D4-44754256-CB749FAF-14B46E14",
+          "Name": "zhua",
+          "PossessedObjectClass": {
+            "ObjectName": "Class'UIImage'",
+            "ObjectPath": "/Script/UE_game"
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        },
+        {
+          "Tags": [],
+          "Guid": "DB07655F-48D3322B-764738A8-E2FE1B17",
+          "Name": "FxPanel01",
+          "PossessedObjectClass": {
+            "ObjectName": "Class'CanvasPanel'",
+            "ObjectPath": "/Script/UMG"
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        },
+        {
+          "Tags": [],
+          "Guid": "33BBC41B-4C2F89E7-4B4461BD-775F0352",
+          "Name": "UIParticleEmitter",
+          "PossessedObjectClass": {
+            "ObjectName": "Class'UIParticleEmitter'",
+            "ObjectPath": "/Script/UIParticle"
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        }
+      ],
+      "ObjectBindings": [
+        {
+          "ObjectGuid": "2BCB69D4-44754256-CB749FAF-14B46E14",
+          "BindingName": "zhua",
+          "Tracks": [
+            {
+              "ObjectName": "MovieSceneColorTrack'HeroCatAgileWidget_C:StopHeroCatAgileAnim_INST.StopHeroCatAgileAnim.MovieSceneColorTrack_0'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.50"
+            }
+          ]
+        },
+        {
+          "ObjectGuid": "DB07655F-48D3322B-764738A8-E2FE1B17",
+          "BindingName": "FxPanel01",
+          "Tracks": [
+            {
+              "ObjectName": "MovieSceneFloatTrack'HeroCatAgileWidget_C:StopHeroCatAgileAnim_INST.StopHeroCatAgileAnim.MovieSceneFloatTrack_0'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.56"
+            }
+          ]
+        },
+        {
+          "ObjectGuid": "33BBC41B-4C2F89E7-4B4461BD-775F0352",
+          "BindingName": "UIParticleEmitter",
+          "Tracks": [
+            {
+              "ObjectName": "MovieSceneBoolTrack'HeroCatAgileWidget_C:StopHeroCatAgileAnim_INST.StopHeroCatAgileAnim.MovieSceneBoolTrack_0'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.30"
+            }
+          ]
+        }
+      ],
+      "PlaybackRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 8000
+            }
+          }
+        }
+      },
+      "DisplayRate": {
+        "Numerator": 30
+      },
+      "Signature": "CAC9E3E2-4955B6B0-1835AB8B-5182549C"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformSection",
+    "Name": "MovieScene2DTransformSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene2DTransformSection'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformTrack'HeroCatAgileWidget_C:FullHeroCatAgileAnim_INST.FullHeroCatAgileAnim.MovieScene2DTransformTrack_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.26"
+    },
+    "Properties": {
+      "Scale": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 50000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.5,
+            "Tangent": {
+              "ArriveTangent": 0.0009978004,
+              "LeaveTangent": 0.0009978004,
+              "ArriveTangentWeight": 0.6219837,
+              "LeaveTangentWeight": 0.6219837,
+              "TangentWeightMode": 3
+            },
+            "InterpMode": 2,
+            "TangentMode": 1
+          },
+          {
+            "Value": 1.1,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Scale[1]": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 50000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.5,
+            "Tangent": {
+              "ArriveTangent": 0.0009978004,
+              "LeaveTangent": 0.0009978004,
+              "ArriveTangentWeight": 0.6219837,
+              "LeaveTangentWeight": 0.6219837,
+              "TangentWeightMode": 3
+            },
+            "InterpMode": 2,
+            "TangentMode": 1
+          },
+          {
+            "Value": 1.1,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'HeroCatAgileWidget_C:FullHeroCatAgileAnim_INST.FullHeroCatAgileAnim.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0.EaseInFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.31"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'HeroCatAgileWidget_C:FullHeroCatAgileAnim_INST.FullHeroCatAgileAnim.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0.EaseOutFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.32"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 52000
+            }
+          }
+        }
+      },
+      "Signature": "D4E6EBE5-41C75F86-5215AE82-2938C0FF"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformTrack",
+    "Name": "MovieScene2DTransformTrack_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene2DTransformTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'HeroCatAgileWidget_C:FullHeroCatAgileAnim_INST.FullHeroCatAgileAnim'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.23"
+    },
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderTransform",
+        "PropertyPath": "RenderTransform",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieScene2DTransformSection'HeroCatAgileWidget_C:FullHeroCatAgileAnim_INST.FullHeroCatAgileAnim.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.25"
+        }
+      ],
+      "EvaluationFieldGuid": "C9DE56E1-45604560-FE62B4B4-6AF0B17D",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieScene2DTransformSection'HeroCatAgileWidget_C:FullHeroCatAgileAnim_INST.FullHeroCatAgileAnim.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.25"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Exclusive",
+                "Value": {
+                  "Value": 52000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "C9DE56E1-45604560-FE62B4B4-6AF0B17D"
+    }
+  },
+  {
+    "Type": "MovieSceneBoolSection",
+    "Name": "MovieSceneBoolSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBoolSection'",
+    "Outer": {
+      "ObjectName": "MovieSceneBoolTrack'HeroCatAgileWidget_C:FullHeroCatAgileAnim_INST.FullHeroCatAgileAnim.MovieSceneBoolTrack_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.29"
+    },
+    "Properties": {
+      "BoolCurve": {
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 2000
+          },
+          {
+            "Value": 26000
+          }
+        ],
+        "Values": [
+          false,
+          true,
+          false
+        ]
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'HeroCatAgileWidget_C:FullHeroCatAgileAnim_INST.FullHeroCatAgileAnim.MovieSceneBoolTrack_0.MovieSceneBoolSection_0.EaseInFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.33"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'HeroCatAgileWidget_C:FullHeroCatAgileAnim_INST.FullHeroCatAgileAnim.MovieSceneBoolTrack_0.MovieSceneBoolSection_0.EaseOutFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.34"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 52000
+            }
+          }
+        }
+      },
+      "Signature": "BA5D959F-42C241A9-A397DA9B-78C0C80F"
+    }
+  },
+  {
+    "Type": "MovieSceneBoolSection",
+    "Name": "MovieSceneBoolSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBoolSection'",
+    "Outer": {
+      "ObjectName": "MovieSceneBoolTrack'HeroCatAgileWidget_C:StopHeroCatAgileAnim_INST.StopHeroCatAgileAnim.MovieSceneBoolTrack_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.30"
+    },
+    "Properties": {
+      "BoolCurve": {
+        "Times": [
+          {
+            "Value": 2000
+          }
+        ],
+        "Values": [
+          false
+        ]
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'HeroCatAgileWidget_C:StopHeroCatAgileAnim_INST.StopHeroCatAgileAnim.MovieSceneBoolTrack_0.MovieSceneBoolSection_0.EaseInFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.41"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'HeroCatAgileWidget_C:StopHeroCatAgileAnim_INST.StopHeroCatAgileAnim.MovieSceneBoolTrack_0.MovieSceneBoolSection_0.EaseOutFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.42"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 8000
+            }
+          }
+        }
+      },
+      "Signature": "72BCBBC7-49E4F243-56B2CE8F-BBA257E6"
+    }
+  },
+  {
+    "Type": "MovieSceneBoolTrack",
+    "Name": "MovieSceneBoolTrack_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBoolTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'HeroCatAgileWidget_C:FullHeroCatAgileAnim_INST.FullHeroCatAgileAnim'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.23"
+    },
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "bPlayParticle",
+        "PropertyPath": "bPlayParticle",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneBoolSection'HeroCatAgileWidget_C:FullHeroCatAgileAnim_INST.FullHeroCatAgileAnim.MovieSceneBoolTrack_0.MovieSceneBoolSection_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.27"
+        }
+      ],
+      "EvaluationFieldGuid": "23EB34BF-4574908C-77B8CA83-4861210E",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneBoolSection'HeroCatAgileWidget_C:FullHeroCatAgileAnim_INST.FullHeroCatAgileAnim.MovieSceneBoolTrack_0.MovieSceneBoolSection_0'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.27"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Exclusive",
+                "Value": {
+                  "Value": 52000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "23EB34BF-4574908C-77B8CA83-4861210E"
+    }
+  },
+  {
+    "Type": "MovieSceneBoolTrack",
+    "Name": "MovieSceneBoolTrack_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBoolTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'HeroCatAgileWidget_C:StopHeroCatAgileAnim_INST.StopHeroCatAgileAnim'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.24"
+    },
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "bPlayParticle",
+        "PropertyPath": "bPlayParticle",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneBoolSection'HeroCatAgileWidget_C:StopHeroCatAgileAnim_INST.StopHeroCatAgileAnim.MovieSceneBoolTrack_0.MovieSceneBoolSection_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.28"
+        }
+      ],
+      "EvaluationFieldGuid": "02DD1721-41EE01DD-71E73E80-F3EB9B7C",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneBoolSection'HeroCatAgileWidget_C:StopHeroCatAgileAnim_INST.StopHeroCatAgileAnim.MovieSceneBoolTrack_0.MovieSceneBoolSection_0'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.28"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Exclusive",
+                "Value": {
+                  "Value": 8000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "02DD1721-41EE01DD-71E73E80-F3EB9B7C"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformSection'HeroCatAgileWidget_C:FullHeroCatAgileAnim_INST.FullHeroCatAgileAnim.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.25"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformSection'HeroCatAgileWidget_C:FullHeroCatAgileAnim_INST.FullHeroCatAgileAnim.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.25"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneBoolSection'HeroCatAgileWidget_C:FullHeroCatAgileAnim_INST.FullHeroCatAgileAnim.MovieSceneBoolTrack_0.MovieSceneBoolSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.27"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneBoolSection'HeroCatAgileWidget_C:FullHeroCatAgileAnim_INST.FullHeroCatAgileAnim.MovieSceneBoolTrack_0.MovieSceneBoolSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.27"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneColorSection'HeroCatAgileWidget_C:FullHeroCatAgileAnim_INST.FullHeroCatAgileAnim.MovieSceneColorTrack_0.MovieSceneColorSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.47"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneColorSection'HeroCatAgileWidget_C:FullHeroCatAgileAnim_INST.FullHeroCatAgileAnim.MovieSceneColorTrack_0.MovieSceneColorSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.47"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatSection'HeroCatAgileWidget_C:FullHeroCatAgileAnim_INST.FullHeroCatAgileAnim.MovieSceneFloatTrack_1.MovieSceneFloatSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.53"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatSection'HeroCatAgileWidget_C:FullHeroCatAgileAnim_INST.FullHeroCatAgileAnim.MovieSceneFloatTrack_1.MovieSceneFloatSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.53"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneParameterSection'HeroCatAgileWidget_C:FullHeroCatAgileAnim_INST.FullHeroCatAgileAnim.MovieSceneWidgetMaterialTrack_0.MovieSceneParameterSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.57"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneParameterSection'HeroCatAgileWidget_C:FullHeroCatAgileAnim_INST.FullHeroCatAgileAnim.MovieSceneWidgetMaterialTrack_0.MovieSceneParameterSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.57"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneBoolSection'HeroCatAgileWidget_C:StopHeroCatAgileAnim_INST.StopHeroCatAgileAnim.MovieSceneBoolTrack_0.MovieSceneBoolSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.28"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneBoolSection'HeroCatAgileWidget_C:StopHeroCatAgileAnim_INST.StopHeroCatAgileAnim.MovieSceneBoolTrack_0.MovieSceneBoolSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.28"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneColorSection'HeroCatAgileWidget_C:StopHeroCatAgileAnim_INST.StopHeroCatAgileAnim.MovieSceneColorTrack_0.MovieSceneColorSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.48"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneColorSection'HeroCatAgileWidget_C:StopHeroCatAgileAnim_INST.StopHeroCatAgileAnim.MovieSceneColorTrack_0.MovieSceneColorSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.48"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatSection'HeroCatAgileWidget_C:StopHeroCatAgileAnim_INST.StopHeroCatAgileAnim.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.54"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatSection'HeroCatAgileWidget_C:StopHeroCatAgileAnim_INST.StopHeroCatAgileAnim.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.54"
+    }
+  },
+  {
+    "Type": "MovieSceneColorSection",
+    "Name": "MovieSceneColorSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneColorSection'",
+    "Outer": {
+      "ObjectName": "MovieSceneColorTrack'HeroCatAgileWidget_C:FullHeroCatAgileAnim_INST.FullHeroCatAgileAnim.MovieSceneColorTrack_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.49"
+    },
+    "Properties": {
+      "AlphaCurve": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 2000
+          },
+          {
+            "Value": 49999
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'HeroCatAgileWidget_C:FullHeroCatAgileAnim_INST.FullHeroCatAgileAnim.MovieSceneColorTrack_0.MovieSceneColorSection_0.EaseInFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.35"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'HeroCatAgileWidget_C:FullHeroCatAgileAnim_INST.FullHeroCatAgileAnim.MovieSceneColorTrack_0.MovieSceneColorSection_0.EaseOutFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.36"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 51999
+            }
+          }
+        }
+      },
+      "Signature": "18BE0CA3-4E6BA1BE-632C4290-DC0F5DF2"
+    }
+  },
+  {
+    "Type": "MovieSceneColorSection",
+    "Name": "MovieSceneColorSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneColorSection'",
+    "Outer": {
+      "ObjectName": "MovieSceneColorTrack'HeroCatAgileWidget_C:StopHeroCatAgileAnim_INST.StopHeroCatAgileAnim.MovieSceneColorTrack_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.50"
+    },
+    "Properties": {
+      "AlphaCurve": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 2000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'HeroCatAgileWidget_C:StopHeroCatAgileAnim_INST.StopHeroCatAgileAnim.MovieSceneColorTrack_0.MovieSceneColorSection_0.EaseInFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.43"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'HeroCatAgileWidget_C:StopHeroCatAgileAnim_INST.StopHeroCatAgileAnim.MovieSceneColorTrack_0.MovieSceneColorSection_0.EaseOutFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.44"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 8000
+            }
+          }
+        }
+      },
+      "Signature": "229799DF-45959676-A22CAC8F-B18EB5E7"
+    }
+  },
+  {
+    "Type": "MovieSceneColorTrack",
+    "Name": "MovieSceneColorTrack_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneColorTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'HeroCatAgileWidget_C:FullHeroCatAgileAnim_INST.FullHeroCatAgileAnim'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.23"
+    },
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "ColorAndOpacity",
+        "PropertyPath": "ColorAndOpacity",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneColorSection'HeroCatAgileWidget_C:FullHeroCatAgileAnim_INST.FullHeroCatAgileAnim.MovieSceneColorTrack_0.MovieSceneColorSection_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.47"
+        }
+      ],
+      "EvaluationFieldGuid": "C12F9E70-40A75380-1B2E2299-F16AF7B9",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneColorSection'HeroCatAgileWidget_C:FullHeroCatAgileAnim_INST.FullHeroCatAgileAnim.MovieSceneColorTrack_0.MovieSceneColorSection_0'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.47"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Exclusive",
+                "Value": {
+                  "Value": 51999
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "C12F9E70-40A75380-1B2E2299-F16AF7B9"
+    }
+  },
+  {
+    "Type": "MovieSceneColorTrack",
+    "Name": "MovieSceneColorTrack_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneColorTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'HeroCatAgileWidget_C:StopHeroCatAgileAnim_INST.StopHeroCatAgileAnim'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.24"
+    },
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "ColorAndOpacity",
+        "PropertyPath": "ColorAndOpacity",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneColorSection'HeroCatAgileWidget_C:StopHeroCatAgileAnim_INST.StopHeroCatAgileAnim.MovieSceneColorTrack_0.MovieSceneColorSection_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.48"
+        }
+      ],
+      "EvaluationFieldGuid": "899537AF-424EAECD-32C8B393-8DFC2477",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneColorSection'HeroCatAgileWidget_C:StopHeroCatAgileAnim_INST.StopHeroCatAgileAnim.MovieSceneColorTrack_0.MovieSceneColorSection_0'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.48"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Exclusive",
+                "Value": {
+                  "Value": 8000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "899537AF-424EAECD-32C8B393-8DFC2477"
+    }
+  },
+  {
+    "Type": "MovieSceneCompiledData",
+    "Name": "CompiledData",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneCompiledData'",
+    "Outer": {
+      "ObjectName": "WidgetAnimation'HeroCatAgileWidget_C:FullHeroCatAgileAnim_INST'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.70"
+    },
+    "Properties": {
+      "EvaluationTemplate": {
+        "Tracks": [
+          {
+            "Key": {
+              "Value": 0
+            },
+            "Value": {
+              "ObjectBindingID": "4A1AA39B-476A302A-795BE4B2-0C3A45D7",
+              "EvaluationPriority": 1000,
+              "EvaluationMethod": "EEvaluationMethod::Static",
+              "SourceTrack": {
+                "ObjectName": "MovieSceneColorTrack'HeroCatAgileWidget_C:FullHeroCatAgileAnim_INST.FullHeroCatAgileAnim.MovieSceneColorTrack_0'",
+                "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.49"
+              },
+              "ChildTemplates": [
+                {
+                  "TypeName": "/Script/MovieSceneTracks.MovieSceneColorSectionTemplate",
+                  "Data": {
+                    "Curves": {
+                      "PreInfinityExtrap": "RCCE_Constant",
+                      "PostInfinityExtrap": "RCCE_Constant",
+                      "Times": [],
+                      "Values": [],
+                      "DefaultValue": 0.0,
+                      "bHasDefaultValue": false,
+                      "TickResolution": {
+                        "Numerator": 60000,
+                        "Denominator": 1
+                      },
+                      "bShowCurve": false,
+                      "StructFallback": null
+                    },
+                    "Curves[1]": {
+                      "PreInfinityExtrap": "RCCE_Constant",
+                      "PostInfinityExtrap": "RCCE_Constant",
+                      "Times": [],
+                      "Values": [],
+                      "DefaultValue": 0.0,
+                      "bHasDefaultValue": false,
+                      "TickResolution": {
+                        "Numerator": 60000,
+                        "Denominator": 1
+                      },
+                      "bShowCurve": false,
+                      "StructFallback": null
+                    },
+                    "Curves[2]": {
+                      "PreInfinityExtrap": "RCCE_Constant",
+                      "PostInfinityExtrap": "RCCE_Constant",
+                      "Times": [],
+                      "Values": [],
+                      "DefaultValue": 0.0,
+                      "bHasDefaultValue": false,
+                      "TickResolution": {
+                        "Numerator": 60000,
+                        "Denominator": 1
+                      },
+                      "bShowCurve": false,
+                      "StructFallback": null
+                    },
+                    "Curves[3]": {
+                      "PreInfinityExtrap": "RCCE_Constant",
+                      "PostInfinityExtrap": "RCCE_Constant",
+                      "Times": [
+                        {
+                          "Value": 0
+                        },
+                        {
+                          "Value": 2000
+                        },
+                        {
+                          "Value": 49999
+                        }
+                      ],
+                      "Values": [
+                        {
+                          "Value": 0.0,
+                          "Tangent": {
+                            "ArriveTangent": 0.0,
+                            "LeaveTangent": 0.0,
+                            "ArriveTangentWeight": 0.0,
+                            "LeaveTangentWeight": 0.0,
+                            "TangentWeightMode": 0
+                          },
+                          "InterpMode": 2,
+                          "TangentMode": 0
+                        },
+                        {
+                          "Value": 1.0,
+                          "Tangent": {
+                            "ArriveTangent": 0.0,
+                            "LeaveTangent": 0.0,
+                            "ArriveTangentWeight": 0.0,
+                            "LeaveTangentWeight": 0.0,
+                            "TangentWeightMode": 0
+                          },
+                          "InterpMode": 2,
+                          "TangentMode": 0
+                        },
+                        {
+                          "Value": 0.0,
+                          "Tangent": {
+                            "ArriveTangent": 0.0,
+                            "LeaveTangent": 0.0,
+                            "ArriveTangentWeight": 0.0,
+                            "LeaveTangentWeight": 0.0,
+                            "TangentWeightMode": 0
+                          },
+                          "InterpMode": 2,
+                          "TangentMode": 0
+                        }
+                      ],
+                      "DefaultValue": 0.0,
+                      "bHasDefaultValue": false,
+                      "TickResolution": {
+                        "Numerator": 60000,
+                        "Denominator": 1
+                      },
+                      "bShowCurve": false,
+                      "StructFallback": null
+                    },
+                    "BlendType": "EMovieSceneBlendType::Absolute",
+                    "PropertyData": {
+                      "PropertyName": "ColorAndOpacity",
+                      "PropertyPath": "ColorAndOpacity"
+                    },
+                    "CompletionMode": "EMovieSceneCompletionMode::KeepState",
+                    "SourceSectionPtr": {
+                      "ObjectName": "MovieSceneColorSection'HeroCatAgileWidget_C:FullHeroCatAgileAnim_INST.FullHeroCatAgileAnim.MovieSceneColorTrack_0.MovieSceneColorSection_0'",
+                      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.47"
+                    }
+                  }
+                }
+              ],
+              "TrackTemplate": {
+                "TypeName": "",
+                "Data": null
+              },
+              "EvaluationGroup": "None",
+              "bEvaluateInPreroll": false,
+              "bEvaluateInPostroll": false,
+              "bTearDownPriority": false
+            }
+          },
+          {
+            "Key": {
+              "Value": 1
+            },
+            "Value": {
+              "ObjectBindingID": "4A1AA39B-476A302A-795BE4B2-0C3A45D7",
+              "EvaluationPriority": 1000,
+              "EvaluationMethod": "EEvaluationMethod::Static",
+              "SourceTrack": {
+                "ObjectName": "MovieSceneWidgetMaterialTrack'HeroCatAgileWidget_C:FullHeroCatAgileAnim_INST.FullHeroCatAgileAnim.MovieSceneWidgetMaterialTrack_0'",
+                "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.58"
+              },
+              "ChildTemplates": [
+                {
+                  "TypeName": "/Script/UMG.MovieSceneWidgetMaterialSectionTemplate",
+                  "Data": {
+                    "BrushPropertyNamePath": [
+                      "Brush"
+                    ],
+                    "Scalars": [
+                      {
+                        "ParameterName": "Basiclightness",
+                        "ParameterCurve": {
+                          "PreInfinityExtrap": "RCCE_Constant",
+                          "PostInfinityExtrap": "RCCE_Constant",
+                          "Times": [
+                            {
+                              "Value": 4000
+                            },
+                            {
+                              "Value": 16000
+                            }
+                          ],
+                          "Values": [
+                            {
+                              "Value": 1.4999998,
+                              "Tangent": {
+                                "ArriveTangent": 0.0,
+                                "LeaveTangent": 0.0,
+                                "ArriveTangentWeight": 0.0,
+                                "LeaveTangentWeight": 0.0,
+                                "TangentWeightMode": 0
+                              },
+                              "InterpMode": 2,
+                              "TangentMode": 0
+                            },
+                            {
+                              "Value": 0.2500002,
+                              "Tangent": {
+                                "ArriveTangent": 0.0,
+                                "LeaveTangent": 0.0,
+                                "ArriveTangentWeight": 0.0,
+                                "LeaveTangentWeight": 0.0,
+                                "TangentWeightMode": 0
+                              },
+                              "InterpMode": 2,
+                              "TangentMode": 0
+                            }
+                          ],
+                          "DefaultValue": 0.0,
+                          "bHasDefaultValue": false,
+                          "TickResolution": {
+                            "Numerator": 60000,
+                            "Denominator": 1
+                          },
+                          "bShowCurve": false,
+                          "StructFallback": null
+                        }
+                      }
+                    ],
+                    "Bools": [],
+                    "Vector2Ds": [],
+                    "Vectors": [],
+                    "Colors": [],
+                    "Transforms": [],
+                    "CompletionMode": "EMovieSceneCompletionMode::KeepState",
+                    "SourceSectionPtr": {
+                      "ObjectName": "MovieSceneParameterSection'HeroCatAgileWidget_C:FullHeroCatAgileAnim_INST.FullHeroCatAgileAnim.MovieSceneWidgetMaterialTrack_0.MovieSceneParameterSection_0'",
+                      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.57"
+                    }
+                  }
+                }
+              ],
+              "TrackTemplate": {
+                "TypeName": "",
+                "Data": null
+              },
+              "EvaluationGroup": "None",
+              "bEvaluateInPreroll": false,
+              "bEvaluateInPostroll": false,
+              "bTearDownPriority": false
+            }
+          },
+          {
+            "Key": {
+              "Value": 2
+            },
+            "Value": {
+              "ObjectBindingID": "F49947C5-4D5CDC9E-F11F1598-CA2E1EDC",
+              "EvaluationPriority": 1000,
+              "EvaluationMethod": "EEvaluationMethod::Static",
+              "SourceTrack": {
+                "ObjectName": "MovieSceneBoolTrack'HeroCatAgileWidget_C:FullHeroCatAgileAnim_INST.FullHeroCatAgileAnim.MovieSceneBoolTrack_0'",
+                "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.29"
+              },
+              "ChildTemplates": [
+                {
+                  "TypeName": "/Script/MovieSceneTracks.MovieSceneBoolPropertySectionTemplate",
+                  "Data": {
+                    "BoolCurve": {
+                      "Times": [
+                        {
+                          "Value": 0
+                        },
+                        {
+                          "Value": 2000
+                        },
+                        {
+                          "Value": 26000
+                        }
+                      ],
+                      "DefaultValue": false,
+                      "bHasDefaultValue": false,
+                      "Values": [
+                        false,
+                        true,
+                        false
+                      ]
+                    },
+                    "PropertyData": {
+                      "PropertyName": "PlayParticle",
+                      "PropertyPath": "bPlayParticle"
+                    },
+                    "CompletionMode": "EMovieSceneCompletionMode::KeepState",
+                    "SourceSectionPtr": {
+                      "ObjectName": "MovieSceneBoolSection'HeroCatAgileWidget_C:FullHeroCatAgileAnim_INST.FullHeroCatAgileAnim.MovieSceneBoolTrack_0.MovieSceneBoolSection_0'",
+                      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.27"
+                    }
+                  }
+                }
+              ],
+              "TrackTemplate": {
+                "TypeName": "",
+                "Data": null
+              },
+              "EvaluationGroup": "None",
+              "bEvaluateInPreroll": false,
+              "bEvaluateInPostroll": false,
+              "bTearDownPriority": false
+            }
+          }
+        ],
+        "TemplateLedger": {
+          "LastTrackIdentifier": {
+            "Value": 2
+          },
+          "TrackSignatureToTrackIdentifier": [
+            {
+              "Key": "C12F9E70-40A75380-1B2E2299-F16AF7B9",
+              "Value": {
+                "Value": 0
+              }
+            },
+            {
+              "Key": "FD80E272-4C06B7D8-AA7027A0-A9DDD38A",
+              "Value": {
+                "Value": 1
+              }
+            },
+            {
+              "Key": "23EB34BF-4574908C-77B8CA83-4861210E",
+              "Value": {
+                "Value": 2
+              }
+            }
+          ]
+        }
+      },
+      "EntityComponentField": {
+        "PersistentEntityTree": {
+          "SerializedData": {
+            "Data": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 2,
+                  "Capacity": 2
+                }
+              ],
+              "Items": [
+                {
+                  "EntityIndex": 0,
+                  "MetaDataIndex": -1
+                },
+                {
+                  "EntityIndex": 1,
+                  "MetaDataIndex": -1
+                }
+              ]
+            },
+            "RootNode": {
+              "Range": {
+                "LowerBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                },
+                "UpperBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                }
+              },
+              "Parent": {
+                "ChildrenHandle": {
+                  "EntryIndex": -1
+                },
+                "Index": -1
+              },
+              "ChildrenID": {
+                "EntryIndex": 0
+              },
+              "DataID": {
+                "EntryIndex": -1
+              }
+            },
+            "ChildNodes": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 1,
+                  "Capacity": 1
+                }
+              ],
+              "Items": [
+                {
+                  "Range": {
+                    "LowerBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 0
+                      }
+                    },
+                    "UpperBound": {
+                      "Type": 0,
+                      "Value": {
+                        "Value": 52000
+                      }
+                    }
+                  },
+                  "Parent": {
+                    "ChildrenHandle": {
+                      "EntryIndex": -1
+                    },
+                    "Index": 0
+                  },
+                  "ChildrenID": {
+                    "EntryIndex": -1
+                  },
+                  "DataID": {
+                    "EntryIndex": 0
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "Entities": [
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieScene2DTransformSection'HeroCatAgileWidget_C:FullHeroCatAgileAnim_INST.FullHeroCatAgileAnim.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0'",
+                "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.25"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 0
+          },
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieSceneFloatSection'HeroCatAgileWidget_C:FullHeroCatAgileAnim_INST.FullHeroCatAgileAnim.MovieSceneFloatTrack_1.MovieSceneFloatSection_0'",
+                "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.53"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 1
+          }
+        ],
+        "SharedMetaData": [
+          {
+            "ObjectBindingID": "4A1AA39B-476A302A-795BE4B2-0C3A45D7"
+          },
+          {
+            "ObjectBindingID": "D617E023-4BC9CD09-5445128B-DA90417E"
+          }
+        ]
+      },
+      "TrackTemplateField": {
+        "Ranges": [
+          {
+            "Value": {
+              "LowerBound": {
+                "Type": 2,
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": 0,
+                "Value": {
+                  "Value": 0
+                }
+              }
+            }
+          },
+          {
+            "Value": {
+              "LowerBound": {
+                "Type": 1,
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": 0,
+                "Value": {
+                  "Value": 51999
+                }
+              }
+            }
+          },
+          {
+            "Value": {
+              "LowerBound": {
+                "Type": 1,
+                "Value": {
+                  "Value": 51999
+                }
+              },
+              "UpperBound": {
+                "Type": 0,
+                "Value": {
+                  "Value": 52000
+                }
+              }
+            }
+          },
+          {
+            "Value": {
+              "LowerBound": {
+                "Type": 1,
+                "Value": {
+                  "Value": 52000
+                }
+              },
+              "UpperBound": {
+                "Type": 2,
+                "Value": {
+                  "Value": 0
+                }
+              }
+            }
+          }
+        ],
+        "Groups": [
+          {
+            "LUTIndices": [],
+            "TrackLUT": [],
+            "SectionLUT": []
+          },
+          {
+            "LUTIndices": [
+              {
+                "NumInitPtrs": 0,
+                "NumEvalPtrs": 3
+              }
+            ],
+            "TrackLUT": [
+              {
+                "TrackPtr": {
+                  "SequenceID": {
+                    "Value": 0
+                  },
+                  "TrackIdentifier": {
+                    "Value": 1
+                  }
+                },
+                "NumChildren": 1
+              },
+              {
+                "TrackPtr": {
+                  "SequenceID": {
+                    "Value": 0
+                  },
+                  "TrackIdentifier": {
+                    "Value": 2
+                  }
+                },
+                "NumChildren": 1
+              },
+              {
+                "TrackPtr": {
+                  "SequenceID": {
+                    "Value": 0
+                  },
+                  "TrackIdentifier": {
+                    "Value": 0
+                  }
+                },
+                "NumChildren": 1
+              }
+            ],
+            "SectionLUT": [
+              {
+                "ChildIndex": 0,
+                "Flags": "ESectionEvaluationFlags::None",
+                "ForcedTime": {
+                  "Value": -2147483648
+                }
+              },
+              {
+                "ChildIndex": 0,
+                "Flags": "ESectionEvaluationFlags::None",
+                "ForcedTime": {
+                  "Value": -2147483648
+                }
+              },
+              {
+                "ChildIndex": 0,
+                "Flags": "ESectionEvaluationFlags::None",
+                "ForcedTime": {
+                  "Value": -2147483648
+                }
+              }
+            ]
+          },
+          {
+            "LUTIndices": [
+              {
+                "NumInitPtrs": 0,
+                "NumEvalPtrs": 1
+              }
+            ],
+            "TrackLUT": [
+              {
+                "TrackPtr": {
+                  "SequenceID": {
+                    "Value": 0
+                  },
+                  "TrackIdentifier": {
+                    "Value": 2
+                  }
+                },
+                "NumChildren": 1
+              }
+            ],
+            "SectionLUT": [
+              {
+                "ChildIndex": 0,
+                "Flags": "ESectionEvaluationFlags::None",
+                "ForcedTime": {
+                  "Value": -2147483648
+                }
+              }
+            ]
+          },
+          {
+            "LUTIndices": [],
+            "TrackLUT": [],
+            "SectionLUT": []
+          }
+        ],
+        "MetaData": [
+          {
+            "ActiveSequences": [
+              {
+                "Value": 0
+              }
+            ],
+            "ActiveEntities": []
+          },
+          {
+            "ActiveSequences": [
+              {
+                "Value": 0
+              }
+            ],
+            "ActiveEntities": [
+              {
+                "Key": {
+                  "SequenceID": {
+                    "Value": 0
+                  },
+                  "TrackIdentifier": {
+                    "Value": 0
+                  },
+                  "SectionIndex": 0
+                },
+                "SetupIndex": 2,
+                "TearDownIndex": 65533
+              },
+              {
+                "Key": {
+                  "SequenceID": {
+                    "Value": 0
+                  },
+                  "TrackIdentifier": {
+                    "Value": 1
+                  },
+                  "SectionIndex": 0
+                },
+                "SetupIndex": 0,
+                "TearDownIndex": 65535
+              },
+              {
+                "Key": {
+                  "SequenceID": {
+                    "Value": 0
+                  },
+                  "TrackIdentifier": {
+                    "Value": 2
+                  },
+                  "SectionIndex": 0
+                },
+                "SetupIndex": 1,
+                "TearDownIndex": 65534
+              }
+            ]
+          },
+          {
+            "ActiveSequences": [
+              {
+                "Value": 0
+              }
+            ],
+            "ActiveEntities": [
+              {
+                "Key": {
+                  "SequenceID": {
+                    "Value": 0
+                  },
+                  "TrackIdentifier": {
+                    "Value": 2
+                  },
+                  "SectionIndex": 0
+                },
+                "SetupIndex": 0,
+                "TearDownIndex": 65535
+              }
+            ]
+          },
+          {
+            "ActiveSequences": [
+              {
+                "Value": 0
+              }
+            ],
+            "ActiveEntities": []
+          }
+        ]
+      },
+      "CompiledSignature": "4032ED16-44C19EAF-D6AF80A1-816CC15C",
+      "CompilerVersion": "7D4B9809-2FAC4A6B-964ECF72-D8279EF8",
+      "AccumulatedMask": {
+        "bEvaluationTemplate": true,
+        "bEvaluationTemplateField": true,
+        "bEntityComponentField": true
+      },
+      "AllocatedMask": {
+        "bEvaluationTemplate": true,
+        "bEvaluationTemplateField": true,
+        "bEntityComponentField": true
+      }
+    }
+  },
+  {
+    "Type": "MovieSceneCompiledData",
+    "Name": "CompiledData",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneCompiledData'",
+    "Outer": {
+      "ObjectName": "WidgetAnimation'HeroCatAgileWidget_C:StopHeroCatAgileAnim_INST'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.71"
+    },
+    "Properties": {
+      "EvaluationTemplate": {
+        "Tracks": [
+          {
+            "Key": {
+              "Value": 0
+            },
+            "Value": {
+              "ObjectBindingID": "2BCB69D4-44754256-CB749FAF-14B46E14",
+              "EvaluationPriority": 1000,
+              "EvaluationMethod": "EEvaluationMethod::Static",
+              "SourceTrack": {
+                "ObjectName": "MovieSceneColorTrack'HeroCatAgileWidget_C:StopHeroCatAgileAnim_INST.StopHeroCatAgileAnim.MovieSceneColorTrack_0'",
+                "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.50"
+              },
+              "ChildTemplates": [
+                {
+                  "TypeName": "/Script/MovieSceneTracks.MovieSceneColorSectionTemplate",
+                  "Data": {
+                    "Curves": {
+                      "PreInfinityExtrap": "RCCE_Constant",
+                      "PostInfinityExtrap": "RCCE_Constant",
+                      "Times": [],
+                      "Values": [],
+                      "DefaultValue": 0.0,
+                      "bHasDefaultValue": false,
+                      "TickResolution": {
+                        "Numerator": 60000,
+                        "Denominator": 1
+                      },
+                      "bShowCurve": false,
+                      "StructFallback": null
+                    },
+                    "Curves[1]": {
+                      "PreInfinityExtrap": "RCCE_Constant",
+                      "PostInfinityExtrap": "RCCE_Constant",
+                      "Times": [],
+                      "Values": [],
+                      "DefaultValue": 0.0,
+                      "bHasDefaultValue": false,
+                      "TickResolution": {
+                        "Numerator": 60000,
+                        "Denominator": 1
+                      },
+                      "bShowCurve": false,
+                      "StructFallback": null
+                    },
+                    "Curves[2]": {
+                      "PreInfinityExtrap": "RCCE_Constant",
+                      "PostInfinityExtrap": "RCCE_Constant",
+                      "Times": [],
+                      "Values": [],
+                      "DefaultValue": 0.0,
+                      "bHasDefaultValue": false,
+                      "TickResolution": {
+                        "Numerator": 60000,
+                        "Denominator": 1
+                      },
+                      "bShowCurve": false,
+                      "StructFallback": null
+                    },
+                    "Curves[3]": {
+                      "PreInfinityExtrap": "RCCE_Constant",
+                      "PostInfinityExtrap": "RCCE_Constant",
+                      "Times": [
+                        {
+                          "Value": 2000
+                        }
+                      ],
+                      "Values": [
+                        {
+                          "Value": 0.0,
+                          "Tangent": {
+                            "ArriveTangent": 0.0,
+                            "LeaveTangent": 0.0,
+                            "ArriveTangentWeight": 0.0,
+                            "LeaveTangentWeight": 0.0,
+                            "TangentWeightMode": 0
+                          },
+                          "InterpMode": 2,
+                          "TangentMode": 0
+                        }
+                      ],
+                      "DefaultValue": 0.0,
+                      "bHasDefaultValue": false,
+                      "TickResolution": {
+                        "Numerator": 60000,
+                        "Denominator": 1
+                      },
+                      "bShowCurve": false,
+                      "StructFallback": null
+                    },
+                    "BlendType": "EMovieSceneBlendType::Absolute",
+                    "PropertyData": {
+                      "PropertyName": "ColorAndOpacity",
+                      "PropertyPath": "ColorAndOpacity"
+                    },
+                    "CompletionMode": "EMovieSceneCompletionMode::KeepState",
+                    "SourceSectionPtr": {
+                      "ObjectName": "MovieSceneColorSection'HeroCatAgileWidget_C:StopHeroCatAgileAnim_INST.StopHeroCatAgileAnim.MovieSceneColorTrack_0.MovieSceneColorSection_0'",
+                      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.48"
+                    }
+                  }
+                }
+              ],
+              "TrackTemplate": {
+                "TypeName": "",
+                "Data": null
+              },
+              "EvaluationGroup": "None",
+              "bEvaluateInPreroll": false,
+              "bEvaluateInPostroll": false,
+              "bTearDownPriority": false
+            }
+          },
+          {
+            "Key": {
+              "Value": 1
+            },
+            "Value": {
+              "ObjectBindingID": "33BBC41B-4C2F89E7-4B4461BD-775F0352",
+              "EvaluationPriority": 1000,
+              "EvaluationMethod": "EEvaluationMethod::Static",
+              "SourceTrack": {
+                "ObjectName": "MovieSceneBoolTrack'HeroCatAgileWidget_C:StopHeroCatAgileAnim_INST.StopHeroCatAgileAnim.MovieSceneBoolTrack_0'",
+                "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.30"
+              },
+              "ChildTemplates": [
+                {
+                  "TypeName": "/Script/MovieSceneTracks.MovieSceneBoolPropertySectionTemplate",
+                  "Data": {
+                    "BoolCurve": {
+                      "Times": [
+                        {
+                          "Value": 2000
+                        }
+                      ],
+                      "DefaultValue": false,
+                      "bHasDefaultValue": false,
+                      "Values": [
+                        false
+                      ]
+                    },
+                    "PropertyData": {
+                      "PropertyName": "PlayParticle",
+                      "PropertyPath": "bPlayParticle"
+                    },
+                    "CompletionMode": "EMovieSceneCompletionMode::KeepState",
+                    "SourceSectionPtr": {
+                      "ObjectName": "MovieSceneBoolSection'HeroCatAgileWidget_C:StopHeroCatAgileAnim_INST.StopHeroCatAgileAnim.MovieSceneBoolTrack_0.MovieSceneBoolSection_0'",
+                      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.28"
+                    }
+                  }
+                }
+              ],
+              "TrackTemplate": {
+                "TypeName": "",
+                "Data": null
+              },
+              "EvaluationGroup": "None",
+              "bEvaluateInPreroll": false,
+              "bEvaluateInPostroll": false,
+              "bTearDownPriority": false
+            }
+          }
+        ],
+        "TemplateLedger": {
+          "LastTrackIdentifier": {
+            "Value": 1
+          },
+          "TrackSignatureToTrackIdentifier": [
+            {
+              "Key": "899537AF-424EAECD-32C8B393-8DFC2477",
+              "Value": {
+                "Value": 0
+              }
+            },
+            {
+              "Key": "02DD1721-41EE01DD-71E73E80-F3EB9B7C",
+              "Value": {
+                "Value": 1
+              }
+            }
+          ]
+        }
+      },
+      "EntityComponentField": {
+        "PersistentEntityTree": {
+          "SerializedData": {
+            "Data": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 1,
+                  "Capacity": 1
+                }
+              ],
+              "Items": [
+                {
+                  "EntityIndex": 0,
+                  "MetaDataIndex": -1
+                }
+              ]
+            },
+            "RootNode": {
+              "Range": {
+                "LowerBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                },
+                "UpperBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                }
+              },
+              "Parent": {
+                "ChildrenHandle": {
+                  "EntryIndex": -1
+                },
+                "Index": -1
+              },
+              "ChildrenID": {
+                "EntryIndex": 0
+              },
+              "DataID": {
+                "EntryIndex": -1
+              }
+            },
+            "ChildNodes": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 1,
+                  "Capacity": 1
+                }
+              ],
+              "Items": [
+                {
+                  "Range": {
+                    "LowerBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 0
+                      }
+                    },
+                    "UpperBound": {
+                      "Type": 0,
+                      "Value": {
+                        "Value": 8000
+                      }
+                    }
+                  },
+                  "Parent": {
+                    "ChildrenHandle": {
+                      "EntryIndex": -1
+                    },
+                    "Index": 0
+                  },
+                  "ChildrenID": {
+                    "EntryIndex": -1
+                  },
+                  "DataID": {
+                    "EntryIndex": 0
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "Entities": [
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieSceneFloatSection'HeroCatAgileWidget_C:StopHeroCatAgileAnim_INST.StopHeroCatAgileAnim.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+                "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.54"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 0
+          }
+        ],
+        "SharedMetaData": [
+          {
+            "ObjectBindingID": "DB07655F-48D3322B-764738A8-E2FE1B17"
+          }
+        ]
+      },
+      "TrackTemplateField": {
+        "Ranges": [
+          {
+            "Value": {
+              "LowerBound": {
+                "Type": 2,
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": 0,
+                "Value": {
+                  "Value": 0
+                }
+              }
+            }
+          },
+          {
+            "Value": {
+              "LowerBound": {
+                "Type": 1,
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": 0,
+                "Value": {
+                  "Value": 8000
+                }
+              }
+            }
+          },
+          {
+            "Value": {
+              "LowerBound": {
+                "Type": 1,
+                "Value": {
+                  "Value": 8000
+                }
+              },
+              "UpperBound": {
+                "Type": 2,
+                "Value": {
+                  "Value": 0
+                }
+              }
+            }
+          }
+        ],
+        "Groups": [
+          {
+            "LUTIndices": [],
+            "TrackLUT": [],
+            "SectionLUT": []
+          },
+          {
+            "LUTIndices": [
+              {
+                "NumInitPtrs": 0,
+                "NumEvalPtrs": 2
+              }
+            ],
+            "TrackLUT": [
+              {
+                "TrackPtr": {
+                  "SequenceID": {
+                    "Value": 0
+                  },
+                  "TrackIdentifier": {
+                    "Value": 1
+                  }
+                },
+                "NumChildren": 1
+              },
+              {
+                "TrackPtr": {
+                  "SequenceID": {
+                    "Value": 0
+                  },
+                  "TrackIdentifier": {
+                    "Value": 0
+                  }
+                },
+                "NumChildren": 1
+              }
+            ],
+            "SectionLUT": [
+              {
+                "ChildIndex": 0,
+                "Flags": "ESectionEvaluationFlags::None",
+                "ForcedTime": {
+                  "Value": -2147483648
+                }
+              },
+              {
+                "ChildIndex": 0,
+                "Flags": "ESectionEvaluationFlags::None",
+                "ForcedTime": {
+                  "Value": -2147483648
+                }
+              }
+            ]
+          },
+          {
+            "LUTIndices": [],
+            "TrackLUT": [],
+            "SectionLUT": []
+          }
+        ],
+        "MetaData": [
+          {
+            "ActiveSequences": [
+              {
+                "Value": 0
+              }
+            ],
+            "ActiveEntities": []
+          },
+          {
+            "ActiveSequences": [
+              {
+                "Value": 0
+              }
+            ],
+            "ActiveEntities": [
+              {
+                "Key": {
+                  "SequenceID": {
+                    "Value": 0
+                  },
+                  "TrackIdentifier": {
+                    "Value": 0
+                  },
+                  "SectionIndex": 0
+                },
+                "SetupIndex": 1,
+                "TearDownIndex": 65534
+              },
+              {
+                "Key": {
+                  "SequenceID": {
+                    "Value": 0
+                  },
+                  "TrackIdentifier": {
+                    "Value": 1
+                  },
+                  "SectionIndex": 0
+                },
+                "SetupIndex": 0,
+                "TearDownIndex": 65535
+              }
+            ]
+          },
+          {
+            "ActiveSequences": [
+              {
+                "Value": 0
+              }
+            ],
+            "ActiveEntities": []
+          }
+        ]
+      },
+      "CompiledSignature": "6231F974-45F8942C-3A165DB4-3CDCCFEC",
+      "CompilerVersion": "7D4B9809-2FAC4A6B-964ECF72-D8279EF8",
+      "AccumulatedMask": {
+        "bEvaluationTemplate": true,
+        "bEvaluationTemplateField": true,
+        "bEntityComponentField": true
+      },
+      "AllocatedMask": {
+        "bEvaluationTemplate": true,
+        "bEvaluationTemplateField": true,
+        "bEntityComponentField": true
+      }
+    }
+  },
+  {
+    "Type": "MovieSceneFloatSection",
+    "Name": "MovieSceneFloatSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneFloatSection'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatTrack'HeroCatAgileWidget_C:FullHeroCatAgileAnim_INST.FullHeroCatAgileAnim.MovieSceneFloatTrack_1'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.55"
+    },
+    "Properties": {
+      "FloatCurve": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 4000
+          },
+          {
+            "Value": 18000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'HeroCatAgileWidget_C:FullHeroCatAgileAnim_INST.FullHeroCatAgileAnim.MovieSceneFloatTrack_1.MovieSceneFloatSection_0.EaseInFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.37"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'HeroCatAgileWidget_C:FullHeroCatAgileAnim_INST.FullHeroCatAgileAnim.MovieSceneFloatTrack_1.MovieSceneFloatSection_0.EaseOutFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.38"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 52000
+            }
+          }
+        }
+      },
+      "Signature": "CFF37A8B-41E01DAF-A086228E-E56E9029"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatSection",
+    "Name": "MovieSceneFloatSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneFloatSection'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatTrack'HeroCatAgileWidget_C:StopHeroCatAgileAnim_INST.StopHeroCatAgileAnim.MovieSceneFloatTrack_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.56"
+    },
+    "Properties": {
+      "FloatCurve": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 2000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'HeroCatAgileWidget_C:StopHeroCatAgileAnim_INST.StopHeroCatAgileAnim.MovieSceneFloatTrack_0.MovieSceneFloatSection_0.EaseInFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.45"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'HeroCatAgileWidget_C:StopHeroCatAgileAnim_INST.StopHeroCatAgileAnim.MovieSceneFloatTrack_0.MovieSceneFloatSection_0.EaseOutFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.46"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 8000
+            }
+          }
+        }
+      },
+      "Signature": "0D9E2632-4691216F-995796AC-F8F893E1"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatTrack",
+    "Name": "MovieSceneFloatTrack_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneFloatTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'HeroCatAgileWidget_C:FullHeroCatAgileAnim_INST.FullHeroCatAgileAnim'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.23"
+    },
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderOpacity",
+        "PropertyPath": "RenderOpacity",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneFloatSection'HeroCatAgileWidget_C:FullHeroCatAgileAnim_INST.FullHeroCatAgileAnim.MovieSceneFloatTrack_1.MovieSceneFloatSection_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.53"
+        }
+      ],
+      "EvaluationFieldGuid": "6B6776D5-497A4DA5-C4BCBCBF-57655D63",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneFloatSection'HeroCatAgileWidget_C:FullHeroCatAgileAnim_INST.FullHeroCatAgileAnim.MovieSceneFloatTrack_1.MovieSceneFloatSection_0'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.53"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Exclusive",
+                "Value": {
+                  "Value": 52000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "6B6776D5-497A4DA5-C4BCBCBF-57655D63"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatTrack",
+    "Name": "MovieSceneFloatTrack_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneFloatTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'HeroCatAgileWidget_C:StopHeroCatAgileAnim_INST.StopHeroCatAgileAnim'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.24"
+    },
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderOpacity",
+        "PropertyPath": "RenderOpacity",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneFloatSection'HeroCatAgileWidget_C:StopHeroCatAgileAnim_INST.StopHeroCatAgileAnim.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.54"
+        }
+      ],
+      "EvaluationFieldGuid": "8CC27067-45EB37C5-07CBE399-B3F83A7E",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneFloatSection'HeroCatAgileWidget_C:StopHeroCatAgileAnim_INST.StopHeroCatAgileAnim.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.54"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Exclusive",
+                "Value": {
+                  "Value": 8000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "8CC27067-45EB37C5-07CBE399-B3F83A7E"
+    }
+  },
+  {
+    "Type": "MovieSceneParameterSection",
+    "Name": "MovieSceneParameterSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneParameterSection'",
+    "Outer": {
+      "ObjectName": "MovieSceneWidgetMaterialTrack'HeroCatAgileWidget_C:FullHeroCatAgileAnim_INST.FullHeroCatAgileAnim.MovieSceneWidgetMaterialTrack_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.58"
+    },
+    "Properties": {
+      "ScalarParameterNamesAndCurves": [
+        {
+          "ParameterName": "Basiclightness",
+          "ParameterCurve": {
+            "PreInfinityExtrap": "RCCE_Constant",
+            "PostInfinityExtrap": "RCCE_Constant",
+            "Times": [
+              {
+                "Value": 4000
+              },
+              {
+                "Value": 16000
+              }
+            ],
+            "Values": [
+              {
+                "Value": 1.4999998,
+                "Tangent": {
+                  "ArriveTangent": 0.0,
+                  "LeaveTangent": 0.0,
+                  "ArriveTangentWeight": 0.0,
+                  "LeaveTangentWeight": 0.0,
+                  "TangentWeightMode": 0
+                },
+                "InterpMode": 2,
+                "TangentMode": 0
+              },
+              {
+                "Value": 0.2500002,
+                "Tangent": {
+                  "ArriveTangent": 0.0,
+                  "LeaveTangent": 0.0,
+                  "ArriveTangentWeight": 0.0,
+                  "LeaveTangentWeight": 0.0,
+                  "TangentWeightMode": 0
+                },
+                "InterpMode": 2,
+                "TangentMode": 0
+              }
+            ],
+            "DefaultValue": 0.0,
+            "bHasDefaultValue": false,
+            "TickResolution": {
+              "Numerator": 60000,
+              "Denominator": 1
+            },
+            "bShowCurve": false,
+            "StructFallback": null
+          }
+        }
+      ],
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'HeroCatAgileWidget_C:FullHeroCatAgileAnim_INST.FullHeroCatAgileAnim.MovieSceneWidgetMaterialTrack_0.MovieSceneParameterSection_0.EaseInFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.39"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'HeroCatAgileWidget_C:FullHeroCatAgileAnim_INST.FullHeroCatAgileAnim.MovieSceneWidgetMaterialTrack_0.MovieSceneParameterSection_0.EaseOutFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.40"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 51999
+            }
+          }
+        }
+      },
+      "Signature": "858BDDE6-4D05522A-DA5D688C-7F2FCE2A"
+    }
+  },
+  {
+    "Type": "MovieSceneWidgetMaterialTrack",
+    "Name": "MovieSceneWidgetMaterialTrack_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneWidgetMaterialTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'HeroCatAgileWidget_C:FullHeroCatAgileAnim_INST.FullHeroCatAgileAnim'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.23"
+    },
+    "Properties": {
+      "BrushPropertyNamePath": [
+        "Brush"
+      ],
+      "TrackName": "Brush",
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneParameterSection'HeroCatAgileWidget_C:FullHeroCatAgileAnim_INST.FullHeroCatAgileAnim.MovieSceneWidgetMaterialTrack_0.MovieSceneParameterSection_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.57"
+        }
+      ],
+      "EvaluationFieldGuid": "FD80E272-4C06B7D8-AA7027A0-A9DDD38A",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneParameterSection'HeroCatAgileWidget_C:FullHeroCatAgileAnim_INST.FullHeroCatAgileAnim.MovieSceneWidgetMaterialTrack_0.MovieSceneParameterSection_0'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.57"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Exclusive",
+                "Value": {
+                  "Value": 51999
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "FD80E272-4C06B7D8-AA7027A0-A9DDD38A"
+    }
+  },
+  {
+    "Type": "ProgressBar",
+    "Name": "AgileProgress",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ProgressBar'",
+    "Outer": {
+      "ObjectName": "WidgetTree'HeroCatAgileWidget_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.72"
+    },
+    "Properties": {
+      "WidgetStyle": {
+        "BackgroundImage": {
+          "ImageSize": {
+            "X": 130.56,
+            "Y": 130.56
+          },
+          "ResourceObject": {
+            "ObjectName": "PaperSprite'UI_HeroCharacter_Maonv_01_Sprite'",
+            "ObjectPath": "UE_game/Content/Art/UI/TexturesAtlas/HeroCharacter/AtlasMaonv01/UI_HeroCharacter_Maonv_01_Sprite.1"
+          },
+          "DrawAs": "ESlateBrushDrawType::Image"
+        },
+        "FillImage": {
+          "ImageSize": {
+            "X": 130.56,
+            "Y": 130.56
+          },
+          "ResourceObject": {
+            "ObjectName": "PaperSprite'UI_HeroCharacter_Maonv_02_Sprite'",
+            "ObjectPath": "UE_game/Content/Art/UI/TexturesAtlas/HeroCharacter/AtlasMaonv01/UI_HeroCharacter_Maonv_02_Sprite.1"
+          },
+          "DrawAs": "ESlateBrushDrawType::Image"
+        },
+        "MarqueeImage": {
+          "ImageSize": {
+            "X": 115.2,
+            "Y": 115.2
+          }
+        }
+      },
+      "Percent": 1.0,
+      "BarFillType": "EProgressBarFillType::BottomToTop",
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'HeroCatAgileWidget_C:WidgetTree.MainPanel.CanvasPanelSlot_3'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.18"
+      }
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "erL",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'HeroCatAgileWidget_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.72"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/UIEffect/UIMaterial/Inst/HeroCharacter/CatAgile/UI_MI_CatAgile02.UI_MI_CatAgile02",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 61.44,
+          "Y": 61.44
+        }
+      },
+      "ColorAndOpacity": {
+        "R": 0.792157,
+        "G": 0.180392,
+        "B": 1.0,
+        "A": 0.7,
+        "Hex": "B3E776FF"
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'HeroCatAgileWidget_C:WidgetTree.FxPanel01.CanvasPanelSlot_4'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.13"
+      },
+      "RenderTransform": {
+        "Scale": {
+          "X": -1.0,
+          "Y": 1.0
+        }
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "erR",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'HeroCatAgileWidget_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.72"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/UIEffect/UIMaterial/Inst/HeroCharacter/CatAgile/UI_MI_CatAgile02.UI_MI_CatAgile02",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 61.44,
+          "Y": 61.44
+        }
+      },
+      "ColorAndOpacity": {
+        "R": 0.792157,
+        "G": 0.180392,
+        "B": 1.0,
+        "A": 0.7,
+        "Hex": "B3E776FF"
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'HeroCatAgileWidget_C:WidgetTree.FxPanel01.CanvasPanelSlot_3'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.12"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "NumBg",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'HeroCatAgileWidget_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.72"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/TexturesAtlas/HeroCharacter/AtlasMaonv01/UI_HeroCharacter_Maonv_03_Sprite.UI_HeroCharacter_Maonv_03_Sprite",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 76.799995,
+          "Y": 76.799995
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'HeroCatAgileWidget_C:WidgetTree.MainPanel.CanvasPanelSlot_5'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.20"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "ProgressBg",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'HeroCatAgileWidget_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.72"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/Textures/HeroCharacter/NoAtlasCommander01/UI_Heroc_DwarfCommander03.UI_Heroc_DwarfCommander03",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 138.23999,
+          "Y": 138.23999
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'HeroCatAgileWidget_C:WidgetTree.MainPanel.CanvasPanelSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.17"
+      },
+      "bIsVariable": false,
+      "Visibility": "ESlateVisibility::HitTestInvisible"
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "UIImage",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'HeroCatAgileWidget_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.72"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/UIEffect/UIMaterial/Inst/HeroCharacter/CatAgile/UI_MI_CatAgile03.UI_MI_CatAgile03",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 61.44,
+          "Y": 61.44
+        }
+      },
+      "ColorAndOpacity": {
+        "R": 0.321509,
+        "G": 0.085407,
+        "B": 1.0,
+        "A": 0.47619,
+        "Hex": "799A52FF"
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'HeroCatAgileWidget_C:WidgetTree.FxPanel01.CanvasPanelSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.10"
+      },
+      "RenderTransform": {
+        "Scale": {
+          "X": 1.7,
+          "Y": 1.7
+        },
+        "Angle": 65.0
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "UIImage_220",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'HeroCatAgileWidget_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.72"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/UIEffect/UIMaterial/Inst/HeroCharacter/CatAgile/UI_MI_CatAgile03.UI_MI_CatAgile03",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 61.44,
+          "Y": 61.44
+        }
+      },
+      "ColorAndOpacity": {
+        "R": 0.812202,
+        "G": 0.139947,
+        "B": 1.0,
+        "A": 0.714286,
+        "Hex": "B6E968FF"
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'HeroCatAgileWidget_C:WidgetTree.FxPanel01.CanvasPanelSlot_5'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.14"
+      },
+      "RenderTransform": {
+        "Scale": {
+          "X": 1.7,
+          "Y": 1.7
+        }
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "UIImage_494",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'HeroCatAgileWidget_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.72"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/UIEffect/UITexture/Fx/Glow/UI_T_Glow06.UI_T_Glow06",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 245.76,
+          "Y": 245.76
+        }
+      },
+      "ColorAndOpacity": {
+        "R": 0.420476,
+        "G": 0.030273,
+        "B": 0.484375,
+        "A": 1.0,
+        "Hex": "AE30B9"
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'HeroCatAgileWidget_C:WidgetTree.FxPanel01.CanvasPanelSlot_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.11"
+      }
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "zhua",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'HeroCatAgileWidget_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.72"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/UIEffect/UIMaterial/Inst/HeroCharacter/CatAgile/UI_MI_CatAgile01.UI_MI_CatAgile01",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 245.76,
+          "Y": 245.76
+        }
+      },
+      "ColorAndOpacity": {
+        "R": 1.0,
+        "G": 1.0,
+        "B": 1.0,
+        "A": 0.0,
+        "Hex": "FFFFFF"
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'HeroCatAgileWidget_C:WidgetTree.FxPanel02.CanvasPanelSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.15"
+      },
+      "RenderTransform": {
+        "Scale": {
+          "X": 1.0500001,
+          "Y": 1.0500001
+        }
+      }
+    }
+  },
+  {
+    "Type": "UIParticleEmitter",
+    "Name": "UIParticleEmitter",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIParticleEmitter'",
+    "Outer": {
+      "ObjectName": "WidgetTree'HeroCatAgileWidget_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.72"
+    },
+    "Properties": {
+      "Asset": {
+        "ObjectName": "UIParticleEmitterAsset'UI_P_CatAgile'",
+        "ObjectPath": "UE_game/Content/Art/UI/UIEffect/UIParticle/HeroCharacter/CatAgile/UI_P_CatAgile.0"
+      },
+      "bPlayParticle": true,
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'HeroCatAgileWidget_C:WidgetTree.FxPanel02.CanvasPanelSlot_3'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.16"
+      },
+      "RenderTransform": {
+        "Scale": {
+          "X": 1.92,
+          "Y": 1.92
+        }
+      },
+      "bIsVariable": false,
+      "Visibility": "ESlateVisibility::HitTestInvisible"
+    }
+  },
+  {
+    "Type": "UITextBlock",
+    "Name": "NumText",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UITextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'HeroCatAgileWidget_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.72"
+    },
+    "Properties": {
+      "CurrStyleId": 2497,
+      "Text": {
+        "Namespace": "",
+        "Key": "CEC05EAE4F173D950686C897A5EA3F00",
+        "SourceString": "99",
+        "LocalizedString": "99"
+      },
+      "Justification": "ETextJustify::Center",
+      "VerticalJustification": "ETextVerticalJustify::Center",
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'HeroCatAgileWidget_C:WidgetTree.MainPanel.CanvasPanelSlot_8'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.22"
+      },
+      "bIsVariable": true,
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "WidgetAnimation",
+    "Name": "FullHeroCatAgileAnim_INST",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetAnimation'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'HeroCatAgileWidget_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.3"
+    },
+    "Properties": {
+      "MovieScene": {
+        "ObjectName": "MovieScene'HeroCatAgileWidget_C:FullHeroCatAgileAnim_INST.FullHeroCatAgileAnim'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.23"
+      },
+      "AnimationBindings": [
+        {
+          "WidgetName": "zhua",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "4A1AA39B-476A302A-795BE4B2-0C3A45D7",
+          "bIsRootWidget": false
+        },
+        {
+          "WidgetName": "FxPanel01",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "D617E023-4BC9CD09-5445128B-DA90417E",
+          "bIsRootWidget": false
+        },
+        {
+          "WidgetName": "UIParticleEmitter",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "F49947C5-4D5CDC9E-F11F1598-CA2E1EDC",
+          "bIsRootWidget": false
+        }
+      ],
+      "DisplayLabel": "FullHeroCatAgileAnim",
+      "CompiledData": {
+        "ObjectName": "MovieSceneCompiledData'HeroCatAgileWidget_C:FullHeroCatAgileAnim_INST.CompiledData'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.51"
+      },
+      "Signature": "4032ED16-44C19EAF-D6AF80A1-816CC15C"
+    }
+  },
+  {
+    "Type": "WidgetAnimation",
+    "Name": "StopHeroCatAgileAnim_INST",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetAnimation'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'HeroCatAgileWidget_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.3"
+    },
+    "Properties": {
+      "MovieScene": {
+        "ObjectName": "MovieScene'HeroCatAgileWidget_C:StopHeroCatAgileAnim_INST.StopHeroCatAgileAnim'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.24"
+      },
+      "AnimationBindings": [
+        {
+          "WidgetName": "zhua",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "2BCB69D4-44754256-CB749FAF-14B46E14",
+          "bIsRootWidget": false
+        },
+        {
+          "WidgetName": "FxPanel01",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "DB07655F-48D3322B-764738A8-E2FE1B17",
+          "bIsRootWidget": false
+        },
+        {
+          "WidgetName": "UIParticleEmitter",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "33BBC41B-4C2F89E7-4B4461BD-775F0352",
+          "bIsRootWidget": false
+        }
+      ],
+      "DisplayLabel": "StopHeroCatAgileAnim",
+      "CompiledData": {
+        "ObjectName": "MovieSceneCompiledData'HeroCatAgileWidget_C:StopHeroCatAgileAnim_INST.CompiledData'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.52"
+      },
+      "Signature": "6231F974-45F8942C-3A165DB4-3CDCCFEC"
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetTree'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'HeroCatAgileWidget_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.3"
+    },
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "CanvasPanel'HeroCatAgileWidget_C:WidgetTree.CanvasPanel_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCatAgileWidget.5"
+      }
+    }
+  }
+]

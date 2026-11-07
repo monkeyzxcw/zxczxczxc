@@ -1,0 +1,3322 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_HeroCarinoSpecial2Widget",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'HeroCarinoSpecial2Widget_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.24"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "K2Node_Event_loadedAmmoLogic",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ConstParm | ReferenceParm",
+        "Inner": {
+          "Type": "IntProperty",
+          "Name": "K2Node_Event_loadedAmmoLogic",
+          "Flags": "RF_Public",
+          "ElementSize": 4
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "K2Node_Event_ConsumeNum",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "K2Node_Event_ammoSlot",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_Event_IsReloading",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_Event_progress",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "K2Node_Event_size",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "SyncLoadedAmmo",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'HeroCarinoSpecial2Widget_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.24"
+    },
+    "SuperStruct": {
+      "ObjectName": "Function'EHeroCharacterReloadAmmoWidget:SyncLoadedAmmo'",
+      "ObjectPath": "/Script/UE_game"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ArrayProperty",
+        "Name": "loadedAmmoLogic",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm | OutParm | ReferenceParm",
+        "Inner": {
+          "Type": "IntProperty",
+          "Name": "loadedAmmoLogic",
+          "Flags": "RF_Public",
+          "ElementSize": 4
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "UpdateAmmoSize",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'HeroCarinoSpecial2Widget_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.24"
+    },
+    "SuperStruct": {
+      "ObjectName": "Function'EHeroCharacterReloadAmmoWidget:UpdateAmmoSize'",
+      "ObjectPath": "/Script/UE_game"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "size",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnInitialized",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'HeroCarinoSpecial2Widget_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.24"
+    },
+    "SuperStruct": {
+      "ObjectName": "Function'UserWidget:OnInitialized'",
+      "ObjectPath": "/Script/UMG"
+    },
+    "FunctionFlags": "FUNC_BlueprintCosmetic | FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EmptyShot",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'HeroCarinoSpecial2Widget_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.24"
+    },
+    "SuperStruct": {
+      "ObjectName": "Function'EHeroCharacterReloadAmmoWidget:EmptyShot'",
+      "ObjectPath": "/Script/UE_game"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EmptyAmmo",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'HeroCarinoSpecial2Widget_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.24"
+    },
+    "SuperStruct": {
+      "ObjectName": "Function'EHeroCharacterReloadAmmoWidget:EmptyAmmo'",
+      "ObjectPath": "/Script/UE_game"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "LoadingProgress",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'HeroCarinoSpecial2Widget_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.24"
+    },
+    "SuperStruct": {
+      "ObjectName": "Function'EHeroCharacterReloadAmmoWidget:LoadingProgress'",
+      "ObjectPath": "/Script/UE_game"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "IsReloading",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "progress",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "LoadedAmmo",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'HeroCarinoSpecial2Widget_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.24"
+    },
+    "SuperStruct": {
+      "ObjectName": "Function'EHeroCharacterReloadAmmoWidget:LoadedAmmo'",
+      "ObjectPath": "/Script/UE_game"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "ammoSlot",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ConsumeAmmo",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'HeroCarinoSpecial2Widget_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.24"
+    },
+    "SuperStruct": {
+      "ObjectName": "Function'EHeroCharacterReloadAmmoWidget:ConsumeAmmo'",
+      "ObjectPath": "/Script/UE_game"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "ConsumeNum",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "CdProgress",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'HeroCarinoSpecial2Widget_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.24"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "IsReloading",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "Progress",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "CallFunc_GetVisibility_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Enum'ESlateVisibility'",
+          "ObjectPath": "/Script/UMG"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_ByteByte_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_BoolBool_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnUpdateMagazineSize",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'HeroCarinoSpecial2Widget_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.24"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "Size",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "lastIdx",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "___int_Loop_Counter_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Add_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "___int_Array_Index_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Add_IntInt_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Less_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "___int_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_LastIndex_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Length_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Subtract_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_LessEqual_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Add_IntInt_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Less_IntInt_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Array_Get_Item",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'HeroReloadBulletWidget_C'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroReloadBulletWidget.15"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Length_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Less_IntInt_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_BooleanAND_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnInitialization",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'HeroCarinoSpecial2Widget_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.24"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "___int_Array_Index_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "___int_Loop_Counter_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Add_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Add_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Array_Get_Item",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'HeroReloadBulletWidget_C'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroReloadBulletWidget.15"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Length_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Less_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Add_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Add_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Add_ReturnValue_3",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Add_ReturnValue_4",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Add_ReturnValue_5",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnConsumeAmmo",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'HeroCarinoSpecial2Widget_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.24"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "ConsumeNum",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnLoadedAmmo",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'HeroCarinoSpecial2Widget_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.24"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "AmmoSlot",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "ReloadSucAudioName",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "CallFunc_Conv_StringToName_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Instance_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'AudioMgr'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_PlayEffect_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnEmptyAllBullet",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'HeroCarinoSpecial2Widget_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.24"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "___int_Array_Index_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "___int_Loop_Counter_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Add_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Less_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Array_Get_Item",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'HeroReloadBulletWidget_C'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroReloadBulletWidget.15"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Length_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Less_IntInt_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnResetAllBullet",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'HeroCarinoSpecial2Widget_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.24"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "___int_Array_Index_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "___int_Loop_Counter_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Add_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Array_Get_Item",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'HeroReloadBulletWidget_C'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroReloadBulletWidget.15"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Get_Item_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Length_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Less_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnEmptyShot",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'HeroCarinoSpecial2Widget_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.24"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "___int_Array_Index_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "___int_Loop_Counter_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Add_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Less_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Array_Get_Item",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'HeroReloadBulletWidget_C'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroReloadBulletWidget.15"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Length_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Less_IntInt_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "AddBulletToArray",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'HeroCarinoSpecial2Widget_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.24"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "AmmoSlot",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Add_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_GreaterEqual_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "PlayReloadAnim",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'HeroCarinoSpecial2Widget_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.24"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "PlayOrStop",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_LastIndex_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Max_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Array_Get_Item",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'HeroReloadBulletWidget_C'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroReloadBulletWidget.15"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_PlayAnimation_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'UMGSequencePlayer'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "PlayConsumeAnim",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'HeroCarinoSpecial2Widget_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.24"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "ConsumNum",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "LackbulletAudioName",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Subtract_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "___int_Array_Index_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "___int_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Add_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "___int_Loop_Counter_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "CallFunc_Conv_StringToName_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Add_IntInt_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "___int_Variable_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_LessEqual_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Instance_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'AudioMgr'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_PlayEffect_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Less_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Array_Get_Item",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'HeroReloadBulletWidget_C'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroReloadBulletWidget.15"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Array_Get_Item_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'HeroReloadBulletWidget_C'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroReloadBulletWidget.15"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Length_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Less_IntInt_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Length_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_SwitchInteger_CmpSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Array_Get_Item_2",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'HeroReloadBulletWidget_C'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroReloadBulletWidget.15"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "RemveBullet",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'HeroCarinoSpecial2Widget_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.24"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "Num",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "LoopCnt",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "___int_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Subtract_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "___int_Variable_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_LessEqual_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Add_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Length_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Greater_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "CheckBulletNum",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'HeroCarinoSpecial2Widget_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.24"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Array_Get_Item",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'HeroReloadBulletWidget_C'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroReloadBulletWidget.15"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Length_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "SetExtraAmmoNum",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'HeroCarinoSpecial2Widget_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.24"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "extraBulletNum",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Greater_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Length_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "CallFunc_Conv_IntToText_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Subtract_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Clamp_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_NotEqual_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "DoSyncLoadedAmmo",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'HeroCarinoSpecial2Widget_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.24"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ArrayProperty",
+        "Name": "LoadedAmmoLogic",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm | OutParm | ReferenceParm",
+        "Inner": {
+          "Type": "IntProperty",
+          "Name": "LoadedAmmoLogic",
+          "Flags": "RF_Public",
+          "ElementSize": 4
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Array_Identical_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "HeroCarinoSpecial2Widget_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Package": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'HeroCarinoSpecial2Widget_C:WidgetTree'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.64"
+      },
+      "bClassRequiresNativeTick": true,
+      "Animations": [
+        {
+          "ObjectName": "WidgetAnimation'HeroCarinoSpecial2Widget_C:ClickReloadAnim_INST'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.63"
+        }
+      ],
+      "UberGraphFunction": {
+        "ObjectName": "Function'HeroCarinoSpecial2Widget_C:ExecuteUbergraph_HeroCarinoSpecial2Widget'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'EHeroCharacterReloadAmmoWidget'",
+      "ObjectPath": "/Script/UE_game"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'HeroCarinoSpecial2Widget_C:DoSyncLoadedAmmo'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.23"
+      },
+      {
+        "ObjectName": "Function'HeroCarinoSpecial2Widget_C:SetExtraAmmoNum'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.22"
+      },
+      {
+        "ObjectName": "Function'HeroCarinoSpecial2Widget_C:CheckBulletNum'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.21"
+      },
+      {
+        "ObjectName": "Function'HeroCarinoSpecial2Widget_C:RemveBullet'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.20"
+      },
+      {
+        "ObjectName": "Function'HeroCarinoSpecial2Widget_C:PlayConsumeAnim'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.19"
+      },
+      {
+        "ObjectName": "Function'HeroCarinoSpecial2Widget_C:PlayReloadAnim'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.18"
+      },
+      {
+        "ObjectName": "Function'HeroCarinoSpecial2Widget_C:AddBulletToArray'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.17"
+      },
+      {
+        "ObjectName": "Function'HeroCarinoSpecial2Widget_C:OnEmptyShot'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.16"
+      },
+      {
+        "ObjectName": "Function'HeroCarinoSpecial2Widget_C:OnResetAllBullet'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.15"
+      },
+      {
+        "ObjectName": "Function'HeroCarinoSpecial2Widget_C:OnEmptyAllBullet'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.14"
+      },
+      {
+        "ObjectName": "Function'HeroCarinoSpecial2Widget_C:OnLoadedAmmo'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.13"
+      },
+      {
+        "ObjectName": "Function'HeroCarinoSpecial2Widget_C:OnConsumeAmmo'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.12"
+      },
+      {
+        "ObjectName": "Function'HeroCarinoSpecial2Widget_C:OnInitialization'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.11"
+      },
+      {
+        "ObjectName": "Function'HeroCarinoSpecial2Widget_C:OnUpdateMagazineSize'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.10"
+      },
+      {
+        "ObjectName": "Function'HeroCarinoSpecial2Widget_C:CdProgress'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.9"
+      },
+      {
+        "ObjectName": "Function'HeroCarinoSpecial2Widget_C:ConsumeAmmo'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.8"
+      },
+      {
+        "ObjectName": "Function'HeroCarinoSpecial2Widget_C:LoadedAmmo'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.7"
+      },
+      {
+        "ObjectName": "Function'HeroCarinoSpecial2Widget_C:LoadingProgress'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.6"
+      },
+      {
+        "ObjectName": "Function'HeroCarinoSpecial2Widget_C:EmptyAmmo'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.5"
+      },
+      {
+        "ObjectName": "Function'HeroCarinoSpecial2Widget_C:EmptyShot'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.4"
+      },
+      {
+        "ObjectName": "Function'HeroCarinoSpecial2Widget_C:OnInitialized'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.3"
+      },
+      {
+        "ObjectName": "Function'HeroCarinoSpecial2Widget_C:UpdateAmmoSize'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.2"
+      },
+      {
+        "ObjectName": "Function'HeroCarinoSpecial2Widget_C:SyncLoadedAmmo'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.1"
+      },
+      {
+        "ObjectName": "Function'HeroCarinoSpecial2Widget_C:ExecuteUbergraph_HeroCarinoSpecial2Widget'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ClickReloadAnim",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Transient | RepSkip",
+        "PropertyClass": {
+          "ObjectName": "Class'WidgetAnimation'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ExtraAmmoNum",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UITextBlock'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ExtraAmmoPanel",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'CanvasPanel'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "LoadCdProgress",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'ProgressBar'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Slot1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'HeroReloadBulletWidget_C'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroReloadBulletWidget.15"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Slot2",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'HeroReloadBulletWidget_C'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroReloadBulletWidget.15"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Slot3",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'HeroReloadBulletWidget_C'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroReloadBulletWidget.15"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Slot4",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'HeroReloadBulletWidget_C'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroReloadBulletWidget.15"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Slot5",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'HeroReloadBulletWidget_C'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroReloadBulletWidget.15"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Slot6",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'HeroReloadBulletWidget_C'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroReloadBulletWidget.15"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "MagazineSize",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "SlotArray",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance | ContainsInstancedReference",
+        "Inner": {
+          "Type": "ObjectProperty",
+          "Name": "SlotArray",
+          "Flags": "RF_Public",
+          "ElementSize": 8,
+          "PropertyFlags": "InstancedReference",
+          "PropertyClass": {
+            "ObjectName": "WidgetBlueprintGeneratedClass'HeroReloadBulletWidget_C'",
+            "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroReloadBulletWidget.15"
+          }
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "LoadedBullet",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Inner": {
+          "Type": "IntProperty",
+          "Name": "LoadedBullet",
+          "Flags": "RF_Public",
+          "ElementSize": 4
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "ExtraAmmo",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Cfg_ForceUpdateTickLimit",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "ForceUpdateTickCounter",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_HeroCarinoSpecial2Widget": {
+        "ObjectName": "Function'HeroCarinoSpecial2Widget_C:ExecuteUbergraph_HeroCarinoSpecial2Widget'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.0"
+      },
+      "SyncLoadedAmmo": {
+        "ObjectName": "Function'HeroCarinoSpecial2Widget_C:SyncLoadedAmmo'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.1"
+      },
+      "UpdateAmmoSize": {
+        "ObjectName": "Function'HeroCarinoSpecial2Widget_C:UpdateAmmoSize'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.2"
+      },
+      "OnInitialized": {
+        "ObjectName": "Function'HeroCarinoSpecial2Widget_C:OnInitialized'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.3"
+      },
+      "EmptyShot": {
+        "ObjectName": "Function'HeroCarinoSpecial2Widget_C:EmptyShot'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.4"
+      },
+      "EmptyAmmo": {
+        "ObjectName": "Function'HeroCarinoSpecial2Widget_C:EmptyAmmo'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.5"
+      },
+      "LoadingProgress": {
+        "ObjectName": "Function'HeroCarinoSpecial2Widget_C:LoadingProgress'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.6"
+      },
+      "LoadedAmmo": {
+        "ObjectName": "Function'HeroCarinoSpecial2Widget_C:LoadedAmmo'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.7"
+      },
+      "ConsumeAmmo": {
+        "ObjectName": "Function'HeroCarinoSpecial2Widget_C:ConsumeAmmo'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.8"
+      },
+      "CdProgress": {
+        "ObjectName": "Function'HeroCarinoSpecial2Widget_C:CdProgress'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.9"
+      },
+      "OnUpdateMagazineSize": {
+        "ObjectName": "Function'HeroCarinoSpecial2Widget_C:OnUpdateMagazineSize'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.10"
+      },
+      "OnInitialization": {
+        "ObjectName": "Function'HeroCarinoSpecial2Widget_C:OnInitialization'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.11"
+      },
+      "OnConsumeAmmo": {
+        "ObjectName": "Function'HeroCarinoSpecial2Widget_C:OnConsumeAmmo'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.12"
+      },
+      "OnLoadedAmmo": {
+        "ObjectName": "Function'HeroCarinoSpecial2Widget_C:OnLoadedAmmo'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.13"
+      },
+      "OnEmptyAllBullet": {
+        "ObjectName": "Function'HeroCarinoSpecial2Widget_C:OnEmptyAllBullet'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.14"
+      },
+      "OnResetAllBullet": {
+        "ObjectName": "Function'HeroCarinoSpecial2Widget_C:OnResetAllBullet'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.15"
+      },
+      "OnEmptyShot": {
+        "ObjectName": "Function'HeroCarinoSpecial2Widget_C:OnEmptyShot'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.16"
+      },
+      "AddBulletToArray": {
+        "ObjectName": "Function'HeroCarinoSpecial2Widget_C:AddBulletToArray'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.17"
+      },
+      "PlayReloadAnim": {
+        "ObjectName": "Function'HeroCarinoSpecial2Widget_C:PlayReloadAnim'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.18"
+      },
+      "PlayConsumeAnim": {
+        "ObjectName": "Function'HeroCarinoSpecial2Widget_C:PlayConsumeAnim'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.19"
+      },
+      "RemveBullet": {
+        "ObjectName": "Function'HeroCarinoSpecial2Widget_C:RemveBullet'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.20"
+      },
+      "CheckBulletNum": {
+        "ObjectName": "Function'HeroCarinoSpecial2Widget_C:CheckBulletNum'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.21"
+      },
+      "SetExtraAmmoNum": {
+        "ObjectName": "Function'HeroCarinoSpecial2Widget_C:SetExtraAmmoNum'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.22"
+      },
+      "DoSyncLoadedAmmo": {
+        "ObjectName": "Function'HeroCarinoSpecial2Widget_C:DoSyncLoadedAmmo'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.23"
+      }
+    },
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "HeroCarinoSpecial2Widget_C'Default__HeroCarinoSpecial2Widget_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.25"
+    }
+  },
+  {
+    "Type": "HeroCarinoSpecial2Widget_C",
+    "Name": "Default__HeroCarinoSpecial2Widget_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.HeroCarinoSpecial2Widget_C'",
+    "Package": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget",
+    "Properties": {
+      "UberGraphFrame": {},
+      "MagazineSize": 6,
+      "Cfg_ForceUpdateTickLimit": 15,
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_Unclickable",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'HeroCarinoSpecial2Widget_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.64"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'HeroCarinoSpecial2Widget_C:WidgetTree.CanvasPanel_Unclickable.CanvasPanelSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.30"
+        }
+      ],
+      "Visibility": "ESlateVisibility::HitTestInvisible"
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "ExtraAmmoPanel",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'HeroCarinoSpecial2Widget_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.64"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'HeroCarinoSpecial2Widget_C:WidgetTree.ExtraAmmoPanel.CanvasPanelSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.31"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'HeroCarinoSpecial2Widget_C:WidgetTree.ExtraAmmoPanel.CanvasPanelSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.32"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'HeroCarinoSpecial2Widget_C:WidgetTree.Main.CanvasPanelSlot_4'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.36"
+      },
+      "bIsVariable": true,
+      "Visibility": "ESlateVisibility::Collapsed"
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "Main",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'HeroCarinoSpecial2Widget_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.64"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'HeroCarinoSpecial2Widget_C:WidgetTree.Main.CanvasPanelSlot_2'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.34"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'HeroCarinoSpecial2Widget_C:WidgetTree.Main.CanvasPanelSlot_5'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.37"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'HeroCarinoSpecial2Widget_C:WidgetTree.Main.CanvasPanelSlot_3'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.35"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'HeroCarinoSpecial2Widget_C:WidgetTree.Main.CanvasPanelSlot_15'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.33"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'HeroCarinoSpecial2Widget_C:WidgetTree.Main.CanvasPanelSlot_4'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.36"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'HeroCarinoSpecial2Widget_C:WidgetTree.CanvasPanel_Unclickable.CanvasPanelSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.30"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "SlotPanel",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'HeroCarinoSpecial2Widget_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.64"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'HeroCarinoSpecial2Widget_C:WidgetTree.SlotPanel.CanvasPanelSlot_11'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.38"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'HeroCarinoSpecial2Widget_C:WidgetTree.SlotPanel.CanvasPanelSlot_5'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.44"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'HeroCarinoSpecial2Widget_C:WidgetTree.SlotPanel.CanvasPanelSlot_46'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.40"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'HeroCarinoSpecial2Widget_C:WidgetTree.SlotPanel.CanvasPanelSlot_47'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.41"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'HeroCarinoSpecial2Widget_C:WidgetTree.SlotPanel.CanvasPanelSlot_48'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.42"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'HeroCarinoSpecial2Widget_C:WidgetTree.SlotPanel.CanvasPanelSlot_49'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.43"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'HeroCarinoSpecial2Widget_C:WidgetTree.SlotPanel.CanvasPanelSlot_39'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.39"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'HeroCarinoSpecial2Widget_C:WidgetTree.Main.CanvasPanelSlot_5'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.37"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'HeroCarinoSpecial2Widget_C:WidgetTree.CanvasPanel_Unclickable'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.26"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": -96.0,
+          "Top": -96.0,
+          "Right": 192.0,
+          "Bottom": 192.0
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'HeroCarinoSpecial2Widget_C:WidgetTree.CanvasPanel_Unclickable'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.26"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'HeroCarinoSpecial2Widget_C:WidgetTree.Main'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.28"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'HeroCarinoSpecial2Widget_C:WidgetTree.ExtraAmmoPanel'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.27"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 192.0,
+          "Bottom": 76.799995
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'HeroCarinoSpecial2Widget_C:WidgetTree.ExtraAmmoPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.27"
+      },
+      "Content": {
+        "ObjectName": "UIImage'HeroCarinoSpecial2Widget_C:WidgetTree.MoreAmmoBg'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.58"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'HeroCarinoSpecial2Widget_C:WidgetTree.ExtraAmmoPanel'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.27"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 49.92,
+          "Bottom": 49.92
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'HeroCarinoSpecial2Widget_C:WidgetTree.ExtraAmmoPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.27"
+      },
+      "Content": {
+        "ObjectName": "UITextBlock'HeroCarinoSpecial2Widget_C:WidgetTree.ExtraAmmoNum'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.62"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_15",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'HeroCarinoSpecial2Widget_C:WidgetTree.Main'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.28"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": -194.72263,
+          "Right": 192.0,
+          "Bottom": 57.6
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'HeroCarinoSpecial2Widget_C:WidgetTree.Main'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.28"
+      },
+      "Content": {
+        "ObjectName": "UIImage'HeroCarinoSpecial2Widget_C:WidgetTree.RevolverBg_Fx'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.61"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'HeroCarinoSpecial2Widget_C:WidgetTree.Main'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.28"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 192.0,
+          "Bottom": 192.0
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'HeroCarinoSpecial2Widget_C:WidgetTree.Main'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.28"
+      },
+      "Content": {
+        "ObjectName": "UIImage'HeroCarinoSpecial2Widget_C:WidgetTree.PaddingImg'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.59"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'HeroCarinoSpecial2Widget_C:WidgetTree.Main'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.28"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 113.6679,
+          "Right": 38.399998,
+          "Bottom": 138.23999
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 1.0,
+          "Y": 0.5
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'HeroCarinoSpecial2Widget_C:WidgetTree.Main'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.28"
+      },
+      "Content": {
+        "ObjectName": "ProgressBar'HeroCarinoSpecial2Widget_C:WidgetTree.LoadCdProgress'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.57"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_4",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'HeroCarinoSpecial2Widget_C:WidgetTree.Main'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.28"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "Anchors": {
+          "Maximum": {
+            "X": 1.0,
+            "Y": 1.0
+          }
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'HeroCarinoSpecial2Widget_C:WidgetTree.Main'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.28"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'HeroCarinoSpecial2Widget_C:WidgetTree.ExtraAmmoPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.27"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_5",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'HeroCarinoSpecial2Widget_C:WidgetTree.Main'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.28"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 192.0,
+          "Bottom": 192.0
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'HeroCarinoSpecial2Widget_C:WidgetTree.Main'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.28"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'HeroCarinoSpecial2Widget_C:WidgetTree.SlotPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.29"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_11",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'HeroCarinoSpecial2Widget_C:WidgetTree.SlotPanel'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.29"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 192.0,
+          "Bottom": 192.0
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'HeroCarinoSpecial2Widget_C:WidgetTree.SlotPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.29"
+      },
+      "Content": {
+        "ObjectName": "UIImage'HeroCarinoSpecial2Widget_C:WidgetTree.RevolverBg'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.60"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_39",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'HeroCarinoSpecial2Widget_C:WidgetTree.SlotPanel'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.29"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 38.399998,
+          "Bottom": 38.399998
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'HeroCarinoSpecial2Widget_C:WidgetTree.SlotPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.29"
+      },
+      "Content": {
+        "ObjectName": "HeroReloadBulletWidget_C'HeroCarinoSpecial2Widget_C:WidgetTree.Slot6'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.50"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_46",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'HeroCarinoSpecial2Widget_C:WidgetTree.SlotPanel'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.29"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 38.399998,
+          "Bottom": 38.399998
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'HeroCarinoSpecial2Widget_C:WidgetTree.SlotPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.29"
+      },
+      "Content": {
+        "ObjectName": "HeroReloadBulletWidget_C'HeroCarinoSpecial2Widget_C:WidgetTree.Slot2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.46"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_47",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'HeroCarinoSpecial2Widget_C:WidgetTree.SlotPanel'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.29"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 38.399998,
+          "Bottom": 38.399998
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'HeroCarinoSpecial2Widget_C:WidgetTree.SlotPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.29"
+      },
+      "Content": {
+        "ObjectName": "HeroReloadBulletWidget_C'HeroCarinoSpecial2Widget_C:WidgetTree.Slot3'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.47"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_48",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'HeroCarinoSpecial2Widget_C:WidgetTree.SlotPanel'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.29"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 38.399998,
+          "Bottom": 38.399998
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'HeroCarinoSpecial2Widget_C:WidgetTree.SlotPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.29"
+      },
+      "Content": {
+        "ObjectName": "HeroReloadBulletWidget_C'HeroCarinoSpecial2Widget_C:WidgetTree.Slot4'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.48"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_49",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'HeroCarinoSpecial2Widget_C:WidgetTree.SlotPanel'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.29"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 38.399998,
+          "Bottom": 38.399998
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'HeroCarinoSpecial2Widget_C:WidgetTree.SlotPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.29"
+      },
+      "Content": {
+        "ObjectName": "HeroReloadBulletWidget_C'HeroCarinoSpecial2Widget_C:WidgetTree.Slot5'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.49"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_5",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'HeroCarinoSpecial2Widget_C:WidgetTree.SlotPanel'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.29"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 38.399998,
+          "Bottom": 38.399998
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'HeroCarinoSpecial2Widget_C:WidgetTree.SlotPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.29"
+      },
+      "Content": {
+        "ObjectName": "HeroReloadBulletWidget_C'HeroCarinoSpecial2Widget_C:WidgetTree.Slot1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.45"
+      }
+    }
+  },
+  {
+    "Type": "HeroReloadBulletWidget_C",
+    "Name": "Slot1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'UE_game/Content/BluePrint/UI/HeroCharacter/HeroReloadBulletWidget.HeroReloadBulletWidget_C'",
+    "Outer": {
+      "ObjectName": "WidgetTree'HeroCarinoSpecial2Widget_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.64"
+    },
+    "Template": {
+      "ObjectName": "HeroReloadBulletWidget_C'Default__HeroReloadBulletWidget_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroReloadBulletWidget.16"
+    },
+    "Properties": {
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'HeroCarinoSpecial2Widget_C:WidgetTree.SlotPanel.CanvasPanelSlot_5'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.44"
+      },
+      "RenderTransform": {
+        "Translation": {
+          "X": 32.831993,
+          "Y": 13.823999
+        },
+        "Angle": -51.0
+      }
+    }
+  },
+  {
+    "Type": "HeroReloadBulletWidget_C",
+    "Name": "Slot2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'UE_game/Content/BluePrint/UI/HeroCharacter/HeroReloadBulletWidget.HeroReloadBulletWidget_C'",
+    "Outer": {
+      "ObjectName": "WidgetTree'HeroCarinoSpecial2Widget_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.64"
+    },
+    "Template": {
+      "ObjectName": "HeroReloadBulletWidget_C'Default__HeroReloadBulletWidget_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroReloadBulletWidget.16"
+    },
+    "Properties": {
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'HeroCarinoSpecial2Widget_C:WidgetTree.SlotPanel.CanvasPanelSlot_46'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.40"
+      },
+      "RenderTransform": {
+        "Translation": {
+          "X": -70.079994,
+          "Y": 10.751999
+        },
+        "Angle": -120.0
+      }
+    }
+  },
+  {
+    "Type": "HeroReloadBulletWidget_C",
+    "Name": "Slot3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'UE_game/Content/BluePrint/UI/HeroCharacter/HeroReloadBulletWidget.HeroReloadBulletWidget_C'",
+    "Outer": {
+      "ObjectName": "WidgetTree'HeroCarinoSpecial2Widget_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.64"
+    },
+    "Template": {
+      "ObjectName": "HeroReloadBulletWidget_C'Default__HeroReloadBulletWidget_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroReloadBulletWidget.16"
+    },
+    "Properties": {
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'HeroCarinoSpecial2Widget_C:WidgetTree.SlotPanel.CanvasPanelSlot_47'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.41"
+      },
+      "RenderTransform": {
+        "Translation": {
+          "X": -19.199999,
+          "Y": -76.799995
+        }
+      }
+    }
+  },
+  {
+    "Type": "HeroReloadBulletWidget_C",
+    "Name": "Slot4",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'UE_game/Content/BluePrint/UI/HeroCharacter/HeroReloadBulletWidget.HeroReloadBulletWidget_C'",
+    "Outer": {
+      "ObjectName": "WidgetTree'HeroCarinoSpecial2Widget_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.64"
+    },
+    "Template": {
+      "ObjectName": "HeroReloadBulletWidget_C'Default__HeroReloadBulletWidget_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroReloadBulletWidget.16"
+    },
+    "Properties": {
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'HeroCarinoSpecial2Widget_C:WidgetTree.SlotPanel.CanvasPanelSlot_48'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.42"
+      },
+      "RenderTransform": {
+        "Translation": {
+          "X": -19.199999,
+          "Y": 38.399998
+        },
+        "Angle": 180.0
+      }
+    }
+  },
+  {
+    "Type": "HeroReloadBulletWidget_C",
+    "Name": "Slot5",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'UE_game/Content/BluePrint/UI/HeroCharacter/HeroReloadBulletWidget.HeroReloadBulletWidget_C'",
+    "Outer": {
+      "ObjectName": "WidgetTree'HeroCarinoSpecial2Widget_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.64"
+    },
+    "Template": {
+      "ObjectName": "HeroReloadBulletWidget_C'Default__HeroReloadBulletWidget_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroReloadBulletWidget.16"
+    },
+    "Properties": {
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'HeroCarinoSpecial2Widget_C:WidgetTree.SlotPanel.CanvasPanelSlot_49'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.43"
+      },
+      "RenderTransform": {
+        "Translation": {
+          "X": 32.06399,
+          "Y": -47.039997
+        },
+        "Angle": 60.0
+      }
+    }
+  },
+  {
+    "Type": "HeroReloadBulletWidget_C",
+    "Name": "Slot6",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'UE_game/Content/BluePrint/UI/HeroCharacter/HeroReloadBulletWidget.HeroReloadBulletWidget_C'",
+    "Outer": {
+      "ObjectName": "WidgetTree'HeroCarinoSpecial2Widget_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.64"
+    },
+    "Template": {
+      "ObjectName": "HeroReloadBulletWidget_C'Default__HeroReloadBulletWidget_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroReloadBulletWidget.16"
+    },
+    "Properties": {
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'HeroCarinoSpecial2Widget_C:WidgetTree.SlotPanel.CanvasPanelSlot_39'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.39"
+      },
+      "RenderTransform": {
+        "Translation": {
+          "X": -70.079994,
+          "Y": -47.039997
+        },
+        "Angle": -60.0
+      }
+    }
+  },
+  {
+    "Type": "MovieScene",
+    "Name": "ClickReloadAnim",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene'",
+    "Outer": {
+      "ObjectName": "WidgetAnimation'HeroCarinoSpecial2Widget_C:ClickReloadAnim_INST'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.63"
+    },
+    "Properties": {
+      "Possessables": [
+        {
+          "Tags": [],
+          "Guid": "44177B7A-455A8AFE-DC96B280-4AF16408",
+          "Name": "RevolverBg_Fx",
+          "PossessedObjectClass": {
+            "ObjectName": "Class'UIImage'",
+            "ObjectPath": "/Script/UE_game"
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        }
+      ],
+      "ObjectBindings": [
+        {
+          "ObjectGuid": "44177B7A-455A8AFE-DC96B280-4AF16408",
+          "BindingName": "RevolverBg_Fx",
+          "Tracks": [
+            {
+              "ObjectName": "MovieSceneFloatTrack'HeroCarinoSpecial2Widget_C:ClickReloadAnim_INST.ClickReloadAnim.MovieSceneFloatTrack_0'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.56"
+            }
+          ]
+        }
+      ],
+      "PlaybackRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 20000
+            }
+          }
+        }
+      },
+      "DisplayRate": {
+        "Numerator": 30
+      },
+      "Signature": "5400DFAA-4EAB862D-A11AEDBA-B778D0AB"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatSection'HeroCarinoSpecial2Widget_C:ClickReloadAnim_INST.ClickReloadAnim.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.55"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatSection'HeroCarinoSpecial2Widget_C:ClickReloadAnim_INST.ClickReloadAnim.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.55"
+    }
+  },
+  {
+    "Type": "MovieSceneCompiledData",
+    "Name": "CompiledData",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneCompiledData'",
+    "Outer": {
+      "ObjectName": "WidgetAnimation'HeroCarinoSpecial2Widget_C:ClickReloadAnim_INST'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.63"
+    },
+    "Properties": {
+      "EntityComponentField": {
+        "PersistentEntityTree": {
+          "SerializedData": {
+            "Data": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 1,
+                  "Capacity": 1
+                }
+              ],
+              "Items": [
+                {
+                  "EntityIndex": 0,
+                  "MetaDataIndex": -1
+                }
+              ]
+            },
+            "RootNode": {
+              "Range": {
+                "LowerBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                },
+                "UpperBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                }
+              },
+              "Parent": {
+                "ChildrenHandle": {
+                  "EntryIndex": -1
+                },
+                "Index": -1
+              },
+              "ChildrenID": {
+                "EntryIndex": 0
+              },
+              "DataID": {
+                "EntryIndex": -1
+              }
+            },
+            "ChildNodes": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 1,
+                  "Capacity": 1
+                }
+              ],
+              "Items": [
+                {
+                  "Range": {
+                    "LowerBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 0
+                      }
+                    },
+                    "UpperBound": {
+                      "Type": 0,
+                      "Value": {
+                        "Value": 20000
+                      }
+                    }
+                  },
+                  "Parent": {
+                    "ChildrenHandle": {
+                      "EntryIndex": -1
+                    },
+                    "Index": 0
+                  },
+                  "ChildrenID": {
+                    "EntryIndex": -1
+                  },
+                  "DataID": {
+                    "EntryIndex": 0
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "Entities": [
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieSceneFloatSection'HeroCarinoSpecial2Widget_C:ClickReloadAnim_INST.ClickReloadAnim.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+                "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.55"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 0
+          }
+        ],
+        "SharedMetaData": [
+          {
+            "ObjectBindingID": "44177B7A-455A8AFE-DC96B280-4AF16408"
+          }
+        ]
+      },
+      "CompiledSignature": "D2C4A943-48DFF195-EC10A1B2-E7E7C248",
+      "CompilerVersion": "7D4B9809-2FAC4A6B-964ECF72-D8279EF8",
+      "AccumulatedMask": {
+        "bEntityComponentField": true
+      },
+      "AllocatedMask": {
+        "bEntityComponentField": true
+      }
+    }
+  },
+  {
+    "Type": "MovieSceneFloatSection",
+    "Name": "MovieSceneFloatSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneFloatSection'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatTrack'HeroCarinoSpecial2Widget_C:ClickReloadAnim_INST.ClickReloadAnim.MovieSceneFloatTrack_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.56"
+    },
+    "Properties": {
+      "FloatCurve": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 4000
+          },
+          {
+            "Value": 19999
+          },
+          {
+            "Value": 20000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0003814984,
+              "LeaveTangent": 0.0003814984,
+              "ArriveTangentWeight": 0.21336468,
+              "LeaveTangentWeight": 0.21336468,
+              "TangentWeightMode": 3
+            },
+            "InterpMode": 2,
+            "TangentMode": 1
+          },
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": -0.000109545945,
+              "LeaveTangent": -0.000109545945,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 1
+          },
+          {
+            "Value": 2.9E-05,
+            "Tangent": {
+              "ArriveTangent": -1.15552E-05,
+              "LeaveTangent": -1.15552E-05,
+              "ArriveTangentWeight": 0.15706597,
+              "LeaveTangentWeight": 0.15706597,
+              "TangentWeightMode": 3
+            },
+            "InterpMode": 2,
+            "TangentMode": 1
+          },
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": -2.9068176E-05,
+              "LeaveTangent": -2.9068176E-05,
+              "ArriveTangentWeight": 0.10315759,
+              "LeaveTangentWeight": 0.10315759,
+              "TangentWeightMode": 3
+            },
+            "InterpMode": 2,
+            "TangentMode": 1
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'HeroCarinoSpecial2Widget_C:ClickReloadAnim_INST.ClickReloadAnim.MovieSceneFloatTrack_0.MovieSceneFloatSection_0.EaseInFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.52"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'HeroCarinoSpecial2Widget_C:ClickReloadAnim_INST.ClickReloadAnim.MovieSceneFloatTrack_0.MovieSceneFloatSection_0.EaseOutFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.53"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 20000
+            }
+          }
+        }
+      },
+      "Signature": "801FC259-4A3D8F4E-F7921C99-89F2BBAB"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatTrack",
+    "Name": "MovieSceneFloatTrack_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneFloatTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'HeroCarinoSpecial2Widget_C:ClickReloadAnim_INST.ClickReloadAnim'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.51"
+    },
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderOpacity",
+        "PropertyPath": "RenderOpacity",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneFloatSection'HeroCarinoSpecial2Widget_C:ClickReloadAnim_INST.ClickReloadAnim.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.55"
+        }
+      ],
+      "EvaluationFieldGuid": "F8812F05-4F2B368B-FE334DA4-6142E773",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneFloatSection'HeroCarinoSpecial2Widget_C:ClickReloadAnim_INST.ClickReloadAnim.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.55"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Exclusive",
+                "Value": {
+                  "Value": 20000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "F8812F05-4F2B368B-FE334DA4-6142E773"
+    }
+  },
+  {
+    "Type": "ProgressBar",
+    "Name": "LoadCdProgress",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ProgressBar'",
+    "Outer": {
+      "ObjectName": "WidgetTree'HeroCarinoSpecial2Widget_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.64"
+    },
+    "Properties": {
+      "WidgetStyle": {
+        "BackgroundImage": {
+          "ImageSize": {
+            "X": 38.399998,
+            "Y": 138.23999
+          },
+          "ResourceObject": {
+            "ObjectName": "PaperSprite'UI_HeroCharacter_Carino_02_Sprite'",
+            "ObjectPath": "UE_game/Content/Art/UI/TexturesAtlas/HeroCharacter/AtlasCarino01/UI_HeroCharacter_Carino_02_Sprite.1"
+          }
+        },
+        "FillImage": {
+          "ImageSize": {
+            "X": 38.399998,
+            "Y": 138.23999
+          },
+          "ResourceObject": {
+            "ObjectName": "PaperSprite'UI_HeroCharacter_Carino_03_Sprite'",
+            "ObjectPath": "UE_game/Content/Art/UI/TexturesAtlas/HeroCharacter/AtlasCarino01/UI_HeroCharacter_Carino_03_Sprite.1"
+          }
+        },
+        "MarqueeImage": {
+          "ImageSize": {
+            "X": 38.399998,
+            "Y": 23.039999
+          },
+          "Tiling": "ESlateBrushTileType::NoTile"
+        }
+      },
+      "Percent": 0.561905,
+      "BarFillType": "EProgressBarFillType::BottomToTop",
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'HeroCarinoSpecial2Widget_C:WidgetTree.Main.CanvasPanelSlot_3'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.35"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "MoreAmmoBg",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'HeroCarinoSpecial2Widget_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.64"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/TexturesAtlas/HeroCharacter/AtlasCarino01/UI_HeroCharacter_Carino_04_Sprite.UI_HeroCharacter_Carino_04_Sprite",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 76.799995,
+          "Y": 76.799995
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'HeroCarinoSpecial2Widget_C:WidgetTree.ExtraAmmoPanel.CanvasPanelSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.31"
+      },
+      "bIsVariable": false,
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "PaddingImg",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'HeroCarinoSpecial2Widget_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.64"
+    },
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 61.44,
+          "Y": 61.44
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'HeroCarinoSpecial2Widget_C:WidgetTree.Main.CanvasPanelSlot_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.34"
+      },
+      "bIsVariable": false,
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible",
+      "RenderOpacity": 0.0
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "RevolverBg",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'HeroCarinoSpecial2Widget_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.64"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/TexturesAtlas/HeroCharacter/AtlasCarino02/UI_HeroCharacter_Carino02_01_Sprite.UI_HeroCharacter_Carino02_01_Sprite",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 215.04,
+          "Y": 215.04
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'HeroCarinoSpecial2Widget_C:WidgetTree.SlotPanel.CanvasPanelSlot_11'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.38"
+      },
+      "bIsVariable": false,
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "RevolverBg_Fx",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'HeroCarinoSpecial2Widget_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.64"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/UIEffect/UIMaterial/Inst/HeroCharacter/Reload/UI_MI_Fight_00BGbullet1_Fx01.UI_MI_Fight_00BGbullet1_Fx01",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 161.28,
+          "Y": 161.28
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'HeroCarinoSpecial2Widget_C:WidgetTree.Main.CanvasPanelSlot_15'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.33"
+      },
+      "bIsVariable": false,
+      "Visibility": "ESlateVisibility::Collapsed",
+      "RenderOpacity": 0.0
+    }
+  },
+  {
+    "Type": "UITextBlock",
+    "Name": "ExtraAmmoNum",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UITextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'HeroCarinoSpecial2Widget_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.64"
+    },
+    "Properties": {
+      "CurrStyleId": 2507,
+      "Text": {
+        "Namespace": "",
+        "Key": "0CFBB1134350CDCE62B14AA55455BF97",
+        "SourceString": "8",
+        "LocalizedString": "8"
+      },
+      "Justification": "ETextJustify::Center",
+      "VerticalJustification": "ETextVerticalJustify::Center",
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'HeroCarinoSpecial2Widget_C:WidgetTree.ExtraAmmoPanel.CanvasPanelSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.32"
+      },
+      "RenderTransform": {
+        "Translation": {
+          "X": 0.0,
+          "Y": 1.92
+        }
+      },
+      "bIsVariable": true,
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "WidgetAnimation",
+    "Name": "ClickReloadAnim_INST",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetAnimation'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'HeroCarinoSpecial2Widget_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.24"
+    },
+    "Properties": {
+      "MovieScene": {
+        "ObjectName": "MovieScene'HeroCarinoSpecial2Widget_C:ClickReloadAnim_INST.ClickReloadAnim'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.51"
+      },
+      "AnimationBindings": [
+        {
+          "WidgetName": "RevolverBg_Fx",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "44177B7A-455A8AFE-DC96B280-4AF16408",
+          "bIsRootWidget": false
+        }
+      ],
+      "DisplayLabel": "ClickReloadAnim",
+      "CompiledData": {
+        "ObjectName": "MovieSceneCompiledData'HeroCarinoSpecial2Widget_C:ClickReloadAnim_INST.CompiledData'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.54"
+      },
+      "Signature": "D2C4A943-48DFF195-EC10A1B2-E7E7C248"
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetTree'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'HeroCarinoSpecial2Widget_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.24"
+    },
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "CanvasPanel'HeroCarinoSpecial2Widget_C:WidgetTree.CanvasPanel_Unclickable'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroCarinoSpecial2Widget.26"
+      }
+    }
+  }
+]

@@ -1,0 +1,94 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "NewBehaviorTree",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BehaviorTree'",
+    "Package": "UE_game/Content/BluePrint/NewBehaviorTree",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Selector'NewBehaviorTree:BTComposite_Selector_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/NewBehaviorTree.1"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Outer": {
+      "ObjectName": "BehaviorTree'NewBehaviorTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/NewBehaviorTree.0"
+    },
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_SimpleParallel'NewBehaviorTree:BTComposite_SimpleParallel_1'",
+            "ObjectPath": "UE_game/Content/BluePrint/NewBehaviorTree.2"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'NewBehaviorTree'",
+        "ObjectPath": "UE_game/Content/BluePrint/NewBehaviorTree.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_SimpleParallel",
+    "Name": "BTComposite_SimpleParallel_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BTComposite_SimpleParallel'",
+    "Outer": {
+      "ObjectName": "BehaviorTree'NewBehaviorTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/NewBehaviorTree.0"
+    },
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'NewBehaviorTree:BTTask_Wait_1'",
+            "ObjectPath": "UE_game/Content/BluePrint/NewBehaviorTree.3"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'NewBehaviorTree'",
+        "ObjectPath": "UE_game/Content/BluePrint/NewBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'NewBehaviorTree:BTComposite_Selector_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/NewBehaviorTree.1"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Outer": {
+      "ObjectName": "BehaviorTree'NewBehaviorTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/NewBehaviorTree.0"
+    },
+    "Properties": {
+      "WaitTime": 60.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'NewBehaviorTree'",
+        "ObjectPath": "UE_game/Content/BluePrint/NewBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_SimpleParallel'NewBehaviorTree:BTComposite_SimpleParallel_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/NewBehaviorTree.2"
+      }
+    }
+  }
+]

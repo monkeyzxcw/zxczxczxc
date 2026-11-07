@@ -1,0 +1,980 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_DropItem",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'DropItem_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Drop/DropItem.3"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Instance_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'LuaMgr'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "Function",
+    "Name": "BndEvt__TouchBtn_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'DropItem_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Drop/DropItem.3"
+    },
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "SetDropId",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'DropItem_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Drop/DropItem.3"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StrProperty",
+        "Name": "DropId",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Conv_StringToInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "DropItem_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Package": "UE_game/Content/BluePrint/UI/Drop/DropItem",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'DropItem_C:WidgetTree'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Drop/DropItem.27"
+      },
+      "bClassRequiresNativeTick": true,
+      "DynamicBindingObjects": [
+        {
+          "ObjectName": "ComponentDelegateBinding'DropItem_C:ComponentDelegateBinding_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Drop/DropItem.17"
+        }
+      ],
+      "UberGraphFunction": {
+        "ObjectName": "Function'DropItem_C:ExecuteUbergraph_DropItem'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Drop/DropItem.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'UIListViewItem'",
+      "ObjectPath": "/Script/UE_game"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'DropItem_C:SetDropId'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Drop/DropItem.2"
+      },
+      {
+        "ObjectName": "Function'DropItem_C:BndEvt__TouchBtn_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Drop/DropItem.1"
+      },
+      {
+        "ObjectName": "Function'DropItem_C:ExecuteUbergraph_DropItem'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Drop/DropItem.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "FrameBg",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "FrameIcon",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "FrameIconBg",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "FrameIconBorder",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "RootView",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'CanvasPanel'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "TouchBtn",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Button'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "DropId",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_DropItem": {
+        "ObjectName": "Function'DropItem_C:ExecuteUbergraph_DropItem'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Drop/DropItem.0"
+      },
+      "BndEvt__TouchBtn_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature": {
+        "ObjectName": "Function'DropItem_C:BndEvt__TouchBtn_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Drop/DropItem.1"
+      },
+      "SetDropId": {
+        "ObjectName": "Function'DropItem_C:SetDropId'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Drop/DropItem.2"
+      }
+    },
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "DropItem_C'Default__DropItem_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Drop/DropItem.4"
+    }
+  },
+  {
+    "Type": "DropItem_C",
+    "Name": "Default__DropItem_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'UE_game/Content/BluePrint/UI/Drop/DropItem.DropItem_C'",
+    "Package": "UE_game/Content/BluePrint/UI/Drop/DropItem",
+    "Properties": {
+      "UberGraphFrame": {},
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "Button",
+    "Name": "TouchBtn",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Button'",
+    "Outer": {
+      "ObjectName": "WidgetTree'DropItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Drop/DropItem.27"
+    },
+    "Properties": {
+      "WidgetStyle": {
+        "Normal": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 1.0,
+              "G": 1.0,
+              "B": 1.0,
+              "A": 0.0,
+              "Hex": "FFFFFF"
+            }
+          }
+        },
+        "Hovered": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 1.0,
+              "G": 1.0,
+              "B": 1.0,
+              "A": 0.0,
+              "Hex": "FFFFFF"
+            }
+          }
+        },
+        "Pressed": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 1.0,
+              "G": 1.0,
+              "B": 1.0,
+              "A": 0.0,
+              "Hex": "FFFFFF"
+            }
+          }
+        }
+      },
+      "ClickMethod": "EButtonClickMethod::PreciseClick",
+      "TouchMethod": "EButtonTouchMethod::PreciseTap",
+      "IsFocusable": false,
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'DropItem_C:WidgetTree.RootView.CanvasPanelSlot_7'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Drop/DropItem.13"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "FrameIconPanel",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'DropItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Drop/DropItem.27"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'DropItem_C:WidgetTree.FrameIconPanel.CanvasPanelSlot_3'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Drop/DropItem.10"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'DropItem_C:WidgetTree.FrameIconPanel.CanvasPanelSlot_4'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Drop/DropItem.11"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'DropItem_C:WidgetTree.FrameIconPanel.CanvasPanelSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Drop/DropItem.9"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'DropItem_C:WidgetTree.HorizontalBox_0.HorizontalBoxSlot_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Drop/DropItem.20"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "RootView",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'DropItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Drop/DropItem.27"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'DropItem_C:WidgetTree.RootView.CanvasPanelSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Drop/DropItem.12"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'DropItem_C:WidgetTree.RootView.CanvasPanelSlot_7'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Drop/DropItem.13"
+        }
+      ],
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "RootView1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'DropItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Drop/DropItem.27"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'DropItem_C:WidgetTree.RootView1.CanvasPanelSlot_4'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Drop/DropItem.16"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'DropItem_C:WidgetTree.RootView1.CanvasPanelSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Drop/DropItem.14"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'DropItem_C:WidgetTree.RootView1.CanvasPanelSlot_2'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Drop/DropItem.15"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'DropItem_C:WidgetTree.RootView.CanvasPanelSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Drop/DropItem.12"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'DropItem_C:WidgetTree.FrameIconPanel'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Drop/DropItem.6"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 192.0,
+          "Bottom": 57.6
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'DropItem_C:WidgetTree.FrameIconPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Drop/DropItem.6"
+      },
+      "Content": {
+        "ObjectName": "UIImage'DropItem_C:WidgetTree.FrameIconBorder'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Drop/DropItem.25"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'DropItem_C:WidgetTree.FrameIconPanel'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Drop/DropItem.6"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 192.0,
+          "Bottom": 57.6
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'DropItem_C:WidgetTree.FrameIconPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Drop/DropItem.6"
+      },
+      "Content": {
+        "ObjectName": "UIImage'DropItem_C:WidgetTree.FrameIconBg'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Drop/DropItem.24"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_4",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'DropItem_C:WidgetTree.FrameIconPanel'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Drop/DropItem.6"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 192.0,
+          "Bottom": 57.6
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'DropItem_C:WidgetTree.FrameIconPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Drop/DropItem.6"
+      },
+      "Content": {
+        "ObjectName": "UIImage'DropItem_C:WidgetTree.FrameIcon'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Drop/DropItem.23"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'DropItem_C:WidgetTree.RootView'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Drop/DropItem.7"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 255.36,
+          "Bottom": 76.799995
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 1.0,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 1.0,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 1.0,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'DropItem_C:WidgetTree.RootView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Drop/DropItem.7"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'DropItem_C:WidgetTree.RootView1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Drop/DropItem.8"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_7",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'DropItem_C:WidgetTree.RootView'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Drop/DropItem.7"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "Anchors": {
+          "Maximum": {
+            "X": 1.0,
+            "Y": 1.0
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "ZOrder": 10,
+      "Parent": {
+        "ObjectName": "CanvasPanel'DropItem_C:WidgetTree.RootView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Drop/DropItem.7"
+      },
+      "Content": {
+        "ObjectName": "Button'DropItem_C:WidgetTree.TouchBtn'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Drop/DropItem.5"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'DropItem_C:WidgetTree.RootView1'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Drop/DropItem.8"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "Anchors": {
+          "Maximum": {
+            "X": 1.0,
+            "Y": 1.0
+          }
+        }
+      },
+      "bAutoSize": true,
+      "ZOrder": 1,
+      "Parent": {
+        "ObjectName": "CanvasPanel'DropItem_C:WidgetTree.RootView1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Drop/DropItem.8"
+      },
+      "Content": {
+        "ObjectName": "UIImage'DropItem_C:WidgetTree.FrameBorder'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Drop/DropItem.22"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'DropItem_C:WidgetTree.RootView1'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Drop/DropItem.8"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "Anchors": {
+          "Maximum": {
+            "X": 1.0,
+            "Y": 1.0
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "ZOrder": 3,
+      "Parent": {
+        "ObjectName": "CanvasPanel'DropItem_C:WidgetTree.RootView1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Drop/DropItem.8"
+      },
+      "Content": {
+        "ObjectName": "HorizontalBox'DropItem_C:WidgetTree.HorizontalBox_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Drop/DropItem.18"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_4",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'DropItem_C:WidgetTree.RootView1'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Drop/DropItem.8"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "Anchors": {
+          "Maximum": {
+            "X": 1.0,
+            "Y": 1.0
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'DropItem_C:WidgetTree.RootView1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Drop/DropItem.8"
+      },
+      "Content": {
+        "ObjectName": "UIImage'DropItem_C:WidgetTree.FrameBg'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Drop/DropItem.21"
+      }
+    }
+  },
+  {
+    "Type": "ComponentDelegateBinding",
+    "Name": "ComponentDelegateBinding_0",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ComponentDelegateBinding'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'DropItem_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Drop/DropItem.3"
+    },
+    "Properties": {
+      "ComponentDelegateBindings": [
+        {
+          "ComponentPropertyName": "TouchBtn",
+          "DelegatePropertyName": "OnClicked",
+          "FunctionNameToBind": "BndEvt__TouchBtn_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "HorizontalBox_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'DropItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Drop/DropItem.27"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HorizontalBoxSlot'DropItem_C:WidgetTree.HorizontalBox_0.HorizontalBoxSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Drop/DropItem.19"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'DropItem_C:WidgetTree.HorizontalBox_0.HorizontalBoxSlot_2'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Drop/DropItem.20"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'DropItem_C:WidgetTree.RootView1.CanvasPanelSlot_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Drop/DropItem.15"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'DropItem_C:WidgetTree.HorizontalBox_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Drop/DropItem.18"
+    },
+    "Properties": {
+      "Padding": {
+        "Left": 19.199999,
+        "Right": 19.199999
+      },
+      "HorizontalAlignment": "HAlign_Right",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "HorizontalBox'DropItem_C:WidgetTree.HorizontalBox_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Drop/DropItem.18"
+      },
+      "Content": {
+        "ObjectName": "UIShrinkTextBlock'DropItem_C:WidgetTree.FrameName'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Drop/DropItem.26"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'DropItem_C:WidgetTree.HorizontalBox_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Drop/DropItem.18"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "HorizontalBox'DropItem_C:WidgetTree.HorizontalBox_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Drop/DropItem.18"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'DropItem_C:WidgetTree.FrameIconPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Drop/DropItem.6"
+      }
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "FrameBg",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'DropItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Drop/DropItem.27"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/TexturesAtlas/Drop/Atlas/UI_Fight_BGdrop03_Sprite.UI_Fight_BGdrop03_Sprite",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 76.799995,
+          "Y": 76.799995
+        },
+        "Margin": {
+          "Left": 0.01,
+          "Top": 0.01,
+          "Right": 0.01,
+          "Bottom": 0.01
+        },
+        "DrawAs": "ESlateBrushDrawType::Box"
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'DropItem_C:WidgetTree.RootView1.CanvasPanelSlot_4'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Drop/DropItem.16"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "FrameBorder",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'DropItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Drop/DropItem.27"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/TexturesAtlas/Drop/Atlas/UI_Fight_BGdrop00_1_Sprite.UI_Fight_BGdrop00_1_Sprite",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 76.799995,
+          "Y": 76.799995
+        },
+        "Margin": {
+          "Left": 0.3,
+          "Top": 0.3,
+          "Right": 0.3,
+          "Bottom": 0.3
+        },
+        "DrawAs": "ESlateBrushDrawType::Box"
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'DropItem_C:WidgetTree.RootView1.CanvasPanelSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Drop/DropItem.14"
+      },
+      "bIsVariable": false,
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "FrameIcon",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'DropItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Drop/DropItem.27"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/TexturesAtlas/Drop/Atlas/UI_Fight_03PickIconJian2_Sprite.UI_Fight_03PickIconJian2_Sprite",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 57.6,
+          "Y": 57.6
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'DropItem_C:WidgetTree.FrameIconPanel.CanvasPanelSlot_4'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Drop/DropItem.11"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "FrameIconBg",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'DropItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Drop/DropItem.27"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/TexturesAtlas/Fight/Atlas/UI_Fight_BGdrop03_1_Sprite.UI_Fight_BGdrop03_1_Sprite",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 76.799995,
+          "Y": 76.799995
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'DropItem_C:WidgetTree.FrameIconPanel.CanvasPanelSlot_3'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Drop/DropItem.10"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "FrameIconBorder",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'DropItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Drop/DropItem.27"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/TexturesAtlas/Drop/Atlas/UI_Fight_BGdrop01_1_Sprite.UI_Fight_BGdrop01_1_Sprite",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 76.799995,
+          "Y": 76.799995
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'DropItem_C:WidgetTree.FrameIconPanel.CanvasPanelSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Drop/DropItem.9"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "UIShrinkTextBlock",
+    "Name": "FrameName",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIShrinkTextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'DropItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Drop/DropItem.27"
+    },
+    "Properties": {
+      "TextHAlignment": "HAlign_Right",
+      "CurrStyleId": 1484,
+      "TextContent": {
+        "Namespace": "",
+        "Key": "4CBC5BCC4BAE3DCE58EE119C9FDB3938",
+        "SourceString": "文本块",
+        "LocalizedString": "文本块"
+      },
+      "ShrinkSize": {
+        "X": 576.0,
+        "Y": 69.119995
+      },
+      "TextHJustification": "ETextJustify::Right",
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'DropItem_C:WidgetTree.HorizontalBox_0.HorizontalBoxSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Drop/DropItem.19"
+      }
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetTree'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'DropItem_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Drop/DropItem.3"
+    },
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "CanvasPanel'DropItem_C:WidgetTree.RootView'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Drop/DropItem.7"
+      }
+    }
+  }
+]

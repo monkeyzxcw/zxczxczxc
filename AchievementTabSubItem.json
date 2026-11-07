@@ -1,0 +1,843 @@
+[
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "AchievementTabSubItem_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Package": "UE_game/Content/BluePrint/UI/Achievement/AchievementTabSubItem",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'AchievementTabSubItem_C:WidgetTree'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Achievement/AchievementTabSubItem.27"
+      },
+      "bClassRequiresNativeTick": true
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'UIUserWidget'",
+      "ObjectPath": "/Script/UE_game"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Btn",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIButton'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "StateSwitcher",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'WidgetSwitcher'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "UIImage",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "UIImage_106",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      }
+    ],
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "AchievementTabSubItem_C'Default__AchievementTabSubItem_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Achievement/AchievementTabSubItem.1"
+    }
+  },
+  {
+    "Type": "AchievementTabSubItem_C",
+    "Name": "Default__AchievementTabSubItem_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'UE_game/Content/BluePrint/UI/Achievement/AchievementTabSubItem.AchievementTabSubItem_C'",
+    "Package": "UE_game/Content/BluePrint/UI/Achievement/AchievementTabSubItem",
+    "Properties": {
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "ButtonSlot",
+    "Name": "ButtonSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ButtonSlot'",
+    "Outer": {
+      "ObjectName": "UIButton'AchievementTabSubItem_C:WidgetTree.Btn'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Achievement/AchievementTabSubItem.17"
+    },
+    "Properties": {
+      "Padding": {
+        "Left": 7.68,
+        "Top": 3.84,
+        "Right": 7.68,
+        "Bottom": 3.84
+      },
+      "Parent": {
+        "ObjectName": "UIButton'AchievementTabSubItem_C:WidgetTree.Btn'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Achievement/AchievementTabSubItem.17"
+      },
+      "Content": {
+        "ObjectName": "WidgetSwitcher'AchievementTabSubItem_C:WidgetTree.StateSwitcher'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Achievement/AchievementTabSubItem.24"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'AchievementTabSubItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Achievement/AchievementTabSubItem.27"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'AchievementTabSubItem_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_2'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Achievement/AchievementTabSubItem.8"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "SizeBoxSlot'AchievementTabSubItem_C:WidgetTree.SizeBox_34.SizeBoxSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Achievement/AchievementTabSubItem.16"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_24",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'AchievementTabSubItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Achievement/AchievementTabSubItem.27"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'AchievementTabSubItem_C:WidgetTree.CanvasPanel_24.CanvasPanelSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Achievement/AchievementTabSubItem.9"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_48",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'AchievementTabSubItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Achievement/AchievementTabSubItem.27"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'AchievementTabSubItem_C:WidgetTree.CanvasPanel_48.CanvasPanelSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Achievement/AchievementTabSubItem.10"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'AchievementTabSubItem_C:WidgetTree.CanvasPanel_24.CanvasPanelSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Achievement/AchievementTabSubItem.9"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "Click",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'AchievementTabSubItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Achievement/AchievementTabSubItem.27"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'AchievementTabSubItem_C:WidgetTree.Click.CanvasPanelSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Achievement/AchievementTabSubItem.11"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'AchievementTabSubItem_C:WidgetTree.Click.CanvasPanelSlot_2'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Achievement/AchievementTabSubItem.12"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "WidgetSwitcherSlot'AchievementTabSubItem_C:WidgetTree.StateSwitcher.WidgetSwitcherSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Achievement/AchievementTabSubItem.25"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "Default",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'AchievementTabSubItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Achievement/AchievementTabSubItem.27"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'AchievementTabSubItem_C:WidgetTree.Default.CanvasPanelSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Achievement/AchievementTabSubItem.13"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'AchievementTabSubItem_C:WidgetTree.Default.CanvasPanelSlot_2'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Achievement/AchievementTabSubItem.14"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "WidgetSwitcherSlot'AchievementTabSubItem_C:WidgetTree.StateSwitcher.WidgetSwitcherSlot_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Achievement/AchievementTabSubItem.26"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'AchievementTabSubItem_C:WidgetTree.CanvasPanel_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Achievement/AchievementTabSubItem.3"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 192.0,
+          "Bottom": 57.6
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'AchievementTabSubItem_C:WidgetTree.CanvasPanel_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Achievement/AchievementTabSubItem.3"
+      },
+      "Content": {
+        "ObjectName": "UIButton'AchievementTabSubItem_C:WidgetTree.Btn'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Achievement/AchievementTabSubItem.17"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'AchievementTabSubItem_C:WidgetTree.CanvasPanel_24'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Achievement/AchievementTabSubItem.4"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 192.0,
+          "Bottom": 57.6
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'AchievementTabSubItem_C:WidgetTree.CanvasPanel_24'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Achievement/AchievementTabSubItem.4"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'AchievementTabSubItem_C:WidgetTree.CanvasPanel_48'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Achievement/AchievementTabSubItem.5"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'AchievementTabSubItem_C:WidgetTree.CanvasPanel_48'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Achievement/AchievementTabSubItem.5"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 192.0,
+          "Bottom": 57.6
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'AchievementTabSubItem_C:WidgetTree.CanvasPanel_48'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Achievement/AchievementTabSubItem.5"
+      },
+      "Content": {
+        "ObjectName": "VerticalBox'AchievementTabSubItem_C:WidgetTree.VerticalBox_34'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Achievement/AchievementTabSubItem.22"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'AchievementTabSubItem_C:WidgetTree.Click'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Achievement/AchievementTabSubItem.6"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 192.0,
+          "Bottom": 57.6
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'AchievementTabSubItem_C:WidgetTree.Click'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Achievement/AchievementTabSubItem.6"
+      },
+      "Content": {
+        "ObjectName": "UIImage'AchievementTabSubItem_C:WidgetTree.UIImage_106'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Achievement/AchievementTabSubItem.19"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'AchievementTabSubItem_C:WidgetTree.Click'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Achievement/AchievementTabSubItem.6"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Top": -0.96,
+          "Right": 211.2,
+          "Bottom": 76.799995
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'AchievementTabSubItem_C:WidgetTree.Click'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Achievement/AchievementTabSubItem.6"
+      },
+      "Content": {
+        "ObjectName": "UIShrinkTextBlock'AchievementTabSubItem_C:WidgetTree.Title_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Achievement/AchievementTabSubItem.20"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'AchievementTabSubItem_C:WidgetTree.Default'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Achievement/AchievementTabSubItem.7"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 192.0,
+          "Bottom": 57.6
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'AchievementTabSubItem_C:WidgetTree.Default'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Achievement/AchievementTabSubItem.7"
+      },
+      "Content": {
+        "ObjectName": "UIImage'AchievementTabSubItem_C:WidgetTree.UIImage'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Achievement/AchievementTabSubItem.18"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'AchievementTabSubItem_C:WidgetTree.Default'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Achievement/AchievementTabSubItem.7"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 211.2,
+          "Bottom": 76.799995
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'AchievementTabSubItem_C:WidgetTree.Default'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Achievement/AchievementTabSubItem.7"
+      },
+      "Content": {
+        "ObjectName": "UIShrinkTextBlock'AchievementTabSubItem_C:WidgetTree.Title_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Achievement/AchievementTabSubItem.21"
+      }
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SizeBox_34",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'AchievementTabSubItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Achievement/AchievementTabSubItem.27"
+    },
+    "Properties": {
+      "WidthOverride": 499.2,
+      "HeightOverride": 105.6,
+      "bOverride_WidthOverride": true,
+      "bOverride_HeightOverride": true,
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot'AchievementTabSubItem_C:WidgetTree.SizeBox_34.SizeBoxSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Achievement/AchievementTabSubItem.16"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'AchievementTabSubItem_C:WidgetTree.VerticalBox_34.VerticalBoxSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Achievement/AchievementTabSubItem.23"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBoxSlot'",
+    "Outer": {
+      "ObjectName": "SizeBox'AchievementTabSubItem_C:WidgetTree.SizeBox_34'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Achievement/AchievementTabSubItem.15"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "SizeBox'AchievementTabSubItem_C:WidgetTree.SizeBox_34'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Achievement/AchievementTabSubItem.15"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'AchievementTabSubItem_C:WidgetTree.CanvasPanel_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Achievement/AchievementTabSubItem.3"
+      }
+    }
+  },
+  {
+    "Type": "UIButton",
+    "Name": "Btn",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIButton'",
+    "Outer": {
+      "ObjectName": "WidgetTree'AchievementTabSubItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Achievement/AchievementTabSubItem.27"
+    },
+    "Properties": {
+      "IconImage": {
+        "ImageSize": {
+          "X": 61.44,
+          "Y": 61.44
+        }
+      },
+      "WidgetStyle": {
+        "Normal": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          },
+          "DrawAs": "ESlateBrushDrawType::NoDrawType"
+        },
+        "Hovered": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          },
+          "DrawAs": "ESlateBrushDrawType::NoDrawType"
+        },
+        "Pressed": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          },
+          "DrawAs": "ESlateBrushDrawType::NoDrawType"
+        },
+        "NormalPadding": {
+          "Left": 0.0,
+          "Top": 0.0,
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "PressedPadding": {
+          "Left": 0.0,
+          "Top": 0.0,
+          "Right": 0.0,
+          "Bottom": 0.0
+        }
+      },
+      "ClickMethod": "EButtonClickMethod::PreciseClick",
+      "TouchMethod": "EButtonTouchMethod::PreciseTap",
+      "Slots": [
+        {
+          "ObjectName": "ButtonSlot'AchievementTabSubItem_C:WidgetTree.Btn.ButtonSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Achievement/AchievementTabSubItem.2"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'AchievementTabSubItem_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Achievement/AchievementTabSubItem.8"
+      }
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "UIImage",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'AchievementTabSubItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Achievement/AchievementTabSubItem.27"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/TexturesAtlas/Achievement/Atlas/UI_Achievement_TABunpicked2_Sprite.UI_Achievement_TABunpicked2_Sprite",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 387.84,
+          "Y": 92.159996
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'AchievementTabSubItem_C:WidgetTree.Default.CanvasPanelSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Achievement/AchievementTabSubItem.13"
+      }
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "UIImage_106",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'AchievementTabSubItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Achievement/AchievementTabSubItem.27"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/TexturesAtlas/Achievement/Atlas/UI_Achievement_TABpicked2_Sprite.UI_Achievement_TABpicked2_Sprite",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 387.84,
+          "Y": 92.159996
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'AchievementTabSubItem_C:WidgetTree.Click.CanvasPanelSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Achievement/AchievementTabSubItem.11"
+      }
+    }
+  },
+  {
+    "Type": "UIShrinkTextBlock",
+    "Name": "Title_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIShrinkTextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'AchievementTabSubItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Achievement/AchievementTabSubItem.27"
+    },
+    "Properties": {
+      "CurrStyleId": 1323,
+      "ShrinkSize": {
+        "X": 211.2,
+        "Y": 76.799995
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'AchievementTabSubItem_C:WidgetTree.Click.CanvasPanelSlot_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Achievement/AchievementTabSubItem.12"
+      }
+    }
+  },
+  {
+    "Type": "UIShrinkTextBlock",
+    "Name": "Title_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIShrinkTextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'AchievementTabSubItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Achievement/AchievementTabSubItem.27"
+    },
+    "Properties": {
+      "CurrStyleId": 1507,
+      "ShrinkSize": {
+        "X": 211.2,
+        "Y": 76.799995
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'AchievementTabSubItem_C:WidgetTree.Default.CanvasPanelSlot_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Achievement/AchievementTabSubItem.14"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBox",
+    "Name": "VerticalBox_34",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'AchievementTabSubItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Achievement/AchievementTabSubItem.27"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "VerticalBoxSlot'AchievementTabSubItem_C:WidgetTree.VerticalBox_34.VerticalBoxSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Achievement/AchievementTabSubItem.23"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'AchievementTabSubItem_C:WidgetTree.CanvasPanel_48.CanvasPanelSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Achievement/AchievementTabSubItem.10"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Outer": {
+      "ObjectName": "VerticalBox'AchievementTabSubItem_C:WidgetTree.VerticalBox_34'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Achievement/AchievementTabSubItem.22"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "VerticalBox'AchievementTabSubItem_C:WidgetTree.VerticalBox_34'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Achievement/AchievementTabSubItem.22"
+      },
+      "Content": {
+        "ObjectName": "SizeBox'AchievementTabSubItem_C:WidgetTree.SizeBox_34'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Achievement/AchievementTabSubItem.15"
+      }
+    }
+  },
+  {
+    "Type": "WidgetSwitcher",
+    "Name": "StateSwitcher",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetSwitcher'",
+    "Outer": {
+      "ObjectName": "WidgetTree'AchievementTabSubItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Achievement/AchievementTabSubItem.27"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "WidgetSwitcherSlot'AchievementTabSubItem_C:WidgetTree.StateSwitcher.WidgetSwitcherSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Achievement/AchievementTabSubItem.25"
+        },
+        {
+          "ObjectName": "WidgetSwitcherSlot'AchievementTabSubItem_C:WidgetTree.StateSwitcher.WidgetSwitcherSlot_2'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/Achievement/AchievementTabSubItem.26"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "ButtonSlot'AchievementTabSubItem_C:WidgetTree.Btn.ButtonSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Achievement/AchievementTabSubItem.2"
+      }
+    }
+  },
+  {
+    "Type": "WidgetSwitcherSlot",
+    "Name": "WidgetSwitcherSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetSwitcherSlot'",
+    "Outer": {
+      "ObjectName": "WidgetSwitcher'AchievementTabSubItem_C:WidgetTree.StateSwitcher'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Achievement/AchievementTabSubItem.24"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "WidgetSwitcher'AchievementTabSubItem_C:WidgetTree.StateSwitcher'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Achievement/AchievementTabSubItem.24"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'AchievementTabSubItem_C:WidgetTree.Click'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Achievement/AchievementTabSubItem.6"
+      }
+    }
+  },
+  {
+    "Type": "WidgetSwitcherSlot",
+    "Name": "WidgetSwitcherSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetSwitcherSlot'",
+    "Outer": {
+      "ObjectName": "WidgetSwitcher'AchievementTabSubItem_C:WidgetTree.StateSwitcher'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Achievement/AchievementTabSubItem.24"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "WidgetSwitcher'AchievementTabSubItem_C:WidgetTree.StateSwitcher'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Achievement/AchievementTabSubItem.24"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'AchievementTabSubItem_C:WidgetTree.Default'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Achievement/AchievementTabSubItem.7"
+      }
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetTree'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'AchievementTabSubItem_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/Achievement/AchievementTabSubItem.0"
+    },
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "CanvasPanel'AchievementTabSubItem_C:WidgetTree.CanvasPanel_24'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/Achievement/AchievementTabSubItem.4"
+      }
+    }
+  }
+]

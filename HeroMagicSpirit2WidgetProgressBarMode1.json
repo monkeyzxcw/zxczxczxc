@@ -1,0 +1,5411 @@
+[
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "HeroMagicSpirit2WidgetProgressBarMode1_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Package": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'HeroMagicSpirit2WidgetProgressBarMode1_C:WidgetTree'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.100"
+      },
+      "bClassRequiresNativeTick": true,
+      "Animations": [
+        {
+          "ObjectName": "WidgetAnimation'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show_INST'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.99"
+        },
+        {
+          "ObjectName": "WidgetAnimation'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show02_INST'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.98"
+        },
+        {
+          "ObjectName": "WidgetAnimation'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Guanbi_INST'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.97"
+        }
+      ]
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'EProgressBarWidget'",
+      "ObjectPath": "/Script/UE_game"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Anim_Guanbi",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Transient | RepSkip",
+        "PropertyClass": {
+          "ObjectName": "Class'WidgetAnimation'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Anim_Show02",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Transient | RepSkip",
+        "PropertyClass": {
+          "ObjectName": "Class'WidgetAnimation'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Anim_Show",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Transient | RepSkip",
+        "PropertyClass": {
+          "ObjectName": "Class'WidgetAnimation'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "glow01",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "glow02",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "glow03",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "glow04",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "glow05",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "par01",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIParticleEmitter'",
+          "ObjectPath": "/Script/UIParticle"
+        }
+      }
+    ],
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "HeroMagicSpirit2WidgetProgressBarMode1_C'Default__HeroMagicSpirit2WidgetProgressBarMode1_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.1"
+    }
+  },
+  {
+    "Type": "HeroMagicSpirit2WidgetProgressBarMode1_C",
+    "Name": "Default__HeroMagicSpirit2WidgetProgressBarMode1_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.HeroMagicSpirit2WidgetProgressBarMode1_C'",
+    "Package": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1",
+    "Properties": {
+      "Data": {
+        "Length": 134.4,
+        "bHorizontal": false,
+        "bLeft": false,
+        "Margins": {
+          "X": 0.04,
+          "Y": 0.97
+        }
+      },
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false,
+      "Visibility": "ESlateVisibility::HitTestInvisible"
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_Root",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'HeroMagicSpirit2WidgetProgressBarMode1_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.100"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'HeroMagicSpirit2WidgetProgressBarMode1_C:WidgetTree.CanvasPanel_Root.CanvasPanelSlot_7'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.9"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'HeroMagicSpirit2WidgetProgressBarMode1_C:WidgetTree.CanvasPanel_Root.CanvasPanelSlot_3'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.6"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'HeroMagicSpirit2WidgetProgressBarMode1_C:WidgetTree.CanvasPanel_Root.CanvasPanelSlot_2'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.5"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'HeroMagicSpirit2WidgetProgressBarMode1_C:WidgetTree.CanvasPanel_Root.CanvasPanelSlot_9'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.10"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'HeroMagicSpirit2WidgetProgressBarMode1_C:WidgetTree.CanvasPanel_Root.CanvasPanelSlot_10'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.3"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'HeroMagicSpirit2WidgetProgressBarMode1_C:WidgetTree.CanvasPanel_Root.CanvasPanelSlot_5'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.7"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'HeroMagicSpirit2WidgetProgressBarMode1_C:WidgetTree.CanvasPanel_Root.CanvasPanelSlot_6'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.8"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'HeroMagicSpirit2WidgetProgressBarMode1_C:WidgetTree.CanvasPanel_Root.CanvasPanelSlot_13'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.4"
+        }
+      ],
+      "Visibility": "ESlateVisibility::HitTestInvisible"
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_10",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'HeroMagicSpirit2WidgetProgressBarMode1_C:WidgetTree.CanvasPanel_Root'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.2"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 192.0,
+          "Bottom": 192.0
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'HeroMagicSpirit2WidgetProgressBarMode1_C:WidgetTree.CanvasPanel_Root'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.2"
+      },
+      "Content": {
+        "ObjectName": "UIImage'HeroMagicSpirit2WidgetProgressBarMode1_C:WidgetTree.glow05'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.93"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_13",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'HeroMagicSpirit2WidgetProgressBarMode1_C:WidgetTree.CanvasPanel_Root'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.2"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 192.0,
+          "Bottom": 57.6
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'HeroMagicSpirit2WidgetProgressBarMode1_C:WidgetTree.CanvasPanel_Root'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.2"
+      },
+      "Content": {
+        "ObjectName": "UIParticleEmitter'HeroMagicSpirit2WidgetProgressBarMode1_C:WidgetTree.par01'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.96"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'HeroMagicSpirit2WidgetProgressBarMode1_C:WidgetTree.CanvasPanel_Root'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.2"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 192.0,
+          "Bottom": 57.6
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'HeroMagicSpirit2WidgetProgressBarMode1_C:WidgetTree.CanvasPanel_Root'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.2"
+      },
+      "Content": {
+        "ObjectName": "WrapBox'HeroMagicSpirit2WidgetProgressBarMode1_C:WidgetTree.Clipper'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.101"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'HeroMagicSpirit2WidgetProgressBarMode1_C:WidgetTree.CanvasPanel_Root'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.2"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 230.4,
+          "Bottom": 230.4
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'HeroMagicSpirit2WidgetProgressBarMode1_C:WidgetTree.CanvasPanel_Root'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.2"
+      },
+      "Content": {
+        "ObjectName": "UIImage'HeroMagicSpirit2WidgetProgressBarMode1_C:WidgetTree.glow01'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.89"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_5",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'HeroMagicSpirit2WidgetProgressBarMode1_C:WidgetTree.CanvasPanel_Root'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.2"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 384.0,
+          "Bottom": 384.0
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'HeroMagicSpirit2WidgetProgressBarMode1_C:WidgetTree.CanvasPanel_Root'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.2"
+      },
+      "Content": {
+        "ObjectName": "UIImage'HeroMagicSpirit2WidgetProgressBarMode1_C:WidgetTree.glow02'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.90"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_6",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'HeroMagicSpirit2WidgetProgressBarMode1_C:WidgetTree.CanvasPanel_Root'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.2"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 384.0,
+          "Bottom": 384.0
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'HeroMagicSpirit2WidgetProgressBarMode1_C:WidgetTree.CanvasPanel_Root'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.2"
+      },
+      "Content": {
+        "ObjectName": "UIImage'HeroMagicSpirit2WidgetProgressBarMode1_C:WidgetTree.glow03'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.91"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_7",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'HeroMagicSpirit2WidgetProgressBarMode1_C:WidgetTree.CanvasPanel_Root'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.2"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 192.0,
+          "Bottom": 57.6
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'HeroMagicSpirit2WidgetProgressBarMode1_C:WidgetTree.CanvasPanel_Root'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.2"
+      },
+      "Content": {
+        "ObjectName": "UIImage'HeroMagicSpirit2WidgetProgressBarMode1_C:WidgetTree.ImageBg'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.94"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_9",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'HeroMagicSpirit2WidgetProgressBarMode1_C:WidgetTree.CanvasPanel_Root'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.2"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 192.0,
+          "Bottom": 192.0
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'HeroMagicSpirit2WidgetProgressBarMode1_C:WidgetTree.CanvasPanel_Root'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.2"
+      },
+      "Content": {
+        "ObjectName": "UIImage'HeroMagicSpirit2WidgetProgressBarMode1_C:WidgetTree.glow04'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.92"
+      }
+    }
+  },
+  {
+    "Type": "MovieScene",
+    "Name": "Anim_Guanbi",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene'",
+    "Outer": {
+      "ObjectName": "WidgetAnimation'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Guanbi_INST'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.97"
+    },
+    "Properties": {
+      "Possessables": [
+        {
+          "Tags": [],
+          "Guid": "9BB46FBE-4BE47B9E-093E4B9C-E878ADC3",
+          "Name": "glow01",
+          "PossessedObjectClass": {
+            "ObjectName": "Class'UIImage'",
+            "ObjectPath": "/Script/UE_game"
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        },
+        {
+          "Tags": [],
+          "Guid": "F639E2EF-44EAB116-F1F50095-FFCEE573",
+          "Name": "glow04",
+          "PossessedObjectClass": {
+            "ObjectName": "Class'UIImage'",
+            "ObjectPath": "/Script/UE_game"
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        },
+        {
+          "Tags": [],
+          "Guid": "C9E4D3FE-45782590-3ABD8F95-9FEEB5F9",
+          "Name": "glow05",
+          "PossessedObjectClass": {
+            "ObjectName": "Class'UIImage'",
+            "ObjectPath": "/Script/UE_game"
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        },
+        {
+          "Tags": [],
+          "Guid": "96E6FBAC-4A0BAEAF-973AAFA8-1B8D64D3",
+          "Name": "glow02",
+          "PossessedObjectClass": {
+            "ObjectName": "Class'UIImage'",
+            "ObjectPath": "/Script/UE_game"
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        },
+        {
+          "Tags": [],
+          "Guid": "89FD8192-4944AA80-E89CAFB7-50DA9622",
+          "Name": "glow03",
+          "PossessedObjectClass": {
+            "ObjectName": "Class'UIImage'",
+            "ObjectPath": "/Script/UE_game"
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        },
+        {
+          "Tags": [],
+          "Guid": "5CD1B60B-481E8703-663DA9B7-656D0A50",
+          "Name": "par01",
+          "PossessedObjectClass": {
+            "ObjectName": "Class'UIParticleEmitter'",
+            "ObjectPath": "/Script/UIParticle"
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        }
+      ],
+      "ObjectBindings": [
+        {
+          "ObjectGuid": "9BB46FBE-4BE47B9E-093E4B9C-E878ADC3",
+          "BindingName": "glow01",
+          "Tracks": [
+            {
+              "ObjectName": "MovieSceneFloatTrack'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Guanbi_INST.Anim_Guanbi.MovieSceneFloatTrack_5'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.81"
+            }
+          ]
+        },
+        {
+          "ObjectGuid": "F639E2EF-44EAB116-F1F50095-FFCEE573",
+          "BindingName": "glow04",
+          "Tracks": [
+            {
+              "ObjectName": "MovieSceneFloatTrack'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Guanbi_INST.Anim_Guanbi.MovieSceneFloatTrack_2'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.78"
+            }
+          ]
+        },
+        {
+          "ObjectGuid": "C9E4D3FE-45782590-3ABD8F95-9FEEB5F9",
+          "BindingName": "glow05",
+          "Tracks": [
+            {
+              "ObjectName": "MovieSceneFloatTrack'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Guanbi_INST.Anim_Guanbi.MovieSceneFloatTrack_0'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.76"
+            }
+          ]
+        },
+        {
+          "ObjectGuid": "96E6FBAC-4A0BAEAF-973AAFA8-1B8D64D3",
+          "BindingName": "glow02",
+          "Tracks": [
+            {
+              "ObjectName": "MovieSceneFloatTrack'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Guanbi_INST.Anim_Guanbi.MovieSceneFloatTrack_4'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.80"
+            }
+          ]
+        },
+        {
+          "ObjectGuid": "89FD8192-4944AA80-E89CAFB7-50DA9622",
+          "BindingName": "glow03",
+          "Tracks": [
+            {
+              "ObjectName": "MovieSceneFloatTrack'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Guanbi_INST.Anim_Guanbi.MovieSceneFloatTrack_3'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.79"
+            }
+          ]
+        },
+        {
+          "ObjectGuid": "5CD1B60B-481E8703-663DA9B7-656D0A50",
+          "BindingName": "par01",
+          "Tracks": [
+            {
+              "ObjectName": "MovieSceneByteTrack'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Guanbi_INST.Anim_Guanbi.MovieSceneByteTrack_0'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.57"
+            },
+            {
+              "ObjectName": "MovieSceneFloatTrack'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Guanbi_INST.Anim_Guanbi.MovieSceneFloatTrack_1'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.77"
+            }
+          ]
+        }
+      ],
+      "PlaybackRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 30000
+            }
+          }
+        }
+      },
+      "DisplayRate": {
+        "Numerator": 30
+      },
+      "Signature": "669A927E-47C9B4DE-038F6495-CCA9F57D"
+    }
+  },
+  {
+    "Type": "MovieScene",
+    "Name": "Anim_Show02",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene'",
+    "Outer": {
+      "ObjectName": "WidgetAnimation'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show02_INST'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.98"
+    },
+    "Properties": {
+      "Possessables": [
+        {
+          "Tags": [],
+          "Guid": "A3BB7D8E-4F5DD412-16C7C280-346122FF",
+          "Name": "glow04",
+          "PossessedObjectClass": {
+            "ObjectName": "Class'UIImage'",
+            "ObjectPath": "/Script/UE_game"
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        },
+        {
+          "Tags": [],
+          "Guid": "22E40893-4321D2B7-16A5F8BA-68C79CFD",
+          "Name": "glow05",
+          "PossessedObjectClass": {
+            "ObjectName": "Class'UIImage'",
+            "ObjectPath": "/Script/UE_game"
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        },
+        {
+          "Tags": [],
+          "Guid": "933C8419-40746EA1-8634D593-0B2DDE92",
+          "Name": "par01",
+          "PossessedObjectClass": {
+            "ObjectName": "Class'UIParticleEmitter'",
+            "ObjectPath": "/Script/UIParticle"
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        }
+      ],
+      "ObjectBindings": [
+        {
+          "ObjectGuid": "A3BB7D8E-4F5DD412-16C7C280-346122FF",
+          "BindingName": "glow04",
+          "Tracks": [
+            {
+              "ObjectName": "MovieScene2DTransformTrack'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show02_INST.Anim_Show02.MovieScene2DTransformTrack_1'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.16"
+            },
+            {
+              "ObjectName": "MovieSceneFloatTrack'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show02_INST.Anim_Show02.MovieSceneFloatTrack_2'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.84"
+            }
+          ]
+        },
+        {
+          "ObjectGuid": "22E40893-4321D2B7-16A5F8BA-68C79CFD",
+          "BindingName": "glow05",
+          "Tracks": [
+            {
+              "ObjectName": "MovieScene2DTransformTrack'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show02_INST.Anim_Show02.MovieScene2DTransformTrack_2'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.17"
+            },
+            {
+              "ObjectName": "MovieSceneFloatTrack'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show02_INST.Anim_Show02.MovieSceneFloatTrack_0'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.82"
+            }
+          ]
+        },
+        {
+          "ObjectGuid": "933C8419-40746EA1-8634D593-0B2DDE92",
+          "BindingName": "par01",
+          "Tracks": [
+            {
+              "ObjectName": "MovieSceneFloatTrack'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show02_INST.Anim_Show02.MovieSceneFloatTrack_1'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.83"
+            },
+            {
+              "ObjectName": "MovieSceneByteTrack'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show02_INST.Anim_Show02.MovieSceneByteTrack_0'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.58"
+            }
+          ]
+        }
+      ],
+      "PlaybackRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 32000
+            }
+          }
+        }
+      },
+      "DisplayRate": {
+        "Numerator": 30
+      },
+      "Signature": "FF307AE8-441715C0-E8ECF290-7B242EE1"
+    }
+  },
+  {
+    "Type": "MovieScene",
+    "Name": "Anim_Show",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene'",
+    "Outer": {
+      "ObjectName": "WidgetAnimation'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show_INST'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.99"
+    },
+    "Properties": {
+      "Possessables": [
+        {
+          "Tags": [],
+          "Guid": "8CE48E64-43F165D5-1A1CB8BE-EA904B57",
+          "Name": "glow01",
+          "PossessedObjectClass": {
+            "ObjectName": "Class'UIImage'",
+            "ObjectPath": "/Script/UE_game"
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        },
+        {
+          "Tags": [],
+          "Guid": "2DCAFF80-4BBAB239-DBFE238C-3A5D478D",
+          "Name": "glow02",
+          "PossessedObjectClass": {
+            "ObjectName": "Class'UIImage'",
+            "ObjectPath": "/Script/UE_game"
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        },
+        {
+          "Tags": [],
+          "Guid": "DE62C4F5-40537110-821AA19C-8F44502B",
+          "Name": "glow03",
+          "PossessedObjectClass": {
+            "ObjectName": "Class'UIImage'",
+            "ObjectPath": "/Script/UE_game"
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        },
+        {
+          "Tags": [],
+          "Guid": "9AA82C8A-45F431F8-34FD96A2-F41244F2",
+          "Name": "par01",
+          "PossessedObjectClass": {
+            "ObjectName": "Class'UIParticleEmitter'",
+            "ObjectPath": "/Script/UIParticle"
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        }
+      ],
+      "ObjectBindings": [
+        {
+          "ObjectGuid": "8CE48E64-43F165D5-1A1CB8BE-EA904B57",
+          "BindingName": "glow01",
+          "Tracks": [
+            {
+              "ObjectName": "MovieSceneFloatTrack'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show_INST.Anim_Show.MovieSceneFloatTrack_1'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.85"
+            }
+          ]
+        },
+        {
+          "ObjectGuid": "2DCAFF80-4BBAB239-DBFE238C-3A5D478D",
+          "BindingName": "glow02",
+          "Tracks": [
+            {
+              "ObjectName": "MovieSceneFloatTrack'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show_INST.Anim_Show.MovieSceneFloatTrack_3'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.86"
+            }
+          ]
+        },
+        {
+          "ObjectGuid": "DE62C4F5-40537110-821AA19C-8F44502B",
+          "BindingName": "glow03",
+          "Tracks": [
+            {
+              "ObjectName": "MovieSceneFloatTrack'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show_INST.Anim_Show.MovieSceneFloatTrack_4'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.87"
+            }
+          ]
+        },
+        {
+          "ObjectGuid": "9AA82C8A-45F431F8-34FD96A2-F41244F2",
+          "BindingName": "par01",
+          "Tracks": [
+            {
+              "ObjectName": "MovieSceneFloatTrack'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show_INST.Anim_Show.MovieSceneFloatTrack_5'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.88"
+            },
+            {
+              "ObjectName": "MovieSceneByteTrack'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show_INST.Anim_Show.MovieSceneByteTrack_0'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.59"
+            }
+          ]
+        }
+      ],
+      "PlaybackRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 30000
+            }
+          }
+        }
+      },
+      "DisplayRate": {
+        "Numerator": 30
+      },
+      "Signature": "812AADAF-4467CDD1-D2DF6FBB-16C0287B"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformSection",
+    "Name": "MovieScene2DTransformSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene2DTransformSection'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformTrack'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show02_INST.Anim_Show02.MovieScene2DTransformTrack_1'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.16"
+    },
+    "Properties": {
+      "Translation": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Translation[1]": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Rotation": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Scale": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 20000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.2,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.33034,
+              "LeaveTangentWeight": 0.33034,
+              "TangentWeightMode": 3
+            },
+            "InterpMode": 2,
+            "TangentMode": 1
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Scale[1]": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 20000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.2,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.33034,
+              "LeaveTangentWeight": 0.33034,
+              "TangentWeightMode": 3
+            },
+            "InterpMode": 2,
+            "TangentMode": 1
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Shear": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Shear[1]": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show02_INST.Anim_Show02.MovieScene2DTransformTrack_1.MovieScene2DTransformSection_0.EaseInFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.32"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show02_INST.Anim_Show02.MovieScene2DTransformTrack_1.MovieScene2DTransformSection_0.EaseOutFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.33"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 32000
+            }
+          }
+        }
+      },
+      "Signature": "ADAA21A9-40982F68-FFB9FEBA-A88D0B90"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformSection",
+    "Name": "MovieScene2DTransformSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene2DTransformSection'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformTrack'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show02_INST.Anim_Show02.MovieScene2DTransformTrack_2'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.17"
+    },
+    "Properties": {
+      "Translation": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Translation[1]": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Rotation": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Scale": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 30000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.2,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.6,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.497095,
+              "LeaveTangentWeight": 0.497095,
+              "TangentWeightMode": 3
+            },
+            "InterpMode": 2,
+            "TangentMode": 1
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Scale[1]": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 30000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.2,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.6,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.497095,
+              "LeaveTangentWeight": 0.497095,
+              "TangentWeightMode": 3
+            },
+            "InterpMode": 2,
+            "TangentMode": 1
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Shear": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Shear[1]": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show02_INST.Anim_Show02.MovieScene2DTransformTrack_2.MovieScene2DTransformSection_0.EaseInFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.34"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show02_INST.Anim_Show02.MovieScene2DTransformTrack_2.MovieScene2DTransformSection_0.EaseOutFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.35"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 32000
+            }
+          }
+        }
+      },
+      "Signature": "3D113BD7-4D5FC4CF-43B42FA0-CEA02BBA"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformTrack",
+    "Name": "MovieScene2DTransformTrack_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene2DTransformTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show02_INST.Anim_Show02'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.12"
+    },
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderTransform",
+        "PropertyPath": "RenderTransform",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieScene2DTransformSection'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show02_INST.Anim_Show02.MovieScene2DTransformTrack_1.MovieScene2DTransformSection_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.14"
+        }
+      ],
+      "EvaluationFieldGuid": "F7AC0378-4DCCF040-B22BC2A6-1FDF863E",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieScene2DTransformSection'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show02_INST.Anim_Show02.MovieScene2DTransformTrack_1.MovieScene2DTransformSection_0'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.14"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Exclusive",
+                "Value": {
+                  "Value": 32000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "F7AC0378-4DCCF040-B22BC2A6-1FDF863E"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformTrack",
+    "Name": "MovieScene2DTransformTrack_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene2DTransformTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show02_INST.Anim_Show02'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.12"
+    },
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderTransform",
+        "PropertyPath": "RenderTransform",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieScene2DTransformSection'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show02_INST.Anim_Show02.MovieScene2DTransformTrack_2.MovieScene2DTransformSection_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.15"
+        }
+      ],
+      "EvaluationFieldGuid": "73DA87D0-4083A2F3-C9A944A8-A1A53EC2",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieScene2DTransformSection'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show02_INST.Anim_Show02.MovieScene2DTransformTrack_2.MovieScene2DTransformSection_0'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.15"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Exclusive",
+                "Value": {
+                  "Value": 32000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "73DA87D0-4083A2F3-C9A944A8-A1A53EC2"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneByteSection'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Guanbi_INST.Anim_Guanbi.MovieSceneByteTrack_0.MovieSceneByteSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.54"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneByteSection'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Guanbi_INST.Anim_Guanbi.MovieSceneByteTrack_0.MovieSceneByteSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.54"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatSection'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Guanbi_INST.Anim_Guanbi.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.63"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatSection'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Guanbi_INST.Anim_Guanbi.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.63"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatSection'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Guanbi_INST.Anim_Guanbi.MovieSceneFloatTrack_1.MovieSceneFloatSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.64"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatSection'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Guanbi_INST.Anim_Guanbi.MovieSceneFloatTrack_1.MovieSceneFloatSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.64"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatSection'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Guanbi_INST.Anim_Guanbi.MovieSceneFloatTrack_2.MovieSceneFloatSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.65"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatSection'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Guanbi_INST.Anim_Guanbi.MovieSceneFloatTrack_2.MovieSceneFloatSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.65"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatSection'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Guanbi_INST.Anim_Guanbi.MovieSceneFloatTrack_3.MovieSceneFloatSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.66"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatSection'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Guanbi_INST.Anim_Guanbi.MovieSceneFloatTrack_3.MovieSceneFloatSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.66"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatSection'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Guanbi_INST.Anim_Guanbi.MovieSceneFloatTrack_4.MovieSceneFloatSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.67"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatSection'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Guanbi_INST.Anim_Guanbi.MovieSceneFloatTrack_4.MovieSceneFloatSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.67"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatSection'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Guanbi_INST.Anim_Guanbi.MovieSceneFloatTrack_5.MovieSceneFloatSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.68"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatSection'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Guanbi_INST.Anim_Guanbi.MovieSceneFloatTrack_5.MovieSceneFloatSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.68"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformSection'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show02_INST.Anim_Show02.MovieScene2DTransformTrack_1.MovieScene2DTransformSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.14"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformSection'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show02_INST.Anim_Show02.MovieScene2DTransformTrack_1.MovieScene2DTransformSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.14"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformSection'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show02_INST.Anim_Show02.MovieScene2DTransformTrack_2.MovieScene2DTransformSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.15"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieScene2DTransformSection'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show02_INST.Anim_Show02.MovieScene2DTransformTrack_2.MovieScene2DTransformSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.15"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneByteSection'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show02_INST.Anim_Show02.MovieSceneByteTrack_0.MovieSceneByteSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.55"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneByteSection'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show02_INST.Anim_Show02.MovieSceneByteTrack_0.MovieSceneByteSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.55"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatSection'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show02_INST.Anim_Show02.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.69"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatSection'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show02_INST.Anim_Show02.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.69"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatSection'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show02_INST.Anim_Show02.MovieSceneFloatTrack_1.MovieSceneFloatSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.70"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatSection'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show02_INST.Anim_Show02.MovieSceneFloatTrack_1.MovieSceneFloatSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.70"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatSection'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show02_INST.Anim_Show02.MovieSceneFloatTrack_2.MovieSceneFloatSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.71"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatSection'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show02_INST.Anim_Show02.MovieSceneFloatTrack_2.MovieSceneFloatSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.71"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneByteSection'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show_INST.Anim_Show.MovieSceneByteTrack_0.MovieSceneByteSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.56"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneByteSection'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show_INST.Anim_Show.MovieSceneByteTrack_0.MovieSceneByteSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.56"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatSection'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show_INST.Anim_Show.MovieSceneFloatTrack_1.MovieSceneFloatSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.72"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatSection'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show_INST.Anim_Show.MovieSceneFloatTrack_1.MovieSceneFloatSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.72"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatSection'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show_INST.Anim_Show.MovieSceneFloatTrack_3.MovieSceneFloatSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.73"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatSection'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show_INST.Anim_Show.MovieSceneFloatTrack_3.MovieSceneFloatSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.73"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatSection'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show_INST.Anim_Show.MovieSceneFloatTrack_4.MovieSceneFloatSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.74"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatSection'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show_INST.Anim_Show.MovieSceneFloatTrack_4.MovieSceneFloatSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.74"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatSection'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show_INST.Anim_Show.MovieSceneFloatTrack_5.MovieSceneFloatSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.75"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatSection'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show_INST.Anim_Show.MovieSceneFloatTrack_5.MovieSceneFloatSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.75"
+    }
+  },
+  {
+    "Type": "MovieSceneByteSection",
+    "Name": "MovieSceneByteSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneByteSection'",
+    "Outer": {
+      "ObjectName": "MovieSceneByteTrack'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Guanbi_INST.Anim_Guanbi.MovieSceneByteTrack_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.57"
+    },
+    "Properties": {
+      "ByteCurve": {
+        "Times": [
+          {
+            "Value": 0
+          }
+        ],
+        "Values": [
+          1
+        ],
+        "Enum": {
+          "ObjectName": "Enum'ESlateVisibility'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Guanbi_INST.Anim_Guanbi.MovieSceneByteTrack_0.MovieSceneByteSection_0.EaseInFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.18"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Guanbi_INST.Anim_Guanbi.MovieSceneByteTrack_0.MovieSceneByteSection_0.EaseOutFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.19"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 2000
+            }
+          }
+        }
+      },
+      "Signature": "DB2F181A-452E7679-727CFE98-6E23DD19"
+    }
+  },
+  {
+    "Type": "MovieSceneByteSection",
+    "Name": "MovieSceneByteSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneByteSection'",
+    "Outer": {
+      "ObjectName": "MovieSceneByteTrack'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show02_INST.Anim_Show02.MovieSceneByteTrack_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.58"
+    },
+    "Properties": {
+      "ByteCurve": {
+        "Times": [
+          {
+            "Value": 0
+          }
+        ],
+        "Values": [
+          1
+        ],
+        "Enum": {
+          "ObjectName": "Enum'ESlateVisibility'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show02_INST.Anim_Show02.MovieSceneByteTrack_0.MovieSceneByteSection_0.EaseInFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.36"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show02_INST.Anim_Show02.MovieSceneByteTrack_0.MovieSceneByteSection_0.EaseOutFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.37"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 32000
+            }
+          }
+        }
+      },
+      "Signature": "350B8E33-43A3F4AF-DC50F9AD-97CF1EE5"
+    }
+  },
+  {
+    "Type": "MovieSceneByteSection",
+    "Name": "MovieSceneByteSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneByteSection'",
+    "Outer": {
+      "ObjectName": "MovieSceneByteTrack'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show_INST.Anim_Show.MovieSceneByteTrack_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.59"
+    },
+    "Properties": {
+      "ByteCurve": {
+        "Times": [
+          {
+            "Value": 0
+          }
+        ],
+        "Values": [
+          4
+        ],
+        "Enum": {
+          "ObjectName": "Enum'ESlateVisibility'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show_INST.Anim_Show.MovieSceneByteTrack_0.MovieSceneByteSection_0.EaseInFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.44"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show_INST.Anim_Show.MovieSceneByteTrack_0.MovieSceneByteSection_0.EaseOutFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.45"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 30000
+            }
+          }
+        }
+      },
+      "Signature": "BBB9CE69-48E2517D-A8EF9FAD-E36C100D"
+    }
+  },
+  {
+    "Type": "MovieSceneByteTrack",
+    "Name": "MovieSceneByteTrack_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneByteTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Guanbi_INST.Anim_Guanbi'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.11"
+    },
+    "Properties": {
+      "Enum": {
+        "ObjectName": "Enum'ESlateVisibility'",
+        "ObjectPath": "/Script/UMG"
+      },
+      "PropertyBinding": {
+        "PropertyName": "Visibility",
+        "PropertyPath": "Visibility",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneByteSection'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Guanbi_INST.Anim_Guanbi.MovieSceneByteTrack_0.MovieSceneByteSection_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.54"
+        }
+      ],
+      "EvaluationFieldGuid": "83E73D55-4B574C9D-F65D5FAE-814D224B",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneByteSection'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Guanbi_INST.Anim_Guanbi.MovieSceneByteTrack_0.MovieSceneByteSection_0'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.54"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Exclusive",
+                "Value": {
+                  "Value": 2000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "83E73D55-4B574C9D-F65D5FAE-814D224B"
+    }
+  },
+  {
+    "Type": "MovieSceneByteTrack",
+    "Name": "MovieSceneByteTrack_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneByteTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show02_INST.Anim_Show02'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.12"
+    },
+    "Properties": {
+      "Enum": {
+        "ObjectName": "Enum'ESlateVisibility'",
+        "ObjectPath": "/Script/UMG"
+      },
+      "PropertyBinding": {
+        "PropertyName": "Visibility",
+        "PropertyPath": "Visibility",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneByteSection'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show02_INST.Anim_Show02.MovieSceneByteTrack_0.MovieSceneByteSection_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.55"
+        }
+      ],
+      "bIsEvalDisabled": true,
+      "EvaluationFieldGuid": "88D5D586-40EC467C-B906D29B-9B770D5E",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneByteSection'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show02_INST.Anim_Show02.MovieSceneByteTrack_0.MovieSceneByteSection_0'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.55"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Exclusive",
+                "Value": {
+                  "Value": 32000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "F848797A-429F33BA-86063783-6DA4D67C"
+    }
+  },
+  {
+    "Type": "MovieSceneByteTrack",
+    "Name": "MovieSceneByteTrack_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneByteTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show_INST.Anim_Show'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.13"
+    },
+    "Properties": {
+      "Enum": {
+        "ObjectName": "Enum'ESlateVisibility'",
+        "ObjectPath": "/Script/UMG"
+      },
+      "PropertyBinding": {
+        "PropertyName": "Visibility",
+        "PropertyPath": "Visibility",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneByteSection'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show_INST.Anim_Show.MovieSceneByteTrack_0.MovieSceneByteSection_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.56"
+        }
+      ],
+      "EvaluationFieldGuid": "A5B74F4A-4A86ABF8-3A8B4F95-77D6ED57",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneByteSection'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show_INST.Anim_Show.MovieSceneByteTrack_0.MovieSceneByteSection_0'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.56"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Exclusive",
+                "Value": {
+                  "Value": 30000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "A5B74F4A-4A86ABF8-3A8B4F95-77D6ED57"
+    }
+  },
+  {
+    "Type": "MovieSceneCompiledData",
+    "Name": "CompiledData",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneCompiledData'",
+    "Outer": {
+      "ObjectName": "WidgetAnimation'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Guanbi_INST'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.97"
+    },
+    "Properties": {
+      "EvaluationTemplate": {
+        "Tracks": [
+          {
+            "Key": {
+              "Value": 0
+            },
+            "Value": {
+              "ObjectBindingID": "5CD1B60B-481E8703-663DA9B7-656D0A50",
+              "EvaluationPriority": 1000,
+              "EvaluationMethod": "EEvaluationMethod::Static",
+              "SourceTrack": {
+                "ObjectName": "MovieSceneByteTrack'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Guanbi_INST.Anim_Guanbi.MovieSceneByteTrack_0'",
+                "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.57"
+              },
+              "ChildTemplates": [
+                {
+                  "TypeName": "/Script/MovieSceneTracks.MovieSceneBytePropertySectionTemplate",
+                  "Data": {
+                    "ByteCurve": {
+                      "Times": [
+                        {
+                          "Value": 0
+                        }
+                      ],
+                      "DefaultValue": 0,
+                      "bHasDefaultValue": false,
+                      "Values": [
+                        1
+                      ],
+                      "Enum": {
+                        "ObjectName": "Enum'ESlateVisibility'",
+                        "ObjectPath": "/Script/UMG"
+                      }
+                    },
+                    "PropertyData": {
+                      "PropertyName": "Visibility",
+                      "PropertyPath": "Visibility"
+                    },
+                    "CompletionMode": "EMovieSceneCompletionMode::KeepState",
+                    "SourceSectionPtr": {
+                      "ObjectName": "MovieSceneByteSection'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Guanbi_INST.Anim_Guanbi.MovieSceneByteTrack_0.MovieSceneByteSection_0'",
+                      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.54"
+                    }
+                  }
+                }
+              ],
+              "TrackTemplate": {
+                "TypeName": "",
+                "Data": null
+              },
+              "EvaluationGroup": "None",
+              "bEvaluateInPreroll": false,
+              "bEvaluateInPostroll": false,
+              "bTearDownPriority": false
+            }
+          }
+        ],
+        "TemplateLedger": {
+          "LastTrackIdentifier": {
+            "Value": 0
+          },
+          "TrackSignatureToTrackIdentifier": [
+            {
+              "Key": "83E73D55-4B574C9D-F65D5FAE-814D224B",
+              "Value": {
+                "Value": 0
+              }
+            }
+          ]
+        }
+      },
+      "EntityComponentField": {
+        "PersistentEntityTree": {
+          "SerializedData": {
+            "Data": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 4,
+                  "Capacity": 4
+                }
+              ],
+              "Items": [
+                {
+                  "EntityIndex": 0,
+                  "MetaDataIndex": -1
+                },
+                {
+                  "EntityIndex": 1,
+                  "MetaDataIndex": -1
+                },
+                {
+                  "EntityIndex": 2,
+                  "MetaDataIndex": -1
+                },
+                {
+                  "EntityIndex": 3,
+                  "MetaDataIndex": -1
+                }
+              ]
+            },
+            "RootNode": {
+              "Range": {
+                "LowerBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                },
+                "UpperBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                }
+              },
+              "Parent": {
+                "ChildrenHandle": {
+                  "EntryIndex": -1
+                },
+                "Index": -1
+              },
+              "ChildrenID": {
+                "EntryIndex": 0
+              },
+              "DataID": {
+                "EntryIndex": -1
+              }
+            },
+            "ChildNodes": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 1,
+                  "Capacity": 1
+                }
+              ],
+              "Items": [
+                {
+                  "Range": {
+                    "LowerBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 0
+                      }
+                    },
+                    "UpperBound": {
+                      "Type": 0,
+                      "Value": {
+                        "Value": 2000
+                      }
+                    }
+                  },
+                  "Parent": {
+                    "ChildrenHandle": {
+                      "EntryIndex": -1
+                    },
+                    "Index": 0
+                  },
+                  "ChildrenID": {
+                    "EntryIndex": -1
+                  },
+                  "DataID": {
+                    "EntryIndex": 0
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "Entities": [
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieSceneFloatSection'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Guanbi_INST.Anim_Guanbi.MovieSceneFloatTrack_5.MovieSceneFloatSection_0'",
+                "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.68"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 0
+          },
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieSceneFloatSection'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Guanbi_INST.Anim_Guanbi.MovieSceneFloatTrack_4.MovieSceneFloatSection_0'",
+                "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.67"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 1
+          },
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieSceneFloatSection'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Guanbi_INST.Anim_Guanbi.MovieSceneFloatTrack_3.MovieSceneFloatSection_0'",
+                "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.66"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 2
+          },
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieSceneFloatSection'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Guanbi_INST.Anim_Guanbi.MovieSceneFloatTrack_1.MovieSceneFloatSection_0'",
+                "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.64"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 3
+          }
+        ],
+        "SharedMetaData": [
+          {
+            "ObjectBindingID": "9BB46FBE-4BE47B9E-093E4B9C-E878ADC3"
+          },
+          {
+            "ObjectBindingID": "96E6FBAC-4A0BAEAF-973AAFA8-1B8D64D3"
+          },
+          {
+            "ObjectBindingID": "89FD8192-4944AA80-E89CAFB7-50DA9622"
+          },
+          {
+            "ObjectBindingID": "5CD1B60B-481E8703-663DA9B7-656D0A50"
+          }
+        ]
+      },
+      "TrackTemplateField": {
+        "Ranges": [
+          {
+            "Value": {
+              "LowerBound": {
+                "Type": 2,
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": 0,
+                "Value": {
+                  "Value": 0
+                }
+              }
+            }
+          },
+          {
+            "Value": {
+              "LowerBound": {
+                "Type": 1,
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": 0,
+                "Value": {
+                  "Value": 2000
+                }
+              }
+            }
+          },
+          {
+            "Value": {
+              "LowerBound": {
+                "Type": 1,
+                "Value": {
+                  "Value": 2000
+                }
+              },
+              "UpperBound": {
+                "Type": 2,
+                "Value": {
+                  "Value": 0
+                }
+              }
+            }
+          }
+        ],
+        "Groups": [
+          {
+            "LUTIndices": [],
+            "TrackLUT": [],
+            "SectionLUT": []
+          },
+          {
+            "LUTIndices": [
+              {
+                "NumInitPtrs": 0,
+                "NumEvalPtrs": 1
+              }
+            ],
+            "TrackLUT": [
+              {
+                "TrackPtr": {
+                  "SequenceID": {
+                    "Value": 0
+                  },
+                  "TrackIdentifier": {
+                    "Value": 0
+                  }
+                },
+                "NumChildren": 1
+              }
+            ],
+            "SectionLUT": [
+              {
+                "ChildIndex": 0,
+                "Flags": "ESectionEvaluationFlags::None",
+                "ForcedTime": {
+                  "Value": -2147483648
+                }
+              }
+            ]
+          },
+          {
+            "LUTIndices": [],
+            "TrackLUT": [],
+            "SectionLUT": []
+          }
+        ],
+        "MetaData": [
+          {
+            "ActiveSequences": [
+              {
+                "Value": 0
+              }
+            ],
+            "ActiveEntities": []
+          },
+          {
+            "ActiveSequences": [
+              {
+                "Value": 0
+              }
+            ],
+            "ActiveEntities": [
+              {
+                "Key": {
+                  "SequenceID": {
+                    "Value": 0
+                  },
+                  "TrackIdentifier": {
+                    "Value": 0
+                  },
+                  "SectionIndex": 0
+                },
+                "SetupIndex": 0,
+                "TearDownIndex": 65535
+              }
+            ]
+          },
+          {
+            "ActiveSequences": [
+              {
+                "Value": 0
+              }
+            ],
+            "ActiveEntities": []
+          }
+        ]
+      },
+      "CompiledSignature": "55AD3CF0-45E16297-E5B43793-6CB0310F",
+      "CompilerVersion": "7D4B9809-2FAC4A6B-964ECF72-D8279EF8",
+      "AccumulatedMask": {
+        "bEvaluationTemplate": true,
+        "bEvaluationTemplateField": true,
+        "bEntityComponentField": true
+      },
+      "AllocatedMask": {
+        "bEvaluationTemplate": true,
+        "bEvaluationTemplateField": true,
+        "bEntityComponentField": true
+      }
+    }
+  },
+  {
+    "Type": "MovieSceneCompiledData",
+    "Name": "CompiledData",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneCompiledData'",
+    "Outer": {
+      "ObjectName": "WidgetAnimation'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show02_INST'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.98"
+    },
+    "Properties": {
+      "EntityComponentField": {
+        "PersistentEntityTree": {
+          "SerializedData": {
+            "Data": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 4,
+                  "Capacity": 4
+                }
+              ],
+              "Items": [
+                {
+                  "EntityIndex": 0,
+                  "MetaDataIndex": -1
+                },
+                {
+                  "EntityIndex": 1,
+                  "MetaDataIndex": -1
+                },
+                {
+                  "EntityIndex": 2,
+                  "MetaDataIndex": -1
+                },
+                {
+                  "EntityIndex": 3,
+                  "MetaDataIndex": -1
+                }
+              ]
+            },
+            "RootNode": {
+              "Range": {
+                "LowerBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                },
+                "UpperBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                }
+              },
+              "Parent": {
+                "ChildrenHandle": {
+                  "EntryIndex": -1
+                },
+                "Index": -1
+              },
+              "ChildrenID": {
+                "EntryIndex": 0
+              },
+              "DataID": {
+                "EntryIndex": -1
+              }
+            },
+            "ChildNodes": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 1,
+                  "Capacity": 1
+                }
+              ],
+              "Items": [
+                {
+                  "Range": {
+                    "LowerBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 0
+                      }
+                    },
+                    "UpperBound": {
+                      "Type": 0,
+                      "Value": {
+                        "Value": 32000
+                      }
+                    }
+                  },
+                  "Parent": {
+                    "ChildrenHandle": {
+                      "EntryIndex": -1
+                    },
+                    "Index": 0
+                  },
+                  "ChildrenID": {
+                    "EntryIndex": -1
+                  },
+                  "DataID": {
+                    "EntryIndex": 0
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "Entities": [
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieScene2DTransformSection'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show02_INST.Anim_Show02.MovieScene2DTransformTrack_1.MovieScene2DTransformSection_0'",
+                "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.14"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 0
+          },
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieSceneFloatSection'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show02_INST.Anim_Show02.MovieSceneFloatTrack_2.MovieSceneFloatSection_0'",
+                "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.71"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 1
+          },
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieScene2DTransformSection'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show02_INST.Anim_Show02.MovieScene2DTransformTrack_2.MovieScene2DTransformSection_0'",
+                "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.15"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 2
+          },
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieSceneFloatSection'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show02_INST.Anim_Show02.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+                "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.69"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 3
+          }
+        ],
+        "SharedMetaData": [
+          {
+            "ObjectBindingID": "A3BB7D8E-4F5DD412-16C7C280-346122FF"
+          },
+          {
+            "ObjectBindingID": "A3BB7D8E-4F5DD412-16C7C280-346122FF"
+          },
+          {
+            "ObjectBindingID": "22E40893-4321D2B7-16A5F8BA-68C79CFD"
+          },
+          {
+            "ObjectBindingID": "22E40893-4321D2B7-16A5F8BA-68C79CFD"
+          }
+        ]
+      },
+      "CompiledSignature": "07FD3968-4438EC81-C9D03598-F147EDAC",
+      "CompilerVersion": "7D4B9809-2FAC4A6B-964ECF72-D8279EF8",
+      "AccumulatedMask": {
+        "bEntityComponentField": true
+      },
+      "AllocatedMask": {
+        "bEntityComponentField": true
+      }
+    }
+  },
+  {
+    "Type": "MovieSceneCompiledData",
+    "Name": "CompiledData",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneCompiledData'",
+    "Outer": {
+      "ObjectName": "WidgetAnimation'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show_INST'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.99"
+    },
+    "Properties": {
+      "EvaluationTemplate": {
+        "Tracks": [
+          {
+            "Key": {
+              "Value": 0
+            },
+            "Value": {
+              "ObjectBindingID": "9AA82C8A-45F431F8-34FD96A2-F41244F2",
+              "EvaluationPriority": 1000,
+              "EvaluationMethod": "EEvaluationMethod::Static",
+              "SourceTrack": {
+                "ObjectName": "MovieSceneByteTrack'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show_INST.Anim_Show.MovieSceneByteTrack_0'",
+                "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.59"
+              },
+              "ChildTemplates": [
+                {
+                  "TypeName": "/Script/MovieSceneTracks.MovieSceneBytePropertySectionTemplate",
+                  "Data": {
+                    "ByteCurve": {
+                      "Times": [
+                        {
+                          "Value": 0
+                        }
+                      ],
+                      "DefaultValue": 0,
+                      "bHasDefaultValue": false,
+                      "Values": [
+                        4
+                      ],
+                      "Enum": {
+                        "ObjectName": "Enum'ESlateVisibility'",
+                        "ObjectPath": "/Script/UMG"
+                      }
+                    },
+                    "PropertyData": {
+                      "PropertyName": "Visibility",
+                      "PropertyPath": "Visibility"
+                    },
+                    "CompletionMode": "EMovieSceneCompletionMode::KeepState",
+                    "SourceSectionPtr": {
+                      "ObjectName": "MovieSceneByteSection'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show_INST.Anim_Show.MovieSceneByteTrack_0.MovieSceneByteSection_0'",
+                      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.56"
+                    }
+                  }
+                }
+              ],
+              "TrackTemplate": {
+                "TypeName": "",
+                "Data": null
+              },
+              "EvaluationGroup": "None",
+              "bEvaluateInPreroll": false,
+              "bEvaluateInPostroll": false,
+              "bTearDownPriority": false
+            }
+          }
+        ],
+        "TemplateLedger": {
+          "LastTrackIdentifier": {
+            "Value": 0
+          },
+          "TrackSignatureToTrackIdentifier": [
+            {
+              "Key": "A5B74F4A-4A86ABF8-3A8B4F95-77D6ED57",
+              "Value": {
+                "Value": 0
+              }
+            }
+          ]
+        }
+      },
+      "EntityComponentField": {
+        "PersistentEntityTree": {
+          "SerializedData": {
+            "Data": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 4,
+                  "Capacity": 4
+                }
+              ],
+              "Items": [
+                {
+                  "EntityIndex": 0,
+                  "MetaDataIndex": -1
+                },
+                {
+                  "EntityIndex": 1,
+                  "MetaDataIndex": -1
+                },
+                {
+                  "EntityIndex": 2,
+                  "MetaDataIndex": -1
+                },
+                {
+                  "EntityIndex": 3,
+                  "MetaDataIndex": -1
+                }
+              ]
+            },
+            "RootNode": {
+              "Range": {
+                "LowerBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                },
+                "UpperBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                }
+              },
+              "Parent": {
+                "ChildrenHandle": {
+                  "EntryIndex": -1
+                },
+                "Index": -1
+              },
+              "ChildrenID": {
+                "EntryIndex": 0
+              },
+              "DataID": {
+                "EntryIndex": -1
+              }
+            },
+            "ChildNodes": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 1,
+                  "Capacity": 1
+                }
+              ],
+              "Items": [
+                {
+                  "Range": {
+                    "LowerBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 0
+                      }
+                    },
+                    "UpperBound": {
+                      "Type": 0,
+                      "Value": {
+                        "Value": 2000
+                      }
+                    }
+                  },
+                  "Parent": {
+                    "ChildrenHandle": {
+                      "EntryIndex": -1
+                    },
+                    "Index": 0
+                  },
+                  "ChildrenID": {
+                    "EntryIndex": -1
+                  },
+                  "DataID": {
+                    "EntryIndex": 0
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "Entities": [
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieSceneFloatSection'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show_INST.Anim_Show.MovieSceneFloatTrack_1.MovieSceneFloatSection_0'",
+                "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.72"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 0
+          },
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieSceneFloatSection'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show_INST.Anim_Show.MovieSceneFloatTrack_3.MovieSceneFloatSection_0'",
+                "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.73"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 1
+          },
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieSceneFloatSection'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show_INST.Anim_Show.MovieSceneFloatTrack_4.MovieSceneFloatSection_0'",
+                "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.74"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 2
+          },
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieSceneFloatSection'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show_INST.Anim_Show.MovieSceneFloatTrack_5.MovieSceneFloatSection_0'",
+                "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.75"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 3
+          }
+        ],
+        "SharedMetaData": [
+          {
+            "ObjectBindingID": "8CE48E64-43F165D5-1A1CB8BE-EA904B57"
+          },
+          {
+            "ObjectBindingID": "2DCAFF80-4BBAB239-DBFE238C-3A5D478D"
+          },
+          {
+            "ObjectBindingID": "DE62C4F5-40537110-821AA19C-8F44502B"
+          },
+          {
+            "ObjectBindingID": "9AA82C8A-45F431F8-34FD96A2-F41244F2"
+          }
+        ]
+      },
+      "TrackTemplateField": {
+        "Ranges": [
+          {
+            "Value": {
+              "LowerBound": {
+                "Type": 2,
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": 0,
+                "Value": {
+                  "Value": 0
+                }
+              }
+            }
+          },
+          {
+            "Value": {
+              "LowerBound": {
+                "Type": 1,
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": 0,
+                "Value": {
+                  "Value": 30000
+                }
+              }
+            }
+          },
+          {
+            "Value": {
+              "LowerBound": {
+                "Type": 1,
+                "Value": {
+                  "Value": 30000
+                }
+              },
+              "UpperBound": {
+                "Type": 2,
+                "Value": {
+                  "Value": 0
+                }
+              }
+            }
+          }
+        ],
+        "Groups": [
+          {
+            "LUTIndices": [],
+            "TrackLUT": [],
+            "SectionLUT": []
+          },
+          {
+            "LUTIndices": [
+              {
+                "NumInitPtrs": 0,
+                "NumEvalPtrs": 1
+              }
+            ],
+            "TrackLUT": [
+              {
+                "TrackPtr": {
+                  "SequenceID": {
+                    "Value": 0
+                  },
+                  "TrackIdentifier": {
+                    "Value": 0
+                  }
+                },
+                "NumChildren": 1
+              }
+            ],
+            "SectionLUT": [
+              {
+                "ChildIndex": 0,
+                "Flags": "ESectionEvaluationFlags::None",
+                "ForcedTime": {
+                  "Value": -2147483648
+                }
+              }
+            ]
+          },
+          {
+            "LUTIndices": [],
+            "TrackLUT": [],
+            "SectionLUT": []
+          }
+        ],
+        "MetaData": [
+          {
+            "ActiveSequences": [
+              {
+                "Value": 0
+              }
+            ],
+            "ActiveEntities": []
+          },
+          {
+            "ActiveSequences": [
+              {
+                "Value": 0
+              }
+            ],
+            "ActiveEntities": [
+              {
+                "Key": {
+                  "SequenceID": {
+                    "Value": 0
+                  },
+                  "TrackIdentifier": {
+                    "Value": 0
+                  },
+                  "SectionIndex": 0
+                },
+                "SetupIndex": 0,
+                "TearDownIndex": 65535
+              }
+            ]
+          },
+          {
+            "ActiveSequences": [
+              {
+                "Value": 0
+              }
+            ],
+            "ActiveEntities": []
+          }
+        ]
+      },
+      "CompiledSignature": "CC46F6B7-4126A71A-64FE0AA2-A9380D08",
+      "CompilerVersion": "7D4B9809-2FAC4A6B-964ECF72-D8279EF8",
+      "AccumulatedMask": {
+        "bEvaluationTemplate": true,
+        "bEvaluationTemplateField": true,
+        "bEntityComponentField": true
+      },
+      "AllocatedMask": {
+        "bEvaluationTemplate": true,
+        "bEvaluationTemplateField": true,
+        "bEntityComponentField": true
+      }
+    }
+  },
+  {
+    "Type": "MovieSceneFloatSection",
+    "Name": "MovieSceneFloatSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneFloatSection'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatTrack'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Guanbi_INST.Anim_Guanbi.MovieSceneFloatTrack_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.76"
+    },
+    "Properties": {
+      "FloatCurve": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Guanbi_INST.Anim_Guanbi.MovieSceneFloatTrack_0.MovieSceneFloatSection_0.EaseInFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.20"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Guanbi_INST.Anim_Guanbi.MovieSceneFloatTrack_0.MovieSceneFloatSection_0.EaseOutFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.21"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 30000
+            }
+          }
+        }
+      },
+      "Signature": "8B8C985E-42AFC5DA-00F6D7A7-E35473DC"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatSection",
+    "Name": "MovieSceneFloatSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneFloatSection'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatTrack'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Guanbi_INST.Anim_Guanbi.MovieSceneFloatTrack_1'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.77"
+    },
+    "Properties": {
+      "FloatCurve": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Guanbi_INST.Anim_Guanbi.MovieSceneFloatTrack_1.MovieSceneFloatSection_0.EaseInFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.22"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Guanbi_INST.Anim_Guanbi.MovieSceneFloatTrack_1.MovieSceneFloatSection_0.EaseOutFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.23"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 2000
+            }
+          }
+        }
+      },
+      "Signature": "AC8AE07E-47A36137-8ADE63BD-4DCCD773"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatSection",
+    "Name": "MovieSceneFloatSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneFloatSection'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatTrack'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Guanbi_INST.Anim_Guanbi.MovieSceneFloatTrack_2'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.78"
+    },
+    "Properties": {
+      "FloatCurve": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Guanbi_INST.Anim_Guanbi.MovieSceneFloatTrack_2.MovieSceneFloatSection_0.EaseInFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.24"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Guanbi_INST.Anim_Guanbi.MovieSceneFloatTrack_2.MovieSceneFloatSection_0.EaseOutFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.25"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 2000
+            }
+          }
+        }
+      },
+      "Signature": "36ED96DD-462C1E47-904993BC-2E66FE25"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatSection",
+    "Name": "MovieSceneFloatSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneFloatSection'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatTrack'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Guanbi_INST.Anim_Guanbi.MovieSceneFloatTrack_3'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.79"
+    },
+    "Properties": {
+      "FloatCurve": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Guanbi_INST.Anim_Guanbi.MovieSceneFloatTrack_3.MovieSceneFloatSection_0.EaseInFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.26"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Guanbi_INST.Anim_Guanbi.MovieSceneFloatTrack_3.MovieSceneFloatSection_0.EaseOutFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.27"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 2000
+            }
+          }
+        }
+      },
+      "Signature": "A5D766FC-4629DF2A-9DE36785-987DAAFD"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatSection",
+    "Name": "MovieSceneFloatSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneFloatSection'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatTrack'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Guanbi_INST.Anim_Guanbi.MovieSceneFloatTrack_4'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.80"
+    },
+    "Properties": {
+      "FloatCurve": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Guanbi_INST.Anim_Guanbi.MovieSceneFloatTrack_4.MovieSceneFloatSection_0.EaseInFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.28"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Guanbi_INST.Anim_Guanbi.MovieSceneFloatTrack_4.MovieSceneFloatSection_0.EaseOutFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.29"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 2000
+            }
+          }
+        }
+      },
+      "Signature": "D279B130-4C29E1E0-BD915A99-35E2FCD6"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatSection",
+    "Name": "MovieSceneFloatSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneFloatSection'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatTrack'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Guanbi_INST.Anim_Guanbi.MovieSceneFloatTrack_5'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.81"
+    },
+    "Properties": {
+      "FloatCurve": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Guanbi_INST.Anim_Guanbi.MovieSceneFloatTrack_5.MovieSceneFloatSection_0.EaseInFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.30"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Guanbi_INST.Anim_Guanbi.MovieSceneFloatTrack_5.MovieSceneFloatSection_0.EaseOutFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.31"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 2000
+            }
+          }
+        }
+      },
+      "Signature": "22D3BDCB-47178A09-95D4F7BA-BB7F9BB4"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatSection",
+    "Name": "MovieSceneFloatSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneFloatSection'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatTrack'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show02_INST.Anim_Show02.MovieSceneFloatTrack_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.82"
+    },
+    "Properties": {
+      "FloatCurve": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 4000
+          },
+          {
+            "Value": 30000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 0.5,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show02_INST.Anim_Show02.MovieSceneFloatTrack_0.MovieSceneFloatSection_0.EaseInFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.38"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show02_INST.Anim_Show02.MovieSceneFloatTrack_0.MovieSceneFloatSection_0.EaseOutFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.39"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 32000
+            }
+          }
+        }
+      },
+      "Signature": "03B18ED7-498FFA3A-00D046AC-61D0693C"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatSection",
+    "Name": "MovieSceneFloatSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneFloatSection'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatTrack'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show02_INST.Anim_Show02.MovieSceneFloatTrack_1'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.83"
+    },
+    "Properties": {
+      "FloatCurve": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show02_INST.Anim_Show02.MovieSceneFloatTrack_1.MovieSceneFloatSection_0.EaseInFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.40"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show02_INST.Anim_Show02.MovieSceneFloatTrack_1.MovieSceneFloatSection_0.EaseOutFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.41"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 32000
+            }
+          }
+        }
+      },
+      "Signature": "EB230D0E-4A09CDAB-15A706A5-1F42C064"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatSection",
+    "Name": "MovieSceneFloatSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneFloatSection'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatTrack'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show02_INST.Anim_Show02.MovieSceneFloatTrack_2'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.84"
+    },
+    "Properties": {
+      "FloatCurve": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 4000
+          },
+          {
+            "Value": 20000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 0.5,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show02_INST.Anim_Show02.MovieSceneFloatTrack_2.MovieSceneFloatSection_0.EaseInFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.42"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show02_INST.Anim_Show02.MovieSceneFloatTrack_2.MovieSceneFloatSection_0.EaseOutFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.43"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 32000
+            }
+          }
+        }
+      },
+      "Signature": "BF9E9B79-4E623549-9F56C09E-082E6EBD"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatSection",
+    "Name": "MovieSceneFloatSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneFloatSection'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatTrack'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show_INST.Anim_Show.MovieSceneFloatTrack_1'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.85"
+    },
+    "Properties": {
+      "FloatCurve": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          }
+        ],
+        "Values": [
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show_INST.Anim_Show.MovieSceneFloatTrack_1.MovieSceneFloatSection_0.EaseInFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.46"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show_INST.Anim_Show.MovieSceneFloatTrack_1.MovieSceneFloatSection_0.EaseOutFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.47"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 2000
+            }
+          }
+        }
+      },
+      "Signature": "338991D8-4D1FAA3B-C62D6A9E-333BD63E"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatSection",
+    "Name": "MovieSceneFloatSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneFloatSection'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatTrack'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show_INST.Anim_Show.MovieSceneFloatTrack_3'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.86"
+    },
+    "Properties": {
+      "FloatCurve": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          }
+        ],
+        "Values": [
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show_INST.Anim_Show.MovieSceneFloatTrack_3.MovieSceneFloatSection_0.EaseInFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.48"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show_INST.Anim_Show.MovieSceneFloatTrack_3.MovieSceneFloatSection_0.EaseOutFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.49"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 2000
+            }
+          }
+        }
+      },
+      "Signature": "EFEC4CC1-4397FA58-07A7C3B2-E69B28A0"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatSection",
+    "Name": "MovieSceneFloatSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneFloatSection'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatTrack'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show_INST.Anim_Show.MovieSceneFloatTrack_4'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.87"
+    },
+    "Properties": {
+      "FloatCurve": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          }
+        ],
+        "Values": [
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show_INST.Anim_Show.MovieSceneFloatTrack_4.MovieSceneFloatSection_0.EaseInFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.50"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show_INST.Anim_Show.MovieSceneFloatTrack_4.MovieSceneFloatSection_0.EaseOutFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.51"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 2000
+            }
+          }
+        }
+      },
+      "Signature": "1AF56E43-4900C551-E0E9B2A6-AF46266F"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatSection",
+    "Name": "MovieSceneFloatSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneFloatSection'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatTrack'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show_INST.Anim_Show.MovieSceneFloatTrack_5'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.88"
+    },
+    "Properties": {
+      "FloatCurve": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          }
+        ],
+        "Values": [
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show_INST.Anim_Show.MovieSceneFloatTrack_5.MovieSceneFloatSection_0.EaseInFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.52"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show_INST.Anim_Show.MovieSceneFloatTrack_5.MovieSceneFloatSection_0.EaseOutFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.53"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 2000
+            }
+          }
+        }
+      },
+      "Signature": "E130BC4D-4E01EFAB-3C6D55BE-52CE58C6"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatTrack",
+    "Name": "MovieSceneFloatTrack_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneFloatTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Guanbi_INST.Anim_Guanbi'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.11"
+    },
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderOpacity",
+        "PropertyPath": "RenderOpacity",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneFloatSection'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Guanbi_INST.Anim_Guanbi.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.63"
+        }
+      ],
+      "bIsEvalDisabled": true,
+      "EvaluationFieldGuid": "8A8AAB67-479CE804-EECB8E9B-8BEC4798",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneFloatSection'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Guanbi_INST.Anim_Guanbi.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.63"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Exclusive",
+                "Value": {
+                  "Value": 30000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "E98B4C39-4DF2B4B5-AEF62C80-ABE444ED"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatTrack",
+    "Name": "MovieSceneFloatTrack_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneFloatTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Guanbi_INST.Anim_Guanbi'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.11"
+    },
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderOpacity",
+        "PropertyPath": "RenderOpacity",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneFloatSection'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Guanbi_INST.Anim_Guanbi.MovieSceneFloatTrack_1.MovieSceneFloatSection_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.64"
+        }
+      ],
+      "EvaluationFieldGuid": "6AC1D08E-4749EEF9-F95DE382-006D9500",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneFloatSection'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Guanbi_INST.Anim_Guanbi.MovieSceneFloatTrack_1.MovieSceneFloatSection_0'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.64"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Exclusive",
+                "Value": {
+                  "Value": 2000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "6AC1D08E-4749EEF9-F95DE382-006D9500"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatTrack",
+    "Name": "MovieSceneFloatTrack_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneFloatTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Guanbi_INST.Anim_Guanbi'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.11"
+    },
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderOpacity",
+        "PropertyPath": "RenderOpacity",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneFloatSection'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Guanbi_INST.Anim_Guanbi.MovieSceneFloatTrack_2.MovieSceneFloatSection_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.65"
+        }
+      ],
+      "bIsEvalDisabled": true,
+      "EvaluationFieldGuid": "9F7C1CE2-41D7BD25-A07207A0-58CE2131",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneFloatSection'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Guanbi_INST.Anim_Guanbi.MovieSceneFloatTrack_2.MovieSceneFloatSection_0'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.65"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Exclusive",
+                "Value": {
+                  "Value": 2000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "AE44B302-4D86A1CA-A848A893-F334208D"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatTrack",
+    "Name": "MovieSceneFloatTrack_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneFloatTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Guanbi_INST.Anim_Guanbi'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.11"
+    },
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderOpacity",
+        "PropertyPath": "RenderOpacity",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneFloatSection'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Guanbi_INST.Anim_Guanbi.MovieSceneFloatTrack_3.MovieSceneFloatSection_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.66"
+        }
+      ],
+      "EvaluationFieldGuid": "0B25EA62-4192F6EA-1629478A-739C315A",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneFloatSection'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Guanbi_INST.Anim_Guanbi.MovieSceneFloatTrack_3.MovieSceneFloatSection_0'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.66"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Exclusive",
+                "Value": {
+                  "Value": 2000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "0B25EA62-4192F6EA-1629478A-739C315A"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatTrack",
+    "Name": "MovieSceneFloatTrack_4",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneFloatTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Guanbi_INST.Anim_Guanbi'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.11"
+    },
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderOpacity",
+        "PropertyPath": "RenderOpacity",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneFloatSection'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Guanbi_INST.Anim_Guanbi.MovieSceneFloatTrack_4.MovieSceneFloatSection_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.67"
+        }
+      ],
+      "EvaluationFieldGuid": "7500DFF6-4359B105-06D85D8A-95A40178",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneFloatSection'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Guanbi_INST.Anim_Guanbi.MovieSceneFloatTrack_4.MovieSceneFloatSection_0'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.67"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Exclusive",
+                "Value": {
+                  "Value": 2000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "7500DFF6-4359B105-06D85D8A-95A40178"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatTrack",
+    "Name": "MovieSceneFloatTrack_5",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneFloatTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Guanbi_INST.Anim_Guanbi'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.11"
+    },
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderOpacity",
+        "PropertyPath": "RenderOpacity",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneFloatSection'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Guanbi_INST.Anim_Guanbi.MovieSceneFloatTrack_5.MovieSceneFloatSection_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.68"
+        }
+      ],
+      "EvaluationFieldGuid": "E2BE8C58-48261ACE-703A3581-7DA65CDC",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneFloatSection'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Guanbi_INST.Anim_Guanbi.MovieSceneFloatTrack_5.MovieSceneFloatSection_0'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.68"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Exclusive",
+                "Value": {
+                  "Value": 2000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "E2BE8C58-48261ACE-703A3581-7DA65CDC"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatTrack",
+    "Name": "MovieSceneFloatTrack_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneFloatTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show02_INST.Anim_Show02'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.12"
+    },
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderOpacity",
+        "PropertyPath": "RenderOpacity",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneFloatSection'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show02_INST.Anim_Show02.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.69"
+        }
+      ],
+      "EvaluationFieldGuid": "07DBFCD2-4E660E33-C2B6299A-603D0D2B",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneFloatSection'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show02_INST.Anim_Show02.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.69"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Exclusive",
+                "Value": {
+                  "Value": 32000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "07DBFCD2-4E660E33-C2B6299A-603D0D2B"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatTrack",
+    "Name": "MovieSceneFloatTrack_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneFloatTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show02_INST.Anim_Show02'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.12"
+    },
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderOpacity",
+        "PropertyPath": "RenderOpacity",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneFloatSection'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show02_INST.Anim_Show02.MovieSceneFloatTrack_1.MovieSceneFloatSection_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.70"
+        }
+      ],
+      "bIsEvalDisabled": true,
+      "EvaluationFieldGuid": "48E64746-4C676BB6-E7FF0EA8-BBD06D97",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneFloatSection'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show02_INST.Anim_Show02.MovieSceneFloatTrack_1.MovieSceneFloatSection_0'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.70"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Exclusive",
+                "Value": {
+                  "Value": 32000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "8B228E94-4D74B2A3-B77966B4-D44EE74C"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatTrack",
+    "Name": "MovieSceneFloatTrack_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneFloatTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show02_INST.Anim_Show02'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.12"
+    },
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderOpacity",
+        "PropertyPath": "RenderOpacity",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneFloatSection'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show02_INST.Anim_Show02.MovieSceneFloatTrack_2.MovieSceneFloatSection_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.71"
+        }
+      ],
+      "EvaluationFieldGuid": "6F730490-4394E73B-2B3AA7B3-7E94791C",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneFloatSection'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show02_INST.Anim_Show02.MovieSceneFloatTrack_2.MovieSceneFloatSection_0'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.71"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Exclusive",
+                "Value": {
+                  "Value": 32000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "6F730490-4394E73B-2B3AA7B3-7E94791C"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatTrack",
+    "Name": "MovieSceneFloatTrack_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneFloatTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show_INST.Anim_Show'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.13"
+    },
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderOpacity",
+        "PropertyPath": "RenderOpacity",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneFloatSection'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show_INST.Anim_Show.MovieSceneFloatTrack_1.MovieSceneFloatSection_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.72"
+        }
+      ],
+      "EvaluationFieldGuid": "E06D99DB-486BA080-C37307AC-27CE33FA",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneFloatSection'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show_INST.Anim_Show.MovieSceneFloatTrack_1.MovieSceneFloatSection_0'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.72"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Exclusive",
+                "Value": {
+                  "Value": 2000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "E06D99DB-486BA080-C37307AC-27CE33FA"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatTrack",
+    "Name": "MovieSceneFloatTrack_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneFloatTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show_INST.Anim_Show'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.13"
+    },
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderOpacity",
+        "PropertyPath": "RenderOpacity",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneFloatSection'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show_INST.Anim_Show.MovieSceneFloatTrack_3.MovieSceneFloatSection_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.73"
+        }
+      ],
+      "EvaluationFieldGuid": "E7F58AFB-4CF798DA-D2B16183-F9398382",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneFloatSection'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show_INST.Anim_Show.MovieSceneFloatTrack_3.MovieSceneFloatSection_0'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.73"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Exclusive",
+                "Value": {
+                  "Value": 2000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "E7F58AFB-4CF798DA-D2B16183-F9398382"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatTrack",
+    "Name": "MovieSceneFloatTrack_4",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneFloatTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show_INST.Anim_Show'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.13"
+    },
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderOpacity",
+        "PropertyPath": "RenderOpacity",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneFloatSection'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show_INST.Anim_Show.MovieSceneFloatTrack_4.MovieSceneFloatSection_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.74"
+        }
+      ],
+      "EvaluationFieldGuid": "5C27A946-46E3CD69-FB8B90AE-8B688EAE",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneFloatSection'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show_INST.Anim_Show.MovieSceneFloatTrack_4.MovieSceneFloatSection_0'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.74"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Exclusive",
+                "Value": {
+                  "Value": 2000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "5C27A946-46E3CD69-FB8B90AE-8B688EAE"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatTrack",
+    "Name": "MovieSceneFloatTrack_5",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneFloatTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show_INST.Anim_Show'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.13"
+    },
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderOpacity",
+        "PropertyPath": "RenderOpacity",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneFloatSection'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show_INST.Anim_Show.MovieSceneFloatTrack_5.MovieSceneFloatSection_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.75"
+        }
+      ],
+      "EvaluationFieldGuid": "FD746354-484B0C90-EB836CB6-87F8F53E",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneFloatSection'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show_INST.Anim_Show.MovieSceneFloatTrack_5.MovieSceneFloatSection_0'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.75"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Exclusive",
+                "Value": {
+                  "Value": 2000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "FD746354-484B0C90-EB836CB6-87F8F53E"
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "glow01",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'HeroMagicSpirit2WidgetProgressBarMode1_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.100"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/UIEffect/UIMaterial/Inst/HeroCharacter/HeroMagicSpirit/UI_MI_HeroMagicSpirit_01.UI_MI_HeroMagicSpirit_01",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 61.44,
+          "Y": 61.44
+        }
+      },
+      "ColorAndOpacity": {
+        "R": 0.208637,
+        "G": 1.0,
+        "B": 0.0,
+        "A": 1.0,
+        "Hex": "7EFF00"
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'HeroMagicSpirit2WidgetProgressBarMode1_C:WidgetTree.CanvasPanel_Root.CanvasPanelSlot_3'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.6"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible",
+      "RenderOpacity": 0.0
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "glow02",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'HeroMagicSpirit2WidgetProgressBarMode1_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.100"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/UIEffect/UIMaterial/Inst/HeroCharacter/FemaleKnight01/UI_MI_FemaleKnight01_2.UI_MI_FemaleKnight01_2",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 61.44,
+          "Y": 61.44
+        }
+      },
+      "ColorAndOpacity": {
+        "R": 0.119439,
+        "G": 1.0,
+        "B": 0.0,
+        "A": 1.0,
+        "Hex": "61FF00"
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'HeroMagicSpirit2WidgetProgressBarMode1_C:WidgetTree.CanvasPanel_Root.CanvasPanelSlot_5'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.7"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible",
+      "RenderOpacity": 0.0
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "glow03",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'HeroMagicSpirit2WidgetProgressBarMode1_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.100"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/UIEffect/UIMaterial/Inst/HeroCharacter/HeroCharacterV2/UI_MI_HeroCharacterV2_04.UI_MI_HeroCharacterV2_04",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 61.44,
+          "Y": 61.44
+        }
+      },
+      "ColorAndOpacity": {
+        "R": 0.401583,
+        "G": 1.0,
+        "B": 0.31329,
+        "A": 0.5,
+        "Hex": "7FAAFF98"
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'HeroMagicSpirit2WidgetProgressBarMode1_C:WidgetTree.CanvasPanel_Root.CanvasPanelSlot_6'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.8"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible",
+      "RenderOpacity": 0.0
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "glow04",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'HeroMagicSpirit2WidgetProgressBarMode1_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.100"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/UIEffect/UIMaterial/Inst/Fight/UI_MI_Fx_Flare_005_Ww_Lz.UI_MI_Fx_Flare_005_Ww_Lz",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 61.44,
+          "Y": 61.44
+        }
+      },
+      "ColorAndOpacity": {
+        "R": 0.401583,
+        "G": 1.0,
+        "B": 0.31329,
+        "A": 1.0,
+        "Hex": "AAFF98"
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'HeroMagicSpirit2WidgetProgressBarMode1_C:WidgetTree.CanvasPanel_Root.CanvasPanelSlot_9'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.10"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible",
+      "RenderOpacity": 0.0
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "glow05",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'HeroMagicSpirit2WidgetProgressBarMode1_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.100"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/Season/S8/UI/UIEffect/Material/S8HomeBtn/UI_MI_S8HomeBtn_01.UI_MI_S8HomeBtn_01",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 61.44,
+          "Y": 61.44
+        }
+      },
+      "ColorAndOpacity": {
+        "R": 0.401978,
+        "G": 1.0,
+        "B": 0.313989,
+        "A": 1.0,
+        "Hex": "AAFF98"
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'HeroMagicSpirit2WidgetProgressBarMode1_C:WidgetTree.CanvasPanel_Root.CanvasPanelSlot_10'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.3"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible",
+      "RenderOpacity": 0.0
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "ImageBg",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'HeroMagicSpirit2WidgetProgressBarMode1_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.100"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/TexturesAtlas/Fight/Atlas/UI_Fight_S9Moling2_01BG_Sprite.UI_Fight_S9Moling2_01BG_Sprite",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 161.28,
+          "Y": 163.2
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'HeroMagicSpirit2WidgetProgressBarMode1_C:WidgetTree.CanvasPanel_Root.CanvasPanelSlot_7'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.9"
+      },
+      "bIsVariable": false,
+      "Visibility": "ESlateVisibility::HitTestInvisible"
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "Progress",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'HeroMagicSpirit2WidgetProgressBarMode1_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.100"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/TexturesAtlas/Fight/Atlas/UI_Fight_S9Moling2_01_Sprite.UI_Fight_S9Moling2_01_Sprite",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 134.4,
+          "Y": 134.4
+        }
+      },
+      "Slot": {
+        "ObjectName": "WrapBoxSlot'HeroMagicSpirit2WidgetProgressBarMode1_C:WidgetTree.Clipper.WrapBoxSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.102"
+      },
+      "Visibility": "ESlateVisibility::HitTestInvisible"
+    }
+  },
+  {
+    "Type": "UIParticleEmitter",
+    "Name": "par01",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIParticleEmitter'",
+    "Outer": {
+      "ObjectName": "WidgetTree'HeroMagicSpirit2WidgetProgressBarMode1_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.100"
+    },
+    "Properties": {
+      "Asset": {
+        "ObjectName": "UIParticleEmitterAsset'UI_P_HeroMagicSpirit_01'",
+        "ObjectPath": "UE_game/Content/Art/UI/UIEffect/UIParticle/HeroCharacter/HeroMagicSpirit/UI_P_HeroMagicSpirit_01.0"
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'HeroMagicSpirit2WidgetProgressBarMode1_C:WidgetTree.CanvasPanel_Root.CanvasPanelSlot_13'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.4"
+      },
+      "RenderTransform": {
+        "Scale": {
+          "X": 1.92,
+          "Y": 1.92
+        }
+      }
+    }
+  },
+  {
+    "Type": "WidgetAnimation",
+    "Name": "Anim_Guanbi_INST",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetAnimation'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'HeroMagicSpirit2WidgetProgressBarMode1_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.0"
+    },
+    "Properties": {
+      "MovieScene": {
+        "ObjectName": "MovieScene'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Guanbi_INST.Anim_Guanbi'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.11"
+      },
+      "AnimationBindings": [
+        {
+          "WidgetName": "glow01",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "9BB46FBE-4BE47B9E-093E4B9C-E878ADC3",
+          "bIsRootWidget": false
+        },
+        {
+          "WidgetName": "glow04",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "F639E2EF-44EAB116-F1F50095-FFCEE573",
+          "bIsRootWidget": false
+        },
+        {
+          "WidgetName": "glow05",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "C9E4D3FE-45782590-3ABD8F95-9FEEB5F9",
+          "bIsRootWidget": false
+        },
+        {
+          "WidgetName": "glow02",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "96E6FBAC-4A0BAEAF-973AAFA8-1B8D64D3",
+          "bIsRootWidget": false
+        },
+        {
+          "WidgetName": "glow03",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "89FD8192-4944AA80-E89CAFB7-50DA9622",
+          "bIsRootWidget": false
+        },
+        {
+          "WidgetName": "par01",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "5CD1B60B-481E8703-663DA9B7-656D0A50",
+          "bIsRootWidget": false
+        }
+      ],
+      "DisplayLabel": "Anim_Guanbi",
+      "CompiledData": {
+        "ObjectName": "MovieSceneCompiledData'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Guanbi_INST.CompiledData'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.60"
+      },
+      "Signature": "55AD3CF0-45E16297-E5B43793-6CB0310F"
+    }
+  },
+  {
+    "Type": "WidgetAnimation",
+    "Name": "Anim_Show02_INST",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetAnimation'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'HeroMagicSpirit2WidgetProgressBarMode1_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.0"
+    },
+    "Properties": {
+      "MovieScene": {
+        "ObjectName": "MovieScene'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show02_INST.Anim_Show02'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.12"
+      },
+      "AnimationBindings": [
+        {
+          "WidgetName": "glow04",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "A3BB7D8E-4F5DD412-16C7C280-346122FF",
+          "bIsRootWidget": false
+        },
+        {
+          "WidgetName": "glow05",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "22E40893-4321D2B7-16A5F8BA-68C79CFD",
+          "bIsRootWidget": false
+        },
+        {
+          "WidgetName": "par01",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "933C8419-40746EA1-8634D593-0B2DDE92",
+          "bIsRootWidget": false
+        },
+        {
+          "WidgetName": "glow01",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "BE2E4931-4F0D61FA-01EFB0BE-363658CE",
+          "bIsRootWidget": false
+        },
+        {
+          "WidgetName": "glow02",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "3DD02C11-4ED4726A-5326B4B1-A4F25467",
+          "bIsRootWidget": false
+        },
+        {
+          "WidgetName": "glow03",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "AF08508F-428FAB4E-6D9A00AF-F350A2DE",
+          "bIsRootWidget": false
+        },
+        {
+          "WidgetName": "par01",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "8AB33195-483E7DD6-C0B60096-75619DED",
+          "bIsRootWidget": false
+        }
+      ],
+      "DisplayLabel": "Anim_Show02",
+      "CompiledData": {
+        "ObjectName": "MovieSceneCompiledData'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show02_INST.CompiledData'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.61"
+      },
+      "Signature": "07FD3968-4438EC81-C9D03598-F147EDAC"
+    }
+  },
+  {
+    "Type": "WidgetAnimation",
+    "Name": "Anim_Show_INST",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetAnimation'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'HeroMagicSpirit2WidgetProgressBarMode1_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.0"
+    },
+    "Properties": {
+      "MovieScene": {
+        "ObjectName": "MovieScene'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show_INST.Anim_Show'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.13"
+      },
+      "AnimationBindings": [
+        {
+          "WidgetName": "glow01",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "8CE48E64-43F165D5-1A1CB8BE-EA904B57",
+          "bIsRootWidget": false
+        },
+        {
+          "WidgetName": "glow02",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "2DCAFF80-4BBAB239-DBFE238C-3A5D478D",
+          "bIsRootWidget": false
+        },
+        {
+          "WidgetName": "glow03",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "DE62C4F5-40537110-821AA19C-8F44502B",
+          "bIsRootWidget": false
+        },
+        {
+          "WidgetName": "par01",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "9AA82C8A-45F431F8-34FD96A2-F41244F2",
+          "bIsRootWidget": false
+        }
+      ],
+      "DisplayLabel": "Anim_Show",
+      "CompiledData": {
+        "ObjectName": "MovieSceneCompiledData'HeroMagicSpirit2WidgetProgressBarMode1_C:Anim_Show_INST.CompiledData'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.62"
+      },
+      "Signature": "CC46F6B7-4126A71A-64FE0AA2-A9380D08"
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetTree'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'HeroMagicSpirit2WidgetProgressBarMode1_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.0"
+    },
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "CanvasPanel'HeroMagicSpirit2WidgetProgressBarMode1_C:WidgetTree.CanvasPanel_Root'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.2"
+      }
+    }
+  },
+  {
+    "Type": "WrapBox",
+    "Name": "Clipper",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WrapBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'HeroMagicSpirit2WidgetProgressBarMode1_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.100"
+    },
+    "Properties": {
+      "WrapSize": 960.0,
+      "Slots": [
+        {
+          "ObjectName": "WrapBoxSlot'HeroMagicSpirit2WidgetProgressBarMode1_C:WidgetTree.Clipper.WrapBoxSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.102"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'HeroMagicSpirit2WidgetProgressBarMode1_C:WidgetTree.CanvasPanel_Root.CanvasPanelSlot_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.5"
+      },
+      "bIsVariable": true,
+      "Clipping": "EWidgetClipping::ClipToBounds",
+      "Visibility": "ESlateVisibility::HitTestInvisible"
+    }
+  },
+  {
+    "Type": "WrapBoxSlot",
+    "Name": "WrapBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WrapBoxSlot'",
+    "Outer": {
+      "ObjectName": "WrapBox'HeroMagicSpirit2WidgetProgressBarMode1_C:WidgetTree.Clipper'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.101"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "WrapBox'HeroMagicSpirit2WidgetProgressBarMode1_C:WidgetTree.Clipper'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.101"
+      },
+      "Content": {
+        "ObjectName": "UIImage'HeroMagicSpirit2WidgetProgressBarMode1_C:WidgetTree.Progress'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/HeroCharacter/HeroMagicSpirit2WidgetProgressBarMode1.95"
+      }
+    }
+  }
+]
