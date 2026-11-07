@@ -107,3 +107,85 @@ test('Atlas map loot is kept as the last run after entering a city without reset
   assert.equal(state.last.drops, 14);
   assert.equal(state.completedCount, 1);
 });
+
+
+test('LiveService resumes the same running game process with launch and map loot intact', () => {
+  const row = {
+    sessionKey: 'game-run:1000',
+    startedAt: 1000,
+    player: 'NexusTest',
+    area: 'Map B',
+    itemCount: 9,
+    pickupEvents: 4,
+    feGained: 7,
+    lootTotals: [{ itemId: 100300, count: 7 }, { itemId: 5028, count: 2 }],
+    gameProcessId: 4321,
+    gameProcessStartedAt: 2000,
+    mapsCompleted: 1,
+    mapRuns: [{
+      id: 'map-1-3000', identity: '1:1:Atlas:Map_A', name: 'Map A',
+      mapZone: 'Atlas', asset: 'Map_A', areaId: 1, levelUid: 1,
+      startedAt: 3000, endedAt: 9000, durationSec: 6,
+      completionReason: 'hub', drops: 3, pickupEvents: 2, feGained: 1,
+      loot: [{ itemId: 100300, count: 1 }, { itemId: 5028, count: 2 }],
+    }],
+    currentMap: {
+      id: 'map-2-10000', identity: '2:2:Atlas:Map_B', name: 'Map B',
+      mapZone: 'Atlas', asset: 'Map_B', areaId: 2, levelUid: 2,
+      startedAt: 10000, endedAt: null, durationSec: 0,
+      completionReason: null, drops: 6, pickupEvents: 3, feGained: 6,
+      loot: [{ itemId: 100300, count: 6 }],
+    },
+    lastMap: null,
+  };
+  const service = new LiveService({ resumeSession: row });
+  try {
+    assert.equal(service.restorePersistedSession(row, { pid: 4321, processStartedAt: 2000 }), true);
+    const state = service.snapshot();
+    assert.equal(state.gameRunning, true);
+    assert.equal(state.startedAt, 1000);
+    assert.equal(state.player, 'NexusTest');
+    assert.equal(state.drops, 9);
+    assert.equal(state.feGained, 7);
+    assert.equal(state.mapsCompleted, 1);
+    assert.equal(state.mapRuns[0].name, 'Map A');
+    assert.equal(state.currentMap.name, 'Map B');
+    assert.equal(state.currentMap.drops, 6);
+    assert.equal(state.gameProcessId, 4321);
+    assert.equal(service.restorePersistedSession(row, { pid: 9999, processStartedAt: 2000 }), false);
+    assert.equal(service.restorePersistedSession(row, { pid: 4321, processStartedAt: 3000 }), false);
+  } finally {
+    service.stop();
+  }
+});
+
+test('closing Nexus does not falsely end a game process that is still running', () => {
+  let published = null;
+  const service = new LiveService({ onUpdate: (state) => { published = state; } });
+  service.game = true;
+  service.gameProcessId = 4321;
+  service.startedAt = 1000;
+  service.gameMapTracker.enterArea({
+    area: 'Map A', asset: 'Map_A', mapZone: 'Atlas', areaId: 1, levelUid: 1,
+  }, 1000);
+  service.gameMapTracker.addLoot({ kind: 'loot', configBaseId: 5028, qty: 3 });
+
+  service.stop();
+  assert.equal(published.gameRunning, true);
+  assert.equal(published.gameEndedAt, null);
+  assert.equal(published.currentMap.name, 'Map A');
+  assert.equal(published.currentMap.drops, 3);
+});
+
+test('a missing previous process can expire its persisted session candidate', () => {
+  const expired = [];
+  const row = { sessionKey: 'game-run:1000', startedAt: 1000, gameProcessId: 4321 };
+  const service = new LiveService({ resumeSession: row, onResumeExpired: (value) => expired.push(value) });
+  service.resumeMissingScans = 2;
+  service.resumeSessionCandidate = row;
+  service.onResumeExpired(service.resumeSessionCandidate);
+  service.resumeSessionCandidate = null;
+  assert.equal(expired.length, 1);
+  assert.equal(expired[0].sessionKey, row.sessionKey);
+  service.stop();
+});
