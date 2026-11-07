@@ -168,18 +168,34 @@ function resourceIndexes(resourceIndex) {
   const affixRows = Array.isArray(resourceIndex?.affixDefinitions) ? resourceIndex.affixDefinitions : [];
   const localizationRows = Array.isArray(resourceIndex?.localizationEntries) ? resourceIndex.localizationEntries : [];
   const attributeRows = Array.isArray(resourceIndex?.attributeDefinitions) ? resourceIndex.attributeDefinitions : [];
-  const attributes = new Map();
-  for (const row of attributeRows) {
-    for (const key of [row.enumId, row.valueRaw, row.id, row.rowName]) {
-      if (key !== null && key !== undefined && String(key).trim()) attributes.set(String(key), row);
+  const makeEnumMap = (pattern) => {
+    const map = new Map();
+    for (const row of attributeRows) {
+      const tableName = String(row.enumType || row.sourcePath || '');
+      if (!pattern.test(tableName)) continue;
+      for (const key of [row.enumId, row.valueRaw, row.id, row.rowName]) {
+        if (key !== null && key !== undefined && String(key).trim()) map.set(String(key), row);
+      }
     }
-  }
+    return map;
+  };
+  const affixAttributeTypes = makeEnumMap(/affixattrtype/i);
+  const characterAttributes = makeEnumMap(/gamecharattribute/i);
+  const characterFields = makeEnumMap(/gamecharfield/i);
+  const equipSlots = makeEnumMap(/gameequipslot|equipmentslot|equipslot/i);
+  const rarities = makeEnumMap(/rarity|raretype/i);
+  const qualities = makeEnumMap(/quality/i);
   return {
     imported: Boolean(resourceIndex && typeof resourceIndex === 'object'),
     items: new Map(itemRows.filter((row) => row?.id != null).map((row) => [String(row.id), row])),
     affixes: new Map(affixRows.filter((row) => row?.id != null).map((row) => [String(row.id), row])),
     localizations: new Map(localizationRows.filter((row) => row?.key != null).map((row) => [String(row.key), row])),
-    attributes,
+    affixAttributeTypes,
+    characterAttributes,
+    characterFields,
+    equipSlots,
+    rarities,
+    qualities,
     itemDefinitionCount: itemRows.length,
     affixDefinitionCount: affixRows.length,
     localizationCount: localizationRows.length,
@@ -198,7 +214,11 @@ function attachResourceKnowledge(item, indexes) {
   const itemDefinition = item.itemId ? indexes.items.get(String(item.itemId)) : null;
   const affixes = item.affixes.map((affix) => {
     const definition = affix.id ? indexes.affixes.get(String(affix.id)) : null;
-    const attributeDefinition = affix.attributeRaw ? indexes.attributes.get(String(affix.attributeRaw)) : null;
+    const attributeDefinition = affix.attributeRaw
+      ? indexes.affixAttributeTypes.get(String(affix.attributeRaw)) ||
+        indexes.characterAttributes.get(String(affix.attributeRaw)) ||
+        indexes.characterFields.get(String(affix.attributeRaw)) || null
+      : null;
     const translatedName = localizedName(definition, indexes);
     const attributeName = attributeDefinition?.enumName ||
       attributeDefinition?.name ||
@@ -229,8 +249,14 @@ function attachResourceKnowledge(item, indexes) {
     };
   });
   const translatedItemName = localizedName(itemDefinition, indexes);
+  const slotDefinition = item.slotRaw ? indexes.equipSlots.get(String(item.slotRaw)) || null : null;
+  const rarityDefinition = item.rarityRaw ? indexes.rarities.get(String(item.rarityRaw)) || null : null;
+  const qualityDefinition = item.qualityRaw ? indexes.qualities.get(String(item.qualityRaw)) || null : null;
   return {
     ...item,
+    slotName: slotDefinition?.enumName || slotDefinition?.name || localizedName(slotDefinition, indexes) || null,
+    rarityName: rarityDefinition?.enumName || rarityDefinition?.name || localizedName(rarityDefinition, indexes) || null,
+    qualityName: qualityDefinition?.enumName || qualityDefinition?.name || localizedName(qualityDefinition, indexes) || null,
     catalogItem: itemDefinition ? {
       matched: true,
       name: itemDefinition.name || translatedItemName || itemDefinition.rowName || null,
