@@ -355,6 +355,11 @@ export class LiveService {
         if (!this.game) {
           this.game = true;
           this.resetSession();
+          // A manually selected UE log may have been attached before the game
+          // process started. Reseed its inventory slots after creating the run.
+          if (this.manualLogFile && fs.existsSync(this.manualLogFile)) {
+            await this.attach(this.manualLogFile, 'manual');
+          }
         }
       } else if (this.game) {
         // Avoid treating one missed process-list sample as a full game restart.
@@ -469,8 +474,11 @@ export class LiveService {
           mapZone: gameSeed.state.currentArea.mapZone, asset: gameSeed.state.currentArea.asset,
           levelType: gameSeed.state.currentArea.levelType, source: 'LevelMgr' };
         this.areaPhase = 'entered'; this.pendingArea = null;
-        if (!this.gameMapTracker.snapshot().current && gameSeed.state.currentArea.asset) {
-          this.gameMapTracker.enterArea({ ...gameSeed.state.currentArea, area: gameSeed.state.currentArea.name }, Date.now());
+        if (gameSeed.state.currentArea.asset) {
+          this.gameMapTracker.enterArea(
+            { ...gameSeed.state.currentArea, area: gameSeed.state.currentArea.name },
+            Number(gameSeed.state.currentArea.enteredAt) || Date.now(),
+          );
         }
       }
     } catch (error) {
