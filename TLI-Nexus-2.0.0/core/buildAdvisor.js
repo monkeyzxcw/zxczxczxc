@@ -288,7 +288,7 @@ export function diagnoseBuild({ build = {}, profile = null, intel = null, equipm
       'Для типа «'+clean(build.damageType,60)+'» Nexus проверяет '+focus.map((key)=>STAT_LABELS[key]).join(' и ')+'.',
       'Добавь эти показатели из игрового листа характеристик. Без них Nexus не станет оценивать потенциал урона числом.');
   }
-  const observedCount = stats.filter((row)=>row.current!==null).length;
+  const observedCount = stats.filter((row)=>row.source==='UE_game.log').length;
   const equipmentCoverage = gear.items.length ? Math.min(100,Math.round(gear.items.length/12*100)) : 0;
   const skillCoverage = skills.expected.length ? Math.round(skills.expected.filter((row)=>row.status==='observed').length/skills.expected.length*100) : 0;
   const talentCoverage = talents.expected.length ? Math.round(talents.expected.filter((row)=>row.status==='observed').length/talents.expected.length*100) : 0;
