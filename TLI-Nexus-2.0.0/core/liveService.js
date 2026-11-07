@@ -667,6 +667,8 @@ export class LiveService {
     if (this.game && !this.gameEndedAt) {
       this.gameEndedAt = Date.now();
       this.gameMapTracker.finishCurrentMap(this.gameEndedAt, 'app-stopped');
+      this.game = false;
+      this.emit();
     }
     this.detach(); this.communityPriceFeed.stop();
   }
