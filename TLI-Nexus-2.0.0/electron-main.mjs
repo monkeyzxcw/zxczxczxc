@@ -316,6 +316,8 @@ function persistAutoSession(state) {
   row.feGained = Number(state.feGained) || 0;
   row.itemCount = Number(state.drops) || 0;
   row.pickupEvents = Number(state.pickupEvents) || 0;
+  row.gameProcessId = Number(state.gameProcessId) || null;
+  row.gameProcessStartedAt = Number(state.gameProcessStartedAt) || null;
   row.mapsCompleted = Number(state.mapsCompleted) || 0;
   row.mapRuns = Array.isArray(state.mapRuns) ? state.mapRuns.slice(-100) : (row.mapRuns || []);
   row.currentMap = state.currentMap || null;
