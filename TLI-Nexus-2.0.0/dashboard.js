@@ -420,13 +420,14 @@ async function refreshGameResourceStatus(){
     }
     const s=result.summary||{};
     badge.textContent='Импортировано';
-    status.textContent='Источник: '+(result.rootLabel||'папка экспорта')+' · версия UE: '+(result.projectVersion||'не определена');
+    status.textContent='Источник: '+(result.rootLabel||'папка экспорта')+' · ProjectVersion: '+(result.projectVersion||'не определена');
     details.innerHTML=[
       'JSON-файлов проверено: '+number(s.jsonFilesScanned||0,0),
       'DataTable: '+number(s.dataTables||0,0),
       'Строк таблиц: '+number(s.dataTableRows||0,0),
       'Аффиксов: '+number(s.affixDefinitions||0,0),
       'Предметов: '+number(s.itemDefinitions||0,0),
+      'Локализаций: '+number(s.localizationEntries||0,0),
       'Ресурсных подсказок: '+number(s.usefulAssets||0,0),
       'Скриптовых подсказок: '+number(s.scriptHints||0,0)
     ].join(' · ');
