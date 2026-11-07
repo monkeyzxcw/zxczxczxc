@@ -94,6 +94,25 @@ test('resource scanner indexes only explicit table rows and preserves CoreRedire
   }
 });
 
+test('resource scanner extracts explicit localization keys from exported text tables', () => {
+  const root = fs.mkdtempSync(path.join(os.tmpdir(), 'tli-localization-resources-'));
+  try {
+    const locale = path.join(root, 'Localization', 'ru-RU');
+    fs.mkdirSync(locale, { recursive: true });
+    fs.writeFileSync(path.join(locale, 'AffixText.json'), JSON.stringify({
+      Entries: [
+        { TextKey: 'Affix.Life.Name', Text: 'Дополнительное здоровье' },
+        { NameKey: 'Affix.FireRes.Name', LocalizedText: 'Сопротивление огню' },
+      ],
+    }));
+    const result = scanGameResourceFolder(root);
+    assert.equal(result.summary.localizationEntries, 2);
+    assert.equal(result.localizationEntries.find((row) => row.key === 'Affix.Life.Name').text, 'Дополнительное здоровье');
+  } finally {
+    fs.rmSync(root, { recursive: true, force: true });
+  }
+});
+
 test('resource scanner does not treat similarly named UI blueprints as affix definitions', () => {
   const root = fs.mkdtempSync(path.join(os.tmpdir(), 'tli-game-ui-resources-'));
   try {
