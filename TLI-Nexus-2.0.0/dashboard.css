@@ -91,3 +91,15 @@
 
 /* 2.2.0 local game-resource catalog */
 .game-resource-panel{border:1px solid #34304b;background:linear-gradient(135deg,#171526,#111522)}.game-resource-status{font-size:10px;color:#d3d5e6;padding:9px 11px;background:#171a28;border:1px solid #30364a;border-radius:7px;margin:10px 0}.game-resource-panel .hint{line-height:1.55}.game-resource-panel .disclaimer{margin-top:10px}
+
+/* 2.2.0 user-triggered TLIDB affix reference */
+.tlidb-panel{border:1px solid #34304b;background:linear-gradient(135deg,#171526,#111522)}
+.tlidb-search-controls{display:grid;grid-template-columns:minmax(180px,1fr) minmax(150px,.55fr) auto;gap:10px;align-items:end;margin:12px 0}
+.tlidb-search-controls label{display:grid;gap:6px;color:var(--muted);font-size:9px}
+.tlidb-search-controls input,.tlidb-search-controls select{width:100%;min-width:0;background:#101421;border:1px solid #343a51;border-radius:6px;color:#edf0fa;padding:9px;font:inherit}
+.tlidb-results{display:grid;gap:6px;margin-top:9px;max-height:480px;overflow:auto}
+.tlidb-result{display:grid;grid-template-columns:minmax(180px,1fr) minmax(180px,.8fr) auto;gap:10px;align-items:center;padding:9px 10px;border:1px solid #2b3044;border-radius:6px;background:#121724}
+.tlidb-result-main{min-width:0}.tlidb-result-main b{display:block;font-size:10px;overflow-wrap:anywhere;color:#e8eaf5}.tlidb-result-main small{display:block;margin-top:4px;color:var(--muted);font-size:8px}
+.tlidb-result-meta{display:flex;gap:5px 9px;flex-wrap:wrap;color:#b5bfd4;font-size:8px}
+.tlidb-result .btn{white-space:nowrap;padding:6px 9px;font-size:8px}
+@media(max-width:760px){.tlidb-search-controls{grid-template-columns:1fr}.tlidb-result{grid-template-columns:1fr}.tlidb-result .btn{justify-self:start}}
