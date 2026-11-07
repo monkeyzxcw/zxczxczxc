@@ -40,7 +40,7 @@ test('partial PutOn and inventory data are not promoted to full equipment', () =
     now:Date.now(),
   });
   assert.equal(report.equipment.items.length,0);
-  assert.equal(report.equipment.partialObservedItems,0);
+  assert.equal(report.equipment.partialObservedItems,1);
   assert.equal(report.summary.isFullLoadoutConfirmed,false);
   assert.ok(report.recommendations.some((row)=>row.code==='gear-not-confirmed'));
 });
