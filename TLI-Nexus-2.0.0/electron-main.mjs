@@ -5,6 +5,7 @@ import { fileURLToPath } from 'node:url';
 import { LiveService } from './core/liveService.js';
 import { getItemImageUrl, searchItems } from './core/itemCatalog.js';
 import { analyzeBuild, compareBuilds, encodeBuild, decodeBuild, BUILD_STAT_FIELDS } from './core/buildAnalysis.js';
+import { diagnoseBuild } from './core/buildAdvisor.js';
 import { DEFAULT_APP_DATA, mergeAppData, mergeRendererUpdate } from './core/persistence.js';
 import { analyzeFarmingSessions } from './core/farmAnalytics.js';
 import { getGlobalHotkeyDefinitions } from './core/hotkeys.js';
@@ -646,6 +647,24 @@ app.whenReady().then(() => {
   ipcMain.handle('equipment:analyze', (_event, items, priorities) => analyzeEquipment(Array.isArray(items) ? items.slice(0, 100) : [], priorities, readGameResourceIndex()));
   ipcMain.handle('equipment:compare', (_event, left, right, priorities) => compareEquipment(left, right, priorities, readGameResourceIndex()));
   ipcMain.handle('build:analyze', (_event, build) => analyzeBuild(build));
+  ipcMain.handle('build:diagnose', (_event, build, profileId) => {
+    const selectedProfileId = profileId || build?.profileId || null;
+    const profile = appData.characterProfiles.find((row) => row.id === selectedProfileId) || null;
+    const state = live?.snapshot() || {};
+    const identity = state.characterIntel?.identity || {};
+    const matchesLive = Boolean(profile && identity.playerId &&
+      String(profile.playerId || profile.detectedPlayerId || '') === String(identity.playerId) &&
+      Number(profile.lastSeasonId || profile.seasonId || 0) === Number(identity.seasonId || 0));
+    const intel = matchesLive ? state.characterIntel
+      : profile ? profile.characterIntelSnapshot || null
+        : state.characterIntel || null;
+    const observedEquipment = matchesLive ? state.equipment
+      : profile?.equipmentSnapshot || profile?.characterIntelSnapshot?.equipment || null;
+    return diagnoseBuild({
+      build, profile, intel, equipment: observedEquipment,
+      resourceIndex: readGameResourceIndex(), tlidbCatalog: readTlidbCatalog(), now: Date.now(),
+    });
+  });
   ipcMain.handle('farm:analyze', (_event, sessions, options = {}) => analyzeFarmingSessions(Array.isArray(sessions) ? sessions.slice(-1000) : [], { profileId: options.profileId || null, strategy: options.strategy || null, since: Number(options.since) || null }));
   ipcMain.handle('build:compare', (_event, left, right) => compareBuilds(left, right));
   ipcMain.handle('build:encode', (_event, build) => encodeBuild(build));
