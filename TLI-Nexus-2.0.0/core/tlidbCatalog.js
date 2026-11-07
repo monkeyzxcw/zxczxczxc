@@ -357,6 +357,8 @@ export function tlidbCatalogStatus(index) {
     imported: index.records.length > 0,
     label: index.records.length ? 'Локальный кэш TLIDB загружен' : 'В кэше TLIDB нет записей',
     syncedAt: Number(index.syncedAt) || null,
+    lastSuccessfulSyncAt: Number(index.lastSuccessfulSyncAt) || null,
+    lastFullSyncAt: Number(index.lastFullSyncAt) || null,
     patchVersion: index.patchVersion || null,
     patchVerification: index.patchVerification || 'unknown',
     patchNote: clean(index.patchNote, 300),
