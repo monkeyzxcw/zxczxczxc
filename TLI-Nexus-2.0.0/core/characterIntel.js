@@ -1,6 +1,7 @@
 import { parseTree, parseUeTimestamp } from './ueLog.js';
 import { collectItems, playerIdentity } from './lootEvents.js';
 import { getItemName, getItemInfo } from './itemCatalog.js';
+import { extractItemAffixEvidence, extractItemMetadata } from './itemObservation.js';
 
 const normalizeKey = (key) => String(key || '').replace(/[^a-z0-9]/gi, '').toLowerCase();
 const SKILL_ID_KEYS = new Set(['skillid', 'skillbaseid', 'skillconfigid', 'activeskillid', 'supportskillid', 'skilluid']);
@@ -137,21 +138,14 @@ function extractStats(tree, messageMeta) {
 }
 
 function extractAffixEvidence(itemNode, itemPath) {
-  const affixes = [];
-  walk(itemNode, [], (node, nodePath) => {
-    const idKey = Object.keys(node).find((key) => AFFIX_ID_KEYS.has(normalizeKey(key)));
-    if (!idKey) return;
-    const id = direct(node, [idKey]);
-    if (!id) return;
-    const values = [];
-    for (const [key, raw] of Object.entries(node)) {
-      const value = Array.isArray(raw) ? raw.at(-1) : raw;
-      if (typeof value === 'string' || typeof value === 'number') values.push({ key, value: capText(value, 100) });
-    }
-    affixes.push({ id: capText(id, 100), path: [...itemPath, ...nodePath, idKey].join('.'), values,
-      confidence: 'explicit-affix-id' });
-  });
-  return affixes.slice(0, 40);
+  return extractItemAffixEvidence(itemNode, itemPath).map((row) => ({
+    ...row,
+    values: (row.values || []).map((value) => ({
+      key: value.key,
+      value: capText(value.value, 100),
+      path: value.path || null,
+    })),
+  })).slice(0, 40);
 }
 
 function extractExplicitEquipment(tree, messageMeta) {
@@ -167,11 +161,13 @@ function extractExplicitEquipment(tree, messageMeta) {
     const slotRaw = slotKey ? capText(direct(node, [slotKey]), 80) : null;
     const rowKey = `${itemId}:${slotRaw || ''}`;
     const previous = rows.get(rowKey);
+    const metadata = extractItemMetadata(node);
     rows.set(rowKey, {
-      itemId, name: getItemName(itemId), itemType: info?.typeRu || info?.type || 'Тип неизвестен',
-      iconUrl: info?.iconUrl || null, slotRaw: slotRaw || previous?.slotRaw || null,
+      itemId, name: getItemName(itemId), itemType: info?.typeRu || info?.type || metadata.itemTypeRaw || 'Тип неизвестен',
+      iconUrl: info?.iconUrl || null, slotRaw: slotRaw || metadata.slotRaw || previous?.slotRaw || null,
       slotField: slotKey || previous?.slotField || null,
       count: Math.max(1, Number(direct(node, ['Count','Num','Quantity'])) || 1),
+      ...metadata,
       affixes: [...(previous?.affixes || []), ...extractAffixEvidence(node, nodePath)].slice(0, 40),
       sourceAction: messageMeta.action, sourceKind: messageMeta.kind, observedAt: messageMeta.at,
       path, confidence: slotRaw ? 'explicit-equipment-id-and-slot' : 'explicit-equipment-id-slot-unknown',
@@ -206,6 +202,12 @@ function itemRows(items = [], messageMeta = {}) {
       iconUrl: info?.iconUrl || null, count: (previous?.count || 0) + Math.max(1, Number(item.count) || 1),
       itemInstance: item.itemInstance || previous?.itemInstance || null,
       extra: { ...(previous?.extra || {}), ...(item.extra || {}) },
+      affixes: [...(previous?.affixes || []), ...(item.extra?.affixes || [])].slice(-40),
+      itemLevelRaw: item.extra?.itemLevelRaw ?? previous?.itemLevelRaw ?? null,
+      rarityRaw: item.extra?.rarityRaw ?? previous?.rarityRaw ?? null,
+      qualityRaw: item.extra?.qualityRaw ?? previous?.qualityRaw ?? null,
+      enhanceLevelRaw: item.extra?.enhanceLevelRaw ?? previous?.enhanceLevelRaw ?? null,
+      slotRaw: item.extra?.slotRaw ?? previous?.slotRaw ?? null,
       details: [...(previous?.details || []), ...(item.extra?.details || [])].slice(-100),
       sourceAction: messageMeta.action || 'snapshot', sourceKind: messageMeta.kind || null,
       observedAt: messageMeta.at || Date.now(), evidencePath: item.path || null,
