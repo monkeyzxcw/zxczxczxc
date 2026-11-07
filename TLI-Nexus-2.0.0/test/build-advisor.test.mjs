@@ -67,7 +67,7 @@ test('damage focus reports missing evidence and never synthesizes DPS', () => {
   assert.deepEqual(report.damageFocus.checkedStats.map((row)=>row.key),['fireDamage','firePenetration']);
   assert.ok(report.recommendations.some((row)=>row.code==='damage-focus-incomplete'));
   assert.equal('dps' in report,false);
-  assert.ok(report.limitations.some((row)=>/не рассчитываются/i.test(row)));
+  assert.ok(report.limitations.some((row)=>/не пересчитываются/i.test(row)));
 });
 
 test('stale profile data is marked and TLIDB is shown as reference only', () => {
