@@ -190,6 +190,9 @@ test('package version is 2.3.0 automatic TLIDB and map tracking release', () => 
   assert.ok(pkg.scripts.check.includes('core/gameMapTracker.js'));
   assert.match(overlay, /last-map-value/);
   assert.match(overlay, /map-items/);
+  assert.match(main, /game-run:\$\{Number\(state\.startedAt\)\}/);
+  assert.match(ui, /game-run:\$\{Number\(live\.startedAt\)\}/);
+  assert.match(ui, /data-map-history/);
   assert.equal(pkg.scripts.check.includes('core/farmAnalytics.js'), true);
   const bat = fs.readFileSync(path.join(root, 'start-desktop.bat'), 'utf8');
   assert.match(bat, /npm install --include=dev/);
