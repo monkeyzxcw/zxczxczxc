@@ -142,14 +142,27 @@ function extractRows(resourcePath, doc, kind) {
   for (const entry of tableRows) {
     const fields = scalarMap(entry.row);
     const fieldKeys = new Set(fields.map((field) => normalizeKey(field.key)));
-    const idField = fields.find((field) => EXPLICIT_ID_KEYS.has(normalizeKey(field.key)));
     const payload = rowPayload(entry.row);
     const name = findNamed(payload, [
       'Name', 'DisplayName', 'ItemName', 'EquipName', 'AffixName', 'Title',
     ]);
+    const rowLooksAffix = AFFIx_WORD.test(resourcePath) ||
+      [...fieldKeys].some((key) => ['affixid', 'baseaffixid', 'affixconfigid', 'affixbaseid'].includes(key));
+    const rowLooksItem = ITEM_WORD.test(resourcePath) ||
+      [...fieldKeys].some((key) => ['itemid', 'itembaseid', 'itemconfigbaseid', 'configbaseid', 'equipmentid', 'equipmentbaseid', 'equipid'].includes(key));
+    const preferredAffixIdKeys = ['affixid', 'baseaffixid', 'affixconfigid', 'affixbaseid'];
+    const preferredItemIdKeys = ['itembaseid', 'itemconfigbaseid', 'configbaseid', 'itemid', 'equipmentbaseid', 'equipmentid', 'equipid', 'baseitemid', 'baseid'];
+    const preferredKeys = rowLooksAffix
+      ? preferredAffixIdKeys
+      : rowLooksItem
+        ? preferredItemIdKeys
+        : [];
+    const idField = fields.find((field) => preferredKeys.includes(normalizeKey(field.key))) ||
+      fields.find((field) => normalizeKey(field.key) === 'id');
     const id = idField ? idField.value : null;
     const summary = {
       id: id ? clean(id, 100) : null,
+      idField: idField?.key || null,
       rowName: clean(entry.rowName, 120),
       name,
       nameKeyRaw: findNamed(payload, ['NameKey', 'TextKey', 'StringKey', 'LocKey']),
@@ -158,11 +171,6 @@ function extractRows(resourcePath, doc, kind) {
       rowPath: entry.path,
       fields: fields.slice(0, 100),
     };
-
-    const rowLooksAffix = AFFIx_WORD.test(resourcePath) ||
-      [...fieldKeys].some((key) => ['affixid', 'baseaffixid', 'affixconfigid', 'affixbaseid'].includes(key));
-    const rowLooksItem = ITEM_WORD.test(resourcePath) ||
-      [...fieldKeys].some((key) => ['itemid', 'itembaseid', 'configbaseid', 'equipmentid', 'equipmentbaseid'].includes(key));
 
     if (rowLooksAffix && id) {
       summary.attributeRaw = findNamed(payload, [
