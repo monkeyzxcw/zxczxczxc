@@ -4,6 +4,7 @@ export const DEFAULT_APP_DATA = Object.freeze({
     overlayMode: 'compact', overlayOpacity: 94, overlayScale: 100, clickThrough: false, autoSelectDetectedProfile: true, autoCreateDetectedProfiles: true,
     alwaysOnTop: true, notificationsEnabled: true, soundEnabled: true,
     notificationThresholdFe: 20, soundVolume: 45, showRecentLoot: true, hotkeysEnabled: true,
+    tlidbAutoSyncEnabled: true, tlidbSyncIntervalHours: 24,
   }),
   characterProfiles: [], builds: [], tactics: [], farmingSessions: [], priceWatch: [], notes: [],
 });
