@@ -444,12 +444,12 @@ app.whenReady().then(() => {
     });
     if (result.canceled || !result.filePaths?.[0]) return { canceled: true };
     const index = scanGameResourceFolder(result.filePaths[0]);
-    const serialized = JSON.stringify(index);
+    const serialized = JSON.stringify(index, null, 2);
     if (Buffer.byteLength(serialized, 'utf8') > 45 * 1024 * 1024) {
       throw new Error('Индекс игровых ресурсов превышает 45 МБ. Выбери папку только с игровыми DataTable/JSON-экспортами.');
     }
     const temp = gameResourceIndexFile() + '.tmp';
-    fs.writeFileSync(temp, JSON.stringify(index, null, 2), 'utf8');
+    fs.writeFileSync(temp, serialized, 'utf8');
     fs.renameSync(temp, gameResourceIndexFile());
     gameResourceIndexCache = index;
     gameResourceIndexMtime = fs.statSync(gameResourceIndexFile()).mtimeMs;
