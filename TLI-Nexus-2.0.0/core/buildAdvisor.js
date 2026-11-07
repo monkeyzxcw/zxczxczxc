@@ -63,7 +63,7 @@ function canonicalStat(rawKey, label = '') {
   return byLabel || ALIASES_BY_KEY.get(norm(label)) || null;
 }
 function parseNumberWithUnit(value) {
-  const match = /^\\s*([+-]?(?:\\d+(?:[.,]\\d+)?|[.,]\\d+))\\s*(%|[A-Za-zА-Яа-яЁё][A-Za-zА-Яа-яЁё0-9/_-]*)?\\s*$/u.exec(String(value ?? ''));
+  const match = /^\s*([+-]?(?:\d+(?:[.,]\d+)?|[.,]\d+))\s*(%|[A-Za-zА-Яа-яЁё][A-Za-zА-Яа-яЁё0-9/_-]*)?\s*$/u.exec(String(value ?? ''));
   if (!match) return null;
   const number = Number(match[1].replace(',', '.'));
   return Number.isFinite(number) ? { number, unit: (match[2] || '').toLocaleLowerCase('en') } : null;
@@ -102,7 +102,7 @@ function itemLabel(item, definition, resourceIndex) {
     : clean(definition?.name || localize(definition,resourceIndex) || definition?.rowName || item.name || ('Предмет #'+item.itemId),140);
 }
 function idFromLine(value) {
-  const match = /(?:\\bID\\s*[:#]?\\s*|#)([A-Za-z0-9_-]{1,80})/i.exec(String(value || ''));
+  const match = /(?:\bID\s*[:#]?\s*|#)([A-Za-z0-9_-]{1,80})/i.exec(String(value || ''));
   return match ? match[1] : null;
 }
 function compareDeclaredEntries(entries, observed, label) {
@@ -149,7 +149,7 @@ function statEvidence(intel, build) {
   }
   return rows.sort((a,b) => Number(b.belowTarget)-Number(a.belowTarget) || a.label.localeCompare(b.label,'ru'));
 }
-function analyzeExplicitEquipment(intel, resourceIndex) {
+function analyzeExplicitEquipment(intel, resourceIndex, partialEquipment) {
   const sourceItems = Array.isArray(intel?.explicitEquipment) ? intel.explicitEquipment : [];
   const rows = sourceItems.slice(0,80).map((item) => {
     const definition = itemDefinition(item.itemId,resourceIndex);
@@ -198,7 +198,7 @@ function analyzeExplicitEquipment(intel, resourceIndex) {
   });
   return {
     items: rows,
-    partialObservedItems: Array.isArray(intel?.equipment?.items) ? intel.equipment.items.length : 0,
+    partialObservedItems: Array.isArray(partialEquipment?.items) ? partialEquipment.items.length : Array.isArray(intel?.equipment?.items) ? intel.equipment.items.length : 0,
     isFullLoadoutConfirmed: false,
     matchedItemDefinitions: rows.filter((row) => row.catalogMatch).length,
     matchedAffixes: rows.reduce((sum,row) => sum+row.affixes.filter((affix)=>affix.exactCatalogMatch).length,0),
@@ -227,7 +227,7 @@ export function diagnoseBuild({ build = {}, profile = null, intel = null, equipm
   const stale = freshnessHours !== null && freshnessHours > 24;
   const skills = compareDeclaredEntries(build.skills,intel?.skills || [],'Навык / поддержка');
   const talents = compareDeclaredEntries(build.talents,intel?.talents || [],'Талант');
-  const gear = analyzeExplicitEquipment(intel,resourceIndex);
+  const gear = analyzeExplicitEquipment(intel,resourceIndex,equipment);
   const recommendations = [];
   const add = (priority,severity,code,title,reason,action,evidence = null) => recommendations.push({
     priority,severity,code,title,reason,action,evidence,
