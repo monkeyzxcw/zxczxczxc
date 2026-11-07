@@ -193,7 +193,7 @@ function countCategory(line) {
 }
 
 export class LiveService {
-  constructor({ onUpdate = () => {}, pollMs = 2000, manualLogFile = null, userDataDir = null, resumeSession = null, onResumeExpired = () => {} } = {}) {
+  constructor({ onUpdate = () => {}, pollMs = 2000, manualLogFile = null, userDataDir = null, resumeSession = null, onResumeExpired = () => {}, findGameProcessImpl = findGameProcess } = {}) {
     this.onUpdate = onUpdate; this.pollMs = pollMs; this.timer = null; this.tailer = null; this.ingestor = null;
     this.game = false; this.gameExe = null; this.gameProcessId = null; this.gameProcessStartedAt = null;
     this.logFile = null; this.logSource = 'auto'; this.manualLogFile = manualLogFile;
@@ -214,6 +214,7 @@ export class LiveService {
     this.exchangePriceTracker = new ExchangePriceTracker();
     this.resumeSessionCandidate = resumeSession && typeof resumeSession === 'object' ? { ...resumeSession } : null;
     this.resumeMissingScans = 0; this.onResumeExpired = onResumeExpired;
+    this.findGameProcessImpl = findGameProcessImpl;
     this.notificationPreferences = { enabled: true, soundEnabled: true, thresholdFe: 20 };
     this.notificationSeq = 0; this.lastNotification = null;
     this.communityPriceFeed = new CommunityPriceFeed({ cachePath: userDataDir ? path.join(userDataDir, 'community-prices.json') : null, onUpdate: (status) => {
@@ -358,7 +359,7 @@ export class LiveService {
   async scan() {
     if (this.busy) return; this.busy = true;
     try {
-      const proc = await findGameProcess();
+      const proc = await this.findGameProcessImpl();
       this.gameExe = proc.exe || this.gameExe;
       if (proc.running) {
         this.gameMissingScans = 0;
