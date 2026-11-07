@@ -119,17 +119,25 @@ function getExportType(doc) {
 
 function classifyResource(resourcePath, doc, exportTypes) {
   const lower = resourcePath.toLowerCase();
+  const isBlueprint = /blueprint|widget|umg/i.test(lower) ||
+    exportTypes.some((value) => /blueprint|widget|userwidget/i.test(value));
   const hasTableRows = rowContainers(doc).length > 0;
-  const isDataTable = hasTableRows || exportTypes.some((value) => /datatable/i.test(value));
+  const hasDataTableType = exportTypes.some((value) => /datatable/i.test(value));
+  const pathSuggestsTable = /(^|\/)(?:data|datatable|datatables)(\/|$)/i.test(resourcePath) ||
+    /^dt_/i.test(path.basename(resourcePath, path.extname(resourcePath)));
+  const isDataTable = !isBlueprint && (hasDataTableType || (hasTableRows && pathSuggestsTable));
   if (LOCALIZATION_WORD.test(lower) || /\.locres$/i.test(resourcePath)) return 'localization-resource';
   if (isDataTable) return 'data-table';
   if (AFFIx_WORD.test(lower)) return 'affix-related-asset';
   if (ITEM_WORD.test(lower)) return 'item-related-asset';
-  if (/blueprint|widget|umg/i.test(lower)) return 'blueprint-or-ui-asset';
+  if (isBlueprint) return 'blueprint-or-ui-asset';
   return 'other-game-asset';
 }
 
 function extractRows(resourcePath, doc, kind) {
+  if (kind !== 'data-table') {
+    return { itemRows: [], affixRows: [], tableRowCount: 0 };
+  }
   const tableRows = rowContainers(doc);
   const itemRows = [];
   const affixRows = [];
