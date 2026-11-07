@@ -165,7 +165,8 @@ export class GameLogParser {
       const area = gameMapName(this.pendingAsset, areaId);
       this.currentArea = {
         areaId, levelUid: this.pendingLevelUid, levelType: this.pendingLevelType,
-        levelId: this.pendingLevelId, mapZone: this.pendingMapZone, asset: this.pendingAsset, name: area,
+        levelId: this.pendingLevelId, mapZone: this.pendingMapZone, asset: this.pendingAsset,
+        name: area, enteredAt: Number(base.ts) || null,
       };
       const event = { type: 'areaEnter', ...this.currentArea, area, ...base };
       this.pendingMapZone = null;
