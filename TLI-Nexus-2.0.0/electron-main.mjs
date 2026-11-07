@@ -11,6 +11,7 @@ import { getGlobalHotkeyDefinitions } from './core/hotkeys.js';
 import { buildProfileEquipmentSnapshot, captureProfileCharacterSnapshot, createCharacterProfileFromIdentity, findCharacterProfile, updateProfileFromLive } from './core/characterProfiles.js';
 import { buildAnonymizedDiagnostic, buildCharacterReport } from './core/characterReport.js';
 import { compareCharacterSnapshots } from './core/snapshotHistory.js';
+import { analyzeEquipment, compareEquipment } from './core/equipmentIntelligence.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const DEFAULTS = DEFAULT_APP_DATA;
@@ -417,6 +418,8 @@ app.whenReady().then(() => {
     return { canceled: false, data: appData, importedPricePoints };
   });
   ipcMain.handle('items:search', (_event, query) => searchItems(query, 500));
+  ipcMain.handle('equipment:analyze', (_event, items, priorities) => analyzeEquipment(Array.isArray(items) ? items.slice(0, 100) : [], priorities));
+  ipcMain.handle('equipment:compare', (_event, left, right, priorities) => compareEquipment(left, right, priorities));
   ipcMain.handle('build:analyze', (_event, build) => analyzeBuild(build));
   ipcMain.handle('farm:analyze', (_event, sessions, options = {}) => analyzeFarmingSessions(Array.isArray(sessions) ? sessions.slice(-1000) : [], { profileId: options.profileId || null, strategy: options.strategy || null, since: Number(options.since) || null }));
   ipcMain.handle('build:compare', (_event, left, right) => compareBuilds(left, right));
