@@ -165,10 +165,10 @@ test('native topmost state is explicitly cleared when HUD is unpinned', () => {
   assert.doesNotMatch(main, /overlay:toggle-pin/);
 });
 
-test('package version is 2.1.0 equipment intelligence release', () => {
+test('package version is 2.2.0 game resources release', () => {
   const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
   const pkg = JSON.parse(fs.readFileSync(path.join(root, 'package.json'), 'utf8'));
-  assert.equal(pkg.version, '2.1.0');
+  assert.equal(pkg.version, '2.2.0');
   assert.ok(pkg.build.files.includes('docs/RELEASE_NOTES_1.1.0.md'));
   assert.ok(pkg.build.files.includes('docs/RELEASE_NOTES_1.1.1.md'));
   assert.ok(pkg.build.files.includes('docs/RELEASE_NOTES_1.2.0.md'));
@@ -177,15 +177,35 @@ test('package version is 2.1.0 equipment intelligence release', () => {
   assert.ok(pkg.build.files.includes('docs/RELEASE_NOTES_1.4.0.md'));
   const overlay = fs.readFileSync(path.join(root, 'overlay.html'), 'utf8');
   const dashboard = fs.readFileSync(path.join(root, 'dashboard.html'), 'utf8');
-  assert.match(overlay, /GAME COMPANION · 2.1.0/);
-  assert.match(dashboard, /TLI Nexus 2.1.0/);
+  assert.match(overlay, /GAME COMPANION · 2.2.0/);
+  assert.match(dashboard, /TLI Nexus 2.2.0/);
   assert.ok(pkg.scripts.check.includes('core/hotkeys.js'));
   assert.ok(pkg.scripts.check.includes('core/equipmentTracker.js'));
   assert.ok(pkg.scripts.check.includes('core/equipmentIntelligence.js'));
+  assert.ok(pkg.scripts.check.includes('core/itemObservation.js'));
+  assert.ok(pkg.scripts.check.includes('core/gameResourceCatalog.js'));
+  assert.ok(pkg.build.files.includes('docs/RELEASE_NOTES_2.2.0.md'));
+  assert.ok(pkg.build.files.includes('docs/GAME_RESOURCE_EXTRACTION.md'));
   assert.equal(pkg.scripts.check.includes('core/farmAnalytics.js'), true);
   const bat = fs.readFileSync(path.join(root, 'start-desktop.bat'), 'utf8');
   assert.match(bat, /npm install --include=dev/);
   assert.doesNotMatch(bat, /npm install --omit=dev/);
+});
+
+test('game resource importer is connected end-to-end and stays local-only', () => {
+  const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
+  const main = fs.readFileSync(path.join(root, 'electron-main.mjs'), 'utf8');
+  const preload = fs.readFileSync(path.join(root, 'electron-preload.cjs'), 'utf8');
+  const html = fs.readFileSync(path.join(root, 'dashboard.html'), 'utf8');
+  const ui = fs.readFileSync(path.join(root, 'dashboard.js'), 'utf8');
+  assert.match(main, /scanGameResourceFolder\(result\.filePaths\[0\]\)/);
+  assert.match(main, /game-resource-index\.json/);
+  assert.match(main, /Buffer\.byteLength\(serialized, 'utf8'\) > 45 \* 1024 \* 1024/);
+  assert.match(preload, /importGameResources: \(\) => ipcRenderer\.invoke\('game-resources:import'\)/);
+  assert.match(preload, /getGameResourceStatus: \(\) => ipcRenderer\.invoke\('game-resources:status'\)/);
+  assert.match(html, /id="game-resource-import"/);
+  assert.match(ui, /refreshGameResourceStatus\(\)/);
+  assert.match(ui, /window\.nexus\.importGameResources\(\)/);
 });
 
 test('Character Intelligence dashboard exposes rescan, provenance, missing fields and build import', () => {
