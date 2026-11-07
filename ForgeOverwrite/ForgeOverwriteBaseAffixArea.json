@@ -1,0 +1,2532 @@
+[
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "ForgeOverwriteBaseAffixArea_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Package": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'ForgeOverwriteBaseAffixArea_C:WidgetTree'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.52"
+      },
+      "Animations": [
+        {
+          "ObjectName": "WidgetAnimation'ForgeOverwriteBaseAffixArea_C:Anim_Saoguang_INST'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.48"
+        }
+      ]
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'UserWidget'",
+      "ObjectPath": "/Script/UMG"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Anim_Saoguang",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Transient | RepSkip",
+        "PropertyClass": {
+          "ObjectName": "Class'WidgetAnimation'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "FXSwitcher",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'WidgetSwitcher'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "glow",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "glow0",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "glow0_1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "glow01",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "glow01_1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "kuang",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "kuang_1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "saoguang",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "UIImage_45",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      }
+    ],
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "ForgeOverwriteBaseAffixArea_C'Default__ForgeOverwriteBaseAffixArea_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.1"
+    }
+  },
+  {
+    "Type": "ForgeOverwriteBaseAffixArea_C",
+    "Name": "Default__ForgeOverwriteBaseAffixArea_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.ForgeOverwriteBaseAffixArea_C'",
+    "Package": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea",
+    "Properties": {
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'ForgeOverwriteBaseAffixArea_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.52"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'ForgeOverwriteBaseAffixArea_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.5"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'ForgeOverwriteBaseAffixArea_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_2'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.7"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'ForgeOverwriteBaseAffixArea_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.6"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "SizeBoxSlot'ForgeOverwriteBaseAffixArea_C:WidgetTree.SizeBox_0.SizeBoxSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.31"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "Left",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'ForgeOverwriteBaseAffixArea_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.52"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'ForgeOverwriteBaseAffixArea_C:WidgetTree.Left.CanvasPanelSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.8"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'ForgeOverwriteBaseAffixArea_C:WidgetTree.Left.CanvasPanelSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.9"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'ForgeOverwriteBaseAffixArea_C:WidgetTree.Left.CanvasPanelSlot_2'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.10"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "WidgetSwitcherSlot'ForgeOverwriteBaseAffixArea_C:WidgetTree.FXSwitcher.WidgetSwitcherSlot_5'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.51"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "Right",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'ForgeOverwriteBaseAffixArea_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.52"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'ForgeOverwriteBaseAffixArea_C:WidgetTree.Right.CanvasPanelSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.11"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'ForgeOverwriteBaseAffixArea_C:WidgetTree.Right.CanvasPanelSlot_4'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.14"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'ForgeOverwriteBaseAffixArea_C:WidgetTree.Right.CanvasPanelSlot_5'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.15"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'ForgeOverwriteBaseAffixArea_C:WidgetTree.Right.CanvasPanelSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.12"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'ForgeOverwriteBaseAffixArea_C:WidgetTree.Right.CanvasPanelSlot_2'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.13"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "WidgetSwitcherSlot'ForgeOverwriteBaseAffixArea_C:WidgetTree.FXSwitcher.WidgetSwitcherSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.50"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'ForgeOverwriteBaseAffixArea_C:WidgetTree.CanvasPanel_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.2"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 15.36,
+          "Top": 9.599999,
+          "Right": 15.36,
+          "Bottom": 207.36
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.0,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 1.0,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "ZOrder": 1,
+      "Parent": {
+        "ObjectName": "CanvasPanel'ForgeOverwriteBaseAffixArea_C:WidgetTree.CanvasPanel_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.2"
+      },
+      "Content": {
+        "ObjectName": "VerticalBox'ForgeOverwriteBaseAffixArea_C:WidgetTree.ValidAffixBox'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.44"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'ForgeOverwriteBaseAffixArea_C:WidgetTree.CanvasPanel_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.2"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 550.0,
+          "Bottom": 0.0
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.0
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 1.0
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.0
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'ForgeOverwriteBaseAffixArea_C:WidgetTree.CanvasPanel_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.2"
+      },
+      "Content": {
+        "ObjectName": "WidgetSwitcher'ForgeOverwriteBaseAffixArea_C:WidgetTree.FXSwitcher'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.49"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'ForgeOverwriteBaseAffixArea_C:WidgetTree.CanvasPanel_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.2"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 550.0,
+          "Bottom": 211.2
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "ZOrder": 1,
+      "Parent": {
+        "ObjectName": "CanvasPanel'ForgeOverwriteBaseAffixArea_C:WidgetTree.CanvasPanel_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.2"
+      },
+      "Content": {
+        "ObjectName": "UIShrinkTextBlock'ForgeOverwriteBaseAffixArea_C:WidgetTree.NoAffixHintText'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.41"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'ForgeOverwriteBaseAffixArea_C:WidgetTree.Left'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.3"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 192.0,
+          "Bottom": 57.6
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'ForgeOverwriteBaseAffixArea_C:WidgetTree.Left'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.3"
+      },
+      "Content": {
+        "ObjectName": "UIImage'ForgeOverwriteBaseAffixArea_C:WidgetTree.kuang_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.38"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'ForgeOverwriteBaseAffixArea_C:WidgetTree.Left'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.3"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 192.0,
+          "Bottom": 57.6
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'ForgeOverwriteBaseAffixArea_C:WidgetTree.Left'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.3"
+      },
+      "Content": {
+        "ObjectName": "UIImage'ForgeOverwriteBaseAffixArea_C:WidgetTree.glow0_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.36"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'ForgeOverwriteBaseAffixArea_C:WidgetTree.Left'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.3"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 192.0,
+          "Bottom": 57.6
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'ForgeOverwriteBaseAffixArea_C:WidgetTree.Left'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.3"
+      },
+      "Content": {
+        "ObjectName": "UIImage'ForgeOverwriteBaseAffixArea_C:WidgetTree.glow01_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.35"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'ForgeOverwriteBaseAffixArea_C:WidgetTree.Right'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.4"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 192.0,
+          "Bottom": 57.6
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'ForgeOverwriteBaseAffixArea_C:WidgetTree.Right'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.4"
+      },
+      "Content": {
+        "ObjectName": "UIImage'ForgeOverwriteBaseAffixArea_C:WidgetTree.kuang'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.37"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'ForgeOverwriteBaseAffixArea_C:WidgetTree.Right'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.4"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 192.0,
+          "Bottom": 57.6
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'ForgeOverwriteBaseAffixArea_C:WidgetTree.Right'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.4"
+      },
+      "Content": {
+        "ObjectName": "UIImage'ForgeOverwriteBaseAffixArea_C:WidgetTree.glow0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.33"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'ForgeOverwriteBaseAffixArea_C:WidgetTree.Right'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.4"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 192.0,
+          "Bottom": 57.6
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'ForgeOverwriteBaseAffixArea_C:WidgetTree.Right'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.4"
+      },
+      "Content": {
+        "ObjectName": "UIImage'ForgeOverwriteBaseAffixArea_C:WidgetTree.glow01'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.34"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_4",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'ForgeOverwriteBaseAffixArea_C:WidgetTree.Right'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.4"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 192.0,
+          "Bottom": 57.6
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'ForgeOverwriteBaseAffixArea_C:WidgetTree.Right'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.4"
+      },
+      "Content": {
+        "ObjectName": "UIImage'ForgeOverwriteBaseAffixArea_C:WidgetTree.glow'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.32"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_5",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'ForgeOverwriteBaseAffixArea_C:WidgetTree.Right'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.4"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 192.0,
+          "Bottom": 57.6
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'ForgeOverwriteBaseAffixArea_C:WidgetTree.Right'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.4"
+      },
+      "Content": {
+        "ObjectName": "UIImage'ForgeOverwriteBaseAffixArea_C:WidgetTree.saoguang'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.39"
+      }
+    }
+  },
+  {
+    "Type": "MovieScene",
+    "Name": "Anim_Saoguang",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieScene'",
+    "Outer": {
+      "ObjectName": "WidgetAnimation'ForgeOverwriteBaseAffixArea_C:Anim_Saoguang_INST'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.48"
+    },
+    "Properties": {
+      "Possessables": [
+        {
+          "Tags": [],
+          "Guid": "43F749FB-4C530CE2-41AFF4AF-14615005",
+          "Name": "saoguang",
+          "PossessedObjectClass": {
+            "ObjectName": "Class'UIImage'",
+            "ObjectPath": "/Script/UE_game"
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        },
+        {
+          "Tags": [],
+          "Guid": "CD186A70-426C1C22-4871568D-25C09CA0",
+          "Name": "glow",
+          "PossessedObjectClass": {
+            "ObjectName": "Class'UIImage'",
+            "ObjectPath": "/Script/UE_game"
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        }
+      ],
+      "ObjectBindings": [
+        {
+          "ObjectGuid": "43F749FB-4C530CE2-41AFF4AF-14615005",
+          "BindingName": "saoguang",
+          "Tracks": [
+            {
+              "ObjectName": "MovieSceneWidgetMaterialTrack'ForgeOverwriteBaseAffixArea_C:Anim_Saoguang_INST.Anim_Saoguang.MovieSceneWidgetMaterialTrack_1'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.29"
+            },
+            {
+              "ObjectName": "MovieSceneFloatTrack'ForgeOverwriteBaseAffixArea_C:Anim_Saoguang_INST.Anim_Saoguang.MovieSceneFloatTrack_0'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.26"
+            }
+          ]
+        },
+        {
+          "ObjectGuid": "CD186A70-426C1C22-4871568D-25C09CA0",
+          "BindingName": "glow",
+          "Tracks": [
+            {
+              "ObjectName": "MovieSceneFloatTrack'ForgeOverwriteBaseAffixArea_C:Anim_Saoguang_INST.Anim_Saoguang.MovieSceneFloatTrack_1'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.27"
+            }
+          ]
+        }
+      ],
+      "PlaybackRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 22000
+            }
+          }
+        }
+      },
+      "DisplayRate": {
+        "Numerator": 30
+      },
+      "Signature": "C22AAB21-4C68E3CB-26AF9C8F-13FD0B58"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatSection'ForgeOverwriteBaseAffixArea_C:Anim_Saoguang_INST.Anim_Saoguang.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.24"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatSection'ForgeOverwriteBaseAffixArea_C:Anim_Saoguang_INST.Anim_Saoguang.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.24"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatSection'ForgeOverwriteBaseAffixArea_C:Anim_Saoguang_INST.Anim_Saoguang.MovieSceneFloatTrack_1.MovieSceneFloatSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.25"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatSection'ForgeOverwriteBaseAffixArea_C:Anim_Saoguang_INST.Anim_Saoguang.MovieSceneFloatTrack_1.MovieSceneFloatSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.25"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneParameterSection'ForgeOverwriteBaseAffixArea_C:Anim_Saoguang_INST.Anim_Saoguang.MovieSceneWidgetMaterialTrack_1.MovieSceneParameterSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.28"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Outer": {
+      "ObjectName": "MovieSceneParameterSection'ForgeOverwriteBaseAffixArea_C:Anim_Saoguang_INST.Anim_Saoguang.MovieSceneWidgetMaterialTrack_1.MovieSceneParameterSection_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.28"
+    }
+  },
+  {
+    "Type": "MovieSceneCompiledData",
+    "Name": "CompiledData",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneCompiledData'",
+    "Outer": {
+      "ObjectName": "WidgetAnimation'ForgeOverwriteBaseAffixArea_C:Anim_Saoguang_INST'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.48"
+    },
+    "Properties": {
+      "EvaluationTemplate": {
+        "Tracks": [
+          {
+            "Key": {
+              "Value": 0
+            },
+            "Value": {
+              "ObjectBindingID": "43F749FB-4C530CE2-41AFF4AF-14615005",
+              "EvaluationPriority": 1000,
+              "EvaluationMethod": "EEvaluationMethod::Static",
+              "SourceTrack": {
+                "ObjectName": "MovieSceneWidgetMaterialTrack'ForgeOverwriteBaseAffixArea_C:Anim_Saoguang_INST.Anim_Saoguang.MovieSceneWidgetMaterialTrack_1'",
+                "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.29"
+              },
+              "ChildTemplates": [
+                {
+                  "TypeName": "/Script/UMG.MovieSceneWidgetMaterialSectionTemplate",
+                  "Data": {
+                    "BrushPropertyNamePath": [
+                      "Brush"
+                    ],
+                    "Scalars": [],
+                    "Bools": [],
+                    "Vector2Ds": [],
+                    "Vectors": [],
+                    "Colors": [
+                      {
+                        "ParameterName": "Translation",
+                        "RedCurve": {
+                          "PreInfinityExtrap": "RCCE_Constant",
+                          "PostInfinityExtrap": "RCCE_Constant",
+                          "Times": [
+                            {
+                              "Value": 0
+                            },
+                            {
+                              "Value": 20000
+                            }
+                          ],
+                          "Values": [
+                            {
+                              "Value": -1.943317,
+                              "Tangent": {
+                                "ArriveTangent": -0.00013559632,
+                                "LeaveTangent": -0.00013559632,
+                                "ArriveTangentWeight": 0.0,
+                                "LeaveTangentWeight": 0.0,
+                                "TangentWeightMode": 0
+                              },
+                              "InterpMode": 2,
+                              "TangentMode": 1
+                            },
+                            {
+                              "Value": -2.9198592,
+                              "Tangent": {
+                                "ArriveTangent": 0.0,
+                                "LeaveTangent": 0.0,
+                                "ArriveTangentWeight": 0.0,
+                                "LeaveTangentWeight": 0.0,
+                                "TangentWeightMode": 0
+                              },
+                              "InterpMode": 2,
+                              "TangentMode": 0
+                            }
+                          ],
+                          "DefaultValue": 0.0,
+                          "bHasDefaultValue": false,
+                          "TickResolution": {
+                            "Numerator": 60000,
+                            "Denominator": 1
+                          },
+                          "bShowCurve": false,
+                          "StructFallback": null
+                        },
+                        "GreenCurve": {
+                          "PreInfinityExtrap": "RCCE_Constant",
+                          "PostInfinityExtrap": "RCCE_Constant",
+                          "Times": [
+                            {
+                              "Value": 0
+                            }
+                          ],
+                          "Values": [
+                            {
+                              "Value": 0.0,
+                              "Tangent": {
+                                "ArriveTangent": 0.0,
+                                "LeaveTangent": 0.0,
+                                "ArriveTangentWeight": 0.0,
+                                "LeaveTangentWeight": 0.0,
+                                "TangentWeightMode": 0
+                              },
+                              "InterpMode": 2,
+                              "TangentMode": 0
+                            }
+                          ],
+                          "DefaultValue": 0.0,
+                          "bHasDefaultValue": false,
+                          "TickResolution": {
+                            "Numerator": 60000,
+                            "Denominator": 1
+                          },
+                          "bShowCurve": false,
+                          "StructFallback": null
+                        },
+                        "BlueCurve": {
+                          "PreInfinityExtrap": "RCCE_Constant",
+                          "PostInfinityExtrap": "RCCE_Constant",
+                          "Times": [
+                            {
+                              "Value": 0
+                            }
+                          ],
+                          "Values": [
+                            {
+                              "Value": 0.0,
+                              "Tangent": {
+                                "ArriveTangent": 0.0,
+                                "LeaveTangent": 0.0,
+                                "ArriveTangentWeight": 0.0,
+                                "LeaveTangentWeight": 0.0,
+                                "TangentWeightMode": 0
+                              },
+                              "InterpMode": 2,
+                              "TangentMode": 0
+                            }
+                          ],
+                          "DefaultValue": 0.0,
+                          "bHasDefaultValue": false,
+                          "TickResolution": {
+                            "Numerator": 60000,
+                            "Denominator": 1
+                          },
+                          "bShowCurve": false,
+                          "StructFallback": null
+                        },
+                        "AlphaCurve": {
+                          "PreInfinityExtrap": "RCCE_Constant",
+                          "PostInfinityExtrap": "RCCE_Constant",
+                          "Times": [
+                            {
+                              "Value": 0
+                            }
+                          ],
+                          "Values": [
+                            {
+                              "Value": 1.0,
+                              "Tangent": {
+                                "ArriveTangent": 0.0,
+                                "LeaveTangent": 0.0,
+                                "ArriveTangentWeight": 0.0,
+                                "LeaveTangentWeight": 0.0,
+                                "TangentWeightMode": 0
+                              },
+                              "InterpMode": 2,
+                              "TangentMode": 0
+                            }
+                          ],
+                          "DefaultValue": 0.0,
+                          "bHasDefaultValue": false,
+                          "TickResolution": {
+                            "Numerator": 60000,
+                            "Denominator": 1
+                          },
+                          "bShowCurve": false,
+                          "StructFallback": null
+                        }
+                      }
+                    ],
+                    "Transforms": [],
+                    "CompletionMode": "EMovieSceneCompletionMode::KeepState",
+                    "SourceSectionPtr": {
+                      "ObjectName": "MovieSceneParameterSection'ForgeOverwriteBaseAffixArea_C:Anim_Saoguang_INST.Anim_Saoguang.MovieSceneWidgetMaterialTrack_1.MovieSceneParameterSection_0'",
+                      "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.28"
+                    }
+                  }
+                }
+              ],
+              "TrackTemplate": {
+                "TypeName": "",
+                "Data": null
+              },
+              "EvaluationGroup": "None",
+              "bEvaluateInPreroll": false,
+              "bEvaluateInPostroll": false,
+              "bTearDownPriority": false
+            }
+          }
+        ],
+        "TemplateLedger": {
+          "LastTrackIdentifier": {
+            "Value": 0
+          },
+          "TrackSignatureToTrackIdentifier": [
+            {
+              "Key": "D801F04B-46D3DE2E-1863278A-0592C3E3",
+              "Value": {
+                "Value": 0
+              }
+            }
+          ]
+        }
+      },
+      "EntityComponentField": {
+        "PersistentEntityTree": {
+          "SerializedData": {
+            "Data": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 2,
+                  "Capacity": 2
+                }
+              ],
+              "Items": [
+                {
+                  "EntityIndex": 0,
+                  "MetaDataIndex": -1
+                },
+                {
+                  "EntityIndex": 1,
+                  "MetaDataIndex": -1
+                }
+              ]
+            },
+            "RootNode": {
+              "Range": {
+                "LowerBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                },
+                "UpperBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                }
+              },
+              "Parent": {
+                "ChildrenHandle": {
+                  "EntryIndex": -1
+                },
+                "Index": -1
+              },
+              "ChildrenID": {
+                "EntryIndex": 0
+              },
+              "DataID": {
+                "EntryIndex": -1
+              }
+            },
+            "ChildNodes": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 1,
+                  "Capacity": 1
+                }
+              ],
+              "Items": [
+                {
+                  "Range": {
+                    "LowerBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 0
+                      }
+                    },
+                    "UpperBound": {
+                      "Type": 0,
+                      "Value": {
+                        "Value": 22000
+                      }
+                    }
+                  },
+                  "Parent": {
+                    "ChildrenHandle": {
+                      "EntryIndex": -1
+                    },
+                    "Index": 0
+                  },
+                  "ChildrenID": {
+                    "EntryIndex": -1
+                  },
+                  "DataID": {
+                    "EntryIndex": 0
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "Entities": [
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieSceneFloatSection'ForgeOverwriteBaseAffixArea_C:Anim_Saoguang_INST.Anim_Saoguang.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+                "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.24"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 0
+          },
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieSceneFloatSection'ForgeOverwriteBaseAffixArea_C:Anim_Saoguang_INST.Anim_Saoguang.MovieSceneFloatTrack_1.MovieSceneFloatSection_0'",
+                "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.25"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 1
+          }
+        ],
+        "SharedMetaData": [
+          {
+            "ObjectBindingID": "43F749FB-4C530CE2-41AFF4AF-14615005"
+          },
+          {
+            "ObjectBindingID": "CD186A70-426C1C22-4871568D-25C09CA0"
+          }
+        ]
+      },
+      "TrackTemplateField": {
+        "Ranges": [
+          {
+            "Value": {
+              "LowerBound": {
+                "Type": 2,
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": 0,
+                "Value": {
+                  "Value": 0
+                }
+              }
+            }
+          },
+          {
+            "Value": {
+              "LowerBound": {
+                "Type": 1,
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": 0,
+                "Value": {
+                  "Value": 22000
+                }
+              }
+            }
+          },
+          {
+            "Value": {
+              "LowerBound": {
+                "Type": 1,
+                "Value": {
+                  "Value": 22000
+                }
+              },
+              "UpperBound": {
+                "Type": 2,
+                "Value": {
+                  "Value": 0
+                }
+              }
+            }
+          }
+        ],
+        "Groups": [
+          {
+            "LUTIndices": [],
+            "TrackLUT": [],
+            "SectionLUT": []
+          },
+          {
+            "LUTIndices": [
+              {
+                "NumInitPtrs": 0,
+                "NumEvalPtrs": 1
+              }
+            ],
+            "TrackLUT": [
+              {
+                "TrackPtr": {
+                  "SequenceID": {
+                    "Value": 0
+                  },
+                  "TrackIdentifier": {
+                    "Value": 0
+                  }
+                },
+                "NumChildren": 1
+              }
+            ],
+            "SectionLUT": [
+              {
+                "ChildIndex": 0,
+                "Flags": "ESectionEvaluationFlags::None",
+                "ForcedTime": {
+                  "Value": -2147483648
+                }
+              }
+            ]
+          },
+          {
+            "LUTIndices": [],
+            "TrackLUT": [],
+            "SectionLUT": []
+          }
+        ],
+        "MetaData": [
+          {
+            "ActiveSequences": [
+              {
+                "Value": 0
+              }
+            ],
+            "ActiveEntities": []
+          },
+          {
+            "ActiveSequences": [
+              {
+                "Value": 0
+              }
+            ],
+            "ActiveEntities": [
+              {
+                "Key": {
+                  "SequenceID": {
+                    "Value": 0
+                  },
+                  "TrackIdentifier": {
+                    "Value": 0
+                  },
+                  "SectionIndex": 0
+                },
+                "SetupIndex": 0,
+                "TearDownIndex": 65535
+              }
+            ]
+          },
+          {
+            "ActiveSequences": [
+              {
+                "Value": 0
+              }
+            ],
+            "ActiveEntities": []
+          }
+        ]
+      },
+      "CompiledSignature": "C062F630-45AEE4C8-20A35DB0-892573B7",
+      "CompilerVersion": "7D4B9809-2FAC4A6B-964ECF72-D8279EF8",
+      "AccumulatedMask": {
+        "bEvaluationTemplate": true,
+        "bEvaluationTemplateField": true,
+        "bEntityComponentField": true
+      },
+      "AllocatedMask": {
+        "bEvaluationTemplate": true,
+        "bEvaluationTemplateField": true,
+        "bEntityComponentField": true
+      }
+    }
+  },
+  {
+    "Type": "MovieSceneFloatSection",
+    "Name": "MovieSceneFloatSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneFloatSection'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatTrack'ForgeOverwriteBaseAffixArea_C:Anim_Saoguang_INST.Anim_Saoguang.MovieSceneFloatTrack_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.26"
+    },
+    "Properties": {
+      "FloatCurve": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 2000
+          },
+          {
+            "Value": 18000
+          },
+          {
+            "Value": 20000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'ForgeOverwriteBaseAffixArea_C:Anim_Saoguang_INST.Anim_Saoguang.MovieSceneFloatTrack_0.MovieSceneFloatSection_0.EaseInFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.17"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'ForgeOverwriteBaseAffixArea_C:Anim_Saoguang_INST.Anim_Saoguang.MovieSceneFloatTrack_0.MovieSceneFloatSection_0.EaseOutFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.18"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 22000
+            }
+          }
+        }
+      },
+      "Signature": "AE4E7A85-4D45818D-FDC903B2-1AB82BF4"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatSection",
+    "Name": "MovieSceneFloatSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneFloatSection'",
+    "Outer": {
+      "ObjectName": "MovieSceneFloatTrack'ForgeOverwriteBaseAffixArea_C:Anim_Saoguang_INST.Anim_Saoguang.MovieSceneFloatTrack_1'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.27"
+    },
+    "Properties": {
+      "FloatCurve": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 4000
+          },
+          {
+            "Value": 20000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 0.1,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'ForgeOverwriteBaseAffixArea_C:Anim_Saoguang_INST.Anim_Saoguang.MovieSceneFloatTrack_1.MovieSceneFloatSection_0.EaseInFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.19"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'ForgeOverwriteBaseAffixArea_C:Anim_Saoguang_INST.Anim_Saoguang.MovieSceneFloatTrack_1.MovieSceneFloatSection_0.EaseOutFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.20"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 22000
+            }
+          }
+        }
+      },
+      "Signature": "E6B8A1B5-4979CC3A-64F435A6-DD6AA8C9"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatTrack",
+    "Name": "MovieSceneFloatTrack_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneFloatTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'ForgeOverwriteBaseAffixArea_C:Anim_Saoguang_INST.Anim_Saoguang'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.16"
+    },
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderOpacity",
+        "PropertyPath": "RenderOpacity",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneFloatSection'ForgeOverwriteBaseAffixArea_C:Anim_Saoguang_INST.Anim_Saoguang.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.24"
+        }
+      ],
+      "EvaluationFieldGuid": "461EE991-444CE99B-C0F88FB7-40048DBE",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneFloatSection'ForgeOverwriteBaseAffixArea_C:Anim_Saoguang_INST.Anim_Saoguang.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.24"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Exclusive",
+                "Value": {
+                  "Value": 22000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "461EE991-444CE99B-C0F88FB7-40048DBE"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatTrack",
+    "Name": "MovieSceneFloatTrack_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneFloatTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'ForgeOverwriteBaseAffixArea_C:Anim_Saoguang_INST.Anim_Saoguang'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.16"
+    },
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderOpacity",
+        "PropertyPath": "RenderOpacity",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneFloatSection'ForgeOverwriteBaseAffixArea_C:Anim_Saoguang_INST.Anim_Saoguang.MovieSceneFloatTrack_1.MovieSceneFloatSection_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.25"
+        }
+      ],
+      "EvaluationFieldGuid": "22C56BA7-443FB51D-D6D530A1-9EC35E29",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneFloatSection'ForgeOverwriteBaseAffixArea_C:Anim_Saoguang_INST.Anim_Saoguang.MovieSceneFloatTrack_1.MovieSceneFloatSection_0'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.25"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Exclusive",
+                "Value": {
+                  "Value": 22000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "22C56BA7-443FB51D-D6D530A1-9EC35E29"
+    }
+  },
+  {
+    "Type": "MovieSceneParameterSection",
+    "Name": "MovieSceneParameterSection_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneParameterSection'",
+    "Outer": {
+      "ObjectName": "MovieSceneWidgetMaterialTrack'ForgeOverwriteBaseAffixArea_C:Anim_Saoguang_INST.Anim_Saoguang.MovieSceneWidgetMaterialTrack_1'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.29"
+    },
+    "Properties": {
+      "ColorParameterNamesAndCurves": [
+        {
+          "ParameterName": "Translation",
+          "RedCurve": {
+            "PreInfinityExtrap": "RCCE_Constant",
+            "PostInfinityExtrap": "RCCE_Constant",
+            "Times": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 20000
+              }
+            ],
+            "Values": [
+              {
+                "Value": -1.943317,
+                "Tangent": {
+                  "ArriveTangent": -0.00013559632,
+                  "LeaveTangent": -0.00013559632,
+                  "ArriveTangentWeight": 0.0,
+                  "LeaveTangentWeight": 0.0,
+                  "TangentWeightMode": 0
+                },
+                "InterpMode": 2,
+                "TangentMode": 1
+              },
+              {
+                "Value": -2.9198592,
+                "Tangent": {
+                  "ArriveTangent": 0.0,
+                  "LeaveTangent": 0.0,
+                  "ArriveTangentWeight": 0.0,
+                  "LeaveTangentWeight": 0.0,
+                  "TangentWeightMode": 0
+                },
+                "InterpMode": 2,
+                "TangentMode": 0
+              }
+            ],
+            "DefaultValue": 0.0,
+            "bHasDefaultValue": false,
+            "TickResolution": {
+              "Numerator": 60000,
+              "Denominator": 1
+            },
+            "bShowCurve": false,
+            "StructFallback": null
+          },
+          "GreenCurve": {
+            "PreInfinityExtrap": "RCCE_Constant",
+            "PostInfinityExtrap": "RCCE_Constant",
+            "Times": [
+              {
+                "Value": 0
+              }
+            ],
+            "Values": [
+              {
+                "Value": 0.0,
+                "Tangent": {
+                  "ArriveTangent": 0.0,
+                  "LeaveTangent": 0.0,
+                  "ArriveTangentWeight": 0.0,
+                  "LeaveTangentWeight": 0.0,
+                  "TangentWeightMode": 0
+                },
+                "InterpMode": 2,
+                "TangentMode": 0
+              }
+            ],
+            "DefaultValue": 0.0,
+            "bHasDefaultValue": false,
+            "TickResolution": {
+              "Numerator": 60000,
+              "Denominator": 1
+            },
+            "bShowCurve": false,
+            "StructFallback": null
+          },
+          "BlueCurve": {
+            "PreInfinityExtrap": "RCCE_Constant",
+            "PostInfinityExtrap": "RCCE_Constant",
+            "Times": [
+              {
+                "Value": 0
+              }
+            ],
+            "Values": [
+              {
+                "Value": 0.0,
+                "Tangent": {
+                  "ArriveTangent": 0.0,
+                  "LeaveTangent": 0.0,
+                  "ArriveTangentWeight": 0.0,
+                  "LeaveTangentWeight": 0.0,
+                  "TangentWeightMode": 0
+                },
+                "InterpMode": 2,
+                "TangentMode": 0
+              }
+            ],
+            "DefaultValue": 0.0,
+            "bHasDefaultValue": false,
+            "TickResolution": {
+              "Numerator": 60000,
+              "Denominator": 1
+            },
+            "bShowCurve": false,
+            "StructFallback": null
+          },
+          "AlphaCurve": {
+            "PreInfinityExtrap": "RCCE_Constant",
+            "PostInfinityExtrap": "RCCE_Constant",
+            "Times": [
+              {
+                "Value": 0
+              }
+            ],
+            "Values": [
+              {
+                "Value": 1.0,
+                "Tangent": {
+                  "ArriveTangent": 0.0,
+                  "LeaveTangent": 0.0,
+                  "ArriveTangentWeight": 0.0,
+                  "LeaveTangentWeight": 0.0,
+                  "TangentWeightMode": 0
+                },
+                "InterpMode": 2,
+                "TangentMode": 0
+              }
+            ],
+            "DefaultValue": 0.0,
+            "bHasDefaultValue": false,
+            "TickResolution": {
+              "Numerator": 60000,
+              "Denominator": 1
+            },
+            "bShowCurve": false,
+            "StructFallback": null
+          }
+        }
+      ],
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'ForgeOverwriteBaseAffixArea_C:Anim_Saoguang_INST.Anim_Saoguang.MovieSceneWidgetMaterialTrack_1.MovieSceneParameterSection_0.EaseInFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.21"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'ForgeOverwriteBaseAffixArea_C:Anim_Saoguang_INST.Anim_Saoguang.MovieSceneWidgetMaterialTrack_1.MovieSceneParameterSection_0.EaseOutFunction'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.22"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 22000
+            }
+          }
+        }
+      },
+      "Signature": "15ADAF2A-46BF1561-F811BC81-FB7E0CD2"
+    }
+  },
+  {
+    "Type": "MovieSceneWidgetMaterialTrack",
+    "Name": "MovieSceneWidgetMaterialTrack_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MovieSceneWidgetMaterialTrack'",
+    "Outer": {
+      "ObjectName": "MovieScene'ForgeOverwriteBaseAffixArea_C:Anim_Saoguang_INST.Anim_Saoguang'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.16"
+    },
+    "Properties": {
+      "BrushPropertyNamePath": [
+        "Brush"
+      ],
+      "TrackName": "Brush",
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneParameterSection'ForgeOverwriteBaseAffixArea_C:Anim_Saoguang_INST.Anim_Saoguang.MovieSceneWidgetMaterialTrack_1.MovieSceneParameterSection_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.28"
+        }
+      ],
+      "EvaluationFieldGuid": "D801F04B-46D3DE2E-1863278A-0592C3E3",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneParameterSection'ForgeOverwriteBaseAffixArea_C:Anim_Saoguang_INST.Anim_Saoguang.MovieSceneWidgetMaterialTrack_1.MovieSceneParameterSection_0'",
+              "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.28"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Exclusive",
+                "Value": {
+                  "Value": 22000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "D801F04B-46D3DE2E-1863278A-0592C3E3"
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SizeBox_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'ForgeOverwriteBaseAffixArea_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.52"
+    },
+    "Properties": {
+      "MinDesiredHeight": 211.2,
+      "MaxDesiredWidth": 550.0,
+      "bOverride_MinDesiredHeight": true,
+      "bOverride_MaxDesiredWidth": true,
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot'ForgeOverwriteBaseAffixArea_C:WidgetTree.SizeBox_0.SizeBoxSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.31"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'ForgeOverwriteBaseAffixArea_C:WidgetTree.AffixBox.VerticalBoxSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.45"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBoxSlot'",
+    "Outer": {
+      "ObjectName": "SizeBox'ForgeOverwriteBaseAffixArea_C:WidgetTree.SizeBox_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.30"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "SizeBox'ForgeOverwriteBaseAffixArea_C:WidgetTree.SizeBox_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.30"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'ForgeOverwriteBaseAffixArea_C:WidgetTree.CanvasPanel_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.2"
+      }
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "glow",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'ForgeOverwriteBaseAffixArea_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.52"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/UIEffect/UIMaterial/Inst/ForgeOverwrite/UI_MI_ForgeOverwrite_05.UI_MI_ForgeOverwrite_05",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 570.0,
+          "Y": 236.15999
+        }
+      },
+      "ColorAndOpacity": {
+        "R": 1.0,
+        "G": 0.33162,
+        "B": 0.0,
+        "A": 1.0,
+        "Hex": "FF9C00"
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'ForgeOverwriteBaseAffixArea_C:WidgetTree.Right.CanvasPanelSlot_4'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.14"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible",
+      "RenderOpacity": 0.0
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "glow0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'ForgeOverwriteBaseAffixArea_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.52"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/UIEffect/UIMaterial/Inst/ForgeOverwrite/UI_MI_ForgeOverwrite_02.UI_MI_ForgeOverwrite_02",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 570.0,
+          "Y": 236.15999
+        }
+      },
+      "ColorAndOpacity": {
+        "R": 1.0,
+        "G": 0.33162,
+        "B": 0.0,
+        "A": 1.0,
+        "Hex": "FF9C00"
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'ForgeOverwriteBaseAffixArea_C:WidgetTree.Right.CanvasPanelSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.12"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible",
+      "RenderOpacity": 0.6
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "glow01",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'ForgeOverwriteBaseAffixArea_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.52"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/UIEffect/UIMaterial/Inst/ForgeOverwrite/UI_MI_ForgeOverwrite_01.UI_MI_ForgeOverwrite_01",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 608.0,
+          "Y": 274.56
+        }
+      },
+      "ColorAndOpacity": {
+        "R": 1.0,
+        "G": 0.33162,
+        "B": 0.0,
+        "A": 1.0,
+        "Hex": "FF9C00"
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'ForgeOverwriteBaseAffixArea_C:WidgetTree.Right.CanvasPanelSlot_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.13"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible",
+      "RenderOpacity": 0.45
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "glow01_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'ForgeOverwriteBaseAffixArea_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.52"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/UIEffect/UIMaterial/Inst/ForgeOverwrite/UI_MI_ForgeOverwrite_01.UI_MI_ForgeOverwrite_01",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 608.0,
+          "Y": 274.56
+        }
+      },
+      "ColorAndOpacity": {
+        "R": 1.0,
+        "G": 0.33162,
+        "B": 0.0,
+        "A": 1.0,
+        "Hex": "FF9C00"
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'ForgeOverwriteBaseAffixArea_C:WidgetTree.Left.CanvasPanelSlot_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.10"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible",
+      "RenderOpacity": 0.1
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "glow0_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'ForgeOverwriteBaseAffixArea_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.52"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/UIEffect/UIMaterial/Inst/ForgeOverwrite/UI_MI_ForgeOverwrite_03.UI_MI_ForgeOverwrite_03",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 570.0,
+          "Y": 236.15999
+        }
+      },
+      "ColorAndOpacity": {
+        "R": 1.0,
+        "G": 0.33162,
+        "B": 0.0,
+        "A": 1.0,
+        "Hex": "FF9C00"
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'ForgeOverwriteBaseAffixArea_C:WidgetTree.Left.CanvasPanelSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.9"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible",
+      "RenderOpacity": 0.3
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "kuang",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'ForgeOverwriteBaseAffixArea_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.52"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/UIEffect/UITexture/ForgeOverwrite/UI_T_ForgeOverwrite_03.UI_T_ForgeOverwrite_03",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 570.0,
+          "Y": 236.15999
+        }
+      },
+      "ColorAndOpacity": {
+        "R": 0.768151,
+        "G": 0.28715,
+        "B": 0.0,
+        "A": 1.0,
+        "Hex": "E39200"
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'ForgeOverwriteBaseAffixArea_C:WidgetTree.Right.CanvasPanelSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.11"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "kuang_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'ForgeOverwriteBaseAffixArea_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.52"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/UIEffect/UITexture/ForgeOverwrite/UI_T_ForgeOverwrite_03.UI_T_ForgeOverwrite_03",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 570.0,
+          "Y": 236.15999
+        }
+      },
+      "ColorAndOpacity": {
+        "R": 0.768151,
+        "G": 0.28715,
+        "B": 0.0,
+        "A": 1.0,
+        "Hex": "E39200"
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'ForgeOverwriteBaseAffixArea_C:WidgetTree.Left.CanvasPanelSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.8"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "saoguang",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'ForgeOverwriteBaseAffixArea_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.52"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/UIEffect/UIMaterial/Inst/ForgeOverwrite/UI_MI_ForgeOverwrite_04.UI_MI_ForgeOverwrite_04",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 570.0,
+          "Y": 236.15999
+        }
+      },
+      "ColorAndOpacity": {
+        "R": 1.0,
+        "G": 0.33162,
+        "B": 0.0,
+        "A": 1.0,
+        "Hex": "FF9C00"
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'ForgeOverwriteBaseAffixArea_C:WidgetTree.Right.CanvasPanelSlot_5'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.15"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible",
+      "RenderOpacity": 0.0
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "UIImage_45",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'ForgeOverwriteBaseAffixArea_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.52"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/TexturesAtlas/Tips/Atlas/UI_Tips_TipsLine01_Sprite.UI_Tips_TipsLine01_Sprite",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 480.0,
+          "Y": 3.84
+        }
+      },
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'ForgeOverwriteBaseAffixArea_C:WidgetTree.AffixBox.VerticalBoxSlot_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.47"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "UIShrinkTextBlock",
+    "Name": "NoAffixHintText",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIShrinkTextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'ForgeOverwriteBaseAffixArea_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.52"
+    },
+    "Properties": {
+      "CurrStyleId": 4325,
+      "CurrTextKey": "Func_EquipBasicAffixCover_Text04",
+      "ShrinkSize": {
+        "X": 579.83997,
+        "Y": 211.2
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'ForgeOverwriteBaseAffixArea_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.7"
+      }
+    }
+  },
+  {
+    "Type": "UITextBlock",
+    "Name": "UITextBlock_75",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UITextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'ForgeOverwriteBaseAffixArea_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.52"
+    },
+    "Properties": {
+      "CurrStyleId": 1692,
+      "CurrTextKey": "Func_Pack_MAffix",
+      "Justification": "ETextJustify::Center",
+      "VerticalJustification": "ETextVerticalJustify::Center",
+      "AutoWrapText": true,
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'ForgeOverwriteBaseAffixArea_C:WidgetTree.AffixBox.VerticalBoxSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.46"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "VerticalBox",
+    "Name": "AffixBox",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'ForgeOverwriteBaseAffixArea_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.52"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "VerticalBoxSlot'ForgeOverwriteBaseAffixArea_C:WidgetTree.AffixBox.VerticalBoxSlot_2'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.47"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot'ForgeOverwriteBaseAffixArea_C:WidgetTree.AffixBox.VerticalBoxSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.46"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot'ForgeOverwriteBaseAffixArea_C:WidgetTree.AffixBox.VerticalBoxSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.45"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "VerticalBox",
+    "Name": "ValidAffixBox",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'ForgeOverwriteBaseAffixArea_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.52"
+    },
+    "Properties": {
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'ForgeOverwriteBaseAffixArea_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.5"
+      },
+      "Visibility": "ESlateVisibility::Collapsed"
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Outer": {
+      "ObjectName": "VerticalBox'ForgeOverwriteBaseAffixArea_C:WidgetTree.AffixBox'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.43"
+    },
+    "Properties": {
+      "Padding": {
+        "Bottom": 9.599999
+      },
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Top",
+      "Parent": {
+        "ObjectName": "VerticalBox'ForgeOverwriteBaseAffixArea_C:WidgetTree.AffixBox'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.43"
+      },
+      "Content": {
+        "ObjectName": "SizeBox'ForgeOverwriteBaseAffixArea_C:WidgetTree.SizeBox_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.30"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Outer": {
+      "ObjectName": "VerticalBox'ForgeOverwriteBaseAffixArea_C:WidgetTree.AffixBox'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.43"
+    },
+    "Properties": {
+      "Padding": {
+        "Bottom": 5.7599998
+      },
+      "VerticalAlignment": "VAlign_Top",
+      "Parent": {
+        "ObjectName": "VerticalBox'ForgeOverwriteBaseAffixArea_C:WidgetTree.AffixBox'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.43"
+      },
+      "Content": {
+        "ObjectName": "UITextBlock'ForgeOverwriteBaseAffixArea_C:WidgetTree.UITextBlock_75'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.42"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Outer": {
+      "ObjectName": "VerticalBox'ForgeOverwriteBaseAffixArea_C:WidgetTree.AffixBox'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.43"
+    },
+    "Properties": {
+      "Padding": {
+        "Bottom": 3.84
+      },
+      "HorizontalAlignment": "HAlign_Center",
+      "Parent": {
+        "ObjectName": "VerticalBox'ForgeOverwriteBaseAffixArea_C:WidgetTree.AffixBox'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.43"
+      },
+      "Content": {
+        "ObjectName": "UIImage'ForgeOverwriteBaseAffixArea_C:WidgetTree.UIImage_45'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.40"
+      }
+    }
+  },
+  {
+    "Type": "WidgetAnimation",
+    "Name": "Anim_Saoguang_INST",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetAnimation'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'ForgeOverwriteBaseAffixArea_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.0"
+    },
+    "Properties": {
+      "MovieScene": {
+        "ObjectName": "MovieScene'ForgeOverwriteBaseAffixArea_C:Anim_Saoguang_INST.Anim_Saoguang'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.16"
+      },
+      "AnimationBindings": [
+        {
+          "WidgetName": "saoguang",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "43F749FB-4C530CE2-41AFF4AF-14615005",
+          "bIsRootWidget": false
+        },
+        {
+          "WidgetName": "glow",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "CD186A70-426C1C22-4871568D-25C09CA0",
+          "bIsRootWidget": false
+        }
+      ],
+      "DisplayLabel": "Anim_Saoguang",
+      "CompiledData": {
+        "ObjectName": "MovieSceneCompiledData'ForgeOverwriteBaseAffixArea_C:Anim_Saoguang_INST.CompiledData'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.23"
+      },
+      "Signature": "C062F630-45AEE4C8-20A35DB0-892573B7"
+    }
+  },
+  {
+    "Type": "WidgetSwitcher",
+    "Name": "FXSwitcher",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetSwitcher'",
+    "Outer": {
+      "ObjectName": "WidgetTree'ForgeOverwriteBaseAffixArea_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.52"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "WidgetSwitcherSlot'ForgeOverwriteBaseAffixArea_C:WidgetTree.FXSwitcher.WidgetSwitcherSlot_5'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.51"
+        },
+        {
+          "ObjectName": "WidgetSwitcherSlot'ForgeOverwriteBaseAffixArea_C:WidgetTree.FXSwitcher.WidgetSwitcherSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.50"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'ForgeOverwriteBaseAffixArea_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.6"
+      }
+    }
+  },
+  {
+    "Type": "WidgetSwitcherSlot",
+    "Name": "WidgetSwitcherSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetSwitcherSlot'",
+    "Outer": {
+      "ObjectName": "WidgetSwitcher'ForgeOverwriteBaseAffixArea_C:WidgetTree.FXSwitcher'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.49"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "WidgetSwitcher'ForgeOverwriteBaseAffixArea_C:WidgetTree.FXSwitcher'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.49"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'ForgeOverwriteBaseAffixArea_C:WidgetTree.Right'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.4"
+      }
+    }
+  },
+  {
+    "Type": "WidgetSwitcherSlot",
+    "Name": "WidgetSwitcherSlot_5",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetSwitcherSlot'",
+    "Outer": {
+      "ObjectName": "WidgetSwitcher'ForgeOverwriteBaseAffixArea_C:WidgetTree.FXSwitcher'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.49"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "WidgetSwitcher'ForgeOverwriteBaseAffixArea_C:WidgetTree.FXSwitcher'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.49"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'ForgeOverwriteBaseAffixArea_C:WidgetTree.Left'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.3"
+      }
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetTree'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'ForgeOverwriteBaseAffixArea_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.0"
+    },
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "VerticalBox'ForgeOverwriteBaseAffixArea_C:WidgetTree.AffixBox'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgeOverwrite/ForgeOverwriteBaseAffixArea.43"
+      }
+    }
+  }
+]

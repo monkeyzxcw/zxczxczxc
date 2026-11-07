@@ -1,0 +1,1858 @@
+[
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "ForgePreciseAffixListItem_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Package": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'ForgePreciseAffixListItem_C:WidgetTree'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.57"
+      },
+      "bClassRequiresNativeTick": true
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'UIListViewItem'",
+      "ObjectPath": "/Script/UE_game"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "C_AffixDescriptionText",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIRichTextBlock'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "C_AffixDetailButton",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIButton'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "C_ErrorTipsButton",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIButton'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "C_OperatorSwitcher",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'WidgetSwitcher'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "C_SelectButton",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIButton'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "C_SelectedSwitcher",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'WidgetSwitcher'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "C_StateSwicher",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'WidgetSwitcher'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "TierImg",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "UIImage",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "UIImage_1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "UIImage_2",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "UIImage_63",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "UIImage_91",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "UIImage_139",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "UIImage_163",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'UIImage'",
+          "ObjectPath": "/Script/UE_game"
+        }
+      }
+    ],
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "ForgePreciseAffixListItem_C'Default__ForgePreciseAffixListItem_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.1"
+    }
+  },
+  {
+    "Type": "ForgePreciseAffixListItem_C",
+    "Name": "Default__ForgePreciseAffixListItem_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.ForgePreciseAffixListItem_C'",
+    "Package": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem",
+    "Properties": {
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "ButtonSlot",
+    "Name": "ButtonSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ButtonSlot'",
+    "Outer": {
+      "ObjectName": "UIButton'ForgePreciseAffixListItem_C:WidgetTree.C_ErrorTipsButton'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.31"
+    },
+    "Properties": {
+      "Padding": {
+        "Left": 0.0,
+        "Top": 0.0,
+        "Right": 0.0,
+        "Bottom": 0.0
+      },
+      "Parent": {
+        "ObjectName": "UIButton'ForgePreciseAffixListItem_C:WidgetTree.C_ErrorTipsButton'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.31"
+      },
+      "Content": {
+        "ObjectName": "UIImage'ForgePreciseAffixListItem_C:WidgetTree.UIImage_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.38"
+      }
+    }
+  },
+  {
+    "Type": "ButtonSlot",
+    "Name": "ButtonSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ButtonSlot'",
+    "Outer": {
+      "ObjectName": "UIButton'ForgePreciseAffixListItem_C:WidgetTree.C_SelectButton'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.32"
+    },
+    "Properties": {
+      "Padding": {
+        "Left": 0.0,
+        "Top": 0.0,
+        "Right": 0.0,
+        "Bottom": 0.0
+      },
+      "Parent": {
+        "ObjectName": "UIButton'ForgePreciseAffixListItem_C:WidgetTree.C_SelectButton'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.32"
+      },
+      "Content": {
+        "ObjectName": "WidgetSwitcher'ForgePreciseAffixListItem_C:WidgetTree.C_SelectedSwitcher'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.49"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'ForgePreciseAffixListItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.57"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'ForgePreciseAffixListItem_C:WidgetTree.CanvasPanel.CanvasPanelSlot_5'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.8"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "WidgetSwitcherSlot'ForgePreciseAffixListItem_C:WidgetTree.C_OperatorSwitcher.WidgetSwitcherSlot_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.52"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'ForgePreciseAffixListItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.57"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'ForgePreciseAffixListItem_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.9"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_35",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'ForgePreciseAffixListItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.57"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'ForgePreciseAffixListItem_C:WidgetTree.CanvasPanel_35.CanvasPanelSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.11"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'ForgePreciseAffixListItem_C:WidgetTree.CanvasPanel_35.CanvasPanelSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.10"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "WidgetSwitcherSlot'ForgePreciseAffixListItem_C:WidgetTree.C_OperatorSwitcher.WidgetSwitcherSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.51"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_97",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'ForgePreciseAffixListItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.57"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'ForgePreciseAffixListItem_C:WidgetTree.CanvasPanel_97.CanvasPanelSlot_16'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.14"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'ForgePreciseAffixListItem_C:WidgetTree.CanvasPanel_97.CanvasPanelSlot_14'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.13"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'ForgePreciseAffixListItem_C:WidgetTree.CanvasPanel_97.CanvasPanelSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.12"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'ForgePreciseAffixListItem_C:WidgetTree.CanvasPanel_97.CanvasPanelSlot_17'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.15"
+        },
+        {
+          "ObjectName": "CanvasPanelSlot'ForgePreciseAffixListItem_C:WidgetTree.CanvasPanel_97.CanvasPanelSlot_2'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.16"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "OverlaySlot'ForgePreciseAffixListItem_C:WidgetTree.Overlay_58.OverlaySlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.25"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_5",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'ForgePreciseAffixListItem_C:WidgetTree.CanvasPanel'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.4"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 760.32,
+          "Right": 192.0,
+          "Bottom": 57.6
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'ForgePreciseAffixListItem_C:WidgetTree.CanvasPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.4"
+      },
+      "Content": {
+        "ObjectName": "UIButton'ForgePreciseAffixListItem_C:WidgetTree.C_SelectButton'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.32"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'ForgePreciseAffixListItem_C:WidgetTree.CanvasPanel_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.5"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 192.0,
+          "Bottom": 57.6
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'ForgePreciseAffixListItem_C:WidgetTree.CanvasPanel_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.5"
+      },
+      "Content": {
+        "ObjectName": "SizeBox'ForgePreciseAffixListItem_C:WidgetTree.SizeBox_37'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.27"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'ForgePreciseAffixListItem_C:WidgetTree.CanvasPanel_35'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.6"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 760.32,
+          "Top": 38.399998,
+          "Right": 295.68,
+          "Bottom": 69.119995
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'ForgePreciseAffixListItem_C:WidgetTree.CanvasPanel_35'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.6"
+      },
+      "Content": {
+        "ObjectName": "UIShrinkTextBlock'ForgePreciseAffixListItem_C:WidgetTree.C_NeedLevelTipsText'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.42"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'ForgePreciseAffixListItem_C:WidgetTree.CanvasPanel_35'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.6"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 760.32,
+          "Top": -61.44,
+          "Right": 192.0,
+          "Bottom": 57.6
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.0
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'ForgePreciseAffixListItem_C:WidgetTree.CanvasPanel_35'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.6"
+      },
+      "Content": {
+        "ObjectName": "UIImage'ForgePreciseAffixListItem_C:WidgetTree.UIImage_91'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.40"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'ForgePreciseAffixListItem_C:WidgetTree.CanvasPanel_97'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.7"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 472.31998,
+          "Right": 192.0,
+          "Bottom": 57.6
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'ForgePreciseAffixListItem_C:WidgetTree.CanvasPanel_97'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.7"
+      },
+      "Content": {
+        "ObjectName": "VerticalBox'ForgePreciseAffixListItem_C:WidgetTree.VerticalBox_79'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.45"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_14",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'ForgePreciseAffixListItem_C:WidgetTree.CanvasPanel_97'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.7"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": -241.92,
+          "Right": 1152.0,
+          "Bottom": 115.2
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'ForgePreciseAffixListItem_C:WidgetTree.CanvasPanel_97'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.7"
+      },
+      "Content": {
+        "ObjectName": "SizeBox'ForgePreciseAffixListItem_C:WidgetTree.SizeBox_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.26"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_16",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'ForgePreciseAffixListItem_C:WidgetTree.CanvasPanel_97'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.7"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": -867.83997,
+          "Right": 192.0,
+          "Bottom": 57.6
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'ForgePreciseAffixListItem_C:WidgetTree.CanvasPanel_97'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.7"
+      },
+      "Content": {
+        "ObjectName": "WidgetSwitcher'ForgePreciseAffixListItem_C:WidgetTree.C_StateSwicher'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.50"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_17",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'ForgePreciseAffixListItem_C:WidgetTree.CanvasPanel_97'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.7"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "Anchors": {
+          "Maximum": {
+            "X": 1.0,
+            "Y": 1.0
+          }
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'ForgePreciseAffixListItem_C:WidgetTree.CanvasPanel_97'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.7"
+      },
+      "Content": {
+        "ObjectName": "WidgetSwitcher'ForgePreciseAffixListItem_C:WidgetTree.C_OperatorSwitcher'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.48"
+      }
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Outer": {
+      "ObjectName": "CanvasPanel'ForgePreciseAffixListItem_C:WidgetTree.CanvasPanel_97'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.7"
+    },
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Left": 877.44,
+          "Right": 192.0,
+          "Bottom": 57.6
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "bAutoSize": true,
+      "Parent": {
+        "ObjectName": "CanvasPanel'ForgePreciseAffixListItem_C:WidgetTree.CanvasPanel_97'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.7"
+      },
+      "Content": {
+        "ObjectName": "UIButton'ForgePreciseAffixListItem_C:WidgetTree.C_ErrorTipsButton'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.31"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "MinTierBox",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'ForgePreciseAffixListItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.57"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HorizontalBoxSlot'ForgePreciseAffixListItem_C:WidgetTree.MinTierBox.HorizontalBoxSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.18"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'ForgePreciseAffixListItem_C:WidgetTree.MinTierBox.HorizontalBoxSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.19"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'ForgePreciseAffixListItem_C:WidgetTree.VerticalBox_79.VerticalBoxSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.47"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'ForgePreciseAffixListItem_C:WidgetTree.MinTierBox'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.17"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "HorizontalBox'ForgePreciseAffixListItem_C:WidgetTree.MinTierBox'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.17"
+      },
+      "Content": {
+        "ObjectName": "UIShrinkTextBlock'ForgePreciseAffixListItem_C:WidgetTree.UIShrinkTextBlock_92'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.43"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'ForgePreciseAffixListItem_C:WidgetTree.MinTierBox'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.17"
+    },
+    "Properties": {
+      "Padding": {
+        "Left": -3.84
+      },
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "HorizontalBox'ForgePreciseAffixListItem_C:WidgetTree.MinTierBox'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.17"
+      },
+      "Content": {
+        "ObjectName": "Overlay'ForgePreciseAffixListItem_C:WidgetTree.Overlay_185'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.20"
+      }
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "Overlay_185",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Overlay'",
+    "Outer": {
+      "ObjectName": "WidgetTree'ForgePreciseAffixListItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.57"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlaySlot'ForgePreciseAffixListItem_C:WidgetTree.Overlay_185.OverlaySlot_5'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.23"
+        },
+        {
+          "ObjectName": "OverlaySlot'ForgePreciseAffixListItem_C:WidgetTree.Overlay_185.OverlaySlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.22"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'ForgePreciseAffixListItem_C:WidgetTree.MinTierBox.HorizontalBoxSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.19"
+      },
+      "RenderTransform": {
+        "Translation": {
+          "X": 13.44,
+          "Y": 0.0
+        }
+      }
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "Overlay_58",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Overlay'",
+    "Outer": {
+      "ObjectName": "WidgetTree'ForgePreciseAffixListItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.57"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlaySlot'ForgePreciseAffixListItem_C:WidgetTree.Overlay_58.OverlaySlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.24"
+        },
+        {
+          "ObjectName": "OverlaySlot'ForgePreciseAffixListItem_C:WidgetTree.Overlay_58.OverlaySlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.25"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "SizeBoxSlot'ForgePreciseAffixListItem_C:WidgetTree.SizeBox_37.SizeBoxSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.29"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'ForgePreciseAffixListItem_C:WidgetTree.Overlay_185'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.20"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Center",
+      "VerticalAlignment": "VAlign_Center",
+      "Parent": {
+        "ObjectName": "Overlay'ForgePreciseAffixListItem_C:WidgetTree.Overlay_185'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.20"
+      },
+      "Content": {
+        "ObjectName": "UITextBlock'ForgePreciseAffixListItem_C:WidgetTree.TierText'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.44"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_5",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'ForgePreciseAffixListItem_C:WidgetTree.Overlay_185'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.20"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "Overlay'ForgePreciseAffixListItem_C:WidgetTree.Overlay_185'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.20"
+      },
+      "Content": {
+        "ObjectName": "UIImage'ForgePreciseAffixListItem_C:WidgetTree.TierImg'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.33"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'ForgePreciseAffixListItem_C:WidgetTree.Overlay_58'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.21"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Fill",
+      "VerticalAlignment": "VAlign_Fill",
+      "Parent": {
+        "ObjectName": "Overlay'ForgePreciseAffixListItem_C:WidgetTree.Overlay_58'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.21"
+      },
+      "Content": {
+        "ObjectName": "UIImage'ForgePreciseAffixListItem_C:WidgetTree.UIImage_63'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.39"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'ForgePreciseAffixListItem_C:WidgetTree.Overlay_58'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.21"
+    },
+    "Properties": {
+      "HorizontalAlignment": "HAlign_Fill",
+      "VerticalAlignment": "VAlign_Fill",
+      "Parent": {
+        "ObjectName": "Overlay'ForgePreciseAffixListItem_C:WidgetTree.Overlay_58'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.21"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'ForgePreciseAffixListItem_C:WidgetTree.CanvasPanel_97'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.7"
+      }
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SizeBox_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'ForgePreciseAffixListItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.57"
+    },
+    "Properties": {
+      "WidthOverride": 1152.0,
+      "HeightOverride": 115.2,
+      "MaxDesiredHeight": 115.2,
+      "bOverride_WidthOverride": true,
+      "bOverride_MaxDesiredHeight": true,
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot'ForgePreciseAffixListItem_C:WidgetTree.SizeBox_0.SizeBoxSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.28"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'ForgePreciseAffixListItem_C:WidgetTree.CanvasPanel_97.CanvasPanelSlot_14'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.13"
+      }
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SizeBox_37",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'ForgePreciseAffixListItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.57"
+    },
+    "Properties": {
+      "WidthOverride": 1881.6,
+      "MinDesiredHeight": 134.4,
+      "MaxDesiredHeight": 576.0,
+      "bOverride_WidthOverride": true,
+      "bOverride_MinDesiredHeight": true,
+      "bOverride_MaxDesiredHeight": true,
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot'ForgePreciseAffixListItem_C:WidgetTree.SizeBox_37.SizeBoxSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.29"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'ForgePreciseAffixListItem_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.9"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBoxSlot'",
+    "Outer": {
+      "ObjectName": "SizeBox'ForgePreciseAffixListItem_C:WidgetTree.SizeBox_0'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.26"
+    },
+    "Properties": {
+      "Padding": {
+        "Top": 9.599999,
+        "Bottom": 9.599999
+      },
+      "Parent": {
+        "ObjectName": "SizeBox'ForgePreciseAffixListItem_C:WidgetTree.SizeBox_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.26"
+      },
+      "Content": {
+        "ObjectName": "UIRichTextBlock'ForgePreciseAffixListItem_C:WidgetTree.C_AffixDescriptionText'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.41"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SizeBoxSlot'",
+    "Outer": {
+      "ObjectName": "SizeBox'ForgePreciseAffixListItem_C:WidgetTree.SizeBox_37'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.27"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "SizeBox'ForgePreciseAffixListItem_C:WidgetTree.SizeBox_37'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.27"
+      },
+      "Content": {
+        "ObjectName": "Overlay'ForgePreciseAffixListItem_C:WidgetTree.Overlay_58'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.21"
+      }
+    }
+  },
+  {
+    "Type": "UIButton",
+    "Name": "C_AffixDetailButton",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIButton'",
+    "Outer": {
+      "ObjectName": "WidgetTree'ForgePreciseAffixListItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.57"
+    },
+    "Properties": {
+      "CurButtonStyleId": 1702,
+      "CurrStyleId": 3043,
+      "CurrTextKey": "Func_Forge_affixInfoDetail",
+      "IconImage": {
+        "ImageSize": {
+          "X": 61.44,
+          "Y": 61.44
+        }
+      },
+      "WidgetStyle": {
+        "Normal": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          }
+        },
+        "Hovered": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          }
+        },
+        "Pressed": {
+          "ImageSize": {
+            "X": 61.44,
+            "Y": 61.44
+          }
+        }
+      },
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'ForgePreciseAffixListItem_C:WidgetTree.VerticalBox_79.VerticalBoxSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.46"
+      }
+    }
+  },
+  {
+    "Type": "UIButton",
+    "Name": "C_ErrorTipsButton",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIButton'",
+    "Outer": {
+      "ObjectName": "WidgetTree'ForgePreciseAffixListItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.57"
+    },
+    "Properties": {
+      "IconImage": {
+        "ImageSize": {
+          "X": 61.44,
+          "Y": 61.44
+        }
+      },
+      "WidgetStyle": {
+        "Normal": {
+          "ImageSize": {
+            "X": 69.119995,
+            "Y": 38.399998
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 1.0,
+              "G": 1.0,
+              "B": 1.0,
+              "A": 0.0,
+              "Hex": "FFFFFF"
+            }
+          }
+        },
+        "Hovered": {
+          "ImageSize": {
+            "X": 69.119995,
+            "Y": 38.399998
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 1.0,
+              "G": 1.0,
+              "B": 1.0,
+              "A": 0.0,
+              "Hex": "FFFFFF"
+            }
+          }
+        },
+        "Pressed": {
+          "ImageSize": {
+            "X": 69.119995,
+            "Y": 38.399998
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 1.0,
+              "G": 1.0,
+              "B": 1.0,
+              "A": 0.0,
+              "Hex": "FFFFFF"
+            }
+          }
+        },
+        "NormalPadding": {
+          "Left": 0.0,
+          "Top": 0.0,
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "PressedPadding": {
+          "Left": 0.0,
+          "Top": 0.0,
+          "Right": 0.0,
+          "Bottom": 0.0
+        }
+      },
+      "Slots": [
+        {
+          "ObjectName": "ButtonSlot'ForgePreciseAffixListItem_C:WidgetTree.C_ErrorTipsButton.ButtonSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.2"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'ForgePreciseAffixListItem_C:WidgetTree.CanvasPanel_97.CanvasPanelSlot_2'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.16"
+      },
+      "Visibility": "ESlateVisibility::Collapsed"
+    }
+  },
+  {
+    "Type": "UIButton",
+    "Name": "C_SelectButton",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIButton'",
+    "Outer": {
+      "ObjectName": "WidgetTree'ForgePreciseAffixListItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.57"
+    },
+    "Properties": {
+      "IconImage": {
+        "ImageSize": {
+          "X": 61.44,
+          "Y": 61.44
+        }
+      },
+      "WidgetStyle": {
+        "Normal": {
+          "ImageSize": {
+            "X": 69.119995,
+            "Y": 38.399998
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 1.0,
+              "G": 1.0,
+              "B": 1.0,
+              "A": 0.0,
+              "Hex": "FFFFFF"
+            }
+          }
+        },
+        "Hovered": {
+          "ImageSize": {
+            "X": 69.119995,
+            "Y": 38.399998
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 1.0,
+              "G": 1.0,
+              "B": 1.0,
+              "A": 0.0,
+              "Hex": "FFFFFF"
+            }
+          }
+        },
+        "Pressed": {
+          "ImageSize": {
+            "X": 69.119995,
+            "Y": 38.399998
+          },
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 1.0,
+              "G": 1.0,
+              "B": 1.0,
+              "A": 0.0,
+              "Hex": "FFFFFF"
+            }
+          }
+        },
+        "NormalPadding": {
+          "Left": 0.0,
+          "Top": 0.0,
+          "Right": 0.0,
+          "Bottom": 0.0
+        },
+        "PressedPadding": {
+          "Left": 0.0,
+          "Top": 0.0,
+          "Right": 0.0,
+          "Bottom": 0.0
+        }
+      },
+      "Slots": [
+        {
+          "ObjectName": "ButtonSlot'ForgePreciseAffixListItem_C:WidgetTree.C_SelectButton.ButtonSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.3"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'ForgePreciseAffixListItem_C:WidgetTree.CanvasPanel.CanvasPanelSlot_5'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.8"
+      }
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "TierImg",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'ForgePreciseAffixListItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.57"
+    },
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 76.799995,
+          "Y": 46.079998
+        }
+      },
+      "Slot": {
+        "ObjectName": "OverlaySlot'ForgePreciseAffixListItem_C:WidgetTree.Overlay_185.OverlaySlot_5'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.23"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "UIImage",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'ForgePreciseAffixListItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.57"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/TexturesAtlas/Forge/Atlas/UI_Forge_IconSuffix02_Sprite.UI_Forge_IconSuffix02_Sprite",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 61.44,
+          "Y": 61.44
+        }
+      },
+      "Slot": {
+        "ObjectName": "WidgetSwitcherSlot'ForgePreciseAffixListItem_C:WidgetTree.C_StateSwicher.WidgetSwitcherSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.56"
+      }
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "UIImage_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'ForgePreciseAffixListItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.57"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/TexturesAtlas/Forge/Atlas/UI_Forge_CLbgpick01_Sprite.UI_Forge_CLbgpick01_Sprite",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 76.799995,
+          "Y": 76.799995
+        }
+      },
+      "Slot": {
+        "ObjectName": "WidgetSwitcherSlot'ForgePreciseAffixListItem_C:WidgetTree.C_SelectedSwitcher.WidgetSwitcherSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.54"
+      }
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "UIImage_139",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'ForgePreciseAffixListItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.57"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/TexturesAtlas/Forge/Atlas/UI_Forge_IconPreffix02_Sprite.UI_Forge_IconPreffix02_Sprite",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 61.44,
+          "Y": 61.44
+        }
+      },
+      "Slot": {
+        "ObjectName": "WidgetSwitcherSlot'ForgePreciseAffixListItem_C:WidgetTree.C_StateSwicher.WidgetSwitcherSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.55"
+      }
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "UIImage_163",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'ForgePreciseAffixListItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.57"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/TexturesAtlas/Forge/Atlas/UI_Forge_CLbgpick00_Sprite.UI_Forge_CLbgpick00_Sprite",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 76.799995,
+          "Y": 76.799995
+        }
+      },
+      "Slot": {
+        "ObjectName": "WidgetSwitcherSlot'ForgePreciseAffixListItem_C:WidgetTree.C_SelectedSwitcher.WidgetSwitcherSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.53"
+      }
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "UIImage_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'ForgePreciseAffixListItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.57"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/TexturesAtlas/Forge/Atlas/UI_Forge_BAN_Sprite.UI_Forge_BAN_Sprite",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 65.28,
+          "Y": 65.28
+        }
+      },
+      "Slot": {
+        "ObjectName": "ButtonSlot'ForgePreciseAffixListItem_C:WidgetTree.C_ErrorTipsButton.ButtonSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.2"
+      }
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "UIImage_63",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'ForgePreciseAffixListItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.57"
+    },
+    "Properties": {
+      "CurrStyleId": 5647,
+      "Brush": {
+        "ImageSize": {
+          "X": 61.44,
+          "Y": 61.44
+        }
+      },
+      "Slot": {
+        "ObjectName": "OverlaySlot'ForgePreciseAffixListItem_C:WidgetTree.Overlay_58.OverlaySlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.24"
+      },
+      "Visibility": "ESlateVisibility::HitTestInvisible"
+    }
+  },
+  {
+    "Type": "UIImage",
+    "Name": "UIImage_91",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'ForgePreciseAffixListItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.57"
+    },
+    "Properties": {
+      "SoftObjectPath": {
+        "AssetPathName": "/Game/Art/UI/TexturesAtlas/Forge/Atlas/UI_Forge_CLiconban_Sprite.UI_Forge_CLiconban_Sprite",
+        "SubPathString": ""
+      },
+      "Brush": {
+        "ImageSize": {
+          "X": 96.0,
+          "Y": 96.0
+        }
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'ForgePreciseAffixListItem_C:WidgetTree.CanvasPanel_35.CanvasPanelSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.11"
+      }
+    }
+  },
+  {
+    "Type": "UIRichTextBlock",
+    "Name": "C_AffixDescriptionText",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIRichTextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'ForgePreciseAffixListItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.57"
+    },
+    "Properties": {
+      "CurrStyleId": 1015,
+      "ShrinkSize": {
+        "X": 122.88,
+        "Y": 122.88
+      },
+      "Text": {
+        "Namespace": "",
+        "Key": "9E154701404775D9077058AEBB8201B3",
+        "SourceString": "<RichText>测试测试测试测试测试测试测试测试测试测试测</>",
+        "LocalizedString": "<RichText>测试测试测试测试测试测试测试测试测试测试测</>"
+      },
+      "WrapTextAt": 1152.0,
+      "Slot": {
+        "ObjectName": "SizeBoxSlot'ForgePreciseAffixListItem_C:WidgetTree.SizeBox_0.SizeBoxSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.28"
+      }
+    }
+  },
+  {
+    "Type": "UIShrinkTextBlock",
+    "Name": "C_NeedLevelTipsText",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIShrinkTextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'ForgePreciseAffixListItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.57"
+    },
+    "Properties": {
+      "CurrStyleId": 3044,
+      "CurrTextKey": "Func_Forge_requiredItemLevel",
+      "ShrinkSize": {
+        "X": 295.68,
+        "Y": 69.119995
+      },
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'ForgePreciseAffixListItem_C:WidgetTree.CanvasPanel_35.CanvasPanelSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.10"
+      }
+    }
+  },
+  {
+    "Type": "UIShrinkTextBlock",
+    "Name": "UIShrinkTextBlock_92",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UIShrinkTextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'ForgePreciseAffixListItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.57"
+    },
+    "Properties": {
+      "CurrStyleId": 3713,
+      "CurrTextKey": "Func_Forge_MaxTier",
+      "ShrinkSize": {
+        "X": 192.0,
+        "Y": 49.92
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'ForgePreciseAffixListItem_C:WidgetTree.MinTierBox.HorizontalBoxSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.18"
+      }
+    }
+  },
+  {
+    "Type": "UITextBlock",
+    "Name": "TierText",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UITextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'ForgePreciseAffixListItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.57"
+    },
+    "Properties": {
+      "CurrStyleId": 1702,
+      "Text": {
+        "Namespace": "",
+        "Key": "FFF9C2A849808D88DFDF92A623127C64",
+        "SourceString": "T8",
+        "LocalizedString": "T8"
+      },
+      "Slot": {
+        "ObjectName": "OverlaySlot'ForgePreciseAffixListItem_C:WidgetTree.Overlay_185.OverlaySlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.22"
+      },
+      "RenderTransform": {
+        "Translation": {
+          "X": 0.0,
+          "Y": 3.84
+        }
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "VerticalBox",
+    "Name": "VerticalBox_79",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'ForgePreciseAffixListItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.57"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "VerticalBoxSlot'ForgePreciseAffixListItem_C:WidgetTree.VerticalBox_79.VerticalBoxSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.47"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot'ForgePreciseAffixListItem_C:WidgetTree.VerticalBox_79.VerticalBoxSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.46"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'ForgePreciseAffixListItem_C:WidgetTree.CanvasPanel_97.CanvasPanelSlot_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.12"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Outer": {
+      "ObjectName": "VerticalBox'ForgePreciseAffixListItem_C:WidgetTree.VerticalBox_79'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.45"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "VerticalBox'ForgePreciseAffixListItem_C:WidgetTree.VerticalBox_79'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.45"
+      },
+      "Content": {
+        "ObjectName": "UIButton'ForgePreciseAffixListItem_C:WidgetTree.C_AffixDetailButton'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.30"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Outer": {
+      "ObjectName": "VerticalBox'ForgePreciseAffixListItem_C:WidgetTree.VerticalBox_79'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.45"
+    },
+    "Properties": {
+      "Padding": {
+        "Bottom": 3.84
+      },
+      "HorizontalAlignment": "HAlign_Center",
+      "Parent": {
+        "ObjectName": "VerticalBox'ForgePreciseAffixListItem_C:WidgetTree.VerticalBox_79'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.45"
+      },
+      "Content": {
+        "ObjectName": "HorizontalBox'ForgePreciseAffixListItem_C:WidgetTree.MinTierBox'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.17"
+      }
+    }
+  },
+  {
+    "Type": "WidgetSwitcher",
+    "Name": "C_OperatorSwitcher",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetSwitcher'",
+    "Outer": {
+      "ObjectName": "WidgetTree'ForgePreciseAffixListItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.57"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "WidgetSwitcherSlot'ForgePreciseAffixListItem_C:WidgetTree.C_OperatorSwitcher.WidgetSwitcherSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.51"
+        },
+        {
+          "ObjectName": "WidgetSwitcherSlot'ForgePreciseAffixListItem_C:WidgetTree.C_OperatorSwitcher.WidgetSwitcherSlot_2'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.52"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'ForgePreciseAffixListItem_C:WidgetTree.CanvasPanel_97.CanvasPanelSlot_17'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.15"
+      }
+    }
+  },
+  {
+    "Type": "WidgetSwitcher",
+    "Name": "C_SelectedSwitcher",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetSwitcher'",
+    "Outer": {
+      "ObjectName": "WidgetTree'ForgePreciseAffixListItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.57"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "WidgetSwitcherSlot'ForgePreciseAffixListItem_C:WidgetTree.C_SelectedSwitcher.WidgetSwitcherSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.53"
+        },
+        {
+          "ObjectName": "WidgetSwitcherSlot'ForgePreciseAffixListItem_C:WidgetTree.C_SelectedSwitcher.WidgetSwitcherSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.54"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "ButtonSlot'ForgePreciseAffixListItem_C:WidgetTree.C_SelectButton.ButtonSlot_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.3"
+      }
+    }
+  },
+  {
+    "Type": "WidgetSwitcher",
+    "Name": "C_StateSwicher",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetSwitcher'",
+    "Outer": {
+      "ObjectName": "WidgetTree'ForgePreciseAffixListItem_C:WidgetTree'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.57"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "WidgetSwitcherSlot'ForgePreciseAffixListItem_C:WidgetTree.C_StateSwicher.WidgetSwitcherSlot_0'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.55"
+        },
+        {
+          "ObjectName": "WidgetSwitcherSlot'ForgePreciseAffixListItem_C:WidgetTree.C_StateSwicher.WidgetSwitcherSlot_1'",
+          "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.56"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'ForgePreciseAffixListItem_C:WidgetTree.CanvasPanel_97.CanvasPanelSlot_16'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.14"
+      }
+    }
+  },
+  {
+    "Type": "WidgetSwitcherSlot",
+    "Name": "WidgetSwitcherSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetSwitcherSlot'",
+    "Outer": {
+      "ObjectName": "WidgetSwitcher'ForgePreciseAffixListItem_C:WidgetTree.C_OperatorSwitcher'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.48"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "WidgetSwitcher'ForgePreciseAffixListItem_C:WidgetTree.C_OperatorSwitcher'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.48"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'ForgePreciseAffixListItem_C:WidgetTree.CanvasPanel_35'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.6"
+      }
+    }
+  },
+  {
+    "Type": "WidgetSwitcherSlot",
+    "Name": "WidgetSwitcherSlot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetSwitcherSlot'",
+    "Outer": {
+      "ObjectName": "WidgetSwitcher'ForgePreciseAffixListItem_C:WidgetTree.C_OperatorSwitcher'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.48"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "WidgetSwitcher'ForgePreciseAffixListItem_C:WidgetTree.C_OperatorSwitcher'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.48"
+      },
+      "Content": {
+        "ObjectName": "CanvasPanel'ForgePreciseAffixListItem_C:WidgetTree.CanvasPanel'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.4"
+      }
+    }
+  },
+  {
+    "Type": "WidgetSwitcherSlot",
+    "Name": "WidgetSwitcherSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetSwitcherSlot'",
+    "Outer": {
+      "ObjectName": "WidgetSwitcher'ForgePreciseAffixListItem_C:WidgetTree.C_SelectedSwitcher'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.49"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "WidgetSwitcher'ForgePreciseAffixListItem_C:WidgetTree.C_SelectedSwitcher'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.49"
+      },
+      "Content": {
+        "ObjectName": "UIImage'ForgePreciseAffixListItem_C:WidgetTree.UIImage_163'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.37"
+      }
+    }
+  },
+  {
+    "Type": "WidgetSwitcherSlot",
+    "Name": "WidgetSwitcherSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetSwitcherSlot'",
+    "Outer": {
+      "ObjectName": "WidgetSwitcher'ForgePreciseAffixListItem_C:WidgetTree.C_SelectedSwitcher'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.49"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "WidgetSwitcher'ForgePreciseAffixListItem_C:WidgetTree.C_SelectedSwitcher'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.49"
+      },
+      "Content": {
+        "ObjectName": "UIImage'ForgePreciseAffixListItem_C:WidgetTree.UIImage_1'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.35"
+      }
+    }
+  },
+  {
+    "Type": "WidgetSwitcherSlot",
+    "Name": "WidgetSwitcherSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetSwitcherSlot'",
+    "Outer": {
+      "ObjectName": "WidgetSwitcher'ForgePreciseAffixListItem_C:WidgetTree.C_StateSwicher'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.50"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "WidgetSwitcher'ForgePreciseAffixListItem_C:WidgetTree.C_StateSwicher'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.50"
+      },
+      "Content": {
+        "ObjectName": "UIImage'ForgePreciseAffixListItem_C:WidgetTree.UIImage_139'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.36"
+      }
+    }
+  },
+  {
+    "Type": "WidgetSwitcherSlot",
+    "Name": "WidgetSwitcherSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetSwitcherSlot'",
+    "Outer": {
+      "ObjectName": "WidgetSwitcher'ForgePreciseAffixListItem_C:WidgetTree.C_StateSwicher'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.50"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "WidgetSwitcher'ForgePreciseAffixListItem_C:WidgetTree.C_StateSwicher'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.50"
+      },
+      "Content": {
+        "ObjectName": "UIImage'ForgePreciseAffixListItem_C:WidgetTree.UIImage'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.34"
+      }
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetTree'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'ForgePreciseAffixListItem_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.0"
+    },
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "CanvasPanel'ForgePreciseAffixListItem_C:WidgetTree.CanvasPanel_0'",
+        "ObjectPath": "UE_game/Content/BluePrint/UI/ForgePreciseAffixList/ForgePreciseAffixListItem.5"
+      }
+    }
+  }
+]
