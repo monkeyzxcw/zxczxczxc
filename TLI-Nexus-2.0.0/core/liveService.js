@@ -360,9 +360,16 @@ export class LiveService {
       this.gameExe = proc.exe || this.gameExe;
       if (proc.running) {
         this.gameMissingScans = 0;
-        const processChanged = this.game && this.gameProcessId && proc.pid &&
-          Number(this.gameProcessId) !== Number(proc.pid);
+        const processChanged = this.game && (
+          (this.gameProcessId && proc.pid && Number(this.gameProcessId) !== Number(proc.pid)) ||
+          (this.gameProcessStartedAt && proc.processStartedAt &&
+            Number(this.gameProcessStartedAt) !== Number(proc.processStartedAt))
+        );
         if (!this.game || processChanged) {
+          if (processChanged && !this.manualLogFile) {
+            // Same UE_game.log path may be reused by a fast game restart.
+            this.detach(); this.logFile = null;
+          }
           this.game = true;
           this.gameProcessId = proc.pid || null;
           this.gameProcessStartedAt = Number(proc.processStartedAt) || null;
