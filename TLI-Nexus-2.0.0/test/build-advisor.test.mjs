@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { diagnoseBuild } from '../core/buildAdvisor.js';
+import { diagnoseBuild, characterSnapshotToIntel } from '../core/buildAdvisor.js';
 
 const resourceIndex = {
   itemDefinitions:[{id:'41001',name:'Шлем теста',slotRaw:'Head',sourcePath:'DT_Items'}],
@@ -104,4 +104,25 @@ test('catalog conflicts and out-of-range values are not scored as low rolls', ()
   assert.equal(outside.rollPercent,null);
   assert.ok(report.recommendations.some((row)=>row.code==='affix-attrtype-conflict'));
   assert.equal(report.recommendations.filter((row)=>row.code==='low-affix-roll').length,0);
+});
+
+test('profile character history snapshot restores evidence for offline diagnosis', () => {
+  const snapshot = {
+    capturedAt: 5000, sourceObservedAt: 4900, playerId: 'p1', name: 'Tester',
+    seasonId: 14, heroName: 'Rose', level: 90,
+    stats: [{key:'life',value:900,rawKey:'MaxLife',observedAt:4900}],
+    skills: [{id:'501',name:'Skill A',level:20}],
+    talents: [{id:'801',name:'Talent A'}],
+    explicitEquipment: [{itemId:41001,slotRaw:'Head',affixes:[]}],
+    partialEquipment: [{itemId:12,count:1}],
+  };
+  const intel=characterSnapshotToIntel(snapshot,{id:'char-p1-14',name:'Tester',playerId:'p1',lastSeasonId:14,specialization:'Specialization'});
+  assert.equal(intel.identity.playerId,'p1');
+  assert.equal(intel.identity.seasonId,14);
+  assert.equal(intel.identity.specializationName,'Specialization');
+  assert.equal(intel.lastObservedAt,4900);
+  assert.equal(intel.stats[0].key,'life');
+  assert.equal(intel.skills[0].id,'501');
+  assert.equal(intel.talents[0].id,'801');
+  assert.equal(intel.explicitEquipment[0].itemId,41001);
 });
