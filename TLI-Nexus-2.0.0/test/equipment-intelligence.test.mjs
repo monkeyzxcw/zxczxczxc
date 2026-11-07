@@ -195,6 +195,32 @@ test('imported game DataTables resolve raw affix IDs to verified names and range
   assert.equal(comparison.catalogAffixes.right[0].matched, false);
 });
 
+test('attribute enum can be resolved even when the affix roll row is missing', () => {
+  const gear = item(41003, 'Предмет с сырым AttrType', [{
+    id: '7999',
+    attributeRaw: '12',
+    values: [{ key: 'RollValue', value: '135' }],
+  }], 'Head');
+  const resourceIndex = {
+    itemDefinitions: [],
+    affixDefinitions: [],
+    attributeDefinitions: [{
+      enumId: '12',
+      enumName: 'Maximum Life',
+      sourcePath: 'Content/Data/DT_AffixAttrType.json',
+    }],
+    localizationEntries: [],
+  };
+  const result = analyzeEquipment([gear], 'RollValue | Roll | 1 | higher', resourceIndex);
+  assert.equal(result.resourceCatalog.affixDefinitions, 0);
+  assert.equal(result.resourceCatalog.attributeDefinitions, 1);
+  assert.equal(result.resourceCatalog.matchedAffixes, 0);
+  assert.equal(result.resourceCatalog.matchedAttributes, 1);
+  assert.equal(result.items[0].affixes[0].catalogMatch.matched, false);
+  assert.equal(result.items[0].affixes[0].catalogMatch.attributeMatched, true);
+  assert.equal(result.items[0].affixes[0].catalogMatch.attributeName, 'Maximum Life');
+});
+
 test('empty evidence returns an unavailable analysis, not a fabricated rating', () => {
   const result = analyzeEquipment([], 'LifeFlat | Жизнь | 5 | higher');
 
