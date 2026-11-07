@@ -552,7 +552,7 @@ app.whenReady().then(() => {
       throw new Error('История цен в резервной копии имеет неверный формат');
     }
     delete parsed._priceHistorySnapshot;
-    const imported = mergeData(parsed); writeData(imported);
+    const imported = mergeData(parsed); writeData(imported); configureTlidbAutoSync();
     let importedPricePoints = 0;
     if (priceHistorySnapshot) importedPricePoints = live?.importPriceHistory?.(priceHistorySnapshot, { merge: true }) || 0;
     return { canceled: false, data: appData, importedPricePoints };
