@@ -5,6 +5,11 @@ const TECHNICAL_ID_KEYS = new Set([
   'id', 'baseid', 'affixid', 'baseaffixid', 'affixconfigid', 'affixbaseid',
   'itemid', 'itembaseid', 'itemconfigid', 'equipmentid', 'equipmentbaseid', 'configbaseid',
 ]);
+const STRUCTURAL_AFFIX_KEYS = new Set([
+  'attrtype', 'affixtype', 'attributetype', 'tier', 'affixtier', 'level', 'affixlevel',
+  'name', 'affixname', 'displayname', 'namekey', 'textkey', 'desckey', 'descriptionkey',
+  'min', 'minvalue', 'valuemin', 'minroll', 'max', 'maxvalue', 'valuemax', 'maxroll',
+]);
 
 const normalizeKey = (value) => String(value || '').replace(/[^a-z0-9]/gi, '').toLowerCase();
 const cleanText = (value, max = 160) =>
@@ -89,6 +94,7 @@ function normalizeItem(item, index = 0) {
       if (
         !rawKey ||
         TECHNICAL_ID_KEYS.has(normalizeKey(rawKey)) ||
+        STRUCTURAL_AFFIX_KEYS.has(normalizeKey(rawKey)) ||
         field.value === undefined ||
         field.value === null
       ) {
