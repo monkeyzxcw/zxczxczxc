@@ -230,6 +230,33 @@ function damageFocus(build) {
   };
   return aliases[key] || [];
 }
+export function characterSnapshotToIntel(snapshot, profile = null) {
+  if (!snapshot) return null;
+  return {
+    identity: {
+      playerId: snapshot.playerId || profile?.playerId || profile?.detectedPlayerId || null,
+      name: snapshot.name || profile?.name || null,
+      seasonId: snapshot.seasonId ?? profile?.lastSeasonId ?? profile?.seasonId ?? null,
+      heroId: snapshot.heroId || profile?.detectedHeroId || null,
+      heroName: snapshot.heroName || profile?.hero || null,
+      level: snapshot.level ?? profile?.level ?? null,
+      specializationId: snapshot.specializationId || profile?.detectedSpecializationId || null,
+      specializationName: profile?.specialization || null,
+    },
+    stats: Array.isArray(snapshot.stats) ? snapshot.stats.map((row) => ({ ...row })) : [],
+    skills: Array.isArray(snapshot.skills) ? snapshot.skills.map((row) => ({ ...row })) : [],
+    talents: Array.isArray(snapshot.talents) ? snapshot.talents.map((row) => ({ ...row })) : [],
+    explicitEquipment: Array.isArray(snapshot.explicitEquipment) ? snapshot.explicitEquipment.map((row) => ({
+      ...row, affixes: (row.affixes || []).map((affix) => ({
+        ...affix, values: (affix.values || []).map((value) => ({ ...value })),
+      })),
+    })) : [],
+    inventorySnapshots: snapshot.inventorySnapshot ? [snapshot.inventorySnapshot] : [],
+    lastObservedAt: Number(snapshot.sourceObservedAt) || null,
+    capturedAt: Number(snapshot.capturedAt) || null,
+  };
+}
+
 export function diagnoseBuild({ build = {}, profile = null, intel = null, equipment = null, resourceIndex = null, tlidbCatalog = null, now = Date.now() } = {}) {
   const stats = statEvidence(intel,build);
   const ageMs = Number(intel?.lastObservedAt || intel?.capturedAt || 0);
