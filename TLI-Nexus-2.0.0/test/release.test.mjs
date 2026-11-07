@@ -193,6 +193,8 @@ test('package version is 2.3.0 automatic TLIDB and map tracking release', () => 
   assert.match(overlay, /last-map-value/);
   assert.match(overlay, /map-items/);
   assert.match(main, /game-run:\$\{Number\(state\.startedAt\)\}/);
+  assert.match(main, /onResumeExpired:/);
+  assert.match(ui, /game-run:\$\{Number\(live\.startedAt\)\}/);
   assert.match(ui, /game-run:\$\{Number\(live\.startedAt\)\}/);
   assert.match(ui, /data-map-history/);
   assert.equal(pkg.scripts.check.includes('core/farmAnalytics.js'), true);
