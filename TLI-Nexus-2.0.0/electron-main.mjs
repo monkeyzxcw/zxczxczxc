@@ -13,7 +13,7 @@ import { buildAnonymizedDiagnostic, buildCharacterReport } from './core/characte
 import { compareCharacterSnapshots } from './core/snapshotHistory.js';
 import { analyzeEquipment, compareEquipment } from './core/equipmentIntelligence.js';
 import { scanGameResourceFolder, resourceCatalogStatus } from './core/gameResourceCatalog.js';
-import { fetchTlidbCatalog, searchTlidbAffixes, tlidbCatalogStatus } from './core/tlidbCatalog.js';
+import { fetchTlidbCatalog, mergeTlidbCatalog, searchTlidbAffixes, tlidbCatalogStatus } from './core/tlidbCatalog.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const DEFAULTS = DEFAULT_APP_DATA;
@@ -75,6 +75,94 @@ function writeTlidbCatalog(index) {
   tlidbCatalogCache = index;
   tlidbCatalogMtime = fs.statSync(tlidbCatalogFile()).mtimeMs;
 }
+const TLIDB_AUTO_SYNC_STARTUP_DELAY_MS = 5000;
+const TLIDB_AUTO_SYNC_RETRY_MS = 60 * 60 * 1000;
+let tlidbAutoSyncTimer = null;
+let tlidbSyncInFlight = null;
+let tlidbLastSyncError = null;
+
+function tlidbAutoSyncEnabled() {
+  return appData?.settings?.tlidbAutoSyncEnabled !== false;
+}
+function tlidbSyncIntervalHours() {
+  const allowed = [6, 12, 24, 48, 168];
+  const requested = Number(appData?.settings?.tlidbSyncIntervalHours);
+  return allowed.includes(requested) ? requested : 24;
+}
+function tlidbSyncIntervalMs() {
+  return tlidbSyncIntervalHours() * 60 * 60 * 1000;
+}
+function tlidbStatusSnapshot() {
+  return {
+    ...tlidbCatalogStatus(readTlidbCatalog()),
+    autoSyncEnabled: tlidbAutoSyncEnabled(),
+    syncIntervalHours: tlidbSyncIntervalHours(),
+    lastError: tlidbLastSyncError,
+  };
+}
+function notifyTlidbUpdate(automatic, error = null) {
+  const payload = { status: tlidbStatusSnapshot(), automatic: automatic === true, error: error || null };
+  if (dashboard && !dashboard.isDestroyed()) dashboard.webContents.send('tlidb:updated', payload);
+  return payload;
+}
+function scheduleTlidbAutoSync(delayMs) {
+  if (tlidbAutoSyncTimer) clearTimeout(tlidbAutoSyncTimer);
+  tlidbAutoSyncTimer = null;
+  if (!tlidbAutoSyncEnabled() || !appData) return;
+
+  tlidbAutoSyncTimer = setTimeout(async () => {
+    tlidbAutoSyncTimer = null;
+    try {
+      await runTlidbSync({ automatic: true });
+      scheduleTlidbAutoSync(tlidbSyncIntervalMs());
+    } catch (error) {
+      console.warn('[TLI Nexus] Автоматическая синхронизация TLIDB не удалась:', error?.message || error);
+      scheduleTlidbAutoSync(TLIDB_AUTO_SYNC_RETRY_MS);
+    }
+  }, Math.max(1000, Number(delayMs) || TLIDB_AUTO_SYNC_STARTUP_DELAY_MS));
+  tlidbAutoSyncTimer.unref?.();
+}
+function configureTlidbAutoSync() {
+  if (tlidbAutoSyncTimer) clearTimeout(tlidbAutoSyncTimer);
+  tlidbAutoSyncTimer = null;
+  if (!tlidbAutoSyncEnabled() || !appData) return;
+
+  const cached = readTlidbCatalog();
+  const syncedAt = Number(cached?.syncedAt) || 0;
+  const remaining = syncedAt ? tlidbSyncIntervalMs() - (Date.now() - syncedAt) : 0;
+  scheduleTlidbAutoSync(remaining > 0 ? remaining : TLIDB_AUTO_SYNC_STARTUP_DELAY_MS);
+}
+async function runTlidbSync({ automatic = false } = {}) {
+  if (tlidbSyncInFlight) return tlidbSyncInFlight;
+
+  const task = (async () => {
+    try {
+      const downloaded = await fetchTlidbCatalog();
+      if (!(Number(downloaded.summary?.pagesImported) > 0) || !downloaded.records?.length) {
+        const reason = downloaded.failedPages?.[0]?.reason || 'Не удалось прочитать таблицы аффиксов TLIDB.';
+        throw new Error('База TLIDB не обновлена: ' + reason);
+      }
+      const merged = mergeTlidbCatalog(readTlidbCatalog(), downloaded);
+      if (!merged.records.length) throw new Error('TLIDB не вернула ни одной записи. Старый кэш сохранён.');
+      writeTlidbCatalog(merged);
+      tlidbLastSyncError = null;
+      notifyTlidbUpdate(automatic);
+      return { status: tlidbStatusSnapshot() };
+    } catch (error) {
+      tlidbLastSyncError = String(error?.message || error).slice(0, 500);
+      notifyTlidbUpdate(automatic, tlidbLastSyncError);
+      throw error;
+    }
+  })();
+
+  tlidbSyncInFlight = task;
+  try {
+    return await task;
+  } finally {
+    if (tlidbSyncInFlight === task) tlidbSyncInFlight = null;
+  }
+}
+
 function mergeData(value) { return mergeAppData(value); }
 function loadData() {
   try { appData = mergeData(JSON.parse(fs.readFileSync(dataFile(), 'utf8'))); }
@@ -374,6 +462,7 @@ app.whenReady().then(() => {
   live.setPriceWatch(appData.priceWatch);
   createOverlay();
   live.start();
+  configureTlidbAutoSync();
   const trayImage = nativeImage.createFromPath(path.join(__dirname, 'assets', 'nexus-icon.png'));
   tray = new Tray(trayImage); tray.setToolTip('TLI Nexus — игровой компаньон');
   refreshTrayMenu();
@@ -442,6 +531,7 @@ app.whenReady().then(() => {
     writeData(appData);
     live?.setNotificationPreferences({ enabled: appData.settings.notificationsEnabled, soundEnabled: appData.settings.soundEnabled, thresholdFe: appData.settings.notificationThresholdFe });
     registerGlobalHotkeys();
+    configureTlidbAutoSync();
     return appData.settings;
   });
   ipcMain.handle('app:export', async () => {
@@ -486,15 +576,11 @@ app.whenReady().then(() => {
     gameResourceIndexMtime = fs.statSync(gameResourceIndexFile()).mtimeMs;
     return { canceled: false, status: resourceCatalogStatus(index), limitations: index.limitations };
   });
-  ipcMain.handle('tlidb:status', () => tlidbCatalogStatus(readTlidbCatalog()));
+  ipcMain.handle('tlidb:status', () => tlidbStatusSnapshot());
   ipcMain.handle('tlidb:sync', async () => {
-    const index = await fetchTlidbCatalog();
-    if (!index.records.length) {
-      const reason = index.failedPages?.[0]?.reason || 'Не удалось прочитать таблицы аффиксов TLIDB.';
-      throw new Error('База TLIDB не обновлена: ' + reason);
-    }
-    writeTlidbCatalog(index);
-    return { status: tlidbCatalogStatus(index) };
+    const result = await runTlidbSync({ automatic: false });
+    if (tlidbAutoSyncEnabled()) scheduleTlidbAutoSync(tlidbSyncIntervalMs());
+    return result;
   });
   ipcMain.handle('tlidb:search', (_event, query, options = {}) => searchTlidbAffixes(
     readTlidbCatalog(),
@@ -533,5 +619,5 @@ app.whenReady().then(() => {
   overlay?.webContents.once('did-finish-load', () => overlay?.webContents.send('app:settings', appData.settings));
   registerGlobalHotkeys();
 });
-app.on('before-quit', () => { live?.stop(); globalShortcut.unregisterAll(); });
+app.on('before-quit', () => { if (tlidbAutoSyncTimer) clearTimeout(tlidbAutoSyncTimer); live?.stop(); globalShortcut.unregisterAll(); });
 app.on('window-all-closed', (e) => e.preventDefault());
