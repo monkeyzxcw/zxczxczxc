@@ -1,0 +1,62 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "Accumulate_shake_cy_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Package": "UE_game/Content/BluePrint/Res/CameraShake/Skill/Accumulate_shake_cy",
+    "SuperStruct": {
+      "ObjectName": "Class'ECameraShake'",
+      "ObjectPath": "/Script/UE_game"
+    },
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Accumulate_shake_cy_C'Default__Accumulate_shake_cy_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/Res/CameraShake/Skill/Accumulate_shake_cy.1"
+    }
+  },
+  {
+    "Type": "Accumulate_shake_cy_C",
+    "Name": "Default__Accumulate_shake_cy_C",
+    "Flags": "RF_Public | RF_Transactional | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'UE_game/Content/BluePrint/Res/CameraShake/Skill/Accumulate_shake_cy.Accumulate_shake_cy_C'",
+    "Package": "UE_game/Content/BluePrint/Res/CameraShake/Skill/Accumulate_shake_cy",
+    "Properties": {
+      "AdaptiveCameraShakeAdjustment": "EAdaptiveCameraShakeAdjustment::E_fixed_listener",
+      "bScaleLocOscillationByCameraDistance": true,
+      "OscillationDuration": 0.15,
+      "OscillationBlendInTime": 0.0,
+      "OscillationBlendOutTime": 0.0,
+      "LocOscillation": {
+        "X": {
+          "Amplitude": 5.0,
+          "Frequency": 5.0,
+          "InitialOffset": "EOO_OffsetZero",
+          "Waveform": "EOscillatorWaveform::PerlinNoise"
+        },
+        "Y": {
+          "Amplitude": 5.0,
+          "Frequency": 5.0,
+          "InitialOffset": "EOO_OffsetZero",
+          "Waveform": "EOscillatorWaveform::PerlinNoise"
+        },
+        "Z": {
+          "Amplitude": 5.0,
+          "Frequency": 5.0,
+          "InitialOffset": "EOO_OffsetZero",
+          "Waveform": "EOscillatorWaveform::PerlinNoise"
+        }
+      },
+      "Anim": {
+        "ObjectName": "CameraAnim'CA_Boss_Haidao_Up'",
+        "ObjectPath": "UE_game/Content/BluePrint/Res/CameraAnim/CA_Boss_Haidao_Up.0"
+      }
+    }
+  }
+]

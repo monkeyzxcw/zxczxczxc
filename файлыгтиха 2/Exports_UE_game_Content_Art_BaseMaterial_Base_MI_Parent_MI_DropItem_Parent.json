@@ -1,0 +1,71 @@
+[
+  {
+    "Type": "MaterialInstanceConstant",
+    "Name": "MI_DropItem_Parent",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MaterialInstanceConstant'",
+    "Package": "UE_game/Content/Art/BaseMaterial/Base_MI_Parent/MI_DropItem_Parent",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "Material'M_DropItem'",
+        "ObjectPath": "UE_game/Content/Art/BaseMaterial/Base_Env/Map/M_DropItem.0"
+      },
+      "ScalarParameterValues": [
+        {
+          "ParameterInfo": {
+            "Name": "RefractionDepthBias",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": 0.0,
+          "ExpressionGUID": "00000000-00000000-00000000-00000000"
+        }
+      ],
+      "TextureParameterValues": [
+        {
+          "ParameterInfo": {
+            "Name": "BonePosition",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": {
+            "ObjectName": "Texture2D'T_DAP_Drop_P'",
+            "ObjectPath": "UE_game/Content/Art/DropItem/VAT/VATT/T_DAP_Drop_P.0"
+          },
+          "ExpressionGUID": "F79F875B-4AF58B78-79297BA8-A8A8CE4D"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "BoneRotation",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": {
+            "ObjectName": "Texture2D'T_DAP_Drop_R'",
+            "ObjectPath": "UE_game/Content/Art/DropItem/VAT/VATT/T_DAP_Drop_R.0"
+          },
+          "ExpressionGUID": "C810D602-4090B982-EECFA6B3-1D129327"
+        }
+      ],
+      "BasePropertyOverrides": {
+        "ShadingModel": "MSM_Unlit",
+        "OpacityMaskClipValue": 0.3333
+      },
+      "CachedReferencedTextures": [
+        {
+          "ObjectName": "Texture2D'T_BaseWhite_gamma_1X1'",
+          "ObjectPath": "UE_game/Content/Art/BaseMaterial/CommonTexture/T_BaseWhite_gamma_1X1.0"
+        },
+        {
+          "ObjectName": "Texture2D'T_BaseBlack_linear_1X1'",
+          "ObjectPath": "UE_game/Content/Art/BaseMaterial/CommonTexture/T_BaseBlack_linear_1X1.0"
+        },
+        null,
+        {
+          "ObjectName": "Texture2D'DefaultTexture'",
+          "ObjectPath": "Engine/Content/EngineResources/DefaultTexture.0"
+        }
+      ]
+    }
+  }
+]

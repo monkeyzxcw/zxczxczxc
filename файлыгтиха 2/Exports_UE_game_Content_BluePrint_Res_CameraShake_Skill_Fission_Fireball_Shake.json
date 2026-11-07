@@ -1,0 +1,60 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "Fission_Fireball_Shake_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Package": "UE_game/Content/BluePrint/Res/CameraShake/Skill/Fission_Fireball_Shake",
+    "SuperStruct": {
+      "ObjectName": "Class'ECameraShake'",
+      "ObjectPath": "/Script/UE_game"
+    },
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Fission_Fireball_Shake_C'Default__Fission_Fireball_Shake_C'",
+      "ObjectPath": "UE_game/Content/BluePrint/Res/CameraShake/Skill/Fission_Fireball_Shake.1"
+    }
+  },
+  {
+    "Type": "Fission_Fireball_Shake_C",
+    "Name": "Default__Fission_Fireball_Shake_C",
+    "Flags": "RF_Public | RF_Transactional | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'UE_game/Content/BluePrint/Res/CameraShake/Skill/Fission_Fireball_Shake.Fission_Fireball_Shake_C'",
+    "Package": "UE_game/Content/BluePrint/Res/CameraShake/Skill/Fission_Fireball_Shake",
+    "Properties": {
+      "AdaptiveCameraShakeAdjustment": "EAdaptiveCameraShakeAdjustment::E_fixed_listener",
+      "bScaleLocOscillationByCameraDistance": true,
+      "Falloff": 0.05,
+      "bOrientShakeTowardsEpicenter": true,
+      "OscillationDuration": 0.15,
+      "OscillationBlendInTime": 0.0,
+      "OscillationBlendOutTime": 0.05,
+      "LocOscillation": {
+        "X": {
+          "Amplitude": 2.5,
+          "Frequency": 2.5,
+          "InitialOffset": "EOO_OffsetZero",
+          "Waveform": "EOscillatorWaveform::PerlinNoise"
+        },
+        "Y": {
+          "Amplitude": 2.5,
+          "Frequency": 2.5,
+          "InitialOffset": "EOO_OffsetZero",
+          "Waveform": "EOscillatorWaveform::PerlinNoise"
+        },
+        "Z": {
+          "Amplitude": 2.5,
+          "Frequency": 2.5,
+          "InitialOffset": "EOO_OffsetZero",
+          "Waveform": "EOscillatorWaveform::PerlinNoise"
+        }
+      }
+    }
+  }
+]
