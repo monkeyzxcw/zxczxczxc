@@ -464,7 +464,7 @@ $('game-resource-import').onclick=async()=>{
   }
 };
 
-function renderTlidbAutoControls(result={}) {
+function renderTlidbAutoControls(result={}){
   const settings=data.settings||{};
   const enabled=typeof result.autoSyncEnabled==='boolean'?result.autoSyncEnabled:settings.tlidbAutoSyncEnabled!==false;
   const interval=Number(result.syncIntervalHours||settings.tlidbSyncIntervalHours)||24;
@@ -530,7 +530,8 @@ $('tlidb-sync').onclick=async()=>{
     const result=await window.nexus.syncTlidbCatalog();
     await refreshTlidbStatus();
     const summary=result.status?.summary||{};
-    toast('TLIDB обновлена · записей: '+number(summary.affixRows||0,0)+' · страниц: '+number(summary.pagesImported||0,0));
+    const retained=Number(summary.retainedPages)||0;
+    toast('TLIDB обновлена · записей: '+number(summary.affixRows||0,0)+' · страниц: '+number(summary.pagesImported||0,0)+(retained?' · старые данные сохранены для '+retained+' страниц':''));
     await searchTlidbCatalog();
   }catch(error){
     toast('Ошибка загрузки TLIDB: '+(error.message||error));
@@ -563,120 +564,6 @@ window.nexus.onTlidbUpdate((payload)=>{
     if($('tlidb-search').value.trim())void searchTlidbCatalog();
   }
 });
-refreshGameResourceStatus();
-
-function renderTlidbAutoControls(result={}) {
-  const settings=data.settings||{};
-  const enabled=typeof result.autoSyncEnabled==='boolean'?result.autoSyncEnabled:settings.tlidbAutoSyncEnabled!==false;
-  const interval=Number(result.syncIntervalHours||settings.tlidbSyncIntervalHours)||24;
-  $('tlidb-auto-sync').checked=enabled;
-  $('tlidb-sync-interval').value=String(interval);
-  $('tlidb-sync-interval').disabled=!enabled;
-  let message=enabled?`Автообновление включено · раз в ${interval} ч. При устаревшем кэше обновление начнётся после запуска приложения.`:'Автообновление выключено · база будет обновляться только вручную.';
-  if(result.lastFullSyncAt)message+=' Последняя полная синхронизация: '+date(result.lastFullSyncAt)+'.';
-  if(result.lastError)message+=' Последняя ошибка: '+String(result.lastError).slice(0,240);
-  $('tlidb-auto-status').textContent=message;
-}
-async function refreshTlidbStatus(){
-  try{
-    const result=await window.nexus.getTlidbCatalogStatus();
-    renderTlidbAutoControls(result);
-    const badge=$('tlidb-badge');
-    const status=$('tlidb-status');
-    const details=$('tlidb-details');
-    if(!result?.imported){
-      badge.textContent='Не загружена';
-      status.textContent='Локальный кэш TLIDB ещё не создан.';
-      details.textContent='Nexus загрузит базовые аффиксы, коррозию и крафтовые таблицы по 38 страницам экипировки при запуске или по кнопке.';
-      return;
-    }
-    const summary=result.summary||{};
-    badge.textContent=(summary.pagesFailed||0)>0?'Загружена частично':'Загружена';
-    status.textContent='Источник: TLIDB · обновлено '+date(result.syncedAt)+' · версия сезона/патча не подтверждена';
-    details.textContent='Страниц обновлено: '+number(summary.pagesImported||0,0)+' / '+number(summary.pagesRequested||0,0)+' · строк аффиксов: '+number(summary.affixRows||0,0)+' · ошибок: '+number(summary.pagesFailed||0,0)+' · старых страниц сохранено: '+number(summary.retainedPages||0,0);
-    if(result.failedPages?.length){
-      details.textContent+=' · Ошибки: '+result.failedPages.slice(0,3).map(x=>x.slug+': '+x.reason).join('; ');
-    }
-  }catch(error){
-    renderTlidbAutoControls({lastError:error.message||String(error)});
-    $('tlidb-status').textContent='Не удалось прочитать кэш TLIDB: '+(error.message||error);
-  }
-}
-async function searchTlidbCatalog(){
-  const query=$('tlidb-search').value.trim();
-  if(!query){
-    $('tlidb-search-count').textContent='Введи название характеристики на английском, например Max Life или Fire Resistance.';
-    $('tlidb-results').innerHTML='';
-    return;
-  }
-  try{
-    const result=await window.nexus.searchTlidbAffixes(query,{gearGroup:$('tlidb-gear-filter').value,limit:40});
-    $('tlidb-search-count').textContent='Найдено: '+number(result.total||0,0)+' · показано: '+number(result.results?.length||0,0);
-    $('tlidb-results').innerHTML=(result.results||[]).map(row=>{
-      const group=row.prefixSuffix==='prefix'?'префикс':row.prefixSuffix==='suffix'?'суффикс':'тип не указан';
-      const kind=row.sourceKind==='base-affix'?'Базовый':row.sourceKind==='corrosion-base'?'Коррозия':row.sourceKind==='craft-affix'?'Крафт':'Аффикс';
-      const ranges=(row.rollRanges||[]).map(x=>number(x.min,2)+'–'+number(x.max,2)).join(', ');
-      return '<div class="tlidb-result"><div class="tlidb-result-main"><b>'+esc(row.modifierRaw)+'</b><small>'+esc(row.sourcePageLabel)+' · '+kind+' · '+group+' · тир '+esc(row.tierRaw||'—')+'</small></div><div class="tlidb-result-meta"><span>Ур. '+esc(row.levelRaw||'—')+'</span><span>Вес '+esc(row.weightRaw||'—')+'</span><span>'+esc(row.library||row.sourceKind||'—')+'</span>'+(ranges?'<span>Диапазон '+esc(ranges)+'</span>':'')+'</div><button class="btn secondary" data-tlidb-url="'+esc(row.sourceUrl)+'">Источник</button></div>';
-    }).join('')||'<div class="empty">Совпадений нет. Попробуй другое английское название или сними фильтр типа экипировки.</div>';
-  }catch(error){
-    $('tlidb-search-count').textContent='Ошибка поиска: '+(error.message||error);
-    $('tlidb-results').innerHTML='';
-  }
-}
-$('tlidb-sync').onclick=async()=>{
-  const button=$('tlidb-sync');
-  button.disabled=true;
-  button.textContent='Загрузка страниц…';
-  try{
-    const result=await window.nexus.syncTlidbCatalog();
-    await refreshTlidbStatus();
-    const summary=result.status?.summary||{};
-    toast('TLIDB обновлена · записей: '+number(summary.affixRows||0,0)+' · страниц: '+number(summary.pagesImported||0,0));
-    await searchTlidbCatalog();
-  }catch(error){
-    toast('Ошибка загрузки TLIDB: '+(error.message||error));
-  }finally{
-    button.disabled=false;
-    button.textContent='Загрузить / обновить сейчас (38 страниц)';
-  }
-};
-$('tlidb-auto-sync').onchange=()=>{$('tlidb-sync-interval').disabled=!$('tlidb-auto-sync').checked;};
-$('tlidb-search-button').onclick=()=>void searchTlidbCatalog();
-$('tlidb-search').addEventListener('keydown',e=>{if(e.key==='Enter')void searchTlidbCatalog();});
-$('tlidb-results').addEventListener('click',e=>{
-  const button=e.target.closest('[data-tlidb-url]');
-  if(!button)return;
-  const url=button.dataset.tlidbUrl||'';
-  if(/^https:\/\/tlidb\.com\/en\/[A-Za-z0-9_-]+$/.test(url)){
-    void window.nexus.openExternal(url).catch(error=>toast(error.message||String(error)));
-  }
-});
-refreshTlidbStatus();
-window.nexus.onTlidbUpdate((payload)=>{
-  void refreshTlidbStatus();
-  if(payload?.automatic&&payload?.error){
-    toast('Автообновление TLIDB не удалось: '+payload.error);
-    return;
-  }
-  if(payload?.automatic&&payload?.status?.imported){
-    const summary=payload.status.summary||{};
-    toast('TLIDB автоматически обновлена · '+number(summary.affixRows||0,0)+' записей · страниц: '+number(summary.pagesImported||0,0));
-    if($('tlidb-search').value.trim())void searchTlidbCatalog();
-  }
-});
-    const s=result.status?.summary||{};
-    if((s.affixDefinitions||0)===0&&(s.itemDefinitions||0)===0){
-      toast('Экспорт прочитан, но таблицы предметов/аффиксов не найдены. UI-ресурсы не считаются базой характеристик.');
-    }else{
-      toast('Игровая база обновлена · аффиксов: '+number(s.affixDefinitions||0,0)+' · предметов: '+number(s.itemDefinitions||0,0));
-    }
-  }catch(error){
-    toast('Ошибка импорта игровых ресурсов: '+(error.message||error));
-  }finally{
-    button.disabled=false;
-    button.textContent='Импортировать игровые ресурсы';
-  }
-};
 refreshGameResourceStatus();
 
 $('settings-choose-log').onclick=$('choose-log').onclick;$('settings-auto-log').onclick=$('auto-log').onclick;$('open-data-folder').onclick=async()=>{try{await window.nexus.openDataFolder();toast('Открыта папка данных Nexus');}catch(e){toast(e.message||String(e));}};
