@@ -6,7 +6,7 @@ const statFields = [
 ];
 const PAGE_META={overview:['COMMAND CENTER','Обзор'],characters:['CHARACTER ROSTER','Персонажи'],loot:['DROP TRACKER','Лут и сессии'],items:['ITEM DATABASE','База предметов'],economy:['MARKET INTELLIGENCE','Экономика'],builds:['BUILD LAB','Лаборатория билдов'],analyzer:['CHARACTER INTELLIGENCE','Анализ персонажа'],farming:['FARM PERFORMANCE','Фарм и аналитика'],tactics:['FIELD NOTES','Тактики и заметки'],settings:['PREFERENCES','Настройки']};
 let data={schemaVersion:2,settings:{},characterProfiles:[],builds:[],tactics:[],farmingSessions:[],priceWatch:[],priceHistory:[],notes:[]};
-let live={}, activePage='overview', itemQueryTimer=null, iconCache=new Map(), selectedBuildId=null, selectedTacticId=null, selectedProfileId=null, selectedBuildObservedStats=[], latestAnalysis=null;
+let live={}, activePage='overview', itemQueryTimer=null, iconCache=new Map(), selectedBuildId=null, selectedTacticId=null, selectedProfileId=null, selectedBuildObservedStats=[], latestAnalysis=null, equipmentLabItems=[], equipmentLabProfileId=null, equipmentLabBuildId='profile-default', equipmentLabEvidenceFingerprint='';
 const esc=(v)=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const number=(v,d=1)=>Number(v||0).toLocaleString('ru-RU',{maximumFractionDigits:d});
 const money=(v)=>v===null||v===undefined||!Number.isFinite(Number(v))?'—':`${number(v,2)} FE`;
@@ -203,6 +203,7 @@ function renderCharacters(){
   $('profile-builds').className='mini-cards';$('profile-builds').innerHTML=builds.map(b=>`<div class="mini-row"><span>${esc(b.name)} · ${esc(b.mainSkill||'Навык не указан')}</span><b>ур. ${b.level}</b></div>`).join('')||'<div class="empty">У активного персонажа пока нет привязанных билдов.</div>';
   renderEquipmentObserver(active);
   renderCharacterIntel(active);
+  renderEquipmentLab(active);
   void renderCharacterReport(active);
   if(!profiles.length)fillProfileForm(null);
 }
@@ -227,6 +228,59 @@ function renderEquipmentObserver(profile=activeProfile()){
   $('save-equipment-snapshot').title=!profile?'Сначала выбери активный профиль':!rows.length&&!liveEquipment.lastTransition?'Нет подтверждённых событий':'Сохранить частичный снимок';
   $('build-from-equipment').disabled=!rows.length&&!saved?.items?.length;
 }
+function renderEquipmentLab(profile=activeProfile()){
+  const selected=characterIntelForProfile(profile),intel=selected.intel;
+  const nextItems=Array.isArray(intel?.explicitEquipment)?intel.explicitEquipment.filter(row=>row&&typeof row==='object'):[];
+  const fingerprint=JSON.stringify([profile?.id||null,nextItems]);
+  if(fingerprint!==equipmentLabEvidenceFingerprint){
+    $('equipment-analysis-result').className='equipment-analysis-result empty';
+    $('equipment-analysis-result').textContent='Наблюдаемые данные изменились или выбран другой профиль. Запусти анализ заново.';
+    $('equipment-compare-result').className='equipment-compare-result empty';
+    $('equipment-compare-result').textContent='Выбери два предмета и запусти сравнение.';
+    equipmentLabEvidenceFingerprint=fingerprint;
+  }
+  equipmentLabProfileId=profile?.id||null; equipmentLabItems=nextItems;
+  const builds=(data.builds||[]).filter(build=>profile&&build.profileId===profile.id);
+  const allowed=['profile-default',...builds.map(build=>String(build.id))];
+  if(!allowed.includes(equipmentLabBuildId))equipmentLabBuildId='profile-default';
+  $('equipment-priority-build').innerHTML='<option value="profile-default">По умолчанию для профиля</option>'+builds.map(build=>'<option value="'+esc(build.id)+'">'+esc(build.name||'Без названия')+'</option>').join('');
+  $('equipment-priority-build').value=equipmentLabBuildId;
+  const saved=equipmentLabBuildId==='profile-default'?(profile?.equipmentPriorityText||''):(profile?.equipmentPrioritiesByBuild?.[equipmentLabBuildId]??profile?.equipmentPriorityText??'');
+  if(document.activeElement!==$('equipment-priorities'))$('equipment-priorities').value=saved;
+  const technical=new Set(['id','baseid','affixid','baseaffixid','affixconfigid','affixbaseid','itemid','itembaseid','itemconfigid','equipmentid','equipmentbaseid','configbaseid']);
+  const keys=[...new Set(equipmentLabItems.flatMap(item=>(item.affixes||[]).flatMap(affix=>(affix.values||[]).map(value=>String(value.key||'')).filter(key=>key&&!technical.has(key.replace(/[^a-z0-9]/gi,'').toLowerCase())))))].sort((a,b)=>a.localeCompare(b,'ru'));
+  $('equipment-observed-keys').className=keys.length?'intel-schema-list':'intel-schema-list empty';
+  $('equipment-observed-keys').innerHTML=keys.map(key=>'<span class="equipment-key-chip">'+esc(key)+'</span>').join('')||'В явных объектах экипировки ключи аффиксов пока не обнаружены.';
+  const options=equipmentLabItems.map((item,index)=>'<option value="'+index+'">'+esc(item.name||('Предмет #'+(item.itemId||'?')))+' · ID '+(Number(item.itemId)||'—')+' · '+esc(item.slotRaw||'слот неизвестен')+'</option>').join('');
+  $('equipment-compare-left').innerHTML=options||'<option value="">Нет предметов</option>';
+  $('equipment-compare-right').innerHTML=options||'<option value="">Нет предметов</option>';
+  if(equipmentLabItems.length>1)$('equipment-compare-right').value='1';
+  $('equipment-lab-count').textContent=equipmentLabItems.length+' предметов';
+  $('equipment-lab-count').title=selected.source==='live'?'Источник: текущие данные UE_game.log':'Источник: сохранённый профиль';
+  $('equipment-priorities-save').disabled=!profile;
+  $('equipment-analyze').disabled=!equipmentLabItems.length;
+  $('equipment-compare-run').disabled=equipmentLabItems.length<2;
+}
+function renderEquipmentAnalysis(result){
+  const root=$('equipment-analysis-result');
+  if(!result?.available){root.className='equipment-analysis-result empty';root.textContent=(result?.limitations||['Недостаточно данных для анализа.']).join(' ');return;}
+  const coverage=result.priorityCoveragePercent===null?'не рассчитано':result.priorityCoveragePercent+'%';
+  const itemRows=(result.items||[]).map(item=>'<div class="equipment-lab-stat"><span>'+esc(item.name)+' · ID '+(item.itemId||'—')+' · '+esc(item.slotRaw||'слот неизвестен')+'</span><b>Найдено полей '+(item.priorityCoveragePercent===null?'—':item.priorityCoveragePercent+'%')+'</b></div>').join('');
+  const rules=(result.rules||[]).map(row=>'<div class="equipment-rule"><div><b>'+esc(row.label)+'</b><small>'+esc(row.rawKey)+' · вес '+row.weight+'</small></div><div><b>'+(row.status==='observed'?'Наблюдается':'Не обнаружено')+'</b><small>'+(row.examples.map(x=>esc(x.itemName)+': '+esc(x.value)).join(' · ')||'Нет примеров в явных аффиксах')+'</small></div></div>').join('');
+  const weak=(result.weakSpots||[]).map(row=>'<div class="equipment-weak"><b>'+esc(row.label)+' · '+esc(row.rawKey)+'</b><small>'+esc(row.explanation)+'</small></div>').join('');
+  const recommendations=(result.recommendations||[]).map(row=>'<div class="equipment-lab-stat"><span>'+esc(row.label)+' · вес '+row.weight+'</span><b>'+esc(row.message)+'</b></div>').join('');
+  root.className='equipment-analysis-result';
+  root.innerHTML='<div class="equipment-verdict"><b>Покрытие приоритетов в данных: '+coverage+'</b><span>'+result.itemCount+' явно наблюдаемых объектов · '+result.ruleCount+' правил · вес обнаруженных полей '+result.foundWeight+'/'+result.totalWeight+'</span></div>'+(itemRows?'<div class="form-divider">ДОЛЯ НАЙДЕННЫХ ПОЛЕЙ ПРИОРИТЕТА ПО ПРЕДМЕТАМ (НЕ ОЦЕНКА СИЛЫ)</div>'+itemRows:'')+(rules||'<div class="empty">Не заданы корректные правила приоритета.</div>')+(weak?'<div class="form-divider">ВОЗМОЖНЫЕ СЛАБЫЕ МЕСТА В НАБЛЮДАЕМЫХ ДАННЫХ</div>'+weak:'')+(recommendations?'<div class="form-divider">РЕКОМЕНДАЦИИ ПО ТВОИМ ПРИОРИТЕТАМ</div>'+recommendations:'')+'<div class="equipment-note">'+(result.limitations||[]).map(esc).join(' ')+'</div>';
+}
+function renderEquipmentComparison(result){
+  const root=$('equipment-compare-result');
+  if(!result?.available){root.className='equipment-compare-result empty';root.textContent=result?.message||'Для сравнения недостаточно данных.';return;}
+  const verdict=result.verdict==='left'?'По сравнимым правилам преимущество у A':result.verdict==='right'?'По сравнимым правилам преимущество у B':result.verdict==='tie'?'По сравнимым правилам равенство':'Недостаточно сопоставимых данных';
+  const rows=(result.ruleResults||[]).map(row=>'<div class="equipment-rule"><div><b>'+esc(row.label)+'</b><small>'+esc(row.rawKey)+' · вес '+row.weight+' · '+esc(row.direction)+'</small></div><div><b>'+esc(row.leftValue??'—')+' ↔ '+esc(row.rightValue??'—')+'</b><small>'+esc(row.explanation)+'</small></div></div>').join('');
+  root.className='equipment-compare-result';
+  root.innerHTML='<div class="equipment-verdict"><b>'+verdict+'</b><span>'+esc(result.left.name)+' vs '+esc(result.right.name)+' · покрытие сравнимых правил '+(result.score.coveragePercent===null?'—':result.score.coveragePercent+'%')+'</span><small>'+esc(result.explanation)+'</small></div><div class="equipment-lab-stat"><span>Слот</span><b>'+(result.slotComparison.status==='unknown'?'Неизвестен':result.slotComparison.status==='same'?'Совпадает':'Различается')+'</b></div><div class="equipment-lab-stat"><span>Общие ID аффиксов</span><b>'+((result.sharedAffixIds||[]).map(esc).join(', ')||'—')+'</b></div><div class="equipment-lab-stat"><span>Новые ID аффиксов у B</span><b>'+((result.addedAffixIds||[]).map(esc).join(', ')||'—')+'</b></div><div class="equipment-lab-stat"><span>Отсутствующие у B ID аффиксов</span><b>'+((result.removedAffixIds||[]).map(esc).join(', ')||'—')+'</b></div>'+(rows||'<div class="empty">Не заданы правила приоритета или нет сравнимых ключей.</div>')+'<div class="equipment-note">'+(result.limitations||[]).map(esc).join(' ')+'</div>';
+}
+
 let displayedItems=[];
 async function searchCatalog(q){displayedItems=await window.nexus.searchItems(q);renderItemCards();}
 function renderItemCards(){const root=$('item-results');$('item-results-count').textContent=`${displayedItems.length} результатов`;
@@ -327,6 +381,10 @@ function renderSettings(){const s=data.settings||{};$('set-mode').value=s.overla
 function renderPage(){renderConnection();switch(activePage){case'overview':renderOverview();break;case'characters':renderCharacters();break;case'loot':renderLoot();break;case'items':if(!$('item-search').value&&!displayedItems.length)void searchCatalog('');else renderItemCards();break;case'economy':renderEconomy();break;case'builds':renderBuilds();break;case'analyzer':renderAnalyzer();break;case'farming':void renderFarming();break;case'tactics':renderTactics();break;case'settings':renderSettings();break;}}
 function openModal(html){$('modal-content').innerHTML=html;$('modal').classList.remove('hidden');}
 function closeModal(){$('modal').classList.add('hidden');$('modal-content').innerHTML='';}
+$('equipment-priority-build').onchange=()=>{equipmentLabBuildId=$('equipment-priority-build').value;renderEquipmentLab(activeProfile());};
+$('equipment-priorities-save').onclick=async()=>{const profileId=activeProfile()?.id;if(!profileId)return toast('Сначала выбери или создай профиль персонажа');const value=$('equipment-priorities').value.slice(0,5000).trim();const profile=data.characterProfiles.find(row=>row.id===profileId);if(equipmentLabBuildId==='profile-default')profile.equipmentPriorityText=value;else profile.equipmentPrioritiesByBuild={...(profile.equipmentPrioritiesByBuild||{}),[equipmentLabBuildId]:value};await saveData();renderEquipmentLab(activeProfile());toast('Приоритеты сохранены для выбранного билда');};
+$('equipment-analyze').onclick=async()=>{try{const result=await window.nexus.analyzeEquipment(equipmentLabItems,$('equipment-priorities').value);renderEquipmentAnalysis(result);}catch(error){toast('Не удалось проанализировать экипировку: '+(error.message||error));}};
+$('equipment-compare-run').onclick=async()=>{const left=equipmentLabItems[Number($('equipment-compare-left').value)],right=equipmentLabItems[Number($('equipment-compare-right').value)];if(!left||!right)return toast('Выбери два предмета');try{const result=await window.nexus.compareEquipment(left,right,$('equipment-priorities').value);renderEquipmentComparison(result);}catch(error){toast('Не удалось сравнить предметы: '+(error.message||error));}};
 $('profile-form').onsubmit=async e=>{e.preventDefault();const now=Date.now(),old=data.characterProfiles.find(x=>x.id===$('profile-id').value);const profile={...(old||{}),id:old?.id||makeUid('char'),name:$('profile-name').value.trim(),playerId:$('profile-player-id').value.trim()||old?.playerId||null,detectedPlayerId:$('profile-player-id').value.trim()||old?.detectedPlayerId||null,hero:$('profile-hero').value.trim(),specialization:$('profile-specialization').value.trim(),level:Math.max(1,Math.min(100,Number($('profile-level').value)||1)),season:$('profile-season').value.trim(),notes:$('profile-notes').value.trim(),createdAt:old?.createdAt||now,updatedAt:now};const detected=live.characterIntel?.identity;if(detected?.name&&String(detected.name).trim().toLocaleLowerCase('ru')===profile.name.trim().toLocaleLowerCase('ru')&&(!profile.playerId||String(profile.playerId)===String(detected.playerId||''))){profile.characterIntelSnapshot={...live.characterIntel,capturedAt:now,source:'UE_game.log · parsed messages (evidence-first)'};profile.playerId=detected.playerId||profile.playerId;profile.detectedPlayerId=profile.playerId;profile.seasonId=detected.seasonId||profile.seasonId;profile.lastSeasonId=detected.seasonId||profile.lastSeasonId;profile.detectedHeroId=detected.heroId||profile.detectedHeroId;profile.detectedLevel=detected.level||profile.detectedLevel;profile.detectedSpecializationId=detected.specializationId||profile.detectedSpecializationId;}const idx=data.characterProfiles.findIndex(x=>x.id===profile.id);if(idx>=0)data.characterProfiles[idx]=profile;else data.characterProfiles.push(profile);data.settings={...data.settings,activeProfileId:profile.id,autoSelectDetectedProfile:$('profile-auto-select').checked};await saveData();fillProfileForm(null);renderCharacters();renderBuilds();toast('Профиль персонажа сохранён');};
 $('profile-auto-select').onchange=async()=>{data.settings={...data.settings,autoSelectDetectedProfile:$('profile-auto-select').checked};await saveData();toast(data.settings.autoSelectDetectedProfile?'Автовыбор профиля включён':'Автовыбор профиля выключен');};
 $('save-equipment-snapshot').onclick=async()=>{const profile=activeProfile();if(!profile)return toast('Сначала создай и активируй профиль персонажа');const equipment=live.equipment||live.gameLog?.equipment;if(!equipment?.items?.length&&!equipment?.lastTransition)return toast('В игровом логе пока нет подтверждённых событий PutOn');const now=Date.now();const previous=profile.equipmentSnapshot;if(previous)profile.equipmentHistory=[...(profile.equipmentHistory||[]),{...previous}].slice(-20);profile.equipmentSnapshot={items:(equipment.items||[]).map(x=>({...x})),capturedAt:now,lastTransitionAt:Number(equipment.lastTransition?.at)||null,lastTransition:equipment.lastTransition?{...equipment.lastTransition}:null,seasonId:live.seasonId??null,source:equipment.source||'BagMgr · PutOn / PutOff',completeness:'partial',slotMapping:'not-available',limitations:[...(equipment.limitations||[])]};profile.updatedAt=now;await saveData();renderCharacters();toast(`Снимок сохранён · ${equipment.items?.length||0} типов предметов. Слоты и аффиксы не подтверждены логом.`);};

@@ -23,6 +23,8 @@ contextBridge.exposeInMainWorld('nexus', {
   getItemIcon: (id) => ipcRenderer.invoke('items:icon', id),
   getPriceHistory: (id, days = 30, seasonId = undefined) => ipcRenderer.invoke('prices:history', id, days, seasonId),
   analyzeBuild: (build) => ipcRenderer.invoke('build:analyze', build),
+  analyzeEquipment: (items, priorities) => ipcRenderer.invoke('equipment:analyze', items, priorities),
+  compareEquipment: (left, right, priorities) => ipcRenderer.invoke('equipment:compare', left, right, priorities),
   analyzeFarming: (sessions, options) => ipcRenderer.invoke('farm:analyze', sessions, options),
   compareBuilds: (left, right) => ipcRenderer.invoke('build:compare', left, right),
   encodeBuild: (build) => ipcRenderer.invoke('build:encode', build),
