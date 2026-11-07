@@ -481,6 +481,30 @@ app.whenReady().then(() => {
     manualLogFile: appData.settings.manualLogFile || null,
     userDataDir: app.getPath('userData'),
     resumeSession: resumableRun,
+    onResumeExpired: (row) => {
+      const saved = appData.farmingSessions.find((item) =>
+        item.source === 'live' && item.sessionKey === row.sessionKey);
+      if (!saved || saved.endedAt) return;
+
+      const endedAt = Date.now();
+      const map = saved.currentMap;
+      if (map) {
+        const finishedMap = {
+          ...map,
+          endedAt,
+          durationSec: Math.max(0, Math.floor((endedAt - Number(map.startedAt || endedAt)) / 1000)),
+          completionReason: 'game-stopped',
+        };
+        saved.lastMap = finishedMap;
+        saved.mapRuns = [...(saved.mapRuns || []), finishedMap].slice(-100);
+        saved.mapsCompleted = Math.max(0, Number(saved.mapsCompleted) || 0) + 1;
+        saved.currentMap = null;
+      }
+      saved.endedAt = endedAt;
+      saved.durationSec = Math.max(0, Math.floor((endedAt - Number(saved.startedAt || endedAt)) / 1000));
+      saved.updatedAt = endedAt;
+      persistDataSilently();
+    },
   });
   live.setNotificationPreferences({ enabled: appData.settings.notificationsEnabled, soundEnabled: appData.settings.soundEnabled, thresholdFe: appData.settings.notificationThresholdFe });
   live.setPriceWatch(appData.priceWatch);
