@@ -25,6 +25,7 @@ test('GameLogParser preserves map group, area asset and LevelMgr instance identi
   const restored = new GameLogParser(parser.exportState()).snapshot().currentArea;
   assert.equal(restored.mapZone, 'Atlas');
   assert.equal(restored.levelUid, 901);
+  assert.equal(restored.enteredAt, Date.UTC(2026, 10, 8, 10, 0, 0));
 });
 
 test('LiveService keeps the current game session when the UE log is attached again', async () => {
@@ -61,6 +62,13 @@ test('LiveService keeps the current game session when the UE log is attached aga
     });
     assert.equal(service.snapshot().drops, 15);
     assert.equal(service.snapshot().currentMap.drops, 3);
+
+    // Reattaching the same log must reseed inventory state without discarding
+    // the accumulated loot for this run or the active map.
+    await service.attach(file, 'manual');
+    assert.equal(service.snapshot().drops, 15);
+    assert.equal(service.snapshot().currentMap.drops, 3);
+    assert.equal(service.snapshot().currentMap.name, 'FrozenSea');
   } finally {
     service.stop();
     fs.rmSync(dir, { recursive: true, force: true });
