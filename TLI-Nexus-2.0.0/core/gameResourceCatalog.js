@@ -8,6 +8,7 @@ const TABLE_CONTAINER_KEYS = new Set([
   'rowmap', 'rows', 'datatablerows', 'rowdata', 'entries', 'datarows',
 ]);
 const AFFIx_WORD = /affix|prefix|suffix|enchant|forge/i;
+const ENUM_TABLE_WORD = /affixattrtype|gamecharattribute|gamecharfield|gameequipslot|equiprarity|equipquality|itemrarity|itemquality|raritytype|qualitytype/i;
 const ITEM_WORD = /item|equip|equipment|gear/i;
 const LOCALIZATION_WORD = /localization|locres|stringtable|texttable|language/i;
 const EXPLICIT_ID_KEYS = new Set([
@@ -125,6 +126,7 @@ function classifyResource(resourcePath, doc, exportTypes) {
     /^dt_/i.test(path.basename(resourcePath, path.extname(resourcePath)));
   const isDataTable = !isBlueprint && (hasDataTableType || (hasTableRows && pathSuggestsTable));
   if (LOCALIZATION_WORD.test(lower) || /\.locres$/i.test(resourcePath)) return 'localization-resource';
+  if (isDataTable && ENUM_TABLE_WORD.test(lower)) return 'enum-table';
   if (isDataTable) return 'data-table';
   if (AFFIx_WORD.test(lower)) return 'affix-related-asset';
   if (ITEM_WORD.test(lower)) return 'item-related-asset';
@@ -133,12 +135,13 @@ function classifyResource(resourcePath, doc, exportTypes) {
 }
 
 function extractRows(resourcePath, doc, kind) {
-  if (kind !== 'data-table') {
-    return { itemRows: [], affixRows: [], tableRowCount: 0 };
+  if (kind !== 'data-table' && kind !== 'enum-table') {
+    return { itemRows: [], affixRows: [], enumRows: [], tableRowCount: 0 };
   }
   const tableRows = rowContainers(doc);
   const itemRows = [];
   const affixRows = [];
+  const enumRows = [];
   for (const entry of tableRows) {
     const fields = scalarMap(entry.row);
     const fieldKeys = new Set(fields.map((field) => normalizeKey(field.key)));
@@ -146,10 +149,11 @@ function extractRows(resourcePath, doc, kind) {
     const name = findNamed(payload, [
       'Name', 'DisplayName', 'ItemName', 'EquipName', 'AffixName', 'Title',
     ]);
-    const rowLooksAffix = AFFIx_WORD.test(resourcePath) ||
-      [...fieldKeys].some((key) => ['affixid', 'baseaffixid', 'affixconfigid', 'affixbaseid'].includes(key));
-    const rowLooksItem = ITEM_WORD.test(resourcePath) ||
-      [...fieldKeys].some((key) => ['itemid', 'itembaseid', 'itemconfigbaseid', 'configbaseid', 'equipmentid', 'equipmentbaseid', 'equipid'].includes(key));
+    const rowLooksEnum = kind === 'enum-table' || ENUM_TABLE_WORD.test(resourcePath);
+    const rowLooksAffix = !rowLooksEnum && (AFFIx_WORD.test(resourcePath) ||
+      [...fieldKeys].some((key) => ['affixid', 'baseaffixid', 'affixconfigid', 'affixbaseid'].includes(key)));
+    const rowLooksItem = !rowLooksEnum && (ITEM_WORD.test(resourcePath) ||
+      [...fieldKeys].some((key) => ['itemid', 'itembaseid', 'itemconfigbaseid', 'configbaseid', 'equipmentid', 'equipmentbaseid', 'equipid'].includes(key)));
     const preferredAffixIdKeys = ['affixid', 'baseaffixid', 'affixconfigid', 'affixbaseid'];
     const preferredItemIdKeys = ['itembaseid', 'itemconfigbaseid', 'configbaseid', 'itemid', 'equipmentbaseid', 'equipmentid', 'equipid', 'baseitemid', 'baseid'];
     const preferredKeys = rowLooksAffix
@@ -172,7 +176,17 @@ function extractRows(resourcePath, doc, kind) {
       fields: fields.slice(0, 100),
     };
 
-    if (rowLooksAffix && id) {
+    if (rowLooksEnum) {
+      summary.enumId = id || clean(entry.rowName, 120);
+      summary.enumName = findNamed(payload, [
+        'Name', 'DisplayName', 'AttributeName', 'FieldName', 'SlotName', 'EnumName',
+      ]) || name;
+      summary.valueRaw = findNamed(payload, [
+        'AttrType', 'AttributeId', 'SlotId', 'EnumValue', 'Value', 'ValueId', 'Id',
+      ]);
+      summary.enumType = path.basename(resourcePath, path.extname(resourcePath));
+      enumRows.push(summary);
+    } else if (rowLooksAffix && id) {
       summary.attributeRaw = findNamed(payload, [
         'AttrType', 'AffixAttrType', 'AttributeType', 'AttributeId', 'AttrId',
       ]);
@@ -186,7 +200,7 @@ function extractRows(resourcePath, doc, kind) {
       itemRows.push(summary);
     }
   }
-  return { itemRows, affixRows, tableRowCount: tableRows.length };
+  return { itemRows, affixRows, enumRows, tableRowCount: tableRows.length };
 }
 
 function extractLocalizationEntries(resourcePath, doc) {
@@ -294,6 +308,7 @@ export function scanGameResourceFolder(rootPath, options = {}) {
   const manifest = [];
   const itemDefinitions = [];
   const affixDefinitions = [];
+  const attributeDefinitions = [];
   const tableSchemas = [];
   const scriptHints = [];
   const localizationHints = [];
@@ -390,6 +405,7 @@ export function scanGameResourceFolder(rootPath, options = {}) {
     }
     itemDefinitions.push(...rowData.itemRows);
     affixDefinitions.push(...rowData.affixRows);
+    attributeDefinitions.push(...(rowData.enumRows || []));
     if (rowData.tableRowCount) {
       tableSchemas.push({
         path: relativePath,
@@ -408,6 +424,8 @@ export function scanGameResourceFolder(rootPath, options = {}) {
   for (const row of itemDefinitions) uniqueItems.set([row.id, row.sourcePath, row.rowName].join('|'), row);
   const uniqueAffixes = new Map();
   for (const row of affixDefinitions) uniqueAffixes.set([row.id, row.sourcePath, row.rowName].join('|'), row);
+  const uniqueAttributes = new Map();
+  for (const row of attributeDefinitions) uniqueAttributes.set([row.enumId, row.sourcePath, row.rowName].join('|'), row);
 
   const result = {
     schemaVersion: 1,
@@ -427,6 +445,7 @@ export function scanGameResourceFolder(rootPath, options = {}) {
       dataTableRows: tableSchemas.reduce((sum, row) => sum + row.rowCount, 0),
       itemDefinitions: uniqueItems.size,
       affixDefinitions: uniqueAffixes.size,
+      attributeDefinitions: uniqueAttributes.size,
       scriptHints: scriptHints.length,
       localizationHints: localizationHints.length,
       localizationEntries: localizationEntries.length,
@@ -437,6 +456,7 @@ export function scanGameResourceFolder(rootPath, options = {}) {
     schemaEvidence: [...schemaEvidence.values()],
     itemDefinitions: [...uniqueItems.values()].slice(0, 15000),
     affixDefinitions: [...uniqueAffixes.values()].slice(0, 15000),
+    attributeDefinitions: [...uniqueAttributes.values()].slice(0, 10000),
     tableSchemas: tableSchemas.slice(0, 2000),
     assetManifest: manifest.slice(0, 10000),
     scriptHints: scriptHints.slice(0, 2000),
