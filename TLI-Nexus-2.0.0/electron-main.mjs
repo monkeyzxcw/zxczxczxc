@@ -441,8 +441,8 @@ app.whenReady().then(() => {
     return { canceled: false, status: resourceCatalogStatus(index), limitations: index.limitations };
   });
   ipcMain.handle('items:search', (_event, query) => searchItems(query, 500));
-  ipcMain.handle('equipment:analyze', (_event, items, priorities) => analyzeEquipment(Array.isArray(items) ? items.slice(0, 100) : [], priorities));
-  ipcMain.handle('equipment:compare', (_event, left, right, priorities) => compareEquipment(left, right, priorities));
+  ipcMain.handle('equipment:analyze', (_event, items, priorities) => analyzeEquipment(Array.isArray(items) ? items.slice(0, 100) : [], priorities, readGameResourceIndex()));
+  ipcMain.handle('equipment:compare', (_event, left, right, priorities) => compareEquipment(left, right, priorities, readGameResourceIndex()));
   ipcMain.handle('build:analyze', (_event, build) => analyzeBuild(build));
   ipcMain.handle('farm:analyze', (_event, sessions, options = {}) => analyzeFarmingSessions(Array.isArray(sessions) ? sessions.slice(-1000) : [], { profileId: options.profileId || null, strategy: options.strategy || null, since: Number(options.since) || null }));
   ipcMain.handle('build:compare', (_event, left, right) => compareBuilds(left, right));
