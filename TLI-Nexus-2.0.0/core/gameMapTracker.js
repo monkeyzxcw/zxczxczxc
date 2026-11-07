@@ -134,6 +134,34 @@ export class GameMapTracker {
     return finished;
   }
 
+  restore(snapshot = {}) {
+    this.reset();
+    const restoreMap = (value) => {
+      if (!value || typeof value !== 'object') return null;
+      const lootRows = Array.isArray(value.loot) ? value.loot : [];
+      return {
+        ...value,
+        lootTotals: new Map(lootRows
+          .filter((row) => Number.isSafeInteger(Number(row.itemId)) && Number(row.count) > 0)
+          .map((row) => [Number(row.itemId), Number(row.count)])),
+      };
+    };
+    this.currentMap = restoreMap(snapshot.current);
+    this.lastMap = snapshot.last ? { ...snapshot.last, loot: [...(snapshot.last.loot || [])] } : null;
+    this.completedMaps = (Array.isArray(snapshot.history) ? snapshot.history : [])
+      .slice(-this.maxHistory)
+      .map((row) => ({ ...row, loot: [...(row.loot || [])] }));
+    this.totalCompleted = Math.max(
+      this.completedMaps.length,
+      Number(snapshot.completedCount) || 0,
+    );
+    for (const map of [this.currentMap, this.lastMap, ...this.completedMaps]) {
+      const match = /^map-(\\d+)-/.exec(String(map?.id || ''));
+      if (match) this.mapSequence = Math.max(this.mapSequence, Number(match[1]) || 0);
+    }
+    return this.snapshot();
+  }
+
   snapshot() {
     return {
       current: serializeMap(this.currentMap),
