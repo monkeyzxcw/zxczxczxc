@@ -40,7 +40,7 @@ test('priority rules require explicit user key, direction and bounded weight', (
 test('analysis reports user-priority coverage and does not invent absent stats', () => {
   const gear = [
     item(1001, 'Шлем A', [
-      affix(77, { LifeFlat: 120, UnknownRawField: 4, AffixId: 77 }),
+      affix(77, { LifeFlat: 120, UnknownRawField: 4, AffixId: 77, AttrType: 12, Tier: 2 }),
     ], 'Head'),
   ];
   const result = analyzeEquipment(
@@ -54,7 +54,7 @@ test('analysis reports user-priority coverage and does not invent absent stats',
   assert.equal(result.currentFullGearConfirmed, false);
   assert.equal(result.rules[0].status, 'observed');
   assert.equal(result.rules[0].examples[0].value, '120');
-  assert.ok(!result.items[0].values.some((field) => field.rawKey === 'AffixId'));
+  assert.ok(!result.items[0].values.some((field) => ['AffixId', 'AttrType', 'Tier'].includes(field.rawKey)));
   assert.equal(result.weakSpots[0].rawKey, 'MoveSpeedRaw');
   assert.match(result.weakSpots[0].explanation, /не доказывает/);
   assert.equal('dps' in result, false);
@@ -134,6 +134,104 @@ test('identical values duplicated across separate affixes remain ambiguous', () 
   assert.equal(result.ruleResults[0].status, 'ambiguous');
   assert.equal(result.ruleResults[0].winner, null);
   assert.equal(result.verdict, 'insufficient-data');
+});
+
+test('imported game DataTables resolve raw affix IDs to verified names and ranges', () => {
+  const gear = {
+    ...item(41001, 'Шлем с явным аффиксом', [
+      {
+        id: '7001',
+        name: null,
+        tierRaw: null,
+        attributeRaw: null,
+        values: [{ key: 'LifeFlat', value: '135' }],
+      },
+    ], 'Head'),
+    rarityRaw: '3',
+    qualityRaw: '12',
+  };
+  const resourceIndex = {
+    itemDefinitions: [{
+      id: '41001',
+      name: null,
+      nameKeyRaw: 'Item.Helm.Name',
+      slotRaw: 'Head',
+      itemTypeRaw: 'Helmet',
+      sourcePath: 'Content/Data/DT_EquipmentBase.json',
+    }],
+    localizationEntries: [
+      { key: 'Item.Helm.Name', text: 'Шлем из таблицы' },
+      { key: 'Affix.Life.Name', text: 'Дополнительное здоровье' },
+    ],
+    attributeDefinitions: [
+      { enumId: '12', enumName: 'Maximum Life', enumType: 'DT_AffixAttrType', sourcePath: 'Content/Data/DT_AffixAttrType.json' },
+      { enumId: 'Head', enumName: 'Head slot', enumType: 'DT_EquipSlot', sourcePath: 'Content/Data/DT_EquipSlot.json' },
+      { enumId: '3', enumName: 'Rare', enumType: 'DT_EquipRarity', sourcePath: 'Content/Data/DT_EquipRarity.json' },
+      { enumId: '12', enumName: 'Quality tier 12', enumType: 'DT_EquipQuality', sourcePath: 'Content/Data/DT_EquipQuality.json' },
+    ],
+    affixDefinitions: [{
+      id: '7001',
+      name: null,
+      nameKeyRaw: 'Affix.Life.Name',
+      attributeRaw: '12',
+      tierRaw: '2',
+      minRaw: '100',
+      maxRaw: '150',
+      sourcePath: 'Content/Data/DT_EquipmentAffix.json',
+    }],
+  };
+
+  const analysis = analyzeEquipment([gear], 'LifeFlat | Жизнь | 5 | higher', resourceIndex);
+  assert.equal(analysis.resourceCatalog.imported, true);
+  assert.equal(analysis.resourceCatalog.affixDefinitions, 1);
+  assert.equal(analysis.resourceCatalog.localizationEntries, 2);
+  assert.equal(analysis.resourceCatalog.matchedAffixes, 1);
+  assert.equal(analysis.items[0].catalogItem.name, 'Шлем из таблицы');
+  assert.equal(analysis.items[0].catalogItem.nameSource, 'localization-table');
+  assert.equal(analysis.items[0].affixes[0].catalogMatch.name, 'Дополнительное здоровье');
+  assert.equal(analysis.items[0].affixes[0].catalogMatch.nameSource, 'localization-table');
+  assert.equal(analysis.items[0].affixes[0].catalogMatch.minRaw, '100');
+  assert.equal(analysis.items[0].affixes[0].catalogMatch.maxRaw, '150');
+  assert.equal(analysis.items[0].affixes[0].catalogMatch.attributeName, 'Maximum Life');
+  assert.equal(analysis.items[0].slotName, 'Head slot');
+  assert.equal(analysis.items[0].rarityName, 'Rare');
+  assert.equal(analysis.items[0].qualityName, 'Quality tier 12');
+
+  const comparison = compareEquipment(
+    gear,
+    item(41002, 'Предмет B', [{ id: '9999', values: [{ key: 'LifeFlat', value: '120' }] }], 'Head'),
+    'LifeFlat | Жизнь | 5 | higher',
+    resourceIndex,
+  );
+  assert.equal(comparison.catalogAffixes.left[0].name, 'Дополнительное здоровье');
+  assert.equal(comparison.catalogAffixes.right[0].matched, false);
+});
+
+test('attribute enum can be resolved even when the affix roll row is missing', () => {
+  const gear = item(41003, 'Предмет с сырым AttrType', [{
+    id: '7999',
+    attributeRaw: '12',
+    values: [{ key: 'RollValue', value: '135' }],
+  }], 'Head');
+  const resourceIndex = {
+    itemDefinitions: [],
+    affixDefinitions: [],
+    attributeDefinitions: [{
+      enumId: '12',
+      enumName: 'Maximum Life',
+      enumType: 'DT_AffixAttrType',
+      sourcePath: 'Content/Data/DT_AffixAttrType.json',
+    }],
+    localizationEntries: [],
+  };
+  const result = analyzeEquipment([gear], 'RollValue | Roll | 1 | higher', resourceIndex);
+  assert.equal(result.resourceCatalog.affixDefinitions, 0);
+  assert.equal(result.resourceCatalog.attributeDefinitions, 1);
+  assert.equal(result.resourceCatalog.matchedAffixes, 0);
+  assert.equal(result.resourceCatalog.matchedAttributes, 1);
+  assert.equal(result.items[0].affixes[0].catalogMatch.matched, false);
+  assert.equal(result.items[0].affixes[0].catalogMatch.attributeMatched, true);
+  assert.equal(result.items[0].affixes[0].catalogMatch.attributeName, 'Maximum Life');
 });
 
 test('empty evidence returns an unavailable analysis, not a fabricated rating', () => {

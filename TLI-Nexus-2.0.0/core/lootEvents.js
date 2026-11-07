@@ -1,10 +1,11 @@
 import { parseTree, parseUeTimestamp } from './ueLog.js';
+import { inspectItemObservation } from './itemObservation.js';
 
 // Event names and payload keys taken from ETor's tor/main.js. Its parser does not
 // validate the shape of PickItem/PickItems: it parses the complete tree and
 // forwards it. Nexus keeps that behaviour, then extracts item fields when known.
 export const FIELDS = {
-  baseId: ['BaseId', 'BaseID', 'ItemBaseId', 'itemBaseId', 'baseId', 'itemId'],
+  baseId: ['BaseId', 'BaseID', 'ItemBaseId', 'itemBaseId', 'ConfigBaseId', 'ConfigID', 'EquipmentBaseId', 'baseId', 'itemId'],
   instanceId: ['Id', 'ItemInstanceId', 'instanceId'],
   count: ['Num', 'Count', 'Amount', 'count', 'num'],
   pageId: ['PageId'],
@@ -62,6 +63,7 @@ export function asItem(node) {
   const base = int(scalar(node, FIELDS.baseId)) ?? (match ? Number(match[1]) : null);
   if (base === null) return null;
   const count = int(scalar(node, FIELDS.count));
+  const observation = inspectItemObservation(node);
   return {
     itemId: base,
     itemInstance: match ? inst : null,
@@ -73,7 +75,18 @@ export function asItem(node) {
       rareValue: scalar(node, FIELDS.rare),
       affixNum: scalar(node, FIELDS.affixNum),
       level: scalar(node, FIELDS.level),
+      itemLevelRaw: observation.itemLevelRaw,
+      rarityRaw: observation.rarityRaw,
+      qualityRaw: observation.qualityRaw,
+      enhanceLevelRaw: observation.enhanceLevelRaw,
+      slotRaw: observation.slotRaw,
+      affixCountRaw: observation.affixCountRaw,
+      itemTypeRaw: observation.itemTypeRaw,
+      affixes: observation.affixes,
+      rawFields: observation.rawFields,
       details: collectItemDetails(node).slice(0, 100),
+      evidence: observation.evidence,
+      completeness: observation.completeness,
     },
   };
 }

@@ -265,12 +265,19 @@ function renderEquipmentAnalysis(result){
   const root=$('equipment-analysis-result');
   if(!result?.available){root.className='equipment-analysis-result empty';root.textContent=(result?.limitations||['Недостаточно данных для анализа.']).join(' ');return;}
   const coverage=result.priorityCoveragePercent===null?'не рассчитано':result.priorityCoveragePercent+'%';
-  const itemRows=(result.items||[]).map(item=>'<div class="equipment-lab-stat"><span>'+esc(item.name)+' · ID '+(item.itemId||'—')+' · '+esc(item.slotRaw||'слот неизвестен')+'</span><b>Найдено полей '+(item.priorityCoveragePercent===null?'—':item.priorityCoveragePercent+'%')+'</b></div>').join('');
-  const rules=(result.rules||[]).map(row=>'<div class="equipment-rule"><div><b>'+esc(row.label)+'</b><small>'+esc(row.rawKey)+' · вес '+row.weight+'</small></div><div><b>'+(row.status==='observed'?'Наблюдается':'Не обнаружено')+'</b><small>'+(row.examples.map(x=>esc(x.itemName)+': '+esc(x.value)).join(' · ')||'Нет примеров в явных аффиксах')+'</small></div></div>').join('');
+  const itemRows=(result.items||[]).map(item=>{
+    const catalogLabel=item.catalogItem?.matched?(item.catalogItem.name||'Строка предмета сопоставлена'):'ID предмета не найден в импортированной базе';
+    const catalogAffixes=(item.affixes||[]).filter(a=>a.catalogMatch?.matched||a.catalogMatch?.attributeMatched).map(a=>(a.catalogMatch.name||('Аффикс '+a.id))+(a.catalogMatch.attributeName?' · '+a.catalogMatch.attributeName:'')+(a.catalogMatch.tierRaw?' · T'+a.catalogMatch.tierRaw:'')+(a.catalogMatch.minRaw!==null&&a.catalogMatch.minRaw!==undefined?' · '+a.catalogMatch.minRaw+'–'+a.catalogMatch.maxRaw:'' )).join(' · ');
+    const rawMeta=[['уровень',item.itemLevelRaw],['редкость',item.rarityName?(item.rarityName+' ('+item.rarityRaw+')'):item.rarityRaw],['качество',item.qualityName?(item.qualityName+' ('+item.qualityRaw+')'):item.qualityRaw],['усиление',item.enhanceLevelRaw],['число аффиксов',item.affixCountRaw]].filter(pair=>pair[1]!==null&&pair[1]!==undefined&&pair[1]!=='').map(pair=>pair[0]+': '+pair[1]).join(' · ');
+    return '<div class="equipment-lab-stat"><span>'+esc(item.name)+' · ID '+(item.itemId||'—')+' · '+esc(item.slotName?(item.slotName+' · '+(item.slotRaw||'')):(item.slotRaw||'слот неизвестен'))+'<small>'+(rawMeta?esc(rawMeta)+' · ':'')+esc(catalogLabel)+(catalogAffixes?' · '+esc(catalogAffixes):'')+'</small></span><b>Найдено полей '+(item.priorityCoveragePercent===null?'—':item.priorityCoveragePercent+'%')+'</b></div>';
+  }).join('');
+  const rules=(result.rules||[]).map(row=>'<div class="equipment-rule"><div><b>'+esc(row.label)+'</b><small>'+esc(row.rawKey)+' · вес '+row.weight+'</small></div><div><b>'+(row.status==='observed'?'Наблюдается':'Не обнаружено')+'</b><small>'+(row.examples.map(x=>esc(x.itemName)+': '+esc(x.value)+((x.catalogAffix?' · '+esc(x.catalogAffix.name||x.catalogAffix.rowName||'аффикс из таблицы')+(x.catalogAffix.tierRaw?' · T'+esc(x.catalogAffix.tierRaw):'')+(x.catalogAffix.minRaw!==null&&x.catalogAffix.minRaw!==undefined?' · диапазон '+esc(x.catalogAffix.minRaw)+'–'+esc(x.catalogAffix.maxRaw):''):'')+(x.catalogAttribute?' · характеристика: '+esc(x.catalogAttribute.enumName||x.catalogAttribute.name||x.catalogAttribute.rowName||'enum'):'') )).join(' · ')||'Нет примеров в явных аффиксах')+'</small></div></div>').join('');
   const weak=(result.weakSpots||[]).map(row=>'<div class="equipment-weak"><b>'+esc(row.label)+' · '+esc(row.rawKey)+'</b><small>'+esc(row.explanation)+'</small></div>').join('');
   const recommendations=(result.recommendations||[]).map(row=>'<div class="equipment-lab-stat"><span>'+esc(row.label)+' · вес '+row.weight+'</span><b>'+esc(row.message)+'</b></div>').join('');
   root.className='equipment-analysis-result';
-  root.innerHTML='<div class="equipment-verdict"><b>Покрытие приоритетов в данных: '+coverage+'</b><span>'+result.itemCount+' явно наблюдаемых объектов · '+result.ruleCount+' правил · вес обнаруженных полей '+result.foundWeight+'/'+result.totalWeight+'</span></div>'+(itemRows?'<div class="form-divider">ДОЛЯ НАЙДЕННЫХ ПОЛЕЙ ПРИОРИТЕТА ПО ПРЕДМЕТАМ (НЕ ОЦЕНКА СИЛЫ)</div>'+itemRows:'')+(rules||'<div class="empty">Не заданы корректные правила приоритета.</div>')+(weak?'<div class="form-divider">ВОЗМОЖНЫЕ СЛАБЫЕ МЕСТА В НАБЛЮДАЕМЫХ ДАННЫХ</div>'+weak:'')+(recommendations?'<div class="form-divider">РЕКОМЕНДАЦИИ ПО ТВОИМ ПРИОРИТЕТАМ</div>'+recommendations:'')+'<div class="equipment-note">'+(result.limitations||[]).map(esc).join(' ')+'</div>';
+  const catalog=result.resourceCatalog||{};
+  const resourceLabel=catalog.imported?'Игровая база: '+number(catalog.affixDefinitions||0,0)+' аффиксов, '+number(catalog.attributeDefinitions||0,0)+' таблиц enum и '+number(catalog.itemDefinitions||0,0)+' предметов · сопоставлено '+number(catalog.matchedAffixes||0,0)+' аффиксов':'Игровая база не импортирована';
+  root.innerHTML='<div class="equipment-verdict"><b>Покрытие приоритетов в данных: '+coverage+'</b><span>'+result.itemCount+' явно наблюдаемых объектов · '+result.ruleCount+' правил · вес обнаруженных полей '+result.foundWeight+'/'+result.totalWeight+'</span><small>'+esc(resourceLabel)+'</small></div>'+(itemRows?'<div class="form-divider">ДОЛЯ НАЙДЕННЫХ ПОЛЕЙ ПРИОРИТЕТА ПО ПРЕДМЕТАМ (НЕ ОЦЕНКА СИЛЫ)</div>'+itemRows:'')+(rules||'<div class="empty">Не заданы корректные правила приоритета.</div>')+(weak?'<div class="form-divider">ВОЗМОЖНЫЕ СЛАБЫЕ МЕСТА В НАБЛЮДАЕМЫХ ДАННЫХ</div>'+weak:'')+(recommendations?'<div class="form-divider">РЕКОМЕНДАЦИИ ПО ТВОИМ ПРИОРИТЕТАМ</div>'+recommendations:'')+'<div class="equipment-note">'+(result.limitations||[]).map(esc).join(' ')+'</div>';
 }
 function renderEquipmentComparison(result){
   const root=$('equipment-compare-result');
@@ -278,7 +285,11 @@ function renderEquipmentComparison(result){
   const verdict=result.verdict==='left'?'По сравнимым правилам преимущество у A':result.verdict==='right'?'По сравнимым правилам преимущество у B':result.verdict==='tie'?'По сравнимым правилам равенство':'Недостаточно сопоставимых данных';
   const rows=(result.ruleResults||[]).map(row=>'<div class="equipment-rule"><div><b>'+esc(row.label)+'</b><small>'+esc(row.rawKey)+' · вес '+row.weight+' · '+esc(row.direction)+'</small></div><div><b>'+esc(row.leftValue??'—')+' ↔ '+esc(row.rightValue??'—')+'</b><small>'+esc(row.explanation)+'</small></div></div>').join('');
   root.className='equipment-compare-result';
-  root.innerHTML='<div class="equipment-verdict"><b>'+verdict+'</b><span>'+esc(result.left.name)+' vs '+esc(result.right.name)+' · покрытие сравнимых правил '+(result.score.coveragePercent===null?'—':result.score.coveragePercent+'%')+'</span><small>'+esc(result.explanation)+'</small></div><div class="equipment-lab-stat"><span>Слот</span><b>'+(result.slotComparison.status==='unknown'?'Неизвестен':result.slotComparison.status==='same'?'Совпадает':'Различается')+'</b></div><div class="equipment-lab-stat"><span>Общие ID аффиксов</span><b>'+((result.sharedAffixIds||[]).map(esc).join(', ')||'—')+'</b></div><div class="equipment-lab-stat"><span>Новые ID аффиксов у B</span><b>'+((result.addedAffixIds||[]).map(esc).join(', ')||'—')+'</b></div><div class="equipment-lab-stat"><span>Отсутствующие у B ID аффиксов</span><b>'+((result.removedAffixIds||[]).map(esc).join(', ')||'—')+'</b></div>'+(rows||'<div class="empty">Не заданы правила приоритета или нет сравнимых ключей.</div>')+'<div class="equipment-note">'+(result.limitations||[]).map(esc).join(' ')+'</div>';
+  const leftMeta=[['слот',result.left.slotName?(result.left.slotName+' ('+result.left.slotRaw+')'):result.left.slotRaw],['уровень',result.left.itemLevelRaw],['редкость',result.left.rarityName?(result.left.rarityName+' ('+result.left.rarityRaw+')'):result.left.rarityRaw],['качество',result.left.qualityName?(result.left.qualityName+' ('+result.left.qualityRaw+')'):result.left.qualityRaw],['усиление',result.left.enhanceLevelRaw]].filter(pair=>pair[1]!==null&&pair[1]!==undefined&&pair[1]!=='').map(pair=>pair[0]+': '+pair[1]).join(' · ');
+  const rightMeta=[['слот',result.right.slotName?(result.right.slotName+' ('+result.right.slotRaw+')'):result.right.slotRaw],['уровень',result.right.itemLevelRaw],['редкость',result.right.rarityName?(result.right.rarityName+' ('+result.right.rarityRaw+')'):result.right.rarityRaw],['качество',result.right.qualityName?(result.right.qualityName+' ('+result.right.qualityRaw+')'):result.right.qualityRaw],['усиление',result.right.enhanceLevelRaw]].filter(pair=>pair[1]!==null&&pair[1]!==undefined&&pair[1]!=='').map(pair=>pair[0]+': '+pair[1]).join(' · ');
+  const resourceCatalog=result.resourceCatalog||{};
+  const catalogRows=(result.catalogAffixes?.left||[]).concat(result.catalogAffixes?.right||[]).filter(row=>row.matched||row.attributeMatched).map(row=>esc(row.name||('Аффикс '+row.id))+(row.attributeName?' · '+esc(row.attributeName):'')+(row.tierRaw?' · T'+esc(row.tierRaw):'')+(row.minRaw!==null&&row.minRaw!==undefined?' · '+esc(row.minRaw)+'–'+esc(row.maxRaw):'')).join(' · ');
+  root.innerHTML='<div class="equipment-verdict"><b>'+verdict+'</b><span>'+esc(result.left.name)+' vs '+esc(result.right.name)+' · покрытие сравнимых правил '+(result.score.coveragePercent===null?'—':result.score.coveragePercent+'%')+'</span><small>'+esc(result.explanation)+'</small><small>'+esc(resourceCatalog.imported?'Сопоставлено с локальной базой: '+(resourceCatalog.affixDefinitions||0)+' строк аффиксов, '+(resourceCatalog.attributeDefinitions||0)+' таблиц enum, '+(resourceCatalog.leftAffixMatches||0)+' у A и '+(resourceCatalog.rightAffixMatches||0)+' у B.':'Локальная база игровых аффиксов не импортирована.')+'</small>'+(catalogRows?'<small>Справочник: '+catalogRows+'</small>':'')+'</div><div class="equipment-lab-stat"><span>Предмет A · исходные поля</span><b>'+esc(leftMeta||'Не получены')+'</b></div><div class="equipment-lab-stat"><span>Предмет B · исходные поля</span><b>'+esc(rightMeta||'Не получены')+'</b></div><div class="equipment-lab-stat"><span>Слот</span><b>'+(result.slotComparison.status==='unknown'?'Неизвестен':result.slotComparison.status==='same'?'Совпадает':'Различается')+'</b></div><div class="equipment-lab-stat"><span>Общие ID аффиксов</span><b>'+((result.sharedAffixIds||[]).map(esc).join(', ')||'—')+'</b></div><div class="equipment-lab-stat"><span>Новые ID аффиксов у B</span><b>'+((result.addedAffixIds||[]).map(esc).join(', ')||'—')+'</b></div><div class="equipment-lab-stat"><span>Отсутствующие у B ID аффиксов</span><b>'+((result.removedAffixIds||[]).map(esc).join(', ')||'—')+'</b></div>'+(rows||'<div class="empty">Не заданы правила приоритета или нет сравнимых ключей.</div>')+'<div class="equipment-note">'+(result.limitations||[]).map(esc).join(' ')+'</div>';
 }
 
 let displayedItems=[];
@@ -399,6 +410,134 @@ $('character-history-list').addEventListener('click',async e=>{const button=e.ta
 $('modal-close').onclick=closeModal;$('modal').onclick=e=>{if(e.target.id==='modal')closeModal();};
 $('emergency-clickthrough-off').onclick=async()=>{try{const updated=await window.nexus.setClickThrough(false);data.settings={...data.settings,...updated};renderConnection();if(activePage==='settings')renderSettings();toast('Сквозной клик выключен. HUD снова принимает мышь.');}catch(error){toast(`Не удалось выключить сквозной клик: ${error.message||error}`);}};$('show-hud').onclick=()=>window.nexus.showOverlay();$('choose-log').onclick=async()=>{try{const r=await window.nexus.chooseLog();if(!r.canceled)toast('Подключён выбранный лог');}catch(e){toast(e.message||String(e));}};$('auto-log').onclick=async()=>{await window.nexus.useAutoLog();toast('Автоматический поиск включён');};
 $('backup-export').onclick=async()=>{const r=await window.nexus.exportBackup();if(!r.canceled)toast('Резервная копия сохранена');};$('settings-export').onclick=$('backup-export').onclick;$('settings-import').onclick=async()=>{try{const r=await window.nexus.importBackup();if(!r.canceled){data=r.data;renderPage();toast(`Резервная копия импортирована · точек истории цен: ${number(r.importedPricePoints||0,0)}`);}}catch(e){toast(`Ошибка импорта: ${e.message||e}`);}};
+async function refreshGameResourceStatus(){
+  try{
+    const result=await window.nexus.getGameResourceStatus();
+    const badge=$('game-resource-badge');
+    const status=$('game-resource-status');
+    const details=$('game-resource-details');
+    if(!result?.imported){
+      badge.textContent='Не импортировано';
+      status.textContent='Локальная база игровых ресурсов ещё не создана.';
+      return;
+    }
+    const s=result.summary||{};
+    badge.textContent='Импортировано';
+    status.textContent='Источник: '+(result.rootLabel||'папка экспорта')+' · ProjectVersion: '+(result.projectVersion||'не определена');
+    details.innerHTML=[
+      'JSON-файлов проверено: '+number(s.jsonFilesScanned||0,0),
+      'DataTable: '+number(s.dataTables||0,0),
+      'Строк таблиц: '+number(s.dataTableRows||0,0),
+      'Аффиксов: '+number(s.affixDefinitions||0,0),
+      'Предметов: '+number(s.itemDefinitions||0,0),
+      'Локализаций: '+number(s.localizationEntries||0,0),
+      'Таблиц enum/атрибутов: '+number(s.attributeDefinitions||0,0),
+      'Ресурсных подсказок: '+number(s.usefulAssets||0,0),
+      'Скриптовых подсказок: '+number(s.scriptHints||0,0)
+    ].join(' · ');
+    if(result.knownGameTypes?.length){
+      details.innerHTML+=' <br>Типы из CoreRedirects: '+result.knownGameTypes.map(esc).join(', ');
+    }
+  }catch(error){
+    $('game-resource-status').textContent='Не удалось прочитать статус базы: '+(error.message||error);
+  }
+}
+$('game-resource-import').onclick=async()=>{
+  const button=$('game-resource-import');
+  button.disabled=true;
+  button.textContent='Сканирование…';
+  try{
+    const result=await window.nexus.importGameResources();
+    if(result.canceled)return;
+    await refreshGameResourceStatus();
+
+async function refreshTlidbStatus(){
+  try{
+    const result=await window.nexus.getTlidbCatalogStatus();
+    const badge=$('tlidb-badge');
+    const status=$('tlidb-status');
+    const details=$('tlidb-details');
+    if(!result?.imported){
+      badge.textContent='Не загружена';
+      status.textContent='Локальный кэш TLIDB ещё не создан.';
+      details.textContent='Нажми «Загрузить / обновить TLIDB», чтобы получить таблицы аффиксов по страницам экипировки.';
+      return;
+    }
+    const summary=result.summary||{};
+    badge.textContent=(summary.pagesFailed||0)>0?'Загружена частично':'Загружена';
+    status.textContent='Источник: TLIDB · обновлено '+date(result.syncedAt)+' · версия сезона/патча не подтверждена';
+    details.textContent='Страниц: '+number(summary.pagesImported||0,0)+' / '+number(summary.pagesRequested||0,0)+' · строк аффиксов: '+number(summary.affixRows||0,0)+' · ошибок: '+number(summary.pagesFailed||0,0);
+    if(result.failedPages?.length){
+      details.textContent+=' · Ошибки: '+result.failedPages.slice(0,3).map(x=>x.slug+': '+x.reason).join('; ');
+    }
+  }catch(error){
+    $('tlidb-status').textContent='Не удалось прочитать кэш TLIDB: '+(error.message||error);
+  }
+}
+async function searchTlidbCatalog(){
+  const query=$('tlidb-search').value.trim();
+  if(!query){
+    $('tlidb-search-count').textContent='Введи название характеристики на английском, например Max Life или Fire Resistance.';
+    $('tlidb-results').innerHTML='';
+    return;
+  }
+  try{
+    const result=await window.nexus.searchTlidbAffixes(query,{gearGroup:$('tlidb-gear-filter').value,limit:40});
+    $('tlidb-search-count').textContent='Найдено: '+number(result.total||0,0)+' · показано: '+number(result.results?.length||0,0);
+    $('tlidb-results').innerHTML=(result.results||[]).map(row=>{
+      const group=row.prefixSuffix==='prefix'?'префикс':row.prefixSuffix==='suffix'?'суффикс':'тип не указан';
+      const kind=row.sourceKind==='base-affix'?'Базовый':row.sourceKind==='corrosion-base'?'Коррозия':row.sourceKind==='craft-affix'?'Крафт':'Аффикс';
+      const ranges=(row.rollRanges||[]).map(x=>number(x.min,2)+'–'+number(x.max,2)).join(', ');
+      return '<div class="tlidb-result"><div class="tlidb-result-main"><b>'+esc(row.modifierRaw)+'</b><small>'+esc(row.sourcePageLabel)+' · '+kind+' · '+group+' · тир '+esc(row.tierRaw||'—')+'</small></div><div class="tlidb-result-meta"><span>Ур. '+esc(row.levelRaw||'—')+'</span><span>Вес '+esc(row.weightRaw||'—')+'</span><span>'+esc(row.library||row.sourceKind||'—')+'</span>'+(ranges?'<span>Диапазон '+esc(ranges)+'</span>':'')+'</div><button class="btn secondary" data-tlidb-url="'+esc(row.sourceUrl)+'">Источник</button></div>';
+    }).join('')||'<div class="empty">Совпадений нет. Попробуй другое английское название или сними фильтр типа экипировки.</div>';
+  }catch(error){
+    $('tlidb-search-count').textContent='Ошибка поиска: '+(error.message||error);
+    $('tlidb-results').innerHTML='';
+  }
+}
+$('tlidb-sync').onclick=async()=>{
+  const button=$('tlidb-sync');
+  button.disabled=true;
+  button.textContent='Загрузка страниц…';
+  try{
+    const result=await window.nexus.syncTlidbCatalog();
+    await refreshTlidbStatus();
+    const summary=result.status?.summary||{};
+    toast('TLIDB обновлена · записей: '+number(summary.affixRows||0,0)+' · страниц: '+number(summary.pagesImported||0,0));
+    await searchTlidbCatalog();
+  }catch(error){
+    toast('Ошибка загрузки TLIDB: '+(error.message||error));
+  }finally{
+    button.disabled=false;
+    button.textContent='Загрузить / обновить TLIDB (38 страниц)';
+  }
+};
+$('tlidb-search-button').onclick=()=>void searchTlidbCatalog();
+$('tlidb-search').addEventListener('keydown',e=>{if(e.key==='Enter')void searchTlidbCatalog();});
+$('tlidb-results').addEventListener('click',e=>{
+  const button=e.target.closest('[data-tlidb-url]');
+  if(!button)return;
+  const url=button.dataset.tlidbUrl||'';
+  if(/^https:\/\/tlidb\.com\/en\/[A-Za-z0-9_-]+$/.test(url)){
+    void window.nexus.openExternal(url).catch(error=>toast(error.message||String(error)));
+  }
+});
+refreshTlidbStatus();
+    const s=result.status?.summary||{};
+    if((s.affixDefinitions||0)===0&&(s.itemDefinitions||0)===0){
+      toast('Экспорт прочитан, но таблицы предметов/аффиксов не найдены. UI-ресурсы не считаются базой характеристик.');
+    }else{
+      toast('Игровая база обновлена · аффиксов: '+number(s.affixDefinitions||0,0)+' · предметов: '+number(s.itemDefinitions||0,0));
+    }
+  }catch(error){
+    toast('Ошибка импорта игровых ресурсов: '+(error.message||error));
+  }finally{
+    button.disabled=false;
+    button.textContent='Импортировать игровые ресурсы';
+  }
+};
+refreshGameResourceStatus();
+
 $('settings-choose-log').onclick=$('choose-log').onclick;$('settings-auto-log').onclick=$('auto-log').onclick;$('open-data-folder').onclick=async()=>{try{await window.nexus.openDataFolder();toast('Открыта папка данных Nexus');}catch(e){toast(e.message||String(e));}};
 $('set-opacity').oninput=()=>$('opacity-label').textContent=`${$('set-opacity').value}%`;$('set-scale').oninput=()=>$('scale-label').textContent=`${$('set-scale').value}%`;$('set-volume').oninput=()=>$('volume-label').textContent=`${$('set-volume').value}%`;
 $('apply-settings').onclick=async()=>{const settings={overlayMode:$('set-mode').value,overlayOpacity:Number($('set-opacity').value),overlayScale:Number($('set-scale').value),alwaysOnTop:$('set-top').checked,clickThrough:$('set-clickthrough').checked,hotkeysEnabled:$('set-hotkeys').checked,autoCreateDetectedProfiles:$('set-auto-create-profiles').checked,notificationsEnabled:$('set-notifications').checked,notificationThresholdFe:Number($('set-threshold').value)||0,soundEnabled:$('set-sound').checked,soundVolume:Number($('set-volume').value)};data.settings={...data.settings,...settings};await window.nexus.updateSettings(settings);await saveData();toast('Настройки применены');};

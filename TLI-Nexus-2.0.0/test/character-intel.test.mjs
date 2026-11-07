@@ -78,7 +78,14 @@ test('CharacterIntel stores inventory snapshots separately from equipped items a
     '+items+1+Item+BaseId [5028]',
     '+items+1+Item+Num [2]',
     '+items+1+Item+AffixNum [3]',
+    '+items+1+Item+ItemLevel [86]',
+    '+items+1+Item+RareValue [3]',
+    '+items+1+Item+Quality [12]',
+    '+items+1+Item+EnhanceLevel [4]',
     '+items+1+Item+BaseAffix+1+Id [900]',
+    '+items+1+Item+BaseAffix+1+AttrType [12]',
+    '+items+1+Item+BaseAffix+1+Value [135]',
+    '+items+1+Item+BaseAffix+1+Tier [2]',
   ], '2026.11.07-10.00.05:000'));
   const snapshot = intel.snapshot();
   assert.equal(snapshot.latestInventory.action, 'ResetItemsLayout');
@@ -86,6 +93,12 @@ test('CharacterIntel stores inventory snapshots separately from equipped items a
   assert.equal(snapshot.latestInventory.items[0].itemId, 5028);
   assert.equal(snapshot.latestInventory.items[0].count, 2);
   assert.ok(snapshot.latestInventory.items[0].details.some((x) => x.key === 'AffixNum'));
+  assert.equal(snapshot.latestInventory.items[0].itemLevelRaw, '86');
+  assert.equal(snapshot.latestInventory.items[0].rarityRaw, '3');
+  assert.equal(snapshot.latestInventory.items[0].qualityRaw, '12');
+  assert.equal(snapshot.latestInventory.items[0].enhanceLevelRaw, '4');
+  assert.equal(snapshot.latestInventory.items[0].affixes[0].id, '900');
+  assert.ok(snapshot.latestInventory.items[0].affixes[0].values.some((x) => x.key === 'Value' && x.value === '135'));
   assert.equal(Object.hasOwn(snapshot.latestInventory.items[0], 'slot'), false);
   assert.equal(snapshot.sections.inventory.status, 'observed');
   assert.match(snapshot.limitations.join(' '), /не доказательство надетых слотов/);

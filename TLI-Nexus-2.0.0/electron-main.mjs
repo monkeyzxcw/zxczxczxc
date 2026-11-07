@@ -12,6 +12,8 @@ import { buildProfileEquipmentSnapshot, captureProfileCharacterSnapshot, createC
 import { buildAnonymizedDiagnostic, buildCharacterReport } from './core/characterReport.js';
 import { compareCharacterSnapshots } from './core/snapshotHistory.js';
 import { analyzeEquipment, compareEquipment } from './core/equipmentIntelligence.js';
+import { scanGameResourceFolder, resourceCatalogStatus } from './core/gameResourceCatalog.js';
+import { fetchTlidbCatalog, searchTlidbAffixes, tlidbCatalogStatus } from './core/tlidbCatalog.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const DEFAULTS = DEFAULT_APP_DATA;
@@ -25,6 +27,54 @@ app.commandLine.appendSwitch('autoplay-policy', 'no-user-gesture-required');
 
 const userFile = (name) => path.join(app.getPath('userData'), name);
 const dataFile = () => userFile('nexus-data.json');
+const gameResourceIndexFile = () => userFile('game-resource-index.json');
+let gameResourceIndexCache = null;
+let gameResourceIndexMtime = 0;
+function readGameResourceIndex() {
+  try {
+    const file = gameResourceIndexFile();
+    const stat = fs.statSync(file);
+    if (!gameResourceIndexCache || stat.mtimeMs !== gameResourceIndexMtime) {
+      gameResourceIndexCache = JSON.parse(fs.readFileSync(file, 'utf8'));
+      gameResourceIndexMtime = stat.mtimeMs;
+    }
+    return gameResourceIndexCache;
+  } catch {
+    gameResourceIndexCache = null;
+    gameResourceIndexMtime = 0;
+    return null;
+  }
+}
+const tlidbCatalogFile = () => userFile('tlidb-affix-catalog.json');
+let tlidbCatalogCache = null;
+let tlidbCatalogMtime = 0;
+function readTlidbCatalog() {
+  try {
+    const file = tlidbCatalogFile();
+    const stat = fs.statSync(file);
+    if (!tlidbCatalogCache || stat.mtimeMs !== tlidbCatalogMtime) {
+      tlidbCatalogCache = JSON.parse(fs.readFileSync(file, 'utf8'));
+      tlidbCatalogMtime = stat.mtimeMs;
+    }
+    return tlidbCatalogCache;
+  } catch {
+    tlidbCatalogCache = null;
+    tlidbCatalogMtime = 0;
+    return null;
+  }
+}
+function writeTlidbCatalog(index) {
+  const serialized = JSON.stringify(index, null, 2);
+  if (Buffer.byteLength(serialized, 'utf8') > 30 * 1024 * 1024) {
+    throw new Error('Кэш TLIDB превышает 30 МБ. Импорт прерван.');
+  }
+  fs.mkdirSync(path.dirname(tlidbCatalogFile()), { recursive: true });
+  const temp = tlidbCatalogFile() + '.tmp';
+  fs.writeFileSync(temp, serialized, 'utf8');
+  fs.renameSync(temp, tlidbCatalogFile());
+  tlidbCatalogCache = index;
+  tlidbCatalogMtime = fs.statSync(tlidbCatalogFile()).mtimeMs;
+}
 function mergeData(value) { return mergeAppData(value); }
 function loadData() {
   try { appData = mergeData(JSON.parse(fs.readFileSync(dataFile(), 'utf8'))); }
@@ -417,9 +467,47 @@ app.whenReady().then(() => {
     if (priceHistorySnapshot) importedPricePoints = live?.importPriceHistory?.(priceHistorySnapshot, { merge: true }) || 0;
     return { canceled: false, data: appData, importedPricePoints };
   });
+  ipcMain.handle('game-resources:status', () => resourceCatalogStatus(readGameResourceIndex()));
+  ipcMain.handle('game-resources:import', async () => {
+    const result = await dialog.showOpenDialog(dashboard, {
+      title: 'Выбери папку с экспортом FModel / Unreal JSON',
+      properties: ['openDirectory'],
+    });
+    if (result.canceled || !result.filePaths?.[0]) return { canceled: true };
+    const index = scanGameResourceFolder(result.filePaths[0]);
+    const serialized = JSON.stringify(index, null, 2);
+    if (Buffer.byteLength(serialized, 'utf8') > 45 * 1024 * 1024) {
+      throw new Error('Индекс игровых ресурсов превышает 45 МБ. Выбери папку только с игровыми DataTable/JSON-экспортами.');
+    }
+    const temp = gameResourceIndexFile() + '.tmp';
+    fs.writeFileSync(temp, serialized, 'utf8');
+    fs.renameSync(temp, gameResourceIndexFile());
+    gameResourceIndexCache = index;
+    gameResourceIndexMtime = fs.statSync(gameResourceIndexFile()).mtimeMs;
+    return { canceled: false, status: resourceCatalogStatus(index), limitations: index.limitations };
+  });
+  ipcMain.handle('tlidb:status', () => tlidbCatalogStatus(readTlidbCatalog()));
+  ipcMain.handle('tlidb:sync', async () => {
+    const index = await fetchTlidbCatalog();
+    if (!index.records.length) {
+      const reason = index.failedPages?.[0]?.reason || 'Не удалось прочитать таблицы аффиксов TLIDB.';
+      throw new Error('База TLIDB не обновлена: ' + reason);
+    }
+    writeTlidbCatalog(index);
+    return { status: tlidbCatalogStatus(index) };
+  });
+  ipcMain.handle('tlidb:search', (_event, query, options = {}) => searchTlidbAffixes(
+    readTlidbCatalog(),
+    String(query || '').slice(0, 120),
+    {
+      gearGroup: String(options?.gearGroup || '').slice(0, 80),
+      sourceKind: String(options?.sourceKind || '').slice(0, 40),
+      limit: Math.min(100, Math.max(1, Number(options?.limit) || 40)),
+    },
+  ));
   ipcMain.handle('items:search', (_event, query) => searchItems(query, 500));
-  ipcMain.handle('equipment:analyze', (_event, items, priorities) => analyzeEquipment(Array.isArray(items) ? items.slice(0, 100) : [], priorities));
-  ipcMain.handle('equipment:compare', (_event, left, right, priorities) => compareEquipment(left, right, priorities));
+  ipcMain.handle('equipment:analyze', (_event, items, priorities) => analyzeEquipment(Array.isArray(items) ? items.slice(0, 100) : [], priorities, readGameResourceIndex()));
+  ipcMain.handle('equipment:compare', (_event, left, right, priorities) => compareEquipment(left, right, priorities, readGameResourceIndex()));
   ipcMain.handle('build:analyze', (_event, build) => analyzeBuild(build));
   ipcMain.handle('farm:analyze', (_event, sessions, options = {}) => analyzeFarmingSessions(Array.isArray(sessions) ? sessions.slice(-1000) : [], { profileId: options.profileId || null, strategy: options.strategy || null, since: Number(options.since) || null }));
   ipcMain.handle('build:compare', (_event, left, right) => compareBuilds(left, right));

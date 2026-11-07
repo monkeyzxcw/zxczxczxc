@@ -88,3 +88,18 @@
 /* 2.1.0 evidence-based equipment intelligence */
 .equipment-intelligence-panel{margin:13px 0}.equipment-lab-priorities{padding:11px;border:1px solid #292e43;border-radius:8px;background:#101420}.equipment-lab-priorities textarea{width:100%;font-family:Consolas,monospace}.equipment-key-list{margin-top:13px}.equipment-key-list>b{display:block;font-size:9px;color:#c9c4d8;margin-bottom:6px}.equipment-key-chip{display:inline-flex;gap:6px;align-items:center;margin:3px;padding:4px 7px;border:1px solid #39334e;border-radius:5px;background:#1a1727;color:#c9baf0;font:8px/1.4 Consolas,monospace}.equipment-analysis-result,.equipment-compare-result{margin-top:12px}.equipment-lab-stat{display:flex;justify-content:space-between;gap:10px;padding:8px 10px;border-bottom:1px solid #292d40;font-size:9px}.equipment-lab-stat b{overflow-wrap:anywhere;text-align:right}.equipment-weak{border-left:2px solid var(--gold);padding:7px 9px;margin:6px 0;background:#211d17;border-radius:4px}.equipment-rule{display:grid;grid-template-columns:minmax(100px,.7fr) minmax(0,1.3fr);gap:9px;padding:7px 9px;border-bottom:1px solid #292d40;font-size:8px}.equipment-rule small{display:block;color:var(--muted);margin-top:2px}.equipment-verdict{padding:10px;border:1px solid #39334e;background:#171526;border-radius:7px;margin:8px 0;font-size:10px}.equipment-verdict b{display:block;margin-bottom:4px}.equipment-note{color:#8b93a8;font-size:8px;line-height:1.6;margin-top:7px}
 @media(max-width:760px){.equipment-rule{grid-template-columns:1fr}.equipment-lab-priorities .inline-actions{align-items:stretch}.equipment-lab-priorities .btn{flex:1}}
+
+/* 2.2.0 local game-resource catalog */
+.game-resource-panel{border:1px solid #34304b;background:linear-gradient(135deg,#171526,#111522)}.game-resource-status{font-size:10px;color:#d3d5e6;padding:9px 11px;background:#171a28;border:1px solid #30364a;border-radius:7px;margin:10px 0}.game-resource-panel .hint{line-height:1.55}.game-resource-panel .disclaimer{margin-top:10px}
+
+/* 2.2.0 user-triggered TLIDB affix reference */
+.tlidb-panel{border:1px solid #34304b;background:linear-gradient(135deg,#171526,#111522)}
+.tlidb-search-controls{display:grid;grid-template-columns:minmax(180px,1fr) minmax(150px,.55fr) auto;gap:10px;align-items:end;margin:12px 0}
+.tlidb-search-controls label{display:grid;gap:6px;color:var(--muted);font-size:9px}
+.tlidb-search-controls input,.tlidb-search-controls select{width:100%;min-width:0;background:#101421;border:1px solid #343a51;border-radius:6px;color:#edf0fa;padding:9px;font:inherit}
+.tlidb-results{display:grid;gap:6px;margin-top:9px;max-height:480px;overflow:auto}
+.tlidb-result{display:grid;grid-template-columns:minmax(180px,1fr) minmax(180px,.8fr) auto;gap:10px;align-items:center;padding:9px 10px;border:1px solid #2b3044;border-radius:6px;background:#121724}
+.tlidb-result-main{min-width:0}.tlidb-result-main b{display:block;font-size:10px;overflow-wrap:anywhere;color:#e8eaf5}.tlidb-result-main small{display:block;margin-top:4px;color:var(--muted);font-size:8px}
+.tlidb-result-meta{display:flex;gap:5px 9px;flex-wrap:wrap;color:#b5bfd4;font-size:8px}
+.tlidb-result .btn{white-space:nowrap;padding:6px 9px;font-size:8px}
+@media(max-width:760px){.tlidb-search-controls{grid-template-columns:1fr}.tlidb-result{grid-template-columns:1fr}.tlidb-result .btn{justify-self:start}}
