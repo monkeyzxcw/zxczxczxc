@@ -308,13 +308,18 @@ function persistAutoSession(state) {
   row.player = state.player || row.player;
   row.profileId = profile?.id || row.profileId || null;
   row.area = state.area || row.area;
-  row.durationSec = Math.max(0, Math.floor((Date.now() - state.startedAt) / 1000));
+  const sessionEndAt = state.gameEndedAt || Date.now();
+  row.durationSec = Math.max(0, Math.floor((sessionEndAt - state.startedAt) / 1000));
   row.lootValueFe = Number(state.sessionValueFe) || 0;
   row.feGained = Number(state.feGained) || 0;
   row.itemCount = Number(state.drops) || 0;
   row.pickupEvents = Number(state.pickupEvents) || 0;
+  row.mapsCompleted = Number(state.mapsCompleted) || 0;
+  row.mapRuns = Array.isArray(state.mapRuns) ? state.mapRuns.slice(-100) : (row.mapRuns || []);
+  row.currentMap = state.currentMap || null;
+  row.lastMap = state.lastMap || row.lastMap || null;
   row.updatedAt = Date.now();
-  if (!state.gameRunning && row.endedAt === null) row.endedAt = Date.now();
+  if (!state.gameRunning && row.endedAt === null) row.endedAt = state.gameEndedAt || Date.now();
   // Persist periodic snapshots, and always persist the transition to stopped.
   const now = Date.now();
   if (!state.gameRunning || now - lastSessionPersistAt >= 4000) {
