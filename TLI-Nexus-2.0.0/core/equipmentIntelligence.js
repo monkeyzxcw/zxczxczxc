@@ -325,7 +325,11 @@ export function analyzeEquipment(itemsInput, prioritiesInput = [], resourceIndex
       affixId: row.affixId,
       attributeRaw: row.attributeRaw || null,
       catalogAffix: row.affixId ? indexes.affixes.get(String(row.affixId)) || null : null,
-      catalogAttribute: row.attributeRaw ? indexes.attributes.get(String(row.attributeRaw)) || null : null,
+      catalogAttribute: row.attributeRaw
+        ? indexes.affixAttributeTypes.get(String(row.attributeRaw)) ||
+          indexes.characterAttributes.get(String(row.attributeRaw)) ||
+          indexes.characterFields.get(String(row.attributeRaw)) || null
+        : null,
     })),
   }));
 
