@@ -450,6 +450,79 @@ $('game-resource-import').onclick=async()=>{
     const result=await window.nexus.importGameResources();
     if(result.canceled)return;
     await refreshGameResourceStatus();
+
+async function refreshTlidbStatus(){
+  try{
+    const result=await window.nexus.getTlidbCatalogStatus();
+    const badge=$('tlidb-badge');
+    const status=$('tlidb-status');
+    const details=$('tlidb-details');
+    if(!result?.imported){
+      badge.textContent='Не загружена';
+      status.textContent='Локальный кэш TLIDB ещё не создан.';
+      details.textContent='Нажми «Загрузить / обновить TLIDB», чтобы получить таблицы аффиксов по страницам экипировки.';
+      return;
+    }
+    const summary=result.summary||{};
+    badge.textContent=(summary.pagesFailed||0)>0?'Загружена частично':'Загружена';
+    status.textContent='Источник: TLIDB · обновлено '+date(result.syncedAt)+' · версия сезона/патча не подтверждена';
+    details.textContent='Страниц: '+number(summary.pagesImported||0,0)+' / '+number(summary.pagesRequested||0,0)+' · строк аффиксов: '+number(summary.affixRows||0,0)+' · ошибок: '+number(summary.pagesFailed||0,0);
+    if(result.failedPages?.length){
+      details.textContent+=' · Ошибки: '+result.failedPages.slice(0,3).map(x=>x.slug+': '+x.reason).join('; ');
+    }
+  }catch(error){
+    $('tlidb-status').textContent='Не удалось прочитать кэш TLIDB: '+(error.message||error);
+  }
+}
+async function searchTlidbCatalog(){
+  const query=$('tlidb-search').value.trim();
+  if(!query){
+    $('tlidb-search-count').textContent='Введи название характеристики на английском, например Max Life или Fire Resistance.';
+    $('tlidb-results').innerHTML='';
+    return;
+  }
+  try{
+    const result=await window.nexus.searchTlidbAffixes(query,{gearGroup:$('tlidb-gear-filter').value,limit:40});
+    $('tlidb-search-count').textContent='Найдено: '+number(result.total||0,0)+' · показано: '+number(result.results?.length||0,0);
+    $('tlidb-results').innerHTML=(result.results||[]).map(row=>{
+      const group=row.prefixSuffix==='prefix'?'префикс':row.prefixSuffix==='suffix'?'суффикс':'тип не указан';
+      const kind=row.sourceKind==='base-affix'?'Базовый':row.sourceKind==='corrosion-base'?'Коррозия':row.sourceKind==='craft-affix'?'Крафт':'Аффикс';
+      const ranges=(row.rollRanges||[]).map(x=>number(x.min,2)+'–'+number(x.max,2)).join(', ');
+      return '<div class="tlidb-result"><div class="tlidb-result-main"><b>'+esc(row.modifierRaw)+'</b><small>'+esc(row.sourcePageLabel)+' · '+kind+' · '+group+' · тир '+esc(row.tierRaw||'—')+'</small></div><div class="tlidb-result-meta"><span>Ур. '+esc(row.levelRaw||'—')+'</span><span>Вес '+esc(row.weightRaw||'—')+'</span><span>'+esc(row.library||row.sourceKind||'—')+'</span>'+(ranges?'<span>Диапазон '+esc(ranges)+'</span>':'')+'</div><button class="btn secondary" data-tlidb-url="'+esc(row.sourceUrl)+'">Источник</button></div>';
+    }).join('')||'<div class="empty">Совпадений нет. Попробуй другое английское название или сними фильтр типа экипировки.</div>';
+  }catch(error){
+    $('tlidb-search-count').textContent='Ошибка поиска: '+(error.message||error);
+    $('tlidb-results').innerHTML='';
+  }
+}
+$('tlidb-sync').onclick=async()=>{
+  const button=$('tlidb-sync');
+  button.disabled=true;
+  button.textContent='Загрузка страниц…';
+  try{
+    const result=await window.nexus.syncTlidbCatalog();
+    await refreshTlidbStatus();
+    const summary=result.status?.summary||{};
+    toast('TLIDB обновлена · записей: '+number(summary.affixRows||0,0)+' · страниц: '+number(summary.pagesImported||0,0));
+    await searchTlidbCatalog();
+  }catch(error){
+    toast('Ошибка загрузки TLIDB: '+(error.message||error));
+  }finally{
+    button.disabled=false;
+    button.textContent='Загрузить / обновить TLIDB (38 страниц)';
+  }
+};
+$('tlidb-search-button').onclick=()=>void searchTlidbCatalog();
+$('tlidb-search').addEventListener('keydown',e=>{if(e.key==='Enter')void searchTlidbCatalog();});
+$('tlidb-results').addEventListener('click',e=>{
+  const button=e.target.closest('[data-tlidb-url]');
+  if(!button)return;
+  const url=button.dataset.tlidbUrl||'';
+  if(/^https:\/\/tlidb\.com\/en\/[A-Za-z0-9_-]+$/.test(url)){
+    void window.nexus.openExternal(url).catch(error=>toast(error.message||String(error)));
+  }
+});
+refreshTlidbStatus();
     const s=result.status?.summary||{};
     if((s.affixDefinitions||0)===0&&(s.itemDefinitions||0)===0){
       toast('Экспорт прочитан, но таблицы предметов/аффиксов не найдены. UI-ресурсы не считаются базой характеристик.');
