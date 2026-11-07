@@ -350,10 +350,21 @@ export class LiveService {
     try {
       const proc = await findGameProcess();
       this.gameExe = proc.exe || this.gameExe;
-      if (proc.running !== this.game) {
-        this.game = proc.running;
-        if (this.game) this.resetSession();
-        else if (!this.manualLogFile) { this.detach(); this.lastError = null; this.emit(); return; }
+      if (proc.running) {
+        this.gameMissingScans = 0;
+        if (!this.game) {
+          this.game = true;
+          this.resetSession();
+        }
+      } else if (this.game) {
+        // Avoid treating one missed process-list sample as a full game restart.
+        this.gameMissingScans += 1;
+        if (this.gameMissingScans >= 2) {
+          this.game = false;
+          this.gameEndedAt = Date.now();
+          this.gameMapTracker.finishCurrentMap(this.gameEndedAt, 'game-stopped');
+          if (!this.manualLogFile) { this.detach(); this.lastError = null; this.emit(); return; }
+        }
       }
       if (this.manualLogFile) {
         if (!fs.existsSync(this.manualLogFile)) {
