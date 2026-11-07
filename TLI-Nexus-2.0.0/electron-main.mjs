@@ -12,6 +12,7 @@ import { buildProfileEquipmentSnapshot, captureProfileCharacterSnapshot, createC
 import { buildAnonymizedDiagnostic, buildCharacterReport } from './core/characterReport.js';
 import { compareCharacterSnapshots } from './core/snapshotHistory.js';
 import { analyzeEquipment, compareEquipment } from './core/equipmentIntelligence.js';
+import { scanGameResourceFolder, resourceCatalogStatus } from './core/gameResourceCatalog.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const DEFAULTS = DEFAULT_APP_DATA;
@@ -25,6 +26,11 @@ app.commandLine.appendSwitch('autoplay-policy', 'no-user-gesture-required');
 
 const userFile = (name) => path.join(app.getPath('userData'), name);
 const dataFile = () => userFile('nexus-data.json');
+const gameResourceIndexFile = () => userFile('game-resource-index.json');
+function readGameResourceIndex() {
+  try { return JSON.parse(fs.readFileSync(gameResourceIndexFile(), 'utf8')); }
+  catch { return null; }
+}
 function mergeData(value) { return mergeAppData(value); }
 function loadData() {
   try { appData = mergeData(JSON.parse(fs.readFileSync(dataFile(), 'utf8'))); }
@@ -416,6 +422,23 @@ app.whenReady().then(() => {
     let importedPricePoints = 0;
     if (priceHistorySnapshot) importedPricePoints = live?.importPriceHistory?.(priceHistorySnapshot, { merge: true }) || 0;
     return { canceled: false, data: appData, importedPricePoints };
+  });
+  ipcMain.handle('game-resources:status', () => resourceCatalogStatus(readGameResourceIndex()));
+  ipcMain.handle('game-resources:import', async () => {
+    const result = await dialog.showOpenDialog(dashboard, {
+      title: 'Выбери папку с экспортом FModel / Unreal JSON',
+      properties: ['openDirectory'],
+    });
+    if (result.canceled || !result.filePaths?.[0]) return { canceled: true };
+    const index = scanGameResourceFolder(result.filePaths[0]);
+    const serialized = JSON.stringify(index);
+    if (Buffer.byteLength(serialized, 'utf8') > 45 * 1024 * 1024) {
+      throw new Error('Индекс игровых ресурсов превышает 45 МБ. Выбери папку только с игровыми DataTable/JSON-экспортами.');
+    }
+    const temp = gameResourceIndexFile() + '.tmp';
+    fs.writeFileSync(temp, JSON.stringify(index, null, 2), 'utf8');
+    fs.renameSync(temp, gameResourceIndexFile());
+    return { canceled: false, status: resourceCatalogStatus(index), limitations: index.limitations };
   });
   ipcMain.handle('items:search', (_event, query) => searchItems(query, 500));
   ipcMain.handle('equipment:analyze', (_event, items, priorities) => analyzeEquipment(Array.isArray(items) ? items.slice(0, 100) : [], priorities));
