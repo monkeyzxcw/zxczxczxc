@@ -5,7 +5,7 @@ import { inspectItemObservation } from './itemObservation.js';
 // validate the shape of PickItem/PickItems: it parses the complete tree and
 // forwards it. Nexus keeps that behaviour, then extracts item fields when known.
 export const FIELDS = {
-  baseId: ['BaseId', 'BaseID', 'ItemBaseId', 'itemBaseId', 'baseId', 'itemId'],
+  baseId: ['BaseId', 'BaseID', 'ItemBaseId', 'itemBaseId', 'ConfigBaseId', 'ConfigID', 'EquipmentBaseId', 'baseId', 'itemId'],
   instanceId: ['Id', 'ItemInstanceId', 'instanceId'],
   count: ['Num', 'Count', 'Amount', 'count', 'num'],
   pageId: ['PageId'],
