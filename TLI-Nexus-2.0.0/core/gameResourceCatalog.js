@@ -12,7 +12,7 @@ const ITEM_WORD = /item|equip|equipment|gear/i;
 const LOCALIZATION_WORD = /localization|locres|stringtable|texttable|language/i;
 const EXPLICIT_ID_KEYS = new Set([
   'id', 'affixid', 'baseaffixid', 'affixconfigid', 'affixbaseid',
-  'itemid', 'itembaseid', 'configbaseid', 'baseid',
+  'itemid', 'itembaseid', 'itemconfigbaseid', 'configbaseid', 'baseid', 'baseitemid', 'equipmentid', 'equipmentbaseid', 'equipid',
 ]);
 const normalizeKey = (value) => String(value || '').replace(/[^a-z0-9]/gi, '').toLowerCase();
 const clean = (value, max = 200) => String(value ?? '').replace(/[\r\n\0]/g, ' ').trim().slice(0, max);
@@ -145,14 +145,15 @@ function extractRows(resourcePath, doc, kind) {
     const idField = fields.find((field) => EXPLICIT_ID_KEYS.has(normalizeKey(field.key)));
     const payload = rowPayload(entry.row);
     const name = findNamed(payload, [
-      'Name', 'DisplayName', 'ItemName', 'EquipName', 'AffixName', 'NameKey',
-      'TextKey', 'DescKey', 'Title',
+      'Name', 'DisplayName', 'ItemName', 'EquipName', 'AffixName', 'Title',
     ]);
     const id = idField ? idField.value : null;
     const summary = {
       id: id ? clean(id, 100) : null,
       rowName: clean(entry.rowName, 120),
       name,
+      nameKeyRaw: findNamed(payload, ['NameKey', 'TextKey', 'StringKey', 'LocKey']),
+      descriptionKeyRaw: findNamed(payload, ['DescKey', 'DescriptionKey', 'DescriptionTextKey']),
       sourcePath: resourcePath,
       rowPath: entry.path,
       fields: fields.slice(0, 100),
@@ -178,6 +179,29 @@ function extractRows(resourcePath, doc, kind) {
     }
   }
   return { itemRows, affixRows, tableRowCount: tableRows.length };
+}
+
+function extractLocalizationEntries(resourcePath, doc) {
+  const entries = new Map();
+  walk(doc, (node, nodePath) => {
+    const key = findNamed(node, [
+      'TextKey', 'NameKey', 'StringKey', 'LocKey', 'LocalizationKey', 'Key', 'StringId',
+    ]);
+    const value = findNamed(node, [
+      'LocalizedText', 'Translation', 'Text', 'String', 'LocalizedString', 'Content',
+    ]);
+    if (!key || !value || key === value) return;
+    const normalizedKey = clean(key, 240);
+    if (!entries.has(normalizedKey)) {
+      entries.set(normalizedKey, {
+        key: normalizedKey,
+        text: clean(value, 1000),
+        sourcePath: resourcePath,
+        rowPath: nodePath.join('.').slice(0, 300),
+      });
+    }
+  });
+  return [...entries.values()];
 }
 
 function readTextResource(filePath, maxBytes) {
@@ -254,6 +278,7 @@ export function scanGameResourceFolder(rootPath, options = {}) {
   const tableSchemas = [];
   const scriptHints = [];
   const localizationHints = [];
+  const localizationEntries = [];
   const schemaEvidence = new Map();
   let scannedJson = 0;
   let skippedOversized = 0;
@@ -327,6 +352,9 @@ export function scanGameResourceFolder(rootPath, options = {}) {
     const kind = classifyResource(relativePath, doc, exportTypes);
     const refs = referencedPaths(doc);
     const rowData = extractRows(relativePath, doc, kind);
+    if (kind === 'localization-resource') {
+      localizationEntries.push(...extractLocalizationEntries(relativePath, doc));
+    }
     const name = path.basename(filePath, extension);
     const useful = kind !== 'other-game-asset' || rowData.tableRowCount > 0 ||
       exportTypes.some((value) => /datatable|dataasset/i.test(value));
@@ -382,6 +410,7 @@ export function scanGameResourceFolder(rootPath, options = {}) {
       affixDefinitions: uniqueAffixes.size,
       scriptHints: scriptHints.length,
       localizationHints: localizationHints.length,
+      localizationEntries: localizationEntries.length,
       failedJson,
       skippedOversized,
       errors: errors.length,
@@ -393,6 +422,7 @@ export function scanGameResourceFolder(rootPath, options = {}) {
     assetManifest: manifest.slice(0, 10000),
     scriptHints: scriptHints.slice(0, 2000),
     localizationHints: localizationHints.slice(0, 1000),
+    localizationEntries: [...new Map(localizationEntries.map((row) => [row.key, row])).values()].slice(0, 50000),
     errors: errors.slice(0, 200),
     limitations: [
       'UI Blueprint экспорт содержит структуру интерфейса и ссылки, но сам по себе не является таблицей игровых роллов.',
