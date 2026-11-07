@@ -25,6 +25,7 @@ contextBridge.exposeInMainWorld('nexus', {
   getTlidbCatalogStatus: () => ipcRenderer.invoke('tlidb:status'),
   syncTlidbCatalog: () => ipcRenderer.invoke('tlidb:sync'),
   searchTlidbAffixes: (query, options) => ipcRenderer.invoke('tlidb:search', query, options),
+  onTlidbUpdate: (fn) => { const handler = (_e, payload) => fn(payload); ipcRenderer.on('tlidb:updated', handler); return () => ipcRenderer.removeListener('tlidb:updated', handler); },
   getItemIcon: (id) => ipcRenderer.invoke('items:icon', id),
   getPriceHistory: (id, days = 30, seasonId = undefined) => ipcRenderer.invoke('prices:history', id, days, seasonId),
   analyzeBuild: (build) => ipcRenderer.invoke('build:analyze', build),
