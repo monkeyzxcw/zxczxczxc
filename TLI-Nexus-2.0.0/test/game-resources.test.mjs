@@ -94,6 +94,32 @@ test('resource scanner indexes only explicit table rows and preserves CoreRedire
   }
 });
 
+test('resource scanner separates enum tables from affix roll definitions', () => {
+  const root = fs.mkdtempSync(path.join(os.tmpdir(), 'tli-affix-enum-'));
+  try {
+    const data = path.join(root, 'Content', 'Data');
+    fs.mkdirSync(data, { recursive: true });
+    fs.writeFileSync(path.join(data, 'DT_AffixAttrType.json'), JSON.stringify({
+      Exports: [{
+        Type: 'DataTable',
+        Name: 'DT_AffixAttrType',
+        Properties: {
+          RowMap: [
+            { Name: 'MaxLife', Value: { Id: 12, Name: 'Maximum Life', NameKey: 'Stat.MaxLife' } },
+          ],
+        },
+      }],
+    }));
+    const result = scanGameResourceFolder(root);
+    assert.equal(result.summary.attributeDefinitions, 1);
+    assert.equal(result.attributeDefinitions[0].enumId, '12');
+    assert.equal(result.attributeDefinitions[0].enumName, 'Maximum Life');
+    assert.equal(result.summary.affixDefinitions, 0);
+  } finally {
+    fs.rmSync(root, { recursive: true, force: true });
+  }
+});
+
 test('resource scanner extracts explicit localization keys from exported text tables', () => {
   const root = fs.mkdtempSync(path.join(os.tmpdir(), 'tli-localization-resources-'));
   try {
