@@ -232,13 +232,20 @@ function listFiles(root, maxFiles, errors) {
     try { entries = fs.readdirSync(current, { withFileTypes: true }); }
     catch (error) { errors.push({ path: current, reason: clean(error.message, 200) }); continue; }
 
+    const preferredDirs = [];
     for (const entry of entries) {
       if (results.length >= maxFiles) break;
       const fullPath = path.join(current, entry.name);
       if (entry.isSymbolicLink()) continue;
       if (entry.isDirectory()) {
-        if (['node_modules', '.git', 'cache', 'saved', 'intermediate'].includes(entry.name.toLowerCase())) continue;
-        stack.push(fullPath);
+        const directoryName = entry.name.toLowerCase();
+        if ([
+          'node_modules', '.git', 'cache', 'saved', 'intermediate',
+          'art', 'textures', 'meshes', 'materials', 'audio', 'sound', 'sounds',
+          'shaders', 'movies', 'cinematics', 'animations', 'animation', 'vfx',
+        ].includes(directoryName)) continue;
+        const priority = /^(data|datatable|datatables|gamedata|tables|blueprint|blueprints|script|scripts|config|localization|localisation|locale|text|texts)$/i.test(entry.name) ? 2 : 0;
+        preferredDirs.push({ path: fullPath, priority });
       } else if (entry.isFile()) {
         const extension = path.extname(entry.name).toLowerCase();
         if (extension === '.json' || extension === '.out' || extension === '.lua' || extension === '.txt' || extension === '.ini' || extension === '.locres') {
@@ -246,6 +253,10 @@ function listFiles(root, maxFiles, errors) {
         }
       }
     }
+    // LIFO traversal: visit data/config/script/localization folders before
+    // generic folders when the export contains more files than the scan cap.
+    preferredDirs.sort((a, b) => a.priority - b.priority);
+    for (const directory of preferredDirs) stack.push(directory.path);
   }
   return results;
 }
