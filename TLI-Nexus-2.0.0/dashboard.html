@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self' data:; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'none'">
-  <title>TLI Nexus 2.2.0</title><link rel="stylesheet" href="dashboard.css">
+  <title>TLI Nexus 2.4.0</title><link rel="stylesheet" href="dashboard.css">
 </head>
 <body>
 <div class="app-shell">
   <aside class="sidebar">
-    <div class="brand"><span class="brand-orb">✦</span><div><b>TLI <i>NEXUS</i></b><small>GAME COMPANION · 2.2.0</small></div></div>
+    <div class="brand"><span class="brand-orb">✦</span><div><b>TLI <i>NEXUS</i></b><small>GAME COMPANION · 2.4.0</small></div></div>
     <div class="sidebar-label">WORKSPACE</div>
     <nav id="nav">
       <button class="nav-item active" data-page="overview"><span>◈</span>Обзор</button>
@@ -103,9 +103,10 @@
     </section>
 
     <section class="page" id="page-analyzer">
-      <div class="page-intro"><div><div class="eyebrow">CHARACTER INTELLIGENCE</div><h2>Анализ персонажа</h2><p>Внеси данные из листа характеристик игры. Nexus найдёт отклонения от твоих целей, пропуски и противоречия — без фальшивых DPS-цифр.</p></div><button class="btn secondary" data-go="builds">Открыть билды</button></div>
-      <div class="analyzer-toolbar panel"><label>Профиль для анализа<select id="analyzer-build"></select></label><button class="btn secondary" id="import-observed-stats">Подставить показатели из лога</button><button class="btn primary" id="run-analysis">Проверить персонажа</button><span class="muted" id="analysis-completeness">Нет анализа</span></div>
-      <div class="analysis-grid"><section class="panel"><div class="panel-head"><div><div class="eyebrow">STAT SHEET</div><h3>Характеристики и личные цели</h3></div><button class="text-btn" id="save-analyzer-stats">Сохранить значения</button></div><div id="stat-editor" class="stat-editor"></div></section><section class="panel"><div class="panel-head"><div><div class="eyebrow">WEAKNESS SCAN</div><h3>Найденные проблемы</h3></div><span class="data-badge">RULE CHECK</span></div><div id="analysis-findings" class="findings empty">Выбери билд и запусти проверку.</div><div class="disclaimer">Анализ проверяет только заполненные поля и заданные тобой цели. Для точного расчёта урона нужна отдельная версия игрового симулятора с подтверждёнными формулами текущего патча.</div></section></div>
+      <div class="page-intro"><div><div class="eyebrow">BUILD INTELLIGENCE · EVIDENCE FIRST</div><h2>Полный анализ билда</h2><p>Nexus сверяет реальные данные персонажа с сохранённой сборкой, находит разрывы по характеристикам, навыкам, талантам и подтверждённым аффиксам, а затем формирует план улучшений.</p></div><button class="btn secondary" data-go="builds">Открыть билды</button></div>
+      <div class="analyzer-toolbar panel"><label>Билд для анализа<select id="analyzer-build"></select></label><button class="btn secondary" id="import-observed-stats">Подставить показатели из лога</button><button class="btn primary" id="run-analysis">Полный разбор билда</button><span class="muted" id="analysis-completeness">Нет анализа</span></div>
+      <div class="analysis-grid"><section class="panel"><div class="panel-head"><div><div class="eyebrow">STAT SHEET</div><h3>Характеристики и личные цели</h3></div><button class="text-btn" id="save-analyzer-stats">Сохранить значения</button></div><div id="stat-editor" class="stat-editor"></div></section><section class="panel"><div class="panel-head"><div><div class="eyebrow">WEAKNESS SCAN</div><h3>Базовые проверки</h3></div><span class="data-badge">RULE CHECK</span></div><div id="analysis-findings" class="findings empty">Выбери билд и запусти анализ.</div><div class="disclaimer">Этот блок проверяет цели и согласованность введённых значений. Расширенный аудит ниже показывает источники, навыки, таланты и экипировку.</div></section></div>
+      <section class="panel build-audit-panel"><div class="panel-head"><div><div class="eyebrow">FULL BUILD AUDIT</div><h3>Почему билд слабый и что улучшить</h3></div><span class="data-badge" id="build-audit-state">ОЖИДАНИЕ АНАЛИЗА</span></div><div id="build-audit-results" class="build-audit-results empty">Выбери билд и нажми «Полный разбор билда». Для лучших результатов сначала обнови снимок персонажа в разделе «Персонажи».</div></section>
     </section>
 
     <section class="page" id="page-farming">
@@ -113,7 +114,7 @@
       <div class="kpi-grid compact-kpis"><article class="kpi"><div class="kpi-label">СЕССИЙ</div><strong id="farm-count">0</strong><small>С валидной длительностью</small></article><article class="kpi"><div class="kpi-label">МЕДИАНА FE/Ч</div><strong id="farm-median">—</strong><small>Устойчивая оценка темпа</small></article><article class="kpi"><div class="kpi-label">СТАБИЛЬНОСТЬ</div><strong id="farm-variability">—</strong><small id="farm-cv">Нужно больше сессий</small></article><article class="kpi"><div class="kpi-label">ПРИБЫЛЬНЫЕ СЕССИИ</div><strong id="farm-profitable">—</strong><small id="farm-time">0 ч</small><small id="farm-net">Чистый итог: —</small></article></div>
       <section class="panel"><div class="panel-head"><h3>Расходы текущей сессии</h3><span class="muted">Автоматический лут + указанные затраты</span></div><div class="form-grid"><label>Расходы на карты / компасы, FE<input id="farm-costs" type="number" min="0" step="0.01" value="0"></label><label>Название стратегии<input id="farm-strategy" placeholder="Например: Tartarus / компасы"></label></div><button class="btn primary" id="save-farm-costs">Сохранить с расходами</button><div id="farm-current-result" class="result-box">Подключи игру, чтобы рассчитать текущую сессию.</div></section>
       <section class="panel"><div class="panel-head"><div><div class="eyebrow">STRATEGY PERFORMANCE</div><h3>Сравнение стратегий</h3></div><small class="muted">Рейтинг — от 3 сессий по стратегии</small></div><div class="table-wrap"><table><thead><tr><th>СТРАТЕГИЯ</th><th>СЕССИЙ</th><th>МЕДИАНА FE/Ч</th><th>ДИАПАЗОН P25–P75</th><th>ПРИБЫЛЬНЫЕ</th><th>СТАБИЛЬНОСТЬ</th></tr></thead><tbody id="farm-strategy-table"></tbody></table></div><div class="hint" id="farm-analysis-note">Стабильность оценивается по разбросу твоих собственных сессий, а не по прогнозу дохода.</div></section>
-      <section class="panel"><div class="panel-head"><h3>История фарма</h3><small class="muted">Автоматические записи обновляются вместе с активной сессией</small></div><div class="table-wrap"><table><thead><tr><th>ДАТА</th><th>СТРАТЕГИЯ / ОБЛАСТЬ</th><th>ВРЕМЯ</th><th>ДОХОД</th><th>РАСХОДЫ</th><th>ЧИСТО</th><th>FE/Ч</th></tr></thead><tbody id="farm-table"></tbody></table></div></section>
+      <section class="panel"><div class="panel-head"><h3>История фарма</h3><small class="muted">Автоматические записи обновляются вместе с активной сессией</small></div><div class="table-wrap"><table><thead><tr><th>ДАТА ЗАПУСКА</th><th>СТРАТЕГИЯ / ПЕРСОНАЖ</th><th>ВРЕМЯ В ИГРЕ</th><th>КАРТЫ</th><th>ДОХОД</th><th>РАСХОДЫ</th><th>ЧИСТО</th><th>FE/Ч</th></tr></thead><tbody id="farm-table"></tbody></table></div></section>
     </section>
 
     <section class="page" id="page-tactics">
@@ -151,10 +152,23 @@
           <p class="disclaimer">Неизвестные ID, enum и диапазоны остаются исходными значениями. Интерфейсный Blueprint не считается таблицей аффиксов. Бинарные .pak/.uasset не исполняются и не извлекаются этим импортёром.</p>
         </section>
         <section class="panel tlidb-panel">
-          <div class="panel-head"><div><h3>База аффиксов TLIDB</h3><p class="hint">Загрузка открытых страниц справочника по нажатию. Кэш хранится только на этом компьютере; данные не вшиваются в установщик.</p></div><span class="data-badge" id="tlidb-badge">Не загружена</span></div>
+          <div class="panel-head"><div><h3>База аффиксов TLIDB</h3><p class="hint">Автоматическая фоновая загрузка и обновление открытых страниц справочника. Кэш хранится только на этом компьютере; данные не вшиваются в установщик.</p></div><span class="data-badge" id="tlidb-badge">Не загружена</span></div>
           <div id="tlidb-status" class="game-resource-status">Локальный кэш TLIDB ещё не создан.</div>
           <div id="tlidb-details" class="hint">Можно загрузить базовые аффиксы, коррозию и крафтовые таблицы по 38 страницам экипировки.</div>
-          <div class="inline-actions"><button class="btn primary" id="tlidb-sync">Загрузить / обновить TLIDB (38 страниц)</button></div>
+          <div class="tlidb-auto-controls">
+            <label class="checkbox-label"><input id="tlidb-auto-sync" type="checkbox" checked> Автоматически загружать при запуске и обновлять по расписанию</label>
+            <label class="tlidb-interval-label">Интервал
+              <select id="tlidb-sync-interval">
+                <option value="6">Каждые 6 часов</option>
+                <option value="12">Каждые 12 часов</option>
+                <option value="24" selected>Раз в сутки</option>
+                <option value="48">Каждые 2 дня</option>
+                <option value="168">Раз в неделю</option>
+              </select>
+            </label>
+          </div>
+          <div id="tlidb-auto-status" class="hint">Автообновление включено · раз в 24 часа.</div>
+          <div class="inline-actions"><button class="btn primary" id="tlidb-sync">Загрузить / обновить сейчас (38 страниц)</button></div>
           <div class="tlidb-search-controls">
             <label>Поиск по названию или характеристике (английский)<input id="tlidb-search" type="search" placeholder="Max Life, Fire Resistance, Movement Speed…"></label>
             <label>Тип экипировки<select id="tlidb-gear-filter"><option value="">Все типы</option><option value="Helmet">Шлемы</option><option value="Chest Armor">Нагрудники</option><option value="Gloves">Перчатки</option><option value="Boots">Ботинки</option><option value="One-handed weapon">Одноручное оружие</option><option value="Two-handed weapon">Двуручное оружие</option><option value="Shield">Щиты</option><option value="Trinket">Аксессуары</option></select></label>
@@ -167,7 +181,7 @@
         <section class="panel"><div class="panel-head"><h3>Источники и ограничения</h3></div><div class="source-list"><div><b>Game log</b><span>Локальное чтение UE_game.log в режиме Read Only. Без инъекций в игру и чтения памяти.</span></div><div><b>TLIDB — характеристики экипировки</b><span>По нажатию читаются публичные страницы tlidb.com, аффиксы кэшируются локально. В установщик и резервные копии справочник не включается; сезон/патч требует отдельной проверки.</span></div><div><b>Предметы и иконки</b><span>Локальный индекс 1933 уникальных ConfigBaseId (1935 исходных записей). Иконки подгружаются по URL TLIDB CDN и кэшируются по запросу; права на распространение сторонних изображений нужно соблюдать.</span></div><div><b>Цены</b><span>Ответы игровой биржи и агрегат сезонных цен. Это оценка, а не гарантированная цена продажи.</span></div><div><b>Build Analyzer</b><span>Проверяет заполненные характеристики, пользовательские цели и ошибки ввода. Полный DPS-симулятор с формулами SS14 не включён.</span></div></div></section>
       </div>
     </section>
-    <footer class="app-footer">TLI NEXUS 2.2.0 <span>Независимый фанатский инструмент · Не связан с XD</span></footer>
+    <footer class="app-footer">TLI NEXUS 2.4.0 <span>Независимый фанатский инструмент · Не связан с XD</span></footer>
   </main>
 </div>
 <div id="modal" class="modal hidden"><div class="modal-card"><button class="modal-close" id="modal-close">×</button><div id="modal-content"></div></div></div>

@@ -322,8 +322,8 @@ function renderBuilds(){const root=$('build-list');$('build-count').textContent=
   const options=data.builds.map(b=>`<option value="${b.id}">${esc(b.name)}</option>`).join('');$('compare-a').innerHTML=options||'<option value="">Нет билдов</option>';$('compare-b').innerHTML=options||'<option value="">Нет билдов</option>';$('analyzer-build').innerHTML=options||'<option value="">Сначала создай билд</option>';
   if(selectedBuildId&&data.builds.some(b=>b.id===selectedBuildId))$('analyzer-build').value=selectedBuildId;
 }
-async function renderAnalyzer(){renderBuilds();const build=data.builds.find(b=>b.id===$('analyzer-build').value)||data.builds[0];if(!build){$('stat-editor').innerHTML='<div class="empty">Сначала создай билд в лаборатории.</div>';return;}selectedBuildId=build.id;
-  $('stat-editor').innerHTML=statFields.map(([key,label])=>`<div class="stat-input"><b>${label}</b><div class="pair"><input type="number" step="any" data-stat="${key}" value="${build.stats?.[key]??''}" placeholder="Факт" title="Текущее значение"><input type="number" step="any" data-target="${key}" value="${build.targets?.[key]??''}" placeholder="Твоя цель" title="Целевое значение"></div><small>Факт / личная цель</small></div>`).join('');$('analysis-findings').textContent='Измени значения и нажми «Проверить персонажа».';$('analysis-completeness').textContent='Заполни лист характеристик';latestAnalysis=null;}
+async function renderAnalyzer(){renderBuilds();const build=data.builds.find(b=>b.id===$('analyzer-build').value)||data.builds[0];if(!build){$('stat-editor').innerHTML='<div class="empty">Сначала создай билд в лаборатории.</div>';if($('build-audit-results')){$('build-audit-results').className='build-audit-results empty';$('build-audit-results').textContent='Сначала создай билд в лаборатории.';$('build-audit-state').textContent='НЕТ БИЛДА';}return;}selectedBuildId=build.id;
+  $('stat-editor').innerHTML=statFields.map(([key,label])=>`<div class="stat-input"><b>${label}</b><div class="pair"><input type="number" step="any" data-stat="${key}" value="${build.stats?.[key]??''}" placeholder="Факт" title="Текущее значение"><input type="number" step="any" data-target="${key}" value="${build.targets?.[key]??''}" placeholder="Твоя цель" title="Целевое значение"></div><small>Факт / личная цель</small></div>`).join('');$('analysis-findings').textContent='Измени значения и нажми «Полный разбор билда».';$('analysis-completeness').textContent='Заполни лист характеристик';if($('build-audit-results')){$('build-audit-results').className='build-audit-results empty';$('build-audit-results').textContent='Выбери билд и запусти полный анализ.';$('build-audit-state').textContent='ОЖИДАНИЕ АНАЛИЗА';}latestAnalysis=null;}
 function importObservedStatsIntoBuild(build, intel){
   if(!build||!intel)return 0;
   build.stats=build.stats||{};build.observedStats=Array.isArray(build.observedStats)?build.observedStats:[];
@@ -365,7 +365,44 @@ function importObservedStatsToAnalyzer(){
   selectedBuildId=build.id;void saveData().then(()=>renderAnalyzer());toast(`Подставлено явных показателей из лога: ${count}. Значения сохранены с источниками.`);
 }
 function captureAnalyzer(){const build=data.builds.find(b=>b.id===$('analyzer-build').value);if(!build)return null;build.stats=build.stats||{};build.targets=build.targets||{};for(const input of document.querySelectorAll('[data-stat]'))build.stats[input.dataset.stat]=input.value===''?null:Number(input.value);for(const input of document.querySelectorAll('[data-target]'))build.targets[input.dataset.target]=input.value===''?null:Number(input.value);return build;}
-async function runAnalyzer(){const build=captureAnalyzer();if(!build)return toast('Сначала создай билд');await saveData();const report=await window.nexus.analyzeBuild(build);latestAnalysis=report;$('analysis-completeness').textContent=`Заполненность данных: ${report.completeness}% · ${report.knownStats}/${report.totalStats} характеристик`;$('analysis-findings').className='findings';$('analysis-findings').innerHTML=report.findings.map(f=>`<article class="finding ${f.severity}"><span class="severity">${f.severity==='warning'?'⚠':f.severity==='success'?'✓':'ⓘ'}</span><div><b>${esc(f.title)}</b><p>${esc(f.detail)} ${f.action?`<br><strong>Что проверить:</strong> ${esc(f.action)}`:''}</p></div></article>`).join('');}
+function renderBuildAudit(report){
+  const root=$('build-audit-results');
+  if(!root)return;
+  if(!report){root.className='build-audit-results empty';root.textContent='Нет результата полного анализа.';return;}
+  const summary=report.summary||{};
+  const character=report.character||{};
+  const value=(v)=>v===null||v===undefined||v===''?'—':esc(String(v));
+  const statusLabel=(status)=>({observed:'Найдено','not-observed':'Не найдено',unverifiable:'Нельзя сверить','no-live-data':'Нет снимка'})[status]||status;
+  const statRows=(report.stats||[]).filter(row=>row.current!==null||row.target!==null).map(row=>`<tr><td>${esc(row.label)}</td><td>${value(row.current)}</td><td>${value(row.target)}</td><td>${row.belowTarget?`<span class="negative">не хватает ${value(row.gap)}</span>`:'—'}</td><td><small>${esc(row.source||'')}</small></td></tr>`).join('');
+  const renderEntries=(group)=>{const expected=(group?.expected||[]).map(row=>`<div class="audit-line"><div><b>${esc(row.text)}</b><small>${row.id?`ID ${esc(row.id)} · `:''}${row.matched?.length?`Совпало: ${row.matched.map(x=>esc(x.name||x.id)).join(', ')}`:''}</small></div><span class="audit-status ${esc(row.status)}">${esc(statusLabel(row.status))}</span></div>`).join('');const extras=(group?.unlistedObserved||[]).map(row=>`<div class="audit-line"><div><b>${esc(row.name||('ID '+row.id))}</b><small>ID ${esc(row.id)}${row.slot?` · слот ${esc(row.slot)}`:''}${row.level!==null&&row.level!==undefined?` · уровень ${esc(row.level)}`:''}</small></div><span class="audit-status unverifiable">Есть в логе, не записано в билде</span></div>`).join('');return expected+extras||'<div class="empty">В сборке и доступном снимке нет записей.</div>';};
+  const gear=(report.equipment?.items||[]).map(item=>`<article class="audit-gear"><div class="audit-gear-head"><div><b>${esc(item.name)}</b><small>${esc(item.slot)} · ID ${value(item.itemId)} · ${item.catalogMatch?'найдено в FModel':'нет точной строки предмета'}</small></div><span>${item.affixes?.length||0} афф.</span></div>${(item.affixes||[]).map(affix=>`<div class="audit-line"><div><b>${esc(affix.name)}</b><small>${affix.id?`ID ${esc(affix.id)} · `:''}${affix.attributeName?esc(affix.attributeName):affix.attributeRaw?`AttrType ${esc(affix.attributeRaw)}`:''}${affix.tier?` · T${esc(affix.tier)}`:''}${affix.min!==null&&affix.min!==undefined?` · диапазон ${esc(String(affix.min))}–${esc(String(affix.max))}`:''}</small></div><span class="audit-status ${affix.attributeMismatch||affix.rollStatus==='outside-range'?'unverifiable':affix.rollStatus==='low-quarter'?'not-observed':'observed'}">${affix.value?esc(affix.value):'Значение —'}${affix.attributeMismatch?' · AttrType конфликт':affix.rollStatus==='outside-range'?' · вне диапазона':affix.rollPercent!==null?` · ${number(affix.rollPercent,1)}% диапазона`:''}</span></div>`).join('')||'<small class="muted">Явные аффиксы не найдены.</small>'}</article>`).join('')||'<div class="empty">Подтверждённая экипировка из лога пока не восстановлена.</div>';
+  const recommendations=(report.recommendations||[]).map((row,index)=>`<article class="audit-recommendation ${esc(row.severity)}"><div class="audit-rank">${index+1}</div><div><b>${esc(row.title)}</b><p>${esc(row.reason)}</p><small><strong>Что сделать:</strong> ${esc(row.action)}</small></div></article>`).join('')||'<div class="empty">По доступным данным явных действий не найдено. Это не подтверждает оптимальность билда.</div>';
+  const focus=(report.damageFocus?.checkedStats||[]).map(row=>`<span class="audit-chip">${esc(row.label)}: ${row.observed?'есть данные':'нет данных'}${row.target!==null?` · цель ${value(row.target)}`:''}</span>`).join('');
+  const limitations=(report.limitations||[]).map(row=>`<li>${esc(row)}</li>`).join('');
+  root.className='build-audit-results';
+  $('build-audit-state').textContent=report.status==='stale-character-data'?'СНИМОК УСТАРЕЛ':report.status==='no-live-character-data'?'НЕТ ДАННЫХ ПЕРСОНАЖА':'АУДИТ ГОТОВ';
+  root.innerHTML=`
+    <div class="audit-summary"><div><small>ПЕРСОНАЖ</small><b>${esc(character.name||'Не определён')}</b><span>${esc(character.hero||'Герой не указан')} · ${esc(character.specialization||'специализация не указана')}</span></div><div><small>ПОКРЫТИЕ ДАННЫХ</small><b>${number(summary.dataCoveragePercent||0,0)}%</b><span>Не является рейтингом силы</span></div><div><small>ПРОБЛЕМЫ</small><b>${number(summary.recommendations||0,0)}</b><span>Приоритетных действий</span></div><div><small>ЭКИПИРОВКА</small><b>${number(summary.explicitEquipmentItems||0,0)}</b><span>Явно наблюдаемых предметов</span></div></div>
+    <section class="audit-section"><h4>1. Характеристики и цели</h4><div class="table-wrap"><table><thead><tr><th>ПАРАМЕТР</th><th>СЕЙЧАС</th><th>ЦЕЛЬ</th><th>РАЗРЫВ</th><th>ИСТОЧНИК</th></tr></thead><tbody>${statRows||'<tr><td colspan="5" class="empty">Нет показателей для сравнения. Внеси значения или импортируй их из лога.</td></tr>'}</tbody></table></div></section>
+    <div class="audit-two"><section class="audit-section"><h4>2. Навыки и поддержки</h4><div class="audit-list">${renderEntries(report.skills)}</div><small class="muted">Снимок из лога: ${number(report.skills?.observedCount||0,0)} записей. ID сравниваются точно.</small></section><section class="audit-section"><h4>3. Таланты</h4><div class="audit-list">${renderEntries(report.talents)}</div><small class="muted">Снимок из лога: ${number(report.talents?.observedCount||0,0)} записей. ID сравниваются точно.</small></section></div>
+    <section class="audit-section"><h4>4. Экипировка и аффиксы</h4><div class="audit-gear-grid">${gear}</div><small class="muted">Сопоставлено с FModel: предметов ${number(summary.matchedItemDefinitions||0,0)}, аффиксов ${number(summary.matchedAffixes||0,0)}. Частичных событий PutOn/PutOff: ${number(report.equipment?.partialObservedItems||0,0)}. Полный комплект не подтверждён.</small></section>
+    <section class="audit-section"><h4>5. Фокус урона</h4><div class="audit-chips">${focus||'<span class="muted">Тип урона не указан.</span>'}</div><small class="muted">Эти параметры помогают найти недостающие данные, но Nexus не выводит выдуманный DPS и не рассчитывает мультипликаторы без подтверждённых формул.</small></section>
+    <section class="audit-section"><h4>6. План улучшений по приоритету</h4><div class="audit-recommendations">${recommendations}</div></section>
+    <section class="audit-section audit-caveats"><h4>Что пока нельзя надёжно проверить</h4><p>${esc(report.interactions?.explanation||'Связи навыков, поддержек и талантов требуют подтверждённой игровой базы эффектов.')}</p><ul>${limitations}</ul></section>
+    <p class="disclaimer">${esc(report.disclaimer||'Результат основан только на подтверждённых игровых полях и пользовательских целях.')}</p>`;
+}
+async function runAnalyzer(){
+  const build=captureAnalyzer();
+  if(!build)return toast('Сначала создай билд');
+  await saveData();
+  const report=await window.nexus.analyzeBuild(build);
+  latestAnalysis=report;
+  $('analysis-completeness').textContent=`Заполненность ручных данных: ${report.completeness}% · ${report.knownStats}/${report.totalStats} характеристик`;
+  $('analysis-findings').className='findings';
+  $('analysis-findings').innerHTML=report.findings.map(f=>`<article class="finding ${f.severity}"><span class="severity">${f.severity==='warning'?'⚠':f.severity==='success'?'✓':'ⓘ'}</span><div><b>${esc(f.title)}</b><p>${esc(f.detail)} ${f.action?`<br><strong>Что проверить:</strong> ${esc(f.action)}`:''}</p></div></article>`).join('');
+  const audit=await window.nexus.diagnoseBuild(build,build.profileId||null);
+  renderBuildAudit(audit);
+}
 async function renderFarming(){
   const allSessions=data.farmingSessions||[];
   const previousFilter=$('farm-profile-filter').value;
@@ -381,14 +418,26 @@ async function renderFarming(){
   $('farm-profitable').textContent=analytics.overall?`${number(analytics.overall.profitablePercent,0)}%`:'—';
   $('farm-time').textContent=`${number(analytics.totalSeconds/3600,1)} ч`;
   $('farm-net').textContent=`Чистый итог: ${money(analytics.totalNetFe)}`;
-  const currentRevenue=Number(live.sessionValueFe)||0,seconds=live.startedAt?Math.max(1,(Date.now()-live.startedAt)/1000):0,cost=Number($('farm-costs').value)||0;
-  $('farm-current-result').innerHTML=`Оценка лута: <b>${money(currentRevenue)}</b><br>Расходы: <b>${money(cost)}</b><br>Чистый результат: <b class="${currentRevenue-cost>=0?'positive':'negative'}">${money(currentRevenue-cost)}</b><br>Продолжительность: ${duration(seconds)} · Чистая скорость: ${seconds?number((currentRevenue-cost)/(seconds/3600),1)+' FE/ч':'—'}`;
+  const currentRevenue=Number(live.sessionValueFe)||0,sessionEnd=Number(live.gameEndedAt)||Date.now(),seconds=live.startedAt?Math.max(1,(sessionEnd-live.startedAt)/1000):0,cost=Number($('farm-costs').value)||0,lastMap=live.currentMap||live.lastMap;
+  $('farm-current-result').innerHTML=`Дроп за запуск игры: <b>${money(currentRevenue)}</b><br>Завершено карт: <b>${number(live.mapsCompleted||0,0)}</b><br>Последняя / текущая карта: <b>${esc(lastMap?.name||'ещё не обнаружена')}</b> · ${money(lastMap?.lootValueFe||0)}<br>Расходы: <b>${money(cost)}</b><br>Чистый результат: <b class="${currentRevenue-cost>=0?'positive':'negative'}">${money(currentRevenue-cost)}</b><br>Продолжительность запуска: ${duration(seconds)} · Чистая скорость: ${seconds?number((currentRevenue-cost)/(seconds/3600),1)+' FE/ч':'—'}`;
   $('farm-strategy-table').innerHTML=analytics.strategies.map(x=>`<tr><td>${esc(x.name)}</td><td>${x.sessions}</td><td><b>${number(x.medianFePerHour,1)} FE/ч</b></td><td>${number(x.p25FePerHour,1)}–${number(x.p75FePerHour,1)} FE/ч</td><td>${number(x.profitablePercent,0)}% (${x.profitableSessions}/${x.sessions})</td><td>${x.sessions<3?'<span class="warn">Мало данных</span>':esc(x.variability)}</td></tr>`).join('')||'<tr><td colspan="6" class="empty">Нужны завершённые сессии с названием стратегии.</td></tr>';
   $('farm-analysis-note').textContent=analytics.note+(analytics.topStrategy?` Лучшая подтверждённая выборка: ${analytics.topStrategy.name} — медиана ${number(analytics.topStrategy.medianFePerHour,1)} FE/ч, ${number(analytics.topStrategy.profitablePercent,0)}% прибыльных сессий (${analytics.topStrategy.sessions} забегов).`:' Пока нет стратегии с тремя завершёнными сессиями.');
-  $('farm-table').innerHTML=sessions.slice().sort((a,b)=>(b.startedAt||0)-(a.startedAt||0)).map(x=>{const net=(Number(x.lootValueFe)||0)-(Number(x.costsFe)||0),h=Number(x.durationSec)||0,rate=h>0?net/(h/3600):null;const profile=data.characterProfiles.find(p=>p.id===x.profileId);return `<tr><td>${date(x.startedAt)}</td><td>${esc(x.strategy||x.area||'Сессия')}<small>${esc(profile?.name||x.player||'Профиль не привязан')}</small></td><td>${duration(h)}</td><td>${money(x.lootValueFe)}</td><td>${money(x.costsFe)}</td><td class="${net>=0?'positive':'negative'}">${money(net)}</td><td>${rate===null?'—':`${number(rate,1)} FE/ч`}</td></tr>`;}).join('')||'<tr><td colspan="7" class="empty">История фарма пока пуста.</td></tr>';
+  $('farm-table').innerHTML=sessions.slice().sort((a,b)=>(b.startedAt||0)-(a.startedAt||0)).map(x=>{const net=(Number(x.lootValueFe)||0)-(Number(x.costsFe)||0),h=Number(x.durationSec)||0,rate=h>0?net/(h/3600):null;const profile=data.characterProfiles.find(p=>p.id===x.profileId),maps=Number(x.mapsCompleted??x.mapRuns?.length)||0;const mapButton=maps?`<button class="map-history-button" data-map-history="${esc(x.sessionKey||x.id)}">${maps} карт</button>`:'0';return `<tr><td>${date(x.startedAt)}</td><td>${esc(x.strategy||x.area||'Игровой запуск')}<small>${esc(profile?.name||x.player||'Профиль не привязан')}</small></td><td>${duration(h)}</td><td>${mapButton}</td><td>${money(x.lootValueFe)}</td><td>${money(x.costsFe)}</td><td class="${net>=0?'positive':'negative'}">${money(net)}</td><td>${rate===null?'—':`${number(rate,1)} FE/ч`}</td></tr>`;}).join('')||'<tr><td colspan="8" class="empty">История игровых запусков пока пуста.</td></tr>';
 }
+$('farm-table').addEventListener('click',e=>{
+  const button=e.target.closest('[data-map-history]');
+  if(!button)return;
+  const session=data.farmingSessions.find(row=>(row.sessionKey||row.id)===button.dataset.mapHistory);
+  const maps=(session?.mapRuns||[]).slice().reverse();
+  if(!maps.length)return toast('У этого игрового запуска пока нет сохранённых карт');
+  const content=maps.map(map=>{
+    const loot=(map.lootSummary||[]).slice(0,10).map(item=>`<div class="map-history-item"><span>${esc(item.name)} ×${number(item.count,0)}</span><b>${item.valueFe===null?'—':money(item.valueFe)}</b></div>`).join('');
+    return `<article class="map-history-card"><div class="map-history-head"><div><b>${esc(map.name||'Карта')}</b><small>${date(map.startedAt)} · ${duration((Number(map.durationSec)||0)*1000)} · ${number(map.drops||0,0)} предметов</small></div><strong>${money(map.lootValueFe||0)}</strong></div><div class="map-history-items">${loot||'<span class="hint">Подобранные предметы не записаны.</span>'}</div></article>`;
+  }).join('');
+  openModal(`<h3>Карты за игровой запуск</h3><p class="hint">${esc(session?.player||'Персонаж не определён')} · ${date(session?.startedAt)} · сохранено карт: ${maps.length}</p><div class="map-history-list">${content}</div>`);
+});
 function renderTactics(){const q=$('tactic-search').value.toLowerCase();const rows=data.tactics.filter(x=>`${x.title} ${x.category} ${x.context} ${x.body}`.toLowerCase().includes(q)).slice().reverse();$('tactic-count').textContent=data.tactics.length;$('tactic-list').className='stack-list';$('tactic-list').innerHTML=rows.map(x=>`<article class="tactic-card"><div class="tactic-head"><div><b>${esc(x.title)}</b><small>${esc(x.category)} · ${esc(x.context||'без контекста')} · ${date(x.updatedAt)}</small></div><div class="row-actions"><button data-tactic-edit="${x.id}">Изменить</button><button data-tactic-delete="${x.id}">Удалить</button></div></div><p>${esc(x.body).replace(/\n/g,'<br>')}</p></article>`).join('')||'<div class="empty">Нет подходящих заметок.</div>';}
-function renderSettings(){const s=data.settings||{};$('set-mode').value=s.overlayMode||'compact';$('set-opacity').value=s.overlayOpacity??94;$('opacity-label').textContent=`${$('set-opacity').value}%`;$('set-scale').value=s.overlayScale??100;$('scale-label').textContent=`${$('set-scale').value}%`;$('set-top').checked=s.alwaysOnTop!==false;$('set-clickthrough').checked=s.clickThrough===true;$('set-hotkeys').checked=s.hotkeysEnabled!==false;$('set-auto-create-profiles').checked=s.autoCreateDetectedProfiles!==false;$('set-notifications').checked=s.notificationsEnabled!==false;$('set-threshold').value=s.notificationThresholdFe??20;$('set-sound').checked=s.soundEnabled!==false;$('set-volume').value=s.soundVolume??45;$('volume-label').textContent=`${$('set-volume').value}%`;}
+function renderSettings(){const s=data.settings||{};$('set-mode').value=s.overlayMode||'compact';$('set-opacity').value=s.overlayOpacity??94;$('opacity-label').textContent=`${$('set-opacity').value}%`;$('set-scale').value=s.overlayScale??100;$('scale-label').textContent=`${$('set-scale').value}%`;$('set-top').checked=s.alwaysOnTop!==false;$('set-clickthrough').checked=s.clickThrough===true;$('set-hotkeys').checked=s.hotkeysEnabled!==false;$('set-auto-create-profiles').checked=s.autoCreateDetectedProfiles!==false;$('set-notifications').checked=s.notificationsEnabled!==false;$('set-threshold').value=s.notificationThresholdFe??20;$('set-sound').checked=s.soundEnabled!==false;$('set-volume').value=s.soundVolume??45;$('volume-label').textContent=`${$('set-volume').value}%`;renderTlidbAutoControls({autoSyncEnabled:s.tlidbAutoSyncEnabled!==false,syncIntervalHours:s.tlidbSyncIntervalHours??24});}
 function renderPage(){renderConnection();switch(activePage){case'overview':renderOverview();break;case'characters':renderCharacters();break;case'loot':renderLoot();break;case'items':if(!$('item-search').value&&!displayedItems.length)void searchCatalog('');else renderItemCards();break;case'economy':renderEconomy();break;case'builds':renderBuilds();break;case'analyzer':renderAnalyzer();break;case'farming':void renderFarming();break;case'tactics':renderTactics();break;case'settings':renderSettings();break;}}
 function openModal(html){$('modal-content').innerHTML=html;$('modal').classList.remove('hidden');}
 function closeModal(){$('modal').classList.add('hidden');$('modal-content').innerHTML='';}
@@ -450,27 +499,54 @@ $('game-resource-import').onclick=async()=>{
     const result=await window.nexus.importGameResources();
     if(result.canceled)return;
     await refreshGameResourceStatus();
+    const s=result.status?.summary||{};
+    if((s.affixDefinitions||0)===0&&(s.itemDefinitions||0)===0){
+      toast('Экспорт прочитан, но таблицы предметов/аффиксов не найдены. UI-ресурсы не считаются базой характеристик.');
+    }else{
+      toast('Игровая база обновлена · аффиксов: '+number(s.affixDefinitions||0,0)+' · предметов: '+number(s.itemDefinitions||0,0));
+    }
+  }catch(error){
+    toast('Ошибка импорта игровых ресурсов: '+(error.message||error));
+  }finally{
+    button.disabled=false;
+    button.textContent='Импортировать игровые ресурсы';
+  }
+};
 
+function renderTlidbAutoControls(result={}){
+  const settings=data.settings||{};
+  const enabled=typeof result.autoSyncEnabled==='boolean'?result.autoSyncEnabled:settings.tlidbAutoSyncEnabled!==false;
+  const interval=Number(result.syncIntervalHours||settings.tlidbSyncIntervalHours)||24;
+  $('tlidb-auto-sync').checked=enabled;
+  $('tlidb-sync-interval').value=String(interval);
+  $('tlidb-sync-interval').disabled=!enabled;
+  let message=enabled?`Автообновление включено · раз в ${interval} ч. При устаревшем кэше обновление начнётся после запуска приложения.`:'Автообновление выключено · база будет обновляться только вручную.';
+  if(result.lastFullSyncAt)message+=' Последняя полная синхронизация: '+date(result.lastFullSyncAt)+'.';
+  if(result.lastError)message+=' Последняя ошибка: '+String(result.lastError).slice(0,240);
+  $('tlidb-auto-status').textContent=message;
+}
 async function refreshTlidbStatus(){
   try{
     const result=await window.nexus.getTlidbCatalogStatus();
+    renderTlidbAutoControls(result);
     const badge=$('tlidb-badge');
     const status=$('tlidb-status');
     const details=$('tlidb-details');
     if(!result?.imported){
       badge.textContent='Не загружена';
       status.textContent='Локальный кэш TLIDB ещё не создан.';
-      details.textContent='Нажми «Загрузить / обновить TLIDB», чтобы получить таблицы аффиксов по страницам экипировки.';
+      details.textContent='Nexus загрузит базовые аффиксы, коррозию и крафтовые таблицы по 38 страницам экипировки при запуске или по кнопке.';
       return;
     }
     const summary=result.summary||{};
     badge.textContent=(summary.pagesFailed||0)>0?'Загружена частично':'Загружена';
     status.textContent='Источник: TLIDB · обновлено '+date(result.syncedAt)+' · версия сезона/патча не подтверждена';
-    details.textContent='Страниц: '+number(summary.pagesImported||0,0)+' / '+number(summary.pagesRequested||0,0)+' · строк аффиксов: '+number(summary.affixRows||0,0)+' · ошибок: '+number(summary.pagesFailed||0,0);
+    details.textContent='Страниц обновлено: '+number(summary.pagesImported||0,0)+' / '+number(summary.pagesRequested||0,0)+' · строк аффиксов: '+number(summary.affixRows||0,0)+' · ошибок: '+number(summary.pagesFailed||0,0)+' · старых страниц сохранено: '+number(summary.retainedPages||0,0);
     if(result.failedPages?.length){
       details.textContent+=' · Ошибки: '+result.failedPages.slice(0,3).map(x=>x.slug+': '+x.reason).join('; ');
     }
   }catch(error){
+    renderTlidbAutoControls({lastError:error.message||String(error)});
     $('tlidb-status').textContent='Не удалось прочитать кэш TLIDB: '+(error.message||error);
   }
 }
@@ -503,15 +579,17 @@ $('tlidb-sync').onclick=async()=>{
     const result=await window.nexus.syncTlidbCatalog();
     await refreshTlidbStatus();
     const summary=result.status?.summary||{};
-    toast('TLIDB обновлена · записей: '+number(summary.affixRows||0,0)+' · страниц: '+number(summary.pagesImported||0,0));
+    const retained=Number(summary.retainedPages)||0;
+    toast('TLIDB обновлена · записей: '+number(summary.affixRows||0,0)+' · страниц: '+number(summary.pagesImported||0,0)+(retained?' · старые данные сохранены для '+retained+' страниц':''));
     await searchTlidbCatalog();
   }catch(error){
     toast('Ошибка загрузки TLIDB: '+(error.message||error));
   }finally{
     button.disabled=false;
-    button.textContent='Загрузить / обновить TLIDB (38 страниц)';
+    button.textContent='Загрузить / обновить сейчас (38 страниц)';
   }
 };
+$('tlidb-auto-sync').onchange=()=>{$('tlidb-sync-interval').disabled=!$('tlidb-auto-sync').checked;};
 $('tlidb-search-button').onclick=()=>void searchTlidbCatalog();
 $('tlidb-search').addEventListener('keydown',e=>{if(e.key==='Enter')void searchTlidbCatalog();});
 $('tlidb-results').addEventListener('click',e=>{
@@ -523,24 +601,23 @@ $('tlidb-results').addEventListener('click',e=>{
   }
 });
 refreshTlidbStatus();
-    const s=result.status?.summary||{};
-    if((s.affixDefinitions||0)===0&&(s.itemDefinitions||0)===0){
-      toast('Экспорт прочитан, но таблицы предметов/аффиксов не найдены. UI-ресурсы не считаются базой характеристик.');
-    }else{
-      toast('Игровая база обновлена · аффиксов: '+number(s.affixDefinitions||0,0)+' · предметов: '+number(s.itemDefinitions||0,0));
-    }
-  }catch(error){
-    toast('Ошибка импорта игровых ресурсов: '+(error.message||error));
-  }finally{
-    button.disabled=false;
-    button.textContent='Импортировать игровые ресурсы';
+window.nexus.onTlidbUpdate((payload)=>{
+  void refreshTlidbStatus();
+  if(payload?.automatic&&payload?.error){
+    toast('Автообновление TLIDB не удалось: '+payload.error);
+    return;
   }
-};
+  if(payload?.automatic&&payload?.status?.imported){
+    const summary=payload.status.summary||{};
+    toast('TLIDB автоматически обновлена · '+number(summary.affixRows||0,0)+' записей · страниц: '+number(summary.pagesImported||0,0));
+    if($('tlidb-search').value.trim())void searchTlidbCatalog();
+  }
+});
 refreshGameResourceStatus();
 
 $('settings-choose-log').onclick=$('choose-log').onclick;$('settings-auto-log').onclick=$('auto-log').onclick;$('open-data-folder').onclick=async()=>{try{await window.nexus.openDataFolder();toast('Открыта папка данных Nexus');}catch(e){toast(e.message||String(e));}};
 $('set-opacity').oninput=()=>$('opacity-label').textContent=`${$('set-opacity').value}%`;$('set-scale').oninput=()=>$('scale-label').textContent=`${$('set-scale').value}%`;$('set-volume').oninput=()=>$('volume-label').textContent=`${$('set-volume').value}%`;
-$('apply-settings').onclick=async()=>{const settings={overlayMode:$('set-mode').value,overlayOpacity:Number($('set-opacity').value),overlayScale:Number($('set-scale').value),alwaysOnTop:$('set-top').checked,clickThrough:$('set-clickthrough').checked,hotkeysEnabled:$('set-hotkeys').checked,autoCreateDetectedProfiles:$('set-auto-create-profiles').checked,notificationsEnabled:$('set-notifications').checked,notificationThresholdFe:Number($('set-threshold').value)||0,soundEnabled:$('set-sound').checked,soundVolume:Number($('set-volume').value)};data.settings={...data.settings,...settings};await window.nexus.updateSettings(settings);await saveData();toast('Настройки применены');};
+$('apply-settings').onclick=async()=>{const settings={overlayMode:$('set-mode').value,overlayOpacity:Number($('set-opacity').value),overlayScale:Number($('set-scale').value),alwaysOnTop:$('set-top').checked,clickThrough:$('set-clickthrough').checked,hotkeysEnabled:$('set-hotkeys').checked,autoCreateDetectedProfiles:$('set-auto-create-profiles').checked,notificationsEnabled:$('set-notifications').checked,notificationThresholdFe:Number($('set-threshold').value)||0,soundEnabled:$('set-sound').checked,soundVolume:Number($('set-volume').value),tlidbAutoSyncEnabled:$('tlidb-auto-sync').checked,tlidbSyncIntervalHours:Number($('tlidb-sync-interval').value)||24};data.settings={...data.settings,...settings};await window.nexus.updateSettings(settings);await saveData();await refreshTlidbStatus();toast('Настройки применены');};
 $('test-sound').onclick=()=>{try{const C=window.AudioContext||window.webkitAudioContext,ctx=new C();ctx.resume();[660,880,1175].forEach((f,i)=>{const o=ctx.createOscillator(),g=ctx.createGain();o.frequency.value=f;o.connect(g);g.connect(ctx.destination);g.gain.setValueAtTime(.0001,ctx.currentTime+i*.13);g.gain.exponentialRampToValueAtTime(.055,ctx.currentTime+i*.13+.02);g.gain.exponentialRampToValueAtTime(.0001,ctx.currentTime+i*.13+.18);o.start(ctx.currentTime+i*.13);o.stop(ctx.currentTime+i*.13+.2);});toast('Проверочный сигнал воспроизведён');}catch{toast('Браузер не разрешил воспроизвести звук');}};
 $('item-search').addEventListener('input',()=>{clearTimeout(itemQueryTimer);const q=$('item-search').value;itemQueryTimer=setTimeout(()=>searchCatalog(q),180);});
 $('item-results').addEventListener('click',async e=>{const b=e.target.closest('[data-watch-id]');if(!b)return;const id=Number(b.dataset.watchId);if(data.priceWatch.some(x=>Number(x.itemId)===id))return toast('Предмет уже отслеживается');data.priceWatch.push({itemId:id,name:b.dataset.watchName,targetFe:0,createdAt:Date.now()});await saveData();toast('Предмет добавлен в отслеживание');});
@@ -562,7 +639,7 @@ $('import-build-code').onclick=async()=>{try{const build=await window.nexus.deco
 $('compare-builds').onclick=async()=>{const a=data.builds.find(x=>x.id===$('compare-a').value),b=data.builds.find(x=>x.id===$('compare-b').value);if(!a||!b)return toast('Нужно выбрать два билда');const rows=await window.nexus.compareBuilds(a,b);$('compare-result').innerHTML=rows.map(x=>`<div class="compare-line ${x.changed?'changed':''}"><span>${esc(x.label)}</span><b>${esc(String(x.left??'—'))} → ${esc(String(x.right??'—'))} <i class="${x.delta===null?'':x.delta>=0?'positive':'negative'}">${x.delta===null?'':`(${x.delta>0?'+':''}${x.delta})`}</i></b></div>`).join('')+'<p class="hint">Сравнение показывает изменения введённых характеристик, слотов экипировки, навыков, талантов и указанной стоимости. Оно не предсказывает реальный DPS.</p>';};
 $('analyzer-build').onchange=()=>{selectedBuildId=$('analyzer-build').value;void renderAnalyzer();};$('import-observed-stats').onclick=importObservedStatsToAnalyzer;$('run-analysis').onclick=runAnalyzer;$('save-analyzer-stats').onclick=async()=>{if(!captureAnalyzer())return toast('Нет выбранного билда');await saveData();toast('Характеристики сохранены');};
 $('save-current-farm').onclick=()=>{go('farming');saveCurrentFarm(0,'Текущая сессия');};$('farm-profile-filter').onchange=()=>void renderFarming();$('save-farm-page').onclick=()=>saveCurrentFarm(Number($('farm-costs').value)||0,$('farm-strategy').value||'Текущая сессия');$('save-farm-costs').onclick=()=>saveCurrentFarm(Number($('farm-costs').value)||0,$('farm-strategy').value||'Текущая сессия');
-async function saveCurrentFarm(costs,strategy){if(!live.startedAt)return toast('Активная игровая сессия ещё не обнаружена');const key=`${live.player||'unknown'}:${live.startedAt}`;let row=data.farmingSessions.find(x=>x.sessionKey===key);if(!row){row={id:key,sessionKey:key,source:'manual-snapshot',startedAt:live.startedAt,player:live.player||'',profileId:profileForLive()?.id||activeProfile()?.id||null,area:live.area||'',strategy};data.farmingSessions.push(row);}row.profileId=profileForLive()?.id||row.profileId||activeProfile()?.id||null;row.costsFe=costs;row.strategy=strategy||row.strategy;row.lootValueFe=Number(live.sessionValueFe)||0;row.feGained=Number(live.feGained)||0;row.itemCount=Number(live.drops)||0;row.pickupEvents=Number(live.pickupEvents)||0;row.durationSec=Math.max(1,Math.floor((Date.now()-live.startedAt)/1000));await saveData();renderFarming();toast('Сессия сохранена в историю');}
+async function saveCurrentFarm(costs,strategy){if(!live.startedAt)return toast('Активная игровая сессия ещё не обнаружена');const key=`game-run:${Number(live.startedAt)}`;let row=data.farmingSessions.find(x=>x.sessionKey===key);if(!row){row={id:key,sessionKey:key,source:'manual-snapshot',startedAt:live.startedAt,player:live.player||'',profileId:profileForLive()?.id||activeProfile()?.id||null,area:live.area||'',strategy,mapRuns:live.mapRuns||[],mapsCompleted:live.mapsCompleted||0,lastMap:live.lastMap||null};data.farmingSessions.push(row);}row.profileId=profileForLive()?.id||row.profileId||activeProfile()?.id||null;row.mapRuns=live.mapRuns||row.mapRuns||[];row.mapsCompleted=Number(live.mapsCompleted)||row.mapsCompleted||0;row.lastMap=live.lastMap||row.lastMap||null;row.costsFe=costs;row.strategy=strategy||row.strategy;row.lootValueFe=Number(live.sessionValueFe)||0;row.feGained=Number(live.feGained)||0;row.itemCount=Number(live.drops)||0;row.pickupEvents=Number(live.pickupEvents)||0;row.durationSec=Math.max(1,Math.floor(((Number(live.gameEndedAt)||Date.now())-live.startedAt)/1000));await saveData();renderFarming();toast('Сессия сохранена в историю');}
 $('tactic-form').onsubmit=async e=>{e.preventDefault();const now=Date.now();const row={id:selectedTacticId||makeUid('tactic'),category:$('tactic-category').value,title:$('tactic-title').value.trim(),context:$('tactic-context').value.trim(),body:$('tactic-body').value.trim(),createdAt:data.tactics.find(x=>x.id===selectedTacticId)?.createdAt||now,updatedAt:now};if(!row.title||!row.body)return toast('Заполни название и описание');const index=data.tactics.findIndex(x=>x.id===row.id);if(index>=0)data.tactics[index]=row;else data.tactics.push(row);selectedTacticId=null;await saveData();$('tactic-title').value='';$('tactic-context').value='';$('tactic-body').value='';$('tactic-submit').textContent='Сохранить заметку';$('tactic-cancel-edit').hidden=true;renderTactics();toast('Заметка сохранена');};
 $('tactic-search').oninput=renderTactics;$('tactic-cancel-edit').onclick=()=>{selectedTacticId=null;$('tactic-form').reset();$('tactic-submit').textContent='Сохранить заметку';$('tactic-cancel-edit').hidden=true;};$('tactic-list').addEventListener('click',async e=>{const del=e.target.closest('[data-tactic-delete]'),edit=e.target.closest('[data-tactic-edit]');if(del){data.tactics=data.tactics.filter(x=>x.id!==del.dataset.tacticDelete);if(selectedTacticId===del.dataset.tacticDelete)$('tactic-cancel-edit').click();await saveData();renderTactics();return;}if(edit){const row=data.tactics.find(x=>x.id===edit.dataset.tacticEdit);if(!row)return;selectedTacticId=row.id;$('tactic-category').value=row.category;$('tactic-title').value=row.title;$('tactic-context').value=row.context;$('tactic-body').value=row.body;$('tactic-submit').textContent='Сохранить изменения';$('tactic-cancel-edit').hidden=false;toast('Редактирование заметки');}});
 

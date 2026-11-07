@@ -11,7 +11,7 @@ const BAG_MODIFY_RE = /BagMgr@:(?:Modfy|Modify)\s+BagItem\s+PageId\s*=\s*(\d+)\s
 const BAG_INIT_RE = /BagMgr@:InitBagData\s+PageId\s*=\s*(\d+)\s+SlotId\s*=\s*(\d+)\s+ConfigBaseId\s*=\s*(\d+)\s+Num\s*=\s*(\d+)/i;
 const BAG_REMOVE_RE = /BagMgr@:RemoveBagItem\s+PageId\s*=\s*(\d+)\s+SlotId\s*=\s*(\d+)/i;
 const ENTER_LEVEL_RE = /LevelMgr:_EnterLevelSuccess\(\)\s*(\d+)/i;
-const LEVEL_PATH_RE = /LevelMgr@:LevelPath,\s*Model\s*=\s*Content\/Art\/Maps\/[^/]+\/([^/]+)\//i;
+const LEVEL_PATH_RE = /LevelMgr@:LevelPath,\s*Model\s*=\s*Content\/Art\/Maps\/([^/]+)\/([^/]+)\//i;
 const LEVEL_IDS_RE = /LevelMgr@\s+LevelUid,\s*LevelType,\s*LevelId\s*=\s*(\d+)\s+(\d+)\s+(\d+)/i;
 const PLAYER_LOGIN_RE = /PlayerIdTrace@SelectRoleNetMgr:_UserLoginStep3\s+buildLoginParm\s+playerId=(\d+)/i;
 
@@ -45,8 +45,11 @@ export class GameLogParser {
   constructor(seed = null) {
     this.slots = new Map(seed?.slots || []);
     this.currentProto = seed?.currentProto ?? null;
+    this.pendingMapZone = seed?.pendingMapZone ?? null;
     this.pendingAsset = seed?.pendingAsset ?? null;
+    this.pendingLevelUid = seed?.pendingLevelUid ?? null;
     this.pendingLevelType = seed?.pendingLevelType ?? null;
+    this.pendingLevelId = seed?.pendingLevelId ?? null;
     this.currentArea = seed?.currentArea ?? null;
     this.seasonId = seed?.seasonId ?? null;
     this.equipmentTracker = new EquipmentTracker(seed?.equipment ?? null);
@@ -145,24 +148,34 @@ export class GameLogParser {
     }
 
     if ((m = LEVEL_PATH_RE.exec(body))) {
-      this.pendingAsset = m[1];
+      this.pendingMapZone = m[1];
+      this.pendingAsset = m[2];
       this.stats.areaEvents++;
-      return this.#remember({ type: 'levelPath', asset: m[1], ...base });
+      return this.#remember({ type: 'levelPath', mapZone: m[1], asset: m[2], ...base });
     }
     if ((m = LEVEL_IDS_RE.exec(body))) {
+      this.pendingLevelUid = +m[1];
       this.pendingLevelType = +m[2];
+      this.pendingLevelId = +m[3];
       this.stats.areaEvents++;
-      return this.#remember({ type: 'levelIds', levelUid: +m[1], levelType: +m[2], levelId: +m[3], ...base });
+      return this.#remember({ type: 'levelIds', levelUid: this.pendingLevelUid, levelType: this.pendingLevelType, levelId: this.pendingLevelId, ...base });
     }
     if ((m = ENTER_LEVEL_RE.exec(body))) {
       const areaId = +m[1];
       const area = gameMapName(this.pendingAsset, areaId);
-      this.currentArea = { areaId, asset: this.pendingAsset, levelType: this.pendingLevelType, name: area };
+      this.currentArea = {
+        areaId, levelUid: this.pendingLevelUid, levelType: this.pendingLevelType,
+        levelId: this.pendingLevelId, mapZone: this.pendingMapZone, asset: this.pendingAsset,
+        name: area, enteredAt: Number(base.ts) || null,
+      };
+      const event = { type: 'areaEnter', ...this.currentArea, area, ...base };
+      this.pendingMapZone = null;
       this.pendingAsset = null;
+      this.pendingLevelUid = null;
       this.pendingLevelType = null;
+      this.pendingLevelId = null;
       this.stats.areaEvents++;
-      return this.#remember({ type: 'areaEnter', areaId, asset: this.currentArea.asset,
-        levelType: this.currentArea.levelType, area, ...base });
+      return this.#remember(event);
     }
     if ((m = PLAYER_LOGIN_RE.exec(body))) {
       return this.#remember({ type: 'playerLogin', playerId: m[1], ...base });
@@ -186,8 +199,9 @@ export class GameLogParser {
 
   exportState() {
     return { slots: [...this.slots.entries()].map(([key, slot]) => [key, { ...slot }]),
-      currentProto: this.currentProto, pendingAsset: this.pendingAsset,
-      pendingLevelType: this.pendingLevelType, currentArea: this.currentArea ? { ...this.currentArea } : null, seasonId: this.seasonId,
+      currentProto: this.currentProto, pendingMapZone: this.pendingMapZone, pendingAsset: this.pendingAsset,
+      pendingLevelUid: this.pendingLevelUid, pendingLevelType: this.pendingLevelType, pendingLevelId: this.pendingLevelId,
+      currentArea: this.currentArea ? { ...this.currentArea } : null, seasonId: this.seasonId,
       equipment: this.equipmentTracker.exportState() };
   }
 

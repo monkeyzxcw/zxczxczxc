@@ -8,6 +8,7 @@ import { extractEvents } from './lootEvents.js';
 import { MessageAssembler } from './ueLog.js';
 import { findLogCandidates } from './logLocator.js';
 import { GameLogParser, FE_ID } from './gameLogEvents.js';
+import { GameMapTracker } from './gameMapTracker.js';
 import { CharacterIntel } from './characterIntel.js';
 import { getItemName, getItemInfo, getItemCatalogSize } from './itemCatalog.js';
 import { CommunityPriceFeed, ExchangePriceTracker, PriceBook, summarizeLoot } from './priceBook.js';
@@ -41,22 +42,28 @@ async function findGameProcess() {
   if (process.platform === 'win32') {
     try {
       const names = GAME_NAMES.map((name) => `'${name}'`).join(',');
-      const script = `$names=@(${names}); $p=Get-CimInstance Win32_Process | Where-Object { $names -icontains $_.Name }; $p | Select-Object -First 1 -ExpandProperty ExecutablePath`;
+      const script = `$names=@(${names}); $p=Get-CimInstance Win32_Process | Where-Object { $names -icontains $_.Name } | Select-Object -First 1; if($p){ [pscustomobject]@{ exe=$p.ExecutablePath; pid=$p.ProcessId; createdAt=$p.CreationDate.ToUniversalTime().ToString('o') } | ConvertTo-Json -Compress }`;
       const { stdout } = await execFileAsync('powershell.exe', ['-NoProfile','-NonInteractive','-Command',script], { windowsHide: true, timeout: 3500 });
-      const exe = stdout.trim().split(/\r?\n/).filter(Boolean)[0];
-      if (exe) return { running: true, exe };
+      const row = JSON.parse(stdout.trim());
+      if (Number(row?.pid) > 0) return {
+        running: true, exe: row.exe || null, pid: Number(row.pid),
+        processStartedAt: Date.parse(row.createdAt) || null,
+      };
     } catch {}
     try {
       const { stdout } = await execFileAsync('tasklist.exe', ['/FO','CSV','/NH'], { windowsHide: true, timeout: 2500 });
       const line = stdout.split(/\r?\n/).find((s) => GAME_NAMES.some((n) => s.toLowerCase().includes(n.toLowerCase())));
-      if (line) return { running: true, exe: null };
+      const match = /^"([^"]+)","(\d+)"/.exec(line || '');
+      if (match) return { running: true, exe: null, pid: Number(match[2]), processStartedAt: null };
     } catch {}
-    return { running: false, exe: null };
+    return { running: false, exe: null, pid: null, processStartedAt: null };
   }
   try {
     const { stdout } = await execFileAsync('pgrep', ['-af', 'torchlight_infinite|UE_game|TorchlightInfinite'], { timeout: 1500 });
-    return { running: !!stdout.trim(), exe: null };
-  } catch { return { running: false, exe: null }; }
+    const line = stdout.split(/\r?\n/).find(Boolean);
+    const pid = Number(/^\s*(\d+)/.exec(line || '')?.[1]) || null;
+    return { running: !!pid, exe: null, pid, processStartedAt: null };
+  } catch { return { running: false, exe: null, pid: null, processStartedAt: null }; }
 }
 
 function logDirsFromExe(exe) {
@@ -186,9 +193,10 @@ function countCategory(line) {
 }
 
 export class LiveService {
-  constructor({ onUpdate = () => {}, pollMs = 2000, manualLogFile = null, userDataDir = null } = {}) {
+  constructor({ onUpdate = () => {}, pollMs = 2000, manualLogFile = null, userDataDir = null, resumeSession = null, onResumeExpired = () => {}, findGameProcessImpl = findGameProcess } = {}) {
     this.onUpdate = onUpdate; this.pollMs = pollMs; this.timer = null; this.tailer = null; this.ingestor = null;
-    this.game = false; this.gameExe = null; this.logFile = null; this.logSource = 'auto'; this.manualLogFile = manualLogFile;
+    this.game = false; this.gameExe = null; this.gameProcessId = null; this.gameProcessStartedAt = null;
+    this.logFile = null; this.logSource = 'auto'; this.manualLogFile = manualLogFile;
     this.items = []; this.totalDrops = 0; this.pickupEvents = 0; this.unrecognized = 0;
     this.startedAt = null; this.lastEventAt = null; this.player = null; this.playerSource = null; this.area = null; this.areaInfo = null;
     this.areaPhase = null; this.areaSignal = null; this.pendingArea = null;
@@ -196,12 +204,17 @@ export class LiveService {
     this.candidates = []; this.tailerState = null; this.rawLines = []; this.categoryCounts = {};
     this.socketStartLines = 0; this.socketEndLines = 0; this.historyMessages = 0; this.historyBytes = 0;
     this.historyByAction = {}; this.lastHistoryMessage = null;
-    this.gameLogParser = new GameLogParser(); this.characterIntel = new CharacterIntel(); this.gameLogHistory = null; this.gameLogLiveEvents = 0; this.feGained = 0; this.indexing = false; this.socketPickMessages = 0; this.lastSocketPick = null;
+    this.gameLogParser = new GameLogParser(); this.characterIntel = new CharacterIntel(); this.gameMapTracker = new GameMapTracker();
+    this.gameLogHistory = null; this.gameLogLiveEvents = 0; this.feGained = 0; this.indexing = false; this.socketPickMessages = 0; this.lastSocketPick = null;
+    this.gameEndedAt = null; this.gameMissingScans = 0;
     this.seasonId = null; this.lootTotals = new Map(); this.lastCharacterScan = null;
     this.priceBook = new PriceBook({ ownCachePath: userDataDir ? path.join(userDataDir, 'exchange-prices.json') : null });
     this.priceHistory = new PriceHistoryStore({ filePath: userDataDir ? path.join(userDataDir, 'price-history.json') : null });
     this.priceWatchRules = []; this.priceAlertState = new Map(); this.priceAlertLastAt = new Map();
     this.exchangePriceTracker = new ExchangePriceTracker();
+    this.resumeSessionCandidate = resumeSession && typeof resumeSession === 'object' ? { ...resumeSession } : null;
+    this.resumeMissingScans = 0; this.onResumeExpired = onResumeExpired;
+    this.findGameProcessImpl = findGameProcessImpl;
     this.notificationPreferences = { enabled: true, soundEnabled: true, thresholdFe: 20 };
     this.notificationSeq = 0; this.lastNotification = null;
     this.communityPriceFeed = new CommunityPriceFeed({ cachePath: userDataDir ? path.join(userDataDir, 'community-prices.json') : null, onUpdate: (status) => {
@@ -215,12 +228,23 @@ export class LiveService {
   snapshot() {
     const tailer = this.tailer?.snapshot() || this.tailerState;
     const loot = summarizeLoot(this.lootTotals, this.priceBook, getItemName);
+    const mapState = this.gameMapTracker.snapshot();
+    const summarizeMap = (map) => {
+      if (!map) return null;
+      const mapLoot = new Map((map.loot || []).map((row) => [Number(row.itemId), Number(row.count)]));
+      const summary = summarizeLoot(mapLoot, this.priceBook, getItemName);
+      return { ...map, lootSummary: summary.rows, lootValueFe: summary.totalValueFe,
+        pricedTypes: summary.pricedTypes, unpricedTypes: summary.unpricedTypes };
+    };
+    const currentMap = summarizeMap(mapState.current);
+    const lastMap = summarizeMap(mapState.last);
     const communityPricing = this.communityPriceFeed.snapshot();
     const gameLog = this.gameLogParser.snapshot();
     const priceStatus = { ...communityPricing, ...this.priceBook.status(), ownObservations: this.exchangePriceTracker.observations,
       unmatchedExchangeResponses: this.exchangePriceTracker.unmatched, lastExchangePrice: this.exchangePriceTracker.lastObservation };
     return {
-      gameRunning: this.game, gameExe: this.gameExe, connected: !!this.tailer, logFile: this.logFile,
+      gameRunning: this.game, gameExe: this.gameExe, gameProcessId: this.gameProcessId,
+      gameProcessStartedAt: this.gameProcessStartedAt, connected: !!this.tailer, logFile: this.logFile,
       logReadiness: deriveLogReadiness({ connected: !!this.tailer, startedAt: this.startedAt, liveMessages: this.messageCount, socketStarts: this.socketStartLines, liveGameEvents: this.gameLogLiveEvents }),
       logSource: this.logSource, manualLogFile: this.manualLogFile, player: this.player, playerSource: this.playerSource, area: this.area,
       areaInfo: this.areaInfo, areaPhase: this.areaPhase, areaSignal: this.areaSignal, pendingArea: this.pendingArea,
@@ -232,7 +256,9 @@ export class LiveService {
       lastNotification: this.lastNotification, notificationPreferences: { ...this.notificationPreferences },
       priceWatchStatus: this.getPriceWatchStatus(),
       messageCount: this.messageCount, byAction: this.byAction, lastMessage: this.lastMessage,
-      startedAt: this.startedAt, lastEventAt: this.lastEventAt, recent: this.items.slice(0, 12), error: this.lastError,
+      startedAt: this.startedAt, gameEndedAt: this.gameEndedAt, lastEventAt: this.lastEventAt,
+      currentMap, lastMap, mapRuns: mapState.history.map(summarizeMap), mapsCompleted: mapState.completedCount,
+      recent: this.items.slice(0, 12), error: this.lastError,
       candidates: this.candidates.slice(0, 12), tailer, rawLines: this.rawLines.slice(0, 10),
       categoryCounts: this.categoryCounts, socketStartLines: this.socketStartLines,
       socketEndLines: this.socketEndLines, historyMessages: this.historyMessages, historyBytes: this.historyBytes,
@@ -333,12 +359,52 @@ export class LiveService {
   async scan() {
     if (this.busy) return; this.busy = true;
     try {
-      const proc = await findGameProcess();
+      const proc = await this.findGameProcessImpl();
       this.gameExe = proc.exe || this.gameExe;
-      if (proc.running !== this.game) {
-        this.game = proc.running;
-        if (this.game) this.resetSession();
-        else if (!this.manualLogFile) { this.detach(); this.lastError = null; this.emit(); return; }
+      if (proc.running) {
+        this.gameMissingScans = 0;
+        this.resumeMissingScans = 0;
+        const processChanged = this.game && (
+          (this.gameProcessId && proc.pid && Number(this.gameProcessId) !== Number(proc.pid)) ||
+          (this.gameProcessStartedAt && proc.processStartedAt &&
+            Number(this.gameProcessStartedAt) !== Number(proc.processStartedAt))
+        );
+        if (!this.game || processChanged) {
+          if (processChanged && !this.manualLogFile) {
+            // Same UE_game.log path may be reused by a fast game restart.
+            this.detach(); this.logFile = null;
+          }
+          const resumed = !this.game && !processChanged &&
+            this.restorePersistedSession(this.resumeSessionCandidate, proc);
+          this.game = true;
+          this.gameProcessId = proc.pid || this.gameProcessId || null;
+          this.gameProcessStartedAt = Number(proc.processStartedAt) || this.gameProcessStartedAt || null;
+          if (!resumed) this.resetSession();
+          this.resumeSessionCandidate = null;
+          // A manually selected UE log may have been attached before the game
+          // process started. Reseed its inventory slots after creating/resuming the run.
+          if (this.manualLogFile && fs.existsSync(this.manualLogFile)) {
+            await this.attach(this.manualLogFile, 'manual');
+          }
+        } else {
+          if (!this.gameProcessId && proc.pid) this.gameProcessId = proc.pid;
+          if (!this.gameProcessStartedAt && proc.processStartedAt) this.gameProcessStartedAt = proc.processStartedAt;
+        }
+      } else if (this.game) {
+        // A brief process-list failure must not close the game-wide session.
+        this.gameMissingScans += 1;
+        if (this.gameMissingScans >= 3) {
+          this.game = false;
+          this.gameEndedAt = Date.now();
+          this.gameMapTracker.finishCurrentMap(this.gameEndedAt, 'game-stopped');
+          this.gameProcessId = null; this.gameProcessStartedAt = null;
+          if (!this.manualLogFile) { this.detach(); this.lastError = null; this.emit(); return; }
+        }
+      } else if (this.resumeSessionCandidate) {
+        // The game may have been closed while Nexus was not running. Expire
+        // the persisted open row only after several independent process scans.
+        this.resumeMissingScans += 1;
+        if (this.resumeMissingScans >= 3) this.expireResumeSessionCandidate();
       }
       if (this.manualLogFile) {
         if (!fs.existsSync(this.manualLogFile)) {
@@ -361,13 +427,64 @@ export class LiveService {
     finally { this.busy = false; }
   }
 
-  resetSession() {
-    this.startedAt = Date.now(); this.totalDrops = 0; this.pickupEvents = 0; this.unrecognized = 0; this.items = []; this.lootTotals = new Map();
-    this.player = null; this.playerSource = null; this.area = null; this.areaInfo = null; this.areaPhase = null; this.areaSignal = null; this.pendingArea = null;
-    this.messageCount = 0; this.byAction = {}; this.lastMessage = null; this.lastEventAt = null;
+  expireResumeSessionCandidate() {
+    if (!this.resumeSessionCandidate) return false;
+    const expired = this.resumeSessionCandidate;
+    this.resumeSessionCandidate = null;
+    this.onResumeExpired(expired);
+    return true;
+  }
+
+  restorePersistedSession(row, processInfo = {}) {
+    if (!row || Number(row.startedAt) <= 0 || Number(row.gameProcessId) <= 0 ||
+        Number(processInfo.pid) !== Number(row.gameProcessId)) return false;
+
+    const savedProcessStart = Number(row.gameProcessStartedAt) || null;
+    const currentProcessStart = Number(processInfo.processStartedAt) || null;
+    if (savedProcessStart && currentProcessStart && savedProcessStart !== currentProcessStart) return false;
+
+    this.startedAt = Number(row.startedAt);
+    this.gameEndedAt = null;
+    this.game = true;
+    this.gameProcessId = Number(processInfo.pid);
+    this.gameProcessStartedAt = currentProcessStart || savedProcessStart;
+    this.gameMissingScans = 0;
+    this.player = row.player || null;
+    this.playerSource = row.player ? 'history' : null;
+    this.area = row.area || null;
+    this.totalDrops = Number(row.itemCount) || 0;
+    this.pickupEvents = Number(row.pickupEvents) || 0;
+    this.feGained = Number(row.feGained) || 0;
+    this.lootTotals = new Map((Array.isArray(row.lootTotals) ? row.lootTotals : [])
+      .filter((item) => Number.isSafeInteger(Number(item.itemId)) && Number(item.count) > 0)
+      .map((item) => [Number(item.itemId), Number(item.count)]));
+    this.gameMapTracker.restore({
+      current: row.currentMap || null,
+      last: row.lastMap || null,
+      history: Array.isArray(row.mapRuns) ? row.mapRuns : [],
+      completedCount: Number(row.mapsCompleted) || 0,
+    });
+    this.resumeSessionCandidate = null;
+    return true;
+  }
+
+  resetLogContext() {
+    this.messageCount = 0; this.byAction = {}; this.lastMessage = null;
     this.rawLines = []; this.categoryCounts = {}; this.socketStartLines = 0; this.socketEndLines = 0;
-    this.gameLogParser = new GameLogParser(); this.characterIntel = new CharacterIntel(); this.lastCharacterScan = null; this.gameLogLiveEvents = 0; this.feGained = 0; this.socketPickMessages = 0; this.lastSocketPick = null;
+    this.gameLogParser = new GameLogParser(); this.gameLogLiveEvents = 0;
+    this.gameLogHistory = null; this.lastCharacterScan = null;
+    this.socketPickMessages = 0; this.lastSocketPick = null;
     this.exchangePriceTracker.resetPending();
+  }
+
+  resetSession() {
+    // A new game process starts a new run. Log reconnects and file rotation
+    // use resetLogContext() only and must not reset these run-wide counters.
+    this.startedAt = Date.now(); this.gameEndedAt = null; this.gameMissingScans = 0;
+    this.totalDrops = 0; this.pickupEvents = 0; this.unrecognized = 0; this.items = []; this.lootTotals = new Map();
+    this.player = null; this.playerSource = null; this.area = null; this.areaInfo = null; this.areaPhase = null; this.areaSignal = null; this.pendingArea = null;
+    this.feGained = 0; this.characterIntel = new CharacterIntel(); this.gameMapTracker.reset();
+    this.resetLogContext();
   }
 
   restoreContext(events) {
@@ -395,11 +512,11 @@ export class LiveService {
 
   async attach(file, source = 'auto') {
     this.detach();
-    this.resetSession();
+    this.resetLogContext();
     this.tailerState = null; this.historyMessages = 0; this.historyBytes = 0;
     this.historyByAction = {}; this.lastHistoryMessage = null;
     this.logFile = file; this.logSource = source; this.lastError = null; this.indexing = true;
-    this.startedAt = Date.now();
+    if (!this.startedAt) this.startedAt = Date.now();
     this.emit();
 
     let seed, gameSeed;
@@ -416,7 +533,7 @@ export class LiveService {
       this.rawLines = seed.rawLines || [];
       this.categoryCounts = seed.categoryCounts || {};
       this.restoreContext(seed.events);
-      this.characterIntel = new CharacterIntel(seed.characterIntel || null);
+      if (seed.characterIntel) this.characterIntel.merge(new CharacterIntel(seed.characterIntel));
       this.gameLogParser = new GameLogParser(gameSeed.state);
       if (gameSeed.state.seasonId) this.setSeason(gameSeed.state.seasonId);
       this.gameLogHistory = {
@@ -429,9 +546,22 @@ export class LiveService {
       };
       if (gameSeed.state.currentArea?.name) {
         this.area = gameSeed.state.currentArea.name;
-        this.areaInfo = { areaId: gameSeed.state.currentArea.areaId, asset: gameSeed.state.currentArea.asset,
+        this.areaInfo = { areaId: gameSeed.state.currentArea.areaId, levelUid: gameSeed.state.currentArea.levelUid,
+          mapZone: gameSeed.state.currentArea.mapZone, asset: gameSeed.state.currentArea.asset,
           levelType: gameSeed.state.currentArea.levelType, source: 'LevelMgr' };
         this.areaPhase = 'entered'; this.pendingArea = null;
+        const areaEnteredAt = Number(gameSeed.state.currentArea.enteredAt) || null;
+        // When Nexus starts after the game, the last LevelMgr entry in an
+        // existing log can belong to the previous client run. Do not attach
+        // that old map to the freshly-started game-wide session.
+        const areaBelongsToThisRun = !this.game || !this.startedAt || !areaEnteredAt ||
+          areaEnteredAt >= this.startedAt - 120_000;
+        if (gameSeed.state.currentArea.asset && areaBelongsToThisRun) {
+          this.gameMapTracker.enterArea(
+            { ...gameSeed.state.currentArea, area: gameSeed.state.currentArea.name },
+            areaEnteredAt || Date.now(),
+          );
+        }
       }
     } catch (error) {
       this.lastError = `Не удалось восстановить состояние UE GameLog: ${error.message || error}`;
@@ -457,7 +587,7 @@ export class LiveService {
       },
       onReset: () => {
         this.ingestor?.finish();
-        this.resetSession();
+        this.resetLogContext();
         this.ingestor = new Ingestor(null, callbacks);
         this.emit();
       },
@@ -466,7 +596,6 @@ export class LiveService {
     });
     this.tailer.start();
     this.indexing = false;
-    this.startedAt = Date.now();
     this.emit();
   }
 
@@ -512,8 +641,10 @@ export class LiveService {
 
     if (event.type === 'areaEnter') {
       this.area = event.area || (event.areaId ? `Зона ${event.areaId}` : null);
-      this.areaInfo = { areaId: event.areaId, asset: event.asset, levelType: event.levelType, source: 'LevelMgr' };
+      this.areaInfo = { areaId: event.areaId, levelUid: event.levelUid, mapZone: event.mapZone,
+        asset: event.asset, levelType: event.levelType, source: 'LevelMgr' };
       this.areaPhase = 'entered'; this.pendingArea = null;
+      this.gameMapTracker.enterArea(event, Number(event.ts) || Date.now());
     }
 
     if (event.type === 'bagDelta' && event.delta) {
@@ -524,6 +655,7 @@ export class LiveService {
         this.totalDrops += delta.qty;
         this.pickupEvents++;
         this.lootTotals.set(delta.configBaseId, (this.lootTotals.get(delta.configBaseId) || 0) + delta.qty);
+        this.gameMapTracker.addLoot(delta);
         if (delta.configBaseId === FE_ID) this.feGained += delta.qty;
         this.items.unshift({
           id: delta.configBaseId,
@@ -620,5 +752,11 @@ export class LiveService {
     this.tailer = null; this.ingestor?.finish(); this.ingestor = null;
     if (!this.manualLogFile) this.logFile = null;
   }
-  stop() { clearInterval(this.timer); this.timer = null; this.detach(); this.communityPriceFeed.stop(); }
+  stop() {
+    clearInterval(this.timer); this.timer = null;
+    // Closing Nexus is not the same as closing Torchlight. Persist the open
+    // game run and active map so a later Nexus launch can resume the same PID.
+    if (this.game && !this.gameEndedAt) this.emit();
+    this.detach(); this.communityPriceFeed.stop();
+  }
 }

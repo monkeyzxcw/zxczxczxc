@@ -5,6 +5,7 @@ import { fileURLToPath } from 'node:url';
 import { LiveService } from './core/liveService.js';
 import { getItemImageUrl, searchItems } from './core/itemCatalog.js';
 import { analyzeBuild, compareBuilds, encodeBuild, decodeBuild, BUILD_STAT_FIELDS } from './core/buildAnalysis.js';
+import { diagnoseBuild, characterSnapshotToIntel } from './core/buildAdvisor.js';
 import { DEFAULT_APP_DATA, mergeAppData, mergeRendererUpdate } from './core/persistence.js';
 import { analyzeFarmingSessions } from './core/farmAnalytics.js';
 import { getGlobalHotkeyDefinitions } from './core/hotkeys.js';
@@ -13,7 +14,7 @@ import { buildAnonymizedDiagnostic, buildCharacterReport } from './core/characte
 import { compareCharacterSnapshots } from './core/snapshotHistory.js';
 import { analyzeEquipment, compareEquipment } from './core/equipmentIntelligence.js';
 import { scanGameResourceFolder, resourceCatalogStatus } from './core/gameResourceCatalog.js';
-import { fetchTlidbCatalog, searchTlidbAffixes, tlidbCatalogStatus } from './core/tlidbCatalog.js';
+import { fetchTlidbCatalog, mergeTlidbCatalog, searchTlidbAffixes, tlidbCatalogStatus } from './core/tlidbCatalog.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const DEFAULTS = DEFAULT_APP_DATA;
@@ -75,6 +76,97 @@ function writeTlidbCatalog(index) {
   tlidbCatalogCache = index;
   tlidbCatalogMtime = fs.statSync(tlidbCatalogFile()).mtimeMs;
 }
+const TLIDB_AUTO_SYNC_STARTUP_DELAY_MS = 5000;
+const TLIDB_AUTO_SYNC_RETRY_MS = 60 * 60 * 1000;
+let tlidbAutoSyncTimer = null;
+let tlidbSyncInFlight = null;
+let tlidbLastSyncError = null;
+
+function tlidbAutoSyncEnabled() {
+  return appData?.settings?.tlidbAutoSyncEnabled !== false;
+}
+function tlidbSyncIntervalHours() {
+  const allowed = [6, 12, 24, 48, 168];
+  const requested = Number(appData?.settings?.tlidbSyncIntervalHours);
+  return allowed.includes(requested) ? requested : 24;
+}
+function tlidbSyncIntervalMs() {
+  return tlidbSyncIntervalHours() * 60 * 60 * 1000;
+}
+function tlidbStatusSnapshot() {
+  return {
+    ...tlidbCatalogStatus(readTlidbCatalog()),
+    autoSyncEnabled: tlidbAutoSyncEnabled(),
+    syncIntervalHours: tlidbSyncIntervalHours(),
+    lastError: tlidbLastSyncError,
+  };
+}
+function notifyTlidbUpdate(automatic, error = null) {
+  const payload = { status: tlidbStatusSnapshot(), automatic: automatic === true, error: error || null };
+  if (dashboard && !dashboard.isDestroyed()) dashboard.webContents.send('tlidb:updated', payload);
+  return payload;
+}
+function scheduleTlidbAutoSync(delayMs) {
+  if (tlidbAutoSyncTimer) clearTimeout(tlidbAutoSyncTimer);
+  tlidbAutoSyncTimer = null;
+  if (!tlidbAutoSyncEnabled() || !appData) return;
+
+  tlidbAutoSyncTimer = setTimeout(async () => {
+    tlidbAutoSyncTimer = null;
+    try {
+      const result = await runTlidbSync({ automatic: true });
+      const partial = Number(result.status?.summary?.pagesFailed) > 0;
+      scheduleTlidbAutoSync(partial ? TLIDB_AUTO_SYNC_RETRY_MS : tlidbSyncIntervalMs());
+    } catch (error) {
+      console.warn('[TLI Nexus] Автоматическая синхронизация TLIDB не удалась:', error?.message || error);
+      scheduleTlidbAutoSync(TLIDB_AUTO_SYNC_RETRY_MS);
+    }
+  }, Math.max(1000, Number(delayMs) || TLIDB_AUTO_SYNC_STARTUP_DELAY_MS));
+  tlidbAutoSyncTimer.unref?.();
+}
+function configureTlidbAutoSync() {
+  if (tlidbAutoSyncTimer) clearTimeout(tlidbAutoSyncTimer);
+  tlidbAutoSyncTimer = null;
+  if (!tlidbAutoSyncEnabled() || !appData) return;
+
+  const cached = readTlidbCatalog();
+  const syncedAt = Number(cached?.syncedAt) || 0;
+  const retrySoon = Number(cached?.summary?.pagesFailed) > 0;
+  const nextInterval = retrySoon ? TLIDB_AUTO_SYNC_RETRY_MS : tlidbSyncIntervalMs();
+  const remaining = syncedAt ? nextInterval - (Date.now() - syncedAt) : 0;
+  scheduleTlidbAutoSync(remaining > 0 ? remaining : TLIDB_AUTO_SYNC_STARTUP_DELAY_MS);
+}
+async function runTlidbSync({ automatic = false } = {}) {
+  if (tlidbSyncInFlight) return tlidbSyncInFlight;
+
+  const task = (async () => {
+    try {
+      const downloaded = await fetchTlidbCatalog();
+      if (!(Number(downloaded.summary?.pagesImported) > 0) || !downloaded.records?.length) {
+        const reason = downloaded.failedPages?.[0]?.reason || 'Не удалось прочитать таблицы аффиксов TLIDB.';
+        throw new Error('База TLIDB не обновлена: ' + reason);
+      }
+      const merged = mergeTlidbCatalog(readTlidbCatalog(), downloaded);
+      if (!merged.records.length) throw new Error('TLIDB не вернула ни одной записи. Старый кэш сохранён.');
+      writeTlidbCatalog(merged);
+      tlidbLastSyncError = null;
+      notifyTlidbUpdate(automatic);
+      return { status: tlidbStatusSnapshot() };
+    } catch (error) {
+      tlidbLastSyncError = String(error?.message || error).slice(0, 500);
+      notifyTlidbUpdate(automatic, tlidbLastSyncError);
+      throw error;
+    }
+  })();
+
+  tlidbSyncInFlight = task;
+  try {
+    return await task;
+  } finally {
+    if (tlidbSyncInFlight === task) tlidbSyncInFlight = null;
+  }
+}
+
 function mergeData(value) { return mergeAppData(value); }
 function loadData() {
   try { appData = mergeData(JSON.parse(fs.readFileSync(dataFile(), 'utf8'))); }
@@ -200,7 +292,9 @@ function persistLiveMetadata(state) {
 
 function persistAutoSession(state) {
   if (!appData || !state?.startedAt) return;
-  const key = `${state.player || 'unknown'}:${state.startedAt}`;
+  // A run is keyed only by the confirmed game-process start time.
+  // Player identity can arrive late or change on relog, but must not split one game session.
+  const key = `game-run:${Number(state.startedAt)}`;
   if (previousSessionKey && previousSessionKey !== key) {
     const existing = appData.farmingSessions.find((x) => x.source === 'live' && x.sessionKey === previousSessionKey);
     if (existing) existing.endedAt = Date.now();
@@ -217,13 +311,23 @@ function persistAutoSession(state) {
   row.player = state.player || row.player;
   row.profileId = profile?.id || row.profileId || null;
   row.area = state.area || row.area;
-  row.durationSec = Math.max(0, Math.floor((Date.now() - state.startedAt) / 1000));
+  const sessionEndAt = state.gameEndedAt || Date.now();
+  row.durationSec = Math.max(0, Math.floor((sessionEndAt - state.startedAt) / 1000));
   row.lootValueFe = Number(state.sessionValueFe) || 0;
   row.feGained = Number(state.feGained) || 0;
   row.itemCount = Number(state.drops) || 0;
   row.pickupEvents = Number(state.pickupEvents) || 0;
+  row.lootTotals = (state.lootSummary || []).map((item) => ({
+    itemId: Number(item.id), count: Number(item.count) || 0,
+  })).filter((item) => Number.isSafeInteger(item.itemId) && item.itemId > 0 && item.count > 0);
+  row.gameProcessId = Number(state.gameProcessId) || null;
+  row.gameProcessStartedAt = Number(state.gameProcessStartedAt) || null;
+  row.mapsCompleted = Number(state.mapsCompleted) || 0;
+  row.mapRuns = Array.isArray(state.mapRuns) ? state.mapRuns.slice(-100) : (row.mapRuns || []);
+  row.currentMap = state.currentMap || null;
+  row.lastMap = state.lastMap || row.lastMap || null;
   row.updatedAt = Date.now();
-  if (!state.gameRunning && row.endedAt === null) row.endedAt = Date.now();
+  if (!state.gameRunning && row.endedAt === null) row.endedAt = state.gameEndedAt || Date.now();
   // Persist periodic snapshots, and always persist the transition to stopped.
   const now = Date.now();
   if (!state.gameRunning || now - lastSessionPersistAt >= 4000) {
@@ -369,11 +473,45 @@ app.whenReady().then(() => {
     contents.on('will-navigate', (event) => { event.preventDefault(); });
   });
   loadData();
-  live = new LiveService({ onUpdate: publish, manualLogFile: loadData().settings.manualLogFile || null, userDataDir: app.getPath('userData') });
+  const resumableRun = appData.farmingSessions
+    .filter((row) => row.source === 'live' && !row.endedAt && Number(row.gameProcessId) > 0)
+    .sort((a, b) => Number(b.startedAt) - Number(a.startedAt))[0] || null;
+  previousSessionKey = resumableRun?.sessionKey || null;
+  live = new LiveService({
+    onUpdate: publish,
+    manualLogFile: appData.settings.manualLogFile || null,
+    userDataDir: app.getPath('userData'),
+    resumeSession: resumableRun,
+    onResumeExpired: (row) => {
+      const saved = appData.farmingSessions.find((item) =>
+        item.source === 'live' && item.sessionKey === row.sessionKey);
+      if (!saved || saved.endedAt) return;
+
+      const endedAt = Date.now();
+      const map = saved.currentMap;
+      if (map) {
+        const finishedMap = {
+          ...map,
+          endedAt,
+          durationSec: Math.max(0, Math.floor((endedAt - Number(map.startedAt || endedAt)) / 1000)),
+          completionReason: 'game-stopped',
+        };
+        saved.lastMap = finishedMap;
+        saved.mapRuns = [...(saved.mapRuns || []), finishedMap].slice(-100);
+        saved.mapsCompleted = Math.max(0, Number(saved.mapsCompleted) || 0) + 1;
+        saved.currentMap = null;
+      }
+      saved.endedAt = endedAt;
+      saved.durationSec = Math.max(0, Math.floor((endedAt - Number(saved.startedAt || endedAt)) / 1000));
+      saved.updatedAt = endedAt;
+      persistDataSilently();
+    },
+  });
   live.setNotificationPreferences({ enabled: appData.settings.notificationsEnabled, soundEnabled: appData.settings.soundEnabled, thresholdFe: appData.settings.notificationThresholdFe });
   live.setPriceWatch(appData.priceWatch);
   createOverlay();
   live.start();
+  configureTlidbAutoSync();
   const trayImage = nativeImage.createFromPath(path.join(__dirname, 'assets', 'nexus-icon.png'));
   tray = new Tray(trayImage); tray.setToolTip('TLI Nexus — игровой компаньон');
   refreshTrayMenu();
@@ -442,6 +580,7 @@ app.whenReady().then(() => {
     writeData(appData);
     live?.setNotificationPreferences({ enabled: appData.settings.notificationsEnabled, soundEnabled: appData.settings.soundEnabled, thresholdFe: appData.settings.notificationThresholdFe });
     registerGlobalHotkeys();
+    configureTlidbAutoSync();
     return appData.settings;
   });
   ipcMain.handle('app:export', async () => {
@@ -462,7 +601,7 @@ app.whenReady().then(() => {
       throw new Error('История цен в резервной копии имеет неверный формат');
     }
     delete parsed._priceHistorySnapshot;
-    const imported = mergeData(parsed); writeData(imported);
+    const imported = mergeData(parsed); writeData(imported); configureTlidbAutoSync();
     let importedPricePoints = 0;
     if (priceHistorySnapshot) importedPricePoints = live?.importPriceHistory?.(priceHistorySnapshot, { merge: true }) || 0;
     return { canceled: false, data: appData, importedPricePoints };
@@ -486,15 +625,14 @@ app.whenReady().then(() => {
     gameResourceIndexMtime = fs.statSync(gameResourceIndexFile()).mtimeMs;
     return { canceled: false, status: resourceCatalogStatus(index), limitations: index.limitations };
   });
-  ipcMain.handle('tlidb:status', () => tlidbCatalogStatus(readTlidbCatalog()));
+  ipcMain.handle('tlidb:status', () => tlidbStatusSnapshot());
   ipcMain.handle('tlidb:sync', async () => {
-    const index = await fetchTlidbCatalog();
-    if (!index.records.length) {
-      const reason = index.failedPages?.[0]?.reason || 'Не удалось прочитать таблицы аффиксов TLIDB.';
-      throw new Error('База TLIDB не обновлена: ' + reason);
+    const result = await runTlidbSync({ automatic: false });
+    if (tlidbAutoSyncEnabled()) {
+      const partial = Number(result.status?.summary?.pagesFailed) > 0;
+      scheduleTlidbAutoSync(partial ? TLIDB_AUTO_SYNC_RETRY_MS : tlidbSyncIntervalMs());
     }
-    writeTlidbCatalog(index);
-    return { status: tlidbCatalogStatus(index) };
+    return result;
   });
   ipcMain.handle('tlidb:search', (_event, query, options = {}) => searchTlidbAffixes(
     readTlidbCatalog(),
@@ -509,6 +647,31 @@ app.whenReady().then(() => {
   ipcMain.handle('equipment:analyze', (_event, items, priorities) => analyzeEquipment(Array.isArray(items) ? items.slice(0, 100) : [], priorities, readGameResourceIndex()));
   ipcMain.handle('equipment:compare', (_event, left, right, priorities) => compareEquipment(left, right, priorities, readGameResourceIndex()));
   ipcMain.handle('build:analyze', (_event, build) => analyzeBuild(build));
+  ipcMain.handle('build:diagnose', (_event, build, profileId) => {
+    const selectedProfileId = profileId || build?.profileId || null;
+    const profile = appData.characterProfiles.find((row) => row.id === selectedProfileId) || null;
+    const state = live?.snapshot() || {};
+    const identity = state.characterIntel?.identity || {};
+    const matchesLive = Boolean(profile && identity.playerId &&
+      String(profile.playerId || profile.detectedPlayerId || '') === String(identity.playerId) &&
+      Number(profile.lastSeasonId || profile.seasonId || 0) === Number(identity.seasonId || 0));
+    const wantedPlayerId = profile?.playerId || profile?.detectedPlayerId || null;
+    const wantedSeasonId = Number(profile?.lastSeasonId || profile?.seasonId || 0);
+    const savedSnapshot = profile ? (Array.isArray(profile.characterHistory) ? profile.characterHistory : [])
+      .slice().reverse().find((row) =>
+        (!wantedPlayerId || String(row.playerId || '') === String(wantedPlayerId)) &&
+        (!wantedSeasonId || Number(row.seasonId || 0) === wantedSeasonId)) || null : null;
+    const intel = matchesLive ? state.characterIntel
+      : profile ? characterSnapshotToIntel(savedSnapshot, profile)
+        : state.characterIntel || null;
+    const observedEquipment = matchesLive ? state.equipment
+      : savedSnapshot ? { items: savedSnapshot.partialEquipment || [] }
+        : profile?.equipmentSnapshot || null;
+    return diagnoseBuild({
+      build, profile, intel, equipment: observedEquipment,
+      resourceIndex: readGameResourceIndex(), tlidbCatalog: readTlidbCatalog(), now: Date.now(),
+    });
+  });
   ipcMain.handle('farm:analyze', (_event, sessions, options = {}) => analyzeFarmingSessions(Array.isArray(sessions) ? sessions.slice(-1000) : [], { profileId: options.profileId || null, strategy: options.strategy || null, since: Number(options.since) || null }));
   ipcMain.handle('build:compare', (_event, left, right) => compareBuilds(left, right));
   ipcMain.handle('build:encode', (_event, build) => encodeBuild(build));
@@ -533,5 +696,5 @@ app.whenReady().then(() => {
   overlay?.webContents.once('did-finish-load', () => overlay?.webContents.send('app:settings', appData.settings));
   registerGlobalHotkeys();
 });
-app.on('before-quit', () => { live?.stop(); globalShortcut.unregisterAll(); });
+app.on('before-quit', () => { if (tlidbAutoSyncTimer) clearTimeout(tlidbAutoSyncTimer); live?.stop(); globalShortcut.unregisterAll(); });
 app.on('window-all-closed', (e) => e.preventDefault());

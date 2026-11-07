@@ -8,7 +8,7 @@
 <body>
   <main class="shell" id="shell">
     <header class="drag-region">
-      <div class="brand"><span class="orb"></span><div><b>TLI <i>NEXUS</i></b><small>GAME COMPANION · 2.2.0</small></div></div>
+      <div class="brand"><span class="orb"></span><div><b>TLI <i>NEXUS</i></b><small>GAME COMPANION · 2.4.0</small></div></div>
       <div class="head-actions">
         <button id="dashboard" title="Открыть главное окно">▦</button>
         <button id="mode" title="Расширить / свернуть">⌄</button>
@@ -22,22 +22,35 @@
     </header>
     <section class="status"><span id="dot" class="dot"></span><span id="status">Ожидание игры</span><small id="clock">SCANNING</small></section>
     <section class="compact-metrics">
-      <div class="metric"><small>СЕССИЯ</small><strong id="duration">00:00</strong><span id="area-compact">Ожидание карты</span></div>
-      <div class="metric highlight"><small>ОЦЕНКА ЛУТА</small><strong id="session-value">— FE</strong><span id="hour-value">— FE/ч</span></div>
-      <div class="metric"><small>ПОДБОРЫ</small><strong id="pickup-events">0</strong><span><b id="fe-total">0</b> FE</span></div>
+      <div class="metric"><small>ЗАПУСК ИГРЫ</small><strong id="duration">00:00</strong><span id="area-compact">Ожидание карты</span></div>
+      <div class="metric highlight"><small>ЗА ЭТОТ ЗАПУСК</small><strong id="session-value">— FE</strong><span id="hour-value">— FE/ч</span></div>
+      <div class="metric map-metric"><small id="last-map-label">ПОСЛЕДНЯЯ КАРТА</small><strong id="last-map-value">— FE</strong><span id="last-map-caption">Карта ещё не обнаружена</span></div>
     </section>
     <section class="expanded-only identity">
       <div><small>ПЕРСОНАЖ</small><strong id="player">Не определён</strong><span id="player-origin"></span></div>
       <div class="area"><small>ОБЛАСТЬ</small><strong id="area">—</strong></div>
     </section>
     <section class="expanded-only extra-stats">
-      <div><small>ПРЕДМЕТОВ</small><b id="drops">0</b></div>
-      <div><small>ЦЕНА ОБЪЯВЛЕНА</small><b id="price-coverage">—</b></div>
+      <div><small>ПРЕДМЕТОВ ЗА ЗАПУСК</small><b id="drops">0</b></div>
+      <div><small>ПОДБОРОВ</small><b id="pickup-events">0</b></div>
+      <div><small>КАРТ ЗАВЕРШЕНО</small><b id="maps-completed">0</b></div>
       <div><small>СЕЗОН</small><b id="season">—</b></div>
     </section>
+    <section class="expanded-only map-summary">
+      <div class="map-summary-head"><div><small id="map-run-label">ПОСЛЕДНЯЯ КАРТА</small><strong id="map-run-name">Карта ещё не обнаружена</strong></div><strong id="map-run-value">— FE</strong></div>
+      <div class="map-summary-stats">
+        <div><small>ПРЕДМЕТОВ</small><b id="map-run-drops">0</b></div>
+        <div><small>ПОДБОРОВ</small><b id="map-run-pickups">0</b></div>
+        <div><small>ВРЕМЯ НА КАРТЕ</small><b id="map-run-duration">00:00</b></div>
+      </div>
+    </section>
     <section class="expanded-only loot">
-      <div class="section-title"><b>Последние находки</b><span id="logstate">LOG OFFLINE</span></div>
+      <div class="section-title"><b>Дроп за весь запуск игры</b><span id="logstate">LOG OFFLINE</span></div>
       <div id="items" class="empty">Запусти игру — Nexus подключится автоматически.</div>
+    </section>
+    <section class="expanded-only loot map-loot">
+      <div class="section-title"><b id="map-loot-title">Дроп за последнюю карту</b><span id="map-loot-status">—</span></div>
+      <div id="map-items" class="empty">Пока нет данных по карте.</div>
     </section>
     <section id="toast" class="drop-toast" aria-live="polite">
       <div class="toast-glow"></div><div class="toast-icon" id="toast-icon">✦</div>
