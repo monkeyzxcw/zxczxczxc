@@ -137,15 +137,19 @@ test('identical values duplicated across separate affixes remain ambiguous', () 
 });
 
 test('imported game DataTables resolve raw affix IDs to verified names and ranges', () => {
-  const gear = item(41001, 'Шлем с явным аффиксом', [
-    {
-      id: '7001',
-      name: null,
-      tierRaw: null,
-      attributeRaw: null,
-      values: [{ key: 'LifeFlat', value: '135' }],
-    },
-  ], 'Head');
+  const gear = {
+    ...item(41001, 'Шлем с явным аффиксом', [
+      {
+        id: '7001',
+        name: null,
+        tierRaw: null,
+        attributeRaw: null,
+        values: [{ key: 'LifeFlat', value: '135' }],
+      },
+    ], 'Head'),
+    rarityRaw: '3',
+    qualityRaw: '12',
+  };
   const resourceIndex = {
     itemDefinitions: [{
       id: '41001',
@@ -208,10 +212,7 @@ test('attribute enum can be resolved even when the affix roll row is missing', (
     id: '7999',
     attributeRaw: '12',
     values: [{ key: 'RollValue', value: '135' }],
-  }], 'Head'),
-    rarityRaw: '3',
-    qualityRaw: '12',
-  };
+  }], 'Head');
   const resourceIndex = {
     itemDefinitions: [],
     affixDefinitions: [],
