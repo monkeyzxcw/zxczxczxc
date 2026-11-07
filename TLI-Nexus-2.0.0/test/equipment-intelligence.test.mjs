@@ -159,6 +159,7 @@ test('imported game DataTables resolve raw affix IDs to verified names and range
       { key: 'Item.Helm.Name', text: 'Шлем из таблицы' },
       { key: 'Affix.Life.Name', text: 'Дополнительное здоровье' },
     ],
+    attributeDefinitions: [{ enumId: '12', enumName: 'Maximum Life', sourcePath: 'Content/Data/DT_AffixAttrType.json' }],
     affixDefinitions: [{
       id: '7001',
       name: null,
@@ -182,6 +183,7 @@ test('imported game DataTables resolve raw affix IDs to verified names and range
   assert.equal(analysis.items[0].affixes[0].catalogMatch.nameSource, 'localization-table');
   assert.equal(analysis.items[0].affixes[0].catalogMatch.minRaw, '100');
   assert.equal(analysis.items[0].affixes[0].catalogMatch.maxRaw, '150');
+  assert.equal(analysis.items[0].affixes[0].catalogMatch.attributeName, 'Maximum Life');
 
   const comparison = compareEquipment(
     gear,
