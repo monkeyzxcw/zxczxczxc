@@ -399,6 +399,59 @@ $('character-history-list').addEventListener('click',async e=>{const button=e.ta
 $('modal-close').onclick=closeModal;$('modal').onclick=e=>{if(e.target.id==='modal')closeModal();};
 $('emergency-clickthrough-off').onclick=async()=>{try{const updated=await window.nexus.setClickThrough(false);data.settings={...data.settings,...updated};renderConnection();if(activePage==='settings')renderSettings();toast('Сквозной клик выключен. HUD снова принимает мышь.');}catch(error){toast(`Не удалось выключить сквозной клик: ${error.message||error}`);}};$('show-hud').onclick=()=>window.nexus.showOverlay();$('choose-log').onclick=async()=>{try{const r=await window.nexus.chooseLog();if(!r.canceled)toast('Подключён выбранный лог');}catch(e){toast(e.message||String(e));}};$('auto-log').onclick=async()=>{await window.nexus.useAutoLog();toast('Автоматический поиск включён');};
 $('backup-export').onclick=async()=>{const r=await window.nexus.exportBackup();if(!r.canceled)toast('Резервная копия сохранена');};$('settings-export').onclick=$('backup-export').onclick;$('settings-import').onclick=async()=>{try{const r=await window.nexus.importBackup();if(!r.canceled){data=r.data;renderPage();toast(`Резервная копия импортирована · точек истории цен: ${number(r.importedPricePoints||0,0)}`);}}catch(e){toast(`Ошибка импорта: ${e.message||e}`);}};
+async function refreshGameResourceStatus(){
+  try{
+    const result=await window.nexus.getGameResourceStatus();
+    const badge=$('game-resource-badge');
+    const status=$('game-resource-status');
+    const details=$('game-resource-details');
+    if(!result?.imported){
+      badge.textContent='Не импортировано';
+      status.textContent='Локальная база игровых ресурсов ещё не создана.';
+      return;
+    }
+    const s=result.summary||{};
+    badge.textContent='Импортировано';
+    status.textContent='Источник: '+(result.rootLabel||'папка экспорта')+' · версия UE: '+(result.projectVersion||'не определена');
+    details.innerHTML=[
+      'JSON-файлов проверено: '+number(s.jsonFilesScanned||0,0),
+      'DataTable: '+number(s.dataTables||0,0),
+      'Строк таблиц: '+number(s.dataTableRows||0,0),
+      'Аффиксов: '+number(s.affixDefinitions||0,0),
+      'Предметов: '+number(s.itemDefinitions||0,0),
+      'Ресурсных подсказок: '+number(s.usefulAssets||0,0),
+      'Скриптовых подсказок: '+number(s.scriptHints||0,0)
+    ].join(' · ');
+    if(result.knownGameTypes?.length){
+      details.innerHTML+=' <br>Типы из CoreRedirects: '+result.knownGameTypes.map(esc).join(', ');
+    }
+  }catch(error){
+    $('game-resource-status').textContent='Не удалось прочитать статус базы: '+(error.message||error);
+  }
+}
+$('game-resource-import').onclick=async()=>{
+  const button=$('game-resource-import');
+  button.disabled=true;
+  button.textContent='Сканирование…';
+  try{
+    const result=await window.nexus.importGameResources();
+    if(result.canceled)return;
+    await refreshGameResourceStatus();
+    const s=result.status?.summary||{};
+    if((s.affixDefinitions||0)===0&&(s.itemDefinitions||0)===0){
+      toast('Экспорт прочитан, но таблицы предметов/аффиксов не найдены. UI-ресурсы не считаются базой характеристик.');
+    }else{
+      toast('Игровая база обновлена · аффиксов: '+number(s.affixDefinitions||0,0)+' · предметов: '+number(s.itemDefinitions||0,0));
+    }
+  }catch(error){
+    toast('Ошибка импорта игровых ресурсов: '+(error.message||error));
+  }finally{
+    button.disabled=false;
+    button.textContent='Импортировать игровые ресурсы';
+  }
+};
+refreshGameResourceStatus();
+
 $('settings-choose-log').onclick=$('choose-log').onclick;$('settings-auto-log').onclick=$('auto-log').onclick;$('open-data-folder').onclick=async()=>{try{await window.nexus.openDataFolder();toast('Открыта папка данных Nexus');}catch(e){toast(e.message||String(e));}};
 $('set-opacity').oninput=()=>$('opacity-label').textContent=`${$('set-opacity').value}%`;$('set-scale').oninput=()=>$('scale-label').textContent=`${$('set-scale').value}%`;$('set-volume').oninput=()=>$('volume-label').textContent=`${$('set-volume').value}%`;
 $('apply-settings').onclick=async()=>{const settings={overlayMode:$('set-mode').value,overlayOpacity:Number($('set-opacity').value),overlayScale:Number($('set-scale').value),alwaysOnTop:$('set-top').checked,clickThrough:$('set-clickthrough').checked,hotkeysEnabled:$('set-hotkeys').checked,autoCreateDetectedProfiles:$('set-auto-create-profiles').checked,notificationsEnabled:$('set-notifications').checked,notificationThresholdFe:Number($('set-threshold').value)||0,soundEnabled:$('set-sound').checked,soundVolume:Number($('set-volume').value)};data.settings={...data.settings,...settings};await window.nexus.updateSettings(settings);await saveData();toast('Настройки применены');};
