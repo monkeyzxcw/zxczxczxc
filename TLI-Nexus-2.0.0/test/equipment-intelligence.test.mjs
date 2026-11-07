@@ -40,7 +40,7 @@ test('priority rules require explicit user key, direction and bounded weight', (
 test('analysis reports user-priority coverage and does not invent absent stats', () => {
   const gear = [
     item(1001, 'Шлем A', [
-      affix(77, { LifeFlat: 120, UnknownRawField: 4, AffixId: 77 }),
+      affix(77, { LifeFlat: 120, UnknownRawField: 4, AffixId: 77, AttrType: 12, Tier: 2 }),
     ], 'Head'),
   ];
   const result = analyzeEquipment(
@@ -54,7 +54,7 @@ test('analysis reports user-priority coverage and does not invent absent stats',
   assert.equal(result.currentFullGearConfirmed, false);
   assert.equal(result.rules[0].status, 'observed');
   assert.equal(result.rules[0].examples[0].value, '120');
-  assert.ok(!result.items[0].values.some((field) => field.rawKey === 'AffixId'));
+  assert.ok(!result.items[0].values.some((field) => ['AffixId', 'AttrType', 'Tier'].includes(field.rawKey)));
   assert.equal(result.weakSpots[0].rawKey, 'MoveSpeedRaw');
   assert.match(result.weakSpots[0].explanation, /не доказывает/);
   assert.equal('dps' in result, false);
