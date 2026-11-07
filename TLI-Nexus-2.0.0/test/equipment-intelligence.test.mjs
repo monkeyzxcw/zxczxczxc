@@ -149,14 +149,20 @@ test('imported game DataTables resolve raw affix IDs to verified names and range
   const resourceIndex = {
     itemDefinitions: [{
       id: '41001',
-      name: 'Helm Base',
+      name: null,
+      nameKeyRaw: 'Item.Helm.Name',
       slotRaw: 'Head',
       itemTypeRaw: 'Helmet',
       sourcePath: 'Content/Data/DT_EquipmentBase.json',
     }],
+    localizationEntries: [
+      { key: 'Item.Helm.Name', text: 'Шлем из таблицы' },
+      { key: 'Affix.Life.Name', text: 'Дополнительное здоровье' },
+    ],
     affixDefinitions: [{
       id: '7001',
-      name: 'Added maximum life',
+      name: null,
+      nameKeyRaw: 'Affix.Life.Name',
       attributeRaw: '12',
       tierRaw: '2',
       minRaw: '100',
@@ -168,9 +174,12 @@ test('imported game DataTables resolve raw affix IDs to verified names and range
   const analysis = analyzeEquipment([gear], 'LifeFlat | Жизнь | 5 | higher', resourceIndex);
   assert.equal(analysis.resourceCatalog.imported, true);
   assert.equal(analysis.resourceCatalog.affixDefinitions, 1);
+  assert.equal(analysis.resourceCatalog.localizationEntries, 2);
   assert.equal(analysis.resourceCatalog.matchedAffixes, 1);
-  assert.equal(analysis.items[0].catalogItem.name, 'Helm Base');
-  assert.equal(analysis.items[0].affixes[0].catalogMatch.name, 'Added maximum life');
+  assert.equal(analysis.items[0].catalogItem.name, 'Шлем из таблицы');
+  assert.equal(analysis.items[0].catalogItem.nameSource, 'localization-table');
+  assert.equal(analysis.items[0].affixes[0].catalogMatch.name, 'Дополнительное здоровье');
+  assert.equal(analysis.items[0].affixes[0].catalogMatch.nameSource, 'localization-table');
   assert.equal(analysis.items[0].affixes[0].catalogMatch.minRaw, '100');
   assert.equal(analysis.items[0].affixes[0].catalogMatch.maxRaw, '150');
 
@@ -180,7 +189,7 @@ test('imported game DataTables resolve raw affix IDs to verified names and range
     'LifeFlat | Жизнь | 5 | higher',
     resourceIndex,
   );
-  assert.equal(comparison.catalogAffixes.left[0].name, 'Added maximum life');
+  assert.equal(comparison.catalogAffixes.left[0].name, 'Дополнительное здоровье');
   assert.equal(comparison.catalogAffixes.right[0].matched, false);
 });
 
