@@ -8,6 +8,7 @@ import { extractEvents } from './lootEvents.js';
 import { MessageAssembler } from './ueLog.js';
 import { findLogCandidates } from './logLocator.js';
 import { GameLogParser, FE_ID } from './gameLogEvents.js';
+import { GameMapTracker } from './gameMapTracker.js';
 import { CharacterIntel } from './characterIntel.js';
 import { getItemName, getItemInfo, getItemCatalogSize } from './itemCatalog.js';
 import { CommunityPriceFeed, ExchangePriceTracker, PriceBook, summarizeLoot } from './priceBook.js';
@@ -196,7 +197,9 @@ export class LiveService {
     this.candidates = []; this.tailerState = null; this.rawLines = []; this.categoryCounts = {};
     this.socketStartLines = 0; this.socketEndLines = 0; this.historyMessages = 0; this.historyBytes = 0;
     this.historyByAction = {}; this.lastHistoryMessage = null;
-    this.gameLogParser = new GameLogParser(); this.characterIntel = new CharacterIntel(); this.gameLogHistory = null; this.gameLogLiveEvents = 0; this.feGained = 0; this.indexing = false; this.socketPickMessages = 0; this.lastSocketPick = null;
+    this.gameLogParser = new GameLogParser(); this.characterIntel = new CharacterIntel(); this.gameMapTracker = new GameMapTracker();
+    this.gameLogHistory = null; this.gameLogLiveEvents = 0; this.feGained = 0; this.indexing = false; this.socketPickMessages = 0; this.lastSocketPick = null;
+    this.gameEndedAt = null; this.gameMissingScans = 0;
     this.seasonId = null; this.lootTotals = new Map(); this.lastCharacterScan = null;
     this.priceBook = new PriceBook({ ownCachePath: userDataDir ? path.join(userDataDir, 'exchange-prices.json') : null });
     this.priceHistory = new PriceHistoryStore({ filePath: userDataDir ? path.join(userDataDir, 'price-history.json') : null });
@@ -215,6 +218,16 @@ export class LiveService {
   snapshot() {
     const tailer = this.tailer?.snapshot() || this.tailerState;
     const loot = summarizeLoot(this.lootTotals, this.priceBook, getItemName);
+    const mapState = this.gameMapTracker.snapshot();
+    const summarizeMap = (map) => {
+      if (!map) return null;
+      const mapLoot = new Map((map.loot || []).map((row) => [Number(row.itemId), Number(row.count)]));
+      const summary = summarizeLoot(mapLoot, this.priceBook, getItemName);
+      return { ...map, lootSummary: summary.rows, lootValueFe: summary.totalValueFe,
+        pricedTypes: summary.pricedTypes, unpricedTypes: summary.unpricedTypes };
+    };
+    const currentMap = summarizeMap(mapState.current);
+    const lastMap = summarizeMap(mapState.last);
     const communityPricing = this.communityPriceFeed.snapshot();
     const gameLog = this.gameLogParser.snapshot();
     const priceStatus = { ...communityPricing, ...this.priceBook.status(), ownObservations: this.exchangePriceTracker.observations,
@@ -232,7 +245,9 @@ export class LiveService {
       lastNotification: this.lastNotification, notificationPreferences: { ...this.notificationPreferences },
       priceWatchStatus: this.getPriceWatchStatus(),
       messageCount: this.messageCount, byAction: this.byAction, lastMessage: this.lastMessage,
-      startedAt: this.startedAt, lastEventAt: this.lastEventAt, recent: this.items.slice(0, 12), error: this.lastError,
+      startedAt: this.startedAt, gameEndedAt: this.gameEndedAt, lastEventAt: this.lastEventAt,
+      currentMap, lastMap, mapRuns: mapState.history, mapsCompleted: mapState.completedCount,
+      recent: this.items.slice(0, 12), error: this.lastError,
       candidates: this.candidates.slice(0, 12), tailer, rawLines: this.rawLines.slice(0, 10),
       categoryCounts: this.categoryCounts, socketStartLines: this.socketStartLines,
       socketEndLines: this.socketEndLines, historyMessages: this.historyMessages, historyBytes: this.historyBytes,
@@ -361,13 +376,23 @@ export class LiveService {
     finally { this.busy = false; }
   }
 
-  resetSession() {
-    this.startedAt = Date.now(); this.totalDrops = 0; this.pickupEvents = 0; this.unrecognized = 0; this.items = []; this.lootTotals = new Map();
-    this.player = null; this.playerSource = null; this.area = null; this.areaInfo = null; this.areaPhase = null; this.areaSignal = null; this.pendingArea = null;
-    this.messageCount = 0; this.byAction = {}; this.lastMessage = null; this.lastEventAt = null;
+  resetLogContext() {
+    this.messageCount = 0; this.byAction = {}; this.lastMessage = null;
     this.rawLines = []; this.categoryCounts = {}; this.socketStartLines = 0; this.socketEndLines = 0;
-    this.gameLogParser = new GameLogParser(); this.characterIntel = new CharacterIntel(); this.lastCharacterScan = null; this.gameLogLiveEvents = 0; this.feGained = 0; this.socketPickMessages = 0; this.lastSocketPick = null;
+    this.gameLogParser = new GameLogParser(); this.gameLogLiveEvents = 0;
+    this.gameLogHistory = null; this.lastCharacterScan = null;
+    this.socketPickMessages = 0; this.lastSocketPick = null;
     this.exchangePriceTracker.resetPending();
+  }
+
+  resetSession() {
+    // A new game process starts a new run. Log reconnects and file rotation
+    // use resetLogContext() only and must not reset these run-wide counters.
+    this.startedAt = Date.now(); this.gameEndedAt = null; this.gameMissingScans = 0;
+    this.totalDrops = 0; this.pickupEvents = 0; this.unrecognized = 0; this.items = []; this.lootTotals = new Map();
+    this.player = null; this.playerSource = null; this.area = null; this.areaInfo = null; this.areaPhase = null; this.areaSignal = null; this.pendingArea = null;
+    this.feGained = 0; this.characterIntel = new CharacterIntel(); this.gameMapTracker.reset();
+    this.resetLogContext();
   }
 
   restoreContext(events) {
@@ -395,11 +420,11 @@ export class LiveService {
 
   async attach(file, source = 'auto') {
     this.detach();
-    this.resetSession();
+    this.resetLogContext();
     this.tailerState = null; this.historyMessages = 0; this.historyBytes = 0;
     this.historyByAction = {}; this.lastHistoryMessage = null;
     this.logFile = file; this.logSource = source; this.lastError = null; this.indexing = true;
-    this.startedAt = Date.now();
+    if (!this.startedAt) this.startedAt = Date.now();
     this.emit();
 
     let seed, gameSeed;
@@ -416,7 +441,7 @@ export class LiveService {
       this.rawLines = seed.rawLines || [];
       this.categoryCounts = seed.categoryCounts || {};
       this.restoreContext(seed.events);
-      this.characterIntel = new CharacterIntel(seed.characterIntel || null);
+      if (seed.characterIntel) this.characterIntel.merge(new CharacterIntel(seed.characterIntel));
       this.gameLogParser = new GameLogParser(gameSeed.state);
       if (gameSeed.state.seasonId) this.setSeason(gameSeed.state.seasonId);
       this.gameLogHistory = {
@@ -429,9 +454,13 @@ export class LiveService {
       };
       if (gameSeed.state.currentArea?.name) {
         this.area = gameSeed.state.currentArea.name;
-        this.areaInfo = { areaId: gameSeed.state.currentArea.areaId, asset: gameSeed.state.currentArea.asset,
+        this.areaInfo = { areaId: gameSeed.state.currentArea.areaId, levelUid: gameSeed.state.currentArea.levelUid,
+          mapZone: gameSeed.state.currentArea.mapZone, asset: gameSeed.state.currentArea.asset,
           levelType: gameSeed.state.currentArea.levelType, source: 'LevelMgr' };
         this.areaPhase = 'entered'; this.pendingArea = null;
+        if (!this.gameMapTracker.snapshot().current && gameSeed.state.currentArea.asset) {
+          this.gameMapTracker.enterArea({ ...gameSeed.state.currentArea, area: gameSeed.state.currentArea.name }, Date.now());
+        }
       }
     } catch (error) {
       this.lastError = `Не удалось восстановить состояние UE GameLog: ${error.message || error}`;
@@ -457,7 +486,7 @@ export class LiveService {
       },
       onReset: () => {
         this.ingestor?.finish();
-        this.resetSession();
+        this.resetLogContext();
         this.ingestor = new Ingestor(null, callbacks);
         this.emit();
       },
@@ -466,7 +495,6 @@ export class LiveService {
     });
     this.tailer.start();
     this.indexing = false;
-    this.startedAt = Date.now();
     this.emit();
   }
 
@@ -512,8 +540,10 @@ export class LiveService {
 
     if (event.type === 'areaEnter') {
       this.area = event.area || (event.areaId ? `Зона ${event.areaId}` : null);
-      this.areaInfo = { areaId: event.areaId, asset: event.asset, levelType: event.levelType, source: 'LevelMgr' };
+      this.areaInfo = { areaId: event.areaId, levelUid: event.levelUid, mapZone: event.mapZone,
+        asset: event.asset, levelType: event.levelType, source: 'LevelMgr' };
       this.areaPhase = 'entered'; this.pendingArea = null;
+      this.gameMapTracker.enterArea(event, Number(event.ts) || Date.now());
     }
 
     if (event.type === 'bagDelta' && event.delta) {
@@ -524,6 +554,7 @@ export class LiveService {
         this.totalDrops += delta.qty;
         this.pickupEvents++;
         this.lootTotals.set(delta.configBaseId, (this.lootTotals.get(delta.configBaseId) || 0) + delta.qty);
+        this.gameMapTracker.addLoot(delta);
         if (delta.configBaseId === FE_ID) this.feGained += delta.qty;
         this.items.unshift({
           id: delta.configBaseId,
@@ -620,5 +651,12 @@ export class LiveService {
     this.tailer = null; this.ingestor?.finish(); this.ingestor = null;
     if (!this.manualLogFile) this.logFile = null;
   }
-  stop() { clearInterval(this.timer); this.timer = null; this.detach(); this.communityPriceFeed.stop(); }
+  stop() {
+    clearInterval(this.timer); this.timer = null;
+    if (this.game && !this.gameEndedAt) {
+      this.gameEndedAt = Date.now();
+      this.gameMapTracker.finishCurrentMap(this.gameEndedAt, 'app-stopped');
+    }
+    this.detach(); this.communityPriceFeed.stop();
+  }
 }
