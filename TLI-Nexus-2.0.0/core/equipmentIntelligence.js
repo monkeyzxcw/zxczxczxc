@@ -1,12 +1,424 @@
-const DIRECTIONS = new Set(['higher','lower','presence']);
-const IDS = new Set(['id','baseid','affixid','baseaffixid','affixconfigid','affixbaseid','itemid','itembaseid','itemconfigid','equipmentid','equipmentbaseid','configbaseid']);
-const clean=(v,n=160)=>String(v??'').replace(/[\r\n\0]/g,' ').trim().slice(0,n);
-const norm=k=>String(k||'').replace(/[^a-z0-9]/gi,'').toLowerCase();
-function direction(v){const x=String(v??'').trim().toLowerCase();if(DIRECTIONS.has(x))return x;if(['выше','больше','максимум','увеличение'].includes(x))return'higher';if(['ниже','меньше','минимум','снижение'].includes(x))return'lower';if(['наличие','есть','присутствие'].includes(x))return'presence';return null;}
-export function normalizePriorityRules(input){let rows=input;if(typeof rows==='string')rows=rows.split(/\r?\n/).map(line=>{const s=line.trim();if(!s||s.startsWith('#'))return null;const p=s.split('|').map(x=>x.trim());return{rawKey:p[0],label:p[1],weight:p[2],direction:p[3]};}).filter(Boolean);if(!Array.isArray(rows)&&Array.isArray(rows?.rules))rows=rows.rules;if(!Array.isArray(rows))return[];const map=new Map();for(const r of rows.slice(0,100)){if(!r||typeof r!=='object')continue;const rawKey=clean(r.rawKey??r.key,100),weight=Number(r.weight),dir=direction(r.direction);if(!rawKey||!Number.isInteger(weight)||weight<1||weight>5||!dir)continue;map.set(rawKey,{rawKey,label:clean(r.label||rawKey,100),weight,direction:dir});if(map.size>=50)break;}return[...map.values()];}
-function itemOf(item,index=0){if(!item||typeof item!=='object')return null;const id=Number(item.itemId??item.id),affixes=Array.isArray(item.affixes)?item.affixes:[],values=[];for(const affix of affixes){if(!affix||typeof affix!=='object')continue;const affixId=clean(affix.id,100)||null;for(const field of Array.isArray(affix.values)?affix.values:[]){if(!field||typeof field!=='object')continue;const rawKey=clean(field.key,100);if(!rawKey||IDS.has(norm(rawKey))||field.value==null)continue;values.push({rawKey,value:clean(field.value,100),affixId});}}return{itemId:Number.isSafeInteger(id)&&id>0?id:null,name:clean(item.name||(id?'Предмет #'+id:'Предмет без ID'),140),slotRaw:clean(item.slotRaw,80)||null,confidence:clean(item.confidence,80)||'не указано',sourceAction:clean(item.sourceAction,80)||null,observedAt:Number.isFinite(Number(item.observedAt))?Number(item.observedAt):null,affixIds:[...new Set(affixes.map(a=>clean(a?.id,100)).filter(Boolean))],values:[...new Map(values.map(v=>[v.rawKey+'\0'+v.value+'\0'+(v.affixId||''),v])).values()],index};}
-function itemsOf(input){return(Array.isArray(input)?input:[]).slice(0,100).map(itemOf).filter(Boolean);}
-function coverage(found,rules){const totalWeight=rules.reduce((a,r)=>a+r.weight,0),foundWeight=rules.reduce((a,r)=>a+(found.has(r.rawKey)?r.weight:0),0);return{totalWeight,foundWeight,percent:totalWeight?Math.round(foundWeight/totalWeight*100):null};}
-export function analyzeEquipment(input,priorityInput=[]){const items=itemsOf(input),rules=normalizePriorityRules(priorityInput),observed=new Map();for(const item of items)for(const v of item.values){const a=observed.get(v.rawKey)||[];a.push({...v,itemId:item.itemId,itemName:item.name,slotRaw:item.slotRaw});observed.set(v.rawKey,a);}const found=new Set(observed.keys()),total=coverage(found,rules);const ruleRows=rules.map(r=>({...r,status:found.has(r.rawKey)?'observed':'not-observed',occurrences:(observed.get(r.rawKey)||[]).length,examples:(observed.get(r.rawKey)||[]).slice(0,5).map(v=>({itemId:v.itemId,itemName:v.itemName,slotRaw:v.slotRaw,value:v.value,affixId:v.affixId}))}));const itemRows=items.map(item=>{const keys=new Set(item.values.map(v=>v.rawKey)),c=coverage(keys,rules);return{...item,priorityCoveragePercent:c.percent,matchedPriorities:rules.filter(r=>keys.has(r.rawKey)).map(r=>r.rawKey),missingPriorities:rules.filter(r=>!keys.has(r.rawKey)).map(r=>r.rawKey)};});return{available:items.length>0,completeness:'partial',currentFullGearConfirmed:false,source:'CharacterIntel.explicitEquipment[].affixes[].values',itemCount:items.length,ruleCount:rules.length,priorityCoveragePercent:total.percent,foundWeight:total.foundWeight,totalWeight:total.totalWeight,rules:ruleRows,items:itemRows,weakSpots:ruleRows.filter(r=>r.status==='not-observed').map(r=>({rawKey:r.rawKey,label:r.label,weight:r.weight,explanation:'Поле не обнаружено среди доступных явных аффиксов. Это не доказывает, что характеристики нет на предмете.'})),recommendations:ruleRows.slice().sort((a,b)=>b.weight-a.weight).map(r=>({rawKey:r.rawKey,label:r.label,weight:r.weight,message:r.status==='observed'?'Приоритет уже встречается в явных данных; сравни точные значения, если они однозначно доступны.':'При просмотре следующих предметов проверь наличие точного поля «'+r.rawKey+'»; Nexus пока его не наблюдал.'})),limitations:['Анализируются только поля, явно сохранённые парсером в CharacterIntel.explicitEquipment.','Набор явных объектов не подтверждён как полный или актуальный список всех надетых предметов.','PageId/SlotId, снимки сумки и PutOn/PutOff не преобразуются в надетые слоты.','Процент показывает совпадение с пользовательскими приоритетами, а не силу предмета, DPS или мета-рейтинг.',...(rules.length?[]:['Задай собственные правила приоритета, чтобы получить процент совпадения.']),...(items.length?[]:['В выбранном профиле пока нет явных объектов экипировки с ID и данными аффиксов.'])]};}
-function numberValue(v){const m=String(v??'').trim().match(/^([+-]?(?:\d+(?:[.,]\d+)?|[.,]\d+))\s*(%|[A-Za-zА-Яа-яЁё][A-Za-zА-Яа-яЁё0-9/_-]*)?$/u);if(!m)return null;const n=Number(m[1].replace(',','.'));return Number.isFinite(n)?{number:n,unit:(m[2]||'').toLocaleLowerCase('ru')}:null;}
-export function compareEquipment(leftInput,rightInput,priorityInput=[]){const left=itemOf(leftInput,0),right=itemOf(rightInput,1),rules=normalizePriorityRules(priorityInput);if(!left||!right)return{available:false,verdict:'insufficient-data',message:'Для сравнения нужны два корректных объекта предмета.',ruleResults:[],limitations:['Данные двух предметов не переданы или имеют неверный формат.']};const results=rules.map(r=>{const av=left.values.filter(v=>v.rawKey===r.rawKey).map(v=>v.value),bv=right.values.filter(v=>v.rawKey===r.rawKey).map(v=>v.value),base={...r,leftValue:av.length===1?av[0]:null,rightValue:bv.length===1?bv[0]:null,winner:null,delta:null,unit:null};if(r.direction==='presence')return{...base,status:av.length&&bv.length?'both-observed':av.length?'left-only':bv.length?'right-only':'neither-observed',explanation:'Правило оценивает наличие поля; направление предпочтения не задано.'};if(av.length!==1||bv.length!==1)return{...base,status:av.length>1||bv.length>1?'ambiguous':av.length||bv.length?'one-sided':'not-observed',explanation:'Нет ровно одного значения этого поля на обоих предметах; сравнение по правилу невозможно.'};const a=numberValue(av[0]),b=numberValue(bv[0]);if(!a||!b||a.unit!==b.unit)return{...base,status:'not-comparable',explanation:'Значения не являются совместимыми числами с одинаковыми единицами.'};const delta=a.number-b.number,p=r.direction==='higher'?Math.sign(delta):-Math.sign(delta);return{...base,status:delta===0?'equal':'compared',delta,unit:a.unit,winner:p>0?'left':p<0?'right':'tie',explanation:delta===0?'Значения равны.':(r.direction==='higher'?'Большее':'Меньшее')+' значение соответствует заданному тобой направлению.'};});let leftWeight=0,rightWeight=0,tieWeight=0,decidedWeight=0;for(const r of results){if(!['left','right','tie'].includes(r.winner))continue;decidedWeight+=r.weight;if(r.winner==='left')leftWeight+=r.weight;else if(r.winner==='right')rightWeight+=r.weight;else tieWeight+=r.weight;}const totalWeight=rules.reduce((a,r)=>a+r.weight,0),slotComparison=left.slotRaw&&right.slotRaw?{status:left.slotRaw===right.slotRaw?'same':'different',left:left.slotRaw,right:right.slotRaw}:{status:'unknown',left:left.slotRaw,right:right.slotRaw},addedAffixIds=right.affixIds.filter(id=>!left.affixIds.includes(id)),removedAffixIds=left.affixIds.filter(id=>!right.affixIds.includes(id));let verdict='insufficient-data';if(decidedWeight&&leftWeight>rightWeight)verdict='left';else if(decidedWeight&&rightWeight>leftWeight)verdict='right';else if(decidedWeight&&leftWeight===rightWeight)verdict='tie';return{available:true,left:{itemId:left.itemId,name:left.name,slotRaw:left.slotRaw,confidence:left.confidence,sourceAction:left.sourceAction,observedAt:left.observedAt},right:{itemId:right.itemId,name:right.name,slotRaw:right.slotRaw,confidence:right.confidence,sourceAction:right.sourceAction,observedAt:right.observedAt},slotComparison,sharedAffixIds:left.affixIds.filter(id=>right.affixIds.includes(id)),addedAffixIds,removedAffixIds,ruleResults:results,score:{leftWeight,rightWeight,tieWeight,decidedWeight,totalWeight,coveragePercent:totalWeight?Math.round(decidedWeight/totalWeight*100):null},verdict,explanation:verdict==='left'?'Предмет A получил больший вес по сравнимым правилам, заданным тобой.':verdict==='right'?'Предмет B получил больший вес по сравнимым правилам, заданным тобой.':verdict==='tie'?'По сравнимым правилам результат равный.':'Недостаточно сопоставимых значений для вывода о преимуществе.',limitations:['Сравниваются только точные совпадения ключей affix.values[].key.','Оба предмета могут быть отдельными историческими наблюдениями; сравнение не подтверждает, что один из них сейчас надет.','Несопоставимые, отсутствующие или повторяющиеся неоднозначные значения не получают победителя.','Разница ID аффиксов показывается справочно и сама по себе не считается улучшением.','Победитель определяется исключительно твоими правилами higher/lower и весами; универсальный рейтинг предмета не рассчитывается.']};}
+const DIRECTIONS = new Set(['higher', 'lower', 'presence']);
+const MAX_RULES = 50;
+const MAX_ITEMS = 100;
+const TECHNICAL_ID_KEYS = new Set([
+  'id', 'baseid', 'affixid', 'baseaffixid', 'affixconfigid', 'affixbaseid',
+  'itemid', 'itembaseid', 'itemconfigid', 'equipmentid', 'equipmentbaseid', 'configbaseid',
+]);
+
+const normalizeKey = (value) => String(value || '').replace(/[^a-z0-9]/gi, '').toLowerCase();
+const cleanText = (value, max = 160) =>
+  String(value ?? '').replace(/[\r\n\0]/g, ' ').trim().slice(0, max);
+
+function normalizeDirection(value) {
+  const direction = String(value ?? '').trim().toLowerCase();
+  if (DIRECTIONS.has(direction)) return direction;
+  if (['выше', 'больше', 'максимум', 'увеличение'].includes(direction)) return 'higher';
+  if (['ниже', 'меньше', 'минимум', 'снижение'].includes(direction)) return 'lower';
+  if (['наличие', 'есть', 'присутствие'].includes(direction)) return 'presence';
+  return null;
+}
+
+/**
+ * Rules are owned by the user. No game-specific stat weights or directions
+ * are inferred here.
+ *
+ * Syntax: exactRawKey | label | weight (1–5) | higher/lower/presence
+ */
+export function normalizePriorityRules(input) {
+  let rows = input;
+
+  if (typeof rows === 'string') {
+    rows = rows.split(/\r?\n/).map((line) => {
+      const trimmed = line.trim();
+      if (!trimmed || trimmed.startsWith('#')) return null;
+
+      const [rawKey, label, weight, direction] = trimmed
+        .split('|')
+        .map((part) => part.trim());
+
+      return { rawKey, label, weight, direction };
+    }).filter(Boolean);
+  }
+
+  if (!Array.isArray(rows) && Array.isArray(rows?.rules)) rows = rows.rules;
+  if (!Array.isArray(rows)) return [];
+
+  const rules = new Map();
+  for (const entry of rows.slice(0, MAX_RULES * 2)) {
+    if (!entry || typeof entry !== 'object') continue;
+
+    const rawKey = cleanText(entry.rawKey ?? entry.key, 100);
+    const weight = Number(entry.weight);
+    const direction = normalizeDirection(entry.direction);
+
+    if (!rawKey || !Number.isInteger(weight) || weight < 1 || weight > 5 || !direction) {
+      continue;
+    }
+
+    rules.set(rawKey, {
+      rawKey,
+      label: cleanText(entry.label || rawKey, 100),
+      weight,
+      direction,
+    });
+
+    if (rules.size >= MAX_RULES) break;
+  }
+
+  return [...rules.values()];
+}
+
+function normalizeItem(item, index = 0) {
+  if (!item || typeof item !== 'object') return null;
+
+  const itemId = Number(item.itemId ?? item.id);
+  const affixes = Array.isArray(item.affixes) ? item.affixes : [];
+  const values = [];
+
+  for (const affix of affixes) {
+    if (!affix || typeof affix !== 'object') continue;
+
+    const affixId = cleanText(affix.id, 100) || null;
+    for (const field of Array.isArray(affix.values) ? affix.values : []) {
+      if (!field || typeof field !== 'object') continue;
+
+      const rawKey = cleanText(field.key, 100);
+      if (
+        !rawKey ||
+        TECHNICAL_ID_KEYS.has(normalizeKey(rawKey)) ||
+        field.value === undefined ||
+        field.value === null
+      ) {
+        continue;
+      }
+
+      values.push({
+        rawKey,
+        value: cleanText(field.value, 100),
+        affixId,
+      });
+    }
+  }
+
+  // Repeated keys from different affixes remain ambiguous evidence.
+  const deduped = [
+    ...new Map(
+      values.map((row) => [
+        row.rawKey + '\0' + row.value + '\0' + (row.affixId || ''),
+        row,
+      ]),
+    ).values(),
+  ];
+
+  return {
+    key: (Number.isSafeInteger(itemId) && itemId > 0 ? itemId : 'unknown') +
+      ':' + cleanText(item.slotRaw, 80) + ':' + index,
+    itemId: Number.isSafeInteger(itemId) && itemId > 0 ? itemId : null,
+    name: cleanText(
+      item.name || (itemId ? 'Предмет #' + itemId : 'Предмет без ID'),
+      140,
+    ),
+    slotRaw: cleanText(item.slotRaw, 80) || null,
+    sourceAction: cleanText(item.sourceAction, 80) || null,
+    observedAt: Number.isFinite(Number(item.observedAt)) ? Number(item.observedAt) : null,
+    confidence: cleanText(item.confidence, 80) || 'не указано',
+    affixIds: [...new Set(
+      affixes.map((affix) => cleanText(affix?.id, 100)).filter(Boolean),
+    )],
+    values: deduped,
+  };
+}
+
+function normalizeItems(input) {
+  return (Array.isArray(input) ? input : [])
+    .slice(0, MAX_ITEMS)
+    .map(normalizeItem)
+    .filter(Boolean);
+}
+
+function weightedCoverage(foundKeys, rules) {
+  const totalWeight = rules.reduce((sum, rule) => sum + rule.weight, 0);
+  const foundWeight = rules.reduce(
+    (sum, rule) => sum + (foundKeys.has(rule.rawKey) ? rule.weight : 0),
+    0,
+  );
+
+  return {
+    totalWeight,
+    foundWeight,
+    percent: totalWeight ? Math.round((foundWeight / totalWeight) * 100) : null,
+  };
+}
+
+/**
+ * Analyse explicit affix fields only. Coverage is a match against user-owned
+ * priorities, never an item power, build score, or DPS estimate.
+ */
+export function analyzeEquipment(itemsInput, prioritiesInput = []) {
+  const items = normalizeItems(itemsInput);
+  const rules = normalizePriorityRules(prioritiesInput);
+  const observed = new Map();
+
+  for (const item of items) {
+    for (const value of item.values) {
+      const rows = observed.get(value.rawKey) || [];
+      rows.push({
+        ...value,
+        itemId: item.itemId,
+        itemName: item.name,
+        slotRaw: item.slotRaw,
+      });
+      observed.set(value.rawKey, rows);
+    }
+  }
+
+  const foundKeys = new Set(observed.keys());
+  const total = weightedCoverage(foundKeys, rules);
+
+  const ruleRows = rules.map((rule) => ({
+    ...rule,
+    status: foundKeys.has(rule.rawKey) ? 'observed' : 'not-observed',
+    occurrences: (observed.get(rule.rawKey) || []).length,
+    examples: (observed.get(rule.rawKey) || []).slice(0, 5).map((row) => ({
+      itemId: row.itemId,
+      itemName: row.itemName,
+      slotRaw: row.slotRaw,
+      value: row.value,
+      affixId: row.affixId,
+    })),
+  }));
+
+  const itemRows = items.map((item) => {
+    const itemKeys = new Set(item.values.map((row) => row.rawKey));
+    const itemCoverage = weightedCoverage(itemKeys, rules);
+
+    return {
+      ...item,
+      priorityCoveragePercent: itemCoverage.percent,
+      matchedPriorities: rules.filter((rule) => itemKeys.has(rule.rawKey)).map((rule) => rule.rawKey),
+      missingPriorities: rules.filter((rule) => !itemKeys.has(rule.rawKey)).map((rule) => rule.rawKey),
+    };
+  });
+
+  return {
+    available: items.length > 0,
+    completeness: 'partial',
+    currentFullGearConfirmed: false,
+    source: 'CharacterIntel.explicitEquipment[].affixes[].values',
+    itemCount: items.length,
+    ruleCount: rules.length,
+    priorityCoveragePercent: total.percent,
+    foundWeight: total.foundWeight,
+    totalWeight: total.totalWeight,
+    rules: ruleRows,
+    items: itemRows,
+    weakSpots: ruleRows
+      .filter((row) => row.status === 'not-observed')
+      .map((row) => ({
+        rawKey: row.rawKey,
+        label: row.label,
+        weight: row.weight,
+        explanation: 'Поле не обнаружено среди доступных явных аффиксов. Это не доказывает, что характеристики нет на предмете.',
+      })),
+    recommendations: ruleRows
+      .slice()
+      .sort((a, b) => b.weight - a.weight)
+      .map((row) => ({
+        rawKey: row.rawKey,
+        label: row.label,
+        weight: row.weight,
+        message: row.status === 'observed'
+          ? 'Приоритет уже встречается в явных данных; сравни точные значения, если они однозначно доступны.'
+          : 'При просмотре следующих предметов проверь наличие точного поля "' +
+            row.rawKey + '"; Nexus пока его не наблюдал.',
+      })),
+    limitations: [
+      'Анализируются только поля, явно сохранённые парсером в CharacterIntel.explicitEquipment.',
+      'Набор явных объектов не подтверждён как полный или актуальный список всех надетых предметов.',
+      'PageId/SlotId, снимки сумки и PutOn/PutOff не преобразуются в надетые слоты.',
+      'Процент показывает совпадение с пользовательскими приоритетами, а не силу предмета, DPS или мета-рейтинг.',
+      ...(rules.length ? [] : ['Задай собственные правила приоритета, чтобы получить процент совпадения.']),
+      ...(items.length ? [] : ['В выбранном профиле пока нет явных объектов экипировки с ID и данными аффиксов.']),
+    ],
+  };
+}
+
+function parseNumericValue(value) {
+  const match = String(value ?? '').trim().match(
+    /^([+-]?(?:\d+(?:[.,]\d+)?|[.,]\d+))\s*(%|[A-Za-zА-Яа-яЁё][A-Za-zА-Яа-яЁё0-9/_-]*)?$/u,
+  );
+  if (!match) return null;
+
+  const number = Number(match[1].replace(',', '.'));
+  if (!Number.isFinite(number)) return null;
+
+  return { number, unit: (match[2] || '').toLocaleLowerCase('ru') };
+}
+
+function valuesForKey(item, rawKey) {
+  return item.values
+    .filter((row) => row.rawKey === rawKey)
+    .map((row) => row.value);
+}
+
+/** Compare two items only where exact keys and compatible values exist. */
+export function compareEquipment(leftInput, rightInput, prioritiesInput = []) {
+  const left = normalizeItem(leftInput, 0);
+  const right = normalizeItem(rightInput, 1);
+  const rules = normalizePriorityRules(prioritiesInput);
+
+  if (!left || !right) {
+    return {
+      available: false,
+      verdict: 'insufficient-data',
+      message: 'Для сравнения нужны два корректных объекта предмета.',
+      ruleResults: [],
+      limitations: ['Данные двух предметов не переданы или имеют неверный формат.'],
+    };
+  }
+
+  const ruleResults = rules.map((rule) => {
+    const leftValues = valuesForKey(left, rule.rawKey);
+    const rightValues = valuesForKey(right, rule.rawKey);
+    const base = {
+      ...rule,
+      leftValue: leftValues.length === 1 ? leftValues[0] : null,
+      rightValue: rightValues.length === 1 ? rightValues[0] : null,
+      winner: null,
+      delta: null,
+      unit: null,
+    };
+
+    if (rule.direction === 'presence') {
+      return {
+        ...base,
+        status: leftValues.length && rightValues.length
+          ? 'both-observed'
+          : leftValues.length
+            ? 'left-only'
+            : rightValues.length
+              ? 'right-only'
+              : 'neither-observed',
+        explanation: 'Правило оценивает наличие поля; направление предпочтения не задано.',
+      };
+    }
+
+    if (leftValues.length !== 1 || rightValues.length !== 1) {
+      return {
+        ...base,
+        status: leftValues.length > 1 || rightValues.length > 1
+          ? 'ambiguous'
+          : leftValues.length || rightValues.length
+            ? 'one-sided'
+            : 'not-observed',
+        explanation: 'Нет ровно одного значения этого поля на обоих предметах; сравнение по правилу невозможно.',
+      };
+    }
+
+    const leftNumber = parseNumericValue(leftValues[0]);
+    const rightNumber = parseNumericValue(rightValues[0]);
+    if (!leftNumber || !rightNumber || leftNumber.unit !== rightNumber.unit) {
+      return {
+        ...base,
+        status: 'not-comparable',
+        explanation: 'Значения не являются совместимыми числами с одинаковыми единицами.',
+      };
+    }
+
+    const delta = leftNumber.number - rightNumber.number;
+    const preference = rule.direction === 'higher' ? Math.sign(delta) : -Math.sign(delta);
+
+    return {
+      ...base,
+      status: delta === 0 ? 'equal' : 'compared',
+      delta,
+      unit: leftNumber.unit,
+      winner: preference > 0 ? 'left' : preference < 0 ? 'right' : 'tie',
+      explanation: delta === 0
+        ? 'Значения равны.'
+        : (rule.direction === 'higher' ? 'Большее' : 'Меньшее') +
+          ' значение соответствует заданному тобой направлению.',
+    };
+  });
+
+  let leftWeight = 0;
+  let rightWeight = 0;
+  let tieWeight = 0;
+  let decidedWeight = 0;
+
+  for (const row of ruleResults) {
+    if (!['left', 'right', 'tie'].includes(row.winner)) continue;
+    decidedWeight += row.weight;
+    if (row.winner === 'left') leftWeight += row.weight;
+    else if (row.winner === 'right') rightWeight += row.weight;
+    else tieWeight += row.weight;
+  }
+
+  const totalWeight = rules.reduce((sum, rule) => sum + rule.weight, 0);
+  const slotComparison = left.slotRaw && right.slotRaw
+    ? {
+        status: left.slotRaw === right.slotRaw ? 'same' : 'different',
+        left: left.slotRaw,
+        right: right.slotRaw,
+      }
+    : { status: 'unknown', left: left.slotRaw, right: right.slotRaw };
+
+  const addedAffixIds = right.affixIds.filter((id) => !left.affixIds.includes(id));
+  const removedAffixIds = left.affixIds.filter((id) => !right.affixIds.includes(id));
+
+  let verdict = 'insufficient-data';
+  if (decidedWeight && leftWeight > rightWeight) verdict = 'left';
+  else if (decidedWeight && rightWeight > leftWeight) verdict = 'right';
+  else if (decidedWeight && leftWeight === rightWeight) verdict = 'tie';
+
+  return {
+    available: true,
+    left: {
+      itemId: left.itemId,
+      name: left.name,
+      slotRaw: left.slotRaw,
+      confidence: left.confidence,
+      sourceAction: left.sourceAction,
+      observedAt: left.observedAt,
+    },
+    right: {
+      itemId: right.itemId,
+      name: right.name,
+      slotRaw: right.slotRaw,
+      confidence: right.confidence,
+      sourceAction: right.sourceAction,
+      observedAt: right.observedAt,
+    },
+    slotComparison,
+    sharedAffixIds: left.affixIds.filter((id) => right.affixIds.includes(id)),
+    addedAffixIds,
+    removedAffixIds,
+    ruleResults,
+    score: {
+      leftWeight,
+      rightWeight,
+      tieWeight,
+      decidedWeight,
+      totalWeight,
+      coveragePercent: totalWeight
+        ? Math.round((decidedWeight / totalWeight) * 100)
+        : null,
+    },
+    verdict,
+    explanation: verdict === 'left'
+      ? 'Предмет A получил больший вес по сравнимым правилам, заданным тобой.'
+      : verdict === 'right'
+        ? 'Предмет B получил больший вес по сравнимым правилам, заданным тобой.'
+        : verdict === 'tie'
+          ? 'По сравнимым правилам результат равный.'
+          : 'Недостаточно сопоставимых значений для вывода о преимуществе.',
+    limitations: [
+      'Сравниваются только точные совпадения ключей affix.values[].key.',
+      'Оба предмета могут быть отдельными историческими наблюдениями; сравнение не подтверждает, что один из них сейчас надет.',
+      'Несопоставимые, отсутствующие или повторяющиеся неоднозначные значения не получают победителя.',
+      'Разница ID аффиксов показывается справочно и сама по себе не считается улучшением.',
+      'Победитель определяется исключительно твоими правилами higher/lower и весами; универсальный рейтинг предмета не рассчитывается.',
+    ],
+  };
+}
