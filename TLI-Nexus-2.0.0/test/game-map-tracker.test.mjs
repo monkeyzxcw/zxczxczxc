@@ -69,6 +69,7 @@ test('map history is bounded to the configured number of recent runs', () => {
     tracker.enterArea({ area: `Map ${i}`, asset: `Map_${i}`, mapZone: 'Atlas', areaId: i, levelUid: i }, i * 1000 + 1);
     tracker.enterArea({ area: 'Stronghold', asset: 'Stronghold', mapZone: 'Town' }, i * 1000 + 500);
   }
-  assert.equal(tracker.snapshot().completedCount, 2);
+  assert.equal(tracker.snapshot().completedCount, 3);
+  assert.equal(tracker.snapshot().history.length, 2);
   assert.deepEqual(tracker.snapshot().history.map((row) => row.name), ['Map 1', 'Map 2']);
 });
