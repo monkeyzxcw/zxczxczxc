@@ -240,7 +240,16 @@ export async function fetchTlidbCatalog(options = {}) {
       records.push(...parsed.records);
     } catch (error) {
       errors.push({ slug, url, reason: clean(error?.message || error, 240) });
-      if (Number(error?.status) === 403 || Number(error?.status) === 429) break;
+      if (Number(error?.status) === 403 || Number(error?.status) === 429) {
+        for (const skippedSlug of selected.slice(index + 1)) {
+          errors.push({
+            slug: skippedSlug,
+            url: getTlidbPageUrl(skippedSlug),
+            reason: `Пропущено после ограничения запросов TLIDB (HTTP ${Number(error.status)}).`,
+          });
+        }
+        break;
+      }
     }
   }
 
@@ -270,6 +279,67 @@ export async function fetchTlidbCatalog(options = {}) {
       'Season/patch version is unverified because the parsed equipment tables do not expose a reliable version marker.',
       'The local cache is user-triggered and stored outside the installer; it is not bundled or uploaded by Nexus.',
       'Affix text is sourced in English; localization to Russian is not inferred.',
+    ],
+  };
+}
+
+/**
+ * Replace only pages successfully fetched in the latest sync. Pages that failed
+ * remain available from the last good cache, so a temporary TLIDB outage cannot
+ * silently erase part of the local affix reference.
+ */
+export function mergeTlidbCatalog(existing, incoming) {
+  if (!incoming || incoming.source !== 'TLIDB' || !Array.isArray(incoming.records)) {
+    throw new Error('Получен некорректный результат синхронизации TLIDB.');
+  }
+
+  const successfulSlugs = new Set((incoming.pages || []).map((page) => page.slug));
+  const failedSlugs = new Set((incoming.failedPages || []).map((page) => page.slug));
+  const retainedRecords = Array.isArray(existing?.records)
+    ? existing.records.filter((row) => failedSlugs.has(row.sourcePage) || !successfulSlugs.has(row.sourcePage))
+    : [];
+  const records = [...new Map(
+    [...retainedRecords, ...incoming.records].map((row) => [row.sourceKey, row]),
+  ).values()].slice(0, MAX_RECORDS);
+
+  const pageMap = new Map();
+  for (const page of [...(existing?.pages || []), ...(incoming.pages || [])]) {
+    const keepOldForFailedPage = failedSlugs.has(page.slug) && !successfulSlugs.has(page.slug);
+    if (!keepOldForFailedPage || !pageMap.has(page.slug)) pageMap.set(page.slug, page);
+  }
+  const pages = TLIDB_GEAR_PAGES.map((page) => pageMap.get(page.slug)).filter(Boolean);
+  const retainedPages = [...failedSlugs].filter((slug) =>
+    Array.isArray(existing?.records) && existing.records.some((row) => row.sourcePage === slug),
+  ).length;
+  const pagesImported = Number(incoming.summary?.pagesImported) || 0;
+  const pagesRequested = Number(incoming.summary?.pagesRequested) || successfulSlugs.size + failedSlugs.size;
+  const pagesFailed = Number(incoming.summary?.pagesFailed) || (incoming.failedPages || []).length;
+  const lastFullSyncAt = pagesFailed === 0 && pagesImported === pagesRequested
+    ? Number(incoming.syncedAt) || Date.now()
+    : Number(existing?.lastFullSyncAt) || null;
+
+  return {
+    ...incoming,
+    pages,
+    records,
+    lastSuccessfulSyncAt: pagesImported > 0
+      ? Number(incoming.syncedAt) || Date.now()
+      : Number(existing?.lastSuccessfulSyncAt) || null,
+    lastFullSyncAt,
+    summary: {
+      ...incoming.summary,
+      pagesRequested,
+      pagesImported,
+      pagesFailed,
+      retainedPages,
+      affixRows: records.length,
+      gearGroups: [...new Set(pages.map((page) => page.group))].length,
+    },
+    limitations: [
+      ...(incoming.limitations || []),
+      ...(retainedPages
+        ? [`Для ${retainedPages} временно недоступных страниц сохранены данные из предыдущего локального кэша.`]
+        : []),
     ],
   };
 }
