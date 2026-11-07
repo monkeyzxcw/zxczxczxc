@@ -14,7 +14,7 @@ const required = [
   'docs/USER_ACCEPTANCE_CHECKLIST.md', 'docs/RELEASE_NOTES_2.0.0.md',
   'test/release.test.mjs', 'test/character-intel.test.mjs', 'test/character-platform.test.mjs', 'test/equipment-intelligence.test.mjs',
   'test/game-resources.test.mjs', 'test/tlidb-catalog.test.mjs', 'docs/RELEASE_NOTES_2.1.0.md', 'docs/RELEASE_NOTES_2.2.0.md',
-  'docs/GAME_RESOURCE_EXTRACTION.md',
+  'docs/GAME_RESOURCE_EXTRACTION.md', 'docs/RELEASE_NOTES_2.3.0.md',
 ];
 
 const missing = required.filter((file) => !fs.existsSync(path.join(root, file)));
@@ -44,7 +44,7 @@ if (missing.length) {
     console.error('Windows icon must be a valid ICO containing a 256x256 image.');
     process.exitCode = 1;
   } else if (
-    pkg.version !== '2.2.0' ||
+    pkg.version !== '2.3.0' ||
     pkg.main !== 'electron-main.mjs' ||
     pkg.devDependencies?.electron !== '45.2.3' ||
     pkg.dependencies?.electron ||
