@@ -156,7 +156,7 @@ export class GameMapTracker {
       Number(snapshot.completedCount) || 0,
     );
     for (const map of [this.currentMap, this.lastMap, ...this.completedMaps]) {
-      const match = /^map-(\\d+)-/.exec(String(map?.id || ''));
+      const match = /^map-(\d+)-/.exec(String(map?.id || ''));
       if (match) this.mapSequence = Math.max(this.mapSequence, Number(match[1]) || 0);
     }
     return this.snapshot();
