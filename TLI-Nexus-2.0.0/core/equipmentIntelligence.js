@@ -214,10 +214,11 @@ function attachResourceKnowledge(item, indexes) {
   const itemDefinition = item.itemId ? indexes.items.get(String(item.itemId)) : null;
   const affixes = item.affixes.map((affix) => {
     const definition = affix.id ? indexes.affixes.get(String(affix.id)) : null;
-    const attributeDefinition = affix.attributeRaw
-      ? indexes.affixAttributeTypes.get(String(affix.attributeRaw)) ||
-        indexes.characterAttributes.get(String(affix.attributeRaw)) ||
-        indexes.characterFields.get(String(affix.attributeRaw)) || null
+    const attributeRaw = definition?.attributeRaw || affix.attributeRaw || null;
+    const attributeDefinition = attributeRaw
+      ? indexes.affixAttributeTypes.get(String(attributeRaw)) ||
+        indexes.characterAttributes.get(String(attributeRaw)) ||
+        indexes.characterFields.get(String(attributeRaw)) || null
       : null;
     const translatedName = localizedName(definition, indexes);
     const attributeName = attributeDefinition?.enumName ||
@@ -237,7 +238,7 @@ function attachResourceKnowledge(item, indexes) {
           ? definition.name ? 'data-table' : translatedName ? 'localization-table' : 'row-key'
           : null,
         nameKeyRaw: definition?.nameKeyRaw || definition?.textKeyRaw || null,
-        attributeRaw: definition?.attributeRaw || affix.attributeRaw || null,
+        attributeRaw,
         attributeName,
         attributeSourcePath: attributeDefinition?.sourcePath || null,
         tierRaw: definition?.tierRaw || affix.tierRaw || null,
