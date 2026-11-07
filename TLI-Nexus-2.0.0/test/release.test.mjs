@@ -165,10 +165,10 @@ test('native topmost state is explicitly cleared when HUD is unpinned', () => {
   assert.doesNotMatch(main, /overlay:toggle-pin/);
 });
 
-test('package version is 2.2.0 game resources release', () => {
+test('package version is 2.3.0 automatic TLIDB and map tracking release', () => {
   const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
   const pkg = JSON.parse(fs.readFileSync(path.join(root, 'package.json'), 'utf8'));
-  assert.equal(pkg.version, '2.2.0');
+  assert.equal(pkg.version, '2.3.0');
   assert.ok(pkg.build.files.includes('docs/RELEASE_NOTES_1.1.0.md'));
   assert.ok(pkg.build.files.includes('docs/RELEASE_NOTES_1.1.1.md'));
   assert.ok(pkg.build.files.includes('docs/RELEASE_NOTES_1.2.0.md'));
@@ -177,8 +177,8 @@ test('package version is 2.2.0 game resources release', () => {
   assert.ok(pkg.build.files.includes('docs/RELEASE_NOTES_1.4.0.md'));
   const overlay = fs.readFileSync(path.join(root, 'overlay.html'), 'utf8');
   const dashboard = fs.readFileSync(path.join(root, 'dashboard.html'), 'utf8');
-  assert.match(overlay, /GAME COMPANION · 2.2.0/);
-  assert.match(dashboard, /TLI Nexus 2.2.0/);
+  assert.match(overlay, /GAME COMPANION · 2.3.0/);
+  assert.match(dashboard, /TLI Nexus 2.3.0/);
   assert.ok(pkg.scripts.check.includes('core/hotkeys.js'));
   assert.ok(pkg.scripts.check.includes('core/equipmentTracker.js'));
   assert.ok(pkg.scripts.check.includes('core/equipmentIntelligence.js'));
@@ -186,6 +186,10 @@ test('package version is 2.2.0 game resources release', () => {
   assert.ok(pkg.scripts.check.includes('core/gameResourceCatalog.js'));
   assert.ok(pkg.build.files.includes('docs/RELEASE_NOTES_2.2.0.md'));
   assert.ok(pkg.build.files.includes('docs/GAME_RESOURCE_EXTRACTION.md'));
+  assert.ok(pkg.build.files.includes('docs/RELEASE_NOTES_2.3.0.md'));
+  assert.ok(pkg.scripts.check.includes('core/gameMapTracker.js'));
+  assert.match(overlay, /last-map-value/);
+  assert.match(overlay, /map-items/);
   assert.equal(pkg.scripts.check.includes('core/farmAnalytics.js'), true);
   const bat = fs.readFileSync(path.join(root, 'start-desktop.bat'), 'utf8');
   assert.match(bat, /npm install --include=dev/);
