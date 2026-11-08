@@ -108,7 +108,7 @@ function extractNodeRows(tree, idKeys, type, messageMeta) {
     const name = direct(node, ['SkillName', 'TalentName', 'Name', 'DisplayName']);
     const key = `${type}:${id}:${slot ?? ''}`;
     rows.set(key, {
-      id, name: name ? capText(name, 100) : null, level, slot: slot ? capText(slot, 40) : null,
+      id, idField: capText(idKey, 80), name: name ? capText(name, 100) : null, level, slot: slot ? capText(slot, 40) : null,
       kind: type, sourceAction: messageMeta.action, sourceKind: messageMeta.kind,
       observedAt: messageMeta.at, path: [...nodePath, idKey].join('.'), confidence: 'explicit-id',
     });
