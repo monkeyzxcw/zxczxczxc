@@ -42,11 +42,16 @@ function normalizeSkills(intelSkills, configuredSkills, warnings, catalogSkills 
     if (!slot || !skillId) continue;
     const levelField = String(row.levelField || '').replace(/[^a-z0-9]/gi, '').toLowerCase();
     const hasLevel = levelField === 'skilllevel' && Number.isInteger(Number(row.level)) && Number(row.level) > 0;
-    rows.push({ slot, skill_id: skillId, level: hasLevel ? Number(row.level) : 1, enabled: true });
+    rows.push({ slot, skill_id: skillId, level: hasLevel ? Number(row.level) : 1, enabled: true, observedAt: Number(row.observedAt) || 0 });
     if (!hasLevel) warnings.push(`Для навыка ID ${skillId} уровень не был найден; использован API-default 1. Проверь его перед расчётом.`);
   }
   for (const row of rows) if (knownIds.size && !knownIds.has(row.skill_id)) warnings.push('Навык ID '+row.skill_id+' отсутствует в каталоге активного сезона TLIBuilder; движок может вернуть unsupported.');
-  return uniqueBy(rows, (row) => String(row.slot)).sort((a, b) => a.slot - b.slot);
+  const latestBySlot = new Map();
+  for (const row of rows) {
+    const previous = latestBySlot.get(row.slot);
+    if (!previous || Number(row.observedAt || 0) >= Number(previous.observedAt || 0)) latestBySlot.set(row.slot, row);
+  }
+  return [...latestBySlot.values()].sort((a, b) => a.slot - b.slot).map(({ observedAt, ...row }) => row);
 }
 
 function resolveMainSkill(build, intelSkills, configuredMainSkill, skills, warnings, catalogSkills = []) {
@@ -71,6 +76,10 @@ function resolveMainSkill(build, intelSkills, configuredMainSkill, skills, warni
   const skillId = cleanId(match.id);
   if (!skillId) return null;
   const slotted = skills.find((row) => row.skill_id === skillId);
+  if (!slotted) {
+    warnings.push('Основной навык найден в истории Character Intelligence, но сейчас не подтверждён в активном слоте 1–9. DPS не рассчитывается как для экипированного навыка.');
+    return null;
+  }
   return { skill_id: skillId, level: Math.max(1, Number(match.level) || Number(slotted?.level) || 1) };
 }
 
