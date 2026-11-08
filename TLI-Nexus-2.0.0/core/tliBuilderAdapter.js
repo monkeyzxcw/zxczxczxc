@@ -86,7 +86,7 @@ export function buildTliBuilderRequest({ build = {}, intel = {}, profile = null 
       ? { coreTalentSelections: object(slot.coreTalentSelections) } : {}) };
   }) : [];
 
-  if (!Array.isArray(config.slots) || !config.slots.length) {
+  if (!slots.some(Boolean)) {
     warnings.push('Деревья талантов не переданы: Character Intelligence обнаруживает отдельные ID, но пока не восстанавливает выбранные узлы и распределение очков. Расчёт не учитывает таланты.');
   }
   if (!Array.isArray(config.gear) || !config.gear.length) {
