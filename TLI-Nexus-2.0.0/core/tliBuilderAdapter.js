@@ -15,7 +15,7 @@ const uniqueBy = (rows, key) => [...new Map(rows.map((row) => [key(row), row])).
 
 function normalizeSkills(intelSkills, configuredSkills, warnings, catalogSkills = []) {
   const knownIds = new Set(catalogSkills.map((row) => cleanId(row.id ?? row.skill_id)).filter(Boolean));
-  if (Array.isArray(configuredSkills)) {
+  if (Array.isArray(configuredSkills) && configuredSkills.length) {
     return configuredSkills.slice(0, 40).filter((row) => {
       const slot = numericSlot(row?.slot);
       const skillId = cleanId(row?.skill_id ?? row?.skillId ?? row?.id);
