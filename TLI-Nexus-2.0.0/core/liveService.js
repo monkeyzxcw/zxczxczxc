@@ -23,6 +23,10 @@ const LOG_SETUP_GRACE_MS = 15_000;
 // and current session alive during this grace period instead of wiping loot.
 const GAME_PROCESS_MISS_GRACE_MS = 120_000;
 
+export function shouldKeepSessionAfterProcessMiss({ hasTailer, missingSince, now = Date.now(), graceMs = GAME_PROCESS_MISS_GRACE_MS } = {}) {
+  return Boolean(hasTailer && missingSince && now - missingSince < graceMs);
+}
+
 export function deriveLogReadiness({ connected, startedAt, liveMessages = 0, socketStarts = 0, liveGameEvents = 0, now = Date.now() } = {}) {
   if (!connected) return { code: 'no-log', label: 'LOG OFFLINE', hint: '' };
   if (liveMessages > 0 || liveGameEvents > 0) return { code: 'live', label: liveGameEvents > 0 ? 'LIVE GAME LOG' : 'LIVE PROTOCOL', hint: '' };
@@ -348,7 +352,7 @@ export class LiveService {
         this.game = false;
         this.gameMissingSince ||= Date.now();
         const missDuration = Date.now() - this.gameMissingSince;
-        if (this.tailer && missDuration < GAME_PROCESS_MISS_GRACE_MS) {
+        if (shouldKeepSessionAfterProcessMiss({ hasTailer: Boolean(this.tailer), missingSince: this.gameMissingSince, now: Date.now() })) {
           this.lastError = null;
           this.emit();
           return;
