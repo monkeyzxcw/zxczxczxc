@@ -29,7 +29,10 @@ function normalizeSkills(intelSkills, configuredSkills, warnings, catalogSkills 
       skill_id: cleanId(row.skill_id ?? row.skillId ?? row.id),
       level: Math.max(1, Math.min(100, Number(row.level) || 1)),
       enabled: row.enabled !== false,
-    }));
+    })).map((row) => {
+      if (knownIds.size && !knownIds.has(row.skill_id)) warnings.push('Ручной skill_id '+row.skill_id+' отсутствует в каталоге активного сезона; движок может вернуть unsupported.');
+      return row;
+    });
   }
 
   const rows = [];
