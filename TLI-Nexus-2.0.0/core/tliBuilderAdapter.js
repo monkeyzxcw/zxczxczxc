@@ -99,9 +99,11 @@ export function buildTliBuilderRequest({ build = {}, intel = {}, profile = null,
   const autoTreeMap = new Map();
   for (const match of talentMatches) {
     const nodeStates = autoTreeMap.get(match.treeName) || {};
+    const rankField = String(match.observed.levelField || '').replace(/[^a-z0-9]/gi, '').toLowerCase();
     const rank = Number(match.observed.level);
-    nodeStates[match.nodeId] = Number.isInteger(rank) && rank >= 1 && rank <= 5 ? rank : 1;
-    if (!(Number.isInteger(rank) && rank >= 1 && rank <= 5)) warnings.push('Для узла '+match.nodeId+' не найдено подтверждённое число очков; для пробного расчёта выставлено 1 очко. Проверь распределение вручную.');
+    const rankIsExplicit = ['talentlevel', 'nodelevel'].includes(rankField) && Number.isInteger(rank) && rank >= 1 && rank <= 5;
+    nodeStates[match.nodeId] = rankIsExplicit ? rank : 1;
+    if (!rankIsExplicit) warnings.push('Для узла '+match.nodeId+' не найдено подтверждённое число очков TalentLevel/NodeLevel; для пробного расчёта выставлено 1 очко. Проверь распределение вручную.');
     autoTreeMap.set(match.treeName, nodeStates);
   }
   const rawSlots = configuredSlots || [...autoTreeMap.entries()].map(([treeName, nodeStates]) => ({ treeName, nodeStates }));
