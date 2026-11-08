@@ -42,7 +42,7 @@ export function resolveCharacterIntelNames(intel = {}, resourceIndex = null) {
   const skills = (intel.skills || []).map((row) => ({ ...row, name: row.name || localized(row, ix), catalogResolved: Boolean(row.name || localized(row, ix)) }));
   const explicitEquipment = (intel.explicitEquipment || []).map((item) => {
     const definition = ix.items.get(String(item.itemId));
-    const name = item.name && !/^Предмет #\\d+$/.test(item.name) ? item.name : definitionName(definition, ix) || item.name;
+    const name = item.name && !/^Предмет #\d+$/.test(item.name) ? item.name : definitionName(definition, ix) || item.name;
     const slotDefinition = item.slotRaw ? ix.attributes.get('slot:'+String(item.slotRaw)) : null;
     const slotName = slotDefinition?.enumName || slotDefinition?.name || localized(slotDefinition, ix) || null;
     const affixes = (item.affixes || []).map((affix) => {
@@ -57,7 +57,7 @@ export function resolveCharacterIntelNames(intel = {}, resourceIndex = null) {
   const inventorySnapshots = (intel.inventorySnapshots || []).map((snapshot) => ({
     ...snapshot, items: (snapshot.items || []).map((item) => {
       const definition = ix.items.get(String(item.itemId));
-      return { ...item, name: item.name && !/^Предмет #\\d+$/.test(item.name) ? item.name : definitionName(definition, ix) || item.name };
+      return { ...item, name: item.name && !/^Предмет #\d+$/.test(item.name) ? item.name : definitionName(definition, ix) || item.name };
     }),
   }));
   const latestInventory = inventorySnapshots.at(-1) || intel.latestInventory || null;
