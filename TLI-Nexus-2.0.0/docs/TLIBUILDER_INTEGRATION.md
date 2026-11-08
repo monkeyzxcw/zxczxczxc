@@ -48,3 +48,36 @@ const result = await window.nexus.calculateWithTliBuilder({
 - `calculateWithTliBuilder(payload)` — расчёт билда через `/api/engine/stats`.
 
 Мост работает в главном процессе Electron; renderer получает только два ограниченных IPC-метода через preload.
+
+
+## Build Intelligence adapter (stage 2)
+
+The dashboard's **«Расчёт TLIBuilder»** action sends the selected saved build and its profile's latest Character Intelligence snapshot through `core/tliBuilderAdapter.js`.
+
+The adapter maps only explicit skill IDs that also have a numeric slot (1–9). It can match the build's main-skill field only when it exactly matches an observed skill ID or observed name. It never turns free-text gear/talent notes or an inventory snapshot into engine contributions.
+
+For complete calculations, a saved build may contain an optional `engineConfig` object. The build editor exposes this as a JSON field. Supported keys follow the installed TLIBuilder `EngineStatsRequest`, including:
+- `slots`: exact tree names and selected node states;
+- `skills` and `main_skill`: exact skill IDs, slots and levels;
+- `gear`: TLIBuilder `GearEngineItem` contributions, including parsed affixes;
+- `condition_state`, `target_config`, `enemy_config`;
+- `attached_supports`, `trait_id`, trait selections, custom modifiers, memory and spirit effects.
+
+Example shape (illustrative IDs only; not a ready-to-use build):
+
+```json
+{
+  "slots": [
+    { "treeName": "exact_tree_name_from_current_season", "nodeStates": { "exact_node_id": 1 } }
+  ],
+  "skills": [
+    { "slot": 1, "skill_id": "exact_skill_id", "level": 20, "enabled": true }
+  ],
+  "main_skill": { "skill_id": "exact_skill_id", "level": 20 },
+  "gear": [],
+  "condition_state": {},
+  "uptime_mode": "max"
+}
+```
+
+The result panel separates engine output from coverage warnings. DPS is displayed only when the engine returns a supported main-skill result. A missing tree, gear contribution, skill ID or slot is reported as a coverage gap rather than guessed. The observed character stat count is shown for context; raw observed stats are not injected as modifiers because they are final values, not contribution lines.
