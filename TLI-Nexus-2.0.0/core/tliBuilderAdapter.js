@@ -1,4 +1,4 @@
-import { calculateWithTliBuilder, getTliBuilderStatus } from './tliBuilderBridge.js';
+import { calculateWithTliBuilder, getTliBuilderCatalogs, getTliBuilderStatus } from './tliBuilderBridge.js';
 
 const object = (value) => value && typeof value === 'object' && !Array.isArray(value) ? value : {};
 const cleanId = (value) => {
@@ -13,7 +13,8 @@ const numericSlot = (value) => {
 };
 const uniqueBy = (rows, key) => [...new Map(rows.map((row) => [key(row), row])).values()];
 
-function normalizeSkills(intelSkills, configuredSkills, warnings) {
+function normalizeSkills(intelSkills, configuredSkills, warnings, catalogSkills = []) {
+  const knownIds = new Set(catalogSkills.map((row) => cleanId(row.id ?? row.skill_id)).filter(Boolean));
   if (Array.isArray(configuredSkills)) {
     return configuredSkills.slice(0, 40).filter((row) => {
       const slot = numericSlot(row?.slot);
@@ -40,10 +41,11 @@ function normalizeSkills(intelSkills, configuredSkills, warnings) {
     rows.push({ slot, skill_id: skillId, level: hasLevel ? Number(row.level) : 1, enabled: true });
     if (!hasLevel) warnings.push(`Для навыка ID ${skillId} уровень не был найден; использован API-default 1. Проверь его перед расчётом.`);
   }
+  for (const row of rows) if (knownIds.size && !knownIds.has(row.skill_id)) warnings.push('Навык ID '+row.skill_id+' отсутствует в каталоге активного сезона TLIBuilder; движок может вернуть unsupported.');
   return uniqueBy(rows, (row) => String(row.slot)).sort((a, b) => a.slot - b.slot);
 }
 
-function resolveMainSkill(build, intelSkills, configuredMainSkill, skills, warnings) {
+function resolveMainSkill(build, intelSkills, configuredMainSkill, skills, warnings, catalogSkills = []) {
   const configured = object(configuredMainSkill);
   if (configured.skill_id || configured.skillId) {
     const skillId = cleanId(configured.skill_id ?? configured.skillId);
@@ -54,7 +56,8 @@ function resolveMainSkill(build, intelSkills, configuredMainSkill, skills, warni
   if (!wanted) return null;
   const match = (Array.isArray(intelSkills) ? intelSkills : []).find((row) => {
     const id = String(row.id ?? '').trim().toLocaleLowerCase('ru');
-    const name = String(row.name ?? '').trim().toLocaleLowerCase('ru');
+    const catalog = catalogSkills.find((item) => cleanId(item.id ?? item.skill_id) === cleanId(row.id));
+    const name = String(row.name ?? catalog?.name ?? catalog?.display_name ?? '').trim().toLocaleLowerCase('ru');
     return wanted === id || (name && wanted === name);
   });
   if (!match) {
@@ -67,14 +70,41 @@ function resolveMainSkill(build, intelSkills, configuredMainSkill, skills, warni
   return { skill_id: skillId, level: Math.max(1, Number(match.level) || Number(slotted?.level) || 1) };
 }
 
-export function buildTliBuilderRequest({ build = {}, intel = {}, profile = null } = {}) {
+export function buildTliBuilderRequest({ build = {}, intel = {}, profile = null, catalogs = {} } = {}) {
   const config = object(build.engineConfig);
   const warnings = [];
   const intelSkills = Array.isArray(intel.skills) ? intel.skills : [];
-  const skills = normalizeSkills(intelSkills, config.skills, warnings);
-  const main_skill = resolveMainSkill(build, intelSkills, config.main_skill, skills, warnings);
+  const catalogSkills = Array.isArray(catalogs.skills) ? catalogs.skills : [];
+  const skills = normalizeSkills(intelSkills, config.skills, warnings, catalogSkills);
+  const main_skill = resolveMainSkill(build, intelSkills, config.main_skill, skills, warnings, catalogSkills);
 
-  const slots = Array.isArray(config.slots) ? config.slots.slice(0, 12).map((slot) => {
+  const configuredSlots = Array.isArray(config.slots) && config.slots.length ? config.slots : null;
+  const talentMatches = [];
+  const treeRows = Array.isArray(catalogs.trees) ? catalogs.trees : [];
+  const nodeIndex = new Map();
+  for (const tree of treeRows) for (const node of (tree.nodes || [])) {
+    const gameId = cleanId(node.game_id);
+    if (!gameId) continue;
+    const list = nodeIndex.get(gameId) || [];
+    list.push({ treeName: tree.name, nodeId: node.id }); nodeIndex.set(gameId, list);
+  }
+  for (const row of (Array.isArray(intel.talents) ? intel.talents : [])) {
+    const matches = nodeIndex.get(cleanId(row.id)) || [];
+    if (matches.length === 1 && matches[0].treeName && matches[0].nodeId) talentMatches.push({ ...matches[0], observed: row });
+    else if (matches.length > 1) warnings.push('ID таланта '+row.id+' найден в нескольких деревьях TLIBuilder; автоматическое сопоставление пропущено.');
+  }
+  const autoTreeMap = new Map();
+  for (const match of talentMatches) {
+    const nodeStates = autoTreeMap.get(match.treeName) || {};
+    const rank = Number(match.observed.level);
+    nodeStates[match.nodeId] = Number.isInteger(rank) && rank >= 1 && rank <= 5 ? rank : 1;
+    if (!(Number.isInteger(rank) && rank >= 1 && rank <= 5)) warnings.push('Для узла '+match.nodeId+' не найдено подтверждённое число очков; для пробного расчёта выставлено 1 очко. Проверь распределение вручную.');
+    autoTreeMap.set(match.treeName, nodeStates);
+  }
+  const rawSlots = configuredSlots || [...autoTreeMap.entries()].map(([treeName, nodeStates]) => ({ treeName, nodeStates }));
+  if (!configuredSlots && talentMatches.length) warnings.push('Часть талантов автоматически сопоставлена по точному game_id каталога сезона. Проверь очки узлов: лог не всегда сообщает распределение рангов.');
+
+  const slots = rawSlots.slice(0, 12).map((slot) => {
     if (slot === null) return null;
     const treeName = String(slot?.treeName || '').trim();
     const nodeStates = object(slot?.nodeStates);
@@ -86,9 +116,8 @@ export function buildTliBuilderRequest({ build = {}, intel = {}, profile = null 
       ? { coreTalentSelections: object(slot.coreTalentSelections) } : {}) };
   }) : [];
 
-  if (!slots.some(Boolean)) {
-    warnings.push('Деревья талантов не переданы: Character Intelligence обнаруживает отдельные ID, но пока не восстанавливает выбранные узлы и распределение очков. Расчёт не учитывает таланты.');
-  }
+  if (!slots.some(Boolean)) warnings.push('Деревья талантов не восстановлены: ID из лога не совпали с game_id узлов активного каталога, либо каталог сезона пуст. Расчёт не учитывает таланты.');
+  if (catalogs.season && build.season && !String(build.season).toLowerCase().includes(String(catalogs.season).toLowerCase().replace(/[^a-z0-9]/g,'')) && !String(catalogs.season).toLowerCase().includes(String(build.season).toLowerCase().replace(/[^a-z0-9]/g,''))) warnings.push('Сезон билда ('+build.season+') отличается от активного сезона TLIBuilder ('+catalogs.season+'). Проверь, что выбрана правильная база.');
   if (!Array.isArray(config.gear) || !config.gear.length) {
     warnings.push('Экипировка не передана в движок: наблюдаемые PutOn/PutOff и ID предметов не содержат полного набора слотов и строк аффиксов. Для корректного расчёта экипировку нужно указать в engineConfig.gear.');
   }
@@ -141,7 +170,9 @@ export async function calculateTliBuilderBuild(input) {
   if (!status.connected) {
     return { connected: false, status, coverage: null, result: null };
   }
-  const { payload, coverage } = buildTliBuilderRequest(input);
+  const catalogs = await getTliBuilderCatalogs();
+  const { payload, coverage } = buildTliBuilderRequest({ ...input, catalogs });
+  coverage.catalogs = { season: catalogs.season, skills: catalogs.skills.length, trees: catalogs.trees.length };
   const result = await calculateWithTliBuilder(payload);
   return { connected: true, status, coverage, result };
 }
