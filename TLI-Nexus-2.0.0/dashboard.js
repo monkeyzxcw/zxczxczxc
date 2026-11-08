@@ -6,7 +6,7 @@ const statFields = [
 ];
 const PAGE_META={overview:['COMMAND CENTER','Обзор'],characters:['CHARACTER ROSTER','Персонажи'],loot:['DROP TRACKER','Лут и сессии'],items:['ITEM DATABASE','База предметов'],economy:['MARKET INTELLIGENCE','Экономика'],builds:['BUILD LAB','Лаборатория билдов'],analyzer:['CHARACTER INTELLIGENCE','Анализ персонажа'],farming:['FARM PERFORMANCE','Фарм и аналитика'],tactics:['FIELD NOTES','Тактики и заметки'],settings:['PREFERENCES','Настройки']};
 let data={schemaVersion:2,settings:{},characterProfiles:[],builds:[],tactics:[],farmingSessions:[],priceWatch:[],priceHistory:[],notes:[]};
-let live={}, activePage='overview', itemQueryTimer=null, iconCache=new Map(), selectedBuildId=null, selectedTacticId=null, selectedProfileId=null, selectedBuildObservedStats=[], latestAnalysis=null, equipmentLabItems=[], equipmentLabProfileId=null, equipmentLabBuildId='profile-default', equipmentLabEvidenceFingerprint='';
+let live={}, intelRenderSequence=0, activePage='overview', itemQueryTimer=null, iconCache=new Map(), selectedBuildId=null, selectedTacticId=null, selectedProfileId=null, selectedBuildObservedStats=[], latestAnalysis=null, equipmentLabItems=[], equipmentLabProfileId=null, equipmentLabBuildId='profile-default', equipmentLabEvidenceFingerprint='';
 const esc=(v)=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const number=(v,d=1)=>Number(v||0).toLocaleString('ru-RU',{maximumFractionDigits:d});
 const money=(v)=>v===null||v===undefined||!Number.isFinite(Number(v))?'—':`${number(v,2)} FE`;
@@ -117,6 +117,40 @@ function renderCharacterIntel(profile=activeProfile()){
   $('character-intel-limitations').textContent=(intel.limitations||[]).join(' ');
   $('rescan-character-log').disabled=!live.connected;
   $('import-intel-to-build').disabled=!identity&&!stats.length&&!skills.length&&!talents.length&&!inventoryItems.length;
+  const resolutionSequence=++intelRenderSequence;
+  if(typeof window.nexus.resolveCharacterIntelNames==='function'){
+    window.nexus.resolveCharacterIntelNames(intel).then(resolved=>{
+      if(resolutionSequence!==intelRenderSequence)return;
+      const skillEls=[...$('character-intel-skills').querySelectorAll('.intel-entry')];
+      (resolved.skills||[]).forEach((row,index)=>{
+        const el=skillEls[index];if(!el)return;
+        const title=el.querySelector('b');if(title)title.textContent=row.name||'Название навыка не найдено';
+        const detail=el.querySelector('small');if(detail)detail.textContent=[row.level!=null?'Уровень '+row.level:'',row.slot?'Позиция '+row.slot:''].filter(Boolean).join(' · ');
+      });
+      const talentEls=[...$('character-intel-talents').querySelectorAll('.intel-entry')];
+      (resolved.talents||[]).forEach((row,index)=>{
+        const el=talentEls[index];if(!el)return;
+        const title=el.querySelector('b');if(title)title.textContent=row.name||'Название таланта не найдено';
+        const details=el.querySelectorAll('small');
+        if(details[0])details[0].textContent=row.description||[row.level!=null?'Уровень '+row.level:'',row.slot?'Позиция '+row.slot:''].filter(Boolean).join(' · ');
+      });
+      const gearEls=[...$('intel-explicit-equipment').querySelectorAll('.explicit-equipment-row')];
+      (resolved.explicitEquipment||[]).forEach((row,index)=>{
+        const el=gearEls[index];if(!el)return;
+        const title=el.querySelector('b');if(title)title.textContent=row.name||'Предмет не распознан';
+        const details=el.querySelectorAll('small');
+        if(details[0])details[0].textContent=(row.slotName||row.slotRaw||'Слот не определён')+' · '+(row.itemType||'Экипировка');
+        if(details[1])details[1].textContent=(row.affixes||[]).map(a=>[a.name||a.attributeName||'Модификатор не распознан',a.tierRaw||''].filter(Boolean).join(' · ')).join(' | ')||'Аффиксы не найдены';
+      });
+      const inventoryEls=[...$('character-intel-inventory').querySelectorAll('.intel-inventory-item')];
+      (resolved.latestInventory?.items||[]).forEach((row,index)=>{
+        const el=inventoryEls[index];if(!el)return;
+        const title=el.querySelector('b');if(title)title.textContent=row.name||'Предмет не распознан';
+      });
+      const catalog=resolved.catalogResolution||{};
+      if(catalog.imported)$('character-intel-source').title='Справочник: '+(catalog.resolvedTalents||0)+' талантов, '+(catalog.resolvedItems||0)+' предметов, '+(catalog.resolvedAffixes||0)+' аффиксов сопоставлено';
+    }).catch(()=>{});
+  }
 }
 async function renderCharacterReport(profile=activeProfile()){
   if(!profile){
