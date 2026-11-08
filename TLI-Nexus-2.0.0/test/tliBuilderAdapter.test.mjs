@@ -77,3 +77,22 @@ test('maps observed talent game IDs into the exact season tree', () => {
   assert.equal(coverage.talents.configuredNodes, 1);
   assert.equal(coverage.talents.configuredTrees, 1);
 });
+
+test('resolves an observed main skill name through the active catalog without inventing an equipped skill', () => {
+  const { payload, coverage } = buildTliBuilderRequest({
+    build: { mainSkill: 'Catalog Blade' },
+    intel: { skills: [{ id: 'skill_catalog_1', slot: '1', level: 18, levelField: 'SkillLevel' }] },
+    catalogs: { skills: [{ id: 'skill_catalog_1', name: 'Catalog Blade' }], trees: [] },
+  });
+  assert.deepEqual(payload.main_skill, { skill_id: 'skill_catalog_1', level: 18 });
+  assert.equal(coverage.skills.mainSkillMapped, true);
+});
+
+test('does not treat generic Level as a confirmed talent point count', () => {
+  const { payload, coverage } = buildTliBuilderRequest({
+    intel: { talents: [{ id: 'game_node_1', level: 4, levelField: 'Level' }] },
+    catalogs: { trees: [{ name: 'Tree A', nodes: [{ id: 'node_a', game_id: 'game_node_1' }] }] },
+  });
+  assert.deepEqual(payload.slots, [{ treeName: 'Tree A', nodeStates: { node_a: 1 } }]);
+  assert.ok(coverage.warnings.some((warning) => warning.includes('TalentLevel/NodeLevel')));
+});
