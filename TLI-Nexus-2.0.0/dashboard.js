@@ -6,7 +6,7 @@ const statFields = [
 ];
 const PAGE_META={overview:['COMMAND CENTER','Обзор'],characters:['CHARACTER ROSTER','Персонажи'],loot:['DROP TRACKER','Лут и сессии'],items:['ITEM DATABASE','База предметов'],economy:['MARKET INTELLIGENCE','Экономика'],builds:['BUILD LAB','Лаборатория билдов'],analyzer:['CHARACTER INTELLIGENCE','Анализ персонажа'],farming:['FARM PERFORMANCE','Фарм и аналитика'],tactics:['FIELD NOTES','Тактики и заметки'],settings:['PREFERENCES','Настройки']};
 let data={schemaVersion:2,settings:{},characterProfiles:[],builds:[],tactics:[],farmingSessions:[],priceWatch:[],priceHistory:[],notes:[]};
-let live={}, intelRenderSequence=0, activePage='overview', itemQueryTimer=null, iconCache=new Map(), selectedBuildId=null, selectedTacticId=null, selectedProfileId=null, selectedBuildObservedStats=[], latestAnalysis=null, equipmentLabItems=[], equipmentLabProfileId=null, equipmentLabBuildId='profile-default', equipmentLabEvidenceFingerprint='';
+let live={}, intelRenderSequence=0, equipmentRenderSequence=0, activePage='overview', itemQueryTimer=null, iconCache=new Map(), selectedBuildId=null, selectedTacticId=null, selectedProfileId=null, selectedBuildObservedStats=[], latestAnalysis=null, equipmentLabItems=[], equipmentLabProfileId=null, equipmentLabBuildId='profile-default', equipmentLabEvidenceFingerprint='';
 const esc=(v)=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const number=(v,d=1)=>Number(v||0).toLocaleString('ru-RU',{maximumFractionDigits:d});
 const money=(v)=>v===null||v===undefined||!Number.isFinite(Number(v))?'—':`${number(v,2)} FE`;
@@ -133,11 +133,13 @@ function renderCharacterIntel(profile=activeProfile()){
         const title=el.querySelector('b');if(title)title.textContent=row.name||'Название таланта не найдено';
         const details=el.querySelectorAll('small');
         if(details[0])details[0].textContent=row.description||[row.level!=null?'Уровень '+row.level:'',row.slot?'Позиция '+row.slot:''].filter(Boolean).join(' · ');
+        if(details[1])details[1].textContent='ID '+row.id+' · '+(row.sourceAction||'')+' · '+(row.path||'');
       });
       const gearEls=[...$('intel-explicit-equipment').querySelectorAll('.explicit-equipment-row')];
       (resolved.explicitEquipment||[]).forEach((row,index)=>{
         const el=gearEls[index];if(!el)return;
         const title=el.querySelector('b');if(title)title.textContent=row.name||'Предмет не распознан';
+        const detail=el.querySelector('small');if(detail)detail.textContent='×'+(Number(row.count)||1)+' · '+(row.itemType||'Предмет');
         const details=el.querySelectorAll('small');
         if(details[0])details[0].textContent=(row.slotName||row.slotRaw||'Слот не определён')+' · '+(row.itemType||'Экипировка');
         if(details[1])details[1].textContent=(row.affixes||[]).map(a=>[a.name||a.attributeName||'Модификатор не распознан',a.tierRaw||''].filter(Boolean).join(' · ')).join(' | ')||'Аффиксы не найдены';
@@ -258,6 +260,17 @@ function renderEquipmentObserver(profile=activeProfile()){
   if(transitions.length>1){$('live-equipment-list').insertAdjacentHTML('beforeend',`<div class="equipment-transition-history"><b>Недавние изменения</b>${transitions.map(t=>`<div><span>${t.action==='put-on'?'Надето':'Снято'} · ${esc(t.name)} ×${number(t.quantity,0)}</span><small>${date(t.at)}</small></div>`).join('')}</div>`);}
   if(profile?.equipmentHistory?.length){const history=profile.equipmentHistory.slice(-3).reverse();$('live-equipment-list').insertAdjacentHTML('beforeend',`<div class="equipment-transition-history"><b>Предыдущие сохранённые снимки</b>${history.map(x=>`<div><span>${number(x.items?.length||0,0)} типов предметов · ${esc(x.completeness==='partial'?'частичный':'снимок')}</span><small>${date(x.capturedAt)}</small></div>`).join('')}</div>`);}
   void hydrateIcons($('live-equipment-list'));
+  const equipmentSequence=++equipmentRenderSequence;
+  if(rows.length&&typeof window.nexus.resolveCharacterIntelNames==='function'){
+    window.nexus.resolveCharacterIntelNames({explicitEquipment:rows.map(item=>({itemId:item.itemId,name:item.name,affixes:[]}))}).then(resolved=>{
+      if(equipmentSequence!==equipmentRenderSequence)return;
+      const cards=[...$('live-equipment-list').querySelectorAll('.equipment-item')];
+      (resolved.explicitEquipment||[]).forEach((item,index)=>{
+        const title=cards[index]?.querySelector('b');
+        if(title)title.textContent=item.name&&!/^Предмет #\d+$/.test(item.name)?item.name:'Предмет не распознан';
+      });
+    }).catch(()=>{});
+  }
   $('save-equipment-snapshot').disabled=!profile||(!rows.length&&!liveEquipment.lastTransition);
   $('save-equipment-snapshot').title=!profile?'Сначала выбери активный профиль':!rows.length&&!liveEquipment.lastTransition?'Нет подтверждённых событий':'Сохранить частичный снимок';
   $('build-from-equipment').disabled=!rows.length&&!saved?.items?.length;
