@@ -18,6 +18,10 @@ const execFileAsync = promisify(execFile);
 export const GAME_NAMES = ['torchlight_infinite.exe', 'UE_game-Win64-Shipping.exe', 'UE_game.exe', 'TorchlightInfinite.exe'];
 const MAX_CONTEXT_BYTES = 32 * 1024 * 1024;
 const LOG_SETUP_GRACE_MS = 15_000;
+// Process enumeration can briefly miss the game while Windows switches focus,
+// the game changes display mode, or PowerShell/WMI is slow. Keep the log tailer
+// and current session alive during this grace period instead of wiping loot.
+const GAME_PROCESS_MISS_GRACE_MS = 120_000;
 
 export function deriveLogReadiness({ connected, startedAt, liveMessages = 0, socketStarts = 0, liveGameEvents = 0, now = Date.now() } = {}) {
   if (!connected) return { code: 'no-log', label: 'LOG OFFLINE', hint: '' };
@@ -188,7 +192,7 @@ function countCategory(line) {
 export class LiveService {
   constructor({ onUpdate = () => {}, pollMs = 2000, manualLogFile = null, userDataDir = null } = {}) {
     this.onUpdate = onUpdate; this.pollMs = pollMs; this.timer = null; this.tailer = null; this.ingestor = null;
-    this.game = false; this.gameExe = null; this.logFile = null; this.logSource = 'auto'; this.manualLogFile = manualLogFile;
+    this.game = false; this.gameMissingSince = null; this.sessionClosed = false; this.gameExe = null; this.logFile = null; this.logSource = 'auto'; this.manualLogFile = manualLogFile;
     this.items = []; this.totalDrops = 0; this.pickupEvents = 0; this.unrecognized = 0;
     this.startedAt = null; this.lastEventAt = null; this.player = null; this.playerSource = null; this.area = null; this.areaInfo = null;
     this.areaPhase = null; this.areaSignal = null; this.pendingArea = null;
@@ -335,10 +339,27 @@ export class LiveService {
     try {
       const proc = await findGameProcess();
       this.gameExe = proc.exe || this.gameExe;
-      if (proc.running !== this.game) {
-        this.game = proc.running;
-        if (this.game) this.resetSession();
-        else if (!this.manualLogFile) { this.detach(); this.lastError = null; this.emit(); return; }
+      if (proc.running) {
+        if (!this.game && (this.sessionClosed || !this.startedAt)) this.resetSession();
+        this.game = true;
+        this.gameMissingSince = null;
+        this.sessionClosed = false;
+      } else if (!this.manualLogFile) {
+        this.game = false;
+        this.gameMissingSince ||= Date.now();
+        const missDuration = Date.now() - this.gameMissingSince;
+        if (this.tailer && missDuration < GAME_PROCESS_MISS_GRACE_MS) {
+          this.lastError = null;
+          this.emit();
+          return;
+        }
+        if (this.tailer) {
+          this.detach();
+          this.sessionClosed = true;
+        }
+        this.lastError = null;
+        this.emit();
+        return;
       }
       if (this.manualLogFile) {
         if (!fs.existsSync(this.manualLogFile)) {
@@ -362,6 +383,8 @@ export class LiveService {
   }
 
   resetSession() {
+    this.sessionClosed = false;
+    this.gameMissingSince = null;
     this.startedAt = Date.now(); this.totalDrops = 0; this.pickupEvents = 0; this.unrecognized = 0; this.items = []; this.lootTotals = new Map();
     this.player = null; this.playerSource = null; this.area = null; this.areaInfo = null; this.areaPhase = null; this.areaSignal = null; this.pendingArea = null;
     this.messageCount = 0; this.byAction = {}; this.lastMessage = null; this.lastEventAt = null;
@@ -393,13 +416,21 @@ export class LiveService {
     }
   }
 
+  resetStreamState() {
+    // A log rotation/re-attach is a stream boundary, not a new farming session.
+    // Keep elapsed time, accumulated drops, loot totals and FE across it.
+    this.gameLogParser = new GameLogParser();
+    this.ingestor = null;
+  }
+
   async attach(file, source = 'auto') {
     this.detach();
-    this.resetSession();
+    if (!this.startedAt || this.sessionClosed) this.resetSession();
+    else this.resetStreamState();
     this.tailerState = null; this.historyMessages = 0; this.historyBytes = 0;
     this.historyByAction = {}; this.lastHistoryMessage = null;
     this.logFile = file; this.logSource = source; this.lastError = null; this.indexing = true;
-    this.startedAt = Date.now();
+    if (!this.startedAt) this.startedAt = Date.now();
     this.emit();
 
     let seed, gameSeed;
@@ -457,7 +488,10 @@ export class LiveService {
       },
       onReset: () => {
         this.ingestor?.finish();
-        this.resetSession();
+        // UE log rotation/truncation must not erase the active session's loot.
+        // Rebuild only stream parsers; the session accumulator remains intact.
+        this.resetStreamState();
+        this.gameLogParser = new GameLogParser();
         this.ingestor = new Ingestor(null, callbacks);
         this.emit();
       },
@@ -466,7 +500,7 @@ export class LiveService {
     });
     this.tailer.start();
     this.indexing = false;
-    this.startedAt = Date.now();
+    if (!this.startedAt) this.startedAt = Date.now();
     this.emit();
   }
 
