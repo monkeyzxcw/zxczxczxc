@@ -30,6 +30,7 @@ contextBridge.exposeInMainWorld('nexus', {
   analyzeBuild: (build) => ipcRenderer.invoke('build:analyze', build),
   getTliBuilderStatus: () => ipcRenderer.invoke('tlibuilder:status'),
   calculateWithTliBuilder: (build) => ipcRenderer.invoke('tlibuilder:calculate', build),
+  analyzeBuildWithTliBuilder: (build, intel, profile) => ipcRenderer.invoke('tlibuilder:analyze-build', build, intel, profile),
   analyzeEquipment: (items, priorities) => ipcRenderer.invoke('equipment:analyze', items, priorities),
   compareEquipment: (left, right, priorities) => ipcRenderer.invoke('equipment:compare', left, right, priorities),
   analyzeFarming: (sessions, options) => ipcRenderer.invoke('farm:analyze', sessions, options),
