@@ -157,3 +157,28 @@ test('resource scanner does not treat similarly named UI blueprints as affix def
     fs.rmSync(root, { recursive: true, force: true });
   }
 });
+
+test('resource scanner indexes talent node names and localization keys', () => {
+  const root = fs.mkdtempSync(path.join(os.tmpdir(), 'tli-talent-resources-'));
+  try {
+    const data = path.join(root, 'Content', 'Data');
+    const locale = path.join(root, 'Localization', 'ru-RU');
+    fs.mkdirSync(data, { recursive: true });
+    fs.mkdirSync(locale, { recursive: true });
+    fs.writeFileSync(path.join(data, 'DT_TalentNode.json'), JSON.stringify({
+      Exports: [{ Type: 'DataTable', Name: 'DT_TalentNode', Properties: { RowMap: [
+        { Name: 'TalentNode_1001', Value: { TalentNodeId: 1001, NameKey: 'Talent.Power.Name', DescKey: 'Talent.Power.Desc' } },
+      ] } }],
+    }));
+    fs.writeFileSync(path.join(locale, 'TalentText.json'), JSON.stringify({ Entries: [
+      { TextKey: 'Talent.Power.Name', Text: 'Сила атаки' },
+      { TextKey: 'Talent.Power.Desc', Text: 'Увеличивает урон атаки' },
+    ] }));
+    const result = scanGameResourceFolder(root);
+    assert.equal(result.summary.talentDefinitions, 1);
+    assert.equal(result.talentDefinitions[0].id, '1001');
+    assert.equal(result.talentDefinitions[0].nameKeyRaw, 'Talent.Power.Name');
+    assert.equal(result.talentDefinitions[0].descriptionKeyRaw, 'Talent.Power.Desc');
+    assert.equal(result.localizationEntries.find(x => x.key === 'Talent.Power.Name').text, 'Сила атаки');
+  } finally { fs.rmSync(root, { recursive: true, force: true }); }
+});

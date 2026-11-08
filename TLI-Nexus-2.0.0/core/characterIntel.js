@@ -106,10 +106,14 @@ function extractNodeRows(tree, idKeys, type, messageMeta) {
     const levelKey = Object.keys(node).find((key) => ['skilllevel', 'talentlevel', 'nodelevel', 'level', 'lv'].includes(normalizeKey(key))) || null;
     const level = levelKey ? toNumber(direct(node, [levelKey])) : null;
     const slot = direct(node, ['SkillSlot', 'SkillPosition', 'SlotIndex', 'TalentSlot']);
-    const name = direct(node, ['SkillName', 'TalentName', 'Name', 'DisplayName']);
+    const name = direct(node, ['SkillName', 'TalentName', 'TalentTitle', 'NodeName', 'SkillTitle', 'Name', 'DisplayName']);
+    const nameKey = direct(node, ['TalentNameKey', 'SkillNameKey', 'NodeNameKey', 'NameKey', 'TextKey', 'LocKey', 'TitleKey']);
+    const descriptionKey = direct(node, ['TalentDescriptionKey', 'DescriptionKey', 'DescKey', 'EffectTextKey']);
     const key = `${type}:${id}:${slot ?? ''}`;
     rows.set(key, {
-      id, idField: capText(idKey, 80), name: name ? capText(name, 100) : null, level, levelField: levelKey ? capText(levelKey, 80) : null, slot: slot ? capText(slot, 40) : null,
+      id, idField: capText(idKey, 80), name: name ? capText(name, 100) : null,
+      nameKey: nameKey ? capText(nameKey, 240) : null, descriptionKey: descriptionKey ? capText(descriptionKey, 240) : null,
+      level, levelField: levelKey ? capText(levelKey, 80) : null, slot: slot ? capText(slot, 40) : null,
       kind: type, sourceAction: messageMeta.action, sourceKind: messageMeta.kind,
       observedAt: messageMeta.at, path: [...nodePath, idKey].join('.'), confidence: 'explicit-id',
     });

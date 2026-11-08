@@ -103,3 +103,58 @@
 .tlidb-result-meta{display:flex;gap:5px 9px;flex-wrap:wrap;color:#b5bfd4;font-size:8px}
 .tlidb-result .btn{white-space:nowrap;padding:6px 9px;font-size:8px}
 @media(max-width:760px){.tlidb-search-controls{grid-template-columns:1fr}.tlidb-result{grid-template-columns:1fr}.tlidb-result .btn{justify-self:start}}
+
+
+/* 2.3.0 — calmer, readable companion UI */
+.hero-card[hidden]{display:none!important}
+:root{--line:#292f40;--muted:#929bad;--shadow:0 12px 34px #0003}
+body{font-size:14px;line-height:1.5;background:#0d111a;color:#e7eaf2}
+.sidebar{width:218px;padding:22px 14px 16px;background:#111621;border-right:1px solid #242b3a}
+.main{margin-left:218px;padding:0 34px 34px;max-width:1760px}
+.brand b{font-size:16px}.brand small{font-size:9px;letter-spacing:1.2px}
+.sidebar-label{font-size:10px;letter-spacing:1.5px;margin:27px 10px 10px;color:#78849a}
+.nav-item{font-size:13px;min-height:40px;padding:10px 12px;border-radius:8px;color:#aeb8c9}
+.nav-item span{font-size:15px;width:22px}
+.nav-item.active{background:#25233a;color:#e6ddff;border-color:#3b3458}
+.nav-more{margin:8px 4px 0;border-top:1px solid #252c3b;padding-top:9px}
+.nav-more summary{cursor:pointer;list-style:none;padding:9px 10px;color:#8792a7;font-size:12px;border-radius:7px}
+.nav-more summary::-webkit-details-marker{display:none}
+.nav-more summary:after{content:'＋';float:right;color:#7e88a0}
+.nav-more[open] summary:after{content:'−'}
+.nav-more .nav-item{width:100%;margin:3px 0}
+.topbar{height:76px;margin-bottom:24px}
+.topbar h1{font-size:25px}
+.eyebrow{font-size:9px;letter-spacing:1.25px}
+.top-actions #show-hud,.top-actions #backup-export{display:none}
+.status-pill,.season-pill{font-size:10px;padding:7px 12px}
+.kpi-grid{gap:14px;margin:16px 0}
+.kpi,.panel{border-color:#293143;background:#151b27;box-shadow:0 8px 25px #0002;border-radius:12px}
+.kpi{padding:18px 19px}
+.kpi-label{font-size:10px;letter-spacing:.8px}
+.kpi strong{font-size:27px;margin:10px 0 4px}
+.kpi small{font-size:11px;color:#8d99ad}
+.panel{padding:20px}
+.panel-head h3{font-size:15px}
+.panel-head small,.muted{font-size:11px}
+.page-intro h2{font-size:26px}
+.page-intro p,.hero-copy p{font-size:13px;line-height:1.65;color:#aab3c3}
+.btn{font-size:12px;padding:10px 15px;border-radius:8px}
+.btn.small{font-size:11px;padding:8px 11px}
+.form-grid label,.settings-form label,.panel form>label,.analyzer-toolbar label{font-size:12px}
+.form-grid input,.form-grid select,.panel input,.panel select,.panel textarea,.settings-form input,.analyzer-toolbar select{font-size:13px;padding:10px 11px;border-radius:8px}
+.finding b,.build-row b,.tactic-card b{font-size:12px}
+.finding p,.build-row small,.tactic-card small{font-size:11px;line-height:1.6}
+table{font-size:12px}
+th{font-size:10px}td{font-size:12px}
+.drop-row b,.mini-row,.equipment-item b{font-size:12px}
+.drop-row small,.equipment-item small{font-size:10px}
+.advanced-panel{border:1px solid #2a3243;border-radius:9px;padding:12px 14px;background:#111722}
+.advanced-panel>summary{cursor:pointer;color:#aeb9cb;font-size:12px;font-weight:600;list-style:none}
+.advanced-panel>summary::-webkit-details-marker{display:none}
+.advanced-panel>summary:after{content:'Показать';float:right;color:#8f9ab0;font-weight:400}
+.advanced-panel[open]>summary:after{content:'Скрыть'}
+.character-advanced{margin-top:14px}
+.character-advanced>summary{font-size:13px;padding:4px}
+.stat-editor{margin-top:14px}
+@media(max-width:1050px){.sidebar{width:190px}.main{margin-left:190px;padding:0 20px 25px}.kpi-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:760px){.sidebar{width:66px;padding:12px 6px}.main{margin-left:66px;padding:0 12px 20px}.brand div,.sidebar-label,.nav-item:not(.active),.sidebar-bottom{display:none}.nav-item{font-size:0;justify-content:center}.nav-item span{font-size:17px}.nav-more summary{font-size:0}.nav-more summary:after{font-size:14px}.topbar{gap:6px}.top-actions{gap:4px}}

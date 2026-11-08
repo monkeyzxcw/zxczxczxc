@@ -12,6 +12,7 @@ import { buildProfileEquipmentSnapshot, captureProfileCharacterSnapshot, createC
 import { buildAnonymizedDiagnostic, buildCharacterReport } from './core/characterReport.js';
 import { compareCharacterSnapshots } from './core/snapshotHistory.js';
 import { analyzeEquipment, compareEquipment } from './core/equipmentIntelligence.js';
+import { resolveCharacterIntelNames } from './core/characterResolver.js';
 import { scanGameResourceFolder, resourceCatalogStatus } from './core/gameResourceCatalog.js';
 import { fetchTlidbCatalog, searchTlidbAffixes, tlidbCatalogStatus } from './core/tlidbCatalog.js';
 import { calculateWithTliBuilder, getTliBuilderStatus } from './core/tliBuilderBridge.js';
@@ -470,6 +471,7 @@ app.whenReady().then(() => {
     return { canceled: false, data: appData, importedPricePoints };
   });
   ipcMain.handle('game-resources:status', () => resourceCatalogStatus(readGameResourceIndex()));
+  ipcMain.handle('character:resolve-names', (_event, intel) => resolveCharacterIntelNames(intel || {}, readGameResourceIndex()));
   ipcMain.handle('game-resources:import', async () => {
     const result = await dialog.showOpenDialog(dashboard, {
       title: 'Выбери папку с экспортом FModel / Unreal JSON',

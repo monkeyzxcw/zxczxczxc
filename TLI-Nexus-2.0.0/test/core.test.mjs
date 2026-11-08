@@ -12,7 +12,7 @@ import { LogTailer } from '../core/logTailer.js';
 import { EtorLogTailer, shouldExcludeEtorLine } from '../core/etorLogTailer.js';
 import { validateLog } from '../core/logLocator.js';
 import { sessionStats, median, exportEventsCsv } from '../core/stats.js';
-import { isGameProcessName, LiveService, deriveLogReadiness } from '../core/liveService.js';
+import { isGameProcessName, LiveService, deriveLogReadiness, shouldKeepSessionAfterProcessMiss } from '../core/liveService.js';
 import { GameLogParser, FE_ID, gameMapName } from '../core/gameLogEvents.js';
 import { getItemName } from '../core/itemCatalog.js';
 import { CommunityPriceFeed, ExchangePriceTracker, PriceBook, summarizeLoot } from '../core/priceBook.js';
@@ -549,4 +549,12 @@ test('equipment parser ignores generic bag moves and does not call them equipped
   const delta = parser.parseLine(line('BagMgr@:RemoveBagItem PageId = 100 SlotId = 7'));
   assert.equal(delta.delta.kind, 'neutral');
   assert.equal(parser.snapshot().equipment.totalItems, 0);
+});
+
+test('game session survives temporary process-detection misses while log tailer remains attached', () => {
+  const now = 200_000;
+  assert.equal(shouldKeepSessionAfterProcessMiss({ hasTailer: true, missingSince: 190_000, now, graceMs: 120_000 }), true);
+  assert.equal(shouldKeepSessionAfterProcessMiss({ hasTailer: false, missingSince: 190_000, now, graceMs: 120_000 }), false);
+  assert.equal(shouldKeepSessionAfterProcessMiss({ hasTailer: true, missingSince: 10_000, now, graceMs: 120_000 }), false);
+  assert.equal(shouldKeepSessionAfterProcessMiss({ hasTailer: true, missingSince: null, now, graceMs: 120_000 }), false);
 });
