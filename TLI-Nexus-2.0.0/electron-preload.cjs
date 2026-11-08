@@ -5,6 +5,7 @@ contextBridge.exposeInMainWorld('nexus', {
   useAutoLog: () => ipcRenderer.invoke('live:auto-log'),
   refreshCharacterIntel: () => ipcRenderer.invoke('live:refresh-character'),
   getCharacterReport: (profileId) => ipcRenderer.invoke('character:report', profileId),
+  resolveCharacterIntelNames: (intel) => ipcRenderer.invoke('character:resolve-names', intel),
   captureCharacterSnapshot: (profileId) => ipcRenderer.invoke('character:capture-snapshot', profileId),
   compareCharacterSnapshots: (previous, current) => ipcRenderer.invoke('character:compare-snapshots', previous, current),
   exportCharacterDiagnostics: (profileId) => ipcRenderer.invoke('character:export-diagnostics', profileId),
