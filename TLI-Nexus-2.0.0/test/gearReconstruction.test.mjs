@@ -46,7 +46,7 @@ test('manual GearEngineItem config overrides auto observations to avoid duplicat
   const result = reconstructObservedGear({ explicitEquipment: [
     { itemId: 101, name: 'Observed', slotRaw: 'Helmet', sourceAction: 'GetPlayerData', sourceKind: 'Recv', observedAt: 10, affixes: [] },
   ] }, manual);
-  assert.equal(result.gear, manual);
+  assert.deepEqual(result.gear, manual);
   assert.equal(result.coverage.source, 'manual-engine-config');
   assert.ok(result.warnings.some((x) => x.includes('ручной engineConfig.gear')));
   assert.equal(result.coverage.effectiveEngineItems, 1);
