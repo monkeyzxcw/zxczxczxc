@@ -55,7 +55,7 @@ test('manual GearEngineItem config overrides auto observations to avoid duplicat
 test('keeps explicit legendary grants and belt blend without inventing either', () => {
   const result = reconstructObservedGear({ explicitEquipment: [
     { itemId: 101, name: 'Belt', slotRaw: 'Belt', sourceAction: 'GetPlayerData', sourceKind: 'Recv', observedAt: 10, affixes: [],
-      grantedTalents: ['[Test Talent]'], beltBlend: 'blend-id' },
+      rawFields: [{ key: 'GrantedTalent', value: '[Test Talent]' }, { key: 'BeltBlendId', value: 'blend-id' }] },
   ] });
   assert.deepEqual(result.gear[0].granted_talents, ['[Test Talent]']);
   assert.equal(result.gear[0].belt_blend, 'blend-id');
