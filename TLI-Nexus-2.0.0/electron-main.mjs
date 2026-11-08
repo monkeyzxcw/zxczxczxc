@@ -15,6 +15,7 @@ import { analyzeEquipment, compareEquipment } from './core/equipmentIntelligence
 import { scanGameResourceFolder, resourceCatalogStatus } from './core/gameResourceCatalog.js';
 import { fetchTlidbCatalog, searchTlidbAffixes, tlidbCatalogStatus } from './core/tlidbCatalog.js';
 import { calculateWithTliBuilder, getTliBuilderStatus } from './core/tliBuilderBridge.js';
+import { calculateTliBuilderBuild } from './core/tliBuilderAdapter.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const DEFAULTS = DEFAULT_APP_DATA;
@@ -512,6 +513,7 @@ app.whenReady().then(() => {
   ipcMain.handle('build:analyze', (_event, build) => analyzeBuild(build));
   ipcMain.handle('tlibuilder:status', () => getTliBuilderStatus());
   ipcMain.handle('tlibuilder:calculate', (_event, build) => calculateWithTliBuilder(build));
+  ipcMain.handle('tlibuilder:analyze-build', (_event, build, intel, profile) => calculateTliBuilderBuild({ build, intel, profile }));
   ipcMain.handle('farm:analyze', (_event, sessions, options = {}) => analyzeFarmingSessions(Array.isArray(sessions) ? sessions.slice(-1000) : [], { profileId: options.profileId || null, strategy: options.strategy || null, since: Number(options.since) || null }));
   ipcMain.handle('build:compare', (_event, left, right) => compareBuilds(left, right));
   ipcMain.handle('build:encode', (_event, build) => encodeBuild(build));
