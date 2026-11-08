@@ -22,6 +22,12 @@ function resolveSlot(raw) {
   return SLOT_ALIASES.get(key) || null;
 }
 
+function isAuthoritativeEquipmentSnapshot(item) {
+  const action = String(item?.sourceAction || '');
+  const kind = String(item?.sourceKind || '');
+  return /^(GetPlayerData|GetEquipment|GetPlayerEquipment|GetEquipData)$/i.test(action) && (!kind || /^Recv/i.test(kind));
+}
+
 function explicitRawLines(item) {
   const lines = [];
   for (const affix of Array.isArray(item.affixes) ? item.affixes : []) {
@@ -58,7 +64,12 @@ export function reconstructObservedGear(intel = {}, configuredGear = []) {
   const observed = Array.isArray(intel.explicitEquipment) ? intel.explicitEquipment : [];
   const bySlot = new Map();
   const unresolvedSlotItems = [];
+  const nonSnapshotItems = [];
   for (const item of observed) {
+    if (!isAuthoritativeEquipmentSnapshot(item)) {
+      nonSnapshotItems.push(item);
+      continue;
+    }
     const slot = resolveSlot(item?.slotRaw);
     if (!slot) {
       unresolvedSlotItems.push(item);
@@ -91,6 +102,7 @@ export function reconstructObservedGear(intel = {}, configuredGear = []) {
     }
   }
   if (unresolvedSlotItems.length) warnings.push(`${unresolvedSlotItems.length} предмет(ов) имеют явный ID, но слот не удалось подтвердить. Они не отправлены в gear.`);
+  if (nonSnapshotItems.length) warnings.push(`${nonSnapshotItems.length} записей экипировки пришли не из подтверждённого snapshot-ответа GetPlayerData/GetEquipment. События PutOn/PutOff и исторические наблюдения пока не используются как текущее состояние.`);
 
   const configured = Array.isArray(configuredGear) ? configuredGear.slice(0, 40) : [];
   // Manual engineConfig remains the authoritative override. Automatically observed items
@@ -110,6 +122,7 @@ export function reconstructObservedGear(intel = {}, configuredGear = []) {
     warnings: [...new Set(warnings)],
     coverage: {
       observedItems: observed.length,
+      authoritativeSnapshots: observed.length - nonSnapshotItems.length,
       recognizedSlots: gear.length,
       unresolvedSlots: unresolvedSlotItems.length,
       itemsWithRawAffixLines: gear.filter((row) => row.unresolved_texts?.length).length,
