@@ -96,3 +96,30 @@ test('does not treat generic Level as a confirmed talent point count', () => {
   assert.deepEqual(payload.slots, [{ treeName: 'Tree A', nodeStates: { node_a: 1 } }]);
   assert.ok(coverage.warnings.some((warning) => warning.includes('TalentLevel/NodeLevel')));
 });
+
+test('passes authoritative observed equipment and raw modifier text to GearEngineItem', () => {
+  const { payload, coverage } = buildTliBuilderRequest({
+    build: { mainSkill: 'Slash' },
+    intel: {
+      skills: [{ id: 'skill_1', name: 'Slash', slot: '1', level: 20, levelField: 'SkillLevel' }],
+      talents: [{ id: 'talent_game_1', level: 1, levelField: 'TalentLevel' }],
+      explicitEquipment: [{
+        itemId: 9001, name: 'Observed Helmet', slotRaw: 'Helmet',
+        sourceAction: 'GetPlayerData', sourceKind: 'Recv', observedAt: 100,
+        affixes: [{ values: [{ key: 'RawText', value: '+12% Max Life' }] }],
+      }],
+    },
+    catalogs: {
+      skills: [{ id: 'skill_1', name: 'Slash' }],
+      trees: [{ name: 'Tree A', nodes: [{ id: 'node_1', game_id: 'talent_game_1' }] }],
+    },
+  });
+  assert.equal(payload.gear.length, 1);
+  assert.equal(payload.gear[0].item_name, 'Observed Helmet');
+  assert.equal(payload.gear[0].slot, 'helmet');
+  assert.deepEqual(payload.gear[0].unresolved_texts, ['+12% Max Life']);
+  assert.equal(coverage.equipment.recognizedSlots, 1);
+  assert.equal(coverage.equipment.effectiveEngineItems, 1);
+  assert.equal(coverage.readyForDps, true);
+  assert.ok(coverage.warnings.some((x) => x.includes('Поддержки активных навыков пока не восстановлены')));
+});

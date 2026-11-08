@@ -1,4 +1,5 @@
 import { calculateWithTliBuilder, getTliBuilderCatalogs, getTliBuilderStatus } from './tliBuilderBridge.js';
+import { reconstructObservedGear } from './gearReconstruction.js';
 
 const object = (value) => value && typeof value === 'object' && !Array.isArray(value) ? value : {};
 const cleanId = (value) => {
@@ -137,8 +138,12 @@ export function buildTliBuilderRequest({ build = {}, intel = {}, profile = null,
   const buildSeasonKey = String(build.season || '').toLowerCase().replace(/[^a-z0-9]/g, '');
   const catalogSeasonKey = String(catalogs.season || '').toLowerCase().replace(/[^a-z0-9]/g, '');
   if (buildSeasonKey && catalogSeasonKey && !buildSeasonKey.includes(catalogSeasonKey) && !catalogSeasonKey.includes(buildSeasonKey)) warnings.push('Сезон билда ('+build.season+') отличается от активного сезона TLIBuilder ('+catalogs.season+'). Проверь, что выбрана правильная база.');
-  if (!Array.isArray(config.gear) || !config.gear.length) {
-    warnings.push('Экипировка не передана в движок: наблюдаемые PutOn/PutOff и ID предметов не содержат полного набора слотов и строк аффиксов. Для корректного расчёта экипировку нужно указать в engineConfig.gear.');
+  const gearResult = reconstructObservedGear(intel, config.gear);
+  warnings.push(...gearResult.warnings);
+  const attachedSupports = Array.isArray(config.attached_supports) ? config.attached_supports.slice(0, 40) : [];
+  if (!attachedSupports.length) warnings.push('Поддержки активных навыков пока не восстановлены: в наблюдениях нет подтверждённой связи support ID → слот активного навыка.');
+  if (gearResult.coverage.recognizedSlots && gearResult.coverage.itemsWithRawAffixLines < gearResult.coverage.recognizedSlots) {
+    warnings.push('Роллы аффиксов восстановлены не полностью: TLIBuilder получает только явно наблюдаемые полные строки модификаторов; одиночные числовые поля и неизвестные ID не превращаются в роллы.');
   }
   if (!main_skill) warnings.push('Основной навык не подтверждён точным ID. Результат не будет содержать достоверный DPS основного навыка.');
   if (!skills.length) warnings.push('Нет навыков с подтверждёнными числовыми слотами 1–9 и ID.');
@@ -148,7 +153,7 @@ export function buildTliBuilderRequest({ build = {}, intel = {}, profile = null,
     slates: Array.isArray(config.slates) ? config.slates.slice(0, 40) : [],
     prisms: Array.isArray(config.prisms) ? config.prisms.slice(0, 20) : [],
     condition_state: object(config.condition_state),
-    gear: Array.isArray(config.gear) ? config.gear.slice(0, 40) : [],
+    gear: gearResult.gear,
     character: Array.isArray(config.character) ? config.character.slice(0, 100) : [],
     skills,
     ...(main_skill ? { main_skill } : {}),
@@ -157,7 +162,7 @@ export function buildTliBuilderRequest({ build = {}, intel = {}, profile = null,
     trait_slot_levels: Array.isArray(config.trait_slot_levels) ? config.trait_slot_levels.slice(0, 4).map((x) => Math.max(1, Math.min(5, Number(x) || 1))) : [],
     advanced_trait_selections: Array.isArray(config.advanced_trait_selections) ? config.advanced_trait_selections.slice(0, 20).map(String) : [],
     custom_mods: Array.isArray(config.custom_mods) ? config.custom_mods.slice(0, 100).map(String) : [],
-    attached_supports: Array.isArray(config.attached_supports) ? config.attached_supports.slice(0, 40) : [],
+    attached_supports: attachedSupports,
     memory_effects: Array.isArray(config.memory_effects) ? config.memory_effects.slice(0, 40) : [],
     spirit_effects: Array.isArray(config.spirit_effects) ? config.spirit_effects.slice(0, 40) : [],
     trait_effects: Array.isArray(config.trait_effects) ? config.trait_effects.slice(0, 40) : [],
@@ -172,14 +177,16 @@ export function buildTliBuilderRequest({ build = {}, intel = {}, profile = null,
   const observedTalents = Array.isArray(intel.talents) ? intel.talents.length : 0;
   const configuredTreeNodes = slots.reduce((sum, slot) => sum + Object.keys(slot?.nodeStates || {}).length, 0);
   const configuredGear = payload.gear.length;
+  const effectiveGear = gearResult.coverage.effectiveEngineItems;
   const coverage = {
     skills: { observed: intelSkills.length, mapped: skills.length, mainSkillMapped: Boolean(main_skill) },
     talents: { observedIds: observedTalents, configuredTrees: slots.filter(Boolean).length, configuredNodes: configuredTreeNodes },
-    equipment: { observedExplicitItems: explicitGear, engineItems: configuredGear },
+    equipment: { observedExplicitItems: explicitGear, recognizedSlots: gearResult.coverage.recognizedSlots, engineItems: configuredGear, effectiveEngineItems: effectiveGear, coverage: gearResult.coverage },
+    supports: { attached: attachedSupports.length, source: attachedSupports.length ? 'manual-engine-config' : 'not-observed' },
     observedStatFields: confirmedStats,
     warnings: [...new Set(warnings)],
-    readyForDps: Boolean(main_skill && skills.length && configuredGear && configuredTreeNodes),
-    readyForDefense: Boolean(configuredGear || payload.character.length),
+    readyForDps: Boolean(main_skill && skills.length && effectiveGear && configuredTreeNodes),
+    readyForDefense: Boolean(effectiveGear || payload.character.length),
   };
   return { payload, coverage };
 }
