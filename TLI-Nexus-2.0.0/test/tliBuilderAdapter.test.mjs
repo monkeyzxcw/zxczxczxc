@@ -6,8 +6,8 @@ test('maps only explicit skill ids and numeric slots from character intel', () =
   const { payload, coverage } = buildTliBuilderRequest({
     build: { level: 90, mainSkill: 'Main Slash' },
     intel: { skills: [
-      { id: 'skill_main_01', name: 'Main Slash', slot: '1', level: 20 },
-      { id: 'skill_support_02', name: 'Support Skill', slot: '6', level: 15 },
+      { id: 'skill_main_01', name: 'Main Slash', slot: '1', level: 20, levelField: 'SkillLevel' },
+      { id: 'skill_support_02', name: 'Support Skill', slot: '6', level: 15, levelField: 'SkillLevel' },
       { id: 'unknown_slot', name: 'Unknown', slot: 'passive', level: 10 },
     ], talents: [{ id: 'talent_1' }], stats: [] },
   });
@@ -25,7 +25,7 @@ test('maps only explicit skill ids and numeric slots from character intel', () =
 test('does not invent tree nodes or gear from plain text lists', () => {
   const { payload, coverage } = buildTliBuilderRequest({
     build: { level: 90, mainSkill: 'Fire Slash', gearSlots: ['Weapon: Legendary Sword'], talents: ['+10% damage'] },
-    intel: { skills: [{ id: 'skill_1', name: 'Fire Slash', slot: '1', level: 20 }],
+    intel: { skills: [{ id: 'skill_1', name: 'Fire Slash', slot: '1', level: 20, levelField: 'SkillLevel' }],
       explicitEquipment: [{ itemId: 1001, slotRaw: null, affixes: [] }],
       talents: [{ id: 'talent_9' }] },
   });
