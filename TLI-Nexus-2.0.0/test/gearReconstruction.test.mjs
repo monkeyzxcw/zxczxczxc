@@ -6,7 +6,7 @@ test('reconstructs only explicit equipped items with recognized textual slots', 
   const result = reconstructObservedGear({ explicitEquipment: [
     { itemId: 101, name: 'Helmet A', slotRaw: 'Helmet', sourceAction: 'GetPlayerData', sourceKind: 'Recv', observedAt: 10, affixes: [] },
     { itemId: 102, name: 'Ring A', slotRaw: 'Ring1', sourceAction: 'GetPlayerData', sourceKind: 'Recv', observedAt: 11, affixes: [] },
-    { itemId: 103, name: 'Unknown slot', slotRaw: '7', observedAt: 12, affixes: [] },
+    { itemId: 103, name: 'Unknown slot', slotRaw: '7', sourceAction: 'GetPlayerData', sourceKind: 'Recv', observedAt: 12, affixes: [] },
   ] });
   assert.equal(result.gear.length, 2);
   assert.deepEqual(result.gear.map((x) => x.slot).sort(), ['helmet', 'ring1']);
@@ -44,7 +44,7 @@ test('does not turn scalar affix values or unknown IDs into fake engine stats', 
 test('manual GearEngineItem config overrides auto observations to avoid duplicate items', () => {
   const manual = [{ contributions: [{ stat: 'max_life', display_value: 100, unit: '', item_name: 'Manual', slot: 'helmet' }] }];
   const result = reconstructObservedGear({ explicitEquipment: [
-    { itemId: 101, name: 'Observed', slotRaw: 'Helmet', observedAt: 10, affixes: [] },
+    { itemId: 101, name: 'Observed', slotRaw: 'Helmet', sourceAction: 'GetPlayerData', sourceKind: 'Recv', observedAt: 10, affixes: [] },
   ] }, manual);
   assert.equal(result.gear, manual);
   assert.equal(result.coverage.source, 'manual-engine-config');
