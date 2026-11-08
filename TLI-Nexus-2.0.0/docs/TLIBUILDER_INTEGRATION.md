@@ -54,10 +54,10 @@ const result = await window.nexus.calculateWithTliBuilder({
 
 The dashboard's **«Расчёт TLIBuilder»** action sends the selected saved build and its profile's latest Character Intelligence snapshot through `core/tliBuilderAdapter.js`.
 
-The adapter maps only explicit skill IDs that also have a numeric slot (1–9). It can match the build's main-skill field only when it exactly matches an observed skill ID or observed name. It never turns free-text gear/talent notes or an inventory snapshot into engine contributions.
+The adapter fetches the active-season skill and tree catalogs from TLIBuilder. It maps explicit skill IDs with numeric slots (1–9), resolves a main-skill name through the season catalog only when that skill ID is also observed as equipped, and maps talent IDs to tree nodes by exact game_id matches. If the observed talent rank is missing, a one-point provisional selection is marked as a warning. It never turns free-text gear notes or an inventory snapshot into engine contributions.
 
 For complete calculations, a saved build may contain an optional `engineConfig` object. The build editor exposes this as a JSON field. Supported keys follow the installed TLIBuilder `EngineStatsRequest`, including:
-- `slots`: exact tree names and selected node states;
+- `slots`: exact tree names and selected node states; when available, selected nodes are reconstructed from observed talent game IDs;
 - `skills` and `main_skill`: exact skill IDs, slots and levels;
 - `gear`: TLIBuilder `GearEngineItem` contributions, including parsed affixes;
 - `condition_state`, `target_config`, `enemy_config`;
