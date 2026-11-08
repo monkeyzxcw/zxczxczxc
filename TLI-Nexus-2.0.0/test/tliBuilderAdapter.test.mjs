@@ -60,7 +60,7 @@ test('maps observed talent game IDs into the exact season tree', () => {
   const { payload, coverage } = buildTliBuilderRequest({
     build: { level: 90 },
     intel: {
-      talents: [{ id: 'talent_game_55', idField: 'TalentNodeId', level: 2 }],
+      talents: [{ id: 'talent_game_55', idField: 'TalentNodeId', level: 2, levelField: 'NodeLevel' }],
       skills: [],
     },
     catalogs: {
