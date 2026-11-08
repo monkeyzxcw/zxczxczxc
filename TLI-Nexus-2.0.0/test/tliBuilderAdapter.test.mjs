@@ -55,3 +55,25 @@ test('accepts explicit engine config for talent tree, gear, conditions and suppo
   assert.equal(coverage.talents.configuredNodes, 1);
   assert.equal(coverage.readyForDps, true);
 });
+
+test('maps observed talent game IDs into the exact season tree', () => {
+  const { payload, coverage } = buildTliBuilderRequest({
+    build: { level: 90 },
+    intel: {
+      talents: [{ id: 'talent_game_55', idField: 'TalentNodeId', level: 2 }],
+      skills: [],
+    },
+    catalogs: {
+      season: 'SS14 Tartarus',
+      skills: [],
+      trees: [{ name: 'Combat Tree', nodes: [
+        { id: 'node_internal_55', game_id: 'talent_game_55' },
+      ] }],
+    },
+  });
+  assert.deepEqual(payload.slots, [
+    { treeName: 'Combat Tree', nodeStates: { node_internal_55: 2 } },
+  ]);
+  assert.equal(coverage.talents.configuredNodes, 1);
+  assert.equal(coverage.talents.configuredTrees, 1);
+});
