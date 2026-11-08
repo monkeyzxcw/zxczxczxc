@@ -10,6 +10,8 @@ const TABLE_CONTAINER_KEYS = new Set([
 const AFFIx_WORD = /affix|prefix|suffix|enchant|forge/i;
 const ENUM_TABLE_WORD = /affixattrtype|gamecharattribute|gamecharfield|gameequipslot|equipmentslot|equipslot|equiprarity|equipquality|itemrarity|itemquality|raritytype|qualitytype|equipmentrarity|equipmentquality/i;
 const ITEM_WORD = /item|equip|equipment|gear/i;
+const TALENT_WORD = /talent|trait|specialization|speciality/i;
+const TALENT_ID_KEYS = ['talentnodeid','talentid','talentbaseid','talentconfigid','talentnodeconfigid','herotraitid','traitid','nodeid'];
 const LOCALIZATION_WORD = /localization|locres|stringtable|texttable|language/i;
 const EXPLICIT_ID_KEYS = new Set([
   'id', 'affixid', 'baseaffixid', 'affixconfigid', 'affixbaseid',
@@ -136,12 +138,13 @@ function classifyResource(resourcePath, doc, exportTypes) {
 
 function extractRows(resourcePath, doc, kind) {
   if (kind !== 'data-table' && kind !== 'enum-table') {
-    return { itemRows: [], affixRows: [], enumRows: [], tableRowCount: 0 };
+    return { itemRows: [], affixRows: [], enumRows: [], talentRows: [], tableRowCount: 0 };
   }
   const tableRows = rowContainers(doc);
   const itemRows = [];
   const affixRows = [];
   const enumRows = [];
+  const talentRows = [];
   for (const entry of tableRows) {
     const fields = scalarMap(entry.row);
     const fieldKeys = new Set(fields.map((field) => normalizeKey(field.key)));
@@ -152,15 +155,19 @@ function extractRows(resourcePath, doc, kind) {
     const rowLooksEnum = kind === 'enum-table' || ENUM_TABLE_WORD.test(resourcePath);
     const rowLooksAffix = !rowLooksEnum && (AFFIx_WORD.test(resourcePath) ||
       [...fieldKeys].some((key) => ['affixid', 'baseaffixid', 'affixconfigid', 'affixbaseid'].includes(key)));
+    const rowLooksTalent = !rowLooksEnum && (TALENT_WORD.test(resourcePath) ||
+      [...fieldKeys].some((key) => TALENT_ID_KEYS.includes(key)));
     const rowLooksItem = !rowLooksEnum && (ITEM_WORD.test(resourcePath) ||
       [...fieldKeys].some((key) => ['itemid', 'itembaseid', 'itemconfigbaseid', 'configbaseid', 'equipmentid', 'equipmentbaseid', 'equipid'].includes(key)));
     const preferredAffixIdKeys = ['affixid', 'baseaffixid', 'affixconfigid', 'affixbaseid'];
     const preferredItemIdKeys = ['itembaseid', 'itemconfigbaseid', 'configbaseid', 'itemid', 'equipmentbaseid', 'equipmentid', 'equipid', 'baseitemid', 'baseid'];
     const preferredKeys = rowLooksAffix
       ? preferredAffixIdKeys
-      : rowLooksItem
-        ? preferredItemIdKeys
-        : [];
+      : rowLooksTalent
+        ? TALENT_ID_KEYS
+        : rowLooksItem
+          ? preferredItemIdKeys
+          : [];
     const idField = fields.find((field) => preferredKeys.includes(normalizeKey(field.key))) ||
       fields.find((field) => normalizeKey(field.key) === 'id');
     const id = idField ? idField.value : null;
@@ -194,13 +201,17 @@ function extractRows(resourcePath, doc, kind) {
       summary.maxRaw = findNamed(payload, ['Max', 'MaxValue', 'ValueMax', 'MaxRoll']);
       summary.tierRaw = findNamed(payload, ['Tier', 'AffixTier', 'Level', 'AffixLevel']);
       affixRows.push(summary);
+    } else if (rowLooksTalent && id) {
+      summary.descriptionRaw = findNamed(payload, ['Description', 'Desc', 'Effect', 'TalentDescription', 'SkillDescription']);
+      summary.treeRaw = findNamed(payload, ['TreeId', 'TalentTreeId', 'HeroTraitId', 'SpecializationId']);
+      talentRows.push(summary);
     } else if (rowLooksItem && id) {
       summary.slotRaw = findNamed(payload, ['EquipSlot', 'EquipmentSlot', 'WearSlot', 'Slot']);
       summary.itemTypeRaw = findNamed(payload, ['ItemType', 'EquipType', 'EquipmentType', 'Type']);
       itemRows.push(summary);
     }
   }
-  return { itemRows, affixRows, enumRows, tableRowCount: tableRows.length };
+  return { itemRows, affixRows, enumRows, talentRows, tableRowCount: tableRows.length };
 }
 
 function extractLocalizationEntries(resourcePath, doc) {
@@ -309,6 +320,7 @@ export function scanGameResourceFolder(rootPath, options = {}) {
   const itemDefinitions = [];
   const affixDefinitions = [];
   const attributeDefinitions = [];
+  const talentDefinitions = [];
   const tableSchemas = [];
   const scriptHints = [];
   const localizationHints = [];
@@ -406,6 +418,7 @@ export function scanGameResourceFolder(rootPath, options = {}) {
     itemDefinitions.push(...rowData.itemRows);
     affixDefinitions.push(...rowData.affixRows);
     attributeDefinitions.push(...(rowData.enumRows || []));
+    talentDefinitions.push(...(rowData.talentRows || []));
     if (rowData.tableRowCount) {
       tableSchemas.push({
         path: relativePath,
@@ -424,6 +437,8 @@ export function scanGameResourceFolder(rootPath, options = {}) {
   for (const row of itemDefinitions) uniqueItems.set([row.id, row.sourcePath, row.rowName].join('|'), row);
   const uniqueAffixes = new Map();
   for (const row of affixDefinitions) uniqueAffixes.set([row.id, row.sourcePath, row.rowName].join('|'), row);
+  const uniqueTalents = new Map();
+  for (const row of talentDefinitions) uniqueTalents.set([row.id, row.sourcePath, row.rowName].join('|'), row);
   const uniqueAttributes = new Map();
   for (const row of attributeDefinitions) uniqueAttributes.set([row.enumId, row.sourcePath, row.rowName].join('|'), row);
 
@@ -446,6 +461,7 @@ export function scanGameResourceFolder(rootPath, options = {}) {
       itemDefinitions: uniqueItems.size,
       affixDefinitions: uniqueAffixes.size,
       attributeDefinitions: uniqueAttributes.size,
+      talentDefinitions: uniqueTalents.size,
       scriptHints: scriptHints.length,
       localizationHints: localizationHints.length,
       localizationEntries: localizationEntries.length,
@@ -457,6 +473,7 @@ export function scanGameResourceFolder(rootPath, options = {}) {
     itemDefinitions: [...uniqueItems.values()].slice(0, 15000),
     affixDefinitions: [...uniqueAffixes.values()].slice(0, 15000),
     attributeDefinitions: [...uniqueAttributes.values()].slice(0, 10000),
+    talentDefinitions: [...uniqueTalents.values()].slice(0, 20000),
     tableSchemas: tableSchemas.slice(0, 2000),
     assetManifest: manifest.slice(0, 10000),
     scriptHints: scriptHints.slice(0, 2000),
