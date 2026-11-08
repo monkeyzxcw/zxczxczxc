@@ -19,7 +19,7 @@ test('maps only explicit skill ids and numeric slots from character intel', () =
   assert.equal(payload.slots.length, 0);
   assert.equal(coverage.skills.mainSkillMapped, true);
   assert.equal(coverage.readyForDps, false);
-  assert.ok(coverage.warnings.some((x) => x.includes('Деревья талантов не переданы')));
+  assert.ok(coverage.warnings.some((x) => x.includes('Деревья талантов не восстановлены')));
 });
 
 test('does not invent tree nodes or gear from plain text lists', () => {
