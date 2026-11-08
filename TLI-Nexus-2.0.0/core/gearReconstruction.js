@@ -49,8 +49,19 @@ function explicitRawLines(item) {
 
 function explicitGrantedTalents(item) {
   const raw = item.grantedTalents ?? item.granted_talents;
-  if (!Array.isArray(raw)) return [];
-  return [...new Set(raw.filter((x) => typeof x === 'string' && x.trim()).map((x) => clean(x, 180)))].slice(0, 20);
+  const fields = Array.isArray(item.rawFields) ? item.rawFields : [];
+  const values = Array.isArray(raw) ? raw : fields
+    .filter((field) => /^(grantedtalent|grantedtalents|coretalentname)$/i.test(normalize(field?.key)))
+    .map((field) => field.value);
+  return [...new Set(values.filter((x) => typeof x === 'string' && x.trim()).map((x) => clean(x, 180)))].slice(0, 20);
+}
+
+function explicitBeltBlend(item) {
+  const direct = item.beltBlend ?? item.belt_blend;
+  if (direct != null && String(direct).trim()) return clean(direct, 120);
+  const field = (Array.isArray(item.rawFields) ? item.rawFields : []).find((row) =>
+    /^(beltblendid|beltblendtalentid|blendtalentid)$/i.test(normalize(row?.key)));
+  return field?.value == null ? null : clean(field.value, 120) || null;
 }
 
 /**
@@ -93,7 +104,7 @@ export function reconstructObservedGear(intel = {}, configuredGear = []) {
     };
     const grants = explicitGrantedTalents(item);
     if (grants.length) row.granted_talents = grants;
-    const blend = clean(item.beltBlend ?? item.belt_blend, 120);
+    const blend = explicitBeltBlend(item);
     if (slot === 'belt' && blend) row.belt_blend = blend;
     gear.push(row);
     if (!rawLines.length) warnings.push(`«${itemName}» (${slot}): слот и предмет наблюдались, но полные строки аффиксов не получены; вклад в расчёт не восстановлен.`);
