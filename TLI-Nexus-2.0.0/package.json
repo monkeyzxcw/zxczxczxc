@@ -1,6 +1,6 @@
 {
   "name": "tli-nexus",
-  "version": "2.2.0",
+  "version": "2.3.0",
   "private": true,
   "type": "module",
   "engines": {
@@ -11,7 +11,7 @@
     "desktop": "electron .",
     "desktop:dev": "electron .",
     "test": "node --test test/*.test.mjs",
-    "check": "node --check electron-main.mjs && node --check electron-preload.cjs && node --check overlay.js && node --check dashboard.js && node --check core/liveService.js && node --check core/buildAnalysis.js && node --check core/persistence.js && node --check core/farmAnalytics.js && node --check core/priceHistory.js && node --check core/hotkeys.js && node --check core/equipmentTracker.js && node --check core/gameLogEvents.js && node --check scripts/verify-release.mjs && node --check core/characterProfiles.js && node --check core/characterIntel.js && node --check core/characterReport.js && node --check core/snapshotHistory.js && node --check core/equipmentIntelligence.js && node --check core/itemObservation.js && node --check core/gameResourceCatalog.js && node --check core/tlidbCatalog.js && node --check core/tliBuilderBridge.js && node --check core/tliBuilderAdapter.js",
+    "check": "node --check electron-main.mjs && node --check electron-preload.cjs && node --check overlay.js && node --check dashboard.js && node --check core/liveService.js && node --check core/buildAnalysis.js && node --check core/persistence.js && node --check core/farmAnalytics.js && node --check core/priceHistory.js && node --check core/hotkeys.js && node --check core/equipmentTracker.js && node --check core/gameLogEvents.js && node --check scripts/verify-release.mjs && node --check core/characterProfiles.js && node --check core/characterIntel.js && node --check core/characterResolver.js && node --check core/characterReport.js && node --check core/snapshotHistory.js && node --check core/equipmentIntelligence.js && node --check core/itemObservation.js && node --check core/gameResourceCatalog.js && node --check core/tlidbCatalog.js && node --check core/tliBuilderBridge.js && node --check core/tliBuilderAdapter.js",
     "build:desktop": "node scripts/verify-release.mjs",
     "release:check": "npm run check && npm test && npm run build:desktop",
     "dist:win": "electron-builder --win nsis portable --x64",
