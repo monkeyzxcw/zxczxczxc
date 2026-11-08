@@ -34,7 +34,7 @@ export function normalizeBuild(input = {}) {
     hero: String(input.hero || '').slice(0, 100), level: Math.max(1, Math.min(100, Number(input.level) || 1)),
     season: String(input.season || 'SS14 · Tartarus').slice(0, 50), mainSkill: String(input.mainSkill || '').slice(0, 100),
     damageType: String(input.damageType || '').slice(0, 40), expectsFullConversion: input.expectsFullConversion === true,
-    notes: String(input.notes || '').slice(0, 4000), stats, targets, gearSlots, skills, talents, observedInventory, observedStats,
+    notes: String(input.notes || '').slice(0, 4000), stats, targets, gearSlots, skills, talents, observedInventory, observedStats, engineConfig,
     updatedAt: Number(input.updatedAt) || Date.now(), createdAt: Number(input.createdAt) || Date.now(),
   };
 }
