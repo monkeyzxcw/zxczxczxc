@@ -351,7 +351,6 @@ export class LiveService {
       } else if (!this.manualLogFile) {
         this.game = false;
         this.gameMissingSince ||= Date.now();
-        const missDuration = Date.now() - this.gameMissingSince;
         if (shouldKeepSessionAfterProcessMiss({ hasTailer: Boolean(this.tailer), missingSince: this.gameMissingSince, now: Date.now() })) {
           this.lastError = null;
           this.emit();
