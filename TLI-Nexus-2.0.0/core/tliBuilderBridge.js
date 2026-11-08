@@ -43,6 +43,21 @@ async function requestJson(path, options = {}) {
   catch { throw new Error('TLIBuilder вернул некорректный JSON.'); }
 }
 
+export async function getTliBuilderCatalogs() {
+  const [season, skills, trees, traits] = await Promise.all([
+    requestJson('/api/active-season'),
+    requestJson('/api/skills'),
+    requestJson('/api/trees'),
+    requestJson('/api/hero-traits'),
+  ]);
+  return {
+    season: season?.name || skills?.season || trees?.season || null,
+    skills: Array.isArray(skills?.skills) ? skills.skills : [],
+    trees: Array.isArray(trees) ? trees : [],
+    traits: Array.isArray(traits?.traits) ? traits.traits : [],
+  };
+}
+
 export async function getTliBuilderStatus() {
   try {
     const conditions = await requestJson('/api/conditions');
