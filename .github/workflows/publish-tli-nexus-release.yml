@@ -1,0 +1,45 @@
+name: Publish TLI Nexus release
+
+on:
+  workflow_run:
+    workflows:
+      - TLI Nexus checks and Windows package
+    types:
+      - completed
+    branches:
+      - main
+
+permissions:
+  actions: read
+  contents: write
+
+jobs:
+  publish:
+    if: ${{ github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.head_branch == 'main' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download Windows build artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: TLI-Nexus-2.3.0-Windows-x64
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          repository: ${{ github.repository }}
+          run-id: ${{ github.event.workflow_run.id }}
+          path: release-assets
+
+      - name: Publish GitHub Release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          HEAD_SHA: ${{ github.event.workflow_run.head_sha }}
+        run: |
+          set -euo pipefail
+          mapfile -t assets < <(find release-assets -type f -name '*.exe' -print)
+          if [ "${#assets[@]}" -eq 0 ]; then
+            echo "No Windows executable found in build artifact" >&2
+            exit 1
+          fi
+          gh release create v2.3.0 "${assets[@]}" \
+            --repo "${GITHUB_REPOSITORY}" \
+            --target "${HEAD_SHA}" \
+            --title "TLI Nexus 2.3.0" \
+            --notes "TLI Nexus 2.3.0\n\n- Equipment reconstruction and TLIBuilder integration\n- Session persistence improvements\n- Talent and item name resolution using local game resources\n- Simplified dashboard and interface\n\nWindows x64 installer and portable build are attached. Some game-data resolution requires matching local FModel exports."
