@@ -28,13 +28,15 @@ export function normalizeBuild(input = {}) {
     path: String(x.path || '').slice(0, 200), sourceAction: String(x.sourceAction || '').slice(0, 80),
     sourceKind: String(x.sourceKind || '').slice(0, 40), observedAt: Number(x.observedAt) || null, confidence: String(x.confidence || '').slice(0, 40),
   })) : [];
+  const engineConfig = input.engineConfig && typeof input.engineConfig === 'object' && !Array.isArray(input.engineConfig)
+    ? input.engineConfig : {};
   return {
     id: String(input.id || id()), profileId: input.profileId ? String(input.profileId).slice(0, 120) : null,
     investmentFe: asNumber(input.investmentFe), name: String(input.name || 'Новый билд').slice(0, 100),
     hero: String(input.hero || '').slice(0, 100), level: Math.max(1, Math.min(100, Number(input.level) || 1)),
     season: String(input.season || 'SS14 · Tartarus').slice(0, 50), mainSkill: String(input.mainSkill || '').slice(0, 100),
     damageType: String(input.damageType || '').slice(0, 40), expectsFullConversion: input.expectsFullConversion === true,
-    notes: String(input.notes || '').slice(0, 4000), stats, targets, gearSlots, skills, talents, observedInventory, observedStats,
+    notes: String(input.notes || '').slice(0, 4000), stats, targets, gearSlots, skills, talents, observedInventory, observedStats, engineConfig,
     updatedAt: Number(input.updatedAt) || Date.now(), createdAt: Number(input.createdAt) || Date.now(),
   };
 }
