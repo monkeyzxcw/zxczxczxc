@@ -40,7 +40,8 @@ function normalizeSkills(intelSkills, configuredSkills, warnings, catalogSkills 
     const slot = numericSlot(row.slot);
     const skillId = cleanId(row.id);
     if (!slot || !skillId) continue;
-    const hasLevel = Number.isInteger(Number(row.level)) && Number(row.level) > 0;
+    const levelField = String(row.levelField || '').replace(/[^a-z0-9]/gi, '').toLowerCase();
+    const hasLevel = levelField === 'skilllevel' && Number.isInteger(Number(row.level)) && Number(row.level) > 0;
     rows.push({ slot, skill_id: skillId, level: hasLevel ? Number(row.level) : 1, enabled: true });
     if (!hasLevel) warnings.push(`Для навыка ID ${skillId} уровень не был найден; использован API-default 1. Проверь его перед расчётом.`);
   }
