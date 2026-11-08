@@ -81,3 +81,18 @@ Example shape (illustrative IDs only; not a ready-to-use build):
 ```
 
 The result panel separates engine output from coverage warnings. DPS is displayed only when the engine returns a supported main-skill result. A missing tree, gear contribution, skill ID or slot is reported as a coverage gap rather than guessed. The observed character stat count is shown for context; raw observed stats are not injected as modifiers because they are final values, not contribution lines.
+
+
+## Build Intelligence adapter (stage 3 — equipment evidence)
+
+`core/gearReconstruction.js` now converts explicit Character Intelligence equipment observations into the `GearEngineItem` envelope accepted by TLIBuilder.
+
+- Only equipment records from an authoritative `GetPlayerData` / `GetEquipment` response are considered current. Historical `PutOn` events and inventory snapshots are not treated as proof of current equipment; `PutOff` handling is still a required follow-up.
+- Slot names are mapped only through an explicit allowlist of textual labels. Numeric slot enums are not guessed; they require the matching `GameEquipSlot` resource table.
+- Complete raw modifier lines are forwarded in `unresolved_texts` so TLIBuilder's own resolver can parse them. Individual scalar values, tier numbers, and unknown affix IDs are not turned into invented stat contributions.
+- Explicit `grantedTalents` and belt blend IDs are forwarded only when present as explicit fields. Legendary effect text is forwarded only when a full raw effect line is present.
+- Manual `engineConfig.gear` remains authoritative and is not merged with automatically observed gear, avoiding duplicate contributions.
+- Coverage distinguishes observed items, recognized slots, raw modifier lines, and effective engine items. Empty placeholder gear entries do not make the build DPS-ready.
+- Attached supports remain manual until the log parser can prove the support gem ID, host active-skill ID, and numeric host slot together. The adapter emits a warning instead of guessing that relationship.
+
+This is a conservative first equipment bridge, not a claim of full item reconstruction. Current open gaps: PutOn/PutOff state reconciliation, numeric slot-enum resolution from the user's local resource index, full affix-ID → TLIBuilder modifier mapping, per-affix numeric roll extraction, and automatic support-to-host association.
