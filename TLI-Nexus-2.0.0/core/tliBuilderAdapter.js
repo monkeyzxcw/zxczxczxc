@@ -123,7 +123,9 @@ export function buildTliBuilderRequest({ build = {}, intel = {}, profile = null,
   });
 
   if (!slots.some(Boolean)) warnings.push('Деревья талантов не восстановлены: ID из лога не совпали с game_id узлов активного каталога, либо каталог сезона пуст. Расчёт не учитывает таланты.');
-  if (catalogs.season && build.season && !String(build.season).toLowerCase().includes(String(catalogs.season).toLowerCase().replace(/[^a-z0-9]/g,'')) && !String(catalogs.season).toLowerCase().includes(String(build.season).toLowerCase().replace(/[^a-z0-9]/g,''))) warnings.push('Сезон билда ('+build.season+') отличается от активного сезона TLIBuilder ('+catalogs.season+'). Проверь, что выбрана правильная база.');
+  const buildSeasonKey = String(build.season || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+  const catalogSeasonKey = String(catalogs.season || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+  if (buildSeasonKey && catalogSeasonKey && !buildSeasonKey.includes(catalogSeasonKey) && !catalogSeasonKey.includes(buildSeasonKey)) warnings.push('Сезон билда ('+build.season+') отличается от активного сезона TLIBuilder ('+catalogs.season+'). Проверь, что выбрана правильная база.');
   if (!Array.isArray(config.gear) || !config.gear.length) {
     warnings.push('Экипировка не передана в движок: наблюдаемые PutOn/PutOff и ID предметов не содержат полного набора слотов и строк аффиксов. Для корректного расчёта экипировку нужно указать в engineConfig.gear.');
   }
