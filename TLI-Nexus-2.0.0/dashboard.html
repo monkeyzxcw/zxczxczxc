@@ -12,15 +12,18 @@
     <div class="sidebar-label">WORKSPACE</div>
     <nav id="nav">
       <button class="nav-item active" data-page="overview"><span>◈</span>Обзор</button>
-      <button class="nav-item" data-page="loot"><span>✧</span>Лут и сессии</button>
-      <button class="nav-item" data-page="items"><span>▦</span>База предметов</button>
-      <button class="nav-item" data-page="economy"><span>◉</span>Экономика</button>
-      <button class="nav-item" data-page="characters"><span>♙</span>Персонажи</button>
-      <button class="nav-item" data-page="builds"><span>⚔</span>Лаборатория билдов</button>
-      <button class="nav-item" data-page="analyzer"><span>⌁</span>Анализ персонажа</button>
-      <button class="nav-item" data-page="farming"><span>◷</span>Фарм и аналитика</button>
-      <button class="nav-item" data-page="tactics"><span>⌖</span>Тактики и заметки</button>
-      <button class="nav-item" data-page="settings"><span>⚙</span>Настройки</button>
+      <button class="nav-item" data-page="loot"><span>✧</span>Лут и сессия</button>
+      <button class="nav-item" data-page="characters"><span>♙</span>Персонаж</button>
+      <button class="nav-item" data-page="builds"><span>⚔</span>Билды</button>
+      <button class="nav-item" data-page="analyzer"><span>⌁</span>Анализ билда</button>
+      <details class="nav-more">
+        <summary>Остальное</summary>
+        <button class="nav-item" data-page="items"><span>▦</span>База предметов</button>
+        <button class="nav-item" data-page="economy"><span>◉</span>Экономика</button>
+        <button class="nav-item" data-page="farming"><span>◷</span>История фарма</button>
+        <button class="nav-item" data-page="tactics"><span>⌖</span>Заметки</button>
+        <button class="nav-item" data-page="settings"><span>⚙</span>Настройки</button>
+      </details>
     </nav>
     <div class="sidebar-bottom">
       <div class="connection"><span class="dot" id="conn-dot"></span><div><b id="conn-title">Нет подключения</b><small id="conn-sub">Ожидание Torchlight: Infinite</small></div></div>
@@ -35,7 +38,7 @@
     </header>
 
     <section class="page active" id="page-overview">
-      <div class="hero-card"><div class="hero-copy"><div class="eyebrow purple">YOUR ADVENTURE · YOUR DATA</div><h2>Играй умнее.<br><span>Фарми эффективнее.</span></h2><p>TLI Nexus собирает статистику игровой сессии, оценивает лут и помогает принимать решения по экипировке и билду. Данные персонажа остаются локально.</p><div class="hero-actions"><button class="btn primary" data-go="builds">Открыть лабораторию билдов →</button><button class="btn ghost" data-go="settings">Настроить HUD</button></div></div><div class="hero-mark"><div class="ring"></div><div class="ring r2"></div><div class="crystal">N</div></div><div class="hero-stamp">TORCHLIGHT: INFINITE <b>COMPANION</b></div></div>
+      <div class="hero-card" hidden><div class="hero-copy"><div class="eyebrow purple">YOUR ADVENTURE · YOUR DATA</div><h2>Играй умнее.<br><span>Фарми эффективнее.</span></h2><p>TLI Nexus собирает статистику игровой сессии, оценивает лут и помогает принимать решения по экипировке и билду. Данные персонажа остаются локально.</p><div class="hero-actions"><button class="btn primary" data-go="builds">Открыть лабораторию билдов →</button><button class="btn ghost" data-go="settings">Настроить HUD</button></div></div><div class="hero-mark"><div class="ring"></div><div class="ring r2"></div><div class="crystal">N</div></div><div class="hero-stamp">TORCHLIGHT: INFINITE <b>COMPANION</b></div></div>
       <div class="kpi-grid">
         <article class="kpi"><div class="kpi-label">ОЦЕНКА ЛУТА ЗА СЕССИЮ <span>FE</span></div><strong id="ov-value">—</strong><small id="ov-priced">Ожидание данных</small></article>
         <article class="kpi"><div class="kpi-label">ЭЛЕМЕНТИЕВОЕ ПЛАМЯ <span>FE</span></div><strong id="ov-fe">0</strong><small>Подобрано в текущей сессии</small></article>
@@ -96,7 +99,7 @@
         <div class="form-divider">СНИМОК ИНВЕНТАРЯ ИЗ ЛОГА · НЕ ЭКИПИРОВКА</div><textarea id="build-observed-inventory" rows="3" placeholder="Будет заполнено из ResetItemsLayout / GetWareHousePage" readonly></textarea>
         <div class="form-divider">НАВЫКИ И ПОДДЕРЖКИ</div><textarea id="build-skills" rows="3" placeholder="Основной навык&#10;Поддержка 1&#10;Поддержка 2"></textarea>
         <div class="form-divider">КЛЮЧЕВЫЕ ТАЛАНТЫ И ЭФФЕКТЫ</div><textarea id="build-talents" rows="3" placeholder="Талант — эффект / причина выбора"></textarea>
-        <div class="form-divider">ДАННЫЕ ДЛЯ ДВИЖКА TLI BUILDER · JSON</div><textarea id="build-engine-config" rows="6" spellcheck="false" placeholder='{"slots":[{"treeName":"tree_name","nodeStates":{}}],"skills":[{"slot":1,"skill_id":"skill_id","level":20}],"main_skill":{"skill_id":"skill_id","level":20},"gear":[]}'> </textarea><p class="hint">Необязательно. Здесь хранятся точные данные движка: дерево и выбранные узлы, слоты навыков, основной skill_id, готовые gear contributions и условия. Не вставляй сюда обычный список предметов или текст талантов — движок ждёт структурированные данные TLIBuilder.</p>
+        <details class="advanced-panel"><summary>Расширенные настройки расчёта (для разработчика)</summary><div class="form-divider">ДАННЫЕ ДЛЯ ДВИЖКА TLI BUILDER · JSON</div><textarea id="build-engine-config" rows="6" spellcheck="false" placeholder='{"slots":[{"treeName":"tree_name","nodeStates":{}}],"skills":[{"slot":1,"skill_id":"skill_id","level":20}],"main_skill":{"skill_id":"skill_id","level":20},"gear":[]}'> </textarea><p class="hint">Технические данные движка. Обычному пользователю это поле заполнять не нужно.</p></details>
         <label class="full-label">Заметки<textarea id="build-notes" rows="3" placeholder="Ротация, условия активации, слабые места…"></textarea></label>
         <div class="form-actions"><button class="btn primary" type="submit">Сохранить билд</button><button class="btn secondary" type="button" id="clear-build">Очистить</button><button class="btn secondary" type="button" id="export-build-code">Копировать код</button></div>
       </form><div class="import-code"><textarea id="build-code" rows="2" placeholder="Вставь код NEXUS1.… для импорта сборки"></textarea><button class="btn secondary small" id="import-build-code">Импортировать код</button></div></section>
