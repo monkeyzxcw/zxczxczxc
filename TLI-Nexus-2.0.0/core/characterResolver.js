@@ -19,7 +19,7 @@ function indexes(resourceIndex) {
   }
   return { localizations, talents, items, affixes, attributes };
 }
-function localized(row, ix, fields = ['nameKeyRaw','textKeyRaw','descriptionKeyRaw']) {
+function localized(row, ix, fields = ['nameKeyRaw','textKeyRaw','nameKey','descriptionKeyRaw','descriptionKey']) {
   for (const field of fields) {
     const key = row?.[field];
     if (key && ix.localizations.has(String(key))) return ix.localizations.get(String(key));
