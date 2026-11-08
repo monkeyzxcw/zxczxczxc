@@ -80,7 +80,9 @@ function resolveMainSkill(build, intelSkills, configuredMainSkill, skills, warni
     warnings.push('Основной навык найден в истории Character Intelligence, но сейчас не подтверждён в активном слоте 1–9. DPS не рассчитывается как для экипированного навыка.');
     return null;
   }
-  return { skill_id: skillId, level: Math.max(1, Number(match.level) || Number(slotted?.level) || 1) };
+  const observedLevelField = String(match.levelField || '').replace(/[^a-z0-9]/gi, '').toLowerCase();
+  const observedLevel = observedLevelField === 'skilllevel' ? Number(match.level) : null;
+  return { skill_id: skillId, level: Math.max(1, Number(observedLevel) || Number(slotted?.level) || 1) };
 }
 
 export function buildTliBuilderRequest({ build = {}, intel = {}, profile = null, catalogs = {} } = {}) {
